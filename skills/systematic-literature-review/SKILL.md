@@ -68,7 +68,9 @@ What it does for you, so you do not have to:
 
 **Query phrasing — keep it short.** Multi-word queries are matched as an exact phrase, so use 2-3 core keywords (e.g. `"agent evaluation"`) and put the field in `--category`, not in the query. Drop words like "recent", "variants", "benchmarks for" — time belongs in `--years`.
 
-**Run the search once.** If it prints `0 papers`, tell the user and suggest broadening the topic or removing the category. If it returns fewer than requested, that is the real size of the result set; do not pad. If it exits non-zero, report the error and stop. The tool already retries transient arXiv rate limits itself.
+**Never drop or change `--category` or `--years` to get more papers.** They are the user's constraints. When the exact phrase returns fewer papers than requested, the tool itself widens the query (all words present, any order) and reports `"match":"phrase+all_terms"`; you do not need to retry.
+
+**Run the search once.** If it prints `0 papers`, tell the user and suggest broadening the topic or removing the category. If it still returns fewer than requested, that is the real size of the result set under the user's constraints: do not pad, do not relax the filters, and state the shortfall plainly in the report. If it exits non-zero, report the error and stop. The tool already retries transient arXiv rate limits itself.
 
 ### Phase 3: Extract metadata in parallel
 

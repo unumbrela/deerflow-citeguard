@@ -96,6 +96,7 @@ def _build_search_query(
     category: str | None,
     start_date: str | None,
     end_date: str | None,
+    match: str = "phrase",
 ) -> str:
     """Build arXiv's `search_query` field.
 
@@ -108,7 +109,10 @@ def _build_search_query(
     # treats them as a phrase.  Without quotes, `all:diffusion model` is
     # parsed as `all:diffusion OR model`, pulling in unrelated papers
     # that merely mention the word "model".
-    if " " in query:
+    if match == "all_terms" and " " in query:
+        # Every word must appear somewhere in the paper, but not as one phrase.
+        parts = ["(" + " AND ".join(f"all:{t}" for t in query.split()) + ")"]
+    elif " " in query:
         parts = [f'all:"{query}"']
     else:
         parts = [f"all:{query}"]
@@ -203,6 +207,7 @@ def search(
     sort_by: str = "relevance",
     start_date: str | None = None,
     end_date: str | None = None,
+    match: str = "phrase",
 ) -> list[dict]:
     """Query arXiv and return a list of paper dicts.
 
@@ -213,6 +218,8 @@ def search(
         sort_by: "relevance", "submittedDate", or "lastUpdatedDate".
         start_date: YYYY-MM-DD or YYYYMMDD, inclusive.
         end_date: YYYY-MM-DD or YYYYMMDD, inclusive.
+        match: "phrase" (exact phrase, default) or "all_terms" (every word
+            present, any order).
 
     Returns:
         list of dicts, each matching the schema documented in SKILL.md.
@@ -223,7 +230,7 @@ def search(
         return []
     max_results = min(max_results, MAX_RESULTS_UPPER_BOUND)
 
-    search_query = _build_search_query(query, category, start_date, end_date)
+    search_query = _build_search_query(query, category, start_date, end_date, match)
     params = {
         "search_query": search_query,
         "start": 0,

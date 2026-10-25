@@ -60,16 +60,31 @@ def run_search(args: argparse.Namespace, today: date | None = None) -> dict:
         # cat: also matches cross-listed papers; fetch the maximum so filtering
         # to the primary category can still fill the requested count.
         fetch_n = arxiv_search.MAX_RESULTS_UPPER_BOUND
-    papers = _search_with_retry(
-        query=args.query,
-        max_results=fetch_n,
-        category=args.category,
-        sort_by="relevance",
-        start_date=start,
-        end_date=args.end_date,
-    )
-    if args.category and not args.include_cross_lists:
-        papers = [p for p in papers if p.get("primary_category") == args.category]
+
+    def fetch(match: str) -> list[dict]:
+        found = _search_with_retry(
+            query=args.query,
+            max_results=fetch_n,
+            category=args.category,
+            sort_by="relevance",
+            start_date=start,
+            end_date=args.end_date,
+            match=match,
+        )
+        if args.category and not args.include_cross_lists:
+            found = [p for p in found if p.get("primary_category") == args.category]
+        return found
+
+    papers = fetch("phrase")
+    match_used = "phrase"
+    if len(papers) < args.max_results and " " in args.query.strip():
+        # The exact phrase is too narrow. Widen the QUERY (never the category or
+        # date window, which are the user's constraints) so the model has no
+        # reason to drop those filters itself to reach the requested count.
+        time.sleep(3)  # arXiv asks for >= 3 s between calls
+        seen = {p["id"] for p in papers}
+        papers += [p for p in fetch("all_terms") if p["id"] not in seen]
+        match_used = "phrase+all_terms"
     papers = papers[: args.max_results]
 
     out = Path(args.out_dir)
@@ -87,6 +102,7 @@ def run_search(args: argparse.Namespace, today: date | None = None) -> dict:
         "category": args.category,
         "window": {"start": start, "end": args.end_date},
         "requested": args.max_results,
+        "match": match_used,
         "retrieved_on": today.isoformat(),
         "papers": papers,
     }
@@ -109,6 +125,7 @@ def run_search(args: argparse.Namespace, today: date | None = None) -> dict:
         "count": len(papers),
         "requested": args.max_results,
         "window": meta["window"],
+        "match": match_used,
         "papers_file": str(papers_file),
         "batch_files": batch_files,
         "index": index,

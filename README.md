@@ -2,7 +2,7 @@
 
 给 [DeerFlow](https://github.com/bytedance/deer-flow)(字节开源的多 Agent 框架)的**文献综述 Agent** 做可靠性评测与修复:量化它会不会"编造论文",查清原因,并用确定性的代码把这一类错误挡在报告之外。
 
-> 状态:基线评测与机制分析已完成;改进版 skill 已实现,**全量对照评测进行中**(结果出来前,本文不报告任何"改进后"的数字)。
+> 状态:基线与机制分析完成;改进版 v2.0 已跑完一轮对照(见 [BASELINE.md](BASELINE.md) 的 `suite-v2-01`):编造严重的运行 4/29 → 0/30(p = 0.052,**不显著**),时间窗口满足 70% → 100%,但**有 7 个运行没凑够 10 篇**、token 没降。已据此做出 v2.1 修复,新一轮对照 `suite-v2-02` 进行中,**这些数字定稿前不要引用**。
 > 活文档:[PLAN.md](PLAN.md)(进度、决策、日志)· [BASELINE.md](BASELINE.md)(每次实验的原始记录与局限)· [ARCH_NOTES.md](ARCH_NOTES.md)(DeerFlow 架构笔记)
 
 ## 问题
@@ -41,7 +41,8 @@ Fisher 精确检验 p = 0.00014。这是观察性分组而非对照实验,样本
 - `slr_tools.py search`:检索、"近 N 年"由代码按今天算、类别按**主类别**过滤、结果落盘并分批,只向模型打印一份紧凑索引(远小于外置阈值)。
 - 子 Agent 直接读取批次文件,主 Agent 不再把论文文本抄进 prompt。
 - `slr_tools.py verify`:报告写完后,核对其中每个 arXiv 编号是否出自检索结果,并警告标题 / 第一作者对不上的条目。
-- 15 个离线单元测试(arXiv 全部 mock):`python3 -m unittest discover -s skills/systematic-literature-review/tests`
+- 结果不足时由代码把精确短语放宽为"所有词都出现"(类别与时间窗口不动),避免模型自己放宽用户约束(v2.1)。
+- 19 个离线单元测试(arXiv 全部 mock):`python3 -m unittest discover -s skills/systematic-literature-review/tests`
 
 联调中发现的三个环境事实(都已写进 [PLAN.md](PLAN.md) 日志):网关缓存技能列表需重启;custom skill 在沙箱里的路径是 `/mnt/skills/legacy/...`;LocalSandbox 只翻译**命令行里出现的** `/mnt/user-data/...`,脚本内部默认的路径对文件工具和子 Agent 不可见——所以 `--out-dir` 必须由调用方显式传入。
 

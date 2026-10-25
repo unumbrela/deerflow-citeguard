@@ -99,6 +99,44 @@ class SearchTest(unittest.TestCase):
             self.assertEqual(m.call_count, 1)
 
 
+class WidenQueryTest(unittest.TestCase):
+    def test_widens_to_all_terms_keeping_category_and_window(self):
+        calls = []
+
+        def fake(**kw):
+            calls.append(kw)
+            return [paper(i) for i in range(2)] if kw["match"] == "phrase" else [paper(i) for i in range(8)]
+
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(slr_tools.arxiv_search, "search", side_effect=fake), mock.patch.object(slr_tools.time, "sleep"):
+            res = slr_tools.run_search(args(d, query="robot manipulation models", category="cs.CL", years=2), today=date(2026, 10, 25))
+        self.assertEqual([c["match"] for c in calls], ["phrase", "all_terms"])
+        self.assertTrue(all(c["category"] == "cs.CL" and c["start_date"] == "2024-10-25" for c in calls))
+        self.assertEqual(res["match"], "phrase+all_terms")
+        self.assertEqual(res["count"], 8)
+        self.assertEqual(len({p["id"] for p in res["index"]}), 8)  # deduplicated
+
+    def test_no_widening_when_phrase_is_enough(self):
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(slr_tools.arxiv_search, "search", return_value=[paper(i) for i in range(10)]) as m:
+            res = slr_tools.run_search(args(d, query="agent evaluation"))
+        self.assertEqual(m.call_count, 1)
+        self.assertEqual(res["match"], "phrase")
+
+    def test_single_word_query_never_widens(self):
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(slr_tools.arxiv_search, "search", return_value=[paper(1)]) as m:
+            slr_tools.run_search(args(d, query="agents"))
+        self.assertEqual(m.call_count, 1)
+
+
+class QueryBuilderTest(unittest.TestCase):
+    def test_phrase_vs_all_terms(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+        import arxiv_search
+
+        self.assertIn('all:"a b"', arxiv_search._build_search_query("a b", None, None, None))
+        q = arxiv_search._build_search_query("a b", "cs.CL", None, None, "all_terms")
+        self.assertEqual(q, "(all:a AND all:b) AND cat:cs.CL")
+
+
 class CliTest(unittest.TestCase):
     def test_out_dir_and_papers_are_required(self):
         parser = slr_tools._build_parser()
