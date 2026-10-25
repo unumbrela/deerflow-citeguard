@@ -1,113 +1,105 @@
 # deerflow-citeguard
 
-给 [DeerFlow](https://github.com/bytedance/deer-flow)(字节开源的多 Agent 框架)的**文献综述 Agent** 做可靠性评测与修复:量化它会不会"编造论文",查清原因,并用确定性的代码把这一类错误挡在报告之外。
+让「文献综述 Agent」不再编造论文。
 
-> 状态:基线、机制分析、两轮改进(v2.0 → v2.1)、30 主题对照与 10 主题**留出**对照均已完成。留出集上(模型没见过、我也没调过参的主题),上游 skill 只有 1/10 的运行同时满足引用真实、时间窗口、类别三项,v2.1 为 10/10;但 token 成本反而高 21%,编造次数的差异在这个样本量下不显著。完整记录与局限见 [BASELINE.md](BASELINE.md)。
-> 活文档:[PLAN.md](PLAN.md)(进度、决策、日志)· [BASELINE.md](BASELINE.md)(每次实验的原始记录与局限)· [ARCH_NOTES.md](ARCH_NOTES.md)(DeerFlow 架构笔记)
+在字节开源的多 Agent 框架 [DeerFlow](https://github.com/bytedance/deer-flow) 上,我量化了它的文献综述 skill 会不会编造引用,查清了原因,并用确定性的代码把这条失败路径堵死。**不改 DeerFlow 核心**,以 custom skill 的方式覆盖上游同名 skill。
 
-## 问题
+- **问题**:30 个主题里,4/29 份报告有一半以上引用是虚构的(编号、标题、作者全是编的);时间窗口、类别约束也只满足约 70%。
+- **根因**:检索输出过长被 DeerFlow 换成"摘要",Agent 没把原文读回来,就把凭空补全的"论文"抄给子 Agent。
+- **做法**:论文数据由脚本落盘、分批,子 Agent 直接读文件,模型不再转述;报告写完由脚本核对每个 arXiv 编号是否出自检索结果。
+- **结果**(10 个未见过的主题):三项约束全满足的运行 **1/10 → 10/10**。代价:token +21%。
 
-让 Agent 做"近两年、cs.CL 类别、10 篇、APA 格式"的文献综述,报告读起来都很像样。但逐条拿 arXiv 官方 API 核对引用:
+> 完整过程、每次实验的原始记录和走过的弯路:[BASELINE.md](BASELINE.md) · 项目日志:[PLAN.md](PLAN.md) · 面试讲解稿:[docs/INTERVIEW.md](docs/INTERVIEW.md)
 
-**30 个主题 × 1 次(`qwen3.5-plus`,记忆关闭,基线 `suite-pre-02`)**
+## 问题是怎么发生的,又是怎么修的
 
-| 指标 | 值 |
-|---|---|
-| 交付报告 | 29 / 30 |
-| 引用已验证率(arXiv 编号存在且标题匹配) | 86.9%(291 条) |
-| 一半以上引用是编造的运行 | **4 / 29(14%,95% CI 5%–31%)** |
-| 满足"近两年" / 满足指定类别 | 69.8% / 70.4% |
-| 平均耗时 / token | 341 秒 / 226,567 |
+**上游 skill:模型转述论文数据**
 
-一个运行里编造的不是"某条引用写错了",而是整篇论文——编号、标题、作者(有的写成 "Various authors")、摘要、结论全部虚构,并被写进综合分析里。
+```mermaid
+flowchart LR
+  A1["arXiv 检索<br/>输出约 19,600 字符"] -->|"超过 12,000"| A2["被换成摘要<br/>只露出第 1 篇"]
+  A2 -->|"Agent 没读回原文"| A3["模型把「10 篇论文」<br/>抄进子 Agent 的 prompt"]
+  A3 --> A4["第 2–10 篇凭空编造<br/>写进综合分析"]
+```
 
-## 原因(逐个追踪调用链得出)
+**v2.1:代码搬运,模型不转述**
 
-DeerFlow 会把过长的工具输出(默认 > 12,000 字符)存成文件,只给模型一份**结构摘要**。检索脚本返回 10 篇论文约 19,600 字符,被换成摘要后只露出第 1 篇。Agent 如果**把原文件读回来**就没事;如果直接把"10 篇论文"派给子 Agent,其余 9 篇就是模型凭空补的。
+```mermaid
+flowchart LR
+  B1["search<br/>日期、主类别<br/>由代码过滤"] --> B2["落盘<br/>papers.json<br/>batch_N.json"]
+  B2 --> B3["子 Agent<br/>直接读批次文件"]
+  B3 --> B4["写报告"]
+  B4 --> B5["verify<br/>每个编号必须<br/>出自检索结果"]
+```
 
-| 分组(基线 29 个运行) | 运行数 | 编造严重(已验证 < 50%) |
+证据(基线 29 个运行,逐个追踪调用链):检索输出被外置后,**Agent 读回原文的 18 个运行 0 个编造;没读回的 4 个运行 4 个全部编造**(Fisher p = 0.00014)。这是观察性分组,不是对照实验。
+
+## 结果
+
+![留出评测:上游 skill 与 v2.1 的对比](docs/holdout.svg)
+
+| 留出评测(10 个未见主题 × 1 次) | 上游 skill | v2.1 |
 |---|---|---|
-| 输出被外置,Agent 读回了原文 | 18 | **0** |
-| 输出被外置,Agent 没读回 | 4 | **4** |
-| 无法判断(早期消息被摘要压缩) | 7 | 0 |
-
-Fisher 精确检验 p = 0.00014。这是观察性分组而非对照实验,样本小;完整推理与局限见 [BASELINE.md](BASELINE.md)。
-过程中也走过弯路(早期把"外置"本身当成原因,后经全量核对修正;评测指标 `resolved` 会被虚构编号蒙混过关,改为 `verified`),都如实记录在文档里。
-
-## 做法
-
-不靠提示词叮嘱模型"记得读文件",而是**让模型没有机会转述论文数据**。改进版 skill 与内置版同名,以 custom skill 的方式覆盖它,不改 DeerFlow 核心:
-
-- `slr_tools.py search`:检索、"近 N 年"由代码按今天算、类别按**主类别**过滤、结果落盘并分批,只向模型打印一份紧凑索引(远小于外置阈值)。
-- 子 Agent 直接读取批次文件,主 Agent 不再把论文文本抄进 prompt。
-- `slr_tools.py verify`:报告写完后,核对其中每个 arXiv 编号是否出自检索结果,并警告标题 / 第一作者对不上的条目。
-- 结果不足时由代码把精确短语放宽为"所有词都出现"(类别与时间窗口不动),避免模型自己放宽用户约束(v2.1)。
-- 19 个离线单元测试(arXiv 全部 mock):`python3 -m unittest discover -s skills/systematic-literature-review/tests`
-
-联调中发现的三个环境事实(都已写进 [PLAN.md](PLAN.md) 日志):网关缓存技能列表需重启;custom skill 在沙箱里的路径是 `/mnt/skills/legacy/...`;LocalSandbox 只翻译**命令行里出现的** `/mnt/user-data/...`,脚本内部默认的路径对文件工具和子 Agent 不可见——所以 `--out-dir` 必须由调用方显式传入。
-
-## 结果(同一批 30 个主题,每个 1 次;样本内)
-
-| | 基线 | v2.0 | v2.1 |
-|---|---|---|---|
-| 引用已验证率 | 86.9% | 100% | 100% |
-| 一半以上编造的运行 | 4 / 29 | 0 / 30 | 0 / 30 |
-| 满足"近两年" / 指定类别 | 69.8% / 70.4% | 100% / 97.4% | 100% / 100% |
-| 平均每份引用数(要求 10) | 10.03 | **8.87** | 10.00 |
-| 平均耗时 / token | 341 秒 / 226,567 | 188 秒 / 234,964 | 182 秒 / 243,695 |
-
-v2.0 去掉了编造和约束违反,却让 7 个运行凑不够 10 篇;原因是精确短语过窄,且 Agent 凑不够时自己去掉了类别过滤。v2.1 由代码放宽查询(类别和时间窗口不动)。**v2.1 是看过 v2.0 的失败之后写的,所以上表最后一列是样本内成绩。**
-
-## 留出评测(10 个没见过的主题,方案在运行前提交:[eval/HOLDOUT.md](eval/HOLDOUT.md))
-
-| | 上游 skill | v2.1 |
-|---|---|---|
-| 引用已验证率 | 75.3% | 100% |
-| 满足近两年 / 指定类别 | 82.0% / 64.0% | 100% / 100% |
 | 三项约束每条引用都满足的运行 | 1 / 10 | **10 / 10**(p = 0.0001) |
 | 凑够 10 篇的运行 | 8 / 10 | 10 / 10 |
 | 一半以上编造的运行 | 2 / 9 | 0 / 10(不显著) |
-| 平均耗时 / token | 291 秒 / 209,938 | 190 秒 / 253,674(**+21%**) |
+| 平均耗时 | 291 秒 | 190 秒 |
+| 平均 token | 209,938 | **253,674(+21%)** |
 
-局限:10 个主题 × 1 次;基线臂有 1 个运行(h03)原因不明地中断,按规则计为未交付(排除它结论不变);成本没有改善;不评价综述内容质量。
+**要如实说的**:样本只有 10 个主题 × 1 次,无置信区间;编造次数的差异在这个样本量下**不显著**,可信度主要来自上面追踪到的机制;**成本没有改善**;评测只核对引用能否对上 arXiv,不评价综述内容本身的质量。基线臂有 1 个运行原因不明地中断,按预先写定的规则计为未交付(排除它结论不变)。
+
+改进过程中还有一个教训:v2.0 消除了编造,却让 7/30 的报告凑不够 10 篇(精确短语匹配太窄,Agent 凑不够时还自己去掉了类别过滤)。v2.1 改为由代码放宽查询、保持用户约束不动。**这个修复是看过失败后写的,所以 30 主题上的成绩是样本内的;可信的是上表的留出结果**,其方案在运行前就已提交([eval/HOLDOUT.md](eval/HOLDOUT.md))。
+
+## 评测怎么做
+
+```mermaid
+flowchart LR
+  T["topics.json<br/>30 个主题 + 10 个留出主题"] --> R["run_suite.py<br/>调用本机 DeerFlow"]
+  R --> P["report.md<br/>APA 综述报告"]
+  P --> C["check_citations.py<br/>逐条对照 arXiv 官方 API"]
+  C --> M["已验证 · 第一作者 · 时间窗口 · 类别"]
+```
+
+主指标是 **已验证**(arXiv 编号存在**且标题对得上**)。早期用过"编号存在",结果被虚构编号蒙混过关(假通过 10/10,实为 1/10),所以改了。
 
 ## 仓库结构
 
 ```
-eval/            评测框架:30 个主题(topics.json)、运行器、arXiv 引用核查、汇总
-skills/          改进版 systematic-literature-review(源码)
-scripts/         install_skill.sh:把 skills/ 部署为 DeerFlow 的 custom skill
-runs/            各次实验的报告、引用核查结果与元数据(原始 trace 因体积未入库)
-BASELINE.md  PLAN.md  ARCH_NOTES.md
+eval/      评测框架:主题集、运行器、arXiv 引用核查、汇总;HOLDOUT.md 是留出评测方案
+skills/    改进版 systematic-literature-review(源码)+ 19 个离线单元测试
+scripts/   install_skill.sh:把 skills/ 部署为 DeerFlow 的 custom skill
+runs/      各次实验的报告、引用核查和元数据(原始 trace 因体积未入库)
+docs/      面试讲解稿、结果图(make_chart.py 从 summary.json 生成)
 ```
 
-`deer-flow/`(上游代码)不在本仓库内。基线固定在上游 commit `3fdd9bd`。
+`deer-flow/`(上游代码)不在本仓库内,基线固定在上游 commit `3fdd9bd`。
 
 ## 复现
 
-前置:本机 Docker 起好 DeerFlow(`make docker-start`),`config.yaml` 配好模型;评测使用的设置是 `qwen3.5-plus`(阿里云百炼)、`memory.enabled: false`、`allow_host_bash: true`、递归上限 1000。
+前置:本机 Docker 里跑着 DeerFlow(`make docker-start`),`config.yaml` 配好模型。评测用的设置:`qwen3.5-plus`(阿里云百炼)、`memory.enabled: false`、`allow_host_bash: true`、递归上限 1000。
 
 ```bash
 git clone https://github.com/bytedance/deer-flow deer-flow && git -C deer-flow checkout 3fdd9bd
-scripts/install_skill.sh && docker restart deer-flow-gateway     # 部署改进版 skill
+scripts/install_skill.sh && docker restart deer-flow-gateway     # 部署 v2.1(网关会缓存技能列表,必须重启)
 
 cd eval
-python3 -I run_suite.py --name my-run --reps 1 --workers 2        # 跑 30 个主题
-python3 -I aggregate.py --name my-run                             # 逐条核对 arXiv 并汇总
+python3 -I run_suite.py --name my-run --reps 1 --workers 2       # 跑 30 个主题;留出集加 --topics holdout_topics.json
+python3 -I aggregate.py --name my-run                            # 逐条核对 arXiv 并汇总
+python3 -m unittest discover -s ../skills/systematic-literature-review/tests
 ```
 
-`run_task.py` 需要一个本地 DeerFlow 账号的 cookie(放在被忽略的 `.local/`,见脚本顶部说明)。
+`run_task.py` 需要本地 DeerFlow 账号的 cookie,放在被忽略的 `.local/cookies.txt`。
+
+## 联调中发现的三个环境事实
+
+1. 网关按配置缓存技能列表,新增 skill 后必须重启。
+2. custom skill 在沙箱里的路径是 `/mnt/skills/legacy/<name>/`,不是 `custom`。
+3. LocalSandbox 只翻译**命令行里出现的** `/mnt/user-data/...`;脚本内部默认的路径落在容器字面路径上,文件工具和子 Agent 都看不到。所以 `--out-dir` 必须由调用方显式传入。
 
 ## 安全提示
 
-评测期间为了让 skill 的脚本能跑,打开了 `allow_host_bash: true`:模型可以在网关容器内执行任意 shell,而容器环境变量里有模型 API key,存在提示注入外泄的风险。只应在本机单用户场景使用;不要在多用户或暴露公网的部署里开启。
+评测期间为让 skill 脚本能跑,打开了 `allow_host_bash: true`:模型可以在网关容器内执行任意 shell,而容器环境变量里有模型 API key,存在提示注入外泄的风险。只适合本机单用户场景,不要在多用户或暴露公网的部署里开启。
 
-## 局限
+## 许可
 
-- 每个主题只跑 1 次;编造是运行内的随机事件,基线的置信区间很宽。对比"改进前后"需要重复运行。
-- 评测只衡量引用能否对上 arXiv,**不评价综述内容本身的质量**。
-- 单一模型、单一 prompt 模板;机制分析中有 7 个运行无法判断。
-
-## 致谢与许可
-
-基于字节跳动开源的 [DeerFlow](https://github.com/bytedance/deer-flow)(MIT)。`arxiv_search.py` 与引用模板来自上游 skill,本仓库在其基础上修改;许可证见 [LICENSE](LICENSE)(MIT,保留上游版权声明)。
+基于 [DeerFlow](https://github.com/bytedance/deer-flow)(MIT)。`arxiv_search.py` 与引用模板来自上游 skill,本仓库在其基础上修改。许可证见 [LICENSE](LICENSE)(MIT,保留上游版权声明)。
