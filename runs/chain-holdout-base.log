@@ -1,0 +1,26 @@
+### aggregate 01:33:14
+run       status       refs verif window  cat    sec   tokens
+h01-r1    ok             10     1      9    2  225.2   188622
+h02-r1    ok             10    10     10    9  289.2   211147
+h03-r1    no_report                             63.8    54093
+h04-r1    ok             10    10      4    9  316.8   217668
+h05-r1    ok              9     9      9    9  367.2   215963
+h06-r1    ok             10    10     10    5  345.4   239020
+h07-r1    ok             10     2     10    3  276.7   197612
+h08-r1    ok             10    10      9    8  309.8   224236
+h09-r1    ok             10     5      4    3  426.4   335621
+h10-r1    ok             10    10      8    9  294.1   215396
+{
+ "runs": 10,
+ "delivered_report": 9,
+ "no_report": 1,
+ "runs_hit_arxiv_429": 0,
+ "mean_seconds": 291.5,
+ "mean_tokens": 209938,
+ "refs_total": 89,
+ "verified_rate": 0.753,
+ "in_window_rate": 0.82,
+ "in_category_rate": 0.64,
+ "runs_all_verified": 6,
+ "runs_mostly_fabricated": 3
+}
