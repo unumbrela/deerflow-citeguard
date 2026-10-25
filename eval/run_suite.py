@@ -67,7 +67,14 @@ def run_one(job: dict, out_root: Path, model: str) -> str:
         got = download_report(meta, out / "report.md")
     except Exception as e:  # noqa: BLE001 - record and move on
         (out / "download_error.txt").write_text(repr(e))
-    return f"{out.name}: {meta['wall_seconds']}s, {meta['usage_attributed_total']['total_tokens']} tok, report={got}, error={meta['error']}"
+    infra = ""
+    try:
+        last_ai = [m for m in json.loads((out / "final.json").read_text())["messages"] if m.get("type") == "ai"][-1]
+        if "out of quota" in str(last_ai.get("content")):
+            infra = " INFRA-FAILURE(provider quota): not an agent result, archive and rerun"
+    except Exception:  # noqa: BLE001
+        pass
+    return f"{out.name}: {meta['wall_seconds']}s, {meta['usage_attributed_total']['total_tokens']} tok, report={got}, error={meta['error']}{infra}"
 
 
 def main() -> None:
@@ -77,6 +84,7 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=2, help="keep low: agents and the checker share one IP and arXiv rate-limits it")
     ap.add_argument("--limit", type=int, help="only the first N topics")
     ap.add_argument("--model", default="qwen3.5-plus")
+    ap.add_argument("--topics", default="topics.json", help="topics file inside eval/ (use holdout_topics.json for the held-out set)")
     args = ap.parse_args()
 
     probe = urllib.request.Request("https://export.arxiv.org/api/query?id_list=1706.03762&max_results=1", headers={"User-Agent": "deerflow-eval-preflight/0.1"})
@@ -85,7 +93,7 @@ def main() -> None:
     except Exception as e:  # noqa: BLE001
         raise SystemExit(f"arXiv preflight failed ({e!r}); not starting, a throttled run would measure the rate limit, not the agent")
 
-    topics = json.loads((HERE / "topics.json").read_text())[: args.limit]
+    topics = json.loads((HERE / args.topics).read_text())[: args.limit]
     out_root = ROOT / "runs" / f"suite-{args.name}"
     out_root.mkdir(parents=True, exist_ok=True)
     jobs = [{**t, "rep": r} for r in range(1, args.reps + 1) for t in topics]

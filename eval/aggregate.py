@@ -23,9 +23,10 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
     ap.add_argument("--since", default="2024-10-25")
+    ap.add_argument("--topics", default="topics.json")
     args = ap.parse_args()
 
-    topics = {t["id"]: t for t in json.loads((HERE / "topics.json").read_text())}
+    topics = {t["id"]: t for t in json.loads((HERE / args.topics).read_text())}
     root = ROOT / "runs" / f"suite-{args.name}"
     rows = []
     for run in sorted(p for p in root.iterdir() if p.is_dir()):
