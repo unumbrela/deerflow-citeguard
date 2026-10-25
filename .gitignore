@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Credentials and session cookies for the local eval account
+.local/
+
+# The upstream DeerFlow checkout is NOT vendored (it is its own git repo).
+# See README for the pinned commit and scripts/install_skill.sh for the overlay.
+/deer-flow/
+
+# Raw traces are large (tens of MB per suite) and embed full agent state.
+# Reports, citation checks and per-run metadata are kept.
+runs/**/events.jsonl
+runs/**/final.json
+
+# Suite still running; commit once finished
+runs/suite-v2-01/
+runs/chain-v2-01.log

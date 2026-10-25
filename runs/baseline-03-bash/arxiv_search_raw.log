@@ -1,0 +1,255 @@
+[
+  {
+    "id": "2605.11378",
+    "title": "An Empirical Study of Automating Agent Evaluation",
+    "authors": [
+      "Kang Zhou",
+      "Sangmin Woo",
+      "Haibo Ding",
+      "Kiran Ramnath",
+      "Subramanian Chidambaram",
+      "Aosong Feng",
+      "Vinayak Arannil",
+      "Muhyun Kim",
+      "Ishan Singh",
+      "Darren Wang",
+      "Zhichao Xu",
+      "Megha Gandhi",
+      "Nirmal Prabhu",
+      "Soumya Smruti Mishra",
+      "Smeet Dhakecha",
+      "Vivek Singh",
+      "Gouri Pandeshwar",
+      "Lin Lee Cheong"
+    ],
+    "abstract": "Agent evaluation requires assessing complex multi-step behaviors involving tool use and intermediate reasoning, making it costly and expertise-intensive. A natural question arises: can frontier coding assistants reliably automate this evaluation process? Our study shows that simply prompting coding assistants is insufficient for this task. Without domain-specific evaluation knowledge, frontier coding assistants achieve only a 30% execution success rate and produce over-engineered evaluations averaging 12+ metrics per agent, indicating that strong coding ability does not automatically translate to reliable agent evaluation. We introduce EvalAgent, an AI assistant that automates the end-to-end agent evaluation pipeline. EvalAgent encodes evaluation domain expertise as evaluation skills (procedural instructions, reusable code and templates, and dynamically retrieved API documentation) that compose into a trace-based pipeline producing complete evaluation artifacts including metrics, executable code, and reports. To systematically assess generated evaluations, we introduce a meta-evaluation framework alongside AgentEvalBench, a benchmark comprising 20 agents, each paired with evaluation requirements and test scenarios. We further propose the Eval@1 metric to measure whether generated evaluation code both executes and yields meaningful results on the first run. Our experiments show that EvalAgent produces focused evaluations, improving Eval@1 from 17.5% to 65%, and achieving 79.5% human expert preference over baseline approaches. Further ablation studies show that evaluation skills are critical for handling complex evaluation: removing them causes Eval@1 to drop significantly from 65% to 30%.",
+    "published": "2026-05-12",
+    "updated": "2026-09-23",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2605.11378v3",
+    "abs_url": "https://arxiv.org/abs/2605.11378v3"
+  },
+  {
+    "id": "2509.14477",
+    "title": "Ticket-Bench: A Kickoff for Multilingual and Regionalized Agent Evaluation",
+    "authors": [
+      "Thales Sales Almeida",
+      "João Guilherme Alves Santos",
+      "Thiago Laitz",
+      "Giovana Kerche Bonás"
+    ],
+    "abstract": "Large language models (LLMs) are increasingly deployed as task-oriented agents, where success depends on their ability to generate accurate function calls under realistic, multilingual conditions. However, existing agent evaluations largely overlook cultural and linguistic diversity, often relying on monolingual or naively translated benchmarks. We introduce Ticket-Bench, a benchmark for multilingual agent evaluation in task-oriented scenarios. Ticket-Bench simulates the domain of soccer ticket purchases across six major languages: Portuguese, English, Spanish, German, Italian, and French. Using localized teams, cities, and user profiles to provide a higher level of realism. We evaluate a wide range of commercial and open-source LLMs, measuring function-calling accuracy and consistency across languages. Results show that reasoning-oriented models (e.g., GPT-5, Qwen3-235B) dominate performance but still exhibit notable cross-lingual disparities. These findings underscore the need for culturally aware, multilingual benchmarks to guide the development of robust LLM agents.",
+    "published": "2025-09-17",
+    "updated": "2025-09-17",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2509.14477v1",
+    "abs_url": "https://arxiv.org/abs/2509.14477v1"
+  },
+  {
+    "id": "2609.34320",
+    "title": "Certified Selective Automation of LLM Agent Evaluation",
+    "authors": [
+      "Chengguang Gan",
+      "Yunhao Liang",
+      "Qinghao Zhang",
+      "Shiwen Ni"
+    ],
+    "abstract": "Evaluating LLM agents still ends with a human reading trajectories, because automatic judges carry no guarantee on how often they are wrong. We ask the operational question: what fraction of agent evaluation can a judge take over, with a certificate that the error rate among auto-decided trajectories stays below a budget alpha? Agent corpora resist the standard answer: many agents attempt the same tasks, so trajectories arrive in correlated clusters, and the i.i.d. certificates of existing selective-judging methods can overstate what is safe: a naive certificate can claim 98% automation while its realized error exceeds the budget in 17.5% of task resamples. We introduce a task-level bootstrap certificate that is valid in every regime we test while matching the naive certificate's coverage; finite-sample cluster-valid alternatives certify nothing at realistic task counts. Under this certificate, a 4B logprob judge trained with SFT and reject-weighted GRPO certifies 0.30-0.59 of evaluation on tool-use and web corpora at alpha=0.1, the only judge, among strongly elicited frontier models, certifying on both headline corpora. Certified coverage is predictable before training from base rate and discrimination alone (leave-one-corpus-out R^2=0.96). Finally, the certificate doubles as a self-training filter: pseudo-labels harvested inside certified regions have contamination bounded by alpha by construction (realized 0.000-0.041 across six harvests), letting a judge enter an unseen domain at in-domain strength with zero target training labels.",
+    "published": "2026-09-28",
+    "updated": "2026-09-28",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.34320v1",
+    "abs_url": "https://arxiv.org/abs/2609.34320v1"
+  },
+  {
+    "id": "2606.11079",
+    "title": "VISTA: A Versatile Interactive User Simulation Toolkit for Agent Evaluation",
+    "authors": [
+      "Yunan Lu",
+      "Ryan Shea",
+      "Yusen Zhang",
+      "Zhou Yu"
+    ],
+    "abstract": "Evaluation remains a critical bottleneck for interactive agent development. Existing evaluation methods often rely on static benchmarks, which fail to capture the dynamic, multi-step nature of agentic behavior and struggle to expose meaningful failure modes. While user-simulation-based evaluation offers a promising alternative, existing simulation frameworks suffer from two major limitations. First, they provide limited mechanisms for evaluating the quality and comprehensiveness of simulated interactions, making it difficult to assess whether a simulator sufficiently explores an agent's capabilities and failure modes. Second, most frameworks are restricted to either UI-only actions or API-only actions, limiting their ability to model the full range of realistic user behaviors. To address these limitations, we propose VISTA, a Versatile Interactive user Simulation Toolkit for Agent evaluation. Our toolkit includes a suite of six metrics for measuring the realism, capability coverage, and interaction effectiveness of simulated interactions. In addition, we develop a hybrid user simulator that integrates both UI-based interactions and API-based interactions, enabling more realistic and comprehensive evaluation across diverse interactive environments. We evaluate VISTA in e-commerce shopping and education customer service settings and demonstrate that it produces more realistic and comprehensive evaluations than existing methods.",
+    "published": "2026-06-09",
+    "updated": "2026-10-09",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2606.11079v2",
+    "abs_url": "https://arxiv.org/abs/2606.11079v2"
+  },
+  {
+    "id": "2510.11977",
+    "title": "Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation",
+    "authors": [
+      "Sayash Kapoor",
+      "Benedikt Stroebl",
+      "Peter Kirgis",
+      "Nitya Nadgir",
+      "Zachary S Siegel",
+      "Boyi Wei",
+      "Tianci Xue",
+      "Ziru Chen",
+      "Felix Chen",
+      "Saiteja Utpala",
+      "Franck Ndzomga",
+      "Dheeraj Oruganty",
+      "Sophie Luskin",
+      "Kangheng Liu",
+      "Botao Yu",
+      "Amit Arora",
+      "Dongyoon Hahm",
+      "Harsh Trivedi",
+      "Huan Sun",
+      "Juyong Lee",
+      "Tengjun Jin",
+      "Yifan Mai",
+      "Yifei Zhou",
+      "Yuxuan Zhu",
+      "Rishi Bommasani",
+      "Daniel Kang",
+      "Dawn Song",
+      "Peter Henderson",
+      "Yu Su",
+      "Percy Liang",
+      "Arvind Narayanan"
+    ],
+    "abstract": "AI agents have been developed for complex real-world tasks from coding to customer service. But AI agent evaluations suffer from many challenges that undermine our understanding of how well agents really work. We introduce the Holistic Agent Leaderboard (HAL) to address these challenges. We make three main contributions. First, we provide a standardized evaluation harness that orchestrates parallel evaluations across hundreds of VMs, reducing evaluation time from weeks to hours while eliminating common implementation bugs. Second, we conduct three-dimensional analysis spanning models, scaffolds, and benchmarks. We validate the harness by conducting 21,730 agent rollouts across 9 models and 9 benchmarks in coding, web navigation, science, and customer service with a total cost of about $40,000. Our analysis reveals surprising insights, such as higher reasoning effort reducing accuracy in the majority of runs. Third, we use LLM-aided log inspection to uncover previously unreported behaviors, such as searching for the benchmark on HuggingFace instead of solving a task, or misusing credit cards in flight booking tasks. We share all agent logs, comprising 2.5B tokens of language model calls, to incentivize further research into agent behavior. By standardizing how the field evaluates agents and addressing common pitfalls in agent evaluation, we hope to shift the focus from agents that ace benchmarks to agents that work reliably in the real world.",
+    "published": "2025-10-13",
+    "updated": "2025-10-13",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2510.11977v1",
+    "abs_url": "https://arxiv.org/abs/2510.11977v1"
+  },
+  {
+    "id": "2605.10912",
+    "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
+    "authors": [
+      "Shuangrui Ding",
+      "Xuanlang Dai",
+      "Long Xing",
+      "Shengyuan Ding",
+      "Ziyu Liu",
+      "Yang JingYi",
+      "Penghui Yang",
+      "Zhixiong Zhang",
+      "Xilin Wei",
+      "Xinyu Fang",
+      "Yubo Ma",
+      "Haodong Duan",
+      "Jing Shao",
+      "Jiaqi Wang",
+      "Dahua Lin",
+      "Kai Chen",
+      "Yuhang Zang"
+    ],
+    "abstract": "Large language and vision-language models increasingly power agents that act on a user's behalf through command-line interface (CLI) harnesses. However, most agent benchmarks still rely on synthetic sandboxes, short-horizon tasks, mock-service APIs, and final-answer checks, leaving open whether agents can complete realistic long-horizon work in the runtimes where they are deployed. This work presents WildClawBench, a native-runtime benchmark of 60 human-authored, bilingual, multimodal tasks spanning six thematic categories. Each task averages roughly 8 minutes of wall-clock time and over 20 tool calls, and runs inside a reproducible Docker container hosting an actual CLI agent harness (OpenClaw, Claude Code, Codex, or Hermes Agent) with access to real tools rather than mock services. Grading is hybrid, combining deterministic rule-based checks, environment-state auditing of side effects, and an LLM/VLM judge for semantic verification. Across 19 frontier models, the best, Claude Opus 4.7, reaches only 62.2% overall under OpenClaw, while every other model stays below 60%, and switching harness alone shifts a single model by up to 18 points. These results show that long-horizon, native-runtime agent evaluation remains a far-from-resolved task for current frontier models. We release the tasks, code, and containerized tooling to support reproducible evaluation.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2605.10912v1",
+    "abs_url": "https://arxiv.org/abs/2605.10912v1"
+  },
+  {
+    "id": "2608.00267",
+    "title": "LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation",
+    "authors": [
+      "Han Li",
+      "Zhemin Fang",
+      "Rili Feng",
+      "Yingqi Zhao",
+      "Jiaheng Liu",
+      "Pengfei Gao",
+      "He Ye",
+      "Dayi Lin",
+      "Qingwei Lin",
+      "Saravan Rajmohan",
+      "Dongmei Zhang"
+    ],
+    "abstract": "Coding agent infrastructure is shifting from harness engineering toward loop engineering as coding agents are deployed for sustained long-horizon software development. Existing benchmarks often center on localized tasks or end-state outcomes, offering limited insight into sustained execution. We introduce LOOPSBENCH, a long-horizon benchmark for loop engineering in coding agent evaluation. Each task is a dependency DAG over separately testable development units with source-evidenced prerequisite edges. LOOPSBENCH comprises 112 tasks from authentic sources spanning 8 programming languages and 9 domains. Its flow-aware runtime releases tests along the ready frontier and retains completed nodes as regression obligations. We evaluate frontier coding agents paired with widely used loop implementations. The strongest configuration, Opus-4.7 with Claude Code and outer continuation, resolves 25.00% of tasks. Recorded plans recover only part of the source-recovered prerequisite DAG, and regression events remain visible across the evaluated loop profiles. We open source the benchmark data and code, including all tasks, more than 5,300 development units, and executable tests, at microsoft/Loopsbench.",
+    "published": "2026-07-31",
+    "updated": "2026-08-10",
+    "categories": [
+      "cs.SE",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.00267v2",
+    "abs_url": "https://arxiv.org/abs/2608.00267v2"
+  },
+  {
+    "id": "2510.11997",
+    "title": "SAGE: A Top-Down Bottom-Up Knowledge-Grounded User Simulator for Multi-turn AGent Evaluation",
+    "authors": [
+      "Ryan Shea",
+      "Yunan Lu",
+      "Liang Qiu",
+      "Zhou Yu"
+    ],
+    "abstract": "Evaluating multi-turn interactive agents is challenging due to the need for human assessment. Evaluation with simulated users has been introduced as an alternative, however existing approaches typically model generic users and overlook the domain-specific principles required to capture realistic behavior. We propose SAGE, a novel user Simulation framework for multi-turn AGent Evaluation that integrates knowledge from business contexts. SAGE incorporates top-down knowledge rooted in business logic, such as ideal customer profiles, grounding user behavior in realistic customer personas. We further integrate bottom-up knowledge taken from business agent infrastructure (e.g., product catalogs, FAQs, and knowledge bases), allowing the simulator to generate interactions that reflect users' information needs and expectations in a company's target market. Through empirical evaluation, we find that this approach produces interactions that are more realistic and diverse, while also identifying up to 33% more agent errors, highlighting its effectiveness as an evaluation tool to support bug-finding and iterative agent improvement.",
+    "published": "2025-10-13",
+    "updated": "2026-03-11",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2510.11997v3",
+    "abs_url": "https://arxiv.org/abs/2510.11997v3"
+  },
+  {
+    "id": "2601.04790",
+    "title": "Belief in Authority: Impact of Authority in Multi-Agent Evaluation Framework",
+    "authors": [
+      "Junhyuk Choi",
+      "Jeongyoun Kwon",
+      "Heeju Kim",
+      "Haeun Cho",
+      "Hayeong Jung",
+      "Sehee Min",
+      "Bugeun Kim"
+    ],
+    "abstract": "Multi-agent systems utilizing large language models often assign authoritative roles to improve performance, yet the impact of authority bias on agent interactions remains underexplored. We present the first systematic analysis of role-based authority bias in free-form multi-agent evaluation using ChatEval. Applying French and Raven's power-based theory, we classify authoritative roles into legitimate, referent, and expert types and analyze their influence across 12-turn conversations. Experiments with GPT-4o and DeepSeek R1 reveal that Expert and Referent power roles exert stronger influence than Legitimate power roles. Crucially, authority bias emerges not through active conformity by general agents, but through authoritative roles consistently maintaining their positions while general agents demonstrate flexibility. Furthermore, authority influence requires clear position statements, as neutral responses fail to generate bias. These findings provide key insights for designing multi-agent frameworks with asymmetric interaction patterns.",
+    "published": "2026-01-08",
+    "updated": "2026-01-08",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04790v1",
+    "abs_url": "https://arxiv.org/abs/2601.04790v1"
+  },
+  {
+    "id": "2510.09116",
+    "title": "DITING: A Multi-Agent Evaluation Framework for Benchmarking Web Novel Translation",
+    "authors": [
+      "Enze Zhang",
+      "Jiaying Wang",
+      "Mengxi Xiao",
+      "Jifei Liu",
+      "Ziyan Kuang",
+      "Rui Dong",
+      "Eric Dong",
+      "Sophia Ananiadou",
+      "Min Peng",
+      "Qianqian Xie"
+    ],
+    "abstract": "Large language models (LLMs) have substantially advanced machine translation (MT), yet their effectiveness in translating web novels remains unclear. Existing benchmarks rely on surface-level metrics that fail to capture the distinctive traits of this genre. To address these gaps, we introduce DITING, the first comprehensive evaluation framework for web novel translation, assessing narrative and cultural fidelity across six dimensions: idiom translation, lexical ambiguity, terminology localization, tense consistency, zero-pronoun resolution, and cultural safety, supported by over 18K expert-annotated Chinese-English sentence pairs. We further propose AgentEval, a reasoning-driven multi-agent evaluation framework that simulates expert deliberation to assess translation quality beyond lexical overlap, achieving the highest correlation with human judgments among seven tested automatic metrics. To enable metric comparison, we develop MetricAlign, a meta-evaluation dataset of 300 sentence pairs annotated with error labels and scalar quality scores. Comprehensive evaluation of fourteen open, closed, and commercial models reveals that Chinese-trained LLMs surpass larger foreign counterparts, and that DeepSeek-V3 delivers the most faithful and stylistically coherent translations. Our work establishes a new paradigm for exploring LLM-based web novel translation and provides public resources to advance future research.",
+    "published": "2025-10-10",
+    "updated": "2025-10-13",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2510.09116v2",
+    "abs_url": "https://arxiv.org/abs/2510.09116v2"
+  }
+]

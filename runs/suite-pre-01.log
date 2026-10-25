@@ -1,0 +1,555 @@
+30 jobs -> /Users/zihao/deerflow-project/runs/suite-pre-01
+t01-r1: 470.7s, 244206 tok, report=True, error=None
+t02-r1: 9.4s, 15533 tok, report=False, error=None
+t03-r1: 311.0s, 257130 tok, report=True, error=None
+t04-r1: 356.6s, 228753 tok, report=True, error=None
+t05-r1: 355.8s, 232699 tok, report=True, error=None
+t06-r1: 286.2s, 217384 tok, report=True, error=None
+t07-r1: 367.8s, 228400 tok, report=True, error=None
+t08-r1: 331.2s, 229763 tok, report=True, error=None
+t09-r1: 383.6s, 220715 tok, report=True, error=None
+t10-r1: 374.3s, 229856 tok, report=True, error=None
+t11-r1: 290.2s, 233604 tok, report=True, error=None
+t12-r1: 318.3s, 232951 tok, report=True, error=None
+t13-r1: 224.6s, 195054 tok, report=True, error=None
+t14-r1: 351.8s, 236263 tok, report=True, error=None
+t15-r1: 335.8s, 247206 tok, report=True, error=None
+t16-r1: 469.3s, 235401 tok, report=True, error=None
+t17-r1: 368.9s, 211620 tok, report=True, error=None
+t18-r1: 275.1s, 229792 tok, report=True, error=None
+t19-r1: 274.4s, 227829 tok, report=True, error=None
+t20-r1: 248.5s, 200939 tok, report=True, error=None
+t21-r1: 305.8s, 232499 tok, report=True, error=None
+t22-r1: 234.8s, 207436 tok, report=True, error=None
+t23-r1: 327.5s, 241301 tok, report=True, error=None
+t24-r1: 339.2s, 272556 tok, report=True, error=None
+t25-r1: 712.5s, 192795 tok, report=True, error=None
+t26-r1: 255.6s, 209726 tok, report=True, error=None
+t27-r1: 210.8s, 198703 tok, report=True, error=None
+t28-r1: 319.5s, 229852 tok, report=True, error=None
+t29-r1: 297.5s, 235282 tok, report=True, error=None
+t30-r1: 274.8s, 214304 tok, report=True, error=None
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/http/client.py", line 1450, in getresponse
+    response.begin()
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+Traceback (most recent call last):
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 106, in <module>
+    main()
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 75, in main
+    truth = fetch_truth(sorted({r["id"] for r in refs})) if refs else {}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/deerflow-project/eval/check_citations.py", line 35, in fetch_truth
+    root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 553, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 745, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/zihao/miniconda3/envs/llm/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+run       status       refs verif window  cat    sec   tokens
+t01-r1    ok             12    12      9    8  470.7   244206
+t02-r1    no_report                              9.4    15533
+t03-r1    ok             10    10      8    9  311.0   257130
+t04-r1    ok             10    10      9    8  356.6   228753
+t05-r1    ok             10     7      8    9  355.8   232699
+t06-r1    ok             10    10      8   10  286.2   217384
+t07-r1    ok             10    10      5    5  367.8   228400
+t08-r1    ok             10    10     10    8  331.2   229763
+t09-r1    ok             10    10      7   10  383.6   220715
+t10-r1    ok             10    10      7   10  374.3   229856
+t11-r1    ok             10    10      3    8  290.2   233604
+t12-r1    ok             10    10      9    9  318.3   232951
+t13-r1    ok             10     1      9    4  224.6   195054
+t14-r1    ok              0     0      0    0  351.8   236263
+t15-r1    ok             10     9      9    9  335.8   247206
+t16-r1    ok             10    10     10    7  469.3   235401
+t17-r1    ok             10    10     10    6  368.9   211620
+t18-r1    ok             10    10      4    3  275.1   229792
+t19-r1    ok             10    10      5    9  274.4   227829
+t20-r1    check_failed                         248.5   200939
+t21-r1    check_failed                         305.8   232499
+t22-r1    check_failed                         234.8   207436
+t23-r1    check_failed                         327.5   241301
+t24-r1    check_failed                         339.2   272556
+t25-r1    check_failed                         712.5   192795
+t26-r1    check_failed                         255.6   209726
+t27-r1    check_failed                         210.8   198703
+t28-r1    check_failed                         319.5   229852
+t29-r1    check_failed                         297.5   235282
+t30-r1    check_failed                         274.8   214304
+{
+ "runs": 30,
+ "delivered_report": 18,
+ "no_report": 1,
+ "mean_seconds": 322.7,
+ "mean_tokens": 219652,
+ "refs_total": 172,
+ "verified_rate": 0.924,
+ "in_window_rate": 0.756,
+ "in_category_rate": 0.767,
+ "runs_all_verified": 15,
+ "runs_mostly_fabricated": 2
+}
