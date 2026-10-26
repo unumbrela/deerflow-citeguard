@@ -30,7 +30,7 @@ from typing import Any
 from langchain.agents.middleware import AgentMiddleware
 from langchain_core.messages import AIMessage, ToolMessage
 
-from .core import verify_report
+from .core import verify_report, wrong_year_dates
 from .store import PaperStore
 
 MARKER = "[citation-gate]"
@@ -78,26 +78,30 @@ def _text(content: Any) -> str:
 
 
 def _rejection(path: str, result: dict, attempt: int, max_blocks: int, unchanged: bool) -> str:
-    lines = [
-        f"{MARKER} CITATION CHECK FAILED: {path} is visible to the user but NOT verified (rejection {attempt} of {max_blocks}).",
-        f"These arXiv ids are not in this thread's search results, so they may be invented: {', '.join(result['unknown_ids'])}.",
-    ]
+    lines = [f"{MARKER} CITATION CHECK FAILED: {path} is visible to the user but NOT verified (rejection {attempt} of {max_blocks})."]
     if unchanged:
         lines.append("The file is unchanged since the previous rejection: presenting it again without editing will fail again.")
-    lines += [
-        "Remove those papers (or replace them with papers from the search index that you have not cited yet), fix every sentence and reference that mentions them, save the file, then call present_files again.",
-        "Never add a paper, id, title or author from memory. If the user explicitly asked for one of these references and you keep it, tell the user plainly that it is not from the search and could not be verified.",
-    ]
+    if result["unknown_ids"]:
+        lines += [
+            f"These arXiv ids are not in this thread's search results, so they may be invented: {', '.join(result['unknown_ids'])}.",
+            "Remove those papers (or replace them with papers from the search index that you have not cited yet) and fix every sentence and reference that mentions them.",
+            "Never add a paper, id, title or author from memory. If the user explicitly asked for one of these references and you keep it, tell the user plainly that it is not from the search and could not be verified.",
+        ]
+    if result["date_errors"]:
+        lines.append(f"These dates contradict the search (wrong year): {', '.join(result['date_errors'])}. Use the dates in `report_dates` from the search result.")
     if result["warnings"]:
         lines.append("Also fix: " + "; ".join(result["warnings"][:MAX_WARNINGS_SHOWN]))
+    lines.append("Save the file, then call present_files again.")
     return "\n".join(lines)
 
 
 def _released(path: str, result: dict, max_blocks: int) -> str:
-    return (
-        f"{MARKER} CITATION CHECK FAILED again after {max_blocks} rejections; {path} is presented as-is. "
-        f"You MUST tell the user plainly that these arXiv ids could not be traced to the search and may be invented: {', '.join(result['unknown_ids'])}."
-    )
+    problems = []
+    if result["unknown_ids"]:
+        problems.append(f"these arXiv ids could not be traced to the search and may be invented: {', '.join(result['unknown_ids'])}")
+    if result["date_errors"]:
+        problems.append(f"these dates are wrong: {', '.join(result['date_errors'])}")
+    return f"{MARKER} CITATION CHECK FAILED again after {max_blocks} rejections; {path} is presented as-is. You MUST tell the user plainly that {'; and '.join(problems)}."
 
 
 def _accepted(result: dict) -> str:
@@ -154,9 +158,12 @@ class CitationGateMiddleware(AgentMiddleware):
             return None
         text = host.read_text(encoding="utf-8", errors="replace")
         result = verify_report(text, search["papers"])
+        known = {p.get(k, "") for p in search["papers"] for k in ("published", "updated")}
+        result["date_errors"] = wrong_year_dates(text, [search.get("retrieved_on", ""), (search.get("window") or {}).get("start") or ""], known)
+        result["ok"] = result["ok"] and not result["date_errors"]
         prior = [r for r in self.store.read_log(thread_id) if r.get("search_id") == search["search_id"] and r.get("event") == "rejected"]
         digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
-        record = {"search_id": search["search_id"], "path": virtual, "sha256": digest, "at": time.time(), **{k: result[k] for k in ("cited", "retrieved", "unknown_ids", "warnings")}}
+        record = {"search_id": search["search_id"], "path": virtual, "sha256": digest, "at": time.time(), **{k: result[k] for k in ("cited", "retrieved", "unknown_ids", "date_errors", "warnings")}}
         if result["ok"]:
             self.store.log(thread_id, {"event": "accepted", **record})
             return False, _accepted(result)

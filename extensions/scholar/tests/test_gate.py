@@ -105,3 +105,13 @@ def test_edited_file_is_not_reported_as_unchanged(setup):
     edited = BAD + "Some extra synthesis.\n"
     content = gate.before_model(state_after_present(outputs, report=edited, call_id="c2"), RUNTIME)["messages"][0].content
     assert "rejection 2 of 3" in content and "unchanged" not in content
+
+
+def test_wrong_year_in_report_is_rejected(setup):
+    store, outputs = setup
+    search = store.load_search(THREAD)
+    store.save_search(THREAD, {**search, "retrieved_on": "2026-10-26", "window": {"start": "2024-10-26", "end": None}})
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report="**Date**: 2025-10-26\n" + GOOD), RUNTIME)["messages"]
+    assert "NOT verified" in msg.content and "2025-10-26 (search used 2026-10-26 / 2024-10-26)" in msg.content
+    assert "may be invented" not in msg.content
+    assert store.read_log(THREAD)[-1]["date_errors"] == ["2025-10-26 (search used 2026-10-26 / 2024-10-26)"]

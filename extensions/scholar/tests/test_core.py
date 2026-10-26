@@ -115,3 +115,13 @@ def test_verify_reports_uncited_and_counts_duplicates_once():
 
 def test_verify_sees_html_links():
     assert core.extract_ids("https://arxiv.org/html/2506.45678v1") == ["2506.45678"]
+
+
+def test_wrong_year_dates_flag_today_and_window_start_with_wrong_year():
+    report = "**Date**: 2025-10-26\npublished between 2023-10-26 and 2025-10-26; retrieved 2026-10-26"
+    assert core.wrong_year_dates(report, ["2026-10-26", "2024-10-26"], set()) == ["2025-10-26 (search used 2026-10-26 / 2024-10-26)", "2023-10-26 (search used 2026-10-26 / 2024-10-26)"]
+
+
+def test_wrong_year_dates_ignore_real_paper_dates_and_other_days():
+    report = "Published 2025-10-26. Updated 2026-03-01."
+    assert core.wrong_year_dates(report, ["2026-10-26"], {"2025-10-26"}) == []

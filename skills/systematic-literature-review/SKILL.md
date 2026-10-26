@@ -118,6 +118,8 @@ If the paper set is too small or too heterogeneous to support thematic synthesis
 - [templates/ieee.md](templates/ieee.md) — IEEE numeric citations. Use when the user targets an IEEE conference or journal, or explicitly asks for IEEE.
 - [templates/bibtex.md](templates/bibtex.md) — BibTeX entries. Use when the user mentions BibTeX, LaTeX, or wants machine-readable references. **Important**: arXiv papers are cited as `@misc`, not `@article` — the BibTeX template covers this explicitly.
 
+**Dates come from the search result, never from memory.** Fill the report's `Date`, "retrieved on" and "published between" fields from `report_dates` in the search result, and use `report_dates.today` in the file name. Your own sense of today's date is often a year off; the citation gate rejects reports whose dates contradict the search.
+
 Each template contains both the citation rules and a full report structure (executive summary, themes, per-paper annotations, references, methodology section). Follow the template's structure verbatim for the report body, then fill in content from your Phase 3 metadata.
 
 ### Phase 5: Save and present

@@ -14,6 +14,7 @@ import re
 from collections.abc import Awaitable, Callable
 from datetime import date
 
+DATE_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
 ID_RE = re.compile(r"arxiv\.org/(?:abs|pdf|html)/(\d{4}\.\d{4,5})|arXiv:\s*(\d{4}\.\d{4,5})", re.IGNORECASE)
 BATCH_CHAR_BUDGET = 9000  # stays under the host's 12,000-char tool-output externalization threshold
 BATCH_MAX_PAPERS = 5
@@ -155,3 +156,27 @@ def verify_report(report_text: str, papers: list[dict]) -> dict:
         "warnings": warnings,
         "not_cited": [pid for pid in by_id if pid not in cited],
     }
+
+
+def wrong_year_dates(report_text: str, anchors: list[str], known: set[str]) -> list[str]:
+    """Dates that share an anchor's month and day but not its year.
+
+    Reports wrote "today" from the model's own sense of the date, about half of
+    them with the wrong year (2025-10-26 on 2026-10-26), contradicting the
+    window the code had searched. ``anchors`` are the dates the search used
+    (retrieval date, window start); ``known`` are real paper dates, which may
+    legitimately share a month and day.
+    """
+    # "Last N years" starts on today's month and day, so one month-day can have several valid dates.
+    by_month_day: dict[str, list[str]] = {}
+    for anchor in anchors:
+        if anchor and anchor not in by_month_day.setdefault(anchor[5:], []):
+            by_month_day[anchor[5:]].append(anchor)
+    problems: list[str] = []
+    for found in DATE_RE.findall(report_text):
+        expected = by_month_day.get(found[5:], [])
+        if expected and found not in expected and found not in known:
+            problem = f"{found} (search used {' / '.join(expected)})"
+            if problem not in problems:
+                problems.append(problem)
+    return problems

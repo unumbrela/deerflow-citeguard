@@ -131,6 +131,8 @@ def build_tools(store: PaperStore, *, transport: httpx.AsyncBaseTransport | None
         }
         await asyncio.to_thread(store.save_search, context.thread_id, record)
         summary = {
+            # The model's own sense of "today" was wrong in about half the reports; these come from code.
+            "report_dates": {"today": record["retrieved_on"], "retrieved_on": record["retrieved_on"], "published_between": [window["start"] or "any", window["end"] or record["retrieved_on"]]},
             "count": len(papers),
             "requested": payload["max_results"],
             "window": window,

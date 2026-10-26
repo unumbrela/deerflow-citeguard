@@ -40,6 +40,7 @@ async def test_search_stores_results_and_returns_compact_index(store):
     summary = json.loads(result.content)
     assert summary["count"] == 10 and summary["match"] == "phrase"
     assert summary["window"] == {"start": "2024-10-25", "end": None}
+    assert summary["report_dates"] == {"today": "2026-10-25", "retrieved_on": "2026-10-25", "published_between": ["2024-10-25", "2026-10-25"]}
     assert "submittedDate:[202410250000" in requests[0].url.params["search_query"]
     assert len(result.content) < 12000 and "abstract" not in result.content
     assert sum(len(b["ids"]) for b in summary["batches"]) == 10
