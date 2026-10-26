@@ -9,6 +9,7 @@ caches the result in <run>/citations.json, and writes ../runs/suite-<name>/summa
 
 import argparse
 import json
+import re
 import statistics
 import subprocess
 import sys
@@ -17,6 +18,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
+WINDOW_RE = re.compile(r"published between (\d{4}-\d{2}-\d{2}) and (\d{4}-\d{2}-\d{2})")
 
 
 def main() -> None:
@@ -47,8 +49,11 @@ def main() -> None:
         gate = run / "gate.jsonl"  # citation-gate decisions, only present when the scholar plugin ran
         if gate.exists():
             events = [json.loads(line)["event"] for line in gate.read_text().splitlines() if line.strip()]
-            row["gate_rejections"] = events.count("rejected")
-            row["gate_final"] = events[-1] if events else None
+            decisions = [e for e in events if e in ("accepted", "rejected", "released_unverified")]
+            row["gate_rejections"] = decisions.count("rejected")
+            row["gate_final"] = decisions[-1] if decisions else None
+            row["gate_search_rejections"] = events.count("search_rejected")
+            row["gate_auto_presented"] = "auto_presented" in events
         report = run / "report.md"
         if not report.exists():
             row["status"] = "no_report"
@@ -56,9 +61,12 @@ def main() -> None:
             continue
         cit_f = run / "citations.json"
         if not cit_f.exists():
-            cat = topics[run.name.split("-")[0]]["category"]
+            topic = topics[run.name.split("-")[0]]
+            # Coverage topics fix their own window in the prompt; the others use "last 2 years" from --since.
+            fixed = WINDOW_RE.search(topic.get("prompt", ""))
+            window = ["--since", fixed[1], "--until", fixed[2]] if fixed else ["--since", args.since]
             subprocess.run(
-                [sys.executable, "-I", str(HERE / "check_citations.py"), str(report), "--since", args.since, "--category", cat, "--json", str(cit_f)],
+                [sys.executable, "-I", str(HERE / "check_citations.py"), str(report), *window, "--category", topic["category"], "--json", str(cit_f)],
                 stdout=subprocess.DEVNULL,
             )
             time.sleep(3.5)
@@ -86,6 +94,9 @@ def main() -> None:
             gate_runs_with_rejection=sum(r["gate_rejections"] > 0 for r in gated),
             # Last decision not "accepted": the model either gave up after a rejection or was released unverified.
             gate_final_not_accepted=sum(r["gate_final"] != "accepted" for r in gated),
+            # The search dropped the user's category; the report was saved but not presented, so the gate presented it.
+            gate_runs_with_search_rejection=sum(r["gate_search_rejections"] > 0 for r in gated),
+            gate_runs_auto_presented=sum(r["gate_auto_presented"] for r in gated),
         )
     if ok:
         refs = sum(r["refs"] for r in ok)

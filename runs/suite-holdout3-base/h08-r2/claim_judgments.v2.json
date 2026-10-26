@@ -1,0 +1,2199 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the 76% and 53% accuracy figures for file path identification on SWE-Bench versus non-SWE-Bench repositories and attributes this gap to possible data contamination or memorization.",
+   "usage": {
+    "prompt_tokens": 932,
+    "completion_tokens": 55,
+    "total_tokens": 987,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 932
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract confirms all key claims: the introduction of TestSuiteBench with 165 applications, frontier agents achieving mutation scores below 60%, implementations passing 82% of reference tests, and the conclusion that agents can build software they cannot verify.",
+   "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 67,
+    "total_tokens": 911,
+    "completion_tokens_details": {
+     "text_tokens": 67
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 844
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms both the 6.4 percentage point reduction in resolution rates and the statistic that 88% of real prompts contain only problem statements compared to 7% of benchmark tasks.",
+   "usage": {
+    "prompt_tokens": 889,
+    "completion_tokens": 51,
+    "total_tokens": 940,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 889
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2608.27831",
+   "label": "unsupported",
+   "reason": "The abstract describes a paper about evaluating coding agents on realistic user requests (RealSWE), whereas the sentence attributes a method called CODESTRUCT involving AST entities to this citation.",
+   "usage": {
+    "prompt_tokens": 895,
+    "completion_tokens": 45,
+    "total_tokens": 940,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 895
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of RepoMirage using perturbation-based diagnostics and describes the finding of 'exploration drift' where agents access broader context but fail to convert it into effective structural information.",
+   "usage": {
+    "prompt_tokens": 845,
+    "completion_tokens": 51,
+    "total_tokens": 896,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 845
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2603.26337",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces RACE-bench and describes its dual-track evaluation framework that jointly measures patch correctness and intermediate reasoning alignment.",
+   "usage": {
+    "prompt_tokens": 859,
+    "completion_tokens": 36,
+    "total_tokens": 895,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 859
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2411.07781",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the benchmark name, the count of 4,050 test cases, and the specific findings regarding rejection rates for OS operations versus buggy code and natural language versus code format.",
+   "usage": {
+    "prompt_tokens": 937,
+    "completion_tokens": 54,
+    "total_tokens": 991,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 937
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2510.02609",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper proposes RedCodeAgent as the first automated red-teaming agent designed to systematically uncover vulnerabilities in diverse code agents.",
+   "usage": {
+    "prompt_tokens": 855,
+    "completion_tokens": 40,
+    "total_tokens": 895,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 855
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper reveals a novel threat of Functionally Correct yet Vulnerable (FCV) patches that pass test cases but contain vulnerabilities.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 41,
+    "total_tokens": 838,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2605.14084",
+   "label": "supported",
+   "reason": "The abstract confirms CRANE is a training-free parameter-editing method merging Instruct and Thinking checkpoints, achieving 66.2% pass1 (+19.5%) on Roo-Eval while preserving tool-use discipline.",
+   "usage": {
+    "prompt_tokens": 921,
+    "completion_tokens": 56,
+    "total_tokens": 977,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 921
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2606.21811",
+   "label": "supported",
+   "reason": "The abstract confirms the training of 4B-8B critic models for high-level planning, a 16% improvement in resolved rates, and a cost reduction from $0.07 to $0.03 (over 50%).",
+   "usage": {
+    "prompt_tokens": 837,
+    "completion_tokens": 66,
+    "total_tokens": 903,
+    "completion_tokens_details": {
+     "text_tokens": 66
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 837
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper surveys LLMs for LRPLs and DSLs, cites the 3.5 million Rust users statistic, and identifies data scarcity and specialized syntax as key challenges.",
+   "usage": {
+    "prompt_tokens": 964,
+    "completion_tokens": 54,
+    "total_tokens": 1018,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 964
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that performance gains on SWE-Bench may be driven by memorization rather than genuine problem-solving, supporting the sentence's claim about overstated capabilities.",
+   "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 48,
+    "total_tokens": 987,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 939
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2608.27831",
+   "label": "unsupported",
+   "reason": "The abstract describes a study on information composition and linguistic style gaps between real user requests and benchmarks, but does not mention memorization, unrealistic task formulations, or insufficient reasoning demands as reasons for overstated capabilities.",
+   "usage": {
+    "prompt_tokens": 902,
+    "completion_tokens": 55,
+    "total_tokens": 957,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 902
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2610.13065",
+   "label": "unsupported",
+   "reason": "The abstract introduces a new benchmark for test generation and does not discuss or critique SWE-Bench, memorization, or unrealistic task formulations as claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 848,
+    "completion_tokens": 47,
+    "total_tokens": 895,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 848
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2608.27831",
+   "label": "unsupported",
+   "reason": "The paper evaluates the impact of input information composition and linguistic style on coding agents, not structure-aware approaches or AST manipulation.",
+   "usage": {
+    "prompt_tokens": 900,
+    "completion_tokens": 35,
+    "total_tokens": 935,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 900
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes 'RepoAnchor' as a 'structure-first prototype workflow' and states that 'explicit structural scaffolding yields notable gains,' directly supporting the claim that this paper demonstrates structure-aware approaches outperform others.",
+   "usage": {
+    "prompt_tokens": 864,
+    "completion_tokens": 57,
+    "total_tokens": 921,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 864
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2603.26337",
+   "label": "unsupported",
+   "reason": "The abstract describes a benchmark for evaluating reasoning processes, not a 'structure-aware approach' that outperforms text-based methods.",
+   "usage": {
+    "prompt_tokens": 893,
+    "completion_tokens": 36,
+    "total_tokens": 929,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 893
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2411.07781",
+   "label": "partial",
+   "reason": "The abstract supports the claim about inadequate evaluation paradigms and the gap between coding ability and safety, but the specific phrasing 'gap between functional correctness and security' is an inference by the reviewer rather than a direct statement in the text.",
+   "usage": {
+    "prompt_tokens": 942,
+    "completion_tokens": 62,
+    "total_tokens": 1004,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 942
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2510.02609",
+   "label": "partial",
+   "reason": "The abstract confirms the inadequacy of current evaluation paradigms for real-world risks but does not mention the specific gap between functional correctness and security.",
+   "usage": {
+    "prompt_tokens": 880,
+    "completion_tokens": 41,
+    "total_tokens": 921,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 880
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current evaluation paradigms overlook security threats by focusing only on functional correctness, directly supporting the sentence's claim about the gap between these two concepts.",
+   "usage": {
+    "prompt_tokens": 824,
+    "completion_tokens": 45,
+    "total_tokens": 869,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 824
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2605.14084",
+   "label": "unsupported",
+   "reason": "The abstract describes a parameter-editing method for merging model checkpoints, not an argument advocating for sophisticated agent architectures.",
+   "usage": {
+    "prompt_tokens": 909,
+    "completion_tokens": 33,
+    "total_tokens": 942,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 909
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2606.21811",
+   "label": "partial",
+   "reason": "The abstract confirms the paper advocates a specialized critic architecture rather than a monolithic agent, but the review's claim of 'tension' with other approaches is the reviewer's synthesis, not a point made by the paper itself.",
+   "usage": {
+    "prompt_tokens": 824,
+    "completion_tokens": 56,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 824
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the survey categorizes improvement methods into six groups and notes a lack of a standard approach, which aligns with the sentence's claim about fragmented categories and lack of consensus.",
+   "usage": {
+    "prompt_tokens": 920,
+    "completion_tokens": 56,
+    "total_tokens": 976,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 920
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a standard approach and benchmark dataset for evaluating code generation in LRPLs and DSLs are lacking.",
+   "usage": {
+    "prompt_tokens": 932,
+    "completion_tokens": 36,
+    "total_tokens": 968,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 932
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly reports a performance drop from 76% on SWE-Bench to 53% on repositories not included in the benchmark, confirming the claim of dramatic drops on non-SWE-Bench repositories.",
+   "usage": {
+    "prompt_tokens": 914,
+    "completion_tokens": 58,
+    "total_tokens": 972,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 914
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract confirms that agents struggle to generate comprehensive test suites despite having specifications, aligning with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 37,
+    "total_tokens": 871,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2605.04532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing policy frameworks are poorly aligned with agent-mediated software development workflows.",
+   "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 32,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 815
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2411.16100",
+   "label": "supported",
+   "reason": "The abstract explicitly discusses redefining driver-navigator dynamics and human-bot trust, which supports the sentence's claim that the paper touches on practitioner perspectives regarding human-agent collaboration.",
+   "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 45,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 736
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2605.14084",
+   "label": "partial",
+   "reason": "The abstract confirms CRANE addresses efficiency, but the claim that production-scale multi-agent workflows remain underexplored is a reviewer inference not stated in the text.",
+   "usage": {
+    "prompt_tokens": 913,
+    "completion_tokens": 46,
+    "total_tokens": 959,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 913
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates whether coding agents can generate strong test suites from specifications for complex software and finds that they struggle to do so.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 40,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of TestSuiteBench with 165 applications, structured specifications, reference implementations, reference test suites, and an average of 74 mutants.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 48,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract explicitly states that frontier coding agents achieve mutation scores below 60% despite their generated test suites being largely valid.",
+   "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 36,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 789
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 88% of generated tests pass on the reference implementation and observes that the suites often lack relevant input combinations.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 39,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract explicitly states that generated implementations pass 82% of reference tests and concludes that agents can build software they cannot verify.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 37,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2610.13065",
+   "label": "supported",
+   "reason": "The abstract explicitly states that generated test suites are smaller than reference suites and lack relevant input combinations, which aligns with the sentence's claim about missing critical edge cases.",
+   "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 44,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 786
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2610.13065",
+   "label": "partial",
+   "reason": "The abstract confirms the benchmark size of 165 applications but does not mention or imply limitations regarding mutation generation failing to capture real-world requirements.",
+   "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 40,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 795
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2606.21811",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper trains a small critic model specialized in high-level planning to steer and improve the performance of larger coding agents.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 38,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2606.21811",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the training of 4B and 8B critic models using SFT and DPO to identify errors and provide guidance without concrete actions, evaluated across six coding agents.",
+   "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 49,
+    "total_tokens": 860,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 811
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2606.21811",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the critic models improved resolved rates by 16.0% on SWE-Bench Verified.",
+   "usage": {
+    "prompt_tokens": 794,
+    "completion_tokens": 36,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 794
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2606.21811",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the critic model reduces the per-example inference cost for GPT-OSS-20B from $0.07 to $0.03.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 47,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2606.21811",
+   "label": "supported",
+   "reason": "The abstract explicitly states the critic model provides high-level guidance without generating concrete actions to address planning bottlenecks in coding agents.",
+   "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 36,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 786
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2606.21811",
+   "label": "partial",
+   "reason": "The abstract confirms the requirement for separate critic training and data construction, but it does not explicitly state that effectiveness depends on the quality of that data.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 40,
+    "total_tokens": 833,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2411.07781",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes RedCode to provide comprehensive evaluations on the safety of code agents regarding risky code execution and generation.",
+   "usage": {
+    "prompt_tokens": 893,
+    "completion_tokens": 37,
+    "total_tokens": 930,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 893
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2411.07781",
+   "label": "partial",
+   "reason": "The sentence incorrectly states that RedCode-Gen contains 10 prompts, whereas the abstract specifies it contains 160 prompts.",
+   "usage": {
+    "prompt_tokens": 931,
+    "completion_tokens": 38,
+    "total_tokens": 969,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 931
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2411.07781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evaluations show agents are more likely to reject executing risky operations on the operating system than technically buggy code.",
+   "usage": {
+    "prompt_tokens": 885,
+    "completion_tokens": 36,
+    "total_tokens": 921,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 885
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2411.07781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that risky operations described in natural text lead to a lower rejection rate than those in code format.",
+   "usage": {
+    "prompt_tokens": 886,
+    "completion_tokens": 34,
+    "total_tokens": 920,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 886
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2411.07781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evaluations on RedCode-Gen show more capable base models and agents, such as GPT4, tend to produce more sophisticated and effective harmful software.",
+   "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 46,
+    "total_tokens": 936,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 890
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2411.07781",
+   "label": "supported",
+   "reason": "The abstract explicitly states the benchmark covers 25 types of critical vulnerabilities spanning 8 domains.",
+   "usage": {
+    "prompt_tokens": 887,
+    "completion_tokens": 30,
+    "total_tokens": 917,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 887
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2411.07781",
+   "label": "partial",
+   "reason": "The abstract confirms the Python/Bash scope and 19 LLMs but states RedCode-Gen has 160 prompts, contradicting the sentence's claim of 10.",
+   "usage": {
+    "prompt_tokens": 903,
+    "completion_tokens": 53,
+    "total_tokens": 956,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 903
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2510.02609",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes RedCodeAgent to systematically uncover vulnerabilities in diverse code agents that current static benchmarks miss.",
+   "usage": {
+    "prompt_tokens": 831,
+    "completion_tokens": 35,
+    "total_tokens": 866,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 831
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2510.02609",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the development of RedCodeAgent with adaptive memory for dynamic tool selection and its evaluation using simulated sandbox environments.",
+   "usage": {
+    "prompt_tokens": 843,
+    "completion_tokens": 36,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 843
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2510.02609",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes the 'first automated red-teaming agent' and that it 'consistently outperforms existing red-teaming methods'.",
+   "usage": {
+    "prompt_tokens": 826,
+    "completion_tokens": 44,
+    "total_tokens": 870,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 826
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2510.02609",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors validated RedCodeAgent on real-world code assistants like Cursor and Codeium, exposing previously unidentified security risks.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 39,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2510.02609",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the adaptive memory module enables dynamic selection of tool combinations to identify vulnerabilities in boundary conditions.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 33,
+    "total_tokens": 855,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2510.02609",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the developed simulated sandbox environments mitigate potential biases of LLM-based judges that rely only on static code.",
+   "usage": {
+    "prompt_tokens": 823,
+    "completion_tokens": 36,
+    "total_tokens": 859,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 823
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2510.02609",
+   "label": "partial",
+   "reason": "The abstract confirms evaluation across multiple agents and languages but does not explicitly state the limitations regarding specific scope or sandbox fidelity, making those points reviewer inferences.",
+   "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 41,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 832
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the survey systematically reviews the current state, methodologies, and challenges to evaluate capabilities and opportunities for LLMs in low-resource and domain-specific languages.",
+   "usage": {
+    "prompt_tokens": 915,
+    "completion_tokens": 51,
+    "total_tokens": 966,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 915
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the systematic review methodology, the filtering of 111 papers from over 27,000 studies between 2020 and 2024, and the analysis of LLMs, benchmarks, metrics, improvement strategies, and dataset methods.",
+   "usage": {
+    "prompt_tokens": 936,
+    "completion_tokens": 70,
+    "total_tokens": 1006,
+    "completion_tokens_details": {
+     "text_tokens": 70
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 936
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies data scarcity and specialized syntax as unique obstacles causing challenges for LLMs in LRPLs and DSLs.",
+   "usage": {
+    "prompt_tokens": 905,
+    "completion_tokens": 37,
+    "total_tokens": 942,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 905
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the survey identified four main evaluation techniques and several metrics for assessing code generation in LRPLs and DSLs.",
+   "usage": {
+    "prompt_tokens": 896,
+    "completion_tokens": 38,
+    "total_tokens": 934,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 896
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the analysis categorizes improvement methods into six groups and summarizes novel architectures proposed by researchers.",
+   "usage": {
+    "prompt_tokens": 894,
+    "completion_tokens": 33,
+    "total_tokens": 927,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 894
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a standard approach and benchmark dataset for evaluating code generation in LRPLs and DSLs are lacking.",
+   "usage": {
+    "prompt_tokens": 899,
+    "completion_tokens": 36,
+    "total_tokens": 935,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 899
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 3.5 million users in Rust cannot fully utilize LLM capabilities due to performance challenges on low-resource languages.",
+   "usage": {
+    "prompt_tokens": 900,
+    "completion_tokens": 39,
+    "total_tokens": 939,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 900
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2410.03981",
+   "label": "supported",
+   "reason": "The abstract explicitly states the survey covers studies between 2020 and 2024 and concludes that a standard benchmark dataset is lacking.",
+   "usage": {
+    "prompt_tokens": 907,
+    "completion_tokens": 45,
+    "total_tokens": 952,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 907
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly defines the gap between structured benchmark descriptions and realistic user requests as the core motivation for the study and evaluates its impact on coding agent performance.",
+   "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 41,
+    "total_tokens": 891,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 850
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the definition of a six-category taxonomy and four style dimensions, the creation of RealSWE with 381 task families, and the evaluation of seven LLMs.",
+   "usage": {
+    "prompt_tokens": 870,
+    "completion_tokens": 50,
+    "total_tokens": 920,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 870
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly states that requests with only a problem statement account for 88% of real prompts but just 7% of benchmark problems.",
+   "usage": {
+    "prompt_tokens": 849,
+    "completion_tokens": 40,
+    "total_tokens": 889,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 849
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 87% of real prompts are casually written whereas 94% of benchmark problems are formal, matching the sentence exactly.",
+   "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 42,
+    "total_tokens": 892,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 850
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evaluating LLMs with RealSWE found that realistic inputs reduce resolution rates by 6.4 percentage points on average.",
+   "usage": {
+    "prompt_tokens": 845,
+    "completion_tokens": 41,
+    "total_tokens": 886,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 845
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly states that including Desired Behavior and Motivation significantly affects performance.",
+   "usage": {
+    "prompt_tokens": 838,
+    "completion_tokens": 25,
+    "total_tokens": 863,
+    "completion_tokens_details": {
+     "text_tokens": 25
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 838
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2608.27831",
+   "label": "supported",
+   "reason": "The abstract explicitly states that linguistic style has only small, model-dependent effects.",
+   "usage": {
+    "prompt_tokens": 839,
+    "completion_tokens": 26,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 839
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2608.27831",
+   "label": "partial",
+   "reason": "The abstract confirms the use of SWE-bench variants and evaluation of seven LLMs, but the claim that results 'may not generalize to all real-world scenarios' is a reviewer's inference not explicitly stated in the text.",
+   "usage": {
+    "prompt_tokens": 857,
+    "completion_tokens": 60,
+    "total_tokens": 917,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 857
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly states the research question of investigating whether success on end-to-end tasks truly reflects repository context reasoning.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 33,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly describes RepoMirage as a two-stage evaluation suite built on SWE-Bench Verified that uses semantics-preserving perturbations and explicit structural tasks.",
+   "usage": {
+    "prompt_tokens": 826,
+    "completion_tokens": 43,
+    "total_tokens": 869,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 826
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly states that average performance declines from 66.8% to 25.3% when perturbation-targeted structural bottlenecks are turned into explicit tasks.",
+   "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 48,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 817
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly states that trajectory analysis reveals an 'exploration drift' where agents access broader context but fail to convert it into effective structural information.",
+   "usage": {
+    "prompt_tokens": 809,
+    "completion_tokens": 40,
+    "total_tokens": 849,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 809
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly states that RepoMirage-Perturb applies three types of perturbations and reveals a clear performance drop when broader context access is required.",
+   "usage": {
+    "prompt_tokens": 805,
+    "completion_tokens": 41,
+    "total_tokens": 846,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 805
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2605.26177",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed RepoAnchor workflow uses explicit structural scaffolding to yield notable gains.",
+   "usage": {
+    "prompt_tokens": 806,
+    "completion_tokens": 31,
+    "total_tokens": 837,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 806
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2605.26177",
+   "label": "partial",
+   "reason": "The abstract confirms RepoAnchor is a prototype and the work uses SWE-Bench Verified, but it does not explicitly state the limitation regarding a lack of comprehensive evaluation across diverse repositories.",
+   "usage": {
+    "prompt_tokens": 816,
+    "completion_tokens": 47,
+    "total_tokens": 863,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 816
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates whether performance gains on SWE-Bench Verified are driven by memorization or data contamination rather than genuine problem-solving.",
+   "usage": {
+    "prompt_tokens": 888,
+    "completion_tokens": 41,
+    "total_tokens": 929,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 888
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of two diagnostic tasks (file path identification and function reproduction) and the comparison of performance between SWE-Bench and non-SWE-Bench repositories.",
+   "usage": {
+    "prompt_tokens": 902,
+    "completion_tokens": 50,
+    "total_tokens": 952,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 902
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that state-of-the-art models achieve up to 76% accuracy in identifying buggy file paths using only issue descriptions.",
+   "usage": {
+    "prompt_tokens": 880,
+    "completion_tokens": 39,
+    "total_tokens": 919,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 880
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that performance drops to up to 53% on repositories not included in SWE-Bench and attributes this to possible data contamination or memorization.",
+   "usage": {
+    "prompt_tokens": 883,
+    "completion_tokens": 45,
+    "total_tokens": 928,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 883
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly states the 35% consecutive 5-gram accuracy on SWE-Bench Verified and the 18% figure for other benchmarks, matching the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 49,
+    "total_tokens": 939,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 890
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current evaluation protocols may overstate the models' true capabilities.",
+   "usage": {
+    "prompt_tokens": 876,
+    "completion_tokens": 28,
+    "total_tokens": 904,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 876
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2506.12286",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the diagnostic tasks used to probe knowledge and notes that the findings point to 'possible' contamination rather than identifying exact sources, aligning with the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 882,
+    "completion_tokens": 50,
+    "total_tokens": 932,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 882
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2603.26337",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces a dual-track evaluation framework designed to measure reasoning quality alongside patch correctness, directly addressing the research question described in the sentence.",
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 39,
+    "total_tokens": 881,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 842
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2603.26337",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of RACE-Bench with 528 instances from 12 repositories, executable patch verification, structured reference reasoning, and a dual-track evaluation framework.",
+   "usage": {
+    "prompt_tokens": 864,
+    "completion_tokens": 49,
+    "total_tokens": 913,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 864
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2603.26337",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the Resolved Rate ranges from 29% to 70% across the three evaluated agents on the full benchmark.",
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 41,
+    "total_tokens": 883,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 842
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2603.26337",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current agents perform well at understanding high-level intent but their performance degrades substantially when translating intent into concrete implementation steps.",
+   "usage": {
+    "prompt_tokens": 835,
+    "completion_tokens": 39,
+    "total_tokens": 874,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 835
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2603.26337",
+   "label": "supported",
+   "reason": "The abstract explicitly states that patches failing tests cover 35.7% fewer reference-reasoning elements than successful patches.",
+   "usage": {
+    "prompt_tokens": 837,
+    "completion_tokens": 36,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 837
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2603.26337",
+   "label": "supported",
+   "reason": "The abstract explicitly states that patches failing tests contain 94.1% more unsupported reasoning elements than successful patches.",
+   "usage": {
+    "prompt_tokens": 835,
+    "completion_tokens": 34,
+    "total_tokens": 869,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 835
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2603.26337",
+   "label": "partial",
+   "reason": "The abstract confirms the evaluation of three agents and 12 repositories, but the criticism regarding developer-accepted trajectories potentially missing valid solutions is an inference by the reviewer not explicitly stated in the text.",
+   "usage": {
+    "prompt_tokens": 852,
+    "completion_tokens": 50,
+    "total_tokens": 902,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 852
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper investigates whether functionally correct patches generated by code agents are safe, revealing they often contain vulnerabilities.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 37,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the development of FCV-Attack, the evaluation across 12 agent-model combinations on SWE-Bench, and the use of black-box single-query attacks.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 48,
+    "total_tokens": 841,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly defines FCV patches as those that pass all test cases but contain vulnerable code, directly matching the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 37,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 773
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the FCV-Attack achieves a 40.7% success rate on GPT-5 Mini + OpenHands for CWE-538.",
+   "usage": {
+    "prompt_tokens": 782,
+    "completion_tokens": 47,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 782
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly states that across 12 agent-model combinations on SWE-Bench, all are vulnerable to the FCV threat.",
+   "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 38,
+    "total_tokens": 807,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 769
+    }
+   }
+  },
+  {
+   "claim": 92,
+   "id": "2510.17862",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the attack requires only black-box access and a single query to perform the attack.",
+   "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 32,
+    "total_tokens": 797,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 765
+    }
+   }
+  },
+  {
+   "claim": 93,
+   "id": "2510.17862",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on specific CWE types but does not explicitly state that defense mechanisms were unexplored, making that part an inference.",
+   "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 39,
+    "total_tokens": 812,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 773
+    }
+   }
+  },
+  {
+   "claim": 94,
+   "id": "2402.01411",
+   "label": "supported",
+   "reason": "The abstract explicitly states the study's goal is to investigate LLM-based agents' performance on real-world autonomous software development tasks, moving beyond binary benchmark evaluations.",
+   "usage": {
+    "prompt_tokens": 808,
+    "completion_tokens": 42,
+    "total_tokens": 850,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 808
+    }
+   }
+  },
+  {
+   "claim": 95,
+   "id": "2402.01411",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the development of the CodePori multi-agent system for automated code generation and the use of a survey-based evaluation with practitioners to assess performance on real-world tasks.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 47,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 96,
+   "id": "2402.01411",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study's results highlight that LLM-based multi-agent systems show potential for autonomous code generation.",
+   "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 35,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 795
+    }
+   }
+  },
+  {
+   "claim": 97,
+   "id": "2402.01411",
+   "label": "supported",
+   "reason": "The abstract explicitly lists short-term memory limitations, hallucinations, and code smells as specific challenges identified by the study.",
+   "usage": {
+    "prompt_tokens": 798,
+    "completion_tokens": 34,
+    "total_tokens": 832,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 798
+    }
+   }
+  },
+  {
+   "claim": 98,
+   "id": "2402.01411",
+   "label": "supported",
+   "reason": "The abstract explicitly states the need to move beyond standard benchmarks and highlights the necessity of incorporating a practitioner-centric perspective to address real-world applicability.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 39,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 99,
+   "id": "2402.01411",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study highlights the need to move beyond standard benchmarks for evaluating real-world applicability.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 33,
+    "total_tokens": 826,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 100,
+   "id": "2402.01411",
+   "label": "partial",
+   "reason": "The abstract confirms the survey-based evaluation but does not mention limited agent architecture details.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 27,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 101,
+   "id": "2605.04532",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a comparative analysis of Terms of Service to determine accountability allocation and argues that existing frameworks are poorly aligned with agent-mediated workflows, directly matching the research questions in the sentence.",
+   "usage": {
+    "prompt_tokens": 808,
+    "completion_tokens": 48,
+    "total_tokens": 856,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 808
+    }
+   }
+  },
+  {
+   "claim": 102,
+   "id": "2605.04532",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents a comparative analysis of Terms of Service examining ownership, responsibility, liability, and disclosure obligations.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 36,
+    "total_tokens": 849,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 103,
+   "id": "2605.04532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the analysis reveals a consistent tendency to shift responsibility for correctness, safety, and legal compliance onto users.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 36,
+    "total_tokens": 833,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 104,
+   "id": "2605.04532",
+   "label": "supported",
+   "reason": "The abstract explicitly states the analysis identified 'substantial variation in how providers address issues such as indemnification, data reuse, and acceptable use'.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 40,
+    "total_tokens": 837,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 105,
+   "id": "2605.04532",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors' argument that existing policy frameworks are poorly aligned with agent-mediated software development workflows.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 33,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 106,
+   "id": "2605.04532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper outlines a research roadmap identifying challenges for modeling responsibility and designing governance artifacts.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 32,
+    "total_tokens": 823,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 107,
+   "id": "2605.04532",
+   "label": "partial",
+   "reason": "The abstract confirms the analysis is limited to ToS documents, but the need for empirical studies is a recommendation in the roadmap rather than an explicitly stated limitation of the current work.",
+   "usage": {
+    "prompt_tokens": 799,
+    "completion_tokens": 46,
+    "total_tokens": 845,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 799
+    }
+   }
+  },
+  {
+   "claim": 108,
+   "id": "2411.16100",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper explores how bot-driven development impacts and redefines traditional development roles.",
+   "usage": {
+    "prompt_tokens": 691,
+    "completion_tokens": 31,
+    "total_tokens": 722,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 691
+    }
+   }
+  },
+  {
+   "claim": 109,
+   "id": "2411.16100",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper explores the bot-driven development paradigm and proposes a research agenda addressing skill development, human-bot trust, interruption frequency, and ethical considerations.",
+   "usage": {
+    "prompt_tokens": 705,
+    "completion_tokens": 43,
+    "total_tokens": 748,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 705
+    }
+   }
+  },
+  {
+   "claim": 110,
+   "id": "2411.16100",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in bot-driven development, bots go beyond support tasks to actively drive development workflows.",
+   "usage": {
+    "prompt_tokens": 686,
+    "completion_tokens": 32,
+    "total_tokens": 718,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 686
+    }
+   }
+  },
+  {
+   "claim": 111,
+   "id": "2411.16100",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper explores how bot-driven development redefines driver-navigator dynamics and aligns with DevOps goals.",
+   "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 37,
+    "total_tokens": 727,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 690
+    }
+   }
+  },
+  {
+   "claim": 112,
+   "id": "2411.16100",
+   "label": "supported",
+   "reason": "The abstract explicitly lists the four challenges (skill development, trust dynamics, interruption frequency, and ethical considerations) as part of the proposed research agenda.",
+   "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 40,
+    "total_tokens": 730,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 690
+    }
+   }
+  },
+  {
+   "claim": 113,
+   "id": "2411.16100",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's aim to use empirical studies and prototype systems to define best practices.",
+   "usage": {
+    "prompt_tokens": 686,
+    "completion_tokens": 31,
+    "total_tokens": 717,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 686
+    }
+   }
+  },
+  {
+   "claim": 114,
+   "id": "2411.16100",
+   "label": "partial",
+   "reason": "The abstract confirms the paper proposes conceptual governance structures but explicitly mentions empirical studies, contradicting the claim that it lacks empirical validation.",
+   "usage": {
+    "prompt_tokens": 689,
+    "completion_tokens": 36,
+    "total_tokens": 725,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 689
+    }
+   }
+  },
+  {
+   "claim": 115,
+   "id": "2605.14084",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Instruct and Thinking models have complementary but misaligned capabilities (tool-disciplined vs. strong planning) and presents CRANE as a method to combine them.",
+   "usage": {
+    "prompt_tokens": 889,
+    "completion_tokens": 48,
+    "total_tokens": 937,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 889
+    }
+   }
+  },
+  {
+   "claim": 116,
+   "id": "2605.14084",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms CRANE is a training-free parameter-editing method that uses magnitude thresholding, Conservative Taylor Gate, and Graduated Sigmoidal Projection to merge Instruct and Thinking checkpoints.",
+   "usage": {
+    "prompt_tokens": 896,
+    "completion_tokens": 50,
+    "total_tokens": 946,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 896
+    }
+   }
+  },
+  {
+   "claim": 117,
+   "id": "2605.14084",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on Roo-Eval the method achieves a pass1 of 66.2% (+19.5%) for Qwen3-30B-A3B.",
+   "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 51,
+    "total_tokens": 941,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 890
+    }
+   }
+  },
+  {
+   "claim": 118,
+   "id": "2605.14084",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method resolves up to 14 additional instances on SWE-bench-Verified at both scales.",
+   "usage": {
+    "prompt_tokens": 878,
+    "completion_tokens": 37,
+    "total_tokens": 915,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 878
+    }
+   }
+  },
+  {
+   "claim": 119,
+   "id": "2605.14084",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on Terminal-Bench v2 the method improves pass1/pass5 by up to 2.3%/7.8%.",
+   "usage": {
+    "prompt_tokens": 883,
+    "completion_tokens": 42,
+    "total_tokens": 925,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 883
+    }
+   }
+  },
+  {
+   "claim": 120,
+   "id": "2605.14084",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CRANE preserves Instruct-level efficiency and consistently outperforms alternative merging strategies across all three benchmarks.",
+   "usage": {
+    "prompt_tokens": 872,
+    "completion_tokens": 36,
+    "total_tokens": 908,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 872
+    }
+   }
+  },
+  {
+   "claim": 121,
+   "id": "2605.14084",
+   "label": "partial",
+   "reason": "The abstract confirms the method applies to paired Instruct/Thinking checkpoints, but it does not state or imply that being training-free limits its applicability.",
+   "usage": {
+    "prompt_tokens": 880,
+    "completion_tokens": 41,
+    "total_tokens": 921,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 880
+    }
+   }
+  }
+ ]
+}

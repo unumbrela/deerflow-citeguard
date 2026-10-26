@@ -34,7 +34,7 @@ from deerflow_extension_api import (
 )
 
 from . import arxiv
-from .core import batch_paper, compact_index, make_batches, resolve_window, select_papers
+from .core import batch_paper, compact_index, make_batches, normalise_category, resolve_window, select_papers
 from .gate import CitationGateMiddleware
 from .store import PaperStore
 
@@ -99,6 +99,7 @@ def build_tools(store: PaperStore, *, transport: httpx.AsyncBaseTransport | None
         if not context.thread_id:
             return _error("no conversation context")
         window = resolve_window(today(), payload.get("years"), payload.get("start_date"), payload.get("end_date"))
+        category = normalise_category(payload.get("category"))  # the primary-category filter compares exactly, so "cs.cl" would keep nothing
         deadline = time.monotonic() + SEARCH_BUDGET_SECONDS
         calls = 0
         async with httpx.AsyncClient(transport=transport, headers={"User-Agent": arxiv.USER_AGENT}, follow_redirects=True) as client:
@@ -108,10 +109,10 @@ def build_tools(store: PaperStore, *, transport: httpx.AsyncBaseTransport | None
                 if calls:
                     await asyncio.sleep(pause)
                 calls += 1
-                return await arxiv.fetch(client, query=payload["query"], max_results=n, category=payload.get("category"), start_date=window["start"], end_date=window["end"], match=match, deadline=deadline)
+                return await arxiv.fetch(client, query=payload["query"], max_results=n, category=category, start_date=window["start"], end_date=window["end"], match=match, deadline=deadline)
 
             try:
-                papers, match = await select_papers(fetch, query=payload["query"], max_results=payload["max_results"], category=payload.get("category"), include_cross_lists=payload.get("include_cross_lists", False))
+                papers, match = await select_papers(fetch, query=payload["query"], max_results=payload["max_results"], category=category, include_cross_lists=payload.get("include_cross_lists", False))
             except arxiv.ArxivError as exc:
                 return _error(f"{exc}. Report this to the user; do not search arXiv by other means.")
 
@@ -120,12 +121,13 @@ def build_tools(store: PaperStore, *, transport: httpx.AsyncBaseTransport | None
             "search_id": uuid.uuid4().hex,
             "owner": context.principal.user_id,
             "query": payload["query"],
-            "category": payload.get("category"),
+            "category": category,
             "include_cross_lists": payload.get("include_cross_lists", False),
             "window": window,
             "requested": payload["max_results"],
             "match": match,
             "retrieved_on": today().isoformat(),
+            "searched_at": time.time(),  # the gate presents only reports saved after this
             "papers": papers,
             "batches": batches,
         }
@@ -136,7 +138,7 @@ def build_tools(store: PaperStore, *, transport: httpx.AsyncBaseTransport | None
             "count": len(papers),
             "requested": payload["max_results"],
             "window": window,
-            "category": payload.get("category"),
+            "category": category,
             "match": match,
             "batches": [{"batch": n, "ids": ids} for n, ids in enumerate(batches, 1)],
             "index": compact_index(papers),
@@ -151,6 +153,8 @@ def build_tools(store: PaperStore, *, transport: httpx.AsyncBaseTransport | None
         search, problem = await asyncio.to_thread(_owned_search, store, context)
         if problem:
             return _error(problem)
+        if search.get("rejected"):
+            return _error(f"the latest search was rejected: {search['rejected']}")
         batches = search["batches"]
         n = payload["batch"]
         if n > len(batches):

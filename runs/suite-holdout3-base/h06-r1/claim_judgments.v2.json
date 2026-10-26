@@ -1,0 +1,1281 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling.",
+   "usage": {
+    "prompt_tokens": 956,
+    "completion_tokens": 35,
+    "total_tokens": 991,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 956
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2601.22129",
+   "label": "supported",
+   "reason": "The abstract confirms that SWE-Replay optimizes scaling by recycling trajectories from prior trials instead of repeatedly sampling from scratch.",
+   "usage": {
+    "prompt_tokens": 820,
+    "completion_tokens": 35,
+    "total_tokens": 855,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 820
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2605.20473",
+   "label": "supported",
+   "reason": "The abstract confirms DiffCodeGen uses coverage-guided fuzzing to synthesize inputs, clusters candidates by behavioral similarity, and performs selection without additional LLM inference calls.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 43,
+    "total_tokens": 877,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the formalization of dense benchmark ranking under test-time scaling and the introduction of the Scorio library with the specified statistical methods.",
+   "usage": {
+    "prompt_tokens": 878,
+    "completion_tokens": 40,
+    "total_tokens": 918,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 878
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that longer chains-of-thought do not consistently enhance accuracy and that correct solutions are often shorter than incorrect ones, matching the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 43,
+    "total_tokens": 832,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 789
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work examines on-policy distillation through test-time scaling and finds that improvements do not uniformly extend across all sampling budgets.",
+   "usage": {
+    "prompt_tokens": 866,
+    "completion_tokens": 40,
+    "total_tokens": 906,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 866
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2504.05097",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces 'state tuning' as a novel state-based approach to test-time scaling tailored to the RNN-based RWKV-7 model, matching the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 856,
+    "completion_tokens": 50,
+    "total_tokens": 906,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 856
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors' goal was to seek the simplest approach to achieve test-time scaling and strong reasoning performance, matching the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 833,
+    "completion_tokens": 44,
+    "total_tokens": 877,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 833
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract confirms that using sample count alone without considering generation strategy (batching vs. serial calls) leads to significantly higher energy usage and latency.",
+   "usage": {
+    "prompt_tokens": 956,
+    "completion_tokens": 44,
+    "total_tokens": 1000,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 956
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study found parallel scaling achieves better coverage and scalability compared to sequential strategies.",
+   "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 34,
+    "total_tokens": 814,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 780
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2601.22129",
+   "label": "unsupported",
+   "reason": "The abstract describes a method that recycles prior trajectories to optimize scaling, not a parallel scaling strategy that outperforms sequential approaches.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 40,
+    "total_tokens": 862,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that longer CoTs often lead to performance degradation due to self-revisions, directly supporting the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 778,
+    "completion_tokens": 37,
+    "total_tokens": 815,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 778
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2501.19393",
+   "label": "partial",
+   "reason": "The abstract confirms budget forcing prompts double-checking to improve performance, but the claim that unstructured length increases introduce errors is an inference not explicitly stated in the text.",
+   "usage": {
+    "prompt_tokens": 853,
+    "completion_tokens": 48,
+    "total_tokens": 901,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 853
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2504.05097",
+   "label": "partial",
+   "reason": "The abstract confirms the method was evaluated on a 'target task' but does not explicitly state that the coverage was limited to a single task or lacked broader benchmarks.",
+   "usage": {
+    "prompt_tokens": 866,
+    "completion_tokens": 46,
+    "total_tokens": 912,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 866
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract confirms the work focuses on math competition questions (MATH and AIME24) as the primary evaluation domain.",
+   "usage": {
+    "prompt_tokens": 843,
+    "completion_tokens": 36,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 843
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper investigates self-revision capabilities and finds that increased self-revisions in longer CoTs lead to performance degradation.",
+   "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 41,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 789
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that evaluations should report generation schedules and GPU-level systems metrics alongside accuracy.",
+   "usage": {
+    "prompt_tokens": 960,
+    "completion_tokens": 29,
+    "total_tokens": 989,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 960
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2601.22129",
+   "label": "partial",
+   "reason": "The abstract confirms the method is for software engineering agents using repository exploration, but the claim that transferability to other domains requires investigation is an inference not stated in the text.",
+   "usage": {
+    "prompt_tokens": 837,
+    "completion_tokens": 48,
+    "total_tokens": 885,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 837
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2605.20473",
+   "label": "partial",
+   "reason": "The abstract confirms the paper targets code generation, but the claim that its transferability to other domains requires investigation is an inference by the reviewer not stated in the text.",
+   "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 44,
+    "total_tokens": 888,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 844
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2601.22129",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SWE-Replay is a technique designed to be efficient and operate without reliance on potentially noisy value estimates, directly matching the research question described in the sentence.",
+   "usage": {
+    "prompt_tokens": 801,
+    "completion_tokens": 47,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 801
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2601.22129",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SWE-Replay optimizes scaling by recycling trajectories and dynamically choosing between exploration and exploitation based on repository exploration potential and reasoning significance.",
+   "usage": {
+    "prompt_tokens": 816,
+    "completion_tokens": 42,
+    "total_tokens": 858,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 816
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2601.22129",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SWE-Replay outperforms naive scaling on SWE-Bench Verified and reduces costs by up to 17.4%.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 44,
+    "total_tokens": 841,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2601.22129",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SWE-Replay maintains or improves performance by up to 3.8% compared to naive scaling.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 40,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2601.22129",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evaluation on SWE-Bench Pro and Multilingual validates the generalizability of SWE-Replay.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 37,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2601.22129",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SWE-Replay operates without reliance on potentially noisy value estimates, directly supporting the claim about avoiding miscalibrated LLM-based value estimates.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 44,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2601.22129",
+   "label": "partial",
+   "reason": "The abstract confirms the method is designed for software engineering agents with repository exploration, but it explicitly claims generalizability across benchmarks rather than stating the limitation that effectiveness may vary for other domains.",
+   "usage": {
+    "prompt_tokens": 804,
+    "completion_tokens": 48,
+    "total_tokens": 852,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 804
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates whether OPD improvements extend across the entire range of test-time sampling budgets.",
+   "usage": {
+    "prompt_tokens": 845,
+    "completion_tokens": 33,
+    "total_tokens": 878,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 845
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper examines OPD via test-time scaling with pass@K and proposes TAS@K for teacher selection before training.",
+   "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 39,
+    "total_tokens": 913,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 874
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states the two distinct patterns observed: OPD can improve pass@K at both small and large budgets, or improve small-budget performance while reducing large-budget pass@K.",
+   "usage": {
+    "prompt_tokens": 848,
+    "completion_tokens": 48,
+    "total_tokens": 896,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 848
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors show a condition guaranteeing performance reversal and provide an idealized reverse KL counterexample where it occurs.",
+   "usage": {
+    "prompt_tokens": 833,
+    "completion_tokens": 38,
+    "total_tokens": 871,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 833
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that TAS@K can be computed before OPD training to predict which teacher will lead to larger improvements at a target sampling budget.",
+   "usage": {
+    "prompt_tokens": 839,
+    "completion_tokens": 41,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 839
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the TAS@K ordering agrees with observed improvements in 83.6% of experiments across thirteen benchmarks.",
+   "usage": {
+    "prompt_tokens": 841,
+    "completion_tokens": 38,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 841
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the 83.6% agreement rate for TAS@K and describes the existence of counterexamples where performance reversals occur even in idealized reverse KL cases.",
+   "usage": {
+    "prompt_tokens": 860,
+    "completion_tokens": 48,
+    "total_tokens": 908,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 860
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper formalizes and addresses the problem of ranking reasoning LLMs under test-time scaling, which directly matches the research question described in the sentence.",
+   "usage": {
+    "prompt_tokens": 838,
+    "completion_tokens": 46,
+    "total_tokens": 884,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 838
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the formalization of dense benchmark ranking, the introduction of the Scorio library with the listed statistical methods, and the evaluation setup involving 20 models on four Olympiad-style math benchmarks.",
+   "usage": {
+    "prompt_tokens": 878,
+    "completion_tokens": 53,
+    "total_tokens": 931,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 878
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that most full-trial rankings agree closely with the Bayesian gold standard Bayes_U@80 with a mean Kendall's tau_b of 0.93--0.95.",
+   "usage": {
+    "prompt_tokens": 855,
+    "completion_tokens": 53,
+    "total_tokens": 908,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 855
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that '19--34 methods recover exactly the same ordering' as the gold standard in the full-trial regime.",
+   "usage": {
+    "prompt_tokens": 841,
+    "completion_tokens": 40,
+    "total_tokens": 881,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 841
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in the single-trial regime, the best methods reach τ_b ≈ 0.86.",
+   "usage": {
+    "prompt_tokens": 837,
+    "completion_tokens": 36,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 837
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that using greedy decoding as an empirical prior reduces variance at N=1 by 16–52% but can bias rankings.",
+   "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 42,
+    "total_tokens": 886,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 844
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2603.10960",
+   "label": "partial",
+   "reason": "The abstract confirms the bias limitation of greedy decoding but does not mention the limitation regarding generalization to non-math domains.",
+   "usage": {
+    "prompt_tokens": 856,
+    "completion_tokens": 35,
+    "total_tokens": 891,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 856
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2605.20473",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method addresses the lack of public test cases and avoids extensive LLM inference for candidate selection.",
+   "usage": {
+    "prompt_tokens": 809,
+    "completion_tokens": 39,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 809
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2605.20473",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms all steps described in the sentence: generating diverse candidates, applying coverage-guided fuzzing without existing tests, clustering by behavioral similarity, and selecting the medoid of the largest cluster.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 54,
+    "total_tokens": 884,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2605.20473",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves competitive or superior performance while using only a fraction of time and tokens compared to state-of-the-art methods.",
+   "usage": {
+    "prompt_tokens": 804,
+    "completion_tokens": 40,
+    "total_tokens": 844,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 804
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2605.20473",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method performs selection without extra model calls and incurs little to no additional token consumption.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 34,
+    "total_tokens": 834,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2605.20473",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DiffCodeGen is fully asynchronous, model-agnostic, and naturally suited to agentic coding.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 34,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2605.20473",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method was evaluated across 4 large language models and demonstrated consistent improvements over baselines.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 33,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2605.20473",
+   "label": "partial",
+   "reason": "The abstract confirms the use of coverage-guided fuzzing and behavioral clustering, but the specific limitations regarding edge cases, semantic optimality, and input quality dependence are reviewer inferences not stated in the text.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 55,
+    "total_tokens": 877,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly investigates how different candidate-generation schedules (strategies) affect system costs like energy and latency, confirming the sentence's description of the paper's research question.",
+   "usage": {
+    "prompt_tokens": 941,
+    "completion_tokens": 44,
+    "total_tokens": 985,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 941
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the methodology details including the fixed candidate count (N=8), the four generation schedules compared, the specific metrics measured, the hardware used (A100 GPUs), the models tested, and the dataset employed.",
+   "usage": {
+    "prompt_tokens": 992,
+    "completion_tokens": 58,
+    "total_tokens": 1050,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 992
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact accuracy improvements for both models when increasing N from 1 to 8.",
+   "usage": {
+    "prompt_tokens": 954,
+    "completion_tokens": 32,
+    "total_tokens": 986,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 954
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that eight serial calls use 4.64-4.86x as much gross GPU-device energy as one batched call.",
+   "usage": {
+    "prompt_tokens": 940,
+    "completion_tokens": 43,
+    "total_tokens": 983,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 940
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that eight serial calls have 5.77-6.12x the P95 latency of one batched call with eight candidates.",
+   "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 45,
+    "total_tokens": 984,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 939
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that when candidates are independent and memory allows, fewer generation calls with larger batch sizes are more efficient.",
+   "usage": {
+    "prompt_tokens": 929,
+    "completion_tokens": 35,
+    "total_tokens": 964,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 929
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2609.19499",
+   "label": "partial",
+   "reason": "The abstract confirms the GPU types and independent candidates but does not explicitly state that memory constraints may limit batch size options in practice.",
+   "usage": {
+    "prompt_tokens": 945,
+    "completion_tokens": 39,
+    "total_tokens": 984,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 945
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors' goal is to seek the simplest approach to achieve test-time scaling and strong reasoning performance.",
+   "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 35,
+    "total_tokens": 850,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 815
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the curation of the s1K dataset with the specified criteria and the development of budget forcing to control test-time compute by terminating or lengthening the thinking process.",
+   "usage": {
+    "prompt_tokens": 843,
+    "completion_tokens": 48,
+    "total_tokens": 891,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 843
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that s1-32B exceeds o1-preview on competition math questions by up to 27% on MATH and AIME24.",
+   "usage": {
+    "prompt_tokens": 820,
+    "completion_tokens": 46,
+    "total_tokens": 866,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 820
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that scaling the model with budget forcing allows extrapolating performance from 50% to 57% on AIME24.",
+   "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 42,
+    "total_tokens": 853,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 811
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states the curation of a dataset relying on three criteria (difficulty, diversity, and quality) that were validated through ablations.",
+   "usage": {
+    "prompt_tokens": 805,
+    "completion_tokens": 40,
+    "total_tokens": 845,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 805
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that supervised finetuning combined with budget forcing leads to strong reasoning performance, exceeding o1-preview on math benchmarks.",
+   "usage": {
+    "prompt_tokens": 803,
+    "completion_tokens": 38,
+    "total_tokens": 841,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 803
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2501.19393",
+   "label": "partial",
+   "reason": "The abstract confirms the evaluation on math benchmarks and the 'Wait' appending mechanism, but it does not state or imply the limitation that this method may not transfer to non-mathematical domains.",
+   "usage": {
+    "prompt_tokens": 821,
+    "completion_tokens": 53,
+    "total_tokens": 874,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 821
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2504.05097",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a state-based test-time scaling method for RWKV-7 that enhances performance without altering pre-trained weights.",
+   "usage": {
+    "prompt_tokens": 843,
+    "completion_tokens": 36,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 843
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2504.05097",
+   "label": "supported",
+   "reason": "The abstract explicitly lists the observer framework, kernel method for upscaling state size, and Decorrelated Backpropagation as the three key innovations of the proposed method.",
+   "usage": {
+    "prompt_tokens": 858,
+    "completion_tokens": 43,
+    "total_tokens": 901,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 858
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2504.05097",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves state-of-the-art performance on the target task without altering the model's pre-trained weights.",
+   "usage": {
+    "prompt_tokens": 831,
+    "completion_tokens": 37,
+    "total_tokens": 868,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 831
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2504.05097",
+   "label": "supported",
+   "reason": "The abstract explicitly states that by tuning only the state matrix, a smaller model can outperform larger models on the given task.",
+   "usage": {
+    "prompt_tokens": 829,
+    "completion_tokens": 36,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 829
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2504.05097",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method preserves the efficiency of the original RWKV-7 architecture while harnessing test-time scaling.",
+   "usage": {
+    "prompt_tokens": 831,
+    "completion_tokens": 36,
+    "total_tokens": 867,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 831
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2504.05097",
+   "label": "supported",
+   "reason": "The abstract explicitly lists the observer framework, kernel method for upscaling, and Decorrelated Backpropagation (DBP) as the three key innovations of the proposed state tuning approach.",
+   "usage": {
+    "prompt_tokens": 833,
+    "completion_tokens": 47,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 833
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2504.05097",
+   "label": "partial",
+   "reason": "The abstract confirms the method is tailored to RWKV-7 and evaluated on a target task, but it does not explicitly state the limitations regarding lack of generalization or narrow benchmark coverage, which are the reviewer's inferences.",
+   "usage": {
+    "prompt_tokens": 847,
+    "completion_tokens": 62,
+    "total_tokens": 909,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 847
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states the study investigates whether o1-like models possess test-time scaling capabilities and finds that longer CoTs do not consistently enhance accuracy.",
+   "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 43,
+    "total_tokens": 814,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 771
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the analysis of CoT length vs. accuracy, self-revision patterns, comparison of scaling strategies on the specified models, and the proposal of the Shortest Majority Vote method.",
+   "usage": {
+    "prompt_tokens": 788,
+    "completion_tokens": 53,
+    "total_tokens": 841,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 788
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that longer CoTs do not consistently enhance accuracy and that correct solutions are often shorter than incorrect ones.",
+   "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 35,
+    "total_tokens": 789,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 754
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that longer CoTs contain more self-revisions, which often lead to performance degradation.",
+   "usage": {
+    "prompt_tokens": 747,
+    "completion_tokens": 32,
+    "total_tokens": 779,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 747
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study found parallel scaling achieves better coverage and scalability compared to sequential scaling strategies.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 32,
+    "total_tokens": 774,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed Shortest Majority Vote method significantly improves test-time scalability compared to conventional majority voting approaches.",
+   "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 35,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 746
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2502.12215",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on specific o1-like models and the empirical nature of the self-revision analysis, but it does not mention the limitation regarding specific benchmark datasets.",
+   "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 45,
+    "total_tokens": 815,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 770
+    }
+   }
+  }
+ ]
+}

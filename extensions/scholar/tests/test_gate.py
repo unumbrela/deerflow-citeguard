@@ -142,3 +142,105 @@ def test_fewer_requested_than_retrieved_is_fine(setup):
     store.save_search(THREAD, {**search, "requested": 1})
     [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=GOOD), RUNTIME)["messages"]
     assert "Citation check passed" in msg.content
+
+
+SEARCH_TOOL = "ext_community_scholar_search_1607103162c3"
+
+
+def state_after_search(request="Review agents. 10 papers, category cs.CL.", args=None):
+    return {
+        "messages": [
+            HumanMessage(request, id="h1"),
+            AIMessage("", id="a1", tool_calls=[{"id": "s-call", "name": SEARCH_TOOL, "args": args or {"query": "agents", "max_results": 10}}]),
+            ToolMessage('{"count":2,"index":[]}', id="t1", name=SEARCH_TOOL, tool_call_id="s-call"),
+        ],
+    }
+
+
+def test_search_without_the_users_category_is_rejected(setup):
+    store, _ = setup
+    [msg] = CitationGateMiddleware(store).before_model(state_after_search(), RUNTIME)["messages"]
+    assert msg.id == "t1" and "SEARCH REJECTED" in msg.content and "category cs.CL" in msg.content and '"count"' not in msg.content
+    assert "rejected" in store.load_search(THREAD)
+    assert store.read_log(THREAD)[-1]["event"] == "search_rejected"
+
+
+def test_search_with_the_users_category_passes(setup):
+    store, _ = setup
+    store.save_search(THREAD, {**store.load_search(THREAD), "category": "cs.CL"})
+    assert CitationGateMiddleware(store).before_model(state_after_search(), RUNTIME) is None
+    assert CitationGateMiddleware(store).before_model(state_after_search(request="Review agents, last 2 years."), RUNTIME) is None
+
+
+def test_hidden_host_reminders_are_not_the_users_request(setup):
+    store, _ = setup
+    state = state_after_search(request="Review agents, last 2 years.")
+    state["messages"].insert(1, HumanMessage("reminder: category cs.CV", id="h2", additional_kwargs={"hide_from_ui": True}))
+    assert CitationGateMiddleware(store).before_model(state, RUNTIME) is None
+
+
+def test_search_without_category_is_released_with_a_warning_after_max_rejections(setup):
+    store, _ = setup
+    gate = CitationGateMiddleware(store, max_blocks=1)
+    gate.before_model(state_after_search(), RUNTIME)
+    store.save_search(THREAD, {k: v for k, v in store.load_search(THREAD).items() if k != "rejected"})  # the model searched again, still without it
+    [msg] = gate.before_model(state_after_search(), RUNTIME)["messages"]
+    assert msg.content.startswith('{"count"') and "MUST tell the user" in msg.content
+    assert [r["event"] for r in store.read_log(THREAD)] == ["search_rejected", "search_released"]
+
+
+def test_report_from_a_rejected_search_is_rejected(setup):
+    store, outputs = setup
+    store.save_search(THREAD, {**store.load_search(THREAD), "rejected": "wrong category"})
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs), RUNTIME)["messages"]
+    assert "NOT verified" in msg.content and "rejected for using the wrong category" in msg.content
+
+
+def finishing(outputs, report=GOOD, filename="slr-agents.md"):
+    if report is not None:
+        (outputs / filename).write_text(report, encoding="utf-8")
+    return {"messages": [HumanMessage("review", id="h1"), AIMessage("Saved the review to slr-agents.md.", id="a9")], "thread_data": {"outputs_path": str(outputs)}}
+
+
+def test_saved_but_unpresented_report_is_presented_by_the_gate(setup):
+    store, outputs = setup
+    gate = CitationGateMiddleware(store)
+    [final] = gate.after_model(finishing(outputs), RUNTIME)["messages"]
+    assert final.id == "a9" and final.content == "Saved the review to slr-agents.md."
+    [call] = final.tool_calls
+    assert call["name"] == "present_files" and call["args"] == {"filepaths": ["/mnt/user-data/outputs/slr-agents.md"]}
+    # The loop routes to the tool node; after present_files runs, the usual check sees it.
+    state = finishing(outputs)
+    state["messages"][-1] = final
+    state["messages"].append(ToolMessage("Successfully presented files", id="t9", name="present_files", tool_call_id=call["id"]))
+    [msg] = gate.before_model(state, RUNTIME)["messages"]
+    assert "did not call present_files" in msg.content and "Citation check passed" in msg.content
+    assert [r["event"] for r in store.read_log(THREAD)] == ["auto_presented", "accepted"]
+
+
+def test_gate_presents_at_most_once_and_not_after_a_decision(setup):
+    store, outputs = setup
+    gate = CitationGateMiddleware(store)
+    assert gate.after_model(finishing(outputs), RUNTIME) is not None
+    assert gate.after_model(finishing(outputs), RUNTIME) is None
+    store.save_search(THREAD, {**store.load_search(THREAD), "search_id": "s2"})
+    store.log(THREAD, {"event": "accepted", "search_id": "s2"})
+    assert gate.after_model(finishing(outputs), RUNTIME) is None
+
+
+def test_nothing_to_present_is_left_alone(setup):
+    store, outputs = setup
+    gate = CitationGateMiddleware(store)
+    assert gate.after_model(finishing(outputs, report=None), RUNTIME) is None
+    assert gate.after_model(finishing(outputs, report="# Notes without citations\n"), RUNTIME) is None
+    store.save_search(THREAD, {**store.load_search(THREAD), "searched_at": 4102444800})  # files older than the search
+    assert gate.after_model(finishing(outputs), RUNTIME) is None
+    state = finishing(outputs)
+    state["messages"][-1] = AIMessage("", id="a9", tool_calls=[{"id": "c", "name": "write_file", "args": {}}])
+    assert gate.after_model(state, RUNTIME) is None
+
+
+async def test_async_after_model_matches_sync(setup):
+    store, outputs = setup
+    update = await CitationGateMiddleware(store).aafter_model(finishing(outputs), RUNTIME)
+    assert update["messages"][0].tool_calls[0]["name"] == "present_files"

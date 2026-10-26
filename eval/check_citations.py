@@ -1,7 +1,7 @@
 """Check the citations in a generated literature-review report against arXiv.
 
 Usage:
-    python3 -I check_citations.py REPORT.md [--since 2024-10-25] [--category cs.CL] [--json OUT.json]
+    python3 -I check_citations.py REPORT.md [--since 2024-10-25] [--until 2026-10-24] [--category cs.CL] [--json OUT.json]
 
 Metrics (all computed against the official arXiv API, never against the model):
     verified        HEADLINE: the cited id exists AND its title matches arXiv's (>= 0.85 similar).
@@ -11,7 +11,7 @@ Metrics (all computed against the official arXiv API, never against the model):
     consistent      all APA lines for the same paper agree on first author and year
     year            reference year matches arXiv's published year
     title           reference title is >= 0.85 similar to arXiv's title
-    in_window       arXiv published date is on/after --since
+    in_window       arXiv published date is within --since / --until
     in_category     arXiv primary category equals --category
 
 Only the first author is compared, so `first_author` is a lenient check.
@@ -31,7 +31,8 @@ from pathlib import Path
 
 NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
 ID_RE = re.compile(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})|arXiv:(\d{4}\.\d{4,5})")
-REF_RE = re.compile(r"(.+?)\((\d{4})[a-z]?\)\.\s+(.+?)\s+\*?arXiv", re.S)
+# "(2025)", "(2025a)" or "(2024, November 25)"; the id may follow the title as "*arXiv preprint", "arXiv" or "[arXiv:ID]".
+REF_RE = re.compile(r"(.+?)\((\d{4})[a-z]?(?:,[^)]*)?\)\.\s+(.+?)\s+[\[(]?\*?arXiv", re.S)
 
 
 CACHE = Path(__file__).resolve().parent / ".arxiv_cache.json"  # arXiv id -> metadata; each id is fetched once
@@ -98,7 +99,7 @@ def parse_references(text: str) -> list[dict]:
                 continue
             m = REF_RE.match(LIST_MARK.sub("", line).strip())
             if m:
-                found.append((m.group(1).split(",")[0].strip().lower(), m.group(2), m.group(3).strip().rstrip(".")))
+                found.append((m.group(1).split(",")[0].strip().lower(), m.group(2), m.group(3).strip().rstrip(".").strip("*_")))
         if found:
             # The reference list comes last, so the last APA line is what gets checked.
             # `consistent` flags papers whose APA lines disagree on first author or year.
@@ -111,6 +112,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("report")
     ap.add_argument("--since", help="YYYY-MM-DD, earliest allowed publication date")
+    ap.add_argument("--until", help="YYYY-MM-DD, latest allowed publication date")
     ap.add_argument("--category", help="required arXiv primary category, e.g. cs.CL")
     ap.add_argument("--json", help="write metrics to this file")
     args = ap.parse_args()
@@ -123,7 +125,7 @@ def main() -> None:
         t = truth.get(r["id"])
         row = {"id": r["id"], "resolved": t is not None, "verified": False}
         if t:
-            row["in_window"] = None if not args.since else t["published"] >= args.since
+            row["in_window"] = None if not (args.since or args.until) else (args.since or "") <= t["published"] <= (args.until or "9999")
             row["in_category"] = None if not args.category else t["primary_category"] == args.category
             if r["parsed"]:
                 row["first_author"] = r["first_author"] == t["authors"][0].split()[-1].lower()

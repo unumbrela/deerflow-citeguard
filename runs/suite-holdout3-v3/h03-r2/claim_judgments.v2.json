@@ -1,0 +1,1400 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that DistillLens uses symmetric knowledge distillation, projects intermediate hidden states into vocabulary space via Logit Lens, and enforces structural alignment using a symmetric divergence objective.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 48,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2604.03110",
+   "label": "supported",
+   "reason": "The abstract confirms MaKD addresses fine-grained information loss by mimicking self-attention and feed-forward modules, and the title verifies the use of low-rank factorization.",
+   "usage": {
+    "prompt_tokens": 706,
+    "completion_tokens": 46,
+    "total_tokens": 752,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 706
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that forward KL distillation behaves fundamentally differently during mid-training, slowing factual recall acquisition despite continued reasoning gains.",
+   "usage": {
+    "prompt_tokens": 902,
+    "completion_tokens": 36,
+    "total_tokens": 938,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 902
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Delta-KD preserves the distributional shift from SFT to help the student approximate an optimal representation space.",
+   "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 37,
+    "total_tokens": 776,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 739
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that CoT improves white-box KD effectiveness and leads to better average performance on BIG-Bench-Hard reasoning tasks.",
+   "usage": {
+    "prompt_tokens": 777,
+    "completion_tokens": 38,
+    "total_tokens": 815,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 777
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that integrating CoT with Group Relative Policy Optimization improves reasoning and correctness compared to KD alone, and that 4-bit quantization reduces memory and latency.",
+   "usage": {
+    "prompt_tokens": 802,
+    "completion_tokens": 45,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 802
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2504.19565",
+   "label": "supported",
+   "reason": "The abstract confirms the development of a knowledge-driven agentic framework using MeSH-guided multi-agents to generate QA pairs, resulting in Llama3-70B outperforming GPT-4 with MedPrompt.",
+   "usage": {
+    "prompt_tokens": 868,
+    "completion_tokens": 56,
+    "total_tokens": 924,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 868
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2502.03034",
+   "label": "supported",
+   "reason": "The abstract confirms the use of LLMs to generate culturally sensitive household energy data across six countries, aligning with the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 806,
+    "completion_tokens": 39,
+    "total_tokens": 845,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 806
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a distillation framework that transfers both structural and temporal reasoning capabilities to lightweight student models.",
+   "usage": {
+    "prompt_tokens": 799,
+    "completion_tokens": 35,
+    "total_tokens": 834,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 799
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2601.15394",
+   "label": "supported",
+   "reason": "The abstract explicitly states that distilled models memorize significantly less training data than standard fine-tuning, reducing memorization by more than 50%.",
+   "usage": {
+    "prompt_tokens": 859,
+    "completion_tokens": 41,
+    "total_tokens": 900,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 859
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract confirms the distilled model retains 70% to 95% of the teacher's capability across various tasks, matching the range cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 806,
+    "completion_tokens": 44,
+    "total_tokens": 850,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 806
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2602.13567",
+   "label": "unsupported",
+   "reason": "The abstract describes a specific distillation method and its performance relative to baselines but contains no data or claims about distilled models retaining 70-95% of teacher capabilities.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 47,
+    "total_tokens": 840,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2604.03110",
+   "label": "partial",
+   "reason": "The abstract confirms the paper achieves competitive performance and efficiency but does not state the specific 70-95% retention range attributed to it in the sentence.",
+   "usage": {
+    "prompt_tokens": 709,
+    "completion_tokens": 43,
+    "total_tokens": 752,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 709
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Chain-of-Thought improves the effectiveness of distilling reasoning capability, which aligns with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 38,
+    "total_tokens": 812,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract confirms that integrating chain-of-thought prompting improves reasoning coherence and solution correctness in the context of knowledge distillation.",
+   "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 35,
+    "total_tokens": 821,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 786
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that forward KL distillation during mid-training slows factual recall acquisition despite continued reasoning gains.",
+   "usage": {
+    "prompt_tokens": 906,
+    "completion_tokens": 32,
+    "total_tokens": 938,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 906
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Delta-KD preserves the distributional shift introduced during the teacher's supervised finetuning, which aligns with the sentence's claim about emphasizing preserving distributional shifts.",
+   "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 49,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 761
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly describes DistillLens as a framework that 'symmetrically aligns the evolving thought processes' by projecting 'intermediate hidden states', which directly supports the sentence's claim of 'symmetric intermediate state alignment'.",
+   "usage": {
+    "prompt_tokens": 808,
+    "completion_tokens": 57,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 808
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract confirms the paper evaluates distillation on Spanish data, supporting the claim that it includes a Spanish evaluation.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 36,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2601.15394",
+   "label": "partial",
+   "reason": "The abstract confirms the paper analyzes memorization and privacy in distillation, but the specific claim about whether reduced memorization translates to meaningful privacy guarantees is an inference by the reviewer not explicitly stated in the abstract.",
+   "usage": {
+    "prompt_tokens": 867,
+    "completion_tokens": 55,
+    "total_tokens": 922,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 867
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2603.13765",
+   "label": "partial",
+   "reason": "The abstract confirms the paper combines quantization and distillation, but the claim that this interaction was 'explored only' by this paper is an external assertion not found in or implied by the abstract.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 57,
+    "total_tokens": 844,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2601.15394",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work studies memorization dynamics in knowledge distillation setups and compares them to standard fine-tuning.",
+   "usage": {
+    "prompt_tokens": 835,
+    "completion_tokens": 36,
+    "total_tokens": 871,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 835
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2601.15394",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of the three specified LLM families, three datasets, and the analysis of memorization predictability using zlib entropy, KL divergence, and perplexity.",
+   "usage": {
+    "prompt_tokens": 884,
+    "completion_tokens": 47,
+    "total_tokens": 931,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 884
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2601.15394",
+   "label": "supported",
+   "reason": "The abstract explicitly states that distilled models memorize significantly less training data than standard fine-tuning, reducing memorization by more than 50%.",
+   "usage": {
+    "prompt_tokens": 838,
+    "completion_tokens": 41,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 838
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2601.15394",
+   "label": "supported",
+   "reason": "The abstract explicitly states that some examples are inherently easier to memorize and account for over ~95% of memorization during distillation.",
+   "usage": {
+    "prompt_tokens": 835,
+    "completion_tokens": 39,
+    "total_tokens": 874,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 835
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2601.15394",
+   "label": "supported",
+   "reason": "The abstract explicitly states that student memorization is predictable prior to distillation using features based on zlib entropy, KL divergence, and perplexity.",
+   "usage": {
+    "prompt_tokens": 835,
+    "completion_tokens": 39,
+    "total_tokens": 874,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 835
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2601.15394",
+   "label": "supported",
+   "reason": "The abstract explicitly states that hard distillation inherits 2.7x more teacher-specific examples than soft distillation and poses a greater risk.",
+   "usage": {
+    "prompt_tokens": 835,
+    "completion_tokens": 39,
+    "total_tokens": 874,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 835
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the problem of differing optimal representation spaces between student and teacher distributions as the motivation for proposing Delta-KD.",
+   "usage": {
+    "prompt_tokens": 704,
+    "completion_tokens": 36,
+    "total_tokens": 740,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 704
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Delta-KD extends token-level KD by encouraging the student to approximate an optimal representation space while preserving the distributional shift introduced during supervised finetuning.",
+   "usage": {
+    "prompt_tokens": 729,
+    "completion_tokens": 46,
+    "total_tokens": 775,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 729
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly states that prior work assumes shared optimal representation spaces and introduces Delta-KD to solve this specific problem.",
+   "usage": {
+    "prompt_tokens": 693,
+    "completion_tokens": 34,
+    "total_tokens": 727,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 693
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed Delta-KD method preserves the distributional shift introduced during the teacher's supervised finetuning.",
+   "usage": {
+    "prompt_tokens": 691,
+    "completion_tokens": 37,
+    "total_tokens": 728,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 691
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly states that empirical results on ROUGE metrics demonstrate Delta-KD substantially improves student performance.",
+   "usage": {
+    "prompt_tokens": 694,
+    "completion_tokens": 31,
+    "total_tokens": 725,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 694
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2509.14526",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Delta-KD substantially improves student performance while preserving more of the teacher's knowledge.",
+   "usage": {
+    "prompt_tokens": 695,
+    "completion_tokens": 32,
+    "total_tokens": 727,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 695
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper introduces a framework to symmetrically align the evolving thought processes of student and teacher models, addressing the limitation of optimizing only final outputs.",
+   "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 44,
+    "total_tokens": 798,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 754
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that DistillLens projects intermediate hidden states via Logit Lens and uses a symmetric divergence objective to align student and teacher thought processes.",
+   "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 41,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 770
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DistillLens is a framework that 'symmetrically aligns the evolving thought processes of student and teacher models'.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 40,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the symmetric divergence constraint imposes a dual-sided penalty to prevent both overconfidence and underconfidence.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 34,
+    "total_tokens": 776,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method preserves 'the high-entropy information conduits essential for final deduction'.",
+   "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 33,
+    "total_tokens": 772,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 739
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DistillLens consistently outperforms standard KD and feature-transfer baselines on diverse instruction-following benchmarks.",
+   "usage": {
+    "prompt_tokens": 744,
+    "completion_tokens": 37,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 744
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper examines the effectiveness of Chain-of-Thought in distilling reasoning capability using white-box knowledge distillation, which directly matches the research question described in the sentence.",
+   "usage": {
+    "prompt_tokens": 763,
+    "completion_tokens": 49,
+    "total_tokens": 812,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 763
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of Qwen and Llama2 families, CoT-Collection dataset, white-box KD, and evaluation on BIG-Bench-Hard tasks.",
+   "usage": {
+    "prompt_tokens": 783,
+    "completion_tokens": 52,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 783
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experimental results demonstrate the role of CoT in improving white-box KD effectiveness.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 31,
+    "total_tokens": 773,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experimental results show distilled models achieve better average performance in natural language reasoning tasks from the BIG-Bench-Hard benchmark.",
+   "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 39,
+    "total_tokens": 785,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 746
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CoT enables distilled models to achieve better performance on natural language reasoning and understanding tasks.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 33,
+    "total_tokens": 774,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2511.05184",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the BBH benchmark presents complex challenges for smaller LLMs and that the proposed approach improves performance on these tasks.",
+   "usage": {
+    "prompt_tokens": 743,
+    "completion_tokens": 39,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 743
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly investigates how logit-based knowledge distillation behaves differently across training stages and proposes a method to mitigate this stage dependence.",
+   "usage": {
+    "prompt_tokens": 886,
+    "completion_tokens": 43,
+    "total_tokens": 929,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 886
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of controlled experiments, the analysis of forward KL distillation during mid-training, the identification of teacher confidence asymmetry as the cause, and the proposal of Switch Distillation using predictive entropy for routing.",
+   "usage": {
+    "prompt_tokens": 919,
+    "completion_tokens": 56,
+    "total_tokens": 975,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 919
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that forward KL distillation with post-trained teachers behaves fundamentally differently during mid-training compared to pre-training.",
+   "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 35,
+    "total_tokens": 909,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 874
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that forward KD slows factual recall acquisition during mid-training despite continued reasoning gains.",
+   "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 30,
+    "total_tokens": 904,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 874
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact performance metrics (1.61-1.71x reasoning, 1.13-1.19x knowledge/commonsense, and 96.7-96.8% factual recall) attributed to Switch Distillation in the sentence.",
+   "usage": {
+    "prompt_tokens": 908,
+    "completion_tokens": 71,
+    "total_tokens": 979,
+    "completion_tokens_details": {
+     "text_tokens": 71
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 908
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2609.01532",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the benefits persist after post-training, closing the factual recall gap while maintaining 1.25-1.32x gains in reasoning.",
+   "usage": {
+    "prompt_tokens": 886,
+    "completion_tokens": 45,
+    "total_tokens": 931,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 886
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2604.03110",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing methods focusing on layer distribution cause loss of fine-grained information and introduces MaKD to address this specific issue.",
+   "usage": {
+    "prompt_tokens": 667,
+    "completion_tokens": 42,
+    "total_tokens": 709,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 667
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2604.03110",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the MaKD method mimics self-attention and feed-forward modules, and the title verifies the use of low-rank factorization.",
+   "usage": {
+    "prompt_tokens": 689,
+    "completion_tokens": 42,
+    "total_tokens": 731,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 689
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2604.03110",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing methods focus on layer distribution causing loss of fine-grained information and that MaKD addresses this by capturing rich knowledge at different aspects.",
+   "usage": {
+    "prompt_tokens": 657,
+    "completion_tokens": 43,
+    "total_tokens": 700,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 657
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2604.03110",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves competitive performance compared with various strong baselines with the same storage parameter budget.",
+   "usage": {
+    "prompt_tokens": 659,
+    "completion_tokens": 34,
+    "total_tokens": 693,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 659
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2604.03110",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method performs well in distilling auto-regressive architecture models.",
+   "usage": {
+    "prompt_tokens": 654,
+    "completion_tokens": 29,
+    "total_tokens": 683,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 654
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that the proposed combination of knowledge distillation and chain-of-thought guided reinforcement learning produces compact, efficient models suitable for resource-constrained deployment.",
+   "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 43,
+    "total_tokens": 809,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 766
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of Qwen 3B/0.5B, the specified datasets, chain-of-thought with Group Relative Policy Optimization, and 4-bit quantization.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 50,
+    "total_tokens": 863,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the distilled student retains 70% to 91% of the teacher's capability in English tasks.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 38,
+    "total_tokens": 796,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the distilled student retains up to 95% of the teacher's capability in Spanish tasks.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 35,
+    "total_tokens": 785,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the distilled student achieves up to 93.5% Rouge-L in code tasks.",
+   "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 34,
+    "total_tokens": 787,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 753
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly states that integrating chain-of-thought prompting with Group Relative Policy Optimization (GRPO) improves reasoning coherence and solution correctness compared to knowledge distillation alone.",
+   "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 44,
+    "total_tokens": 801,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 757
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly states that post-training 4-bit weight quantization reduces memory footprint and inference latency.",
+   "usage": {
+    "prompt_tokens": 751,
+    "completion_tokens": 31,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 751
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2502.03034",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's proposal to integrate LLMs for generating realistic, culturally sensitive household energy data across diverse geographies.",
+   "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 38,
+    "total_tokens": 833,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 795
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2502.03034",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of five LLMs, a four-stage methodology, and the generation of family structures, weather patterns, and consumption profiles for six countries with the specified contextual details.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 56,
+    "total_tokens": 878,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2502.03034",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes using LLMs to generate realistic, culturally sensitive, and behavior-specific data for household energy usage across diverse geographies.",
+   "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 42,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 789
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2502.03034",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study uses a four-stage methodology to synthesize contextual daily data including culturally nuanced activities and realistic weather ranges.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 38,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2502.03034",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study explores integrating external weather datasets directly to bypass intermediate modeling stages while ensuring physically consistent inputs.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 35,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2502.03034",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach underscores how prompt engineering combined with knowledge distillation can advance sustainable energy research and climate mitigation efforts.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 43,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a distillation framework for temporal knowledge graphs designed to enable deployment on resource-constrained platforms while maintaining reasoning accuracy.",
+   "usage": {
+    "prompt_tokens": 788,
+    "completion_tokens": 37,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 788
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of a distillation framework using LLMs as teachers to transfer structural and temporal reasoning to student models while integrating public knowledge with temporal information.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 45,
+    "total_tokens": 845,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing compression techniques fail to capture temporal dependencies in TKGs and confirms the proposed framework is designed to address this specific challenge.",
+   "usage": {
+    "prompt_tokens": 778,
+    "completion_tokens": 41,
+    "total_tokens": 819,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 778
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach uses LLMs as teacher models to enable effective transfer of both structural and temporal reasoning capabilities.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 37,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework enhances the student model's ability to model temporal dynamics while maintaining a compact and efficient architecture.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 37,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments on multiple benchmark datasets demonstrate the method consistently outperforms strong baselines.",
+   "usage": {
+    "prompt_tokens": 776,
+    "completion_tokens": 33,
+    "total_tokens": 809,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 776
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2601.00202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves a favorable trade-off between reasoning accuracy, computational efficiency, and practical deployability.",
+   "usage": {
+    "prompt_tokens": 776,
+    "completion_tokens": 35,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 776
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2504.19565",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes a knowledge-driven, agentic framework to address the insufficient quantity and quality of open-source annotated biomedical corpora.",
+   "usage": {
+    "prompt_tokens": 827,
+    "completion_tokens": 37,
+    "total_tokens": 864,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 827
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2504.19565",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a collaborative multi-agent architecture guided by the MeSH hierarchy that autonomously extracts, synthesizes, and self-evaluates data to generate domain-specific question-answer pairs.",
+   "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 48,
+    "total_tokens": 898,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 850
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2504.19565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that language models trained on the multi-agent distilled datasets achieve notable improvements in biomedical question-answering tasks.",
+   "usage": {
+    "prompt_tokens": 816,
+    "completion_tokens": 37,
+    "total_tokens": 853,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 816
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2504.19565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that models trained on the distilled datasets outperform both strong life sciences LLM baselines and advanced proprietary models.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 37,
+    "total_tokens": 851,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2504.19565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the AI-Ready dataset enables Llama3-70B to surpass GPT-4 with MedPrompt and Med-PaLM-2 despite their larger scale.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 50,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2504.19565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that detailed ablation studies validate the effectiveness and synergy of each agent within the framework.",
+   "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 32,
+    "total_tokens": 843,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 811
+    }
+   }
+  }
+ ]
+}

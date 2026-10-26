@@ -1,0 +1,533 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study found parallel scaling achieves better coverage and scalability compared to sequential scaling strategies.",
+   "usage": {
+    "prompt_tokens": 779,
+    "completion_tokens": 32,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 779
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract confirms that using fewer generation calls with larger batch sizes (parallel) is more efficient than splitting the same candidate count across several sequential calls.",
+   "usage": {
+    "prompt_tokens": 963,
+    "completion_tokens": 40,
+    "total_tokens": 1003,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 963
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that batched generation calls use significantly less energy (4.64-4.86x less) than serial calls for the same candidate count.",
+   "usage": {
+    "prompt_tokens": 952,
+    "completion_tokens": 49,
+    "total_tokens": 1001,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 952
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2604.06260",
+   "label": "supported",
+   "reason": "The abstract explicitly states that S³ improves generation by reallocating compute during the denoising process rather than only at the final output stage.",
+   "usage": {
+    "prompt_tokens": 820,
+    "completion_tokens": 39,
+    "total_tokens": 859,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 820
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2609.37041",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a training-free method using counterfactual contexts to steer models at inference time.",
+   "usage": {
+    "prompt_tokens": 851,
+    "completion_tokens": 36,
+    "total_tokens": 887,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 851
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that parallel scaling achieves better scalability and proposes a method combining parallel scaling with majority voting to improve performance.",
+   "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 41,
+    "total_tokens": 806,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 765
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2604.06260",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes a search method that operates over denoising trajectories to improve diffusion language model generation, directly supporting the claim that specialized search over these trajectories is required or effective.",
+   "usage": {
+    "prompt_tokens": 812,
+    "completion_tokens": 53,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 812
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2610.26747",
+   "label": "supported",
+   "reason": "The abstract confirms the paper adapts recursive pretraining for masked encoders because generation loops do not transfer directly.",
+   "usage": {
+    "prompt_tokens": 897,
+    "completion_tokens": 33,
+    "total_tokens": 930,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 897
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2512.11109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that open-source and closed-source VLMs show inconsistent or divergent behavior regarding test-time scaling methods.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 36,
+    "total_tokens": 794,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2510.03574",
+   "label": "unsupported",
+   "reason": "The abstract discusses efficient test-time scaling strategies for small VLMs, not a comparison of divergent behaviors between open and closed-source implementations.",
+   "usage": {
+    "prompt_tokens": 751,
+    "completion_tokens": 39,
+    "total_tokens": 790,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 751
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2604.06260",
+   "label": "supported",
+   "reason": "The abstract confirms that the proposed method achieves the largest performance gains on mathematical reasoning tasks, supporting the claim that this domain benefits from the test-time scaling approach described.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 43,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2609.37041",
+   "label": "supported",
+   "reason": "The abstract confirms the method improves performance on mathematical reasoning (MATH500), supporting the claim that it benefits this domain.",
+   "usage": {
+    "prompt_tokens": 861,
+    "completion_tokens": 37,
+    "total_tokens": 898,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 861
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2609.37041",
+   "label": "supported",
+   "reason": "The abstract confirms the method improves performance on code generation (HumanEval) compared to baselines, aligning with the claim of moderate improvements.",
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 42,
+    "total_tokens": 884,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 842
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2512.11109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that test-time scaling offers only limited gains on perception-focused benchmarks.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 28,
+    "total_tokens": 769,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2512.23675",
+   "label": "supported",
+   "reason": "The abstract explicitly formulates long-context modeling as a problem solved by a specific test-time training approach (TTT-E2E), supporting the claim that it requires such an approach.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 53,
+    "total_tokens": 843,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that different generation schedules result in significantly different energy consumption (4.64-4.86x variation), directly supporting the claim.",
+   "usage": {
+    "prompt_tokens": 946,
+    "completion_tokens": 46,
+    "total_tokens": 992,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 946
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2510.03574",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing test-time scaling methods are computationally demanding and contradict the goals of small models, thereby supporting the claim that efficient methods are required.",
+   "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 46,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 736
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2512.23675",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method has constant inference latency regardless of context length, supporting the claim about constant-latency approaches enabling long-context modeling.",
+   "usage": {
+    "prompt_tokens": 788,
+    "completion_tokens": 40,
+    "total_tokens": 828,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 788
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2610.26747",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the GMR framework layered on top of recAMPLIFY reduces expected layer depth by up to 37%.",
+   "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 45,
+    "total_tokens": 935,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 890
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that longer CoTs of o1-like models do not consistently enhance accuracy, directly supporting the claim.",
+   "usage": {
+    "prompt_tokens": 759,
+    "completion_tokens": 41,
+    "total_tokens": 800,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 759
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2507.14419",
+   "label": "supported",
+   "reason": "The abstract explicitly states that while simple test-time scaling can replicate the appearance of scaling behavior, it does not unlock higher performance and instead imposes a lower upper limit.",
+   "usage": {
+    "prompt_tokens": 836,
+    "completion_tokens": 43,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 836
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that OPD improvements vary across different test-time sampling budgets, observing cases where performance improves at small budgets but reduces at large budgets, confirming the claim that improvements are budget-dependent rather than universal.",
+   "usage": {
+    "prompt_tokens": 847,
+    "completion_tokens": 56,
+    "total_tokens": 903,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 847
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2512.11109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that open-source VLMs show inconsistent behavior regarding test-time scaling methods.",
+   "usage": {
+    "prompt_tokens": 743,
+    "completion_tokens": 30,
+    "total_tokens": 773,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 743
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2512.11109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the findings motivate future work on adaptive TTS strategies tailored to model capabilities and task characteristics.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 34,
+    "total_tokens": 792,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2507.14419",
+   "label": "unsupported",
+   "reason": "The abstract analyzes fixed test-time scaling methods (enforcing max length or appending 'Wait') and does not mention developing adaptive strategies that adjust scaling based on task characteristics.",
+   "usage": {
+    "prompt_tokens": 853,
+    "completion_tokens": 47,
+    "total_tokens": 900,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 853
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract confirms that optimizing generation schedules and batch sizes significantly improves energy efficiency, directly supporting the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 968,
+    "completion_tokens": 36,
+    "total_tokens": 1004,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 968
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2510.03574",
+   "label": "unsupported",
+   "reason": "The paper proposes test-time scaling via augmentation and adaptation strategies, not the optimization of generation schedules and batch sizes described in the sentence.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 40,
+    "total_tokens": 798,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2604.06260",
+   "label": "supported",
+   "reason": "The abstract describes $S^3$ as a test-time scaling method specifically designed for diffusion language models, which aligns with the sentence's claim of tailoring TTS approaches to diffusion architectures.",
+   "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 50,
+    "total_tokens": 882,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 832
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2610.26747",
+   "label": "unsupported",
+   "reason": "The abstract describes a method for masked protein language models using recursive pretraining, not test-time scaling (TTS) approaches tailored to diffusion models as claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 917,
+    "completion_tokens": 48,
+    "total_tokens": 965,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 917
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2604.06260",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the proposed method ($S^3$) as using a 'lightweight reference-free verifier' to guide the search process during test-time scaling.",
+   "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 44,
+    "total_tokens": 859,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 815
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes TAS@K as a metric to predict distillation outcomes and guide teacher selection across different sampling budgets.",
+   "usage": {
+    "prompt_tokens": 858,
+    "completion_tokens": 39,
+    "total_tokens": 897,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 858
+    }
+   }
+  }
+ ]
+}

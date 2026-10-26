@@ -74,3 +74,23 @@ async def test_get_batch_requires_a_search_and_the_same_owner(store):
     await search(MappingProxyType({"query": "agents", "max_results": 1}), ctx())
     assert "another user" in (await get_batch(MappingProxyType({"batch": 1}), ctx(user="mallory"))).content
     assert "does not exist" in (await get_batch(MappingProxyType({"batch": 2}), ctx())).content
+
+
+async def test_get_batch_refuses_a_rejected_search(store):
+    search, get_batch = tools(store, lambda r: httpx.Response(200, text=atom_feed([paper(1)])))
+    await search(MappingProxyType({"query": "agents", "max_results": 1}), ctx())
+    store.save_search(THREAD, {**store.load_search(THREAD), "rejected": "the user asked for category cs.CL; search again with it"})
+    assert "latest search was rejected" in (await get_batch(MappingProxyType({"batch": 1}), ctx())).content
+
+
+async def test_category_case_is_normalised(store):
+    requests = []
+
+    def handler(request):
+        requests.append(request)
+        return httpx.Response(200, text=atom_feed([paper(1)]))
+
+    search, _ = tools(store, handler)
+    summary = json.loads((await search(MappingProxyType({"query": "agents", "max_results": 1, "category": "cs.cl"}), ctx())).content)
+    assert summary["count"] == 1 and summary["category"] == "cs.CL"
+    assert "cat:cs.CL" in requests[0].url.params["search_query"]

@@ -37,3 +37,25 @@ cd eval && python3 -I claims.py agreement --labels annotation/claims-100.csv
 预计用时 2~3 小时。可以分几次标，没填的行会被跳过。
 
 注：这 100 条是按评判器的四种标签各抽 25 条（分层抽样），目的是让少见的标签也有足够样本来检验。所以算出的一致率反映的是"评判器在各类情况下靠不靠谱"，不等于在全部数据上的准确率。
+
+## 2026-10-27:先做了 LLM 交叉标注
+
+Claude 不看评判器结果，按本说明标了全部 100 条：`claims-100.claude.csv`(先提交、后比对，见 commit d908d51)。**这不是人工标注**，只说明两个不同家族的模型一致到什么程度、分歧在哪里。结果见 BASELINE.md「论断支持率:LLM 交叉标注」。
+
+两边不一致的 44 条单独放在 `claims-disputed.csv`,两边的标签都不显示。你只标这 44 条(约 40 分钟)就能裁定谁对。标法同上，标完运行:
+
+```bash
+cd eval
+python3 -I claims.py agreement --labels annotation/claims-disputed.csv --judge annotation/claims-100.judge.json   # 你 vs 评判器
+python3 -I claims.py agreement --labels annotation/claims-disputed.csv --judge annotation/claims-100.claude.json  # 你 vs Claude
+```
+
+## 2026-10-27:用户审阅后，以 Claude 标签为参考标准
+
+不再需要人工标注，`claims-disputed.csv` 作废。之后又按同样规则盲标了一批新样本 `claims-holdout-100.claude.csv`,用来检验评判器 v2(见 `../HOLDOUT.md`)。验证新评判器：
+
+```bash
+cd eval
+python3 -I claims.py judge-sample --labels annotation/claims-holdout-100.csv --prompt v2 --out annotation/claims-holdout-100.v2.json
+python3 -I claims.py agreement --labels annotation/claims-holdout-100.claude.csv --judge annotation/claims-holdout-100.v2.json
+```

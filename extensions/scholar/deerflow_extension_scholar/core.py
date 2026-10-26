@@ -180,3 +180,26 @@ def wrong_year_dates(report_text: str, anchors: list[str], known: set[str]) -> l
             if problem not in problems:
                 problems.append(problem)
     return problems
+
+
+# arXiv categories a user may name: dotted (cs.CL, physics.comp-ph) or archives without subjects (quant-ph).
+CATEGORY_RE = re.compile(
+    r"(?<![\w.-])(?:(?:cs|econ|eess|math|stat|q-bio|q-fin|astro-ph|cond-mat|physics|nlin)\.(?:[a-z]{2}|[a-z]+-[a-z]+)"
+    r"|gr-qc|hep-ex|hep-lat|hep-ph|hep-th|math-ph|nucl-ex|nucl-th|quant-ph)(?![\w-])",
+    re.IGNORECASE,
+)
+
+
+def normalise_category(category: str | None) -> str | None:
+    """``cs.cl`` -> ``cs.CL``; ``physics.comp-ph`` keeps its lowercase subject."""
+    if not category:
+        return None
+    archive, _, subject = category.strip().partition(".")
+    if not subject:
+        return archive.lower()
+    return f"{archive.lower()}.{subject.upper() if len(subject) == 2 else subject.lower()}"
+
+
+def user_categories(text: str) -> set[str]:
+    """Categories named in the user's request. Flash dropped the category from the search call in 9 of 16 runs."""
+    return {normalise_category(m) for m in CATEGORY_RE.findall(text)}

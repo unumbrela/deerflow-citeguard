@@ -1,0 +1,1672 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that rerunning the default setup changes win/tie/loss outcomes on 21.2% of prompts while moving the aggregate score by only about one point.",
+   "usage": {
+    "prompt_tokens": 889,
+    "completion_tokens": 48,
+    "total_tokens": 937,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 889
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly states that zero of the 26 LLM judges reproduced the minority human reading on contested cells and that the panel showed systematic convergence on the majority reading.",
+   "usage": {
+    "prompt_tokens": 1037,
+    "completion_tokens": 45,
+    "total_tokens": 1082,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1037
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly states that running statistics over raw LLM judge scores leads to inflated false positives and that this risk peaks at 'almost perfect' human-LLM agreement.",
+   "usage": {
+    "prompt_tokens": 915,
+    "completion_tokens": 45,
+    "total_tokens": 960,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 915
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the development of a finite-calibration regime map and states that scalar/reliability aggregation had lower MSE than unrestricted joint-table calibration in 16 of 20 real dataset-budget cells.",
+   "usage": {
+    "prompt_tokens": 825,
+    "completion_tokens": 56,
+    "total_tokens": 881,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 825
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the formalization of seven Aristotelian persuasion techniques and reports that they inflate scores for incorrect mathematical solutions by up to 8% on average.",
+   "usage": {
+    "prompt_tokens": 806,
+    "completion_tokens": 44,
+    "total_tokens": 850,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 806
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a dynamic multi-agent system that automatically designs personalized LLM judges by iteratively refining evaluation prompts.",
+   "usage": {
+    "prompt_tokens": 816,
+    "completion_tokens": 37,
+    "total_tokens": 853,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 816
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates paradigms where models predict how an LLM judge would score their output prior to responding.",
+   "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 37,
+    "total_tokens": 900,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 863
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract confirms the paper benchmarks LLM judges against Style Embeddings for authorship attribution across six domains.",
+   "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 32,
+    "total_tokens": 864,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 832
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly states that previous instance-based assessment overlooks critical factors like judge bias toward certain systems, which is the core argument of this paper.",
+   "usage": {
+    "prompt_tokens": 759,
+    "completion_tokens": 40,
+    "total_tokens": 799,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 759
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a Bayesian model that separates aleatoric uncertainty (expert disagreement) from epistemic uncertainty (judge ignorance), matching the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 777,
+    "completion_tokens": 43,
+    "total_tokens": 820,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 777
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that evaluations relying on individual verdicts should report prompt-level agreement, directly supporting the sentence's attribution.",
+   "usage": {
+    "prompt_tokens": 887,
+    "completion_tokens": 38,
+    "total_tokens": 925,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 887
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly addresses the need for calibrated confidence intervals and provides tools for system-level ranking assessment (via rank-based tests), aligning with the sentence's attribution.",
+   "usage": {
+    "prompt_tokens": 923,
+    "completion_tokens": 43,
+    "total_tokens": 966,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 923
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly describes conducting a large-scale study of LLM judges for system-level ranking, which matches the sentence's attribution.",
+   "usage": {
+    "prompt_tokens": 779,
+    "completion_tokens": 36,
+    "total_tokens": 815,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 779
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract confirms that uncalibrated statistics on LLM judges lead to spurious findings and emphasizes the need for calibrated methods to ensure reliable results.",
+   "usage": {
+    "prompt_tokens": 927,
+    "completion_tokens": 46,
+    "total_tokens": 973,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 927
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2605.25652",
+   "label": "partial",
+   "reason": "The abstract supports the need for validation and warns against spurious conclusions from agreement metrics, but the specific requirement that metrics be 'properly calibrated' is an inference by the reviewer rather than a direct statement in the text.",
+   "usage": {
+    "prompt_tokens": 1035,
+    "completion_tokens": 58,
+    "total_tokens": 1093,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1035
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a novel dynamic multi-agent system that automatically designs personalized (adaptive) LLM judges, which aligns with the sentence's claim about advocating for multi-agent adaptive systems.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 48,
+    "total_tokens": 878,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly states that scalar/reliability aggregation has lower MSE than unrestricted joint-table calibration in most tested scenarios, directly supporting the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 825,
+    "completion_tokens": 44,
+    "total_tokens": 869,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 825
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract confirms the paper documents persuasion vulnerabilities and explicitly states that persuasive effects persist under counter-prompting strategies.",
+   "usage": {
+    "prompt_tokens": 777,
+    "completion_tokens": 33,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 777
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2609.35815",
+   "label": "partial",
+   "reason": "The abstract confirms the paper requires human-labeled calibration data but does not mention whether a cost-benefit analysis was provided or omitted.",
+   "usage": {
+    "prompt_tokens": 920,
+    "completion_tokens": 37,
+    "total_tokens": 957,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 920
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2609.06444",
+   "label": "unsupported",
+   "reason": "The abstract describes a method for decomposing uncertainty to target expert labels but contains no mention of cost-benefit analysis or calibration investment versus quality gains.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 40,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly states that zero LLMs in the study reproduced the minority human reading, confirming the sentence's claim about the paper documenting this failure.",
+   "usage": {
+    "prompt_tokens": 1026,
+    "completion_tokens": 41,
+    "total_tokens": 1067,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1026
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper benchmarks Style Embeddings and an LLM judge to compare their performance on attributing authorship between human and AI-generated content.",
+   "usage": {
+    "prompt_tokens": 828,
+    "completion_tokens": 43,
+    "total_tokens": 871,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 828
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the benchmarking of Style Embeddings and an LLM judge on the Human AI Parallel Corpus with 600 instances across six domains to test attribution accuracy on GPT-4o and LLaMA continuations.",
+   "usage": {
+    "prompt_tokens": 857,
+    "completion_tokens": 59,
+    "total_tokens": 916,
+    "completion_tokens_details": {
+     "text_tokens": 59
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 857
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the Style Embedding baseline achieves 82% accuracy on GPT continuations compared to 68% for the LLM judge.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 44,
+    "total_tokens": 866,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the LLM Judge is slightly better than Style embeddings on LLaMA continuations with the exact same percentages (85% vs 81%) and notes the results are not statistically significant.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 61,
+    "total_tokens": 891,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the LLM judge significantly outperforms in fiction and academic prose, indicating semantic sensitivity.",
+   "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 34,
+    "total_tokens": 851,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 817
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract explicitly states that embeddings dominate in spoken and scripted dialogue, reflecting structural strengths.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 28,
+    "total_tokens": 842,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2510.13898",
+   "label": "supported",
+   "reason": "The abstract explicitly states that complementary patterns highlight attribution as a multidimensional problem requiring hybrid strategies.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 29,
+    "total_tokens": 842,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2510.13898",
+   "label": "partial",
+   "reason": "The abstract confirms the domain count, model count, and lack of statistical significance for some comparisons, but it does not explicitly state the limitation regarding generalizability to other models or content types.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 52,
+    "total_tokens": 886,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study tests the two assumptions described in the sentence regarding expert inter-rater stability and LLM-judge agreement.",
+   "usage": {
+    "prompt_tokens": 1000,
+    "completion_tokens": 39,
+    "total_tokens": 1039,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1000
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of three examiners, a 26-LLM panel, 15 answers from four inputs, and an instrumented sub-panel performing determinism probes, input ablations, and bootstrap CIs.",
+   "usage": {
+    "prompt_tokens": 1034,
+    "completion_tokens": 62,
+    "total_tokens": 1096,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1034
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on 10 of 15 cells where the rubric prescribes both axes, all 29 raters converge in a tight band with universal panel agreement.",
+   "usage": {
+    "prompt_tokens": 1003,
+    "completion_tokens": 53,
+    "total_tokens": 1056,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1003
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the split in human ratings on the 5 contested cells, detailing the majority (B/C) and minority (A) score bands exactly as described in the sentence.",
+   "usage": {
+    "prompt_tokens": 1015,
+    "completion_tokens": 48,
+    "total_tokens": 1063,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1015
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2605.25652",
+   "label": "partial",
+   "reason": "The sentence incorrectly states that 4 LLMs sit in the middle gap, whereas the abstract specifies that only 3 do.",
+   "usage": {
+    "prompt_tokens": 1018,
+    "completion_tokens": 37,
+    "total_tokens": 1055,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1018
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly states that zero LLMs in the 26-judge panel reproduce the minority human reading on the contested cells.",
+   "usage": {
+    "prompt_tokens": 991,
+    "completion_tokens": 38,
+    "total_tokens": 1029,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 991
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2605.25652",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the high LLM-panel alpha of 0.77 reflects systematic convergence on the majority reading rather than balanced reproduction of both readings, matching the sentence exactly.",
+   "usage": {
+    "prompt_tokens": 1005,
+    "completion_tokens": 48,
+    "total_tokens": 1053,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1005
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2605.25652",
+   "label": "partial",
+   "reason": "The abstract confirms the study's scope (Thai bar exam, 15 answers, 4 inputs) but does not state or imply the reviewer's inference that these factors limit generalizability to other domains.",
+   "usage": {
+    "prompt_tokens": 1006,
+    "completion_tokens": 59,
+    "total_tokens": 1065,
+    "completion_tokens_details": {
+     "text_tokens": 59
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1006
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly addresses running statistics over LLM judge scores in small-sample evaluations to avoid inflated false positives.",
+   "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 32,
+    "total_tokens": 922,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 890
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the development of PPI with bootstrap-adaptive power tuning, the use of Monte Carlo simulations for recommendations, and the implementation of these methods in the evalstats package.",
+   "usage": {
+    "prompt_tokens": 911,
+    "completion_tokens": 48,
+    "total_tokens": 959,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 911
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly states that running statistics over raw LLM judge scores leads to inflated false positives and that this risk peaks at 'almost perfect' human-LLM agreement.",
+   "usage": {
+    "prompt_tokens": 895,
+    "completion_tokens": 45,
+    "total_tokens": 940,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 895
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper implements nine hypothesis tests via prediction-powered inference, including the first known PPI corrections for four rank-based tests.",
+   "usage": {
+    "prompt_tokens": 906,
+    "completion_tokens": 39,
+    "total_tokens": 945,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 906
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly states that bootstrap-adaptive power tuning is introduced to keep PPI++ stable with small human-labeled calibration sets by shrinking the estimated weight toward a target.",
+   "usage": {
+    "prompt_tokens": 889,
+    "completion_tokens": 45,
+    "total_tokens": 934,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 889
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly warns researchers against using bootstrap confidence intervals for small-sample AI evaluations (N<100).",
+   "usage": {
+    "prompt_tokens": 883,
+    "completion_tokens": 33,
+    "total_tokens": 916,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 883
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2609.35815",
+   "label": "supported",
+   "reason": "The abstract explicitly mentions a demonstration scenario where an LLM judge validated at 'substantial agreement' would have led to a spurious finding without proper calibration.",
+   "usage": {
+    "prompt_tokens": 891,
+    "completion_tokens": 42,
+    "total_tokens": 933,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 891
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2609.35815",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on small-sample evaluations (N<100) and the need for human-labeled calibration data, but it does not state that these requirements are costly or impractical.",
+   "usage": {
+    "prompt_tokens": 902,
+    "completion_tokens": 51,
+    "total_tokens": 953,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 902
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly describes investigating paradigms where models predict an LLM judge's score prior to responding to enable smaller models to defer to larger ones.",
+   "usage": {
+    "prompt_tokens": 854,
+    "completion_tokens": 41,
+    "total_tokens": 895,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 854
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the investigation of PA and RPRA paradigms, the evaluation of the three specified approaches (zero-shot, in-context report cards, and supervised fine-tuning), and the use of multiple datasets.",
+   "usage": {
+    "prompt_tokens": 876,
+    "completion_tokens": 61,
+    "total_tokens": 937,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 876
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly states that larger models, particularly reasoning models, perform well when predicting generic LLM judges zero-shot.",
+   "usage": {
+    "prompt_tokens": 840,
+    "completion_tokens": 34,
+    "total_tokens": 874,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 840
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly states that smaller models can reliably predict LLM judges after being fine-tuned or provided with an in-context report card.",
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 38,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 842
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly states that report cards achieve mean improvements of up to 55% in prediction accuracy across datasets.",
+   "usage": {
+    "prompt_tokens": 838,
+    "completion_tokens": 34,
+    "total_tokens": 872,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 838
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly states that fine-tuning achieves mean improvements of up to 52% across datasets.",
+   "usage": {
+    "prompt_tokens": 841,
+    "completion_tokens": 32,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 841
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2604.12634",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that the findings suggest models can learn to predict their own performance limitations, paving the way for more efficient and self-aware AI systems.",
+   "usage": {
+    "prompt_tokens": 839,
+    "completion_tokens": 41,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 839
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2604.12634",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on prediction accuracy but does not explicitly state that actual computational efficiency gains were unmeasured or list the specific limitations regarding model families and datasets.",
+   "usage": {
+    "prompt_tokens": 852,
+    "completion_tokens": 47,
+    "total_tokens": 899,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 852
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a system to address the lack of flexibility in adapting to different text styles and to produce scores that better align with human perception.",
+   "usage": {
+    "prompt_tokens": 807,
+    "completion_tokens": 43,
+    "total_tokens": 850,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 807
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a dynamic multi-agent system that automatically designs personalized LLM judges by iteratively refining evaluation prompts and balancing adaptive task requirements with human perception alignment.",
+   "usage": {
+    "prompt_tokens": 812,
+    "completion_tokens": 46,
+    "total_tokens": 858,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 812
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework enhances evaluation accuracy compared to existing methods.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 27,
+    "total_tokens": 819,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework produces evaluation scores that better align with human perception.",
+   "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 29,
+    "total_tokens": 818,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 789
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposed system addresses the limitation of lacking flexibility to adapt to different answer and ground truth styles.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 34,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2504.02867",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed system iteratively refines evaluation prompts to balance adaptive requirements of downstream tasks with alignment to human perception.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 38,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2504.02867",
+   "label": "partial",
+   "reason": "The abstract confirms the lack of specific application details and quantitative metrics, but the claim about unclear generalizability is a reviewer inference since the abstract explicitly states the method enhances generalization performance.",
+   "usage": {
+    "prompt_tokens": 809,
+    "completion_tokens": 51,
+    "total_tokens": 860,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 809
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the paper's focus on comparing system-level ranking to instance-based assessment and analyzing factors like bias that affect ranking quality.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 38,
+    "total_tokens": 788,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper conducts the first large-scale study of LLM judges as system rankers, aggregates scores to compare with human rankings, and analyzes judge behavior including decisiveness and bias.",
+   "usage": {
+    "prompt_tokens": 767,
+    "completion_tokens": 50,
+    "total_tokens": 817,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 767
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly states that instance-based assessment overlooks critical factors like judge bias toward certain systems, which is the exact point made in the sentence.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 40,
+    "total_tokens": 780,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the judge's quality is assessed by comparing the resulting system ranking to a human-based ranking, contrasting this with previous instance-based assessments.",
+   "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 42,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 739
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper's analysis provides a fine-grained characterization of judge behavior, including decisiveness and bias.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 36,
+    "total_tokens": 776,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2412.09569",
+   "label": "supported",
+   "reason": "The abstract explicitly contrasts instance-based assessment with the proposed system-level ranking approach, arguing that the former overlooks critical factors necessary for the latter.",
+   "usage": {
+    "prompt_tokens": 733,
+    "completion_tokens": 39,
+    "total_tokens": 772,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 733
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2412.09569",
+   "label": "partial",
+   "reason": "The abstract confirms the study compares system rankings to human rankings but does not explicitly state that specific correlation metrics were omitted or provide the exact scale and list of judges mentioned as missing.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 46,
+    "total_tokens": 796,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly states the study investigates whether individuals can persuade LLM judges to assign unfairly high scores using strategically embedded persuasive language in mathematical reasoning tasks.",
+   "usage": {
+    "prompt_tokens": 763,
+    "completion_tokens": 40,
+    "total_tokens": 803,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 763
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the formalization of seven Aristotelian persuasion techniques, their embedding into identical responses, and the evaluation across six math benchmarks to measure score inflation.",
+   "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 44,
+    "total_tokens": 833,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 789
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly states that persuasive language leads LLM judges to assign inflated scores to incorrect solutions by up to 8% on average.",
+   "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 38,
+    "total_tokens": 799,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 761
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly states that among the seven persuasion techniques, Consistency causes the most severe distortion.",
+   "usage": {
+    "prompt_tokens": 752,
+    "completion_tokens": 30,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 752
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly states that increasing model size does not substantially mitigate the vulnerability to persuasion.",
+   "usage": {
+    "prompt_tokens": 749,
+    "completion_tokens": 28,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 749
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly states that combining multiple persuasion techniques amplifies the bias.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 25,
+    "total_tokens": 775,
+    "completion_tokens_details": {
+     "text_tokens": 25
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2508.07805",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the persuasive effect persists under counter prompting strategies and that pairwise evaluation is likewise susceptible.",
+   "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 32,
+    "total_tokens": 785,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 753
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2508.07805",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on mathematical reasoning tasks, but the claim that findings may not generalize to subjective domains is a reviewer inference not stated in the text.",
+   "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 42,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 768
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly describes separating aleatoric and epistemic uncertainty to direct expert labeling efforts, which directly matches the research question in the sentence.",
+   "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 40,
+    "total_tokens": 801,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 761
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a small Bayesian model using regression on collected labels to separate uncertainty components into formulas without sampling or additional judge calls.",
+   "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 37,
+    "total_tokens": 805,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 768
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on the ChaosNLI dataset, epistemic ranking removes 83% more error than total uncertainty for the same expert labels.",
+   "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 43,
+    "total_tokens": 797,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 754
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 'stated confidence is no guide to its actual error' when evaluating the LLM judge.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 35,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper demonstrates the ability to estimate where a judge is ignorant rather than where experts genuinely disagree.",
+   "usage": {
+    "prompt_tokens": 743,
+    "completion_tokens": 34,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 743
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on real human disagreement data, simply escalating the least-labelled items performs as well as the proposed epistemic ranking method.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 40,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the uncertainty components 'isolate on a real LLM judge against exactly known truth'.",
+   "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 34,
+    "total_tokens": 780,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 746
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2609.06444",
+   "label": "supported",
+   "reason": "The abstract explicitly mentions evaluation on ChaosNLI and states that simply escalating least-labelled items performs as well as the proposed method in that specific scenario.",
+   "usage": {
+    "prompt_tokens": 764,
+    "completion_tokens": 43,
+    "total_tokens": 807,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 764
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly states the research goal is to determine how repeatable LLM judge verdicts are and how much they depend on the judge's instructions.",
+   "usage": {
+    "prompt_tokens": 853,
+    "completion_tokens": 41,
+    "total_tokens": 894,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 853
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of 500 Arena-Hard v2.0 prompts, fixed model answers, GPT-4.1 as the judge across eight combinations of criteria/format/framing, and repeated setups at temperature zero on a pinned model version.",
+   "usage": {
+    "prompt_tokens": 885,
+    "completion_tokens": 68,
+    "total_tokens": 953,
+    "completion_tokens_details": {
+     "text_tokens": 68
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 885
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly states that rerunning the default setup moves the aggregate score by about one point and changes the win/tie/loss outcome on 21.2% of prompts.",
+   "usage": {
+    "prompt_tokens": 859,
+    "completion_tokens": 48,
+    "total_tokens": 907,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 859
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a setup removing reasoning and other instructions caused outcomes to change on 28.2 percentage points more prompts compared to unchanged reruns.",
+   "usage": {
+    "prompt_tokens": 858,
+    "completion_tokens": 43,
+    "total_tokens": 901,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 858
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a stable aggregate score does not establish that individual verdicts are repeatable.",
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 31,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 842
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2610.30512",
+   "label": "supported",
+   "reason": "The abstract explicitly states that when criteria prioritize accuracy, outcomes change on 6.7 percentage points more prompts compared to unchanged reruns.",
+   "usage": {
+    "prompt_tokens": 853,
+    "completion_tokens": 38,
+    "total_tokens": 891,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 853
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2610.30512",
+   "label": "partial",
+   "reason": "The abstract confirms the study used GPT-4.1 and Arena-Hard v2.0, but the claim that results may not generalize is an inference by the reviewer rather than a statement made in the abstract.",
+   "usage": {
+    "prompt_tokens": 865,
+    "completion_tokens": 55,
+    "total_tokens": 920,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 865
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly states the study's focus on determining when finite labels should support a low-dimensional stacker versus an unrestricted joint output table.",
+   "usage": {
+    "prompt_tokens": 804,
+    "completion_tokens": 38,
+    "total_tokens": 842,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 804
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the development of the finite-calibration regime map instantiated as FCPS, the use of the specified four datasets with a seven-judge pool, and the comparison between scalar/reliability aggregation and unrestricted joint-table calibration.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 58,
+    "total_tokens": 892,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly states that scalar/reliability aggregation has lower MSE than unrestricted joint-table calibration in 16 of 20 real dataset-budget cells by point estimate.",
+   "usage": {
+    "prompt_tokens": 802,
+    "completion_tokens": 45,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 802
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly states that paired 95% intervals exclude zero in 11 cells where scalar/reliability aggregation (simpler) outperforms unrestricted joint-table calibration.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 48,
+    "total_tokens": 845,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact same finding regarding the six-way interaction, table growth, and MSE reduction from 0.224 to 0.061.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 46,
+    "total_tokens": 859,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The abstract explicitly states that richer backoff/shrinkage tables narrow some gaps while preserving the finite-support bottleneck.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 33,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2606.01034",
+   "label": "supported",
+   "reason": "The sentence is a direct quote from the final sentence of the abstract, which explicitly states the practical deployment question addressed by the paper.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 37,
+    "total_tokens": 830,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 92,
+   "id": "2606.01034",
+   "label": "partial",
+   "reason": "The abstract confirms the use of a seven-judge pool and specific dataset-budget cells, but the claim that these factors limit generalization is an inference by the reviewer not explicitly stated in the text.",
+   "usage": {
+    "prompt_tokens": 805,
+    "completion_tokens": 53,
+    "total_tokens": 858,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 805
+    }
+   }
+  }
+ ]
+}

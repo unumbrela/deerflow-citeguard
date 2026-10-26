@@ -125,3 +125,10 @@ def test_wrong_year_dates_flag_today_and_window_start_with_wrong_year():
 def test_wrong_year_dates_ignore_real_paper_dates_and_other_days():
     report = "Published 2025-10-26. Updated 2026-03-01."
     assert core.wrong_year_dates(report, ["2026-10-26"], {"2025-10-26"}) == []
+
+
+def test_user_categories_are_found_and_normalised():
+    text = "Review agents. 10 papers, last 2 years, category cs.cl or physics.comp-ph; also quant-ph. Save to report.md, e.g. outputs."
+    assert core.user_categories(text) == {"cs.CL", "physics.comp-ph", "quant-ph"}
+    assert core.user_categories("Save to report.md, see fig.2 and the cs department") == set()
+    assert core.normalise_category("STAT.ml") == "stat.ML" and core.normalise_category(None) is None
