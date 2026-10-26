@@ -1,0 +1,663 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kusama et al. (2025) demonstrated that small language models with int8 quantization can achieve competitive or superior performance compared to large models while significantly reducing memory requirements.",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sun et al. (2025) further showed that repair performance does not scale linearly with model size, and specialized models like CodeLlama can outperform larger general-purpose models.",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sepidband et al. (2026) introduced hierarchical reasoning-guided fault localization, achieving substantial improvements in file-level and element-level localization accuracy.",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ehsani et al. (2026) examined how LLMs allocate attention across bug report sections, finding that successful repairs correlate with diffused attention across diagnostic components rather than over-localized attention on metadata.",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Campos et al. (2025) showed that under realistic assumptions of imperfect fault localization, repair accuracy drops significantly compared to using perfect fault localization.",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Campos et al. (2025) evaluated 13 LLMs across Java, JavaScript, Python, and PHP, finding that different models perform best for different languages, making single-LLM cross-platform repair difficult.",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Farzandway and Ghassemi (2025) focused specifically on C programs, integrating spectrum-based fault localization with Chain-of-Thought prompting to achieve 44.93% repair accuracy.",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pitts et al. (2025) extended APR to uncompilable student code, showing that models can recover compilable repairs while preserving students' structural intent.",
+   "ids": [
+    "2510.06187"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2026) proposed VibeRepair, which translates buggy code into structured behavior specifications, repairs specification misalignments, then synthesizes code guided by corrected specifications, achieving 19-23% improvements over baselines.",
+   "ids": [
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Farzandway and Ghassemi (2025) integrated Chain-of-Thought reasoning into autonomous repair loops, reducing repeated errors by incorporating reasoning from previous attempts.",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sepidband et al. (2026) used hierarchical reasoning modules to generate structured bug-specific explanations for candidate files.",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Przymus et al. (2025) demonstrated that 90% of crafted adversarial bug reports triggered attacker-aligned patches, with existing defense mechanisms blocking less than half of adversarial inputs.",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Multiple papers converge on the finding that fault localization quality fundamentally limits APR effectiveness (Campos et al., 2025; Ehsani et al., 2026; Sepidband et al., 2026).",
+   "ids": [
+    "2506.03283",
+    "2607.25873",
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also agreement that parameter-efficient approaches—whether through PEFT fine-tuning (Macháček et al., 2025), quantization (Kusama et al., 2025), or specification-centric methods (Zhu et al., 2026)—provide better efficiency-accuracy tradeoffs than brute-force scaling.",
+   "ids": [
+    "2508.16499",
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Most surveyed papers demonstrate that iterative or multi-stage approaches outperform single-pass repair generation (Farzandway & Ghassemi, 2025; Zhu et al., 2026).",
+   "ids": [
+    "2509.01947",
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Disagreements: While Campos et al. (2025) emphasize the difficulty of cross-language generalization with single models, Kusama et al. (2025) show that small models can match or exceed large model performance, suggesting different paths forward.",
+   "ids": [
+    "2506.03283",
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also tension between works advocating for specialized, fine-tuned models (Macháček et al., 2025; Sun et al., 2025) versus those demonstrating strong zero-shot or specification-driven approaches (Zhu et al., 2026).",
+   "ids": [
+    "2506.13186",
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Security considerations receive limited attention, with only Przymus et al. (2025) systematically addressing adversarial vulnerabilities—suggesting this area needs broader investigation.",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Most papers note limitations in evaluation scope, particularly regarding language diversity (Sepidband et al., 2026; Campos et al., 2025), indicating a need for more comprehensive cross-language benchmarks.",
+   "ids": [
+    "2601.18044",
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the computational and environmental costs of LLM-based APR, while touched on by quantization work (Kusama et al., 2025), deserve more systematic treatment as these systems scale.",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well can Large Language Models generalize automated program repair across different programming languages and levels of patch complexity?",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Extensive empirical evaluation of 13 recent open and closed LLM models across benchmarks for Java, JavaScript, Python, and PHP, investigating language-agnostic repair, fault localization effects, and cross-platform generalization.",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different LLMs perform best for different languages, making cross-platform single-LLM repair techniques difficult to develop",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining models by pooling repairs adds value with respect to uniquely fixed bugs, suggesting committee-based approaches",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Under realistic assumptions of imperfect fault localization, significant drops in accuracy are observed compared to using perfect fault localization",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2506.03283"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do LLMs prioritize and allocate attention across different sections of bug reports, and how does attention affect repair success?",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analysis of attention patterns in LLM-based program repair across 319 real-world Python and Java bugs from SWE-bench Verified and Multi-SWE-bench, examining how attention is distributed across bug report sections and comparing successful versus unsuccessful repairs.",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successful repairs are characterized by diffused attention across multiple diagnostic components such as bug descriptions, stacktraces, and test cases",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Failed repairs often exhibit over-localized attention toward metadata such as version information",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Stronger alignment between model attention and developer-identified key sections and phrases is associated with higher repair success",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attention misallocation is identified as a key factor in LLM-based APR failures",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2607.25873"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models be effectively integrated with statistical program analysis for automated repair of C programs?",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Framework combining spectrum-based fault localization (SBFL), runtime feedback, and Chain-of-Thought-structured prompting in an autonomous repair loop, evaluated on 3,902 bugs from the Codeflaws benchmark.",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach achieves 44.93% repair accuracy on the Codeflaws benchmark",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method represents a 3.61% absolute improvement over state-of-the-art APR baselines such as GPT-4 with CoT",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Iterative repair cycles with CoT prompting reduce repeated errors by incorporating reasoning from previous attempts",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining statistical program analysis with LLM reasoning provides a practical pathway for automated debugging",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2509.01947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can small language models achieve competitive performance in automated program repair tasks compared to large language models?",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Experiments on the QuixBugs benchmark comparing bug-fixing accuracy of small language models and large language models, also analyzing the impact of int8 quantization on APR performance.",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The latest small language models can fix bugs as accurately as or more accurately than large language models",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "int8 quantization had minimal effect on APR accuracy",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Quantization significantly reduced memory requirements",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SLMs present a viable alternative to LLMs for APR with lower computational costs",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2508.16499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can automated program repair recover uncompilable student code while preserving students' structural intent for use in student modeling?",
+   "ids": [
+    "2510.06187"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Assessment of large language models as repair agents under high- and low-context prompting conditions, evaluating repairs for compilability, edit distance, and preservation of students' original structure and logic.",
+   "ids": [
+    "2510.06187"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All models produced compilable repairs from uncompilable student submissions",
+   "ids": [
+    "2510.06187"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models differed in how well they preserved students' control flow and code structure",
+   "ids": [
+    "2510.06187"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Recovering uncompilable submissions enables richer analyses of learners' coding processes and development over time",
+   "ids": [
+    "2510.06187"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2510.06187"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What security risks do adversarial bug reports pose to LLM-based Automated Program Repair systems?",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Development of a threat model and empirical study using 51 adversarial bug reports generated through manual curation and automated pipelines, testing them against a leading LLM-based APR system with various pre-repair and post-repair defense mechanisms.",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "90% of crafted adversarial bug reports triggered attacker-aligned patches",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The best pre-repair filter blocked only 47% of adversarial inputs",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Post-repair analysis was effective in just 58% of cases",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generating adversarial inputs is inexpensive while detection and mitigation remain costly and error-prone",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study tested against a single leading LLM-based APR system; scalability of adversarial generation framework is demonstrated via prototype.",
+   "ids": [
+    "2509.05372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can fault localization be improved for project-level automated program repair when software repositories exceed LLM context limits?",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduction of a hierarchical reasoning module that generates structured bug-specific explanations for candidate files and elements, using a two-stage ranking scheme combining LLM-based and embedding-based signals, evaluated on SWE-bench benchmarks for Python and Java projects.",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "File-level Hit@1 improved from 71.4% to 85% on SWE-bench Verified",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "File-level MRR improved from 81.8% to 88.8%",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Element-level Exact Match under top-3 files increased from 36% to 69%",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrating the localization into Agentless yielded a 12.8% end-to-end repair success improvement",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation focused on Python and Java projects from SWE-bench benchmarks; generalizability to other languages not explicitly addressed.",
+   "ids": [
+    "2601.18044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do modern large-scale LLMs perform in automated program repair across diverse languages, bug scenarios, and prompting strategies?",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluation of four open-source LLMs (CodeLlama, LLaMA, StarCoder, DeepSeek-Coder) with 7B to 33B parameters across two bug scenarios (enterprise-grade and algorithmic), three languages (Java, C/C++, Python), and four prompting strategies, analyzing over 600K generated patches on six benchmarks.",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model specialization (e.g., CodeLlama) can outperform larger general-purpose models (e.g., LLaMA)",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Repair performance does not scale linearly with model size",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Correct patches often appear early in the generation process",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prompting strategies significantly affect repair results",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a specification-centric approach to automated program repair improve repair accuracy compared to direct code-centric rewriting?",
+   "ids": [
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposal of VibeRepair, which translates buggy code into structured behavior specifications, infers and repairs specification misalignments, then synthesizes code guided by the corrected specification, with on-demand reasoning for complex cases.",
+   "ids": [
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VibeRepair correctly repaired 174 bugs on Defects4J v1.2, exceeding the strongest baseline by 28 bugs (19% improvement)",
+   "ids": [
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On Defects4J v2.0, it repaired 178 bugs, outperforming prior approaches by 33 bugs (23% improvement)",
+   "ids": [
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach demonstrated consistently strong effectiveness with a significantly smaller patch space",
+   "ids": [
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluations on real-world benchmarks confirmed effectiveness and generalizability",
+   "ids": [
+    "2602.08263"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2602.08263"
+   ]
+  }
+ ]
+}

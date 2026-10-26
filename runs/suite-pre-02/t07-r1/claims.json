@@ -1,0 +1,802 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "EVOR (Su et al., 2024) addresses the limitation of static knowledge bases in retrieval-augmented code generation by introducing synchronous evolution of both queries and diverse knowledge bases.",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Huang et al. (2024) emphasize the importance of multi-modal context in computational notebooks, proposing CoCoMine to extract contextualized data-wrangling examples and DataCoder to encode data context separately from code and textual contexts.",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) introduce CodeSecEval, an execution-based benchmark comprising 255 Python tasks spanning 77 CWE categories, along with SecAwareCoder, an agent-based framework that performs task-adaptive threat modeling to guide secure-by-construction synthesis.",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang et al. (2025) take a different approach with IFEvalCode, a multilingual benchmark of 1.6K samples across seven programming languages that decouples correctness from instruction-following capabilities, revealing that closed-source models outperform open-source ones in controlled code generation.",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Huang et al. (2026) address yet another dimension with CONCUR, a benchmark specifically designed for concurrent code generation that captures unique bugs like deadlocks and race conditions absent from sequential code.",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chai et al. (2025) introduce MM-Coder, which integrates visual design inputs including UML diagrams and flowcharts with textual instructions, along with MMc-Instruct, a multimodal instruction-tuning dataset, and MMEval for evaluation.",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gupta et al. (2025) apply causal analysis to understand how different prompt modalities influence code generation, finding that input-output examples significantly affect outputs beyond natural language instructions.",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In the multilingual space, Saadi et al. (2025) present a multi-agent system for Bangla-to-Python code generation that achieved first place in the BLP-2025 Shared Task with a Pass@1 score of 95.4, demonstrating that low-resource language support is feasible through targeted architectural innovations.",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gramacki et al. (2024) focus on geospatial code generation, creating a benchmark that tests spatial reasoning, spatial data processing, and geospatial tools usage, arguing that this domain poses distinct challenges from general-purpose code generation.",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2024) address the dynamic nature of software development with VersiCode, introducing version-specific code completion and version-aware code migration tasks along with the Critical Diff Check metric to assess code generation against evolving API requirements.",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Six of the ten papers introduce new benchmarks: EVOR-BENCH (Su et al., 2024), CodeSecEval (Wang et al., 2024), IFEvalCode (Yang et al., 2025), CONCUR (Huang et al., 2026), the geospatial benchmark (Gramacki et al., 2024), CoCoNote (Huang et al., 2024), MMEval (Chai et al., 2025), and VersiCode (Wu et al., 2024).",
+   "ids": [
+    "2402.12317",
+    "2407.02395",
+    "2507.22462",
+    "2603.03683",
+    "2410.04617",
+    "2409.13551",
+    "2507.08719",
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Papers like Saadi et al. (2025) demonstrate that targeted architectural designs can achieve state-of-the-art results without necessarily requiring the largest models, while benchmark-focused papers implicitly assume that model improvement is the primary path forward.",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is variation in how papers conceptualize \"instruction-following\" — some treat it as adherence to structural constraints (Yang et al., 2025), while others focus on semantic alignment with visual or multimodal specifications (Chai et al., 2025).",
+   "ids": [
+    "2507.22462",
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, while multiple papers address version control and library updates (Wu et al., 2024), the solutions remain evaluation-focused rather than providing deployable systems that handle real-world software evolution.",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, multimodal code generation (Chai et al., 2025; Gupta et al., 2025) acknowledges significant challenges in precise visual information capture, suggesting current models lack robust visual reasoning capabilities for complex software specifications.",
+   "ids": [
+    "2507.08719",
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, security-focused approaches (Wang et al., 2024) note the difficulty of balancing security with correctness, but do not fully resolve how to optimize for both simultaneously in production settings.",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, domain-specific benchmarks (Gramacki et al., 2024) raise questions about generalizability — whether models trained on specialized domains can transfer capabilities or whether entirely separate systems are needed for each domain.",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, while retrieval-augmented approaches (Su et al., 2024; Huang et al., 2024) show promise, the design principles for effective knowledge base construction and query evolution remain underexplored, with most papers focusing on specific implementations rather than generalizable frameworks.",
+   "ids": [
+    "2402.12317",
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can integrating visual design inputs (UML diagrams and flowcharts) with textual instructions improve code generation accuracy and architectural alignment compared to text-only models?",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced MM-Coder, a multilingual multimodal model that integrates Visual Workflow inputs (UML diagrams and flowcharts) with textual instructions; developed MMc-Instruct, a diverse multimodal instruction-tuning dataset; created MMEval benchmark for evaluating multimodal code generation.",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MM-Coder successfully synthesizes textual and graphical information similar to human developers",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Created MMc-Instruct dataset for visual-workflow-based code generation instruction tuning",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MMEval benchmark addresses limitations of existing text-only evaluation approaches",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multimodal approach enhances code generation accuracy and architectural alignment",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant challenges remain in precise visual information capture and instruction following",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluations reveal significant remaining challenges for models in precise visual information capture, instruction following, and advanced programming knowledge; the approach may require substantial training data for effective multimodal integration.",
+   "ids": [
+    "2507.08719"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do existing code generation LLMs perform on geospatial coding tasks, and can we create a benchmark to evaluate them?",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Constructed an evaluation benchmark by categorizing geospatial tasks based on complexity and required tools, creating a dataset with specific coding problems and test scenarios for automatic correctness checking, then tested existing code generation LLMs on these tasks.",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Created a high-quality dataset of geospatial coding problems with manually crafted test scenarios",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Categorized geospatial tasks by complexity and required tools for systematic evaluation",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tested multiple existing code generation LLMs on geospatial domain tasks",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dataset and evaluation code made publicly available as a benchmark for future LLM development",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identified the need for models specifically tailored to geospatial applications",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; however, the scope appears limited to Python code generation for geospatial tasks, and the manual creation of problems may limit dataset scale.",
+   "ids": [
+    "2410.04617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the causal effects of different prompt modalities (natural language, code, input-output examples) on multi-modal code generation performance in LLMs?",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed CodeSCM, a Structural Causal Model that applies interventions to measure causal effects of different prompt modalities; introduced latent mediator variables to separate code and natural language semantics; applied Causal Mediation Analysis to quantify direct effects representing spurious model leanings.",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CodeSCM successfully quantifies causal effects of different prompt modalities on code generation",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Input-output examples significantly influence code generation beyond natural language instructions",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latent mediator variables effectively separate code and natural language semantics",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Causal Mediation Analysis reveals spurious model leanings in multi-modal code generation",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Natural language instructions are not the only significant factor affecting code generation output",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the causal model may be constrained by the specific modalities tested and may not generalize to all code generation scenarios or model architectures.",
+   "ids": [
+    "2502.05150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we improve data wrangling code generation by better utilizing the rich multi-modal contextual information present in computational notebooks?",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed CoCoMine, an automated approach using data flow analysis to identify data wrangling code blocks and extract contextualized examples through notebook tracing and replaying; created CoCoNote dataset with 58,221 examples; proposed DataCoder model that encodes data context and code/textual contexts separately.",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Constructed CoCoNote dataset containing 58,221 contextualized data-wrangling code generation examples",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoCoMine successfully mines examples with clear multi-modal contextual dependency from notebooks",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incorporating data context significantly improves data-wrangling code generation performance",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DataCoder model effectively encodes separate contexts to enhance code generation accuracy",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuned models and prompted LLMs demonstrated effectiveness on the proposed task",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; potential constraints may include the quality of mined examples depending on notebook structure and the generalizability beyond Python computational notebooks.",
+   "ids": [
+    "2409.13551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we effectively evaluate LLMs' capability to generate concurrent code, which exhibits unique complexity and bug types like deadlocks and race conditions?",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Designed CONCUR benchmark specifically for evaluating concurrent code generation, consisting of 43 concurrency problems from a standard textbook plus 72 validated mutant variants (115 total problems), then evaluated a range of LLMs on the benchmark.",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Created first benchmark specifically designed for concurrent code generation evaluation",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Base problems provide semantic core while mutants expand linguistic and structural diversity",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation of multiple LLMs highlighted significant limitations in current models' concurrent code capabilities",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Concurrent code exhibits unique bug types not present in sequential code generation",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing sequential code benchmarks are inadequate for evaluating concurrent code generation",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the benchmark is derived from textbook problems which may not fully capture real-world concurrent programming challenges, and evaluation was limited to a specific set of LLMs.",
+   "ids": [
+    "2603.03683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-agent systems improve code generation from Bangla instructions to achieve high accuracy in low-resource language settings?",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed a multi-agent-based pipeline where a code-generation agent produces initial solutions from Bangla instructions, then only failing test cases are forwarded to a debugger agent that extracts error traces and generates revised solutions conditioned on error messages and test cases.",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent debugging approach achieved first place in BLP-2025 Shared Task",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved Pass@1 score of 95.4 on Bangla-to-Python code generation",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Selective debugging (only forwarding failing cases) improves efficiency over full re-generation",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent architecture enables specialized handling of generation versus correction",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Code and methodology made publicly available for replication",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the approach is specific to Bangla-to-Python translation and may require adaptation for other language pairs or programming languages.",
+   "ids": [
+    "2511.16787"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can retrieval-augmented code generation pipelines overcome the limitations of static knowledge bases with single sources to better adapt to domains with insufficient LLM knowledge?",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed EVOR pipeline employing synchronous evolution of both queries and diverse knowledge bases; compiled EVOR-BENCH with four new datasets for frequently updated libraries and long-tail programming languages; evaluated against baselines including Reflexion and DocPrompting.",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "EVOR achieves two to four times execution accuracy improvement over existing methods",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Synchronous evolution of queries and documents provides significant benefits",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diverse information sources in knowledge base enhance adaptation capabilities",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "EVOR is flexible and can be combined with other methods for further improvement",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Static knowledge bases fundamentally limit LLM adaptation to new domains",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the approach requires maintaining multiple knowledge bases and may incur computational overhead for query and document evolution.",
+   "ids": [
+    "2402.12317"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we bridge the gap between functional correctness and security in LLM code generation through execution-based benchmarking and task-adaptive vulnerability modeling?",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Created CodeSecEval benchmark with 255 Python tasks spanning 77 CWE categories, each with paired insecure and secure implementations plus executable functional and security tests; proposed SecAwareCoder framework performing task-adaptive threat modeling, constraint-aware generation, and execution-based refinement.",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CodeSecEval provides precise, reproducible evaluation of secure code generation with 255 tasks across 77 CWE categories",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SecAwareCoder consistently improves Pass@1 and security robustness over prompting and analyzer-driven baselines",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task-adaptive threat modeling effectively identifies security-sensitive regions in code generation tasks",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Execution-based evaluation with paired implementations enables measurement of security-correctness tradeoffs",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agent-based secure-by-construction synthesis narrows the security-correctness gap",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the benchmark is limited to Python and may not generalize to other programming languages with different security patterns and vulnerability types.",
+   "ids": [
+    "2407.02395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can code generation models account for the dynamic nature of software development with frequent library updates and evolving API requirements?",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed two novel tasks: version-specific code completion (VSCC) and version-aware code migration (VACM); introduced VersiCode, a comprehensive Python dataset for evaluating these tasks; developed Critical Diff Check (CDC@1) metric to assess code generation against evolving API requirements.",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Version-controllable code generation is a significant challenge even for GPT-4o and frontier models",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Created VersiCode dataset specifically designed for version-aware code generation evaluation",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CDC@1 metric effectively assesses code generation against evolving API requirements",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VSCC and VACM tasks address critical gaps in existing code generation research",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current LLMs struggle with library updates and version-specific API requirements",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The task remains significantly challenging even for state-of-the-art models like GPT-4o; the dataset is limited to Python, which may not generalize to other programming languages with different versioning patterns.",
+   "ids": [
+    "2406.07411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Code LLMs be improved to adhere to detailed requirements such as coding style, line count, and structural constraints beyond mere functional correctness?",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced forward and backward constraints generation to improve instruction-following capabilities; created IFEvalCode benchmark with 1.6K test samples across seven programming languages with Chinese and English queries; decoupled evaluation into correctness and instruction-following metrics.",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Closed-source models outperform open-source ones in controllable code generation",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant gap exists between models' ability to generate correct code versus instruction-following code",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Forward and backward constraints generation improves instruction-following capabilities",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multilingual benchmark reveals consistent patterns across seven programming languages",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Decoupled evaluation metrics enable more nuanced assessment of Code LLM capabilities",
+   "ids": [
+    "2507.22462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the instruction-following gap suggests fundamental architectural limitations in current Code LLMs that may require more than constraint-based approaches to resolve.",
+   "ids": [
+    "2507.22462"
+   ]
+  }
+ ]
+}

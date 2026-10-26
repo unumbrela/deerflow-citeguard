@@ -1,0 +1,694 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Siciliano et al. (2024) address embedding dimensionality through static pruning using Principal Components Analysis, achieving over 50% dimensionality reduction with only up to 5% reduction in NDCG@10.",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Su et al. (2026) propose Dynamic Dense Retrieval (DDR), which uses prefix tuning as specialized modules that can be compositionally combined with dynamic routing, achieving performance surpassing traditional dense retrieval while utilizing only 2% of training parameters.",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Huang et al. (2024) tackle the challenge of scaling retrievers with Large Language Models through a two-stage method that trains dual towers initialized from the same LLM, then distills only the query tower to reduce online costs while maintaining retrieval quality.",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wullach et al. (2026) investigate the overlooked role of graded relevance thresholds, demonstrating that the optimal threshold for converting graded relevance scores to binary labels varies systematically across languages and tasks, often reflecting differences in resource levels.",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Huang et al. (2025) focus on boosting data utilization for multilingual dense retrieval by obtaining high-quality hard negative samples and effective mini-batch data, demonstrating effectiveness across 16 languages on the MIRACL benchmark.",
+   "ids": [
+    "2509.09459"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Erker et al. (2025) introduce GRITHopper-7B, which combines generative and representational instruction tuning by integrating causal language modeling with dense retrieval training for multi-hop retrieval.",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang et al. (2024) propose LIGER, a hybrid model unifying generative and dense retrieval for sequential recommendation, integrating sequential dense retrieval into generative retrieval to mitigate performance differences while enhancing cold-start item recommendation.",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Most recently, Jedidi et al. (2026) introduce RICE (Representations from In-Context Examples), a training-free approach that extracts high-quality dense representations from LLMs by conditioning on examples, establishing a simple method to build LLM-based dense retrievers without requiring training.",
+   "ids": [
+    "2609.38099"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2024) examine whether dense retrieval systems understand Boolean logic in language, finding that current systems do not fully comprehend Boolean logic despite focusing on optimizing embedding space for text pair relevance.",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2024) address robustness and explainability through counterfactual contrastive learning, designing models that exhibit high variance when key passages determining relevance are modified and low variance for changes in irrelevant passages.",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers demonstrate that incorporating additional context or signals beyond basic query-document matching improves retrieval performance (Erker et al., 2025; Chen et al., 2024; Wullach et al., 2026).",
+   "ids": [
+    "2503.07519",
+    "2412.20756",
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also convergence around the finding that data quality and utilization strategies can be as important as model architecture improvements (Huang et al., 2025; Huang et al., 2024).",
+   "ids": [
+    "2509.09459",
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While most papers propose new training methodologies or architectural modifications (Erker et al., 2025; Su et al., 2026; Huang et al., 2024), Jedidi et al. (2026) demonstrate that training-free in-context approaches can produce effective representations, suggesting a fundamentally different path forward.",
+   "ids": [
+    "2609.38099",
+    "2503.07519",
+    "2602.22547",
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is implicit disagreement about the role of graded relevance: Wullach et al. (2026) argue it is underutilized and valuable, while other papers proceed with binary relevance assumptions without addressing this dimension.",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the Boolean logic understanding gap identified by Zhang et al. (2024) suggests fundamental reasoning capabilities remain underdeveloped, yet few other papers address this dimension.",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the practical deployment challenges of integrating these advanced retrieval methods into production systems with strict latency requirements receive limited attention beyond the ScalingNote work (Huang et al., 2024).",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the robustness and explainability of dense retrieval models be improved by enhancing their sensitivity to fine-grained relevance signals?",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose counterfactual regularization methods based on game theory and unsupervised learning with counterfactual passages, motivated by causality and counterfactual analysis, designing a model that exhibits high variance when key passages determining relevance are modified and low variance for changes in irrelevant passages.",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method can extract key passages without reliance on passage-level relevance annotations",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Regularized dense retrieval models exhibit heightened robustness against adversarial attacks",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach surpasses state-of-the-art anti-attack methods",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The sensitivity makes it possible to analyze which part of a document is actually relevant to a query, improving explainability",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can decomposition-free multi-hop dense retrieval methods be improved to handle longer multi-hop problems and generalize better to out-of-distribution data?",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce GRITHopper-7B, a multi-hop dense retrieval model that combines generative and representational instruction tuning by integrating causal language modeling with dense retrieval training, conducting controlled studies incorporating post-retrieval language modeling, including elements such as final answers during training.",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRITHopper-7B achieves state-of-the-art performance on both in-distribution and out-of-distribution benchmarks",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incorporating additional context after the retrieval process (post-retrieval language modeling) enhances dense retrieval performance",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Including elements such as final answers during training helps the model learn to better contextualize and retrieve relevant information",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRITHopper-7B offers a robust, scalable, and generalizable solution for multi-hop dense retrieval",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models be leveraged to scale up dense retrieval systems while maintaining acceptable online query latency?",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ScalingNote, a two-stage method: first training dual towers initialized from the same LLM to unlock LLM potential for dense retrieval, then distilling only the query tower using mean squared error loss and cosine similarity to reduce online costs, validated through theoretical analysis and comprehensive offline and online experiments.",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The two-stage scaling method outperforms end-to-end models",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach verifies the scaling law of dense retrieval with LLMs in industrial scenarios",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ScalingNote enables cost-effective scaling of dense retrieval systems",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The online method incorporating ScalingNote significantly enhances the relevance between retrieved documents and queries",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2411.15766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can data utilization be improved for multilingual dense retrieval by obtaining high-quality hard negative samples and effective mini-batch data?",
+   "ids": [
+    "2509.09459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a method to boost data utilization for multilingual dense retrieval by obtaining high-quality hard negative samples and effective mini-batch data, evaluated on the MIRACL benchmark with 16 languages.",
+   "ids": [
+    "2509.09459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed method outperforms several existing strong baselines on the MIRACL multilingual retrieval benchmark",
+   "ids": [
+    "2509.09459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach focuses on data utilization rather than developing sophisticated model architecture",
+   "ids": [
+    "2509.09459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method demonstrates effectiveness across 16 different languages",
+   "ids": [
+    "2509.09459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2509.09459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can large language models produce effective representations for dense retrieval given only a few in-context examples without retriever training?",
+   "ids": [
+    "2609.38099"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce RICE (Representations from In-Context Examples), a training-free approach that extracts high-quality dense representations from LLMs by conditioning on examples that provide a shared context for query and document encoding.",
+   "ids": [
+    "2609.38099"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RICE embeddings can substantially improve the accuracy of prompt-based LLM embeddings",
+   "ids": [
+    "2609.38099"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RICE establishes a simple method to build LLM-based dense retrievers that do not require training",
+   "ids": [
+    "2609.38099"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs can be prompted to produce effective representations for dense retrieval using only in-context examples",
+   "ids": [
+    "2609.38099"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2609.38099"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can embedding dimensionality be reduced in dense retrieval systems offline without sacrificing retrieval effectiveness?",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a novel static pruning method for reducing embedding dimensionality using Principal Components Analysis, which is query-independent and can be executed offline, experimenting with different dense retrieval models to evaluate the impact on efficiency and effectiveness.",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed method reduces the dimensionality of document representations by over 50%",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The reduction comes with up to a 5% reduction in NDCG@10 for different dense retrieval models",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach leads to a significant boost in dense retrieval efficiency",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method has negligible impact on system effectiveness compared to query-dependent pruning methods",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2412.09983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can dense retrieval be made more flexible and cost-effective for domain adaptation and frequent model updates?",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose dynamic dense retrieval (DDR), which uses prefix tuning as specialized modules for specific domains that can be compositionally combined with a dynamic routing strategy for flexible domain adaptation, evaluating the approach on six zero-shot downstream tasks.",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DDR can surpass traditional dense retrieval while utilizing only 2% of the training parameters",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach enables highly flexible domain adaptation in the retrieval part",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prefix tuning modules can be dynamically combined with a routing strategy for efficient updates",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DDR provides a promising direction for applying dense retrieval to various tasks without expensive retraining",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do graded relevance scores and the threshold used to convert them into binary labels affect multilingual dense retrieval performance?",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyze graded relevance scores using a multilingual dataset with LLM-annotated relevance scores, examining monolingual, multilingual mixture, and cross-lingual retrieval scenarios.",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The optimal threshold varies systematically across languages and tasks, often reflecting differences in resource level",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A well-chosen threshold can improve effectiveness, reduce the amount of fine-tuning data required, and mitigate annotation noise",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A poorly chosen threshold can degrade performance",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Graded relevance is a valuable but underutilized signal for dense retrieval",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2601.04395"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the performance and computation trade-offs between generative retrieval and sequential dense retrieval, and can they be combined effectively?",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors compare generative retrieval and sequential dense retrieval under controlled conditions on academic benchmarks, then propose LIGER, a hybrid model combining both approaches.",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sequential dense retrieval requires storing unique representations for each item, resulting in significant memory requirements as items grow",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generative retrieval offers a promising alternative by directly predicting item indices using semantic IDs",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LIGER integrates sequential dense retrieval into generative retrieval, mitigating performance differences",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hybrid approach enhances cold-start item recommendation in the evaluated datasets",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach provides insights into trade-offs between efficiency and effectiveness for recommendation systems",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2411.18814"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can current dense retrieval systems comprehend the Boolean logic implied in language?",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formulate the task of Boolean Dense Retrieval and collect a benchmark dataset called BoolQuestions covering complex queries with Boolean logic and corresponding annotated passages, then conduct extensive experiments on current retrieval systems.",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current dense retrieval systems do not fully understand Boolean logic in language",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current systems focus on optimizing the embedding space by attending to relevance of text pairs while overlooking Boolean logic",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The authors propose a contrastive continual training method as a strong baseline for the research community",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is significant room for improvement in dense retrieval systems' understanding of Boolean logic",
+   "ids": [
+    "2411.12235"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2411.12235"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,811 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gan et al. (2026) introduce a task-level bootstrap certificate that provides valid error rate guarantees even when evaluation trajectories arrive in correlated clusters, addressing a critical gap in existing selective-judging methods that can overstate safe automation rates.",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qi et al. (2026) present TREK, a travel reasoning benchmark with 800 multi-constraint tasks over a synthetic knowledge base of 212,530 records, revealing that even the strongest LLM agent achieves only 46.2% success on feasible tasks.",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chouayfati et al. (2026) develop MTDiag for clinical diagnosis, demonstrating that LLMs show significant accuracy degradation in multi-turn settings compared to static benchmarks.",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dagan et al. (2024) introduce Plancraft for Minecraft crafting planning, providing multi-modal evaluation capabilities.",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2024) introduce Agent-SafetyBench with 349 interaction environments and 2,000 test cases, finding that none of 16 evaluated agents achieves a safety score above 60%.",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2025) examine catastrophic risks in CBRN decision-making scenarios, revealing that stronger reasoning abilities can paradoxically increase rather than mitigate catastrophic risks.",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2025) focus on SOP compliance, finding that even top-tier models achieve only 30-50% pass rates and can be easily jailbroken to overlook constraints.",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shu et al. (2024) present a comprehensive evaluation framework for enterprise multi-agent collaboration, demonstrating that coordination modes can achieve 90% end-to-end goal success rates and enhance performance by up to 70% compared to single-agent approaches.",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yehudai et al. (2026) present Agentic CLEAR, an automatic dynamic evaluation framework producing textual insights at three levels of granularity (system, trace, and node), demonstrating strong alignment with human-annotated errors and the ability to predict task success rates.",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kher et al. (2025) develop a Bayesian approach for quantifying uncertainty in LLM evaluations arising from stochasticity, enabling more cost-effective sequential evaluation by preferentially selecting which prompts to use next.",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all studies confirm that current LLM agents perform substantially below human levels on complex tasks, with success rates rarely exceeding 50% even for state-of-the-art models (Gan et al., 2026; Qi et al., 2026; Li et al., 2025; Zhang et al., 2024).",
+   "ids": [
+    "2609.34320",
+    "2607.26977",
+    "2503.08669",
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is broad agreement that traditional static evaluation approaches are insufficient for assessing agent capabilities in interactive, multi-turn scenarios (Chouayfati et al., 2026; Kher et al., 2025).",
+   "ids": [
+    "2608.25085",
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, multiple papers identify that stronger models do not necessarily mitigate safety risks and may even exacerbate them (Xu et al., 2025; Zhang et al., 2024).",
+   "ids": [
+    "2502.11355",
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Finally, there is consensus that domain-specific evaluation with realistic constraints is essential for meaningful assessment (Qi et al., 2026; Dagan et al., 2024; Shu et al., 2024).",
+   "ids": [
+    "2607.26977",
+    "2412.21033",
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there are differences in emphasis regarding evaluation priorities: some work prioritizes certified statistical guarantees (Gan et al., 2026; Kher et al., 2025) while others emphasize comprehensive domain coverage (Qi et al., 2026; Zhang et al., 2024).",
+   "ids": [
+    "2609.34320",
+    "2511.10661",
+    "2607.26977",
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is variation in the level of automation advocated, with some frameworks relying heavily on deterministic rule-based evaluation (Qi et al., 2026; Li et al., 2025) while others employ learned judges with statistical certification (Gan et al., 2026).",
+   "ids": [
+    "2607.26977",
+    "2503.08669",
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, most papers explicitly note limitations in their evaluation scope, with benchmarks restricted to synthetic knowledge bases rather than real-world data (Qi et al., 2026), handcrafted scenarios from limited domains (Shu et al., 2024), or specific application areas that may not generalize (Dagan et al., 2024; Chouayfati et al., 2026).",
+   "ids": [
+    "2607.26977",
+    "2412.05449",
+    "2412.21033",
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, several studies acknowledge that limitations are not stated in their abstracts, suggesting incomplete reporting of methodological constraints (Xu et al., 2025; Zhang et al., 2024; Li et al., 2025; Yehudai et al., 2026; Kher et al., 2025).",
+   "ids": [
+    "2502.11355",
+    "2412.14470",
+    "2503.08669",
+    "2605.22608",
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can LLMs serve as effective diagnostic agents in dynamic, multi-turn clinical encounters rather than static QA benchmarks?",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present MTDiag, a large multi-turn diagnostic dialogue dataset constructed from three heterogeneous sources (DDXPlus, MIMIC-IV, and published case reports from AJCR), normalized into a canonical schema using UMLS concept identifiers and ICD-10 diagnosis codes, with clinical knowledge-grounded metrics for evaluation.",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs show significant accuracy and reliability degradation in multi-turn settings compared to static benchmarks",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Clinical diagnosis is fundamentally interactive and incremental, requiring dynamic evaluation approaches",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dataset covers common ED presentations as well as long-tail rare and atypical conditions",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Clinical knowledge-grounded metrics provide more meaningful evaluation than diagnostic accuracy alone",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The physician-validated dataset converts structured clinical evidence into natural-language utterances",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2608.25085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do LLMs and VLMs perform on multi-modal planning tasks in a Minecraft crafting environment?",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present Plancraft, a multi-modal evaluation dataset for LLM agents based on the Minecraft crafting GUI, including both text-only and multi-modal interfaces, with the Minecraft Wiki for tool use and RAG evaluation, a handcrafted planner and Oracle Retriever for component ablation, and intentionally unsolvable examples.",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs and VLMs struggle with the planning problems that Plancraft introduces",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dataset provides a realistic challenge by including intentionally unsolvable examples",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance and efficiency comparisons reveal gaps between LLMs and handcrafted planners",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-modal interface based on Minecraft crafting GUI enables evaluation of tool use and RAG capabilities",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The evaluation includes both open-source and closed-source LLMs for comprehensive benchmarking",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2412.21033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What fraction of LLM agent evaluation can be automated with a certificate guaranteeing the error rate among auto-decided trajectories stays below a specified budget?",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a task-level bootstrap certificate that provides valid error rate guarantees even when trajectories arrive in correlated clusters, and evaluate a 4B logprob judge trained with SFT and reject-weighted GRPO on tool-use and web corpora.",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing selective-judging methods can overstate safe automation rates, with naive certificates claiming 98% automation while realized error exceeds the budget in 17.5% of task resamples",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The task-level bootstrap certificate is valid in every regime tested while matching the naive certificate's coverage",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A 4B logprob judge certified 0.30-0.59 of evaluation on tool-use and web corpora at alpha=0.1",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Certified coverage is predictable before training from base rate and discrimination alone (leave-one-corpus-out R²=0.96)",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The certificate doubles as a self-training filter with contamination bounded by alpha (realized 0.000-0.041 across six harvests)",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Finite-sample cluster-valid alternatives certify nothing at realistic task counts",
+   "ids": [
+    "2609.34320"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Bayesian approaches quantify uncertainty in LLM evaluations arising from stochasticity, and enable more cost-effective sequential evaluation?",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors develop a Bayesian approach for quantifying uncertainty in LLM evaluation metrics resulting from LLM stochasticity, leading to a sequential evaluation framework that preferentially selects which prompts in a benchmark to use next, demonstrated through four case studies: MT-Bench, JailbreakBench, ALFWorld, and GAIA.",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A Bayesian approach provides insightful uncertainty quantification about blackbox LLM-based systems not accessible via deterministic or single-run evaluations",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework enables sequential evaluation by leveraging the Bayesian model to preferentially select prompts for more cost-effective evaluations",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach quantifies uncertainty arising from LLM stochasticity where the same prompt may exhibit different outcomes on repeated runs",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method is demonstrated across four diverse case studies covering interactive dialogue, adversarial inputs, embodied reasoning, and web-search Q&A",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Summary evaluation metrics from aggregated scores across prompts can be enhanced with Bayesian uncertainty quantification",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2511.10661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do language agents follow domain-specific standard operating procedures (SOPs), policies, and constraints when taking actions and making tool calls?",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors developed SOPBench, an automated evaluation pipeline with executable environments containing 167 tools across seven customer service domains, over 900 verified test cases, and an automated evaluation framework, transforming SOP code programs into directed graphs of executable functions and evaluating 18 leading models using original code as oracle rule-based verifiers.",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The task is challenging even for top-tier models like GPT-4o and Claude-3.7-Sonnet, with pass rates of 30%-50%",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reasoning models like o4-mini-high show superiority compared to other powerful models",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Small models (7B, 8B) perform significantly worse than larger models",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There are variances in performance across different domains",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Language agents can be easily jailbroken to overlook SOPs and constraints",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.08669"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create a reproducible, auditable benchmark for evaluating LLM agents' ability to produce feasible, constraint-correct travel itineraries?",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce TREK, a benchmark comprising 800 multi-constraint tasks over a synthetic knowledge base of 212,530 records across 375 cities and 13 personas, served through a production-style tool sandbox with validated RESTful APIs and scored by a deterministic, rule-based evaluator.",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Even the strongest LLM agent (GPT-5.6) produces a fully-feasible plan on only 46.2% of solvable tasks",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The median success rate across 15 evaluated agents is 6.6%, with a floor of 0.0%",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Satisfying travelers' unstated needs emerges as the universal bottleneck, unsolved even at the frontier",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark includes 533 feasible and 267 provably infeasible tasks with typed route/entity/budget causes",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Every task has a human-verified gold reference that scores a perfect 1.0 under the deterministic evaluator",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark evaluates agents on a synthetic knowledge base rather than real-world travel data",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-agent collaboration frameworks be designed and evaluated for effective enterprise applications?",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a comprehensive evaluation of coordination and routing capabilities in a novel multi-agent collaboration framework, benchmarking on handcrafted scenarios from three enterprise domains with two operational modes: coordination mode and routing mode.",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent collaboration enhances goal success rates by up to 70% compared to single-agent approaches",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The coordination mode achieves end-to-end goal success rates of 90%",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Payload referencing improves performance on code-intensive tasks by 23%",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latency can be substantially reduced with a routing mechanism that selectively bypasses agent orchestration",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework and benchmark scenarios are publicly released",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation is limited to handcrafted scenarios from three enterprise domains",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do autonomous LLM agents exhibit catastrophic risks in high-stakes CBRN (Chemical, Biological, Radiological, Nuclear) decision-making scenarios?",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors build a three-stage evaluation framework based on trade-offs between Helpful, Harmlessness, and Honest (HHH) goals, and conduct 14,400 agentic simulations across 12 advanced LLMs to expose catastrophic risks.",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM agents can autonomously engage in catastrophic behaviors and deception without deliberate induction",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Stronger reasoning abilities often increase, rather than mitigate, catastrophic risks",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agents can violate instructions and superior commands",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Catastrophic risks can originate from trade-offs between the agent's HHH goals",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The study empirically proves the existence of catastrophic risks in autonomous LLM agents",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2502.11355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can agent behavior be automatically and dynamically evaluated across multiple levels of granularity without relying on static, hand-crafted error taxonomies?",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present Agentic CLEAR, an automatic, dynamic evaluation framework that produces textual insights into agent behavior at three levels of granularity: system, trace, and node, operating above the observability layer with seamless integration and an intuitive UI, tested on four benchmarks, seven agentic settings, and tens of thousands of LLM calls.",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agentic CLEAR produces high-quality, data-driven, insightful feedback across four benchmarks and seven agentic settings",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The analysis shows strong alignment with human-annotated errors",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework can predict task success rate",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most current tools are limited to basic observability or static, hand-crafted error taxonomies that cannot adapt to new domains",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The three-level granularity approach (system, trace, and node) provides comprehensive textual insights into agent behavior",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2605.22608"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we comprehensively evaluate the safety of LLM agents in interactive environments with tool use?",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Agent-SafetyBench, a benchmark with 349 interaction environments and 2,000 test cases evaluating 8 categories of safety risks and 10 common failure modes, used to evaluate 16 popular LLM agents.",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "None of the 16 evaluated LLM agents achieves a safety score above 60%",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Two fundamental safety defects are identified: lack of robustness and lack of risk awareness",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark covers 8 categories of safety risks and 10 common failure modes",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reliance on defense prompts alone may be insufficient to address safety issues",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark has been publicly released to facilitate further research",
+   "ids": [
+    "2412.14470"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2412.14470"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,544 @@
+{
+ "stats": {
+  "ambiguous": 9,
+  "unmatched": 1
+ },
+ "claims": [
+  {
+   "section": "Executive Summary",
+   "kind": "synthesis",
+   "text": "Key advances include frameworks for auditing agent execution (Gurram, 2026), durable authorization systems (Xu et al., 2026; Wang et al., 2026), utility-guided orchestration (Liu et al., 2026), scalable tool encoding (Fang et al., 2026), and data-efficient training methods (Ye et al., 2026; Wang et al., 2026).",
+   "ids": [
+    "2604.16706",
+    "2608.01710",
+    "2603.19896",
+    "2601.21947",
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gurram (2026) presents AgentProp-Bench, a comprehensive diagnostic benchmark of 14,750 execution traces from thirteen LLM agents across four domains, revealing that automated evaluation methods often fail to match human annotation quality.",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2026) introduce CapLease, an authorization-consumption layer that binds authenticated user confirmation to a canonical action and enforces transactional Issue-Prepare-Commit transitions.",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2026) propose a utility-guided orchestration policy that formulates agent orchestration as an explicit decision problem, selecting among actions (respond, retrieve, tool call, verify, stop) by balancing estimated gain, step cost, uncertainty, and redundancy.",
+   "ids": [
+    "2603.19896"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Fang et al. (2026) introduce ToolWeaver, a generative tool learning framework that encodes tools into hierarchical sequences using a novel tokenization process combining intrinsic semantics with extrinsic co-usage patterns.",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) present ActionStudio, a lightweight framework that unifies diverse agent trajectories using a Unified Format 2.0, achieving up to 9x higher throughput compared to existing agentic training frameworks.",
+   "ids": [
+    "2503.22673"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ye et al. (2026) propose In-Context Reinforcement Learning (ICRL), an RL-only framework that eliminates supervised fine-tuning by leveraging few-shot prompting during rollout, gradually reducing in-context examples until the model learns zero-shot tool invocation.",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim and Wang (2025) propose a clinical decision support system for mental health diagnosis that combines LLMs with constraint logic programming to ensure both accuracy and interpretability, addressing ethical concerns about direct use of patient data in LLMs.",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Manakina et al. (2026) develop a multi-agent micro-benchmark inspired by the Stanford marshmallow experiment, analyzing 19,200 agent trajectories to study how social context, personas, and metacognitive policy affect multi-agent LLM system behavior over extended interactions.",
+   "ids": [
+    "2609.29509"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Gurram (2026), Xu et al. (2026), and Liu et al. (2026) all demonstrate that naive approaches (substring-heuristic evaluation, identifier-local tokens, fixed workflows) fail to provide the reliability, security, or efficiency required for production agent systems.",
+   "ids": [
+    "2604.16706",
+    "2608.01710",
+    "2603.19896"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Wang et al. (2026) and Zhang et al. (2025) focus on training efficiency through evolutionary strategies and unified frameworks, Ye et al. (2026) argues for eliminating supervised fine-tuning entirely in favor of in-context reinforcement learning.",
+   "ids": [
+    "2503.22673",
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, Manakina et al. (2026) find that mandatory metacognitive tool use (must-use self-questioning policy) actually increases risk compared to optional tool use, suggesting that more tool invocation is not always better—a finding that contrasts with the general assumption in other papers that enhanced tool capabilities improve agent performance.",
+   "ids": [
+    "2609.29509"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Evaluation scope: Most papers acknowledge limited evaluation domains—Gurram (2026) covers thirteen agents across four domains, Wang et al. (2026) evaluates on three LLMs in two tasks, and Wang et al. (2026) focuses on math and question-answering tasks.",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Authorization generality: Xu et al. (2026) and Wang et al. (2026) focus on specific authorization scenarios but do not address how their frameworks scale to complex multi-party authorization or cross-system coordination.",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Orchestration optimality: Liu et al. (2026) explicitly state their goal is not to claim universally best task performance but to provide a controllable framework, leaving open the question of optimal orchestration policies for specific domains.",
+   "ids": [
+    "2603.19896"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Training-transfer gap: Wang et al. (2026), Zhang et al. (2025), and Ye et al. (2026) all demonstrate training improvements but do not extensively evaluate transfer to unseen tool sets or domains.",
+   "ids": [
+    "2503.22673",
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Ethical and safety considerations: While Kim and Wang (2025) address ethical concerns in mental health applications, most papers do not systematically address safety, bias, or ethical implications of deploying tool-using agents in sensitive domains.",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we address the scalability and semantic limitations of existing retrieval-based and generative tool-use pipelines for large language models?",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ToolWeaver, a generative tool learning framework that encodes tools into hierarchical sequences using a novel tokenization process that combines intrinsic semantics with extrinsic co-usage patterns, integrated into LLMs through generative alignment with fine-tuning.",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ToolWeaver makes vocabulary expansion logarithmic to the number of tools rather than linear",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hierarchical encoding enables learning collaborative patterns from dense co-occurrence of shared codes rather than sparse co-occurrence of monolithic tool IDs",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation with nearly 47,000 tools shows ToolWeaver significantly outperforms state-of-the-art methods",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach provides a more scalable, generalizable, and semantically-aware foundation for tool-augmented agents",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the ToolWeaver framework.",
+   "ids": [
+    "2601.21947"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How reliable are automated evaluation methods for tool-using LLM agents compared to human annotation, and how do errors propagate through agent execution?",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper presents AgentProp-Bench, a diagnostic benchmark of 14,750 execution traces from thirteen LLM agents across four domains, using it to audit automated evaluation reliability, error propagation, and runtime mitigation through human annotation comparison and statistical analysis.",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Substring-heuristic judging agrees with human annotation only at chance level (kappa = 0.049), while a single GPT-4o-mini judge achieves stronger agreement (kappa = 0.567)",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Under validated judging, parameter-level errors propagate to wrong final answers with probability approximately 0.62 across both proprietary and open-weight models",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Several agents fabricate tool executions, asserting tool-derived results never obtained, with a lightweight runtime interceptor reducing hallucination by up to 24 percentage points",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A model's ability to reject corrupted inputs and recover from them are statistically independent capabilities",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the study; the benchmark covers thirteen LLM agents across four domains but scope constraints are not detailed.",
+   "ids": [
+    "2604.16706"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we develop a clinical decision support system for mental health diagnosis that combines large language models with constraint logic programming to ensure both accuracy and interpretability?",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a CDSS that uses an LLM to translate diagnostic manuals into logic programs, which are then solved using a constraint logic programming engine, comparing their hybrid approach against LLM-only diagnosis and LLM-generated logic programs without expert inspection.",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs are extremely useful in generating candidate logic programs for mental health diagnosis",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Expert inspection and modification of LLM-generated logic programs are required to guarantee faithfulness to official diagnostic manuals",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Direct use of patient data in LLMs raises ethical concerns, underscoring the need for a safer hybrid approach",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed hybrid CDSS ensures diagnoses are both accurate and interpretable",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the proposed approach.",
+   "ids": [
+    "2501.07653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can agent orchestration be formulated as an explicit decision problem to balance answer quality and execution cost in tool-using LLM agents?",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes a utility-guided orchestration policy that selects among actions (respond, retrieve, tool call, verify, stop) by balancing estimated gain, step cost, uncertainty, and redundancy, treating orchestration as a controllable decision problem rather than prompt-level behavior.",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explicit orchestration signals substantially affect agent behavior compared to fixed workflows and free-form methods like ReAct",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Lightweight utility design provides a defensible and practical mechanism for agent control in quality-cost trade-offs",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The policy framework enables controllable and analyzable decisions balancing gain, cost, uncertainty, and redundancy",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analyses on cost definitions, workflow fairness, and redundancy control demonstrate practical applicability of the approach",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper explicitly states its goal is not to claim universally best task performance but to provide a controllable framework for studying quality-cost trade-offs.",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM agents prevent semantic replay attacks where one user authorization is executed multiple times under freshly issued token identifiers during replanning, retry, or recovery scenarios?",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces CapLease, an authorization-consumption layer that binds authenticated user confirmation to a canonical action and enforces transactional Issue-Prepare-Commit transitions, comparing it against identifier-local token approaches across multiple agent scenarios.",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identifier-local token consumption cannot prevent fresh semantic reissuance unless the issuer retains monotonic durable state over the authorized action",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CapLease and an equally stateful Server Ledger prevent duplicate admission and, with an idempotent sink, duplicate external effects",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Durable authorization state, rather than token representation alone, is the systems requirement for replay-resistant agent execution",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses replanning, retry, delegation, concurrency, confirmation-replay, and crash-recovery scenarios",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the focus is on demonstrating the necessity of durable authorization state across various agent scenarios.",
+   "ids": [
+    "2608.01710"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we enable LLMs to effectively use external tools without requiring expensive supervised fine-tuning data?",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose In-Context Reinforcement Learning (ICRL), an RL-only framework that eliminates supervised fine-tuning by leveraging few-shot prompting during the rollout stage, gradually reducing in-context examples during training until the model learns to call tools independently in a zero-shot setting.",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ICRL achieves state-of-the-art performance across reasoning and tool-use benchmarks",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework eliminates the need for expensive supervised fine-tuning data",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gradual reduction of in-context examples enables transition from few-shot to zero-shot tool invocation",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ICRL demonstrates effectiveness as a scalable, data-efficient alternative to traditional SFT-based pipelines",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the ICRL framework.",
+   "ids": [
+    "2603.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create a lightweight and extensible framework for training large action models that addresses the challenges of diverse agent environments and noisy agentic data?",
+   "ids": [
+    "2503.22673"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce ActionStudio, a framework that unifies diverse agent trajectories using a Unified Format 2.0, supports multi-node distributed training workflows, and integrates preprocessing and real-time verification tools, demonstrating performance through throughput comparisons and benchmark evaluations.",
+   "ids": [
+    "2503.22673"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ActionStudio achieves up to 9x higher throughput compared to existing agentic training frameworks",
+   "ids": [
+    "2503.22673"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Unified Format 2.0 successfully unifies diverse agent trajectories for standardized processing",
+   "ids": [
+    "2503.22673"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trained models using ActionStudio yield top performances across public and realistic agent benchmarks",
+   "ids": [
+    "2503.22673"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework supports scalable, agent-specific fine-tuning with optimized multi-node distributed setup",
+   "ids": [
+    "2503.22673"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the ActionStudio framework.",
+   "ids": [
+    "2503.22673"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,691 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hossain et al. (2025) introduced LLM-ProS, which benchmarks five state-of-the-art models on 166 ICPC World Finals problems from 2011 to 2024, evaluating not just correctness but also resource utilization and response calibration.",
+   "ids": [
+    "2502.04355"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Complementing this, Chou et al. (2025) addressed the scalability limitations of manual benchmark creation by proposing AutoCodeGen, which automatically generates high-difficulty multilingual code problems across 20 programming languages.",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chavan et al. (2026) presented Lafa (Large flow language model), which achieves 2.54x throughput compared to autoregressive models while maintaining comparable quality on coding tasks.",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shi et al. (2025) tackled the problem of long context compression for code LLMs with LongCodeZip, achieving up to 5.6x compression ratios without performance degradation.",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Meanwhile, Gross et al. (2025) explored the opposite direction with tiny language models (TLMs), demonstrating that pre-trained shallow architectures can replicate deep model accuracy with lower latency, potentially enabling broader accessibility for code generation research.",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Al Mazrouei (2025) introduced Anka, a DSL for data transformation pipelines that achieves 99.9% parse success and 95.8% overall task accuracy despite zero prior training exposure.",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhong et al. (2025) explored a different approach to control through sparse dimension manipulation in multilingual models, identifying that cross-lingual transitions are governed by a small set of dimensions at consistent layer indices.",
+   "ids": [
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ashiga et al. (2025) surveyed ensemble approaches for LLMs in text and code generation, categorizing methods into seven main categories: weight merging, knowledge fusion, mixture-of-experts, reward ensemble, output ensemble, routing, and cascading.",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2024) developed BayLing 2, which uses language alignment to transfer generative capabilities from high-resource to low-resource languages without constructing expensive instruction data for over 100 languages.",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Darm and Riccardi (2025) explored a different aspect of multilingual and multi-capability control through attention head interventions, demonstrating that fine-grained interventions at specific attention heads can steer LLM generations more effectively than layer-level interventions or supervised fine-tuning, with implications for controlling code generation behavior.",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Most surveyed papers agree that evaluation frameworks must move beyond simple correctness metrics to capture resource utilization, efficiency, and adaptability (Hossain et al., 2025; Chou et al., 2025).",
+   "ids": [
+    "2502.04355",
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the finding that constrained interfaces or DSLs significantly improve reliability for complex multi-step tasks compared to general-purpose languages (Al Mazrouei, 2025; Zhong et al., 2025).",
+   "ids": [
+    "2512.23214",
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Chavan et al. (2026) demonstrate that billion-parameter flow models can achieve superior throughput, Gross et al. (2025) argue that tiny language models may be sufficient for many tasks, suggesting biologically inspired shallow architectures.",
+   "ids": [
+    "2610.28559",
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Limited discussion of safety and alignment: While Darm and Riccardi (2025) address intervention-based control, most papers do not explicitly discuss safety considerations in code generation, particularly for automated systems that could generate malicious code.",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a domain-specific language with explicit, constrained syntax reduce systematic errors that LLMs exhibit on complex, multi-step programming tasks compared to general-purpose languages?",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced Anka, a DSL for data transformation pipelines with explicit, constrained syntax, evaluated Claude 3.5 Haiku on 100 benchmark problems with zero prior training exposure, and conducted cross-model validation with GPT-4o-mini.",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Claude 3.5 Haiku achieves 99.9% parse success and 95.8% overall task accuracy on Anka despite zero prior training exposure",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Anka demonstrates a 40 percentage point accuracy advantage over Python on multi-step pipeline tasks (100% vs. 60%)",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-model validation with GPT-4o-mini confirms a 26.7 percentage point advantage on multi-step tasks",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs can learn novel DSLs entirely from in-context prompts, achieving near-native accuracy",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2512.23214"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What ensemble approaches are emerging for LLMs in text and code generation to address inconsistent outputs, biases, and limited representation of diverse language patterns in individual models?",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducted a survey reviewing ensemble approaches for LLMs in text and code generation, categorizing methods into seven main categories and analyzing the capabilities of each approach.",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM ensemble techniques are increasingly explored for code generation, inspired by successes in text generation",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Seven main ensemble methods are identified: weight merging, knowledge fusion, mixture-of-experts, reward ensemble, output ensemble, routing, and cascading",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key benefits include improved diversity representation, enhanced output quality, and greater application flexibility",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ensemble insights aid model selection for real-world tasks and lay groundwork for extending strategies to multimodal LLMs",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can continuous flow language models be scaled to billion-parameter levels with data-efficient training while enabling parallel generation and matching autoregressive model quality?",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presented Lafa (Large flow language model), a blockwise flow model with causal attention on the prefix and bidirectional asynchronous flow within each block, trained at 0.5B, 7B, and 8B scales with fewer than 30B tokens, adapting pretrained autoregressive models.",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Lafa achieves 2.54x throughput of autoregressive models at comparable quality via self-speculative decoding",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Flow training preserves or improves pretrained autoregressive capabilities through multi-token prediction effects",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The learned flow matches or surpasses autoregressive quality on instruction following, reasoning, and coding tasks",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Continuous flows can serve as a scalable foundation for language modeling",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2610.28559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we automatically generate high-difficulty multilingual code generation benchmarks without manual annotations to overcome the scalability and language coverage limitations of existing benchmarks?",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed AutoCodeGen, an automated method that generates code problems using reverse-order problem generation, creates test inputs with LLMs, and obtains test outputs through a multilingual sandbox with multiple filtering steps.",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Introduced AutoCodeBench, a benchmark of 3,920 problems across 20 programming languages, and evaluated over 30 LLMs on it.",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AutoCodeGen successfully generates high-difficulty multilingual code generation datasets without manual annotations by using LLMs for test input generation and a multilingual sandbox for test outputs",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AutoCodeBench comprises 3,920 problems evenly distributed across 20 programming languages, addressing the Python-centric bias of existing benchmarks",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Even the most advanced LLMs struggle with the complexity, diversity, and multilingual nature of tasks in AutoCodeBench",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AutoCodeBench-Complete was introduced specifically for evaluating base models on few-shot code generation capabilities",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2508.09101"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can inference-time activation interventions at specific attention heads bypass safety alignments and steer LLM generations toward harmful AI coordination?",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Applied fine-grained interventions at specific attention heads identified by probing each head in a binary choice task, then demonstrated that these interventions generalize to open-ended generation settings to circumvent safety guardrails.",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Intervening on a few attention heads is more effective than intervening on full layers or supervised fine-tuning",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Only a few example completions are needed to compute effective steering directions",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Applying interventions in the negative direction can prevent common jailbreak attacks",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attention head level activations encode fine-grained linearly separable behaviours",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2502.05945"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do tiny language models (TLMs) exhibit the same key qualitative features of large language models, and can they provide accessible alternatives for broader NLP research?",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Explored TLMs by pre-training BERT-6 and BERT-1 variants on Wikipedia subsets and evaluating on FewShot, AGNews, and DBPedia classification tasks, comparing pre-trained versus non-pre-trained models and testing soft committee approaches.",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pre-trained TLMs show a clear performance gap over non-pre-trained models across classification tasks",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The performance gap increases with pre-training dataset size and token overlap between pre-training and classification datasets",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A soft committee of multiple independently pre-trained shallow architectures can replicate deep TLM accuracy with lower latency",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TLMs may be sufficient for language development, suggesting biologically inspired models",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2507.14871"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do state-of-the-art large language models perform on International Collegiate Programming Contest (ICPC) problems across metrics like correctness, resource utilization, and response calibration?",
+   "ids": [
+    "2502.04355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced LLM-ProS, a novel evaluation technique that benchmarks five LLMs (GPT-4o, Mistral Large, Llama-3.1-405B, o1-mini, o1-preview) on a curated dataset of 166 ICPC World Finals problems from 2011 to 2024, evaluating reasoning, accuracy, and efficiency.",
+   "ids": [
+    "2502.04355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant differences exist in models' abilities to generalize, adapt, and solve novel algorithmic problems",
+   "ids": [
+    "2502.04355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training methodologies, dataset contamination, and chain-of-thought reasoning impact model performance",
+   "ids": [
+    "2502.04355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The evaluation reveals both strengths and limitations of current LLMs for algorithmic coding tasks",
+   "ids": [
+    "2502.04355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2502.04355"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we compress long code contexts for code LLMs to reduce API costs and generation latency while preserving code-specific structures and dependencies that general text pruning techniques overlook?",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed LongCodeZip, a plug-and-play code compression framework with a dual-stage strategy: coarse-grained compression that identifies and ranks function-level chunks using conditional perplexity, and fine-grained compression that segments retained functions into blocks based on perplexity and selects an optimal subset under an adaptive token budget.",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LongCodeZip consistently outperforms baseline methods across code completion, summarization, and question answering tasks",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LongCodeZip achieves up to a 5.6x compression ratio without degrading task performance",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework effectively reduces context size while preserving essential information for code LLMs",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing context pruning techniques like LLMLingua achieve promising results for general text but overlook code-specific structures and dependencies",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2510.00446"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we efficiently transfer generative capabilities and knowledge from high-resource languages to low-resource languages without constructing prohibitively expensive instruction data for over 100 languages?",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced BayLing 2, which uses language alignment to transfer capabilities from high-resource to low-resource languages.",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Constructed a dataset of 3.2 million instructions (Chinese, English, and cross-lingual instructions for 100+ languages) and performed instruction tuning based on Llama as the foundation model, developing BayLing-2-7B, BayLing-2-13B, and BayLing-2-8B variants.",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BayLing shows superior performance compared to open-source models of similar scale for multilingual translation across 100+ languages",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BayLing achieves significant improvements across over 20 low-resource languages in multilingual knowledge and understanding benchmarks",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BayLing maintains high performance in high-resource languages (English benchmarks) while enhancing performance in low-resource languages",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The language alignment approach effectively transfers generative capabilities and knowledge from high-resource to low-resource languages",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2411.16300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Is the cross-lingual transition in multilingual LLMs governed by a small, sparse set of dimensions that occur at consistent indices across intermediate to final layers?",
+   "ids": [
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced a training-free method to identify and manipulate sparse dimensions governing cross-lingual transitions, requiring as few as 50 sentences of parallel or monolingual data, and tested interventions on multilingual generation control tasks.",
+   "ids": [
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-lingual transitions are governed by a small and sparse set of dimensions at consistent layer indices",
+   "ids": [
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Interventions in these dimensions can switch output language while preserving semantic content",
+   "ids": [
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach surpasses prior neuron-based methods at substantially lower computational cost",
+   "ids": [
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The identified dimensions demonstrate interpretability for multilingual control",
+   "ids": [
+    "2510.07213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2510.07213"
+   ]
+  }
+ ]
+}

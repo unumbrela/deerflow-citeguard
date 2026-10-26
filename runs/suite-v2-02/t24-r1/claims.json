@@ -1,0 +1,707 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qwen-RobotManip (Yuan et al., 2026) exemplifies this approach, building on Qwen-VL to create a unified alignment framework across representation, motion, and behavioral dimensions.",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Survey work by Shao et al. (2025) systematically categorizes VLA architectures into monolithic models (single-system and dual-system designs) and hierarchical models that decouple planning from execution.",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "FP3 (Yang et al., 2025) addresses this by introducing a 3D foundation policy built on a diffusion transformer architecture, pre-trained on 60k trajectories with point cloud observations.",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Complementing this work, O³Afford (Tian et al., 2025) focuses on one-shot 3D object-to-object affordance grounding, combining semantic features from vision foundation models with point cloud representations.",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "SAM2Act (Fang et al., 2025) introduces a multi-view robotic transformer policy leveraging visual representations from large-scale foundation models, enhanced with a memory architecture inspired by SAM2.",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "For structured scene understanding, Dinesh and Park (2025) present a framework integrating off-the-shelf foundation models with dynamically maintained scene graphs for spatial awareness.",
+   "ids": [
+    "2510.27558"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, SENT-Map (Kathirvel et al., 2025) introduces JSON-based semantically enhanced topological maps that enable both humans and foundation models to add and edit semantic information, grounding the robot to existing nodes during planning to avoid infeasible states.",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "GAMMA (Tay et al., 2026) leverages ego-centric gaze tracking combined with vision-language models to infer user intent and autonomously execute manipulation tasks.",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "GIF (Xu et al., 2026) addresses this through an agentic generation framework that produces fine-grained functional object compositions for robot manipulation evaluation.",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bai et al. (2025) examine robotic manipulation through a unified abstraction of high-level planning and low-level action modeling, extending task planning to include reasoning over language, code, affordances, geometric constraints, and 3D representations.",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shao et al. (2025) provide a complementary taxonomy focused specifically on large VLM-based VLA models, resolving inconsistencies in existing taxonomies and mitigating research fragmentation.",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all papers agree that foundation models provide unprecedented generalization capabilities compared to task-specific approaches, with multiple works reporting zero-shot or few-shot performance on novel tasks (Yuan et al., 2026; Yang et al., 2025; Tian et al., 2025).",
+   "ids": [
+    "2606.17846",
+    "2503.08950",
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Qwen-RobotManip (Yuan et al., 2026) demonstrates success with a unified VLA model, the survey by Shao et al. (2025) suggests that hierarchical approaches better decouple planning from execution for improved interpretability.",
+   "ids": [
+    "2508.13073",
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, none of the surveyed papers explicitly address safety guarantees or formal verification of foundation model-based manipulation policies, despite acknowledging safety as an open challenge (Bai et al., 2025).",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, the computational requirements of large foundation models raise questions about deployment on resource-constrained robotic platforms, with only SENT-Map (Kathirvel et al., 2025) explicitly addressing locally-deployable models.",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can recent learning-based approaches for robotic manipulation be organized and understood through the lens of foundation models from planning and learning perspectives?",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey examines robotic manipulation through a unified abstraction of high-level planning and low-level action modeling, extending task planning to include reasoning over language, code, affordances, geometric constraints, and 3D representations, while presenting a learning-paradigm-oriented taxonomy of action models.",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Foundation models contribute by generating structured planning artifacts instantiated as constraints or latent inputs, or by directly modeling executable actions and trajectories",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High-level planning includes reasoning over language, code, affordances, geometric constraints, and 3D representations",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Low-level action models are categorized by input modeling, latent learning, and policy learning paradigms",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Open challenges include scalability, generalization, data efficiency, multimodal physical interaction, and safety",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey provides a structured view of the design space and emerging trends in foundation models for robotic manipulation",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2512.22983"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can pre-trained foundation models be leveraged for accurate long-horizon robotic manipulation without domain-specific training?",
+   "ids": [
+    "2510.27558"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a framework that integrates off-the-shelf foundation models for multimodal perception with a general-purpose reasoning model for robust task sequencing, using dynamically maintained scene graphs for spatial awareness and consistent environmental reasoning.",
+   "ids": [
+    "2510.27558"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework enables robotic manipulation using pre-trained foundation models without requiring domain-specific training",
+   "ids": [
+    "2510.27558"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scene graphs provide spatial awareness and enable consistent reasoning about the environment",
+   "ids": [
+    "2510.27558"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation through tabletop robotic manipulation experiments highlights the framework's potential for building systems on top of off-the-shelf foundation models",
+   "ids": [
+    "2510.27558"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2510.27558"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can visual foundation models be integrated with memory architectures to improve robotic manipulation in diverse, dynamic environments?",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce SAM2Act, a multi-view robotic transformer-based policy leveraging multi-resolution upsampling with visual representations from large-scale foundation models, and SAM2Act+, which adds a memory-based architecture with a memory bank, encoder, and attention mechanism inspired by SAM2.",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAM2Act achieves a state-of-the-art average success rate of 86.8% across 18 tasks in the RLBench benchmark",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAM2Act demonstrates robust generalization on The Colosseum benchmark with only a 4.3% performance gap under diverse environmental perturbations",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The authors introduce MemoryBench, a novel benchmark for evaluating spatial memory and action recall in robotic manipulation",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAM2Act+ achieves an average success rate of 94.3% on memory-based tasks in MemoryBench, significantly outperforming existing approaches",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2501.18564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can semantically enhanced topological maps support autonomous navigation and manipulation in indoor environments using foundation models?",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce SENT-Map, a JSON-based semantically enhanced topological map representation, employing a two-stage approach: first mapping the environment with a Vision-FM alongside an operator, then using the SENT-Map representation with natural-language queries within an FM for planning.",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SENT-Map represents indoor environments in a JSON text format that enables semantic information to be added and edited in a format both humans and foundation models understand",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework grounds the robot to existing nodes during planning to avoid infeasible states during deployment",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Semantic enhancement enables even small locally-deployable foundation models to successfully plan over indoor environments",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2511.03165"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the current state and taxonomy of large VLM-based Vision-Language-Action models for robotic manipulation?",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey provides a systematic, taxonomy-oriented review of large VLM-based VLA models, defining two principal architectural paradigms (monolithic and hierarchical models) and examining their integration with advanced domains, distinctive characteristics, and promising future directions.",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Large VLM-based VLA models are categorized into monolithic models (single-system and dual-system designs) and hierarchical models (decoupling planning from execution)",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integration with advanced domains includes reinforcement learning, training-free optimization, learning from human videos, and world model integration",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey consolidates recent advances to resolve inconsistencies in existing taxonomies and mitigate research fragmentation",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Promising directions include memory mechanisms, 4D perception, efficient adaptation, and multi-agent cooperation",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2508.13073"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can eye gaze be leveraged as an intuitive input modality for conveying user intent in human-robot interaction for robotic manipulation?",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: GAMMA (Gaze Assisted Manipulation for Modular Autonomy) leverages ego-centric gaze tracking and a vision-language model to infer user intent and autonomously execute robotic manipulation tasks by contextualizing gaze fixations within the scene to map visual attention to semantic understanding.",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GAMMA enables skill selection and parameterization without task-specific training",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system provides robust, intuitive, and generalizable control compared to baseline gaze-based control without reasoning",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining foundation models and gaze enables natural and scalable robot autonomy",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eye gaze serves as a fast, non-intrusive, and intent-rich input modality for assistive care settings",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2601.05336"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can object-to-object affordance grounding be achieved for robotic manipulation under limited data constraints?",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a one-shot 3D object-to-object affordance learning approach that combines semantic features from vision foundation models with point cloud representation for geometric understanding, and integrates this with large language models for robotics manipulation.",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The O³Afford approach enables one-shot learning for object-to-object affordance grounding in robotic manipulation",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Semantic features from vision foundation models combined with point cloud representation enable effective generalization to novel objects and categories",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integration with LLMs significantly enhances their capability to comprehend and reason about object interactions when generating task-specific constraint functions",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments demonstrate that O³Afford significantly outperforms existing baselines in both accuracy and generalization capability",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2509.06233"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can automated scene generation be improved to produce fine-grained functional object compositions for robot manipulation evaluation and data generation?",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: GIF is an agentic generation framework that recasts the problem as disentangled reconstruction followed by relative pose recovery.",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoGen produces instance-disentangled meshes with coarse initial poses using 2D and 3D generative models, while GPRM refines relative pose under geometric and physical guidance, with a VLM verifier selecting the best candidate.",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GIF improves both asset quality and relation matching compared to state-of-the-art generators",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework reduces collision rate to below 1%",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A benchmark spanning eight representative contact-geometry classes was constructed for evaluation",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Synthesized data enables policy learning with diversity scaling in simulation and real-world deployment",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2609.05927"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can 3D geometric information be incorporated into foundation models for robotic manipulation to improve perception and reasoning about the 3D world?",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: FP3 is a large-scale 3D foundation policy model built on a scalable diffusion transformer architecture, pre-trained on 60k trajectories with point cloud observations, designed for efficient fine-tuning on downstream tasks.",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "With only 80 demonstrations, FP3 achieves over 90% success rates in novel environments with unseen objects",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FP3 significantly surpasses existing robot foundation models that rely solely on 2D image observations",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model exhibits strong generalization capabilities due to its design and diverse pre-training data",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "3D geometric information is essential for robots to perceive and reason about the 3D world",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.08950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can the scaling approach used in language and multimodal foundation models be applied to robotic manipulation to achieve genuine generalization?",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Qwen-RobotManip is a Vision-Language-Action foundation model built on Qwen-VL that introduces unified alignment across representation, motion, and behavioral dimensions.",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A human-to-robot synthesis pipeline converts egocentric hand demonstrations into robot trajectories across 15 platforms, creating a ~38,100-hour pretraining corpus from open-source datasets and human videos.",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qwen-RobotManip exhibits emergent generalization capabilities including zero-shot instruction following, robustness to perturbations, reactive error recovery, and cross-embodiment transfer",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model substantially outperforms prior state-of-the-art models including π0.5 across all OOD settings",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ranks 1st in RoboChallenge with a 20% relative improvement",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Standard benchmarks fail to capture pretraining quality, requiring OOD settings for proper evaluation",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Alignment enables coherent large-scale multi-source training that prior regimes could not sustain",
+   "ids": [
+    "2606.17846"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2606.17846"
+   ]
+  }
+ ]
+}

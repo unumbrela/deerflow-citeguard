@@ -1,0 +1,734 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 2
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Thakkar et al. (2026) demonstrate that corpus-level deduplication alone contributes 1.17 BLEU and 2.21 chrF++ improvements, characterizing disciplined cross-source corpus hygiene as a \"low-cost, high-impact intervention.\" Their BhashaSetu dataset for English-Marathi translation comprises 2.78 million sentence pairs from diverse domains with stemmed and lemmatized representations.",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Gritta et al. (2026) show that unified quality-estimation filtering removes up to 96% of training tokens without degrading quality, with filtered synthetic data dominating the quality-efficiency Pareto frontier for 19 Sub-Saharan African languages.",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Boujkian (2024) systematically demonstrates that transfer learning from typologically similar high-resource languages consistently improves translation quality across five diverse language families (Semitic, Bantu, Romance, Slavic, and language isolates), confirming applicability beyond closely related languages.",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Talwar and Laasri (2025) employ Hindi as a pivot language for Nepali-to-English translation, achieving a SacreBLEU score of 14.2 with the Transfer Method—a 6.6-point improvement over baseline.",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Attia and Aji (2026) introduce round-trip reinforcement learning, translating English into target languages and back, using chrF++ and BLEU as reward functions on reconstructed English sentences.",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Salim et al. (2026) scale in-context learning to 1M tokens for Javanese and Sundanese translation, comparing monolingual unsupervised data, instruction-style data, and parallel data as in-context supervision.",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Merx et al. (2024) conduct an observational study of 100,000 translation requests from tetun.org, revealing that users—many students on mobile devices—typically translate from high-resource languages into Tetun across diverse domains including science, healthcare, and daily life.",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Merx et al. (2025) extend this user-centered approach with TULUN, a platform enabling non-technical users to create and leverage terminology resources without model fine-tuning.",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Borisov et al. (2025) build a machine translation model for code-switched Kazakh-Russian with no labeled data using synthetic data generation, achieving 16.48 BLEU and nearly matching commercial systems.",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gritta et al. (2026) similarly leverage African-specialized synthetic data as part of TranslatePsy-AfriSLM, demonstrating that carefully filtered synthetic data can dominate quality-efficiency frontiers.",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Thakkar et al. (2026), Gritta et al. (2026), and Merx et al. (2024) all emphasize that understanding data quality, user needs, and domain relevance matters more than raw corpus size.",
+   "ids": [
+    "2605.27050",
+    "2608.18655",
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Similarly, Attia and Aji (2026), Boujkian (2024), and Talwar and Laasri (2025) all demonstrate that leveraging existing pretrained knowledge—whether through reinforcement learning, cross-linguistic transfer, or pivot languages—consistently improves low-resource MT performance.",
+   "ids": [
+    "2601.12535",
+    "2501.00045",
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Disagreements: Talwar and Laasri (2025) find that their semi-supervised backtranslation approach underperforms compared to baseline (15.1 vs. 14.2 SacreBLEU for the Transfer Method), while Attia and Aji (2026) report consistent improvements from their round-trip reinforcement learning approach.",
+   "ids": [
+    "2505.14553",
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, Salim et al. (2026) find that larger context windows do not necessarily yield proportional quality gains, challenging assumptions underlying many long-context MT approaches.",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while multiple papers mention domain mismatch between available corpora and actual user needs (Merx et al., 2024; Thakkar et al., 2026), few propose systematic methods for identifying and addressing these mismatches before data collection.",
+   "ids": [
+    "2411.12262",
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, while Gritta et al. (2026) achieve competitive performance with 0.8B parameter models, there is limited exploration of the absolute minimum model size required for different language pairs and domains.",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can self-supervised reinforcement learning fine-tuning with round-trip bootstrapping improve machine translation quality in low-resource language settings?",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors translate English into target low-resource languages and back into English using NLLB models (600M and 1.3B parameters), applying chrF++ and BLEU as reward functions on reconstructed English sentences.",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluate on six languages from the NLLB-MD dataset.",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consistent improvements observed across Central Aymara, Friulian, Wolof, Dyula, Bhojpuri and Russian",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qualitative inspection shows increased fluency and semantic fidelity in translation outputs",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method can benefit from scale, enabling models to leverage pretrained knowledge for self-improvement",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2601.12535"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does linguistic similarity enable efficient adaptation in transfer learning for low-resource machine translation, reducing the need for extensive training data?",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Experiments conducted on five typologically diverse language pairs (Semitic, Bantu, Romance, Slavic, and language isolate) with fine-tuning models initially trained on typologically similar high-resource languages.",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Secondary analysis varied hyperparameters including learning rate, batch size, epochs, and weight decay.",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transfer learning consistently improves translation quality across all language pairs, confirming applicability beyond closely related languages",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Moderate batch sizes (e.g., 32) are often optimal for similar language pairs",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Smaller batch sizes benefit less similar language pairs",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Excessively high learning rates can destabilize training",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2501.00045"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What pretraining strategies are most effective for developing machine translation models for low-resource languages?",
+   "ids": [
+    "2510.25116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive experiments exploring different pretraining methodologies including integration of multiple languages and use of both monolingual and parallel data during pretraining, building upon Reid and Artetxe (2021) approach, with focus on Lingala as the target language.",
+   "ids": [
+    "2510.25116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pretraining on multiple languages significantly enhances translation quality",
+   "ids": [
+    "2510.25116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Leveraging both monolingual and parallel data during pretraining improves translation quality",
+   "ids": [
+    "2510.25116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach helps bridge the performance gap between high-resource and low-resource languages",
+   "ids": [
+    "2510.25116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2510.25116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does scaling in-context learning beyond few-shot to thousands of examples with long-context models affect low-resource machine translation performance?",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Experiments scaling in-context token budget to 1M tokens on Javanese and Sundanese, comparing three types of training corpora as in-context supervision: monolingual unsupervised data, instruction-style data, and parallel data (English-target and Indonesian-target).",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gains from additional context saturate quickly and can degrade near the maximum context window",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling behavior is strongly dependent on corpus type",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Some forms of monolingual supervision can be competitive with parallel data despite offering less supervision",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Larger context windows do not necessarily yield proportional quality gains",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2602.04764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the actual usage patterns and community needs for low-resource machine translation, as revealed through observational analysis of a Tetun language translation service?",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Observational study analyzing 100,000 translation requests from tetun.org, a specialized MT service for the Tetun language in Timor-Leste, examining user patterns, device types, translation directions, and domains.",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Users, many of them students on mobile devices, typically translate from high-resource languages into Tetun",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Translation spans diverse domains including science, healthcare, and daily life",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Available Tetun corpora are dominated by news articles covering government and social issues, contrasting with actual user needs",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MT systems for institutionalized minority languages should prioritize accuracy on domains relevant to educational contexts",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2411.12262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Hindi be used as a pivot language to improve Nepali-to-English translation in the absence of large parallel corpora?",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper uses two approaches: the Transfer Method (fully supervised) and Backtranslation (semi-supervised) to translate Nepali into English using Hindi as a pivot language.",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Using Hindi as a pivot language achieves a SacreBLEU score of 14.2 with the Transfer Method",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Transfer Method improves the baseline by 6.6 points compared to Guzman et al. (2019)",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The semi-supervised Backtranslation approach underperforms compared to the baseline score of 15.1",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hindi is identified as a suitable pivot language for Nepali-English translation",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The semi-supervised approach underperformed compared to the baseline, and the paper discusses potential causes but suggests scope for future work.",
+   "ids": [
+    "2505.14553"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can machine translation be built for the code-switched Kazakh-Russian language pair without labeled data?",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The method generates synthetic data to build a machine translation model and presents the first code-switching Kazakh-Russian parallel corpus.",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A translation model was built with no labeled data using synthetic data generation",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model achieves 16.48 BLEU score",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model almost reaches the performance of an existing commercial system",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Human evaluation shows the model beats the commercial system",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The first code-switching Kazakh-Russian parallel corpus was created",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can linguistically enriched parallel datasets improve low-resource neural machine translation for English-Marathi?",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper presents BhashaSetu, a 2.78 million sentence pair dataset from diverse domains with stemmed and lemmatized representations, and benchmarks multiple translation models including parameter-efficient fine-tuning of NLLB-200 using LoRA.",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Corpus-level deduplication is the single largest preprocessing contributor to downstream quality",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Removing deduplication reduces performance by 1.17 BLEU and 2.21 chrF++",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dataset comprises 2.78 million sentence pairs from news, politics, healthcare, literature, and culture domains",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Disciplined cross-source corpus hygiene is a low-cost, high-impact intervention for low-resource languages",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dataset is publicly released for reproducible research",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2605.27050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can terminology-aware translation be made accessible to non-technical users for low-resource languages without requiring model fine-tuning?",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: TULUN combines neural machine translation with LLM-based post-editing guided by existing glossaries and translation memories, implemented as an open-source web-based platform for collaborative human-machine translation.",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TULUN achieves improvements of 16.90-22.41 ChrF++ points on medical and disaster relief translation for Tetun and Bislama",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Across six low-resource languages on FLORES dataset, TULUN outperforms standalone MT and LLM approaches",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Average improvement of 2.8 ChrF points over NLLB-54B",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The platform enables users to create, edit, and leverage terminology resources without model fine-tuning",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach fosters collaborative human-machine translation while respecting domain expertise",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2505.18683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can high-quality parallel data be scaled for African languages to develop competitive small language models for machine translation?",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces TranslatePsy-AfriSLM, a collection of MT resources for 19 Sub-Saharan African languages including curated parallel data, African-specialized synthetic data, and fine-tuned SLMs, using unified quality-estimation filtering.",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unified quality-estimation filtering removes up to 96% of training tokens without degrading quality",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Filtered synthetic data dominates the quality-efficiency Pareto frontier",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TranslatePsy-AfriSLMs outperform larger systems including TranslateGemma-27B and Qwen3.5-122B-A10B",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Competitive performance achieved with as few as 0.8B parameters",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The resources cover 19 Sub-Saharan African languages",
+   "ids": [
+    "2608.18655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2608.18655"
+   ]
+  }
+ ]
+}

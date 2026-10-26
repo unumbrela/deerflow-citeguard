@@ -1,0 +1,692 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2026) demonstrate that pixel-space diffusion models, when properly trained using a latent-to-pixel strategy, can achieve 3.18 to 4.75 times end-to-end inference speedups compared to latent-space models.",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chao et al. (2026) introduce foveated diffusion, which allocates tokens non-uniformly based on human visual perception characteristics, achieving perceptually indistinguishable results from full-resolution generation while drastically reducing token count and generation time.",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Decatur et al. (2025) propose computation reuse across correlated prompts, clustering prompts based on semantic similarity and sharing computation in early diffusion steps.",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cai et al. (2026) present HiDream-O1-Image, a natively unified generative foundation model that eliminates the need for disjoint text encoders and external VAEs by mapping raw image pixels, text tokens, and task-specific conditions into a single shared token space.",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Park et al. (2025) address adversarial attacks on safety checkers with SC-Pro, a training-free framework that defends against unsafe image synthesis by exploiting the observation that adversarial attacks lack robustness to small changes in prompts or latents.",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zuo et al. (2025) tackle forgery detection by unlocking the potential of vanilla MLLMs for detecting image manipulation without additional training, achieving superior localization accuracy across various tampering types.",
+   "ids": [
+    "2511.13442"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cai et al. (2024) adapt diffusion for 3D generation with DiffusionGS, directly outputting 3D Gaussian point clouds to enforce view consistency, achieving over 5× faster speed compared to existing methods.",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2025) address medical image translation, introducing dynamic frequency balance and knowledge guidance to prevent anatomical structure distortion despite large differences between medical modalities.",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Guo et al. (2025) investigate whether Chain-of-Thought reasoning can verify and reinforce autoregressive image generation step-by-step, proposing PARM and PARM++ reward models with adaptive assessment and reflection mechanisms.",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wei et al. (2025) provide comprehensive synthesis of personalized image generation techniques across different generative architectures, proposing a unified framework that standardizes the personalization process with three key components: inversion spaces, inversion methods, and personalization schemes.",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Both Jiang et al. (2026) and Chao et al. (2026) achieve 3-5× speedups while maintaining or improving generation quality.",
+   "ids": [
+    "2608.16887",
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that unified architectures outperform fragmented pipelines, as evidenced by Cai et al. (2026) and the survey findings of Wei et al. (2025).",
+   "ids": [
+    "2605.11061",
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The surveyed papers collectively emphasize that training-free approaches can be highly effective, with Park et al. (2025), Zuo et al. (2025), and Decatur et al. (2025) all demonstrating strong results without additional model training.",
+   "ids": [
+    "2501.05359",
+    "2511.13442",
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Jiang et al. (2026) demonstrate that pixel-space models can match or exceed latent-space performance with proper training strategies, many existing systems remain latent-space based.",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Gaze-tracking dependency: Chao et al. (2026) note that foveated diffusion requires knowledge of user gaze location through eye tracking, which may limit applicability where gaze tracking is unavailable.",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can single-stage image-to-3D generation overcome the 3D inconsistency problems of existing 2D multi-view diffusion methods while handling both object-centric and scene cases?",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose DiffusionGS, a novel single-stage 3D diffusion model that directly outputs 3D Gaussian point clouds at each timestep to enforce view consistency, with a scene-object mixed training strategy to scale up 3D training data.",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DiffusionGS enforces view consistency by directly outputting 3D Gaussian point clouds at each timestep",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves improvements of 2.20 dB/23.25 and 1.34 dB/19.16 in PSNR/FID for objects and scenes compared to state-of-the-art methods",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Works robustly with prompt views from any directions, beyond object-centric inputs",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves over 5× faster speed (approximately 6 seconds on an A100 GPU) compared to existing approaches",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the proposed approach.",
+   "ids": [
+    "2411.14384"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can adversarial attacks on Stable Diffusion's safety checkers be defended against without training?",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose SC-Pro (Spherical or Circular Probing), a training-free framework that exploits the observation that adversarial attacks are not robust to small changes in text prompts or input latents, along with SC-Pro-o using one-step diffusion models for efficient NSFW detection.",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adversarial attacks on safety checkers are not robust to small changes in text prompts or input latents",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SC-Pro can easily defend against adversarial attacks generating NSFW images without requiring training",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SC-Pro-o further reduces computational resources by utilizing one-step diffusion models for NSFW detection",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method demonstrates superiority in terms of performance and applicability",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2501.05359"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can Chain-of-Thought (CoT) reasoning strategies be applied to verify and reinforce autoregressive image generation?",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors investigate scaling test-time computation for verification, aligning model preferences with Direct Preference Optimization (DPO), and propose PARM and PARM++, reward models specialized for autoregressive image generation with adaptive assessment and reflection mechanisms.",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoT reasoning approaches can be effectively adapted and combined to significantly improve image generation performance",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PARM adaptively assesses each generation step through potential assessment, merging strengths of existing reward models",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PARM++ introduces a reflection mechanism to self-correct unsatisfactory images, the first to incorporate reflection in autoregressive image generation",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The enhanced Show-o model achieves a +24% improvement on GenEval benchmark, surpassing Stable Diffusion 3 by +15%",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2501.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the current landscape of personalized image generation techniques across different deep generative model architectures?",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a comprehensive survey reviewing personalized image generation across various generative models (GANs, diffusion models, autoregressive models) and define a unified framework standardizing the personalization process with three key components: inversion spaces, inversion methods, and personalization schemes.",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A unified framework is proposed that standardizes personalization across different generative architectures",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey provides in-depth analysis of personalization techniques within each generative model type",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Comparative analysis elucidates commonalities and distinguishing features among existing methods",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey identifies open challenges and proposes potential directions for future research",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2502.13081"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can anatomical structure distortion in diffusion model-based medical image translation be addressed by balancing frequency information and incorporating clinical knowledge?",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a method based on dynamic frequency balance and knowledge guidance that decomposes critical features using wavelet transform to extract low-frequency and high-frequency components, with a knowledge-guided mechanism that fuses prior clinical knowledge from a visual language model with visual features.",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dynamic frequency balance module effectively enhances global low-frequency features and effective high-frequency details while suppressing high-frequency noise",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The knowledge-guided mechanism successfully fuses prior clinical knowledge from a visual language model with visual features",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach facilitates the generation of accurate anatomical structures despite large differences between different medical modalities",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experimental evaluations on multiple datasets demonstrate significant improvements in both qualitative and quantitative assessments",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the proposed approach.",
+   "ids": [
+    "2504.09441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can computation be reused across correlated prompts in text-to-image diffusion to reduce redundancy and improve efficiency?",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a training-free approach that clusters prompts based on semantic similarity and shares computation in early diffusion steps, leveraging the coarse-to-fine nature of diffusion models where early denoising steps capture shared structures among similar prompts.",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "For models trained conditioned on image embeddings, the approach significantly reduces compute cost while improving image quality",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "By leveraging UnClip's text-to-image prior, diffusion step allocation is enhanced for greater efficiency",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method seamlessly integrates with existing pipelines and scales with prompt sets",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach reduces the environmental and financial burden of large-scale text-to-image generation",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2508.21032"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can diffusion and flow matching models generate high-resolution images and videos more efficiently by leveraging human visual perception characteristics?",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors develop a foveated diffusion approach that allocates tokens non-uniformly based on a mask modeling foveated resolution, assigning higher token density to foveal regions and lower density to peripheral regions, with a principled mechanism for constructing mixed-resolution tokens directly from high-resolution data.",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Foveated generation produces results perceptually indistinguishable from full-resolution generation while drastically reducing token count and generation time",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach leverages eccentricity-dependent acuity of human vision to optimize computational efficiency",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mixed-resolution tokens can be constructed directly from high-resolution data while maintaining content consistency across resolutions",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method can be post-trained from existing base models without requiring architectural changes",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires knowledge or estimation of the user's gaze location, for example through eye tracking, which may limit applicability in settings where gaze tracking is unavailable.",
+   "ids": [
+    "2603.23491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can pixel-space diffusion models be trained to match or exceed the performance of latent-space counterparts while addressing their slower convergence in large-scale settings?",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a comprehensive empirical study comparing pixel-space and latent-space diffusion model training, proposing a latent-to-pixel strategy that leverages generative priors from latent space pre-training followed by pixel-space post-training, systematically investigating design choices including weight initialization, data composition, prediction target, decoder architecture, and noise schedule.",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Direct large-scale pre-training in pixel space converges substantially more slowly than in latent space",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A latent-to-pixel strategy efficiently acquires generative priors in latent space before transitioning to pixel space during post-training",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed recipe produces pixel-space models that match or outperform latent-space counterparts",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach delivers 3.18 to 4.75 times end-to-end inference speedups compared to latent-space models",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses on identifying practical guidelines through empirical investigation, but specific limitations of the proposed approach are not detailed in the abstract.",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can visual generative models overcome fragmented architectures by creating a natively unified foundation model that eliminates the need for disjoint text encoders and external VAEs?",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present HiDream-O1-Image, a natively unified generative foundation model via pixel-space Diffusion Transformer that maps raw image pixels, text tokens, and task-specific conditions into a single shared token space within an Unified Transformer (UiT) architecture, validating the approach across various generation tasks and demonstrating scalability from 8B to over 200B parameters.",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The native encoding paradigm eliminates the need for separate VAEs or disjoint pre-trained text encoders",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model treats diverse generation and editing tasks as a consistent in-context reasoning process",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "With only 8B parameters, HiDream-O1-Image achieves performance parity with or surpasses larger models like 27B Qwen-Image",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The scaled 200B+ parameter version (HiDream-O1-Image-Pro) unlocks unprecedented generative capabilities and establishes new state-of-the-art benchmarks",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the proposed approach.",
+   "ids": [
+    "2605.11061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can vanilla MLLMs be leveraged for image forgery detection and localization without additional training?",
+   "ids": [
+    "2511.13442"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Foresee, a training-free MLLM-based pipeline that employs a type-prior-driven strategy and a Flexible Feature Detector (FFD) module specifically designed to handle copy-move manipulations, enabling lightweight inference without additional training.",
+   "ids": [
+    "2511.13442"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Foresee surpasses existing MLLM-based methods in both tamper localization accuracy and richness of textual explanations",
+   "ids": [
+    "2511.13442"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach achieves superior localization accuracy while providing more comprehensive textual explanations",
+   "ids": [
+    "2511.13442"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Foresee exhibits stronger generalization capability across various tampering types including copy-move, splicing, removal, local enhancement, deepfake, and AIGC-based editing",
+   "ids": [
+    "2511.13442"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The pipeline eliminates the need for additional training and enables lightweight inference",
+   "ids": [
+    "2511.13442"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2511.13442"
+   ]
+  }
+ ]
+}

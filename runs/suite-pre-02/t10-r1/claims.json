@@ -1,0 +1,611 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 8
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Casola et al. (2025) demonstrate that reference-based metrics, particularly ROUGE, exhibit significant sensitivity to the choice of reference sets, with model rankings varying depending on which references are selected.",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pottanigari et al. (2026) introduce Semantic Scaffolds, extracting hierarchical representations of facts, questions, and entity attributes to derive three diagnostic metrics: Fact Preservation Score (FPS), Question Preservation Score (QPS), and Entity Preservation Score (EPS).",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Katwe et al. (2026) propose CHI (Composite Hallucination Index), which unifies three orthogonal dimensions of faithfulness errors: entity, relation, and quantity hallucination.",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Vasava and Jiang (2026) provide mechanistic insights into how LLM evaluators assign ratings, revealing a structured two-stage evaluation pipeline where attention performs local error comparison below layer 15 and MLP integration writes the rating above layer 15, with decision crystallization at sharp late layers.",
+   "ids": [
+    "2609.01604"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Larionov et al. (2025) systematically compare reasoning LLMs with non-reasoning counterparts for summarization evaluation, finding architecture and task-dependent benefits.",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cong et al. (2026) challenge the standard validity assessment paradigm, showing that moderate alignment in latent summary quality does not imply alignment in residual hardness — humans and LLMs find different cases difficult.",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cachola et al. (2026) demonstrate that both traditional and LLM-based metrics fail to measure information satisfaction for individual users with different personas and informational needs, agreeing poorly with human judgment when reader context is considered.",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cachola et al. (2026) introduce information satisfaction as a reader-centered axis, showing that current metrics fail basic perturbation tests of informational content and do not capture whether a summary satisfies a specific reader's background and use case.",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Magnifico and Barbu (2025) explore the relationship between summarization and simplification, finding that abstractive summarization can achieve moderate overlap with gold-standard simplifications (ROUGE-L of 0.654).",
+   "ids": [
+    "2501.16181"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the inadequacy of traditional metrics: ROUGE captures only surface overlap (Pottanigari et al., 2026), exhibits instability across reference sets (Casola et al., 2025), and fails to measure information satisfaction (Cachola et al., 2026).",
+   "ids": [
+    "2609.22603",
+    "2506.14335",
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Papers consistently find that metrics with highest alignment to human judgments tend to be computationally intensive and less stable (Herserant & Guigue, 2025; Larionov et al., 2025).",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The utility of reasoning LLMs for evaluation is contested: Larionov et al. (2025) find reasoning benefits are architecture and task-dependent, with DeepSeek-R1 underperforming its non-reasoning variant except in consistency evaluation, while OpenAI o3-mini shows improvement with reasoning on machine translation.",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The validity of aggregate human alignment as the gold standard is questioned by Cong et al. (2026), who show it reflects only part of LLM-as-judge reliability, challenging the assumption underlying most evaluation research.",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Multilingual and cross-lingual evaluation: Only Pottanigari et al. (2026) explicitly mention multilingual settings, and the literature is overwhelmingly English-centric.",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Scalability of interpretable methods: While interpretability is widely advocated, the computational overhead of statement-level analysis (Herserant & Guigue, 2025), semantic scaffolds (Pottanigari et al., 2026), and composite indices (Katwe et al., 2026) may limit adoption in production systems requiring real-time evaluation.",
+   "ids": [
+    "2609.22603",
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Reader persona coverage: Cachola et al. (2026) introduce reader-centered evaluation but acknowledge limited scale in expert human evaluation and focus on specific use cases that may not capture all reader personas.",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Closed-source model evaluation: Cong et al. (2026) limit analysis to 17 open-weight LLM judges, leaving closed-source models unexamined despite their widespread use in production.",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do current summarization metrics adequately measure the utility of a summary to individual users with different informational needs and personas?",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Assesses how sensitive popular summarization metrics are to informational and persona differences through perturbation tests, and conducts expert human evaluation measuring summary preferences based on information satisfaction given specific reader backgrounds and use cases.",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many popular metrics including strong LLM-as-judge metrics fail basic perturbation tests of informational content",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both traditional and LLM-based metrics are insufficient measures of information satisfaction",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current metrics agree poorly with human judgment when reader persona and background are considered",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reader background/persona is a practical, stable signal for assessing whether a summary satisfies user needs",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Expert human evaluation may be limited in scale; focus on specific use cases may not capture all reader personas.",
+   "ids": [
+    "2608.14457"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does the choice of reference sets impact the reliability and stability of reference-based metrics in summarization evaluation?",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Examines the sensitivity of widely used reference-based metrics across three diverse multi-reference summarization datasets (SummEval, GUMSum, DUC2004) and collects human judgments on LLM outputs for genre-diverse data to examine correlation with metrics.",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many popular reference-based metrics exhibit significant instability depending on reference set choice",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ROUGE model rankings vary substantially based on which reference sets are used, undermining reliability of model comparisons",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Human judgments on LLM outputs for genre-diverse data show weak-to-no correlation with existing metrics",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incorporating reference set variation into evaluation enhances consistency alongside correlation with human judgments",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Analysis focuses primarily on reference-based metrics; human judgment collection may be limited in scope beyond newswire summaries.",
+   "ids": [
+    "2506.14335"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do humans and LLMs find the same evaluation cases difficult, beyond aggregate score alignment in summarization evaluation?",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Fit Many-Facet Rasch Models separately to human and LLM ratings to decompose scores into latent summary quality, rater severity, dimension severity, and rating-scale thresholds; defined residual hardness as a model-adjusted measure of judging difficulty across 17 open-weight LLM judges on SummEval.",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Moderate alignment in latent summary quality does not imply alignment in residual hardness between human and LLM judges",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Human and LLM judges differ in which summary-dimension units remain difficult, with mismatch strongly dimension-dependent",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consistency shows a pronounced LLM-hard shift, whereas coherence shows a human-hard shift",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Human-easy but LLM-hard cases are partially predictable from observable source-summary properties",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Psychometric residual diagnostics support more informative judge evaluation than aggregate human alignment alone",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Limited to 17 open-weight LLM judges on SummEval; does not address closed-source models or other evaluation domains beyond summarization.",
+   "ids": [
+    "2610.02877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can faithfulness evaluation of abstractive summaries be unified to capture co-occurring hallucination types across entity, relation, and quantity dimensions?",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced CHI (Composite Hallucination Index) that decomposes faithfulness errors into three orthogonal dimensions (EHI, RHI, QHI) using softmax-normalized architecture over Venn diagram-derived factors, validated on 800 source articles across four domains with summaries from five generation systems.",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The three dimensions are statistically orthogonal (mean rho = 0.148), confirming they capture distinct error types",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CHI achieves the highest system-level correlation with human judgments (rho = 0.66, p = 0.006) on SummEval, outperforming ROUGE (rho = 0.53) and EHI (rho = 0.58)",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ablation studies confirm all three dimensions contribute unique variance, with the full composite outperforming any individual component",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The novel QHI component introduces tolerance-aware numerical matching with exact, epsilon, derived, and temporal comparison modes",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides decomposable error diagnostics unavailable from single-score baselines",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Validation limited to 800 articles across four domains (news, medical, legal, financial); may not generalize to all summarization scenarios or languages.",
+   "ids": [
+    "2609.33343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well can reasoning-enabled LLMs evaluate natural language generation compared to non-reasoning LLMs across machine translation and summarization tasks?",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematically compared eight models spanning state-of-the-art reasoning models (DeepSeek-R1, OpenAI o3), their distilled variants (8B-70B parameters), and equivalent non-reasoning LLMs on WMT23 and SummEval benchmarks with correlation analysis.",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OpenAI o3-mini models show improved performance with increased reasoning on machine translation tasks",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DeepSeek-R1 generally underperforms compared to its non-reasoning variant except in summarization consistency evaluation",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reasoning token usage correlates with evaluation quality only in specific models, not universally",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Almost all models allocate more reasoning tokens when identifying more quality issues",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distillation maintains reasonable performance up to 32B parameter models but degrades substantially at 8B scale",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Limited to eight models on WMT23 and SummEval benchmarks; reasoning benefits are architecture and task-dependent, limiting generalizability.",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How closely can abstractive summarization resemble gold-standard simplification?",
+   "ids": [
+    "2501.16181"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Applied two BART-based BRIO summarization methods to the Newsela corpus, comparing outputs with manually annotated simplifications using ROUGE-L evaluation.",
+   "ids": [
+    "2501.16181"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved a top ROUGE-L score of 0.654 when comparing summarization outputs to gold-standard simplifications",
+   "ids": [
+    "2501.16181"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Summarization evaluation methods are more streamlined compared to simplification, which lacks cohesion",
+   "ids": [
+    "2501.16181"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Results provide insight into where summarization and simplification outputs converge and differ",
+   "ids": [
+    "2501.16181"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Limited to BART-based BRIO methods and the Newsela corpus; does not address other summarization architectures or simplification datasets.",
+   "ids": [
+    "2501.16181"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can summarization evaluation avoid metric saturation and provide interpretable diagnostics that effectively rank models for production deployment?",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces Semantic Scaffold framework that extracts hierarchical representation of facts, questions, and entity attributes from source text labeled as main points or supporting details, then derives three diagnostic metrics (Fact Preservation Score, Question Preservation Score, Entity Preservation Score) using this structure as fixed reference.",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ROUGE captures only surface overlap while LLM-as-judge scores saturate to near-identical values failing to rank models effectively",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Metric saturation observed across three public datasets, two proprietary datasets, and multilingual settings",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaffold-based evaluation remains informative where conventional metrics collapse",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identifies four recurring failure modes of ROUGE and LLM-as-judge scores",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires extracting hierarchical structure from source text which may add computational overhead; framework complexity may limit adoption.",
+   "ids": [
+    "2609.22603"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What internal mechanisms do LLM-as-judge evaluators use to assign ratings, and how does fine-tuning shape these evaluation procedures?",
+   "ids": [
+    "2609.01604"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Investigates mechanistically through eight-attack perturbation taxonomy across Readability and Adequacy dimensions, generates paired clean and corrupt summaries with controlled error intensity and token-level modification maps, and conducts four-experiment battery of causal tracing, logit-lens vocabulary projection, and attention-head knockout on Themis (Llama-3-8B) and Prometheus (Mistral-7B).",
+   "ids": [
+    "2609.01604"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both evaluators implement structured two-stage evaluation pipeline operating coherently",
+   "ids": [
+    "2609.01604"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Below layer 15: attention performs local error comparison and routes to final input position; above layer 15: MLP cascade integrates signal and writes rating",
+   "ids": [
+    "2609.01604"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Decision crystallizes in residual stream at sharp late layer (L=26 on Themis, L=25 on Prometheus)",
+   "ids": [
+    "2609.01604"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuning installs two specific mechanisms: suppression of below-L15 MLP contribution at last position and two-layer advance of crystallization depth",
+   "ids": [
+    "2609.01604"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Analysis focuses on two specific evaluator models (Themis and Prometheus); mechanisms may differ in other architectures and scales.",
+   "ids": [
+    "2609.01604"
+   ]
+  }
+ ]
+}

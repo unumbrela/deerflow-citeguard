@@ -1,0 +1,564 @@
+{
+ "stats": {
+  "ambiguous": 7,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yu et al. (2025) introduced a unified 3D framework considering context-length scaling, batch scaling (parallel sampling), and turn scaling (iterative self-refinement), demonstrating that combining all three dimensions substantially improves reasoning performance on challenging benchmarks including IOI, IMO, and CPHO.",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kashaniyan and Jannesari (2026) demonstrated that candidate-generation strategy fundamentally shapes both energy consumption and performance when total candidate count is fixed.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Huang et al. (2025) introduced Self-Calibration, enabling reliable confidence estimation at test time with one forward pass, then using confidence-based Early Stopping to improve MathQA accuracy from 81.0 to 83.6 with a sample budget of 16 responses.",
+   "ids": [
+    "2503.00031"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zeng et al. (2025) investigated o1-like models and found that longer chains-of-thought do not consistently enhance accuracy; correct solutions are often shorter than incorrect ones for the same questions.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) introduced Hermes, a family of configurable harnesses that progressively vary model control over context allocation and reuse, and Hermes-Learn, a two-stage framework for learning contextual reasoning capabilities.",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Ge et al. (2026) analyzed on-policy distillation through test-time scaling, proposing the Teacher Advantage Score at K (TAS@K) to predict which teacher will lead to larger improvements in pass@K before OPD training, achieving agreement with observed improvements in 83.6% of experiments.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hariri et al. (2026) formalized dense benchmark ranking under test-time scaling and introduced Scorio, a library implementing statistical ranking methods including paired-comparison models, IRT models, voting rules, and graph-based methods.",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qin et al. (2026) focused specifically on code generation, proposing DAJ, a reasoning-based LLM judge trained with verifiable rewards under a bi-level data-reweighted learning framework that achieves state-of-the-art performance on LiveCodeBench and BigCodeBench.",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Nearly all papers converge that naive scaling approaches—simply generating more samples or longer outputs—fail to deliver consistent improvements and can actively harm performance (Zeng et al., 2025; Wu, 2025).",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers agree that parallel scaling achieves better coverage and scalability than sequential scaling (Zeng et al., 2025; Wu, 2025; Yu et al., 2025).",
+   "ids": [
+    "2502.12215",
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is consensus that efficiency matters: test-time scaling must be adaptive to query complexity rather than applying uniform compute allocation (Huang et al., 2025; Kashaniyan & Jannesari, 2026).",
+   "ids": [
+    "2503.00031",
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature also converges on the value of multi-dimensional approaches that combine context, batch, and turn scaling rather than optimizing any single dimension in isolation (Yu et al., 2025).",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "One area of potential tension is around the role of self-revision: Zeng et al. (2025) found that self-revisions in longer CoTs often lead to performance degradation, while Li et al. (2026) showed that learned contextual reasoning strategies can effectively use iterative refinement.",
+   "ids": [
+    "2502.12215",
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Another subtle disagreement concerns the optimal approach to diversity: Wu et al. (2025) advocate for explicit mode-conditioning with specialist models, while Yu et al. (2025) emphasize combining multiple scaling dimensions without explicit mode separation.",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while several papers mention the value of human feedback (Yu et al., 2025; Qin et al., 2026), there is limited systematic exploration of human-AI collaboration in test-time scaling regimes.",
+   "ids": [
+    "2511.15738",
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do improvements from on-policy distillation extend across the entire range of test-time sampling budgets?",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyze on-policy distillation through test-time scaling by varying sampling budget K and evaluating performance with pass@K.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They propose the Teacher Advantage Score at K (TAS@K) to predict which teacher will lead to larger improvements in pass@K before OPD training.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OPD can improve pass@K at both small and large sampling budgets, but can also improve small-budget performance while reducing large-budget pass@K",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The authors identify a condition that guarantees such a reversal and provide a reverse KL counterexample where it occurs even when the teacher has higher accuracy on every problem",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TAS@K ordering agrees with observed pass@K improvements in 83.6% of experiments across three domains and thirteen benchmarks",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does the candidate-generation strategy affect the systems cost and performance of LLM test-time scaling when the total candidate count is fixed?",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors fix N=8 candidates and compare four generation schedules (1x8, 2x4, 4x2, and 8x1) on A100 GPUs, measuring latency, throughput, GPU-hours, and gross GPU-device energy while keeping total candidate count fixed.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eight serial calls use 4.64-4.86× as much gross GPU-device energy and have 5.77-6.12× the P95 latency of one batched call with eight candidates",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fewer generation calls with larger batch sizes are more efficient when candidates are independent and memory allows it",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can reasoning LLMs be reliably ranked in the test-time scaling regime using different statistical ranking methods?",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formalize dense benchmark ranking under test-time scaling and introduce Scorio, a library implementing statistical ranking methods including paired-comparison models, IRT models, voting rules, and graph-based methods, evaluated across 20 reasoning models on four Olympiad-style math benchmarks.",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most full-trial rankings agree closely with the Bayesian gold standard Bayes_U@80 (mean Kendall's τ_b = 0.93-0.95)",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In the single-trial regime, the best methods reach τ_b ≈ 0.86",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Using greedy decoding as an empirical prior reduces variance at N=1 by 16-52%, but can bias rankings when greedy and stochastic sampling disagree",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do o1-like models truly possess test-time scaling capabilities, and do longer chains-of-thought consistently enhance accuracy?",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors investigate the relationship between CoT length and accuracy in o1-like models, examine self-revision capabilities, and compare sequential and parallel scaling strategies on QwQ, R1, and LIMO models.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Longer CoTs of o1-like models do not consistently enhance accuracy; correct solutions are often shorter than incorrect ones for the same questions",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The phenomenon is closely related to models' self-revision capabilities—longer CoTs contain more self-revisions, which often lead to performance degradation",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parallel scaling achieves better coverage and scalability than sequential scaling",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shortest Majority Vote significantly improves models' test-time scalability compared to conventional majority voting approaches",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can test-time scaling capacity be extended beyond the limited context length of base models through a multi-dimensional framework?",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a unified framework of multi-dimensional test-time scaling considering three dimensions: context-length scaling, batch scaling (parallel sampling), and turn scaling (iterative self-refinement), proposing 3D test-time scaling that integrates all three.",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Each dimension (context, batch, turn) demonstrates a test-time scaling effect, but with bounded capacity",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining all three dimensions substantially improves reasoning performance on challenging testbeds including IOI, IMO, and CPHO",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach further benefits from human preference feedback",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The human-in-the-loop framework extends to embodied learning for designing humanoid control behaviors",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2511.15738"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM judges for Best-of-N selection in code generation be improved to handle distribution shifts?",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose DAJ, a reasoning-based LLM judge trained with verifiable rewards under a bi-level data-reweighted learning framework that learns data-importance weights to optimize generalization on held-out meta sets aligned with target benchmarks.",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DAJ achieves state-of-the-art performance on LiveCodeBench and BigCodeBench",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach automatically emphasizes hard problems, in-distribution samples, and trajectory-aligned data without hand-crafted heuristics",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This is the first application of data reweighting to LLM-as-a-Judge training for test-time scaling",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DAJ outperforms strong test-time scaling baselines as well as leading proprietary models",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2601.22230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can models learn to effectively allocate fresh contexts and carry information between them during test-time scaling?",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Hermes, a family of configurable harnesses that progressively vary model control over context allocation and reuse, and Hermes-Learn, a two-stage framework for learning contextual reasoning capabilities.",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Capable models can exploit flexibility to scale with additional inference-time compute, while smaller open-source models initially struggle",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training with Hermes-Learn induces adaptive contextual reasoning strategies that vary with both problem and reasoning progress",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gains generalize across benchmarks and models",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Learned capabilities extrapolate beyond inference-time compute seen during training and transfer to complementary test-time scaling methods",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2609.38332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can model confidence be used to improve the efficiency of test-time scaling in LLMs?",
+   "ids": [
+    "2503.00031"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Self-Calibration by distilling Self-Consistency-derived confidence into the model itself, enabling reliable confidence estimation at test time with one forward pass, then design confidence-based efficient test-time scaling methods like Early-Stopping for Best-of-N.",
+   "ids": [
+    "2503.00031"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model confidence can improve efficiency of test-time scaling by adapting to query complexity",
+   "ids": [
+    "2503.00031"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Self-Calibration enables reliable confidence estimation at test time with one forward pass",
+   "ids": [
+    "2503.00031"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Confidence-based Early Stopping improves MathQA accuracy from 81.0 to 83.6 with a sample budget of 16 responses",
+   "ids": [
+    "2503.00031"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments on three LLMs across six datasets demonstrate the effectiveness of the approach",
+   "ids": [
+    "2503.00031"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.00031"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,796 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 2
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) directly address this challenge with OpenHalDet, a unified benchmark that standardizes the entire evaluation pipeline from prompt construction through metric computation.",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Faujdar and Kadvani (2026) conduct comprehensive benchmarking of lightweight detection methods across question answering, dialogue, and summarization tasks, revealing that detection performance varies dramatically by task type.",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lamarche et al. (2025) present MedHal, a large-scale synthetic dataset specifically designed for medical hallucination detection, demonstrating that general-purpose methods face significant limitations when applied to specialized medical domains.",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Karbasi et al. (2025) establish an equivalence between hallucination detection and the classical problem of language identification, proving that automated detection is fundamentally impossible when trained only on positive (correct) examples.",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hu et al. (2025) propose HARP, which decomposes the hidden state space into semantic and reasoning subspaces using singular value decomposition on the Unembedding layer parameters, achieving an AUROC of 92.8% on TriviaQA.",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2026) reframe hallucination detection as an out-of-distribution detection problem, treating next-token prediction as classification and applying OOD techniques with modifications for LLM structural differences.",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Oblovatny et al. (2025) introduce a method based on probabilistic distances between prompt and response token embeddings specifically for RAG systems, achieving competitive performance while remaining unsupervised.",
+   "ids": [
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lee et al. (2025) propose sampling future contexts based on the observation that hallucinations tend to persist once introduced, demonstrating improvements across multiple detection methods for black-box generators.",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Faujdar and Kadvani (2026) systematically evaluate lightweight CPU-feasible methods, finding that ensemble approaches combining semantic similarity and NLI achieve strong performance on QA and dialogue tasks, though summarization remains challenging.",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, multiple papers emphasize that hallucination detection performance is highly task-dependent, with question answering consistently showing better detection rates than summarization (Faujdar & Kadvani, 2026; Li et al., 2026).",
+   "ids": [
+    "2606.29809",
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is broad consensus that standardized evaluation frameworks are essential for meaningful progress, with multiple papers calling for or providing benchmarking infrastructure (Li et al., 2026; Faujdar & Kadvani, 2026).",
+   "ids": [
+    "2606.06959",
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, papers across methodological approaches agree that computational efficiency is a critical practical concern, particularly for methods requiring multiple sampling passes (Sun et al., 2026; Lee et al., 2025).",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Finally, the literature converges on the importance of domain-specific solutions, particularly for high-stakes applications like medicine (Lamarche et al., 2025).",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "White-box methods like HARP (Hu et al., 2025) and OOD-based detection (Liu et al., 2026) achieve superior performance but are inapplicable to proprietary models.",
+   "ids": [
+    "2509.11536",
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "In contrast, black-box methods (Lee et al., 2025; Oblovatny et al., 2025) sacrifice some accuracy for broader applicability.",
+   "ids": [
+    "2507.20546",
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is implicit disagreement about the role of synthetic versus real data, with MedHal (Lamarche et al., 2025) advocating synthetic datasets while other work relies on naturally occurring hallucinations.",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The theoretical impossibility results (Karbasi et al., 2025) also create tension with practical approaches that assume detection is feasible without extensive negative training examples.",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, summarization remains a persistent challenge across all detection methods, with even the best lightweight approaches achieving near-chance performance without substantial computational investment (Faujdar & Kadvani, 2026).",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, the theoretical impossibility results (Karbasi et al., 2025) raise questions about the scalability of methods that rely on limited negative examples.",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can semantic entropy-based hallucination detection be made computationally efficient by adapting sampling budgets to query complexity rather than using fixed sampling?",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes an Adaptive Bayesian Estimation framework for Semantic Entropy with Guided Semantic Exploration that dynamically adjusts sampling requirements based on observed uncertainty using a hierarchical Bayesian framework with variance-based thresholds for termination.",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Requires approximately 50% fewer samples to achieve comparable detection performance in low-budget scenarios",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Delivers an average AUROC improvement of 12.6% under the same sampling budget",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hierarchical Bayesian framework enables dynamic control of sampling iterations",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Perturbation-based importance sampling systematically explores the semantic space",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments on four QA datasets demonstrate superior performance with significant efficiency gains",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The method's effectiveness depends on the quality of Bayesian uncertainty estimates; performance on tasks beyond QA datasets is not addressed.",
+   "ids": [
+    "2603.22812"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well can hallucination detection perform using only lightweight, CPU-feasible methods without GPU-intensive inference or proprietary API access?",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Benchmarks four lightweight detectors (ROUGE-L, semantic similarity, BERTScore, and NLI-based detector) plus a score-level ensemble across all three HaluEval tasks with calibration on validation split and bootstrap confidence intervals.",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Similarity-NLI ensemble is the most consistent method but performance is highly task-dependent",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Best performance on QA (F1=0.792, AUC-ROC=0.873) and dialogue (F1=0.694, AUC-ROC=0.749)",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All methods perform near chance on summarization with single-pass design",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Increasing premise budget and sentence-level chunk aggregation improves summarization performance",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Summarization remains the hardest task even with optimizations",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Summarization remains challenging; improved sentence-level aggregation comes at approximately 20x inference cost.",
+   "ids": [
+    "2606.29809"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hallucinations in LLMs be detected by disentangling semantic and reasoning information in the model's hidden states?",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes HARP framework that decomposes the hidden state space into semantic and reasoning subspaces using SVD on Unembedding layer parameters, then projects hidden states onto reasoning subspace basis vectors.",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hidden state space can be decomposed into semantic and reasoning subspaces",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unembedding layer can disentangle subspaces via SVD to obtain basis vectors",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Feature dimension reduced to approximately 5% of original while filtering noise",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves AUROC of 92.8% on TriviaQA, outperforming previous best by 7.5%",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates enhanced robustness across multiple datasets",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires access to model internals, limiting applicability to black-box models.",
+   "ids": [
+    "2509.11536"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Is automated hallucination detection in LLMs theoretically possible under different training regimes?",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces theoretical framework based on Gold-Angluin language identification, establishes equivalence between hallucination detection and language identification, analyzes feasibility under different training conditions.",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hallucination detection is theoretically equivalent to language identification",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Detection is impossible when trained only on positive examples for most language collections",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Detection becomes possible with expert-labeled feedback including negative examples",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides theoretical justification for feedback-based methods like RLHF",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Highlights essential role of expert-labeled negative examples",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Theoretical framework assumes countable language collections; practical implementation details not addressed.",
+   "ids": [
+    "2504.17004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hallucination detection be improved for medical texts where errors can directly affect patient outcomes?",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents MedHal, a large-scale synthetic dataset for medical hallucination detection incorporating diverse medical text sources and tasks, then trains and evaluates baseline model.",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "General-purpose methods face significant limitations in medical domains",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MedHal provides substantial training data for medical hallucination detection",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Baseline model shows improvements over general-purpose approaches",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dataset covers both intrinsic and extrinsic hallucinations",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables efficient evaluation while reducing reliance on expert review",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Synthetic dataset may not fully capture real-world medical hallucination complexity.",
+   "ids": [
+    "2504.08596"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hallucinations be detected in black-box LLM generators without access to internal model states?",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes sampling future contexts based on observation that hallucinations tend to persist, then integrates sampled contexts with existing sampling-based detection methods.",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hallucinations tend to persist once introduced in generated text",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sampled future contexts provide valuable clues for detection",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sampling approach can be integrated with various existing methods",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates performance improvements across multiple methods",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables detection for black-box generators without model access",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires multiple sampling passes increasing computational cost and latency.",
+   "ids": [
+    "2507.20546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hallucination detection be evaluated consistently and reproducibly across diverse generation scenarios, models, and detector types?",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces OpenHalDet, a unified benchmark standardizing the entire evaluation pipeline from prompt construction through metric computation, supporting heterogeneous detector families.",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing evaluations face inconsistent configuration and limited domain coverage",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OpenHalDet enables controlled comparison across detector families and access settings",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides systematic view of detection paradigm behavior in LLM applications",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Released as open and extensible codebase for reproducible evaluation",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supports black-box, gray-box, and white-box detection methods",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Benchmark validity depends on truthfulness annotation quality.",
+   "ids": [
+    "2606.06959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the scarcity of well-labeled datasets for hallucination detection be addressed without additional human annotations?",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces PALE framework using prompt-guided data augmentation to generate truthful and hallucinated training data, with Contrastive Mahalanobis Score for evaluating intermediate embeddings.",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prompt-guided responses can generate training data at low cost",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CM Score captures structure of truthful and hallucinated data distributions",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Framework requires no additional human annotations",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms competitive baseline by 6.55%",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates practicality for real-world applications",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Quality depends on prompt design; may not generalize across all domains.",
+   "ids": [
+    "2510.15977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can out-of-distribution detection techniques be adapted to improve hallucination detection, particularly for reasoning tasks?",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Reframes hallucination detection as OOD detection by treating next-token prediction as classification, applies OOD techniques with modifications for LLM structural differences.",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OOD-based approaches can be adapted for hallucination detection",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves training-free detection without labeled training data",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Operates on single samples rather than requiring multiple generations",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves strong accuracy on reasoning tasks where existing methods struggle",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reframing provides scalable pathway for language model safety",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires structural modifications for LLM differences; performance on non-reasoning tasks may vary.",
+   "ids": [
+    "2602.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hallucination detection be improved specifically for Retrieval-Augmented Generation systems where most existing methods are not designed?",
+   "ids": [
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces method based on estimating probabilistic distances between prompt and response token embeddings, examining geometric structure of token hidden states.",
+   "ids": [
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art or competitive performance",
+   "ids": [
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates transferability from NLI to hallucination detection",
+   "ids": [
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Operates as fully unsupervised and efficient method",
+   "ids": [
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Specifically addresses RAG system limitations",
+   "ids": [
+    "2506.09886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Performance may vary across different RAG architectures and domains.",
+   "ids": [
+    "2506.09886"
+   ]
+  }
+ ]
+}

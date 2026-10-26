@@ -1,0 +1,777 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yorke (2026) demonstrates that similar aggregate scores can conceal substantial changes in individual verdicts—rerunning the same setup with GPT-4.1 as judge changed win/tie/loss outcomes on 21.2% of prompts despite aggregate scores moving only about one point.",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hwang et al. (2025) reveal that persuasive language embedded in responses can bias LLM judges to assign inflated scores to incorrect mathematical solutions by up to 8% on average, with the Consistency technique causing the most severe distortion.",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gera et al. (2024) further document that LLM judges exhibit positive or negative bias toward certain systems, which instance-based assessments overlook but which critically affect system-level rankings.",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Arawjo (2026) demonstrates that running statistics over raw LLM judge scores leads to inflated false positives, with false positive risk paradoxically peaking at \"almost perfect\" human-LLM agreement for many inter-rater metrics.",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2026) study when finite human labels should support low-dimensional stacker or reliability models versus unrestricted joint output tables.",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Akarajaradwong et al. (2026) test this on Thai bar exam essays, finding that on rubric-prescribed cells all 29 raters (3 human examiners and 26 LLMs) converge, but on rubric-ambiguous cells where humans split between two coherent readings, 22 of 26 LLMs cluster with the majority human reading while zero LLMs reproduce the minority reading.",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cao et al. (2025) propose a multi-agent system that automatically designs personalized LLM judges by iteratively refining evaluation prompts to balance task-specific requirements with human perception alignment.",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Meanwhile, Ashley et al. (2026) investigate a different adaptive paradigm where models predict how an LLM judge would score their output before responding, enabling smaller models to defer to larger models when anticipating poor performance—achieving up to 55% improvement in prediction accuracy with in-context report cards.",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Most surveyed papers agree that aggregate scores alone are insufficient for validating LLM judges—Yorke (2026), Arawjo (2026), and Akarajaradwong et al. (2026) all emphasize the need for finer-grained analysis of individual verdicts, calibrated confidence intervals, and examination of disagreement patterns.",
+   "ids": [
+    "2610.30512",
+    "2609.35815",
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also consensus that LLM judges exhibit systematic biases: Hwang et al. (2025) show persuasion vulnerability, Gera et al. (2024) document system-level bias, and Akarajaradwong et al. (2026) reveal asymmetric convergence on majority human readings.",
+   "ids": [
+    "2508.07805",
+    "2412.09569",
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the need for hybrid approaches: Abbas (2025) finds LLM judges and style embeddings have complementary strengths across domains, Cao et al. (2025) advocate multi-agent personalization, and Lail (2026) proposes directing human expert labels to cases where the LLM judge is epistemically uncertain.",
+   "ids": [
+    "2510.13898",
+    "2504.02867",
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Cao et al. (2025) and Ashley et al. (2026) present optimistic visions of automated or semi-automated evaluation, whereas Arawjo (2026) and Akarajaradwong et al. (2026) emphasize irreducible gaps between LLM and human judgment that require human oversight.",
+   "ids": [
+    "2504.02867",
+    "2604.12634",
+    "2609.35815",
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while Zhu et al. (2026) find simpler aggregation methods usually outperform complex joint-table calibration in real-world budget-constrained settings, their controlled experiments show the opposite when sufficient data is available—suggesting disagreement about whether current limitations are fundamental or merely data-constrained.",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, most studies focus on English-language evaluation tasks, with only Akarajaradwong et al. (2026) examining non-English contexts (Thai bar exams)—the generalizability of findings to other languages and cultural contexts remains unexplored.",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while multiple papers document vulnerabilities (persuasion attacks, instruction sensitivity, system bias), few propose and rigorously evaluate defense mechanisms—Hwang et al. (2025) note that counter-prompting strategies fail to eliminate persuasion effects, leaving a critical gap in practical mitigation approaches.",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Is expert inter-rater stability a single ceiling number, and does LLM-judge agreement with that ceiling constitute evidence of judge stability?",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Used identical-inputs protocol where three Bar Council-trained examiners and a 26-LLM judge panel scored the same 15 cross-graded answers from four inputs (question, official grading regulation, gold answer, candidate answer), with an instrumented three-LLM anchor sub-panel for determinism probes, input ablations, and bootstrap CIs.",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On 10 of 15 cells where the rubric prescribes both axes, all 29 raters converge in a tight band with universal panel agreement",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On 5 rubric-ambiguous cells, humans split between two coherent readings while 22 of 26 LLMs cluster with the majority reading",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Zero LLMs reproduce the minority human reading on contested cells",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-panel α = 0.77 reflects systematic convergence on majority reading rather than balanced reproduction of both readings; human-panel α = 0.36",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Benchmarks selecting LLM judges by maximizing agreement with human reference panels inherit this asymmetry by construction",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Study limited to Thai bar examination context with free-form legal essays; relatively small sample of 15 answers from 4 inputs may not generalize to other domains or evaluation contexts.",
+   "ids": [
+    "2605.25652"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can researchers run reliable statistics over LLM judge scores with small-sample AI evaluations without producing inflated false positives?",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed guidance and tooling for statistical analysis of mixed human-AI judge designs, implementing nine hypothesis tests via prediction-powered inference (PPI) with bootstrap-adaptive power tuning for small calibration sets, validated through Monte Carlo simulations.",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Running statistics over raw LLM judge scores leads to inflated false positives, with false positive risk peaking at \"almost perfect\" human-LLM agreement for many inter-rater metrics",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Introduced bootstrap-adaptive power tuning to keep PPI++ stable with small human-labeled calibration sets by shrinking estimated weight toward a target and accounting for sampling variance",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Derived recommendations for CI, p-value, and FWER correction methods for small-sample evaluations (N<100), warning against bootstrap CIs",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Packaged recommendations into evalstats, an open-source Python package that automatically selects calibrated methods",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrated a real case where an LLM judge validated at \"substantial agreement\" would have led a researcher to publish a spurious finding",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Primarily addresses small-sample scenarios (N<100); requires human-labeled calibration data for prediction-powered inference corrections to function properly.",
+   "ids": [
+    "2609.35815"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can models predict how an LLM judge would score their output prior to responding, enabling smaller models to defer to larger models when they anticipate poor performance?",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Investigated Predict-Answer/Act (PA) and Reason-Predict-Reason-Answer/Act (RPRA) paradigms where models predict LLM judge scores before responding, evaluating three approaches: zero-shot prediction, prediction using in-context report card, and supervised fine-tuning.",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Larger models, particularly reasoning models, perform well when predicting generic LLM judges in zero-shot settings",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Smaller models can reliably predict LLM judges after being fine-tuned or provided with an in-context report card",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Report cards achieve mean improvements of up to 55% across datasets for smaller model prediction accuracy",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supervised fine-tuning achieves mean improvements of up to 52% across datasets for smaller model prediction accuracy",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models can learn to predict their own performance limitations, paving the way for more efficient and self-aware AI systems that defer appropriately to larger models",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focus is on prediction accuracy rather than measuring actual computational efficiency gains in real deployment scenarios; does not address the computational overhead of the prediction step itself.",
+   "ids": [
+    "2604.12634"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create flexible LLM judges that adapt to different text styles and produce evaluation scores aligned with human perception?",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed a dynamic multi-agent system that automatically designs personalized LLM judges by iteratively refining evaluation prompts and balancing adaptive task requirements with human perception alignment.",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing LLM-as-a-judge frameworks lack flexibility to adapt to different text styles, reducing generalization performance",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current frameworks produce evaluation scores that are skewed and show low correlation with human judgment",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent system iteratively refines evaluation prompts to balance task requirements and human alignment",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proposed framework enhances evaluation accuracy compared to existing methods",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Produces evaluation scores that better align with human perception",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Experimental validation limited to specific NLG applications; multi-agent system adds computational complexity; may require task-specific tuning.",
+   "ids": [
+    "2504.02867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do LLM judges perform at system-level ranking compared to human rankings, and what biases affect their judgments?",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducted first large-scale study of LLM judges as system rankers by aggregating judgment scores over multiple system outputs and comparing resulting rankings to human-based rankings, with fine-grained characterization of judge behavior.",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Instance-based assessment overlooks critical factors affecting system-level ranking, such as judge bias toward certain systems",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "System scores generated by aggregating judgments can be compared to human rankings to assess judge quality",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analysis provides fine-grained characterization of judge behavior including decisiveness and bias",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Judge's positive or negative bias towards certain systems affects ranking quality",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "First large-scale study specifically focused on LLM judges as system rankers rather than instance evaluators",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Depends on availability of human-based rankings for comparison; may not generalize across all domains and model configurations; system-level bias characterization requires extensive evaluation data.",
+   "ids": [
+    "2412.09569"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can individuals persuade an LLM judge to assign unfairly high scores through strategically embedded persuasive language in mathematical reasoning tasks?",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Formalized seven persuasion techniques based on Aristotle's rhetorical principles (Majority, Consistency, Flattery, Reciprocity, Pity, Authority, Identity) and embedded them into otherwise identical responses across six math benchmarks to measure score inflation.",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Persuasive language leads LLM judges to assign inflated scores to incorrect solutions by up to 8% on average",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consistency technique causes the most severe distortion among all seven persuasion methods",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Increasing model size does not substantially mitigate this vulnerability",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining multiple persuasion techniques amplifies the bias beyond single-technique effects",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pairwise evaluation is also susceptible, and the persuasive effect persists under counter prompting strategies",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Study focuses exclusively on mathematical reasoning tasks where correctness should be objective; does not extensively explore or validate defense mechanisms against persuasion-based attacks.",
+   "ids": [
+    "2508.07805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we separate aleatoric uncertainty (real expert disagreement) from epistemic uncertainty (judge's ignorance) to better target expert labeling efforts?",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed a small Bayesian model that separates uncertainty components using regression on collected labels, producing both uncertainty types as simple formulas without sampling or additional judge calls.",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM judge's natural escalation signal conflates aleatoric uncertainty (real disagreement) and epistemic uncertainty (judge's ignorance)",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both uncertainty components can be computed as simple formulas with no sampling or further judge calls",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On ChaosNLI human disagreement data, epistemic ranking removes 83% more error than total uncertainty for the same expert labels",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Simply escalating least-labelled items performs as well as epistemic ranking on real human disagreement",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Stated confidence is no guide to the judge's actual error",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Demonstrated on limited datasets (ChaosNLI); assumes Bayesian model assumptions hold; epistemic ranking advantage may not persist across all domains.",
+   "ids": [
+    "2609.06444"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do Style Embeddings and LLM judges perform at attributing authorship in AI-generated content across different domains?",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Benchmarked Style Embeddings and instruction-tuned LLM judge (GPT-4o) on Human AI Parallel Corpus with 600 balanced instances spanning 6 domains (academic, news, fiction, blogs, spoken transcripts, TV/movie scripts).",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Style Embeddings achieve stronger aggregate accuracy on GPT continuations (82% vs 68%)",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM Judge slightly outperforms Style Embeddings on LLaMA continuations (85% vs 81%) but results are not statistically significant",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM judge significantly outperforms in fiction and academic prose, indicating semantic sensitivity",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Embeddings dominate in spoken and scripted dialogue, reflecting structural strengths",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attribution is a multidimensional problem requiring hybrid strategies combining both approaches",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Limited to GPT-4o and LLaMA-70B-Instruct as generation models; some performance differences not statistically significant; domain coverage may not represent all content types.",
+   "ids": [
+    "2510.13898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How repeatable are LLM judge verdicts and how much do they depend on the judge's instructions?",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Used 500 Arena-Hard v2.0 prompts with fixed model answers, ran GPT-4.1 as judge under all 8 combinations of criteria/output format/task framing, and repeated every setup at temperature zero on a pinned model version.",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Similar aggregate scores can conceal substantial changes in individual verdicts when setups are repeated or instructions change",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Rerunning the default setup changes win/tie/loss outcomes on 21.2% of prompts despite aggregate score moving only ~1 point",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Instruction changes introduce further sensitivity: one setup removing reasoning and other instructions changed outcomes on 28.2 percentage points more prompts",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A stable aggregate score does not establish that individual verdicts are repeatable",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluations relying on individual verdicts should repeat each setup and report both aggregate scores and prompt-level agreement",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Only tested with GPT-4.1 as judge on Arena-Hard v2.0 prompts; findings may not generalize to other judges or benchmarks.",
+   "ids": [
+    "2610.30512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: When should finite human labels support low-dimensional stacker/reliability models versus unrestricted joint output tables for LLM judge panel calibration?",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Cast the problem as a finite-calibration regime map instantiated as Finite-Calibration Panel Selection (FCPS), a validation selector over judge path, deployed panel size, and aggregator family with support diagnostics, tested across RewardBench, LLMBar, SummEval, and Arena100K with a seven-judge pool.",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scalar/reliability aggregation has lower MSE than unrestricted joint-table calibration in 16 of 20 real dataset-budget cells by point estimate",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Paired 95% intervals exclude zero in 11 cells, indicating statistically significant differences favoring simpler aggregation",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Richer backoff/shrinkage tables narrow some gaps while preserving the finite-support bottleneck",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In controlled calibration-growth data with six-way interaction, the selected table grows to the interaction-bearing prefix and MSE falls from 0.224 to 0.061 once unseen mass vanishes",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The practical deployment question is whether the next judge's information is estimable under the available human labels",
+   "ids": [
+    "2606.01034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluated with a seven-judge pool which may not generalize to larger panels; finite-support bottleneck remains a fundamental constraint even with improved backoff/shrinkage methods.",
+   "ids": [
+    "2606.01034"
+   ]
+  }
+ ]
+}

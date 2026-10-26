@@ -1,0 +1,711 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wei et al. (2024) reveal that gradient updates during federated training can expose training data, requiring careful perturbation strategies before sharing.",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Complementing this work, Hayashitani et al. (2024) provide a comprehensive taxonomy of privacy threats across three FL architectures: horizontal, vertical, and transfer federated learning.",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Banse et al. (2024) empirically demonstrate that differential privacy mechanisms, while providing protection, introduce measurable performance trade-offs that are particularly severe for non-IID and small datasets.",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Legler et al. (2024) examine the complementary challenge of integrating new clients into existing FL systems, particularly in production environments where the number of clients is typically smaller than in consumer applications like Gboard.",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yashwanth et al. (2026) introduce FedUCA, a framework formalizing the server's role as an optimizer that maximizes global performance by sustaining client participation through utility-constrained stochastic aggregation.",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hewa Kaluannakkage and Buyya (2025) expand this perspective through a comprehensive taxonomy examining how economics and game theory concepts can be applied to FL incentive design, alongside technology-driven solutions including blockchain and deep reinforcement learning.",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rangwala et al. (2025) provide comprehensive architectural analysis of blockchain-enabled federated learning (BCFL) systems through a four-dimensional taxonomy examining coordination structures, consensus mechanisms, storage architectures, and trust models.",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ho (2026) presents the first federated learning framework for automated infant movement analysis and General Movement Assessment using skeletal motion data.",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In emerging computational paradigms, Pokhrel et al. (2024) explore quantum federated learning deployment on cloud platforms.",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wei et al. (2024), Banse et al. (2024), Legler et al. (2024), and Németh et al. (2025) all identify data heterogeneity as a primary obstacle requiring active management.",
+   "ids": [
+    "2409.13004",
+    "2402.02230",
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature consistently demonstrates that client participation cannot be assumed but must be actively sustained through utility-aware aggregation or explicit incentive mechanisms, as shown by both Yashwanth et al. (2026) and Hewa Kaluannakkage and Buyya (2025).",
+   "ids": [
+    "2605.18020",
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Wei et al. (2024) advocate for dynamic model perturbation as simultaneously ensuring privacy, poisoning resilience, and performance, Banse et al. (2024) empirically demonstrate that differential privacy mechanisms inevitably introduce performance degradation, particularly severe for small and non-IID datasets.",
+   "ids": [
+    "2409.13004",
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is divergence in architectural preferences: Rangwala et al. (2025) advocate for blockchain integration for trust and transparency, while other papers achieve robust results through centralized coordination with sophisticated aggregation strategies, suggesting context-dependent optimal architectures rather than universal solutions.",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Wei et al. (2024), Legler et al. (2024), and Németh et al. (2025) all acknowledge limited real-world deployment validation, suggesting a gap between proposed solutions and production-ready implementations.",
+   "ids": [
+    "2409.13004",
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Scalability to large federated networks: Several approaches, particularly Ho (2026) with three clients and Legler et al. (2024) focusing on small production environments, are validated in small-scale settings.",
+   "ids": [
+    "2609.31463",
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Domain generalization: Németh et al. (2025) focus on computer vision datasets, while Ho (2026) addresses healthcare.",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Quantum FL practical deployment: Pokhrel et al. (2024) conduct experiments on quantum simulators rather than actual quantum hardware, with cloud platform limitations and quantum network infrastructure remaining significant practical barriers.",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Long-term sustainability of incentive mechanisms: While Hewa Kaluannakkage and Buyya (2025) and Yashwanth et al. (2026) propose incentive frameworks, long-term empirical validation of these mechanisms in sustained FL ecosystems is absent from the literature.",
+   "ids": [
+    "2510.14208",
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do the number of clients and differential privacy mechanisms affect federated learning model performance across different data types?",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Empirical benchmark examining the effect of client count and differential privacy mechanisms on model performance across different types of data distributions.",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Non-i.i.d datasets experience the highest performance decrease in distributed and differentially private settings",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Small datasets show significant performance degradation when DP mechanisms are applied",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The number of clients impacts model performance in DP-enabled FL",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Private information can still be divulged by analyzing uploaded parameter weights despite FL's privacy-preserving nature",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DP mechanisms introduce measurable performance trade-offs that vary by data characteristics",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: This is an empirical benchmark study that identifies performance issues but does not propose solutions to mitigate the performance degradation in non-i.i.d and small dataset scenarios.",
+   "ids": [
+    "2402.02230"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can common and unique privacy threats be systematically categorized and described across different types of federated learning architectures?",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey approach categorizing privacy threats and countermeasures for three typical FL types: horizontal, vertical, and transfer federated learning.",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Federated learning is not inherently privacy-safe despite no direct training data exchange between clients",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Privacy threats vary significantly across horizontal, vertical, and transfer federated learning architectures",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Each FL type has both common and unique privacy vulnerabilities requiring specific countermeasures",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing privacy countermeasures have been studied but lack comprehensive categorization by FL type",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey paper, it provides categorization rather than novel empirical validation; specific implementation details of countermeasures may require further investigation.",
+   "ids": [
+    "2402.00342"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can incentive mechanisms address the participation dilemma in federated learning to ensure sustainable, fair, and robust FL ecosystems?",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive taxonomy development examining economics and game theory concepts, blockchain, and deep reinforcement learning applied to both centralized and decentralized FL architectures.",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Participation dilemma is a critical barrier: entities unwilling to contribute without benefits or may free-ride on others' contributions",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Well-designed incentive mechanisms are essential components, not optional features, for practical FL success",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Economics and game theory concepts can be effectively applied alongside technology solutions like blockchain and deep reinforcement learning",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incentive mechanisms must address diverse application domains including healthcare, smart infrastructure, vehicular networks, and decentralized systems",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both centralized and decentralized architectures require different incentive design approaches",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Significant challenges remain in building truly sustainable and fair FL ecosystems; practical implementation and validation across diverse industrial applications requires further work.",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can federated learning enable automated infant movement analysis while addressing privacy and data-sharing constraints in clinical settings?",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents the first FL framework for automated infant movement analysis using Monte Carlo Dropout for uncertainty estimation and proposes Uncertainty-Aware Federated Averaging (UA-FedAvg) that incorporates predictive entropy into the aggregation process.",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Federated learning substantially improves classification performance compared to independently trained local models",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FL performance approaches that of centralized training",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UA-FedAvg generally outperforms conventional FedAvg across evaluated data-split configurations",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UA-FedAvg variant incorporating validation loss shows additional improvements",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "First federated learning framework specifically designed for infant movement analysis and General Movement Assessment",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluated on a specific use case (fidgety movement classification) with only three clients, which may limit generalizability to broader clinical settings or larger federated networks.",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can new clients be seamlessly integrated into existing FL systems despite data heterogeneity and varying computational capabilities?",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analysis of client integration complexities with exploration of data heterogeneity effects, client selection strategies, and practical approaches demonstrated through optical quality inspection image data.",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dynamic incorporation of new clients with diverse data distributions poses significant challenges to FL system stability and efficiency",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Non-IID data distribution among clients critically affects model training, system efficiency, scalability, and stability",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Production environments typically have fewer clients than consumer applications, making information from each new client more valuable",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "New client integration presents opportunities to enhance data diversity, improve learning performance, and leverage distributed computational power",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective client selection strategies are crucial for ensuring system scalability and stability in production FL deployments",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focus on optical quality inspection as primary use case may limit generalizability; specific quantitative metrics for client selection effectiveness require further validation across diverse domains.",
+   "ids": [
+    "2408.09545"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the challenges of deploying Quantum Federated Learning on cloud platforms, and how can data encoding strategies address quantum network limitations?",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proof-of-concept implementation using data-encoding-driven QFL with genomic datasets on quantum simulators, with open-source code available on GitHub.",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "QFL enables collaborative quantum model training while preserving local data privacy over quantum networks",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cloud platform deployment faces significant quantum intricacies and platform-specific limitations",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Data-encoding-driven approaches show promising results for QFL implementation",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Genomic datasets can be effectively used for QFL proof-of-concept on quantum simulators",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Experiments conducted on quantum simulators rather than actual quantum hardware; cloud platform limitations and quantum network infrastructure remain significant practical barriers.",
+   "ids": [
+    "2405.00909"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can blockchain technology address fundamental challenges of trust, privacy, and coordination in collaborative AI systems?",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Provides comprehensive architectural analysis through a systematic four-dimensional taxonomy examining coordination structures, consensus mechanisms, storage architectures, and trust models, including a TrustMesh framework case study.",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BCFL systems achieve performance comparable to centralized approaches while providing enhanced security guarantees",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consensus mechanisms like Proof of Quality and Proof of Federated Learning repurpose computational work from cryptographic puzzles to productive ML tasks",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-tier storage architectures balance blockchain transaction constraints with neural network parameter requirements",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Real-world deployments validated across healthcare consortiums, financial services, and IoT security applications",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables new models of trustless collaborative intelligence with complete transparency and fault tolerance",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Design patterns involve trade-offs in scalability, security, and performance that must be carefully balanced; blockchain's transaction constraints pose challenges for large neural network parameters.",
+   "ids": [
+    "2508.06406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the privacy intrusion and data poisoning threats in federated learning, and how can they be effectively mitigated while maintaining model performance?",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analytical study with empirical evidence examining gradient leakage threats, poisoning attacks, and defense strategies including gradient perturbation and dynamic model perturbation techniques.",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training data can be leaked during federated training through gradient updates, requiring careful noise addition to raw gradients before sharing",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proper amount and location of randomized noise is critical for effective mitigation of gradient leakage threats",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Data poisoning-induced model Trojan attacks can cause detrimental damage to global model performance",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dynamic model perturbation shows potential for simultaneously ensuring privacy protection, poisoning resilience, and model performance",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Additional risk factors include data skewness, algorithmic biases, and misinformation in training data",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses primarily on empirical observations without extensive real-world deployment validation; specific quantitative thresholds for optimal noise levels are not fully established.",
+   "ids": [
+    "2409.13004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can federated learning sustain client participation when clients are rational agents who may prioritize local model performance over global model performance?",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces FedUCA, a framework that formalizes the server's role as an optimizer seeking to maximize global model performance by sustaining client participation through utility-constrained stochastic aggregation.",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FedUCA achieves significantly higher client retention compared to traditional FL approaches",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Higher client retention leads to superior global model performance",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework effectively addresses client attrition in cross-silo environments with significant statistical heterogeneity",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments on standard datasets demonstrate the framework's effectiveness",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper does not explicitly discuss limitations, but the approach may be primarily validated on standard datasets and may require further testing in diverse real-world cross-silo scenarios.",
+   "ids": [
+    "2605.18020"
+   ]
+  }
+ ]
+}

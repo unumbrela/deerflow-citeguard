@@ -1,0 +1,689 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang et al. (2025) introduced LongBioBench, which uses artificially generated biographies to assess 18 LCLMs across understanding, reasoning, and trustworthiness dimensions, achieving better trade-offs between authenticity and controllability.",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Wu et al. (2025) proposed Ref-Long, a benchmark specifically targeting long-context referencing capabilities—the task of attributing items to specific parts of long documents—revealing that even advanced models like GPT-4o exhibit significant shortcomings.",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Thai and Iyyer (2025) focused on literary evidence retrieval, demonstrating that while Gemini Pro 2.5 can exceed human expert performance (62.5% vs. 50% accuracy), the best open-weight models achieve only 29.1% accuracy, highlighting a substantial gap in interpretive reasoning capabilities.",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) proposed Memory-efficient Offloaded Mini-sequence Inference (MOM), which partitions critical layers into smaller \"mini-sequences\" integrated with KV cache offloading.",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Laitenberger et al. (2025) conducted controlled evaluations comparing multi-stage pipelines (ReadAgent and RAPTOR) against baselines including DOS RAG (Document's Original Structure RAG).",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lee et al. (2024) explored whether LCLMs can subsume retrieval, RAG, SQL, and more through their LOFT benchmark, finding that LCLMs can rival state-of-the-art retrieval and RAG systems despite never being explicitly trained for these tasks, though they still face challenges in compositional reasoning required for SQL-like tasks.",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yu et al. (2024) discovered that while LCLMs are nearly perfect at standard long-context retrieval tasks, they fail in some basic cases—failures that can be addressed with sufficient reasoning steps guided by specific Chain-of-Thought prompts.",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Baek et al. (2024) revisited In-Context Learning in the era of LCLMs, finding that sophisticated example selection techniques no longer yield significant improvements over simple random sampling.",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) presented a bipartite mutual information scaling law that captures multi-token interactions distinct from conventional two-point mutual information.",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2025) provided a comprehensive survey structured around three aspects: obtaining effective LCLMs (data strategies, architectural designs, workflows), training and deployment infrastructure, and evaluation paradigms.",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Lee et al. (2024) demonstrate LCLMs can rival state-of-the-art RAG systems, Laitenberger et al. (2025) show that simple RAG baselines still outperform native long-context approaches on QA tasks.",
+   "ids": [
+    "2406.13121",
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Trustworthiness Degradation: Yang et al. (2025) found that models become less trustworthy as context length increases, but the mechanisms underlying this degradation remain unclear and warrant investigation.",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Whether In-Context Learning performance in the many-shot regime remains sensitive to sample selection methods with the advent of Long Context Language Models.",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Extensive experiments on 18 datasets spanning 4 tasks, comparing sophisticated example selection techniques against simple random sampling, and testing data augmentation approaches to fill context windows.",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sophisticated example selection techniques do not yield significant improvements over simple random sample selection in LCLMs",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The challenge of ICL has fundamentally shifted from selecting effective examples to collecting sufficient examples to fill the context window",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Augmenting examples with simple data augmentation approaches substantially improves ICL performance by 5%",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Including all available examples does not fully utilize the context window in certain datasets",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses on 18 datasets across 4 tasks, which may not generalize to all NLP tasks; the data augmentation approach is relatively simple and may not be optimal for all scenarios.",
+   "ids": [
+    "2412.16926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What theoretical framework can explain and predict long-context language modeling capabilities?",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed a bipartite mutual information scaling law and formulated the L²M condition that lower bounds the necessary scaling of model history state for effective long-context modeling, validating on transformer and state-space models.",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Bipartite mutual information captures multi-token interactions distinct from and scaling independently of conventional two-point mutual information",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The L²M condition provides a principled foundation for understanding long-context modeling requirements",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework successfully predicts behavior on both transformer and state-space models",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The theory has potential applications beyond natural language modeling",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The framework was validated primarily on transformer and state-space models; broader architectural validation and practical implementation guidance remain areas for future work.",
+   "ids": [
+    "2503.04725"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do multi-stage retrieval-augmented generation pipelines still offer measurable benefits over simpler, single-stage approaches with modern long-context language models?",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Controlled evaluations comparing two multi-stage pipelines (ReadAgent and RAPTOR) against three baselines including DOS RAG on long-context QA benchmarks under systematically scaled token budgets.",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DOS RAG consistently matches or outperforms more intricate multi-stage methods on multiple long-context QA benchmarks",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DOS RAG's strength comes from maintaining source fidelity, document structure, and prioritizing recall within effective context windows",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Simplicity outperforms added pipeline complexity when paired with state-of-the-art embedding and language models",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DOS RAG should be established as a strong baseline for future RAG evaluations",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses primarily on QA tasks and may not generalize to all RAG applications; results depend on matched token budgets.",
+   "ids": [
+    "2506.03989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can long-context language models replace traditional external tools like retrieval systems, RAG pipelines, and databases?",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced LOFT, a benchmark of real-world tasks requiring context up to millions of tokens to evaluate LCLMs' performance on in-context retrieval and reasoning.",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LCLMs can rival state-of-the-art retrieval and RAG systems despite never being explicitly trained for these tasks",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LCLMs still face challenges in compositional reasoning required for SQL-like tasks",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prompting strategies significantly influence LCLM performance on long-context tasks",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LCLMs show potential to supplant existing paradigms and tackle novel tasks as model capabilities scale",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: LCLMs struggle with compositional reasoning in SQL-like tasks, and performance is highly dependent on prompting strategies.",
+   "ids": [
+    "2406.13121"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How to obtain effective and efficient Long Context Language Models, train and deploy them efficiently, and evaluate and analyze them comprehensively.",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey structured around three key aspects: obtaining LCLMs (data strategies, architectural designs, workflows), training and deployment infrastructure, and evaluation paradigms for long-context comprehension and generation.",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Survey covers data strategies, architectural designs, and workflow approaches oriented toward long context processing",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides detailed examination of infrastructure required for LCLM training and inference",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Presents evaluation paradigms for long-context comprehension, long-form generation, behavioral analysis, and mechanism interpretability",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explores diverse application scenarios where existing LCLMs have been deployed",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outlines promising future development directions for the field",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey paper, findings are limited by existing literature and the rapidly evolving nature of the field; some recent developments may not be captured.",
+   "ids": [
+    "2503.17407"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do modern long-context language models understand literary fiction?",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Repurposed the RELiC dataset to construct a benchmark where LLMs receive entire literary texts alongside criticism with missing quotations, requiring models to generate the missing quotation through global narrative reasoning and close textual examination.",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gemini Pro 2.5 exceeds human expert performance (62.5% vs. 50% accuracy)",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The best open-weight model achieves only 29.1% accuracy, revealing a wide gap between open and closed-weight models",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Even the strongest models struggle with nuanced literary signals and overgeneration",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark highlights open challenges for applying LLMs to literary analysis",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Strong models still struggle with nuanced literary signals and overgeneration, indicating the task remains challenging despite high accuracy scores.",
+   "ids": [
+    "2506.03090"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do Long Context Language Models perform at long-context referencing, which requires attributing items of interest to specific parts of long-context data?",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Created Ref-Long benchmark with three subsets ranging from synthetic to realistic scenarios; evaluated 13 LCLMs with comprehensive analyses including human evaluations, task format adjustments, fine-tuning experiments, and error analyses.",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant shortcomings in long-context referencing capabilities even among advanced models like GPT-4o",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The task emphasizes contextual relationships between keys and documents over simple retrieval",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Human evaluations and error analyses reveal specific failure modes in current LCLMs",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuning experiments provide insights into improving referencing capabilities",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task format adjustments affect model performance, indicating sensitivity to presentation",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Benchmark covers three subsets but may not capture all referencing scenarios; the 13 models tested may not represent the full spectrum of available LCLMs; synthetic scenarios may not fully reflect real-world complexity.",
+   "ids": [
+    "2507.09506"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create an ideal long-context evaluation framework that overcomes the limitations of existing real-world and synthetic task approaches?",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced LongBioBench, a benchmark using artificially generated biographies as a controlled environment for assessing 18 LCLMs across understanding, reasoning, and trustworthiness dimensions.",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most models exhibit deficiencies in semantic understanding and elementary reasoning over retrieved results",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models become less trustworthy as context length increases",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing synthetic benchmarks have design flaws including contextual non-coherence, numerical needles, and absence of distractors",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LongBioBench achieves better trade-off between mirroring authentic language tasks and maintaining controllability",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark uses artificially generated biographies rather than real-world documents, which may not fully capture the complexity of authentic long-context applications.",
+   "ids": [
+    "2506.02921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Why do Long Context Language Models fail in some basic retrieval cases despite near-perfect performance on standard long-context retrieval benchmarks?",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluation of LCLMs on basic retrieval tasks, testing with Chain-of-Thought prompts and varying numbers of reasoning steps to identify conditions under which failures can be addressed.",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LCLMs fail in some basic retrieval cases despite being nearly perfect at standard long-context retrieval tasks",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Failures can be well addressed with a sufficient number of reasoning steps guided by specific CoT prompts",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Long-context tasks may require long-CoT methods rather than being treated as direct QA tasks",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Previous long-context benchmarks ignore the necessity of long reasoning for long-context tasks",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Study focuses on specific basic retrieval cases that may not generalize to all retrieval scenarios; CoT approach adds computational cost and latency; the specific CoT prompts that work may not transfer across tasks.",
+   "ids": [
+    "2410.04422"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How to reduce the high GPU memory demands during Long Context Language Model inference to enable deployment of longer context lengths?",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed Memory-efficient Offloaded Mini-sequence Inference (MOM) that partitions critical layers into smaller mini-sequences integrated with KV cache offloading; experiments conducted on Llama, Qwen, and Mistral models.",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MOM reduces peak memory usage by over 50% on average across tested models",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On Meta-Llama-3.2-8B, extends maximum context length from 155k to 455k tokens on a single A100 80GB GPU",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 35% greater context length extension compared to traditional chunked prefill methods",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eliminates prefill-stage as the dominant memory bottleneck during inference",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains highly competitive throughput with minimal computational overhead and identical outputs",
+   "ids": [
+    "2504.12526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Method focuses on inference optimization rather than training; may have specific hardware requirements for optimal KV cache offloading performance.",
+   "ids": [
+    "2504.12526"
+   ]
+  }
+ ]
+}

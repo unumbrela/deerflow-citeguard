@@ -1,0 +1,726 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Avinash (2026) introduced routing signatures as vector representations that capture expert activation patterns, demonstrating that prompts from the same task category induce highly similar routing signatures with 92.5% classification accuracy.",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Badjie et al. (2025) proposed the DFCP-MoE framework, which combines feature-level clustering with pseudo-labeling to improve expert specialization on well-labeled, clustered inputs.",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Kowsher et al. (2026) introduced LiME, which achieves expert specialization through lightweight modulation using a single shared PEFT module with expert vectors, eliminating the need for separate adapters per expert and reducing trainable parameters by up to 4x.",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sun et al. (2026) provided theoretical and empirical evidence that sparse expert activation acts as a noise filter, achieving lower generalization error under feature noise compared to dense estimators.",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rokah et al. (2026) compared dense, SoftMoE, and SparseMoE classifier heads on CIFAR10, finding that both MoE variants achieve slightly higher validation accuracy than dense baselines while maintaining balanced expert utilization through regularization.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Huber et al. (2025) evaluated MoE architectures at on-device scale, demonstrating that MoE models outperform FLOP-aligned dense models in fair evaluation.",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chaudhari et al. (2025) investigated mechanistic properties like sparsity and superposition, finding that network sparsity (ratio of active to total experts) better characterizes MoE behavior than feature-level metrics.",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Do et al. (2024) proposed Vector-Quantized Mixture of Experts (VQMoE), which uses discrete representations learned through vector quantization to address routing inconsistencies and representation collapse.",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dialameh et al. (2025) applied structured Laplace approximation to the second linear layer of each expert using Kronecker-factored low-rank approximations to model curvature.",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: The surveyed papers collectively demonstrate that sparse MoE architectures offer advantages beyond parameter scaling, including improved robustness to noise (Sun et al., 2026; Do et al., 2024), better task-specific routing (Avinash, 2026), and enhanced efficiency at deployment scale (Huber et al., 2025; Kowsher et al., 2026).",
+   "ids": [
+    "2601.14792",
+    "2411.19402",
+    "2603.11114",
+    "2503.00245",
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers agree that balanced expert utilization requires careful regularization or architectural design to avoid expert collapse (Rokah et al., 2026; Badjie et al., 2025).",
+   "ids": [
+    "2601.15021",
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Disagreements: While Rokah et al. (2026) found that naively implemented conditional routing does not yield inference speedups at their scale, Kowsher et al. (2026) demonstrated up to 29% faster training with their optimized routing approach, suggesting that implementation details and architectural choices significantly impact practical efficiency.",
+   "ids": [
+    "2601.15021",
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, the question of whether feature sparsity or network sparsity better characterizes MoE behavior remains open, with Chaudhari et al. (2025) arguing for network-level metrics while others focus on feature-level analyses.",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the relationship between MoE architectures and interpretability, while hinted at by Chaudhari et al. (2025), requires more systematic investigation.",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does MoE routing exhibit task-conditioned structure, and can routing signatures capture whether expert activation patterns vary systematically by task category?",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced routing signatures as vector representations summarizing expert activation patterns across layers.",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Used OLMoE-1B-7B-0125-Instruct to measure within-category vs across-category similarity, trained logistic regression on routing signatures for task classification, and introduced permutation and load-balancing baselines.",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prompts from the same task category induce highly similar routing signatures",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Within-category routing similarity (0.8435 ± 0.0879) significantly exceeds across-category similarity (0.6225 ± 0.1687), with Cohen's d = 1.44",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Logistic regression classifier trained on routing signatures achieves 92.5% ± 6.1% cross-validated accuracy on four-way task classification",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task structure becomes increasingly apparent in deeper layers",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Observed separation is not explained by sparsity or balancing constraints alone",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the Mixture of Experts model's performance in image classification be improved by reducing the impact of noise and outliers in the input space?",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces the DFCP-MoE framework, which combines input feature extraction, feature-level clustering, and a pseudo-labeling strategy that leverages a small subset of labeled data.",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A conditional end-to-end joint training method is proposed to improve expert specialization on well-labeled, clustered inputs.",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The DFCP-MoE framework reduces the impact of noise and outliers in MoE training",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach leverages a small subset of labeled data to label a large portion of unlabeled inputs",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed joint training method improves expert specialization",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework effectively captures input space diversity, leading to competitive inference results",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach was validated on three benchmark datasets for multi-class classification tasks",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.09504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do mechanistic properties like sparsity and superposition differ between MoE models and dense networks, and what characterizes MoE behavior?",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study develops new metrics for measuring superposition across experts and analyzes the relationship between network sparsity and monosemanticity, proposing a new definition of expert specialization based on monosemantic feature representation.",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Neither feature sparsity nor feature importance cause discontinuous phase changes in MoE models",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Network sparsity (ratio of active to total experts) better characterizes MoE behavior than feature-level metrics",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models with greater network sparsity exhibit greater monosemanticity",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experts naturally organize around coherent feature combinations when initialized appropriately",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Network sparsity in MoEs may enable more interpretable models without sacrificing performance",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2510.23671"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can calibrated uncertainty estimation be applied to fine-tuned MoE large language models without modifying the original training procedure or introducing new parameters?",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Applied structured Laplace approximation to the second linear layer of each expert using Kronecker-factored low-rank approximations to model curvature.",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluated on common-sense reasoning benchmarks with Qwen1.5-MoE and DeepSeek-MoE.",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves expected calibration error (ECE) over baselines",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves negative log-likelihood (NLL) over baselines",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables calibrated uncertainty estimation without modifying original training procedure or introducing new parameters",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Leverages modular MoE design for tractable block-wise posterior estimation",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Directly targets expert pathways already present in MoE models rather than added adapter modules",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2511.08968"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can discrete representation via vector quantization address routing inconsistencies and representation collapse issues in sparse mixture of experts?",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed Vector-Quantized Mixture of Experts (VQMoE) that assigns experts to input via indirection using discrete representations learned through vector quantization.",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provided theoretical support and evaluated on large language models and vision tasks for pre-training and fine-tuning.",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VQMoE achieves 28% improvement in robustness compared to other SMoE routing methods",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains strong performance in fine-tuning tasks",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Overcomes routing inconsistencies and representation collapse challenges present in traditional routers",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Discrete representations via vector quantization provide an alternative to fixing the router directly",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2411.19402"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Compact Sparse Mixture of Experts be enabled for on-device inference across quality, memory, and latency dimensions?",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluated MoE architectures against FLOP-aligned dense models at on-device scale under fair evaluation conditions.",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Introduced weight-decomposed experts and improved model offloading efficiency.",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MoE architectures outperform FLOP-aligned dense models at on-device scale in fair evaluation",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Weight-decomposed experts further improve MoE model performance",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significantly improved model offloading efficiency",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.00245"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can MoE-PEFT methods achieve expert specialization without requiring separate adapters per expert, which causes trainable parameters to scale linearly with expert count?",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes LiME, which uses a single shared PEFT module with lightweight expert vectors for output modulation instead of separate adapters, introduces zero-parameter routing, and incorporates n-gram windowed routing and adaptive expert selection.",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LiME achieves expert specialization through lightweight modulation rather than adapter replication",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach reduces expert parameters while generalizing to any PEFT method",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LiME introduces zero-parameter routing by leveraging existing frozen and adapted representations",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical proofs show that more experts preserve more task-relevant information and modulation approximates full expert-specific PEFT with bounded error",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On the MMT-47 benchmark, LiME achieves competitive or superior performance with up to 4x fewer trainable parameters and up to 29% faster training compared to MoE-PEFT baselines",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2604.02338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do Mixture-of-Experts architectures behave in image classification settings regarding predictive performance, expert utilization, and generalization?",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Compared dense, SoftMoE, and SparseMoE classifier heads on CIFAR10 under comparable model capacity.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Computed Hessian-based sharpness metrics including largest eigenvalue and trace of the loss Hessian on training and test data, plus loss surface perturbation analyses.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both MoE variants achieve slightly higher validation accuracy than the dense baseline",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Balanced expert utilization is maintained through regularization, avoiding expert collapse",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SoftMoE exhibits higher sharpness by Hessian-based metrics compared to Dense and SparseMoE",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dense and SparseMoE lie in a similar curvature regime despite comparable generalization performance",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Naively implemented conditional routing does not yield inference speedups on modern hardware at this scale",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Why do Mixture of Experts models outperform dense networks beyond parameter scaling, particularly under feature noise conditions?",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study analyzes an iso-parameter regime where inputs exhibit latent modular structure corrupted by feature noise, using theoretical analysis and empirical validation on synthetic data and real-world language tasks.",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse expert activation acts as a noise filter compared to dense estimators",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MoEs achieve lower generalization error under feature noise",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MoEs demonstrate improved robustness to perturbations",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MoEs show faster convergence speed",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Empirical results on synthetic and real-world language tasks corroborate the theoretical insights",
+   "ids": [
+    "2601.14792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2601.14792"
+   ]
+  }
+ ]
+}

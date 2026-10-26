@@ -1,0 +1,689 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "FAIR-RAG introduces an agentic framework with Structured Evidence Assessment that performs iterative refinement cycles, explicitly identifying evidence gaps and generating targeted sub-queries until comprehensive context is achieved (Aghajani Asl et al., 2025).",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, LoRAG incorporates dynamic loop mechanisms enabling iterative refinement of generated text through repeated interactions with retrieved information, demonstrating improvements in BLEU and ROUGE scores (Thakur & Vashisth, 2024).",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "GFM-RAG takes a different approach, leveraging graph foundation models with 8M parameters trained on 60 knowledge graphs to capture complex query-knowledge relationships that conventional RAG systems miss (Luo et al., 2025).",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Parametric RAG proposes a paradigm shift by integrating external knowledge directly into the feed-forward network parameters of LLMs through document parameterization (Su et al., 2025).",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Naseh et al. (2025) expose a significant vulnerability through their Interrogation Attack, a membership inference technique that can determine whether specific documents exist in a RAG datastore using only natural-text queries.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In religious and sensitive domains, Khalila et al. (2025) investigate RAG for Quranic studies, where hallucination poses particularly serious concerns.",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In enterprise IT support, Toro Isaza et al. (2024) present a RAG-based incident resolution system that enables smaller models to leverage domain-specific knowledge, addressing both cost concerns and domain coverage limitations without requiring large proprietary models.",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "For academic literature review automation, Ali et al. (2024) demonstrate that GPT-3.5-turbo with RAG achieves the highest ROUGE-1 score (0.364) compared to transformer models and frequency-based methods.",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "R²AG addresses the semantic gap between retrievers and LLMs by incorporating retrieval information into the generation process through a R²-Former and retrieval-aware prompting strategy (Ye et al., 2024).",
+   "ids": [
+    "2406.13249"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In contrast, Kreileder et al. (2026) evaluate chunking strategies for RAG on academic texts, finding that cluster-based semantic chunking does not outperform simpler fixed-size or recursive approaches under their tested configuration.",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While some papers advocate for sophisticated approaches like graph-based retrieval (Luo et al., 2025) or cluster-based semantic chunking in principle, empirical results are mixed—Kreileder et al. (2026) found cluster-based chunking did not outperform simpler strategies in their evaluation.",
+   "ids": [
+    "2607.01852",
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Another tension exists between parametric and in-context knowledge integration: Parametric RAG claims substantial efficiency advantages (Su et al., 2025), but this approach requires model parameter access and modification, limiting applicability to open-source or custom models.",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature also shows disagreement on evaluation methodologies, with Kreileder et al. (2026) reporting limited reliability of RAGAs faithfulness metrics, while other papers rely on standard QA metrics without addressing their limitations for RAG-specific evaluation.",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, security research is nascent—while Naseh et al. (2025) expose critical membership inference vulnerabilities, the literature lacks systematic defense mechanisms or security frameworks for RAG systems.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Kreileder et al. (2026) note that performance varied substantially based on document formatting and preprocessing, yet systematic guidance on matching retrieval strategies to document types remains absent.",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can literature review generation be automated from PDF files using Natural Language Processing techniques?",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluated three distinct systems (spaCy frequency-based method, Simple T5 transformer model, and GPT-3.5-turbo RAG) on the SciTLDR dataset using ROUGE scores for comparative evaluation.",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GPT-3.5-turbo achieved the highest ROUGE-1 score of 0.364 among all three systems tested",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The transformer model (Simple T5) ranked second in performance",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The frequency-based spaCy method performed worst among the three approaches",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A graphical user interface was developed for the best-performing LLM-based system",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation was limited to the SciTLDR dataset only; ROUGE scores indicate moderate performance with significant room for improvement in automated literature review quality.",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can RAG systems be improved to handle complex multi-hop queries that require synthesizing information from disparate sources?",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced FAIR-RAG, an agentic framework with Structured Evidence Assessment (SEA) module that performs iterative refinement cycles with explicit gap analysis and adaptive query refinement until evidence is verified as sufficient.",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved F1-score of 0.453 on HotpotQA, an absolute improvement of 8.3 points over the strongest iterative baseline",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Established new state-of-the-art performance on challenging multi-hop QA benchmarks (HotpotQA, 2WikiMultiHopQA, MusiQue)",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Structured evidence-driven refinement with explicit gap analysis proved crucial for reliable reasoning",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Iterative cycle ensures comprehensive context before final faithful generation",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Iterative refinement cycles may increase computational overhead and latency; performance on non-multi-hop or simpler queries not thoroughly evaluated.",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do different-sized open-source LLMs perform with RAG in sensitive, domain-specific applications like Quranic studies where hallucination is a critical concern?",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluated 13 open-source LLMs across three size categories (large, medium, small) with RAG on a descriptive Quranic surahs dataset using human evaluation metrics for context relevance, answer faithfulness, and answer relevance.",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Large models consistently outperform smaller models in capturing query semantics and producing accurate, contextually grounded responses",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Llama3.2:3b achieved exceptional faithfulness (4.619) and relevance (4.857) scores despite being categorized as small",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Well-optimized smaller architectures show promise for domain-specific applications",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RAG effectively mitigates hallucination concerns in religious and sensitive contexts",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Human evaluation introduces subjectivity in scoring; study limited to Quranic domain which may not generalize to other religious or sensitive domains; limited to open-source models only.",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does cluster-based semantic chunking improve retrieval and answer quality compared to fixed-size and recursive chunking for RAG systems on academic texts?",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluated different chunking strategies (cluster-based semantic, fixed-size, recursive) on long, structured academic theses using the Retrieval Augmented Generation Assessment (RAGAs) framework.",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RAGAs-based faithfulness metric shows limited reliability when evaluating RAG on academic theses",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance varied substantially between fixed questions versus document-specific questions",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Document formatting and preprocessing likely influenced retrieval and generation performance",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cluster-based semantic chunking did not outperform simpler fixed-size or recursive chunking strategies under the tested configuration",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The RAGAs faithfulness metric demonstrated limited reliability in this evaluation setup, and results may be specific to the tested configuration and academic thesis documents.",
+   "ids": [
+    "2607.01852"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can graph structures be leveraged to improve RAG's ability to capture complex relationships between knowledge pieces for intricate multi-source reasoning?",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed GFM-RAG with an 8M-parameter graph neural network trained in two stages on 60 knowledge graphs (14M+ triples) and 700k documents to reason over graph structures for query-knowledge relationships.",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "First graph foundation model applicable to unseen datasets for retrieval without any fine-tuning required",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art performance on three multi-hop QA datasets and seven domain-specific RAG datasets",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains efficiency while aligning with neural scaling laws",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Two-stage training on large-scale data enables impressive generalizability",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Graph structures may still contain noise and incompleteness affecting performance; training requires access to large-scale graph datasets which may not be available for all domains.",
+   "ids": [
+    "2502.01113"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can membership inference attacks be performed stealthily against RAG systems using natural-language queries that evade detection?",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed the Interrogation Attack (IA) that crafts natural-text queries answerable only when the target document is present in the RAG datastore, testing across diverse RAG configurations.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successful membership inference achieved with only 30 queries per document",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing detectors identify adversarial prompts from prior methods up to 76x more frequently than IA-generated queries",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved 2x improvement in TPR@1%FPR over prior inference attacks across diverse RAG configurations",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attack costs less than $0.02 per document inference",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation focused on specific RAG configurations and straightforward detectors; effectiveness against advanced defense mechanisms or query rewriting techniques requires further investigation.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can external knowledge be integrated more deeply into LLMs beyond the limitations of in-context knowledge injection in traditional RAG?",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced Parametric RAG, a new paradigm that integrates external knowledge directly into the parameters of feed-forward networks (FFN) of LLMs through document parameterization, eliminating the need for in-context document injection.",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parametric RAG reduces online computational costs by eliminating the need to inject multiple documents into the LLM's input context",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Direct integration of external knowledge into FFN parameters deepens knowledge integration into the LLM's parametric knowledge space",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experimental results show substantial improvements in both effectiveness and efficiency of knowledge augmentation compared to in-context methods",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parametric RAG can be combined with traditional in-context RAG methods to achieve even better performance",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires document parameterization and modifications to FFN layers, which may not be applicable to all LLM architectures or closed-source models where parameter access is restricted.",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can iterative refinement mechanisms improve the quality of retrieval-augmented text generation?",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presented LoRAG framework that integrates a generative model, retrieval mechanism, and dynamic loop module to enable iterative refinement of generated text through repeated interactions with retrieved information from the input context.",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRAG surpasses existing state-of-the-art models in BLEU score, ROUGE score, and perplexity on benchmark datasets",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The iterative loop mechanism effectively achieves both coherence and relevance in generated text",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qualitative assessment demonstrates LoRAG's capability to produce contextually rich and coherent outputs",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Iterative loops successfully mitigate common challenges in retrieval-augmented text generation",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper provides limited detail on computational overhead from iterative loops; specific benchmark datasets and comparison baselines are not fully specified in the available abstract.",
+   "ids": [
+    "2403.15450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can RAG address domain coverage and model size constraints for clients implementing generative AI in IT Support and AIOps?",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed a system combining RAG for answer generation with an encoder-only model for classification and a generative LLM for query generation, specifically designed for IT support case solution recommendation.",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RAG enables smaller models to leverage domain-specific retrieved knowledge, addressing both cost/privacy concerns and domain coverage limitations",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hybrid architecture combining RAG, encoder-only classification, and generative LLM for query generation effectively serves IT support domains",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Clients can avoid larger proprietary models like GPT-4 while still achieving adequate domain coverage through retrieval augmentation",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system architecture, data collection, annotation processes, and development journey provide practical lessons for similar deployments",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper presents preliminary validations with final deployment and evaluation plans still pending, indicating the system was not yet fully validated in production at time of publication.",
+   "ids": [
+    "2409.13707"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the semantic gap between LLMs and retrievers in RAG systems be addressed to improve generation quality?",
+   "ids": [
+    "2406.13249"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed R²AG framework that utilizes nuanced features from retrievers, employs a R²-Former to capture retrieval information, and uses a retrieval-aware prompting strategy to integrate retrieval information into LLMs' generation.",
+   "ids": [
+    "2406.13249"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "R²AG effectively bridges the semantic gap between retrievers and LLMs by incorporating retrieval information into the generation process",
+   "ids": [
+    "2406.13249"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Retrieval information serves as an anchor to aid LLMs during generation, reducing the burden of distinguishing retrieved documents",
+   "ids": [
+    "2406.13249"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework is particularly effective in low-resource scenarios where both LLMs and retrievers remain frozen",
+   "ids": [
+    "2406.13249"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments across five datasets validated the effectiveness, robustness, and efficiency of R²AG",
+   "ids": [
+    "2406.13249"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach is designed for scenarios where LLMs and retrievers are frozen, which may limit applicability in settings where model fine-tuning is available or desired.",
+   "ids": [
+    "2406.13249"
+   ]
+  }
+ ]
+}

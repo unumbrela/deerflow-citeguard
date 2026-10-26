@@ -1,0 +1,726 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2024) propose three necessary principles—observation (semantic invariance), prediction (spatial understanding), and regularization (non-degeneracy)—proving that omitting any principle admits degenerate solutions like constant encoders.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Colton (2025) analyzes how layer normalization in IJEPA disrupts the natural energy hierarchy of visual tokens, providing theoretical and empirical evidence that preserving token energies through alternative activations (DynTanh) improves downstream performance.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "He et al. (2025) introduce DSeq-JEPA, which bridges latent predictive and autoregressive learning by ordering predictions discriminatively based on visual saliency, mimicking human visual perception's progression from primary to secondary cues.",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Erdogan et al. (2025) propose LayerLock, exploiting the observation that ViT layers converge in depth order during training.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) address a different limitation—augmentation-based SSL methods excel at learning invariant features but neglect equivariant ones—by integrating image reconstruction as an auxiliary task that facilitates equivariant feature learning without additional parameters.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Munia et al. (2026) systematically compare pretrain-then-finetune (PFT) versus joint training (JT) paradigms across eight SSL methods and diverse domains.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Colton (2025) similarly optimizes training dynamics by replacing feature layer normalization with DynTanh activation in IJEPA, improving ImageNet linear probe accuracy from 38% to 42.7% for ViT-Small.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kuzucu et al. (2025) introduce LAVIE (Language-Adapted Vision Enhancer), which co-adapts Vision Transformers and LLM blocks through joint masked autoencoding.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) develop MiCo, which enables Chain-of-Thought reasoning in Vision-Language Models through self-supervised visual comparison tasks.",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cunha et al. (2026) examine SSL's role in robustness and generalization through face forgery detection benchmarks.",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2024), Wang et al. (2024), and He et al. (2025) all demonstrate that hybrid approaches—whether combining observation with prediction, invariant with equivariant learning, or parallel with sequential prediction—outperform single-objective methods.",
+   "ids": [
+    "2608.08309",
+    "2412.03314",
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Cunha et al. (2026) show DINOv3 maintains performance under realistic image degradations where supervised models fail, and Munia et al. (2026) find joint training improves cross-domain generalization.",
+   "ids": [
+    "2609.01511",
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Munia et al. (2026) find joint training superior in low-label, general domains, while pretrain-finetuning excels in specialized domains—challenging claims that JT universally dominates.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Similarly, while Giakoumoglou et al. (2024) argue all three principles (observation, prediction, regularization) are necessary, practical success of methods emphasizing only one or two principles (e.g., pure contrastive learning or pure masked prediction) suggests context-dependence their theory does not fully capture.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2024), Colton (2025), and Erdogan et al. (2025) all acknowledge their frameworks apply to particular methodological families, leaving open whether unified principles extend to contrastive, generative, and hybrid methods equally.",
+   "ids": [
+    "2608.08309",
+    "2508.02829",
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Only Cunha et al. (2026) explicitly evaluate under realistic degradation conditions.",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "While Erdogan et al. (2025) demonstrate LayerLock scales to 4B parameters, most papers evaluate on small-to-medium models, leaving unclear whether proposed improvements persist at frontier scales.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Kuzucu et al. (2025) and Chen et al. (2025) point toward SSL's role in adapting and extending foundation models, but the field lacks comprehensive frameworks for when to pretrain from scratch versus adapt existing models, and how SSL objectives interact with foundation model capabilities.",
+   "ids": [
+    "2507.00754",
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Vision-Language Models learn Chain-of-Thought reasoning across multiple images without relying on manually curated question-answer pairs?",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Constructs image triplets (two augmented views plus one distinct but similar image) and uses rule-based reinforcement learning to train models to generate reasoning processes for visual comparison tasks.",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Images contain inherent constraints sufficient for self-supervised reasoning training",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training solely on visual comparison enables generalization to diverse reasoning questions",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves significant improvements on multi-image reasoning benchmarks without human annotations",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method forces attention to subtle visual changes through high similarity and augmentations",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Trained only on visual comparison tasks, which may not capture all forms of complex multi-image reasoning; performance on highly abstract or domain-specific logical tasks needs further evaluation.",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does feature layer normalization affect IJEPA's ability to learn from the natural energy hierarchy of visual tokens?",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes replacing layer normalization with DynTanh activation at teacher encoder output to preserve natural token energies, evaluated on ImageNet classification and NYU Depth V2 depth estimation.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Feature layer normalization disrupts natural token energy hierarchy by equalizing L2 norms",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "IJEPA models with feature LN exhibit checkerboard-like artifacts in loss maps",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DynTanh preserves token energies and produces longer-tailed loss distributions",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ImageNet linear probe accuracy improves from 38% to 42.7% for ViT-Small",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RMSE reduces by 0.08 on NYU Depth V2 monocular depth estimation",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation limited to ViT-Small architecture and specific tasks; does not explore other normalization alternatives beyond DynTanh or test on larger model scales.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do face forgery detectors perform under realistic image degradations, and which input representations (spatial, spectral, or self-supervised) are most robust?",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents standardized benchmark using MFFI dataset, evaluating six model families across spatial, spectral, and hybrid representations on clean and degraded test partitions.",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Clean-set performance poorly predicts robustness under compression, resizing, and blurring",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Xception with RGB achieves best clean performance (0.884 ROC-AUC) but degrades substantially",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Frozen DINOv3 achieves strongest degraded-set result (0.726 ROC-AUC) with only linear head training",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fourier-domain cues most useful when combined with RGB; purely spectral inputs underperform",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Convolutional detectors focus on localized artifacts while DINOv3 uses broader facial structure",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Benchmark covers specific degradation types but may not capture all realistic conditions; frozen self-supervised backbones may not fully exploit representational capacity; does not address emerging forgery techniques.",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we accelerate MAE training and enable latent prediction without representation collapse by exploiting ViT layer convergence patterns?",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Observes ViT layers converge in depth order during video MAE training, then exploits this by progressively freezing layers according to explicit schedules throughout training.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ViT layers converge in depth order: shallower layers converge early, deeper layers converge late",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive layer freezing accelerates standard MAE training",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Same freezing schedule enables latent prediction without representation collapse",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LayerLock surpasses non-latent masked prediction on 4DS perception suite",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Approach scales to large models up to 4B parameters",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Freezing schedule design may require tuning for different architectures and tasks; primarily evaluated on video MAE models and may need adaptation for other SSL frameworks.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the necessary and sufficient principles for learning visual representations without labels?",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Formalizes three principles (observation, prediction, regularization) and proves theoretical claims through gradient analysis and convergence arguments, paired with controlled experiments including patch-retrieval evaluation.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining observation and prediction without regularization admits constant encoder as global minimizer",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Observation and prediction objectives are gradient-complementary and structurally non-conflicting",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Momentum encoder converges to same fixed point as online encoder with no collapse guarantee",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Contrastive alignment provides only self-limiting collapse resistance via gradient decay",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Every major SSL method is a special case of unified energy decomposition",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Theoretical framework focuses on specific architectural assumptions (negative-free alignment, momentum encoders) that may not capture all practical SSL variants; experimental validation at scale limited to studied configurations.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can JEPA-style learning incorporate sequential, discriminatively-ordered prediction to learn more transferable and discriminative visual representations?",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: DSeq-JEPA integrates discriminative ordering with JEPA by identifying primary discriminative regions via attention-derived saliency maps and predicting subsequent regions in discriminative order.",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sequential prediction with discriminative ordering bridges latent predictive and autoregressive learning",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DSeq-JEPA learns more discriminative and generalizable representations than I-JEPA variants",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improvements across ImageNet classification, fine-grained categorization (iNaturalist21, CUB, Stanford Cars)",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance gains extend to detection/segmentation (MS-COCO, ADE20K) and reasoning (CLEVR)",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Curriculum-like semantic progression mimics human visual perception",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Sequential prediction introduces computational complexity versus parallel I-JEPA; requires careful saliency map design and may need tuning for different architectures; not evaluated on video or temporal reasoning tasks.",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we effectively integrate LLM blocks with Vision Transformers for vision-only tasks despite modality mismatch between text-centric LLMs and vision-centric ViTs?",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces LAVIE framework that co-adapts ViT backbone and LLM fusion block through joint masked autoencoding, employing MAE for ViT pretraining and LoRA layers within LLM block.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LAVIE bridges modality gap through synergistic pre-training between ViT and LLM components",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint optimization guides ViT to produce LLM-aligned features",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA adaptation enables LLM to interpret visual information without full fine-tuning",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant improvement in various downstream vision tasks versus prior fusion approaches",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective and efficient enhancement of visual understanding using frozen LLM knowledge",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: LLM blocks remain partially frozen with only LoRA adaptation, potentially limiting full LLM capability exploitation; modality mismatch mitigated but not fully resolved.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does jointly optimizing self-supervised and supervised objectives during training provide a better alternative to standard pretrain-then-finetune pipelines?",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematically compares pretrain-finetuning versus joint training across eight SSL methods and diverse computer vision tasks on natural, medical, crisis response, and remote sensing data with varying label percentages.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Relative effectiveness of PFT and JT depends on task, label availability, and domain complexity",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint training improves data and training efficiency while robust in low-label settings",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pretrain-finetuning more reliable in specialized domains",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different representation quality, robustness, and cross-domain generalization characteristics",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Establishes comprehensive benchmark for hybrid SSL-based semi-supervised learning",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Results may not generalize to all SSL methods or domains beyond those tested; lacks theoretical analysis of why PFT performs better in specialized domains.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we facilitate equivariant feature learning in augmentation-based SSL without adding parameters, addressing the neglect of equivariant features?",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Integrates image reconstruction as auxiliary component in augmentation-based SSL, implementing cross-attention mechanism to blend features from two augmented views and reconstruct one.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reconstruction auxiliary facilitates equivariant feature learning without additional parameters",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Approach adaptable to various datasets and augmented-pair based learning methods",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant improvements over standard augmentation-based SSL and state-of-the-art approaches",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Particularly excels in scenarios involving combined augmentations",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enhances both invariant and equivariant features for more robust representations",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Reconstruction task may add computational overhead during training; evaluation on 3DIEBench and ImageNet may not cover all downstream task requirements.",
+   "ids": [
+    "2412.03314"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,445 @@
+{
+ "stats": {
+  "ambiguous": 15,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Song et al. (2024) demonstrated that 20% of IterSelectTune-selected data consistently outperformed models trained on complete datasets.",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dai et al. (2025) introduced BIDS, which normalizes influence scores and iteratively selects examples with highest influence on underrepresented tasks, addressing the bias problem in traditional influence-based methods.",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Han and Huang (2026) developed wICI, measuring how effectively each example reduces instruction-following difficulty for semantically related peers.",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) introduced MAmmoTH2, mining 10 million natural instruction-response pairs from web documents through a three-stage process of document recall, pair extraction, and refinement using open-source LLMs.",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2025) developed WebR, a fully automated framework using a dual-perspective paradigm where web documents serve as either instructions or responses.",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhao et al. (2025) introduced G2IS, constructing gradient-based instruction graphs to capture joint distributions and interdependencies between instructions.",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is strong consensus that 10-20% of carefully selected data suffices for optimal performance, with multiple papers independently converging on this range (Dai et al., 2025; Yang et al., 2025; Song et al., 2024; Zhang et al., 2025).",
+   "ids": [
+    "2501.12147",
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Influence-based methods (Dai et al., 2025; Yang et al., 2025) require gradient computation or multiple forward passes, while gradient-free approaches (Yang et al., 2025; Han & Huang, 2026) argue that in-context learning provides sufficient signal at lower computational cost.",
+   "ids": [
+    "2501.12147",
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also tension between selection from existing datasets versus synthesis from web corpora—mining approaches (Wang et al., 2024; Zhang et al., 2025; Jiang et al., 2025) argue that curated datasets are too limited, while selection methods assume sufficient diversity exists in source pools.",
+   "ids": [
+    "2405.03548",
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, most methods still require some reliance on strong LLMs (GPT-4 or similar) for either data synthesis, quality filtering, or evaluation—IterSelectTune (Song et al., 2024) explicitly notes \"limited reliance on GPT-4\" as a remaining cost.",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, computational costs of selection itself are often underreported: gradient-based methods (Zhao et al., 2025; Dai et al., 2025) require significant upfront computation that may offset training savings for smaller models.",
+   "ids": [
+    "2502.11062",
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the web-mining approaches (Wang et al., 2024; Zhang et al., 2025; Jiang et al., 2025) raise questions about data quality control and noise filtering that remain partially addressed—while they report strong benchmark performance, the risk of propagating web-scale biases and errors is not thoroughly analyzed.",
+   "ids": [
+    "2405.03548",
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can influence-based instruction tuning data selection be improved to achieve balanced performance across diverse capabilities rather than biasing toward high-influence tasks?",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed BIDS (Balanced and Influential Data Selection), which normalizes influence scores across tasks and iteratively selects examples with highest influence on the most underrepresented task.",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training on 15% BIDS-selected data outperformed full-dataset training with better balance across five diverse capabilities",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperformed state-of-the-art influence-based algorithms and non-influence-based frameworks on Llama-3 and Mistral-v0.3",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Instance-level normalization and iterative optimization are both critical for balanced learning",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Counterintuitively, biasing toward high-influence tasks harms performance on those same tasks",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; potential concerns include computational overhead of iterative influence computation and evaluation limited to seven benchmarks.",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What constitutes effective instruction tuning data from an in-context learning perspective, and does sample difficulty correlate with in-context influence?",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed wICI (weighted in-Context Influence), measuring how effectively each example reduces instruction-following difficulty for semantically related peers through systematic experiments across multiple models and benchmarks.",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sample difficulty negatively correlates with in-context influence—easier examples often have higher influence",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "wICI consistently outperforms existing baselines under constrained data budgets",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In-context influence translates positively to instruction tuning effectiveness",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective data from in-context perspective emphasizes reducing peer difficulty rather than maximizing individual quality",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; potential concerns include generalizability beyond tested models and benchmarks, and computational cost of pairwise influence measurement.",
+   "ids": [
+    "2604.25132"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can high-quality instruction-tuning data be synthesized directly from raw web documents without relying on seed data quality or strong structural assumptions?",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed WebR (Web Reconstruction), a fully automated framework using a dual-perspective paradigm where web documents serve as either instructions or responses to trigger reconstruction.",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "WebR-generated datasets outperformed state-of-the-art baselines by up to 16.65% across four instruction-following benchmarks",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrated superior compatibility, data efficiency, and scalability for domain adaptation",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Minimal assumptions about web document structure enable broader applicability",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fully automated synthesis eliminates manual curation burden",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; potential concerns include quality variability in raw web content and lack of explicit noise filtering mechanisms.",
+   "ids": [
+    "2504.15573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can high-quality instruction data be selected efficiently from large source datasets without significant human effort?",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced IterSelectTune, an iterative training policy for selecting high-quality instruction data with no human involvement and limited reliance on GPT-4, fine-tuning on approximately 20% of source data.",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models fine-tuned on 20% of source data consistently outperformed models trained on full datasets",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Required no human involvement in data selection process",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limited reliance on GPT-4 reduces costs compared to fully GPT-4-dependent methods",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrated effectiveness across multiple benchmarks and public test datasets",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The method still has limited reliance on GPT-4, and the iterative training process may introduce additional training time overhead not fully quantified.",
+   "ids": [
+    "2410.13464"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large-scale, high-quality instruction data be harvested from web corpus without costly human annotation or GPT-4 distillation?",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed MAmmoTH2, a three-stage paradigm: (1) recalling relevant documents from pre-training web corpus, (2) extracting instruction-response pairs, (3) refining extracted pairs using open-source LLMs, harvesting 10 million natural instructions.",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAmmoTH2-7B (Mistral) performance increased from 11% to 36.7% on MATH benchmark",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance increased from 36% to 68.4% on GSM8K without in-domain training data",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAmmoTH2-Plus achieved state-of-the-art performance on several reasoning and chatbot benchmarks",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully eliminated need for costly human crowd-sourcing or GPT-4 distillation",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Potential concerns include noise in web-extracted data, coverage bias in document recall, and quality variability in extracted instruction-response pairs not thoroughly analyzed.",
+   "ids": [
+    "2405.03548"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can instruction tuning data selection be improved for domain-specific tasks by considering joint distribution and interdependencies between instructions rather than just similarity to target domain?",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced G2IS (Gradient-based Graph Instruction Selection), constructing mixed gradient-based instruction graphs to capture joint distribution and interdependencies, combined with gradient walk algorithm for refined selection.",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperformed traditional similarity-based selection methods across various domain adaptation tasks",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved significant performance gains particularly in complex, data-scarce scenarios",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Accounting for instruction relationships improved domain adaptation efficiency",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gradient walk algorithm enhanced both training effectiveness and computational efficiency",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; potential concerns include computational cost of gradient-based graph construction and limited evaluation across diverse domain types.",
+   "ids": [
+    "2502.11062"
+   ]
+  }
+ ]
+}

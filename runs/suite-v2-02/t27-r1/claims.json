@@ -1,0 +1,419 @@
+{
+ "stats": {
+  "ambiguous": 9,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shaheer et al. (2025) trained multiple classifiers including LSTM, feed forward neural networks, Random Forest, and Naive Bayes on curated datasets from HackAPrompt Playground submissions.",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hung et al. (2024) introduced Attention Tracker, a training-free method that analyzes attention patterns within LLMs to identify the \"distraction effect\" where specific attention heads shift focus from original to injected instructions.",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2025) proposed DataSentinel, which formulates detection as a game-theoretic minimax optimization problem, using gradient-based fine-tuning to detect adaptive attacks that strategically evade existing methods.",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2026) developed WebSentinel specifically for web agents, employing a two-step approach that extracts potentially contaminated segments and evaluates their consistency with webpage content.",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hossain et al. (2025) developed a multi-agent LLM defense pipeline employing specialized agents in coordinated architectures, achieving 100% mitigation across 400 attack instances on ChatGLM and Llama2 platforms.",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2026) conducted the first systematic study of prompt injection attacks in real-world LLM-based resume screening applications, analyzing approximately 200,000 real-world resumes collected over multiple years.",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The multi-agent approach advocated by Hossain et al. (2025) achieves 100% mitigation but may introduce significant computational overhead compared to lighter-weight methods like Attention Tracker (Hung et al., 2024).",
+   "ids": [
+    "2509.14285",
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is implicit disagreement about whether detection should focus on training-based approaches (Shaheer et al., 2025; Liu et al., 2025) versus training-free methods (Hung et al., 2024), with trade-offs between adaptability and deployment complexity not fully resolved.",
+   "ids": [
+    "2512.12583",
+    "2504.11358",
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a multi-agent defense framework employing specialized LLM agents in coordinated pipelines detect and neutralize prompt injection attacks in real-time?",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors developed a multi-agent defense framework with two architectures (sequential chain-of-agents pipeline and hierarchical coordinator-based system) and evaluated it on 55 unique prompt injection attacks across 8 categories totaling 400 attack instances on ChatGLM and Llama2 platforms.",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-agent pipeline achieved 100% mitigation, reducing Attack Success Rate to 0% across all tested scenarios",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Baseline Attack Success Rates were 30% for ChatGLM and 20% for Llama2 without defense mechanisms",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework demonstrates robustness across multiple attack categories including direct overrides, code execution attempts, data exfiltration, and obfuscation techniques",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both sequential chain-of-agents and hierarchical coordinator-based architectures were evaluated",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2509.14285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: This paper investigates the underlying mechanisms of prompt injection attacks by analyzing attention patterns within large language models.",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyze attention patterns within LLMs to identify the 'distraction effect' where specific attention heads shift focus from original to injected instructions, and propose Attention Tracker, a training-free detection method that tracks attention patterns.",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Specific attention heads, termed 'important heads', shift focus from the original instruction to the injected instruction during prompt injection attacks",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attention Tracker is a training-free detection method that does not require additional LLM inference",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method shows an AUROC improvement of up to 10.0% over existing methods across diverse models, datasets, and attack types",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach performs well even on small LLMs and generalizes effectively across different scenarios",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the Attention Tracker method.",
+   "ids": [
+    "2411.00348"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can prompt injection attacks be detected effectively, including adaptive attacks that evade existing detection methods?",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors proposed DataSentinel, a game-theoretic method that formulates detection as a minimax optimization problem and uses a gradient-based approach to fine-tune an LLM by alternating between inner max and outer min problems to detect adaptive attacks.",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DataSentinel effectively detects both existing and adaptive prompt injection attacks",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The game-theoretic formulation uses minimax optimization to detect strategically adapted attacks",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method was evaluated on multiple benchmark datasets and LLMs",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing detection methods have limited effectiveness against state-of-the-art and adaptive attacks",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2504.11358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can prompt injection attacks be detected and mitigated in LLM-integrated web applications?",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors curated and augmented a prompt injection dataset based on the HackAPrompt Playground Submissions corpus and trained multiple classifiers including LSTM, feed forward neural networks, Random Forest, and Naive Bayes to detect malicious prompts.",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multiple classifier approaches (LSTM, feed forward neural networks, Random Forest, Naive Bayes) were trained for prompt injection detection",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dataset was curated and augmented from the HackAPrompt Playground Submissions corpus",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed approach improves prompt injection detection and mitigation capabilities",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method helps protect targeted applications and systems from compromise",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2512.12583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can prompt injection attacks in web agents be detected and localized effectively given the limitations of existing methods?",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors proposed WebSentinel, a two-step approach where Step I extracts segments of interest that may be contaminated from a webpage, and Step II evaluates each segment by checking its consistency with the webpage content as context.",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "WebSentinel is highly effective at detecting and localizing prompt injection attacks in webpages",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method substantially outperforms baseline methods across multiple datasets",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing methods achieve limited effectiveness as their underlying assumptions often do not hold in the web-agent setting",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The code is publicly available at https://github.com/wxl-lxw/WebSentinel",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2602.03792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: This paper presents the first systematic study of prompt injection attacks in real-world LLM-based resume screening applications.",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyze approximately 200K real-world resumes collected over multiple years by hireEZ, design tailored methods to detect prompt injection in resumes, and conduct a comprehensive measurement study after validating detector precision on a small-scale dataset.",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Approximately 1% of resumes contain hidden prompt injections",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The prevalence of injected resumes has increased noticeably over the past one to two years",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "More than 90% of injected prompts do not use explicit instructions",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The designed detectors achieve high precision and outperform state-of-the-art general-purpose detectors",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This provides the first evidence of large-scale prompt injection in real-world LLM-based applications",
+   "ids": [
+    "2605.28999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the detection methods or measurement study.",
+   "ids": [
+    "2605.28999"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,756 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Avinash (2026) demonstrates that routing in sparse transformers is not merely a load-balancing mechanism but exhibits task-conditioned structure, with prompts from the same task category inducing highly similar routing signatures (within-category similarity 0.8435 vs. across-category 0.6225, Cohen's d = 1.44).",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Theoretical work by Nguyen et al. (2025) provides convergence rate analysis for softmax gating mechanisms, showing that experts satisfying strong identifiability conditions require polynomially many data points for estimation, while those violating these conditions (such as linear experts) require exponentially many data points due to intrinsic parameter interactions expressible via partial differential equations.",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rokah et al. (2026) found that naively implemented conditional routing does not yield inference speedups on modern hardware at CIFAR10 scale, highlighting the implementation challenge of realizing MoE's theoretical efficiency benefits.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) proposed Heterogeneous MoE (HMoE), where experts vary in size to handle tokens of differing complexity.",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lu et al. (2024) addressed deployment efficiency through post-training expert pruning and skipping techniques, demonstrating that plug-and-play sparsification can simultaneously reduce model sizes and increase inference speed while maintaining performance across tasks.",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The multi-level MoE architecture proposed by Hu et al. (2025) applies mixture of experts at both intra-level and inter-level granularities for multimodal entity linking, using switch mechanisms to dynamically select features from relevant information regions.",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In multimodal settings, Hu et al. (2025) leveraged MoE for entity linking across text and images, while Shaabana et al. (2024) applied sparsely-gated MoE to video relationship detection, identifying language triplets in <subject, predicate, object> format.",
+   "ids": [
+    "2507.07108",
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rokah et al. (2026) specifically investigated MoE behavior in image classification, comparing dense, SoftMoE, and SparseMoE heads on CIFAR10.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nguyen and Ho (2025) analyzed parameter estimation in deviated Gaussian mixture of experts, constructing novel Voronoi-based loss functions that capture convergence rates of maximum likelihood estimation more accurately than generalized Wasserstein loss.",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rushing (2024) offered a philosophical and theoretical perspective, proving that MoE possesses greater functional capacity than equivalent Bayesian methods in the limiting case, explaining MoE's empirical superiority despite Bayesian methods' stronger inductive guarantees.",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hayes et al. (2024) identified a vulnerability in expert routing strategies with cross-batch dependencies, demonstrating that malicious queries can affect model outputs on benign queries when grouped in the same batch.",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Lu et al. (2024), Wang et al. (2024), and Hu et al. (2025) all demonstrate that expert specialization — whether through pruning, heterogeneity, or multi-level architectures — improves performance-efficiency tradeoffs.",
+   "ids": [
+    "2402.14800",
+    "2408.10681",
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Theoretical analyses by Nguyen et al. (2025) and Nguyen and Ho (2024) both emphasize the importance of identifiability conditions and algebraic structure in determining convergence rates.",
+   "ids": [
+    "2503.03213",
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While MoE architectures promise computational efficiency through conditional computation, Rokah et al. (2026) found that naive implementations do not yield inference speedups on modern hardware at CIFAR10 scale.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Scalability and Implementation: Multiple papers acknowledge that theoretical efficiency benefits require optimized implementations not yet realized on modern hardware (Rokah et al., 2026).",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Security and Robustness: Only one paper (Hayes et al., 2024) addresses security vulnerabilities, yet the identified cross-batch dependency vulnerability likely affects many production MoE systems.",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Expert Specialization Mechanisms: While heterogeneous architectures show promise (Wang et al., 2024), principled methods for determining expert count, size distribution, and specialization criteria remain underexplored.",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does MoE routing exhibit task-conditioned structure, or is it merely a load-balancing mechanism?",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced routing signatures as vector representations of expert activation patterns across layers, analyzed using OLMoE-1B-7B-0125-Instruct with permutation and load-balancing baselines for statistical validation.",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Within-category routing similarity (0.8435 ± 0.0879) significantly exceeds across-category similarity (0.6225 ± 0.1687), Cohen's d = 1.44",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Logistic regression achieves 92.5% ± 6.1% accuracy on four-way task classification using only routing signatures",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task structure becomes increasingly apparent in deeper layers",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Routing is a measurable task-sensitive component, not merely a balancing mechanism",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Analysis limited to single model architecture (OLMoE-1B-7B-0125-Instruct); generalizability to other MoE architectures and task domains requires further investigation.",
+   "ids": [
+    "2603.11114"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Are expert routing strategies with cross-batch dependencies vulnerable to adversarial attacks where malicious queries can affect model outputs on benign queries?",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Demonstrated a proof-of-concept attack in a toy experimental setting showing that malicious queries sent to MoE models can affect outputs on benign queries when grouped in the same batch due to cross-batch dependencies in routing strategies.",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Expert routing strategies with cross-batch dependencies create security vulnerabilities in MoE models",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Malicious queries can influence model behavior on benign queries through batch-level routing interactions",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The vulnerability represents a form of buffer overflow attack specific to MoE architectures",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proof-of-concept demonstration confirms theoretical vulnerability in experimental toy setting",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The attack is demonstrated only in a toy experimental setting, not on production-scale models.",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The practical impact on real-world MoE deployments and potential mitigation strategies are not explored.",
+   "ids": [
+    "2402.05526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Multimodal Entity Linking address mention ambiguity (lack of semantic content in textual context) and dynamic selection of relevant modal content?",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed MMoE model with four components: description-aware mention enhancement using LLMs to identify WikiData descriptions, multimodal feature extraction encoders, and intra-level and inter-level mixture of experts modules with switch mechanism to dynamically select features from relevant information regions.",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MMoE effectively mitigates mention ambiguity by leveraging LLMs to identify matching WikiData descriptions for mentions",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The switch mixture of experts mechanism enables adaptive selection of features from relevant information regions",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-level MoE architecture (intra-level and inter-level) improves multi-grained semantic matching",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments demonstrate MMoE outperforms state-of-the-art MEL approaches",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly discuss computational overhead of incorporating LLMs for description enhancement or scalability concerns.",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "No discussion of performance on low-resource languages or domains beyond WikiData.",
+   "ids": [
+    "2507.07108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can deployment efficiency of MoE LLMs be enhanced through expert-level sparsification techniques without requiring specialized hardware?",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed novel post-training approaches for both task-agnostic and task-specific expert pruning and skipping of MoE LLMs, designed as plug-and-play techniques to improve deployment efficiency.",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Expert pruning and skipping methods simultaneously reduce model sizes and increase inference speed",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance is maintained across a wide range of tasks despite parameter reduction",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Post-training sparsification approaches work without requiring specifically designed hardware",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both task-agnostic and task-specific pruning strategies are viable for MoE optimization",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Abstract does not explicitly acknowledge limitations; deployment challenges for immense parameter sizes remain a fundamental constraint even with pruning techniques.",
+   "ids": [
+    "2402.14800"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can parameter estimation in deviated Gaussian mixture of experts be accurately performed for goodness-of-fit testing when data may come from either a known function or a mixture distribution?",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Constructed novel Voronoi-based loss functions based on algebraic structure of expert functions and distinguishability between the known function g0 and mixture part to capture convergence rates of maximum likelihood estimation for deviated Gaussian mixture of experts models.",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Voronoi-based loss functions capture convergence rates of MLE more accurately than existing approaches",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed loss functions characterize local convergence rates of parameter estimation more precisely than generalized Wasserstein loss",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The algebraic structure of expert functions and distinguishability properties enable theoretical analysis of estimation convergence",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework addresses goodness-of-fit testing between null hypothesis (g0 only) and alternative hypothesis (full mixture)",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The work is primarily theoretical with focus on convergence rate analysis.",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The abstract does not discuss practical implementation, computational complexity of the Voronoi-based approach, or empirical validation on real-world datasets.",
+   "ids": [
+    "2402.05220"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the convergence rates for parameter and expert estimation in MoE models equipped with softmax gating mechanisms?",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Performed theoretical convergence analysis of parameter estimation and expert estimation under standard softmax gating and its variants, including dense-to-sparse and hierarchical softmax gating.",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experts satisfying strong identifiability conditions (e.g., two-layer feed-forward networks) require polynomially many data points for estimation",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Linear experts violating strong identifiability require exponentially many data points due to intrinsic parameter interactions",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parameter interactions can be expressed in the language of partial differential equations",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical results provide insights into sample-efficient expert structure design",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Theoretical analysis requires rigorous guarantee substantiation; practical implications for real-world MoE deployment need empirical validation.",
+   "ids": [
+    "2503.03213"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do MoE architectures behave in image classification settings regarding predictive performance, expert utilization, and generalization compared to dense models?",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Compared dense, SoftMoE, and SparseMoE classifier heads on CIFAR10 under comparable model capacity, using Hessian-based sharpness metrics and loss surface perturbation analyses to evaluate generalization.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both MoE variants achieve slightly higher validation accuracy than dense baseline while maintaining balanced expert utilization",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SoftMoE exhibits higher sharpness (largest eigenvalue and trace of loss Hessian) compared to Dense and SparseMoE",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All models achieve comparable generalization performance despite curvature differences",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Naively implemented conditional routing does not yield inference speedups on modern hardware at this scale",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qualitative differences exist in non-local behavior under finite parameter perturbations between dense and MoE models",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Gap between theoretical and realized efficiency in sparse MoE models; conditional routing benefits not realized on modern hardware without optimized implementation.",
+   "ids": [
+    "2601.15021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Why do MoE methods outperform Bayesian methods despite Bayesian approaches having stronger inductive guarantees?",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proved that MoE has greater functional capacity than equivalent Bayesian methods in the limiting case, then validated through experiments on non-limiting cases.",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MoE demonstrates greater functional capacity than equivalent Bayesian methods in the limiting case",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experimental results on non-limiting cases vouchsafe the theoretical proof",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MoE operates as a type of abductive reasoning in the Peircian sense of hypothesis construction",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Greater functional capacity explains MoE's superior performance despite weaker inductive guarantees",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Theoretical proof applies to limiting case while experiments conducted on non-limiting cases; connection between capacity and abductive reasoning requires further philosophical and empirical exploration.",
+   "ids": [
+    "2406.17150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can visual relationship detection overcome the computational/inference gap in connecting vision and language while improving model stability and generalization beyond monolithic neural networks?",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced MoE-VRD that identifies language triplets in <subject, predicate, object> format using multiple small expert models specializing in visual relationship learning and object tagging, with sparsely-gated mixture of experts enabling conditional computation without increasing computational complexity.",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multiple specialized experts outperform single monolithic networks in visual relationship detection",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparsely-gated MoE enables conditional computation, enhancing neural network capacity without additional computational complexity",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach effectively addresses action recognition requirements for establishing subject-object relationships",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MoE-VRD demonstrates superior performance compared to state-of-the-art visual relationship detection methods",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify the number of experts used or criteria for expert specialization.",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "No discussion of training complexity, convergence behavior, or performance on rare relationship types.",
+   "ids": [
+    "2403.03994"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can heterogeneous experts with varying sizes and capacities improve upon homogeneous MoE models for handling input data with varying complexity?",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed Heterogeneous MoE (HMoE) where experts differ in size and capacity, with a novel training objective that encourages frequent activation of smaller experts to enhance computational efficiency and parameter utilization while addressing expert activation imbalance.",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Heterogeneous experts with diverse capacities handle varying token complexity more effectively than homogeneous experts",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed training objective successfully encourages frequent activation of smaller experts",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HMoE achieves lower loss with fewer activated parameters compared to conventional homogeneous MoE",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HMoE outperforms homogeneous MoE models on various pre-training evaluation benchmarks",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Code release is pending acceptance, limiting reproducibility.",
+   "ids": [
+    "2408.10681"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The abstract does not discuss training overhead, expert size selection criteria, or potential challenges in balancing heterogeneous expert training.",
+   "ids": [
+    "2408.10681"
+   ]
+  }
+ ]
+}

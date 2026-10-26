@@ -1,0 +1,696 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yoa et al. (2026) propose a dynamic protocol where autonomous agents iteratively generate, validate, and solve problems, enabling progressive evaluation without manually curated datasets.",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Siyan et al. (2026) introduce DETOUR, a dual-agent benchmark that simulates tip-of-the-tongue search processes across multiple conversation turns, highlighting that current models achieve only 36% accuracy when evaluated on all modalities.",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhou et al. (2025) present CUFEInse v1.0, a comprehensive insurance domain benchmark with 14,430 questions spanning five core dimensions including actuarial capabilities, compliance, and intelligent agent application.",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) introduce Amazon-Bench for e-commerce web agents, covering diverse functionalities beyond simple product search, including account management and safety evaluation.",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qi et al. (2026) present TREK for travel planning, featuring 800 multi-constraint tasks with fully deterministic evaluation.",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shourya et al. (2025) introduce TRACE, demonstrating that existing evaluation methods fail to capture critical errors when agents misinterpret tool results yet appear satisfactory to users.",
+   "ids": [
+    "2510.19186"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Koren et al. (2026) propose a reference-free framework using LLM judges to assess benchmark quality itself across consistency, complexity, and policy coverage dimensions.",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2026) evaluate memory methods across 12 diverse domains for lifelong personalization, revealing that existing methods are far from user satisfaction.",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Koren et al. (2026) explicitly address this gap, noting that benchmark quality is rarely assessed despite its critical role in reliable agent evaluation.",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shu et al. (2024) present comprehensive evaluation of coordination and routing capabilities in multi-agent collaboration frameworks, finding that multi-agent collaboration enhances goal success rates by up to 70% compared to single-agent approaches, with coordination modes achieving 90% end-to-end success.",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2025) focus on AI-driven code generation agents, evaluating correctness and execution speed on GPU kernel generation tasks.",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, there is unanimous agreement that existing evaluation methods are inadequate for capturing the complexity of real-world agent behavior, with multiple papers documenting significant gaps between benchmark performance and actual capability (Shourya et al., 2025; Siyan et al., 2026; Qi et al., 2026).",
+   "ids": [
+    "2510.19186",
+    "2602.00352",
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Some emphasize domain-specific benchmarks (Zhou et al., 2025; Zhang et al., 2025; Qi et al., 2026), while others advocate for general frameworks applicable across domains (Koren et al., 2026; Yoa et al., 2026).",
+   "ids": [
+    "2511.07794",
+    "2508.15832",
+    "2607.26977",
+    "2608.06329",
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also variation in evaluation methodology: some papers use fully deterministic, rule-based evaluators (Qi et al., 2026), while others rely on LLM judges (Koren et al., 2026) or human annotation (Siyan et al., 2026).",
+   "ids": [
+    "2607.26977",
+    "2608.06329",
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, safety evaluation receives attention in only one paper (Zhang et al., 2025), despite its critical importance for real-world agent deployment.",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we assess the quality of benchmarks used to evaluate task-oriented conversational agents?",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a reference-free framework that uses LLM judges to assess benchmark consistency, complexity, and policy coverage while providing actionable diagnostics, validated through agreement with human annotations and controlled quality-degrading perturbations.",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed metrics consistently distinguish between benchmark quality levels across domains and judge models",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Poor benchmarks may contain inconsistent tasks, simplistic scenarios, or limited policy coverage, leading to unreliable evaluations",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework is applicable to both synthetic and manually curated benchmarks",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Benchmark quality is rarely assessed despite its critical role in reliable agent evaluation",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2608.06329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can LLM agents produce fully feasible travel itineraries that are jointly constraint-correct, hallucination-free, spatio-temporally executable, budget-valid, and responsive to unstated traveler needs?",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: TREK comprises 800 multi-constraint tasks (533 feasible, 267 provably infeasible) over a synthetic knowledge base of 212,530 records across 375 cities and 13 personas, served through validated RESTful APIs, with a fully deterministic, rule-based evaluator and human-verified gold references.",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TREK is the first benchmark for feasible itinerary synthesis with fully deterministic, reproducible evaluation",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Even the strongest model (GPT-5.6) produces fully-feasible plans on only 46.2% of solvable tasks",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The median performance across 15 LLM agents is 6.6%, with a floor of 0.0%",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Satisfying travelers' unstated needs emerges as the universal bottleneck, unsolved even at the frontier",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2607.26977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we evaluate conversational AI systems that use external tools when errors can arise from complex interactions among users, agents, and tools?",
+   "ids": [
+    "2510.19186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce TRACE, a benchmark of systematically synthesized tool-augmented conversations covering diverse error cases, evaluated using state-of-the-art conversation evaluation frameworks to assess their ability to capture critical errors in multi-turn tool-augmented dialogues.",
+   "ids": [
+    "2510.19186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing evaluation methods fail to capture critical errors in multi-turn tool-augmented dialogues, such as when agents misinterpret tool results yet appear satisfactory to users",
+   "ids": [
+    "2510.19186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All state-of-the-art conversation evaluation approaches remain far from ideal performance on the TRACE benchmark",
+   "ids": [
+    "2510.19186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark demonstrates the fundamental difficulty of evaluating tool-augmented conversational AI systems",
+   "ids": [
+    "2510.19186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2510.19186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can coordination protocols and evaluation methods be designed for effective multi-agent collaboration systems in enterprise applications?",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a comprehensive evaluation of coordination and routing capabilities in a novel multi-agent collaboration framework, testing two operational modes (coordination with parallel communication and payload referencing, and routing for efficient message forwarding) on handcrafted scenarios from three enterprise domains.",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent collaboration enhances goal success rates by up to 70% compared to single-agent approaches",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The coordination mode achieved end-to-end goal success rates of 90%",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Payload referencing improves performance on code-intensive tasks by 23%",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latency can be substantially reduced with a routing mechanism that selectively bypasses agent orchestration",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we better evaluate agent capabilities in tip-of-the-tongue search processes that occur over multiple conversation turns?",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce DETOUR, a dual-agent evaluation benchmark with 1,011 prompts.",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The design involves a Primary Agent (the subject of evaluation) that queries a consistent Memory Agent to identify recollected entities across multiple turns, simulating realistic search processes.",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current state-of-the-art models achieve only 36% accuracy on the DETOUR benchmark when evaluated on all modalities (text, image, audio, and video)",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing benchmarks are restricted to single-turn settings, which do not realistically simulate tip-of-the-tongue search processes",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark highlights the importance of enhancing agent capabilities in underspecified scenarios",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2602.00352"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can AI-driven code generation be used to automatically produce performant Triton GPU kernels for AMD hardware?",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present GEAK, a framework that leverages large language models with inference-time compute scaling and a Reflexion-style feedback loop to generate Triton-based GPU kernels, evaluated on two benchmarks measuring correctness and execution speed on AMD MI300X and MI250 GPUs.",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GEAK achieved up to 63% correctness on evaluation benchmarks",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GEAK demonstrated execution speedups of up to 2.59X compared to baselines",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework significantly outperformed direct prompting of frontier LLMs and standard Reflexion-based generation pipelines",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Triton has emerged as a popular target for AI-generated kernels due to its balance of performance and ease-of-coding",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2507.23194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM evaluation move beyond static datasets to capture evolving reasoning capabilities through dynamic, agent-centric protocols?",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a dynamic protocol where autonomous agents iteratively generate, validate, and solve problems: a teacher agent generates candidates, an orchestrator validates them and guards against adversarial attacks, and a student agent attempts solutions, with invalid problems revised until passing validation and solved problems triggering more challenging variants.",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The agent-centric protocol enables progressive evaluation without manually curated datasets",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Text anomaly detection demands cross-sentence logical inference and resists pattern-matching shortcuts",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The protocol systematically exposes corner-case reasoning errors that conventional benchmarks fail to reveal",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark scales in difficulty automatically as more capable agents are substituted into any role",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2602.23729"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can web agent benchmarks better capture the full range of e-commerce functionalities and evaluate safety risks beyond simple product search tasks?",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Amazon-Bench, a new benchmark that uses a data generation pipeline leveraging webpage content and interactive elements to create diverse, functionality-grounded user queries, with an automated evaluation framework assessing both performance and safety of web agents.",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current e-commerce benchmarks focus primarily on product search, missing broader functionalities like account management and gift card operations",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing benchmarks ignore potential safety risks when agents make unintended changes to user accounts",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Amazon-Bench covers diverse tasks including address management, wish list management, and brand store following",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current agents struggle with complex queries and pose safety risks in e-commerce settings",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2508.15832"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do existing LLM memory methods perform in evaluating lifelong, cross-domain user personalization using real-world behavioral data?",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce MemoryCD, a large-scale benchmark derived from the Amazon Review dataset that tracks authentic user interactions across years and multiple domains, evaluating 14 LLM base models with 6 memory method baselines on 4 personalization tasks over 12 diverse domains.",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MemoryCD is the first user-centric, cross-domain memory benchmark using lifelong real-world behaviors rather than synthetic dialogues",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark evaluates agents across 12 diverse domains to assess single and cross-domain personalization capabilities",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing memory methods are far from user satisfaction across various domains",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MemoryCD provides the first testbed for cross-domain life-long personalization evaluation",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2603.25973"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a comprehensive evaluation benchmark be constructed to assess large language models' capabilities in the insurance domain?",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper presents CUFEInse v1.0, a benchmark with an evaluation framework covering 5 core dimensions, 54 sub-indicators, and 14,430 high-quality questions spanning insurance theoretical knowledge, industry understanding, safety and compliance, intelligent agent application, and logical rigor, used to conduct comprehensive evaluations on 11 mainstream large language models.",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "General-purpose models suffer from common bottlenecks including weak actuarial capabilities and inadequate compliance adaptation",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High-quality domain-specific training demonstrates significant advantages in insurance vertical scenarios but exhibits shortcomings in business adaptation and compliance",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The evaluation identifies common bottlenecks of current large models in professional scenarios such as insurance actuarial, underwriting and claim settlement reasoning, and compliant marketing copywriting",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CUFEInse fills the gap in professional evaluation benchmarks for the insurance field, providing a professional, systematic, and authoritative evaluation tool",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark's construction concept and methodology offer important references for the evaluation paradigm of large models in vertical fields",
+   "ids": [
+    "2511.07794"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2511.07794"
+   ]
+  }
+ ]
+}

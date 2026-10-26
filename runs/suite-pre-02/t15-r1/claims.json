@@ -1,0 +1,814 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Church et al. (2026) introduced the concept of \"Opportunistic Promptable Segmentation,\" extracting routine radiological annotations (line measurements and arrows) stored in PACS as GSPS objects and converting them into 3D segmentations using SAM2CT, a model that extends SAM2's prompt encoder to support these annotation types.",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) took a different approach with SegAnyPET, training a universal promptable segmentation foundation model on 10,000+ PET scans covering multiple organs and tracers.",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Karam et al. (2025) demonstrated that promptable segmentation can be achieved with remarkably minimal data—only 24 fully-segmented images plus 8 weakly-labeled images for prostate cancer segmentation.",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jeong et al. (2026) introduced MV-SAM for multi-view segmentation, achieving 3D consistency using pointmaps—3D points reconstructed from unposed images by visual geometry models.",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rukhman et al. (2026) explored training-free open-vocabulary 3D detection for autonomous vehicles by querying SAM3 with class names as text prompts to generate instance masks from surround-view cameras, then converting masks to metric 3D boxes using scene geometry.",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2025) extended promptable segmentation into the audio-visual domain with AuralSAM2, integrating audio into SAM2 while preserving its interactive efficiency.",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hu et al. (2025) addressed task-generic promptable segmentation, where a single task description should segment diverse samples without instance-specific prompts.",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In earlier work, Hu et al. (2024) proposed ProMaC, which leverages MLLM hallucinations constructively rather than eliminating them.",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Moskalenko et al. (2026) critically examined prompt robustness with BREPS, revealing that SAM-like models are highly sensitive to natural bounding box prompt noise.",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liang et al. (2026) introduced CAFE (Counterfactual Attribute Factuality Evaluation), a benchmark with 2,146 paired test samples built on attribute-level counterfactual manipulation.",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rukhman et al. (2026) noted that SAM3 finds 84% of in-range objects with correctly named masks, but failures occur on misnamed or geometrically challenging classes rather than truly unseen objects.",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Moskalenko et al. (2026) demonstrated that models are highly sensitive to natural prompt variations, suggesting brittle rather than robust understanding of segmentation tasks.",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the strategy of extending pre-trained models rather than training from scratch (Church et al., 2026; Jeong et al., 2026; Liu et al., 2025; Rukhman et al., 2026).",
+   "ids": [
+    "2602.00309",
+    "2601.17866",
+    "2506.01015",
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that annotation costs remain a primary bottleneck, particularly in medical imaging, motivating approaches that leverage existing annotations or minimize required labeled data (Church et al., 2026; Karam et al., 2025; Zhang et al., 2025).",
+   "ids": [
+    "2602.00309",
+    "2505.17915",
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Hu et al. (2024, 2025) assume MLLMs can generate meaningful instance-specific prompts from task-generic descriptions, while Liang et al. (2026) demonstrate that models fail to faithfully ground queried concepts under counterfactual evaluation.",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Semantic grounding mechanisms: Despite impressive mask quality, models rely on visually salient shortcuts rather than faithful concept grounding (Liang et al., 2026).",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Cross-domain generalization limits: While multiple papers demonstrate zero-shot generalization to unseen organs, tracers, or object classes (Rukhman et al., 2026; Zhang et al., 2025), the boundaries of this generalization remain poorly understood.",
+   "ids": [
+    "2609.19358",
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Karam et al. (2025) demonstrated their approach only on prostate cancer, leaving open whether minimal-data strategies generalize to other cancer types.",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Real-world prompt robustness: BREPS revealed high sensitivity to natural bounding box variations (Moskalenko et al., 2026), but practical solutions remain limited.",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Measurement precision in 3D applications: Rukhman et al. (2026) identified measurement precision as the primary bottleneck in training-free 3D detection, not 2D segmentation quality.",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Audio-visual integration depth: AuralSAM2 addresses audio prompt dilution (Liu et al., 2025), but the broader question of how to achieve deep multimodal understanding rather than shallow feature fusion remains open across all cross-modal extensions.",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can sparse radiologist annotations (line measurements and arrows) stored in PACS as GSPS objects be extracted and converted into 3D segmentations using promptable segmentation models?",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: SAM2CT extends SAM2 by modifying the prompt encoder to support arrow and line inputs, and introduces Memory-Conditioned Memories (MCM), a memory encoding strategy specifically tailored for 3D medical volumes to convert routine radiological annotations into 3D segmentations.",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves Dice similarity coefficients of 0.649 for arrow prompts and 0.757 for line prompts on public lesion segmentation benchmarks",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms existing promptable segmentation models and similarly trained baselines",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "87% of 3D segmentations generated from 60 clinical PACS GSPS annotations were clinically acceptable or required only minor adjustments",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates strong zero-shot performance on select Emergency Department findings",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Large-scale mining of historical GSPS annotations represents a promising and scalable approach for generating 3D CT segmentation datasets",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: 13% of cases required more than minor adjustments, indicating the method is not universally applicable; zero-shot performance was only demonstrated on select Emergency Department findings rather than comprehensively.",
+   "ids": [
+    "2602.00309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can MLLM hallucinations be leveraged constructively to reduce manual prompt dependency in task-generic promptable segmentation rather than being eliminated?",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: ProMaC introduces an iterative Prompt-Mask Cycle generation framework with a prompt generator using multi-scale chain of thought prompting to initially explore hallucinations for extracting extended contextual knowledge, then reduces hallucinations to formulate precise instance-specific prompts, while a mask generator produces semantically aligned masks that iteratively refine the prompt generation process.",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MLLM hallucinations can reveal valuable contextual insights representing pre-trained large-scale knowledge beyond individual images when leveraged correctly",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The iterative cycle between prompt and mask generation progressively focuses on task-relevant image areas while reducing irrelevant hallucinations",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-scale chain of thought prompting effectively extracts extended contextual knowledge from test images",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments on 5 benchmarks demonstrate the effectiveness of the ProMaC framework",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach successfully reduces manual prompt dependency while improving segmentation accuracy",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The effectiveness depends on the quality of initial hallucinations and the MLLM's reasoning capabilities; the iterative process may increase computational overhead compared to single-pass methods.",
+   "ids": [
+    "2408.15205"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we improve instance-specific prompt generation for task-generic promptable segmentation when Vision-Language Models struggle to generalize to certain image instances?",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: INT introduces instance-specific negative mining that adaptively reduces the influence of irrelevant prior knowledge while increasing the use of plausible prior knowledge through higher-contrast negative mining.",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach consists of two components: instance-specific prompt generation that progressively filters incorrect information, and semantic mask generation that ensures segmentation matches the semantics of instance-specific prompts.",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "INT effectively addresses poor instance-specific prompt prediction when VLMs struggle to generalize to certain image instances",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The negative mining approach successfully increases contrast to select more plausible prior knowledge",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Validated across six diverse datasets including camouflaged objects and medical images",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates strong effectiveness, robustness, and scalability in task-generic promptable segmentation",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the approach's effectiveness depends on the underlying VLM's ability to generate meaningful prompts even with negative mining.",
+   "ids": [
+    "2501.18753"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-view segmentation achieve 3D consistency without requiring costly per-scene optimization or explicit 3D networks and annotated 3D data?",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces MV-SAM that leverages pointmaps (3D points reconstructed from unposed images by visual geometry models) to lift image embeddings from SAM's pretrained encoder into 3D point embeddings, decoded by a transformer using cross-attention with 3D prompt embeddings and 3D positional embeddings for implicit cross-view consistency.",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 3D consistency using pointmaps without explicit 3D networks or annotated 3D data",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms SAM2-Video on multi-view segmentation benchmarks",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves comparable performance with per-scene optimization baselines on NVOS, SPIn-NeRF, ScanNet++, uCo3D, and DL3DV benchmarks",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trained on SA-1B dataset, the method generalizes well across different domains",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eliminates the need for costly per-scene optimization to enforce 3D consistency",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Relies on pointmaps from recent visual geometry models which may have their own accuracy limitations; the approach requires pixel-point one-to-one correspondence from pointmaps, which may not be available or reliable in all scenarios.",
+   "ids": [
+    "2601.17866"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can promptable segmentation for cancer on medical images be achieved with minimal expert-curated annotations while maintaining performance comparable to fully-supervised methods?",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes a novel approach using only 24 fully-segmented images supplemented by 8 weakly-labeled images for training, leveraging two classifiers (one weakly-supervised and one fully-supervised) to refine segmentation through a guided search process initiated by a single-point prompt.",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms existing promptable segmentation methods on prostate cancer segmentation",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performs comparably with fully-supervised methods while using up to 100× less annotated data",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Requires only 24 fully-segmented images plus 8 weakly-labeled images for training",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables promptable segmentation with minimal labeled data that can be curated to very high standards",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mitigates issues with cost and inter-observer variability in obtaining expert annotations",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Demonstrated only on prostate cancer segmentation task; the approach requires careful curation of minimal data to high standards, and generalization to other cancer types or medical imaging modalities remains unverified.",
+   "ids": [
+    "2505.17915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do promptable segmentation models faithfully ground queried concepts or instead rely on visually salient but semantically misleading cues when generating masks?",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces CAFE (Counterfactual Attribute Factuality Evaluation), a benchmark built on attribute-level counterfactual manipulation where target regions and ground-truth masks are preserved while attributes like surface appearance, context, or material composition are modified, containing 2,146 paired test samples across three counterfactual categories: Superficial Mimicry, Context Conflict, and Ontological Conflict.",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reveals a systematic gap between localization quality and concept discrimination in promptable segmentation models",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models often generate accurate masks even for misleading prompts, suggesting strong mask prediction does not imply faithful semantic grounding",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models rely on visually salient but semantically misleading cues rather than faithfully grounding queried concepts",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The CAFE benchmark provides controlled evaluation across three counterfactual categories (SM, CC, OC) with 2,146 paired test samples",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Various model types and sizes all exhibit the concept-faithful grounding problem to varying degrees",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark focuses on three specific counterfactual categories which may not capture all forms of semantic misunderstanding; evaluation is limited to concept-faithful grounding and does not assess other aspects of segmentation model understanding or real-world application performance.",
+   "ids": [
+    "2605.09591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can audio be integrated into SAM2 for promptable segmentation in video clips while preserving interactive efficiency and avoiding audio prompt dilution?",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes AuralSAM2 with an AuralFuser module that fuses audio and visual features to generate sparse and dense prompts guided by audio and built upon SAM2's feature pyramid, plus an audio-guided contrastive loss that emphasizes auditory relevance in dominant visual features to align modalities.",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrates audio into SAM2 while largely preserving its promptable segmentation capability",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Addresses audio prompt dilution problem where audio signal weakens as it propagates through the network",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves notable accuracy gains on public benchmarks",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Has only minimal impact on the interactive efficiency of promptable segmentation",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Avoids increased inference overhead compared to adapter-based audio-visual fusion methods",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Audio-visual integration still faces challenges with audio prompt dilution through network layers; the method's performance across diverse audio-visual scenarios and its robustness to varying audio quality conditions require further investigation.",
+   "ids": [
+    "2506.01015"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How robust are promptable segmentation models like SAM to natural variations in bounding box prompts that occur in real-world usage?",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conducted a controlled user study collecting thousands of real bounding box annotations to analyze variability, then reformulated robustness evaluation as a white-box optimization problem over the bounding box prompt space to generate adversarial bounding boxes that minimize or maximize segmentation error while maintaining naturalness constraints.",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAM-like models are highly sensitive to natural prompt noise, with substantial variability in segmentation quality across users for the same model and instance",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current training and evaluation protocols using synthetic prompts generated through simple heuristics offer limited insight into real-world robustness",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BREPS successfully generates adversarial bounding boxes that reveal model vulnerabilities while adhering to naturalness constraints",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "State-of-the-art models were benchmarked across 10 datasets spanning everyday scenes to medical imaging, revealing consistent robustness concerns",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Exhaustive testing of all possible user inputs is computationally prohibitive, necessitating the optimization-based approach; the method focuses on bounding boxes rather than other prompt types like points or text.",
+   "ids": [
+    "2601.15123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can 3D object detection for autonomous vehicles be solved training-free and open-vocabulary without relying on fixed category lists from human-annotated training data?",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Uses SAM3 (a promptable segmentation model) queried with class names as text prompts to supply instance masks from six surround-view cameras, then converts masks to metric 3D boxes using scene geometry through a controlled three-stage comparison on nuScenes where 2D detection is held fixed and only the 3D geometry source changes.",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Geometry predicted from images alone reaches 0.183 mAP under the official nuScenes protocol",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training-free box fitting from raw LiDAR points inside SAM3 masks achieves 0.298 mAP / 0.348 NDS at zero labeling cost",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Borrowing supervised box geometry at inference time lifts performance to 0.413 mAP / 0.555 NDS, revealing the pipeline's largest deficit is in measurement precision rather than 2D detection",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A three-state camera-witness rule built from SAM3 masks improves a supervised LiDAR-only detector from 0.596 to 0.630 mAP (roughly half the gain of fully supervised camera fusion) with no training",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAM3 finds 84% of in-range objects with correctly named masks; failures occur on misnamed or geometrically unforgiving classes, not unseen objects",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The main performance deficit lies in measurement precision rather than 2D detection, and class confusion and confidence calibration issues persist even when substituting better geometry; the approach fails on classes that are misnamed or geometrically challenging rather than truly unseen.",
+   "ids": [
+    "2609.19358"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a universal promptable segmentation foundation model be developed for PET images that overcomes the limitations of insufficient annotation data and varying annotation levels in existing methods?",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: SegAnyPET is trained on a large-scale PET dataset with 10,000+ scans covering multiple organs and tracers, employing a promptable segmentation architecture that supports multiple prompt types including points, boxes, and masks to achieve universal segmentation capabilities for PET imaging.",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SegAnyPET achieves state-of-the-art performance on multi-organ segmentation tasks in PET imaging",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model exhibits strong zero-shot generalization to unseen organs and tracers",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training on 10,000+ PET scans provides sufficient diversity to overcome annotation data limitations",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The promptable architecture successfully adapts segmentation foundation models to molecular PET images with functional rather than structural information",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supports multiple prompt types (points, boxes, masks) for versatile clinical application",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: PET images contain functional information rather than detailed physiological structural information, which may limit applicability compared to structural imaging modalities; the abstract does not address performance on rare organs or tracers not represented in the training dataset.",
+   "ids": [
+    "2502.14351"
+   ]
+  }
+ ]
+}

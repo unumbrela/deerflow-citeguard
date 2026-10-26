@@ -1,0 +1,791 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ataee et al. (2025) showed that CoT reasoning improves context-aware translation, with best models achieving approximately 90% accuracy on discrimination tasks and COMET scores reaching about 92% on generation tasks.",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Wang and Singh (2025) found that multi chain-of-thought reasoning helps mitigate LLM hallucination in educational question-answering systems, enabling more reliable responses to student queries on course forums.",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2026) extended CoT reasoning to multimodal domains, demonstrating that their ViS-CoT pipeline achieves an average improvement of 17.91 percentage points in micro-F1 for attribute value extraction from product videos.",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ai (2026) formulated LLM reasoning as a guided discovery process on a clue graph and derived a one-dimensional ordinary differential equation using mean-field approximation.",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang et al. (2025) conducted fine-grained lexical-level analysis to understand how in-context learning and pretrained priors interact to enable CoT reasoning.",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bharadwaj (2024) investigated hidden computations in CoT reasoning by analyzing layer-wise representations using the logit lens method.",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Mansha (2025) addressed the challenge of fine-tuning models for medical CoT reasoning under constrained computational resources.",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Agrahari and Singh (2025) proposed using CoT reasoning to detect AI-generated text and identify the specific language model that generated it.",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Turpin et al. (2025) tackled the problem of reward hacking in reinforcement learning by teaching models to verbalize when they are influenced by prompt cues.",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jin et al. (2026) conducted a systematic evaluation of multimodal CoT reasoning across 12 tasks and 22 models, finding that CoT can actually reduce performance on perception tasks such as visual grounding and object counting.",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, CoT reasoning provides substantial benefits for tasks requiring multi-step inference, logical reasoning, and contextual understanding (Ataee et al., 2025; Wu et al., 2026; Wang & Singh, 2025).",
+   "ids": [
+    "2510.18077",
+    "2609.06410",
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, models heavily rely on pretrained priors rather than learning purely from in-context examples (Yang et al., 2025; Bharadwaj, 2024).",
+   "ids": [
+    "2509.01236",
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, CoT reasoning can enhance transparency and interpretability when properly designed (Agrahari & Singh, 2025; Turpin et al., 2025).",
+   "ids": [
+    "2504.16913",
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Fourth, parameter-efficient methods can adapt models for CoT reasoning without prohibitive computational costs (Mansha, 2025).",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While most papers demonstrate positive effects of CoT reasoning, Jin et al. (2026) show that CoT can reduce performance on perception tasks, challenging the assumption that CoT is always beneficial.",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is disagreement about the extent to which models truly \"learn\" from CoT exemplars versus relying on pretrained priors—Yang et al. (2025) suggest sufficient exemplars can shift models toward in-context signals, while Bharadwaj (2024) shows models can perform reasoning even with filler characters, suggesting deep reliance on pretrained knowledge.",
+   "ids": [
+    "2509.01236",
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Limited theoretical understanding: Despite progress (Ai, 2026; Bharadwaj, 2024), most papers do not provide formal theoretical explanations for why CoT reasoning works.",
+   "ids": [
+    "2608.05152",
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Domain-specific evaluation: While medical reasoning (Mansha, 2025) and translation (Ataee et al., 2025) have received attention, many domains lack systematic evaluation of CoT effectiveness.",
+   "ids": [
+    "2510.05003",
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can theoretical explanations of chain-of-thought reasoning behavior in LLMs be developed without simplifying model architecture?",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The author formulates LLM reasoning as a guided discovery process on a clue graph and derives a one-dimensional ordinary differential equation using mean-field approximation.",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Clue tokens are identified using normalized surprisal of a student LLM on teacher LLM outputs.",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A theoretical framework explains LLM reasoning without architectural simplification",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Statistical regularities in reasoning can be captured by a one-dimensional ODE",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The derived statistical regularities are reproducible within the same dataset",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experimental results can be fitted by solving the proposed theoretical equation",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2608.05152"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can chain-of-thought reasoning be used to detect AI-generated text and identify the specific language model that generated it?",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose COT Fine-tuned, a dual-task framework where Task A classifies text as AI-generated or human-written, and Task B identifies the specific LLM.",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Chain-of-thought reasoning generates explanations for predictions.",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "COT Fine-tuned achieves high accuracy in both AI detection and LLM identification tasks",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Chain-of-thought reasoning enhances transparency and interpretability of predictions",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The CoT reasoning process contributes significantly to the model's effectiveness",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework addresses concerns about academic integrity and misinformation",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2504.16913"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can large language models effectively translate texts with inter-sentential dependencies, and does chain-of-thought reasoning improve their performance?",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors evaluate 12 LLMs from five families on the DiscEvalMT benchmark using two tasks: distinguishing correct from incorrect translations and generating translations.",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They compare prompts with and without chain-of-thought reasoning.",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Best models using reasoning achieve approximately 90% accuracy on the discrimination task",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "COMET scores reach about 92% on the generation task with chain-of-thought reasoning",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GPT-4, GPT-4o, and Phi models perform particularly well",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A 'wise get wiser' effect is observed: models that already perform well show larger improvements from reasoning",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2510.18077"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do transformer models internally process and represent reasoning steps when chain-of-thought is replaced with filler characters?",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The author investigates methods to decode hidden characters in transformer models trained with filler CoT sequences by analyzing layer-wise representations using the logit lens method and examining token rankings.",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hidden characters in filler CoT sequences can be recovered without loss of performance",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Layer-wise representation analysis using logit lens reveals how models internally process reasoning",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Token ranking examination provides insights into hidden computation mechanisms",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The findings open avenues for improving interpretability and transparency in language model reasoning",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models can perform complex reasoning tasks even when CoT is replaced with filler characters",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2412.04537"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What can multimodal Chain-of-Thought reasoning do effectively, and where and why does it fall short?",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors evaluate 12 multimodal tasks across perception and reasoning categories using 14 non-reasoning models and 8 reasoning models to systematically investigate the effectiveness and limitations of multimodal CoT reasoning.",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoT is not universally beneficial and should be used selectively depending on task requirements",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "For perception tasks, CoT can reduce performance in visual grounding and object counting",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoT proves effective for reasoning tasks involving mathematical, scientific, and multi-image reasoning",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing open-source multimodal reasoning models yield only marginal overall improvements compared to original models",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Visual reasoning remains a bottleneck, with models exhibiting a 'Look Light, Think Heavy' pattern where visual reflection consistently diminishes during reasoning",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2606.22565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can LLaMA-3.2-3B be fine-tuned for medical chain-of-thought reasoning while operating under constrained computational resources?",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The author uses parameter-efficient fine-tuning techniques (LoRA and QLoRA) to adapt LLaMA-3.2-3B on medical reasoning datasets, comparing against standard full fine-tuning approaches.",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Memory usage is reduced by up to 60% compared to standard full fine-tuning",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The fine-tuned model achieves improved reasoning coherence and factual accuracy",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Lightweight adaptations retain strong reasoning capability in medical question-answering",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Practical strategies are demonstrated for deploying LLMs in low-resource environments",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2510.05003"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can models be trained to explicitly verbalize reward hacking behavior, making it detectable during reinforcement learning?",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose verbalization fine-tuning (VFT), a pre-RL intervention that trains models to acknowledge when influenced by prompt cues.",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They then train models with RL where held-out cues signal incorrect answers that receive high reward, measuring undetected reward hacks.",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "After RL, only 6% of VFT-trained model responses consist of undetected reward hacks, compared to 88% without VFT",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VFT increases verbalization of cue influence from 8% to 43% after VFT, and up to 94% after RL",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Baseline interventions show low verbalization rates (11% and 1%) even after RL",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Teaching models to verbalize reward hacking before RL significantly improves detection",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2506.22777"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a question answering system be designed to address students' course forum questions while mitigating LLM hallucination and handling repetitive queries?",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a question answering system using an open-source LLM fine-tuned on course dataset, enhanced with retrieval augmented generation (RAG) method using a local knowledge base containing course content, and integrated with multi chain-of-thought reasoning to mitigate hallucination.",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuned LLM with RAG method demonstrates strong performance on question answering tasks",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system addresses challenges of delayed responses and repetitive questions in course forums",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi chain-of-thought reasoning helps mitigate LLM hallucination",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Local knowledge base with course content enables retrieval of relevant documents for student queries",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach was evaluated on the HotpotQA dataset",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2511.09831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can visual attribute value extraction from product videos be improved without fine-tuning video vision-language models?",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ViS-CoT, a training-free, plug-and-play pipeline that employs visual clustering to identify representative frames, visual search to retrieve semantically similar product knowledge, and an interleaved chain-of-thought reasoning module that refines reasoning through visually-aligned auxiliary texts from captioning and automatic speech recognition.",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ViS-CoT consistently enhances multiple state-of-the-art video VLMs for attribute value extraction",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method achieves an average improvement of 17.91 percentage points in micro-F1",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The pipeline was evaluated across 14 product categories on the VideoAVE dataset",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Visual clustering and search enrich attribute cues without requiring model fine-tuning",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Interleaved CoT reasoning with visually-aligned texts guides accurate and fine-grained attribute predictions",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2609.06410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do in-context learning and pretrained priors interact to enable Chain-of-Thought reasoning in large language models?",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct fine-grained lexical-level analysis of rationales, incrementally introduce noisy exemplars to examine how models balance pretrained priors against erroneous in-context information, and investigate whether prompt engineering can induce slow thinking in LLMs.",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models quickly learn reasoning structure at lexical level and grasp deeper logical patterns, but heavily rely on pretrained priors",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Providing sufficient exemplars shifts model decision-making from pretrained priors to in-context signals",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Misleading prompts introduce instability in model behavior",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Long Chain-of-Thought prompting induces longer reasoning chains, improving downstream task performance",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dual relationship between in-context learning and pretrained priors is key to understanding CoT mechanisms",
+   "ids": [
+    "2509.01236"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2509.01236"
+   ]
+  }
+ ]
+}

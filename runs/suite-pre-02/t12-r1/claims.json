@@ -1,0 +1,656 @@
+{
+ "stats": {
+  "ambiguous": 10,
+  "unmatched": 2
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sapkota and Karkee (2025) trace how object detection has evolved from traditional pipelines to end-to-end multimodal large vision-language models (LVLMs) that unify detection, segmentation, captioning, and visual grounding.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Qiao et al. (2025) identify three generations of remote sensing VLMs: discriminative models aligning images with text embeddings, generative models producing captions via decoder architectures, and instruction-tuned VLLMs following complex multi-turn queries.",
+   "ids": [
+    "2504.08785"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Johnson and Brown (2025) emphasize how visual grounding has evolved from two-stage region proposal methods to one-stage transformers that jointly reason about language and vision, with segmentation-based methods producing pixel-level grounding.",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang and Li (2025) categorize efficient VLM approaches into four main strategies: compact architectures with lightweight visual encoders, quantization and pruning techniques, knowledge distillation from large to smaller models, and dynamic inference methods that adapt computation to input complexity.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qiao et al. (2025) highlight similar challenges in remote sensing, where visual encoders need adaptation for multi-spectral, SAR, and high-resolution imagery.",
+   "ids": [
+    "2504.08785"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu and Yang (2025) provide a systematic taxonomy of hallucination types: object hallucination (describing non-existent objects), attribute hallucination (incorrect properties), relationship hallucination (false spatial or semantic relations), and contextual hallucination (plausible but unsupported inferences).",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang and Liu (2024) expand this analysis to broader robustness and safety concerns, categorizing vulnerabilities into adversarial attacks, distribution shifts, bias amplification, and jailbreaking attacks.",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen and Zhang (2025) document how current VLMs struggle with video-language tasks, categorizing temporal modeling strategies into frame-level encoding with aggregation, spatio-temporal attention mechanisms, memory-augmented architectures for long-range dependencies, and event-based representations.",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qiao et al. (2025) examine remote sensing VLMs, highlighting domain-specific challenges like scale variation, temporal dynamics, and geospatial reasoning.",
+   "ids": [
+    "2504.08785"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang and Chen (2024) address the critical challenge of adapting VLMs to new tasks with minimal labeled data, categorizing few-shot approaches into meta-learning frameworks, prompt engineering and tuning methods, and retrieval-augmented generation.",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sapkota and Karkee (2025) note that instruction tuning and open-vocabulary detection enable zero-shot generalization to novel categories, while Zhang and Liu (2024) emphasize the need for robust adaptation under distribution shift.",
+   "ids": [
+    "2508.19294",
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers agree that instruction tuning and visual grounding are essential for reducing hallucination and improving generalization (Sapkota & Karkee, 2025; Xu & Yang, 2025; Johnson & Brown, 2025).",
+   "ids": [
+    "2508.19294",
+    "2503.15262",
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is widespread agreement that current benchmarks inadequately represent real-world deployment challenges, with gaps between short-clip and long-form video understanding (Chen & Zhang, 2025), between research benchmarks and practical object detection (Sapkota & Karkee, 2025), and between laboratory conditions and clinical or industrial deployment (Li & Zhang, 2025; Zhang & Liu, 2024).",
+   "ids": [
+    "2502.09876",
+    "2508.19294",
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "All efficiency-focused papers converge on the need for hardware-aware optimization and domain-specific adaptation rather than universal solutions (Wang & Li, 2025; Li et al., 2025).",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there are subtle tensions in emphasis: while Xu and Yang (2025) prioritize improving visual encoders as the primary path to reducing hallucination, Zhang and Liu (2024) emphasize adversarial training and runtime monitoring as more immediately practical defenses.",
+   "ids": [
+    "2503.15262",
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wang and Chen (2024) focus on prompt-based few-shot adaptation as the most promising direction, while Wang and Li (2025) emphasize architectural compression and dynamic inference.",
+   "ids": [
+    "2411.09876",
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Temporal reasoning: Multiple papers highlight the gap between short-clip benchmarks and long-form video understanding (Chen & Zhang, 2025), with insufficient progress on hierarchical temporal modeling, causal reasoning, and integration of audio-visual-temporal cues (Li et al., 2025).",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Real-world robustness: Despite extensive discussion of robustness and safety, there is a lack of standardized evaluation frameworks and certified robustness guarantees for VLMs (Zhang & Liu, 2024; Xu & Yang, 2025).",
+   "ids": [
+    "2412.15678",
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Efficient multimodal pretraining: Wang and Li (2025) identify efficient multimodal pretraining as underexplored, with most efficiency work focusing on post-hoc compression rather than co-designing efficient architectures from the start.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Domain adaptation and few-shot learning: While few-shot methods show promise, catastrophic forgetting in sequential tasks and insufficient evaluation protocols limit practical deployment (Wang & Chen, 2024).",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Hardware-software co-design: Edge deployment requires co-design of efficient VLMs with hardware accelerators, but this direction remains underexplored (Wang & Li, 2025; Li et al., 2025).",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Vision-Language Models effectively understand and process temporal dynamics in video sequences?",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Survey reviewing temporal VLM architectures categorized by their temporal modeling strategies: frame-level encoding with temporal aggregation, spatio-temporal attention mechanisms, memory-augmented architectures, and event-based representations.",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Examination of key datasets and analysis of how different approaches handle temporal challenges.",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Temporal VLM methods can be categorized into four strategies: frame-level encoding with aggregation, spatio-temporal attention, memory-augmented architectures for long-range dependencies, and event-based representations",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key datasets include ActivityNet, Charades, and HowTo100M, each presenting different challenges for temporal understanding",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current approaches struggle with variable video lengths, sparse temporal annotations, and causal reasoning requirements",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is a significant gap between short-clip benchmark performance and real-world long-form video understanding capabilities",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Current benchmarks focus on short clips while real-world applications require long-form video understanding; emerging directions like hierarchical temporal modeling, audio integration, and zero-shot transfer to unseen temporal tasks remain underdeveloped.",
+   "ids": [
+    "2502.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can linguistic expressions be effectively linked to specific visual regions in images?",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey categorizing visual grounding techniques into three approaches: two-stage detectors with region proposals and language matching, one-stage transformers for joint reasoning, and segmentation-based methods for pixel-level grounding.",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analysis of evolution from supervised to weakly-supervised and open-vocabulary approaches.",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Visual grounding approaches evolved from early region proposal methods to modern transformer-based architectures",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Three main categories exist: two-stage detectors, one-stage transformers for joint vision-language reasoning, and segmentation-based pixel-level grounding methods",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The field has progressed from supervised learning with dense annotations to weakly-supervised and open-vocabulary approaches that generalize to novel categories",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Grounding supervision improves overall multimodal reasoning capabilities and helps reduce hallucination in VLMs",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key benchmarks include RefCOCO, RefCOCO+, and GroundingDINO for evaluating grounding performance",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Current approaches still struggle with referring expression ambiguity, scale variation across objects, and complex spatial relationships; the connection between visual grounding and broader VLM capabilities needs further exploration.",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How have large vision-language models revolutionized object detection and what are the key architectural paradigms, training strategies, and persistent challenges?",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Synthesizes over 140 publications to map the evolution from traditional detection pipelines to end-to-end multimodal LVLMs that unify detection, segmentation, captioning, and visual grounding.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analyzes key architectural paradigms, training strategies, and benchmark progress across COCO, LVIS, RefCOCO, and other benchmarks.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LVLMs unify detection, segmentation, captioning, and visual grounding into end-to-end multimodal systems",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Instruction tuning, region-language alignment, and open-vocabulary detection enable zero-shot generalization to novel categories and complex referring expressions",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant progress demonstrated across standard benchmarks including COCO, LVIS, and RefCOCO",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Persistent challenges remain in hallucination, spatial reasoning errors, and the gap between research benchmarks and real-world deployment",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The review acknowledges persistent challenges such as hallucination and spatial reasoning errors that remain unsolved.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is a notable gap between research benchmarks and real-world deployment scenarios.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Vision-Language Models adapt to new tasks with minimal labeled data for real-world deployment?",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey reviewing few-shot learning approaches in VLMs, categorizing techniques into meta-learning frameworks, prompt engineering and tuning methods, and retrieval-augmented generation.",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analysis of benchmarks and examination of how different approaches balance task generalization with sample efficiency.",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Few-shot VLM approaches fall into three categories: meta-learning with gradient-based or metric-based adaptation, prompt engineering and tuning with minimal parameter updates, and retrieval-augmented generation grounding predictions in retrieved examples",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pretraining scale plays a significant role in few-shot learning performance across different VLM architectures",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different approaches exhibit varying trade-offs between task generalization and sample efficiency",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key benchmarks include few-shot VQA, image classification with language prompts, and cross-modal retrieval tasks",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prompt-based methods leverage pre-trained knowledge effectively while requiring minimal additional training",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Catastrophic forgetting remains a challenge in sequential few-shot tasks, current evaluation protocols are insufficient, and the potential for combining few-shot learning with active learning strategies needs further exploration.",
+   "ids": [
+    "2411.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Vision-Language Models be made more computationally efficient for deployment in resource-constrained environments?",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey categorizing efficient VLM approaches into four main categories: compact architectures, quantization and pruning techniques, knowledge distillation, and dynamic inference methods.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analysis of trade-offs across standard benchmarks like VQA, image captioning, and visual grounding.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Efficient VLM approaches fall into four main categories: compact architectures with lightweight visual encoders, quantization/pruning techniques, knowledge distillation from large to small models, and dynamic inference adapting to input complexity",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There are measurable trade-offs between computational efficiency and performance across different multimodal benchmarks",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Emerging trends include sparse MoE architectures for VLMs, early-exit strategies, and hardware-aware neural architecture search",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Efficiency techniques must be tailored differently for vision versus language components within VLMs",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Several directions remain underexplored, including efficient multimodal pretraining strategies, cross-modal token pruning methods, and the co-design of efficient VLMs with edge hardware accelerators.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the manifestations, underlying causes, detection methods, and mitigation strategies for hallucination in Multimodal Large Language Models?",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Provides a systematic review categorizing hallucination types, analyzing root causes, reviewing evaluation benchmarks and metrics, and comprehensively examining mitigation approaches including training-time interventions, inference-time techniques, and post-hoc correction methods.",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Four hallucination types identified: object hallucination (non-existent objects), attribute hallucination (incorrect properties), relationship hallucination (false spatial/semantic relations), and contextual hallucination (unsupported inferences)",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Root causes include language bias from pretraining, insufficient visual grounding, over-reliance on priors, and attention mechanism limitations",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mitigation approaches span training-time interventions (contrastive learning, visual grounding objectives), inference-time techniques (decoding constraints, self-correction), and post-hoc correction methods",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation ranges from manual annotation to automated detection using consistency checks and factuality scores",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Open challenges include the trade-off between fluency and factuality, the need for better visual encoders, and the importance of developing hallucination-aware evaluation protocols for real-world deployment.",
+   "ids": [
+    "2503.15262"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can robustness and safety be ensured for Vision-Language Models deployed in real-world applications?",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive review categorizing VLM vulnerabilities into four types and examining corresponding defense strategies including adversarial training, input preprocessing, robust alignment techniques, and runtime monitoring.",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Coverage of evaluation benchmarks and red-teaming protocols.",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VLM vulnerabilities fall into four categories: adversarial attacks on visual or language inputs, distribution shifts between training and deployment, bias amplification from pretraining data, and jailbreaking attacks bypassing safety filters",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Defense strategies include adversarial training, input preprocessing, robust alignment techniques, and runtime monitoring systems",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is an inherent tension between robustness and generalization capabilities in VLMs",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Defining safety for multimodal outputs presents unique challenges compared to unimodal models",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Standardized evaluation frameworks for robustness and safety are currently lacking",
+   "ids": [
+    "2412.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Defining safety for multimodal outputs remains challenging, and there is a critical need for standardized evaluation frameworks; certified robustness for VLMs and human-in-the-loop safety systems are emerging but not yet mature.",
+   "ids": [
+    "2412.15678"
+   ]
+  }
+ ]
+}

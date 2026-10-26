@@ -1,0 +1,750 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kheradmand et al. (2025) introduced StochasticSplats, which combines 3D Gaussian splatting with stochastic rasterization through an unbiased Monte Carlo estimator of the volume rendering equation.",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nowak et al. (2025) proposed VoD-3DGS, which introduces an additional symmetric matrix to enhance the opacity representation of each 3D Gaussian, allowing certain Gaussians to be suppressed based on the viewer's perspective.",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Addressing the storage and transmission challenges of 3D Gaussian Splatting models, Chen et al. (2025) developed PCGS (Progressive Compression of 3D Gaussian Splatting).",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ding et al. (2026) introduced ZeroSplat, a training-free framework that lifts 2D Vision-Language Model priors into 3D space through robust multi-view geometric constraints, enabling generalized referring segmentation with an arbitrary number of targets from ambiguous real-world instructions.",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Tao et al. (2025) proposed CaRF (Camera-aware Referring Field), which addresses viewpoint drift and inconsistent predictions across views through camera-aware cross-view alignment.",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Addressing fundamental optimization challenges in 3D Gaussian Splatting, Morales et al. (2026) proposed TruncGradGS, which introduces a piecewise truncated gradient formulation to address the gradient vanishing phenomenon.",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pan et al. (2025) developed HairGS for hair strand reconstruction, enabling strand-level hair geometry reconstruction from multi-view images through a differentiable Gaussian rasterizer and novel merging scheme.",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ren et al. (2026) introduced Gaussian-JEPA for self-supervised learning applied to 3D Gaussian Splatting representations, predicting representations of held-out Gaussian token blocks from visible context.",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Vicente (2026) focused on high-performance re-implementation strategies, transitioning from Python to C++/CUDA kernels to balance reconstruction fidelity with computational efficiency.",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers demonstrate that stochastic or sorting-free approaches (Kheradmand et al., 2025), view-dependent opacity representations (Nowak et al., 2025), and progressive compression strategies (Chen et al., 2025) can achieve significant efficiency gains without sacrificing visual quality.",
+   "ids": [
+    "2503.24366",
+    "2501.17978",
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also consensus that integrating semantic understanding without per-scene optimization or additional feature storage is achievable through geometric constraints and vision-language model priors (Ding et al., 2026; Tao et al., 2025).",
+   "ids": [
+    "2607.18801",
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While some work focuses on architectural modifications to the Gaussian representation itself (Nowak et al., 2025; Ren et al., 2026), others emphasize implementation-level optimizations through low-level re-implementation (Vicente, 2026).",
+   "ids": [
+    "2501.17978",
+    "2608.15651",
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, approaches to semantic segmentation differ fundamentally: ZeroSplat (Ding et al., 2026) advocates for training-free, zero-feature methods, while CaRF (Tao et al., 2025) employs camera-conditioned modulation and cross-view logit alignment during training, suggesting different philosophical approaches to the trade-off between flexibility and accuracy.",
+   "ids": [
+    "2607.18801",
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, while dynamic Gaussian Splatting is mentioned (Morales et al., 2026), comprehensive benchmarks and standardized evaluation protocols for dynamic scenes remain underdeveloped.",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can progressive compression be achieved for 3D Gaussian Splatting to efficiently utilize existing bitstreams in on-demand applications?",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose PCGS with a progressive masking strategy that incrementally incorporates new anchors while refining existing ones, and a progressive quantization approach that gradually reduces quantization step sizes.",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They leverage existing quantization results to refine probability prediction for improving entropy coding efficiency across progressive levels.",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PCGS enables progressive compression by adaptively controlling both the quantity and quality of Gaussians",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive masking strategy incrementally incorporates new anchors while refining existing ones to enhance fidelity",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive quantization gradually reduces quantization step sizes for finer modeling of Gaussian attributes",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method improves entropy coding efficiency by leveraging existing quantization results to refine probability prediction",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PCGS achieves progressivity while maintaining compression performance comparable to state-of-the-art non-progressive methods",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.08511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can 3D Gaussian Splatting be extended to handle generalized referring segmentation with an arbitrary number of targets (0, 1, or N) from ambiguous real-world instructions?",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ZeroSplat, a training-free and zero-feature framework that lifts 2D Vision-Language Model priors into 3D space through robust multi-view geometric constraints, enabling intrinsic point-level understanding without additional feature storage.",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ZeroSplat significantly outperforms state-of-the-art methods across generalized and single-target scenarios",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method maintains exceptional efficiency without requiring per-scene optimization",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ZeroSplat enables intrinsic 3D point-level understanding without incurring additional feature storage",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses fundamental technical bottlenecks in existing R3DGS paradigms",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2607.18801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can 3D Gaussian splatting overcome rendering artifacts and lack of control over render cost and visual fidelity caused by depth-sorting requirements?",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors combine 3D Gaussian splatting with stochastic rasterization by leveraging an unbiased Monte Carlo estimator of the volume rendering equation, which removes the need for sorting and allows accurate 3D blending of overlapping Gaussians.",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method is implemented using OpenGL shaders for efficient GPU rendering.",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Stochastic rasterization eliminates the need for depth-sorting in 3D Gaussian splatting",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach enables accurate 3D blending of overlapping Gaussians through Monte Carlo estimation",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The number of Monte Carlo samples provides a mechanism to trade off computation time and quality",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method renders more than four times faster than sorted rasterization at reasonable visual quality",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The implementation enables efficient rendering on modern GPU hardware using OpenGL shaders",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.24366"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the gradient vanishing phenomenon in 3D Gaussian Splatting be addressed to improve optimization stability and robustness?",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a piecewise truncated gradient formulation that improves optimization stability and robustness to initializations, addressing the gradient vanishing problem where pixels far from Gaussian primitives have diminishing gradient magnitudes.",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method is evaluated on both static and dynamic Gaussian Splatting scenarios.",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Truncated gradient formulation addresses the gradient vanishing phenomenon in 3D Gaussian Splatting",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method consistently improves 3D Gaussian Splatting with both random and COLMAP initializations",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is generalizable across static and dynamic Gaussian Splatting",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current benchmarks for dynamic scenes have limitations that the authors examine",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The authors introduce a novel dataset for benchmarking dynamic Gaussian Splatting using synthetic 3D scenes",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2609.03534"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can 3D Gaussian Splatting be extended to better represent view-dependent content such as specular highlights and reflections?",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors extend the 3D Gaussian Splatting model by introducing an additional symmetric matrix to enhance the opacity representation of each 3D Gaussian, allowing certain Gaussians to be suppressed based on the viewer's perspective for more accurate representation of view-dependent reflections and specular highlights.",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "View-dependent opacity representation enables more accurate modeling of specular highlights and reflections",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The enhanced model achieves state-of-the-art performance on Mip-Nerf, Tanks&Temples, Deep Blending, and Nerf-Synthetic datasets",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method maintains rendering speed above 60 FPS without significant loss",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach incurs only a minimal increase in memory usage",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "View-opacity dependency allows the model to differentiate objects from light interacting with specular surfaces",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2501.17978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can 3D Gaussian Splatting be extended to enable strand-level hair geometry reconstruction from multi-view images?",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a multi-stage pipeline that first reconstructs detailed hair geometry using a differentiable Gaussian rasterizer, then merges individual Gaussian segments into coherent strands through a novel merging scheme, and finally refines and grows the strands under photometric supervision.",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method robustly handles a wide range of hairstyles",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves efficient reconstruction, typically completing within one hour",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed evaluation metric serves as a proxy for assessing topological accuracy in strand reconstruction",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses the connectivity and topology of hair strands that existing methods neglect",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2509.07774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can self-supervised learning be applied to 3D Gaussian Splatting representations without being tied to specific sampled realizations?",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Gaussian-JEPA, which predicts representations of held-out Gaussian token blocks from visible context using an online encoder and a shared exponential-moving-average encoder that supplies stop-gradient features for multi-scale targets with complementary target projections and feature-space grounding.",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gaussian-JEPA is more consistent across resampled inputs compared to matched reconstruction pretraining",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method retains more instance information under partial observations",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gaussian-JEPA provides stronger frozen features for Gaussian completion",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latent prediction serves as an effective objective for reusable 3D Gaussian representations without requiring input-space decoding",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2608.15651"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can viewpoint drift and inconsistent predictions across views be addressed in Referring 3D Gaussian Splatting Segmentation?",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose CaRF (Camera-aware Referring Field), a camera-aware cross-view alignment framework that introduces Camera-conditioned Alignment Modulation (CAM) to inject camera geometry into Gaussian-text interactions, and Gaussian-level Cross-view Logit Alignment (GCLA) to explicitly align referring responses of the same Gaussians across calibrated views during training.",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CaRF achieves state-of-the-art performance on three benchmarks for referring 3D Gaussian splatting segmentation",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method improves mIoU by 16.8% on Ref-LERF benchmark",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method improves mIoU by 4.3% on LERF-OVS benchmark",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method improves mIoU by 2.0% on 3D-OVS benchmark",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-view discrepancy can be turned into an optimizable objective for geometry-aware and view-consistent reasoning",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2511.03992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can 3D Gaussian Splatting be re-implemented at a low level to balance reconstruction fidelity with computational efficiency?",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ImprovedGS+, a high-performance re-implementation within the LichtFeld-Studio framework that transitions from Python to C++/CUDA kernels, introducing a Long-Axis-Split CUDA kernel, custom Laplacian-based importance kernels with Non-Maximum Suppression, and an adaptive Exponential Scale Scheduler.",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The 1M-budget variant achieves a 26.8% reduction in training time compared to the MCMC baseline",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uses 13.3% fewer Gaussians while maintaining superior visual quality",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The full variant demonstrates a 1.28 dB PSNR increase over the ADC baseline",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves a 38.4% reduction in parametric complexity compared to the ADC baseline",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Establishes a new Pareto-optimal front for scene reconstruction on the Mip-NeRF360 dataset",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2603.08661"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can 3D Gaussian Splatting be represented in neural networks to address the non-unique and heterogeneous nature of Gaussian parameterization?",
+   "ids": [
+    "2509.22917"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose an embedding representation of 3DGS based on continuous submanifold fields that encapsulate the intrinsic information of Gaussian primitives, preserving underlying color and geometric structure while enforcing unique mapping and channel homogeneity.",
+   "ids": [
+    "2509.22917"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed embedding representation addresses the non-unique nature of Gaussian parameterization",
+   "ids": [
+    "2509.22917"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method enforces unique mapping and channel homogeneity for 3DGS representations",
+   "ids": [
+    "2509.22917"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach benefits the learning of 3DGS by preserving intrinsic information of Gaussian primitives",
+   "ids": [
+    "2509.22917"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2509.22917"
+   ]
+  }
+ ]
+}

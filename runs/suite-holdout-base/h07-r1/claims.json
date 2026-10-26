@@ -1,0 +1,563 @@
+{
+ "stats": {
+  "ambiguous": 8,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2025) address the critical problem of Out-of-Distribution (OOD) Mode Averaging in flow matching-based behavior policies, where standard distillation forces interpolation across behavioral modes, causing action collapse into invalid regions.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Kim et al. (2025) explore diffusion models for multi-task offline RL, leveraging their natural capacity to capture multi-modal action distributions through task-conditioned noise scheduling and cross-task attention mechanisms.",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Garcia et al. (2025) extend this direction by modeling the full return distribution using normalizing flows rather than point-estimate Q-functions.",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) take a more sophisticated approach through causal representation learning, disentangling task-relevant factors from nuisance variables using causal discovery algorithms.",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Brown et al. (2025) investigate transformer-based architectures for large-scale offline RL, extending Decision Transformer with efficient sparse attention mechanisms that reduce computational complexity from O(n²) to O(n log n).",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2025) introduce Federated Offline RL, extending federated learning to offline RL while addressing challenges unique to reinforcement learning such as distribution shift across clients and heterogeneous data quality.",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Green et al. (2025) explore using LLMs to provide reward shaping signals, prompting language models to generate dense reward estimates from trajectory descriptions.",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is broad agreement that adaptive, context-aware methods outperform uniform approaches—whether in uncertainty-aware regularization (Chen et al., 2025), adaptive conservatism schedules (Chen et al., 2025), or value-guided distillation (Jiang et al., 2025).",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Generative approaches (Jiang et al., 2025; Kim et al., 2025) emphasize modeling full action distributions to avoid mode collapse, while conservative Q-learning approaches (Chen et al., 2025; Chen et al., 2025) focus on penalizing uncertain Q-values.",
+   "ids": [
+    "2610.29075",
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is tension between scalability and theoretical guarantees—while transformer-based methods (Brown et al., 2025) achieve impressive empirical results, the theoretical foundations primarily address simpler conservative methods.",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while several papers address computational efficiency (Brown et al., 2025; Garcia et al., 2025), the computational requirements of advanced methods remain high, potentially limiting accessibility and deployment in resource-constrained settings.",
+   "ids": [
+    "2508.07234",
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the language-guided approach (Green et al., 2025) and federated learning approach (Liu et al., 2025) introduce new dependencies—on LLM quality and on client data distributions, respectively—that are not fully characterized.",
+   "ids": [
+    "2504.09876",
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the causal representation approach (Zhang et al., 2025) suggests promising directions for generalization, but causal discovery in complex, high-dimensional RL settings remains challenging and may not scale to all domains.",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can transformer-based architectures be scaled to handle large-scale offline RL problems with millions of trajectories and long-horizon tasks?",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed Decision Transformer-XL with sparse attention mechanisms reducing complexity from O(n²) to O(n log n), hierarchical action chunking, and a curriculum learning strategy that progressively increases task difficulty during training.",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse attention patterns reduce computational complexity from O(n²) to O(n log n), enabling processing of long-horizon tasks",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Architecture supports training on datasets with millions of trajectories",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art performance on long-horizon task benchmarks",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trains 10x faster than previous transformer-based offline RL methods",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Curriculum learning strategy improves training effectiveness for complex tasks",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach may not generalize beyond tested benchmarks, and computational resources required despite efficiency improvements remain substantial.",
+   "ids": [
+    "2508.07234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline RL capture risk-sensitive behavior and provide calibrated uncertainty estimates beyond point-estimate Q-functions?",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed a distributional offline RL method using normalizing flows to model the full return distribution, enabling efficient sampling and supporting complex multi-modal return patterns with derived theoretical bounds on approximation error.",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Normalizing flows enable efficient sampling from the return distribution and capture multi-modal return patterns",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distributional estimates provide calibrated uncertainty estimates for policy evaluation",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Method achieves better risk-adjusted returns compared to point-estimate approaches",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides reliable confidence intervals for policy evaluation",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical bounds on approximation error are derived and validated",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Computational overhead of normalizing flow architectures may limit scalability, and theoretical bounds may not be tight enough for all practical decision-making scenarios.",
+   "ids": [
+    "2507.01892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large language models provide reward shaping signals for offline RL when explicit rewards are unavailable or sparse?",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed Language-Reward-RL that prompts LLMs to generate dense reward estimates from trajectory descriptions, with consistency filtering to remove hallucinated rewards and uncertainty weighting to downweight unreliable LLM predictions.",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 50% improvement over reward-free baselines on text-based games and robotic instruction tasks",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Matches performance of methods requiring manual reward engineering",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consistency filtering effectively removes hallucinated rewards from LLM outputs",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uncertainty weighting improves reliability by downweighting unreliable LLM predictions",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables offline RL in domains where reward specification is challenging but natural language descriptions are available",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach depends on LLM quality and may inherit biases from language models; consistency filtering may discard valid but unusual reward signals.",
+   "ids": [
+    "2504.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Out-of-Distribution Mode Averaging be addressed when distilling Flow Matching-based behavior policies in offline RL?",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed Value-Rectified Distillation (VRD), a framework that reformulates offline policy distillation as value-guided generative trajectory alignment, using dynamic coupling to decouple distinct behavioral modes through VRD-Q (value-quantile behavior distillation) and VRD-R (latent space reorganization).",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD actively rectifies flow dynamics to explicitly decouple distinct behavioral modes, cleanly isolating high-value actions",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD-Q statistically filters out low-value behaviors through value-quantile distillation",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD-R geometrically isolates high-value generative trajectories from FM-based behavior policy",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves existing generative baselines across D4RL, OGBench, and Minari benchmarks",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Particularly effective on multi-modal, non-expert datasets where mode averaging is most problematic",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The framework adds complexity to the distillation process, and performance on single-mode datasets may not justify the additional overhead.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can diffusion models be leveraged for multi-task offline reinforcement learning to capture multi-modal action distributions?",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed Diffusion-MT, a conditional diffusion policy that generates actions for multiple tasks from a single model, with task-conditioned noise scheduling and cross-task attention mechanism enabling knowledge transfer between related tasks.",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diffusion models naturally capture multi-modal action distributions, well-suited for scenarios requiring distinct behavioral modes",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task-conditioned noise scheduling enables flexible adaptation to different task requirements",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-task attention mechanism facilitates knowledge transfer between related tasks",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms single-task baselines by 25% on multi-task D4RL benchmarks",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Matches or exceeds specialized multi-task methods while providing better uncertainty calibration",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Training diffusion policies requires substantial computational resources, and the approach may be less effective when tasks have conflicting action distributions.",
+   "ids": [
+    "2511.03421"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can policies be learned from distributed datasets without centralizing sensitive data while addressing distribution shift and heterogeneous data quality across clients?",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Extended federated learning to the offline RL setting with secure aggregation protocols that preserve privacy, addressing distribution shift across clients and heterogeneous data quality with theoretical convergence guarantees under realistic assumptions.",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 85% of centralized performance while maintaining strict privacy guarantees",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Secure aggregation protocols preserve privacy while enabling collaborative policy learning",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effectively handles non-IID client data across distributed settings",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical analysis provides convergence guarantees under realistic data heterogeneity assumptions",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully evaluated on healthcare and autonomous driving datasets",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The 15% performance gap compared to centralized training indicates inherent trade-offs between privacy and performance; effectiveness may degrade with extreme data heterogeneity.",
+   "ids": [
+    "2506.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can causal representation learning improve generalization and reduce spurious correlations in offline RL?",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed Causal-OfflineRL, which uses causal discovery algorithms to identify invariant causal structures in trajectory data, then learns representations that preserve these causal relationships while disentangling task-relevant factors from nuisance variables.",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Causal representations improve generalization to new environments by focusing on invariant structures",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reduces spurious correlations that plague standard offline RL methods",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical analysis proves tighter generalization bounds under distribution shift",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art performance on domain transfer benchmarks",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shows 40% improvement in zero-shot generalization tasks compared to non-causal baselines",
+   "ids": [
+    "2509.12847"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Causal discovery in high-dimensional RL settings remains challenging; the approach may not scale to all domains without domain-specific causal knowledge.",
+   "ids": [
+    "2509.12847"
+   ]
+  }
+ ]
+}

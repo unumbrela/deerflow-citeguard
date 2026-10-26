@@ -1,0 +1,571 @@
+{
+ "stats": {
+  "ambiguous": 8,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "ARCANE (Masters et al., 2025) frames alignment as a multi-agent collaboration problem, representing stakeholder preferences as natural-language rubrics that enable configurable trade-offs without retraining.",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "MAPoRL (Park et al., 2025) introduces a post-training paradigm where multiple LLMs generate responses independently, engage in multi-turn discussions to collaboratively improve answers, and are optimized through multi-agent reinforcement learning.",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pan and Wu (2025) propose an architecture that converts natural language task descriptions into unified semantic representations using LLMs, then applies modular decomposition to break goals into hierarchical sub-tasks.",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "GUARDIAN (Zhou et al., 2025) addresses hallucination amplification and error propagation by modeling multi-agent collaboration as a discrete-time temporal attributed graph, using an unsupervised encoder-decoder architecture to identify anomalous nodes and edges.",
+   "ids": [
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "ARCANE (Masters et al., 2025) complements this work by focusing on alignment with stakeholder preferences through interpretable reward models, enabling test-time adaptive alignment for complex, long-horizon AI systems.",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "For mobile intelligent assistants, Wang et al. (2025) propose a three-tier agent architecture that achieves significant evaluation matching accuracy with human experts while identifying generation defects.",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In product concept evaluation, Xuan et al. (2026) introduce an interactive multi-agent system with eight virtual agents representing specialized domains that produces evaluation rankings consistent with senior industry experts.",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Aethon (Rao et al., 2026) introduces a reference-based replication primitive that enables near-constant-time instantiation of stateful AI agents by shifting from duplication to reference-based representation.",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all frameworks emphasize that explicit coordination mechanisms are necessary for effective collaboration—innate model capabilities alone are insufficient (Park et al., 2025; Pan & Wu, 2025).",
+   "ids": [
+    "2502.18439",
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, role specialization consistently improves system performance, whether through mediator agents (Chen et al., 2025a), orchestrator agents (Chen et al., 2025), or domain-specific agents (Xuan et al., 2026).",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, the literature agrees that interpretability and configurability are critical for production systems, with multiple papers proposing mechanisms for transparent agent behavior and adjustable trade-offs (Masters et al., 2025; Zhou et al., 2025).",
+   "ids": [
+    "2512.06196",
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, tensions exist between approaches emphasizing training-time interventions (Park et al., 2025) versus those focusing on architectural design without additional training (Chen et al., 2025a; Pan & Wu, 2025).",
+   "ids": [
+    "2502.18439",
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, some papers emphasize homogeneous agent ensembles (Park et al., 2025) while others advocate heterogeneous model combinations (Chen et al., 2025a), suggesting unresolved questions about optimal agent diversity strategies.",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the infrastructure challenges of multi-agent systems receive limited attention, with only Aethon (Rao et al., 2026) addressing scalability directly—this represents a significant gap given the computational costs of running multiple LLM agents in production.",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we maintain alignment of language model agents with stakeholder preferences in long-horizon tasks through interpretable and configurable reward models?",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce ARCANE, a framework that frames alignment as a multi-agent collaboration problem, representing stakeholder preferences as natural-language rubrics (weighted sets of verifiable criteria) generated on-the-fly, evaluated on 219 labeled rubrics from the GDPVal benchmark.",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Learned rubrics produce compact, legible evaluations of agent behavior",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework enables configurable trade-offs (e.g., correctness vs. conciseness) without retraining",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Rubric-based reward models offer a path toward interpretable, test-time adaptive alignment for complex, long-horizon AI systems",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach balances interpretability, faithfulness, and computational efficiency",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2512.06196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large language models enable effective modular task decomposition and dynamic collaboration in multi-agent systems for complex task execution?",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a multi-agent architecture that converts natural language task descriptions into unified semantic representations using large language models, then applies modular decomposition to break goals into hierarchical sub-tasks with dynamic scheduling and routing mechanisms.",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed method outperforms existing approaches in task success rate and decomposition efficiency",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The architecture achieves better balance between task complexity and communication overhead",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dynamic scheduling allows continuous strategy adjustment based on environmental feedback",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Constraint parsing prevents performance degradation from redundant communication or uneven resource allocation",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2511.01149"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can post-training multiple LLMs together using reinforcement learning elicit better collaborative behaviors than relying on innate capabilities or training individual models?",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce MAPoRL, a post-training paradigm where multiple LLMs generate responses independently, engage in multi-turn discussions to collaboratively improve answers, and are evaluated by a verifier that scores both the answer and discussion quality, optimized through multi-agent reinforcement learning.",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training individual LLMs alone is insufficient to induce effective collaboration",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent co-training boosts collaboration performance across benchmarks",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach generalizes to unseen domains beyond training data",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The verifier rewards corrective and persuasive discussions, encouraging meaningful collaboration",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2502.18439"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can AI infrastructure be redesigned to enable lightweight, constant-time instantiation of stateful AI agents at production scale?",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces Aethon, a reference-based replication primitive that represents agent instances as compositional views over stable definitions, layered memory, and local contextual overlays, using layered inheritance and copy-on-write semantics.",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Aethon enables near-constant-time instantiation by shifting from duplication to reference-based representation",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reference-based instantiation decouples creation cost from inherited structure",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach supports lightweight, composable execution identities that can be spawned and specialized at scale",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Aethon provides a more appropriate systems abstraction for production-scale agentic software",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2604.12129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-agent systems improve Retrieval-Augmented Generation (RAG) performance when handling diverse data sources such as relational databases, document stores, and graph databases?",
+   "ids": [
+    "2412.05838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a multi-agent RAG system where specialized agents, each optimized for a specific data source (relational, NoSQL, document-based), handle query generation collaboratively within a modular framework with query execution delegated to an environment designed for compatibility across various database types.",
+   "ids": [
+    "2412.05838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The distributed approach enhances query efficiency compared to single-agent RAG architectures",
+   "ids": [
+    "2412.05838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Specialized agents reduce token overhead by focusing on their specific data source type",
+   "ids": [
+    "2412.05838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system improves response accuracy through agent specialization",
+   "ids": [
+    "2412.05838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The modular framework is scalable and adaptable to diverse, dynamic, or private data sources",
+   "ids": [
+    "2412.05838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2412.05838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can automated multi-modal evaluation frameworks based on LLMs and multi-agent collaboration address the challenges of high manual costs, inconsistent standards, and subjective bias in evaluating mobile intelligent assistants?",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a three-tier agent architecture consisting of interaction evaluation agents, semantic verification agents, and experience decision agents, using supervised fine-tuning on the Qwen3-8B model and tested on eight major intelligent agents.",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework achieves significant evaluation matching accuracy with human experts",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The three-tier architecture effectively predicts users' satisfaction with mobile assistants",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework can identify generation defects in assistant responses",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supervised fine-tuning on Qwen3-8B enables automated evaluation without manual costs",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2508.09507"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can an LLM-based multi-agent system effectively evaluate new product concepts to overcome limitations of traditional expert-led approaches?",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study proposes an automated approach using an LLM-based multi-agent system with eight virtual agents representing specialized domains (e.g., R&D, marketing), using retrieval-augmented generation (RAG) and real-time search tools, fine-tuned using professional product review data, evaluated through a case study involving display monitor concepts.",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system's evaluation rankings were consistent with those of senior industry experts",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eight virtual agents representing specialized domains can collaboratively validate product concepts",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Retrieval-augmented generation and real-time search tools enable agents to gather objective evidence",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuning with professional product review data enhances agent judgment accuracy",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2603.05980"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hallucination amplification and error propagation in LLM multi-agent collaborations be detected and mitigated?",
+   "ids": [
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: GUARDIAN models the multi-agent collaboration process as a discrete-time temporal attributed graph and uses an unsupervised encoder-decoder architecture with incremental training to identify anomalous nodes and edges, incorporating a graph abstraction mechanism based on Information Bottleneck Theory.",
+   "ids": [
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GUARDIAN achieves state-of-the-art accuracy in detecting and mitigating safety concerns in multi-agent collaborations",
+   "ids": [
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Modeling collaboration as a temporal attributed graph explicitly captures hallucination and error propagation dynamics",
+   "ids": [
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The unsupervised encoder-decoder architecture enables identification of anomalous nodes and edges with high precision",
+   "ids": [
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Graph abstraction based on Information Bottleneck Theory compresses interactions while preserving essential patterns",
+   "ids": [
+    "2505.19234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2505.19234"
+   ]
+  }
+ ]
+}

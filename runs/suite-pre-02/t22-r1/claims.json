@@ -1,0 +1,768 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Soni (2026) introduced ToolFailBench, which evaluates tool-use failures across 1,000 tasks in finance, medicine, law, cybersecurity, and real estate, categorizing failures into Tool-Skip, Result-Ignore, Output-Fabrication, and Unnecessary-Tool-Use.",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "He et al. (2025) developed TRAJECT-Bench, which evaluates not just final answers but the entire tool usage trajectory, including tool selection, parameterization, and ordering correctness.",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ye et al. (2026) introduced CCTU, focusing specifically on tool use under complex constraints, finding that no evaluated model achieves above 20% task completion when strict adherence to all constraints is required.",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Most recently, Nam et al. (2026) proposed TURTLE, an unsupervised environment design approach that evolves benchmarks automatically using three LLM agents (proposer, solver, feedback generator), achieving a 165% increase in hard tasks on AppWorld while eliciting broader failure modes than static benchmarks.",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2026) presented MidTool, demonstrating that dedicated mid-training—rather than relying solely on post-training—significantly improves general tool use capabilities.",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yin et al. (2024) explored a specialized application in mathematical reasoning, combining tool use with multi-perspective data augmentation.",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2026) focused on video deep research, developing AdaVDR with adaptive tool use and reflection capabilities.",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim et al. (2026) identified a \"tool-use collapse phenomenon\" in visual chain-of-thought agents, where models progressively stop using tools while still achieving higher task accuracy.",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "This efficiency perspective is echoed in AdaVDR (Zhang et al., 2026), which specifically addresses unnecessary video tool calls that incur additional costs and failure risk.",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2026) investigated whether tool-use decisions have stable internal representations that can be manipulated for causal control.",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Mathematical reasoning (Yin et al., 2024), visual reasoning (Kim et al., 2026; Zhang et al., 2026), robotics (Akbulut et al., 2026), and general agentic systems (Jiang et al., 2026; Nam et al., 2026) each present unique tool use requirements.",
+   "ids": [
+    "2405.07551",
+    "2606.00096",
+    "2608.25559",
+    "2605.05411",
+    "2608.20314",
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Akbulut et al. (2026) explored creative robot tool use through counterfactual reasoning, proposing a causal framework where robots identify tools for uses beyond their primary objectives.",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is consensus that current models exhibit significant limitations, with evaluation papers consistently revealing low performance under rigorous testing (Soni, 2026; Ye et al., 2026; He et al., 2025).",
+   "ids": [
+    "2607.04686",
+    "2603.15309",
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the insight that evaluation must move beyond final accuracy to measure trajectory quality, failure modes, and constraint adherence (He et al., 2025; Soni, 2026; Nam et al., 2026).",
+   "ids": [
+    "2510.04550",
+    "2607.04686",
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is agreement that training specifically targeted at tool use capabilities yields improvements over generic training approaches (Jiang et al., 2026; Yin et al., 2024; Zhang et al., 2026).",
+   "ids": [
+    "2608.20314",
+    "2405.07551",
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While MidTool (Jiang et al., 2026) and MuMath-Code (Yin et al., 2024) advocate for enhanced tool use capabilities through dedicated training, Kim et al. (2026) found that incentivizing tool use yields only marginal gains and that tools function better as scaffolding for exploration rather than frequently invoked components.",
+   "ids": [
+    "2606.00096",
+    "2608.20314",
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while most papers assume more tool use is desirable, the activation steering work (Chen et al., 2026) shows that suppressing unnecessary tool use is most effective in domains where parametric reasoning suffices, indicating domain-dependent optimal strategies.",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, generalization across architectures remains limited—most studies evaluate only specific model families (Qwen3 in Jiang et al., 2026; Llama in Yin et al., 2024; Gemma 4 in Nam et al., 2026), leaving open whether findings transfer broadly.",
+   "ids": [
+    "2608.20314",
+    "2405.07551",
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, self-refinement capabilities are consistently identified as a bottleneck, with Ye et al. (2026) noting that LLMs demonstrate limited capacity for self-refinement even after receiving detailed feedback on constraint violations.",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "While Chen et al. (2026) made initial progress, they explicitly note that the relationship between geometric irregularity in internal representations and observed causal effectiveness remains an open question.",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "While TURTLE (Nam et al., 2026) and TRAJECT-Bench (He et al., 2025) begin addressing trajectory length, the literature lacks studies of tool use over extended interactions with accumulated context, error recovery, and evolving user intent.",
+   "ids": [
+    "2610.27307",
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can robots identify and creatively use tools for tasks beyond their primary intended objectives?",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a causal reasoning framework that discovers causal relationships between tools and tasks through simulated experiments in a dynamics model, decoupling causal discovery into VLM-based feature suggestion and counterfactual tool generation via targeted geometric and physical feature perturbations, with skill transfer via keypoint matching.",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identifying causal features and grounding them in physical tool properties leads to more reliable tool selection",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach successfully demonstrates creative tool use in diverse scenarios: reaching with different sticks, scooping with various items, and using boxes as stepping platforms",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Counterfactual reasoning enables stronger skill keypoint transfer across novel objects",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reconstructing tasks in a dynamics model grounds tool use in the physics of the problem",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires a dynamics model for simulation; evaluation is limited to specific tool-use scenarios (reaching, scooping, stepping) and may not generalize to all robotic manipulation tasks.",
+   "ids": [
+    "2605.05411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do tool-use decisions in large language models have stable internal representations that can be extracted and manipulated for causal control?",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The researchers extracted steering vectors from heading-anchor positions and tested their bidirectional causal control over tool-invocation behavior across five open-source models and three domains, complemented by geometric analysis of the internal representations.",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Steering vectors extracted from heading-anchors exert bidirectional causal control over tool-invocation behavior across multiple models and domains",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tool use suppression is most effective in domains where parametric reasoning suffices",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tool-invocation steps exhibit diffuse, bimodal alignment with the suppression vector rather than clean linear structure",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different tool types recruit largely distinct internal signatures with low cross-tool feature overlap",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The geometric irregularity's relationship to observed causal effectiveness remains an open question; the non-parametric nature of tools distinguishes them from parametrically grounded concepts, limiting generalizability.",
+   "ids": [
+    "2607.05790"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we comprehensively evaluate LLMs' tool use capability beyond final answers by considering the detailed tool usage trajectory?",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: TRAJECT-Bench pairs high-fidelity executable tools across practical domains with production-style API-grounded tasks, synthesizes trajectories varying in breadth (parallel calls) and depth (interdependent chains), and reports trajectory-level diagnostics including tool selection, argument correctness, and dependency/order satisfaction.",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analyses reveal failure modes including similar tool confusion and parameter-blind selection",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling behavior shows a bottleneck when transitioning from short to mid-length trajectories",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trajectory-level diagnostics provide actionable guidance beyond final accuracy metrics",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tool diversity and trajectory length significantly impact LLM performance",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark focuses on specific practical domains and production-style APIs; evaluation may not capture all real-world tool-use scenarios or generalize to non-API-based tools.",
+   "ids": [
+    "2510.04550"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can dedicated mid-training improve general tool use capabilities in large language models rather than relying entirely on post-training?",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present MidTool, an open corpus construction pipeline combining large-scale web, PDF, and code data with synthesized supervision from real-world tool APIs, MCP skills, and document-grounded workflows, then mid-trained Qwen3-4B-Base and Qwen3-8B-Base followed by SFT and RL post-training.",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MidTool-Mix consistently improves downstream performance under both supervised fine-tuning and reinforcement learning",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improvements are observed across BFCL, tau2-Bench, and MCP Universe benchmarks",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "General tool use benefits from dedicated mid-training rather than being left entirely to post-training",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The pipeline teaches models to recognize tool affordances, ground arguments from context, compose tool call workflows, and recover from incomplete information",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation was limited to Qwen3 models (4B and 8B base variants); results may not generalize to other model architectures or sizes without additional validation.",
+   "ids": [
+    "2608.20314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the role of visual tools in complex visual reasoning tasks beyond simple visual search, and how does tool usage relate to reasoning performance?",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors investigate tool use in challenging tasks including 3D spatial reasoning and medical visual question answering, identify a tool-use collapse phenomenon, and add an entropy regularization term to encourage diverse rollout exploration during training.",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tool-use collapse phenomenon: models progressively stop using tools while still achieving higher task accuracy",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Clear asymmetry exists: eliminating tool use degrades performance, but incentivizing tool use yields only marginal gains despite substantially increasing usage",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both vanilla training and tool-use encouragement reduce rollout diversity",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Entropy regularization achieves best performance despite gradually declining tool usage",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tools function better as scaffolding for broader exploration rather than frequently invoked components",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses on specific visual reasoning tasks (3D spatial reasoning, medical VQA); findings may not generalize to non-visual domains or other tool-use paradigms.",
+   "ids": [
+    "2606.00096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can tool use benchmark data generation be scaled without relying on human supervision or domain-specific constraints?",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose TURTLE, an Unsupervised Environment Design approach that evolves existing tasks using three LLM agents (proposer, solver, feedback generator), where the proposer is rewarded for generating difficult yet solvable tasks based on the solver's empirical performance.",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TURTLE achieved a 165% increase in the percentage of hard tasks on AppWorld",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evolved tasks increase diversity in terms of reasoning requirements and simultaneous tool interactions",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach elicits a broader range of failure modes than original benchmark tasks",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TURTLE produces self-tuning test suites adaptable to different environment requirements including user simulators, document retrieval, and multi-app interactions",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Empirical results were demonstrated primarily on Gemma 4 31B-it; the approach may require tuning for different model architectures and the quality of evolved tasks depends on the proposer and feedback generator capabilities.",
+   "ids": [
+    "2610.27307"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do LLM agents fail when using tools, and what failure modes are hidden by aggregate benchmark scores?",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: ToolFailBench is introduced as a diagnostic benchmark with 1,000 tasks across finance, medicine, law, cybersecurity, and real estate; each trace is labeled with failure types (Tool-Skip, Result-Ignore, Output-Fabrication, Unnecessary-Tool-Use) using a rule classifier and two LLM judges aggregated by majority vote.",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The best model reaches only 86.33% Clean Tool-Use Rate, showing faithful tool use is not saturated",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models with similar aggregate scores fail in fundamentally different ways",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Llama-3.1 models exhibit an Always-Call pattern, calling tools unnecessarily",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "At the same parameter scale, Llama-3.1-70B and Qwen2.5-72B differ by 89 percentage points on control-task accuracy",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tool-use evaluation should measure not only whether agents call tools, but whether they use outputs correctly and avoid tools when unnecessary",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation is limited to 19 headline models across five specific domains; the benchmark may not capture all failure modes or generalize to other task domains.",
+   "ids": [
+    "2607.04686"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do large language models perform tool use when required to follow explicit complex constraints?",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce CCTU, a benchmark with 200 test cases across 12 constraint categories spanning four dimensions (resource, behavior, toolset, response), and develop an executable constraint validation module for step-level validation during multi-turn interactions.",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "No evaluated model achieves a task completion rate above 20% when strict adherence to all constraints is required",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models violate constraints in over 50% of cases, particularly in the resource and response dimensions",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs demonstrate limited capacity for self-refinement even after receiving detailed feedback on constraint violations",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Each test case involves an average of seven constraint types with prompts exceeding 4,700 tokens",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark evaluated only nine LLMs and may not cover all possible constraint types; the constraint validation module requires executable environments which may limit applicability.",
+   "ids": [
+    "2603.15309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can tool-use LLMs with Python interpreters be effectively integrated with data augmentation methods to enhance mathematical reasoning capabilities?",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors augment math questions via multi-perspective data augmentation, synthesize code-nested solutions, and employ a two-stage training strategy: first fine-tuning Llama-2 on pure CoT data, then training on code-nested data to produce MuMath-Code models that interact with external Python interpreters during inference.",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MuMath-Code-7B achieves 83.8% on GSM8K and 52.4% on MATH benchmarks",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MuMath-Code-70B achieves state-of-the-art performance among open methods with 90.7% on GSM8K and 55.1% on MATH",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The two-stage training strategy effectively leverages augmented data for improved performance",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining tool use with data augmentation outperforms either approach alone",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach is evaluated primarily on Llama-2 models and standard math benchmarks (GSM8K, MATH); generalization to other model architectures or reasoning domains is not explored.",
+   "ids": [
+    "2405.07551"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can video deep research agents reduce unnecessary video tool calls while maintaining performance on tasks requiring both video understanding and external knowledge retrieval?",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors develop AdaVDR with adaptive tool use and reflection capabilities, using model-conditioned tool necessity filtering to remove bypassable tools and NASA-GRPO, a necessity-aware segment-guided credit assignment method for constructing normalized tool-level rewards during training.",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AdaVDR outperforms the base model by 15.20 percentage points on the VDR-EE benchmark",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AdaVDR outperforms the base model by 29.00 percentage points on the existing VideoDR benchmark",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model-conditioned tool necessity filtering effectively removes tools that can be bypassed using video understanding and internal model knowledge",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NASA-GRPO's segment-guided evidence contribution and tool necessity evaluation improves adaptive tool selection capabilities",
+   "ids": [
+    "2608.25559"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires specialized training data construction with adaptive trajectories; generalization to non-video domains or tasks without clear segment boundaries may require additional adaptation.",
+   "ids": [
+    "2608.25559"
+   ]
+  }
+ ]
+}

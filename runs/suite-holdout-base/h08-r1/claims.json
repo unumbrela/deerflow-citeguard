@@ -1,0 +1,607 @@
+{
+ "stats": {
+  "ambiguous": 6,
+  "unmatched": 2
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhou et al. (2026) frame this as a progression from weights to context to harness, arguing that memory externalizes state across time, skills externalize procedural expertise, and protocols externalize interaction structure.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The EDDOps framework by Xia et al. (2024) extends this systems view by embedding evaluation as a continuous, governing function throughout the agent lifecycle, unifying offline and online evaluation within a closed feedback loop.",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang et al. (2026) investigate over-privileged tool selection, finding that mainstream LLM agents commonly select or escalate to higher-privilege tools despite sufficient lower-privilege alternatives.",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2025) similarly highlight security gaps in automated web vulnerability reproduction, where agents achieve reasonable success on simple library-based vulnerabilities but consistently fail on complex service-based vulnerabilities requiring multi-component environments.",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "CSR-Bench by Xiao et al. (2025) assesses LLM agents in deploying computer science research repositories, showing that agents can significantly enhance repository deployment workflows.",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yellin (2025) proposes a difficulty metric for microservice-based application specifications, finding that agents using strong LLMs perform well on medium difficulty specifications but poorly on higher difficulty levels involving intricate business logic and database integration.",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The EDDOps approach by Xia et al. (2024) argues that traditional evaluation methods built around fixed benchmarks fail to capture emergent behaviors, advocating for continuous evaluation driving both runtime adaptation and governed redevelopment.",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2024) survey Personal LLM Agents, envisioning them as a major software paradigm deeply integrated with personal data and devices.",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The surveyed papers reveal a tension between general-purpose agent frameworks and domain-specific optimizations: while agents show promise across vulnerability reproduction (Liu et al., 2025), research repository deployment (Xiao et al., 2025), and microservice generation (Yellin, 2025), each domain presents unique challenges requiring tailored approaches.",
+   "ids": [
+    "2510.14700",
+    "2502.06111",
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Zhou et al. (2026), Ke (2026), and Xia et al. (2024) all emphasize that agent capabilities emerge from system-level architecture rather than model weights alone.",
+   "ids": [
+    "2604.08224",
+    "2603.18030",
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement on the importance of continuous evaluation and adaptation: Islam et al. (2026a, 2026b), Yang et al. (2026), and Xia et al. (2024) all demonstrate that static benchmarks are insufficient for capturing agent behavior over time.",
+   "ids": [
+    "2606.20023",
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Finally, multiple studies highlight the gap between current capabilities and real-world demands, particularly for complex, multi-component systems (Liu et al., 2025; Yellin, 2025).",
+   "ids": [
+    "2510.14700",
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there is tension between architectural approaches: Ke's (2026) Quine advocates for OS-level process abstraction, while Zhou et al. (2026) propose a higher-level harness engineering framework.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while some papers emphasize automated debugging solutions (Islam et al., 2026b), others focus on prevention through evaluation frameworks (Xia et al., 2024), suggesting different philosophies about whether to prioritize detection or prevention of agent failures.",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, evaluation frameworks remain nascent: Xia et al. (2024) note that their EDDOps approach requires empirical validation in production settings, and Yang et al. (2026) acknowledge their ToolPrivBench may not cover all privilege escalation patterns in real-world deployments.",
+   "ids": [
+    "2411.13768",
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, CSR-Bench focuses on NLP/CV/AI/ML/DM topics and may not generalize to other research domains (Xiao et al., 2025).",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, there is limited understanding of how agents handle long-running tasks with evolving context, as Quine's analysis points toward needed extensions for \"task-relative worlds and revisable time\" (Ke, 2026).",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the trade-off between parametric and externalized capability requires further investigation, particularly regarding governance and the co-evolution of models and infrastructure (Zhou et al., 2026).",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can LLM agents be realized as native POSIX processes instead of relying on application-layer orchestration frameworks?",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presented Quine runtime architecture that explicitly maps agent identity to PID, interface to standard streams and exit status, state to memory/filesystem/environment, and lifecycle to fork/exec/exit; implemented as a single executable that recursively spawns fresh instances of itself.",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Grounding agent abstraction in OS process model inherits kernel-level isolation, composition, and resource control",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Naturally supports recursive delegation, context renewal via exec, and shell-native composition",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "POSIX process model provides robust substrate for execution but not complete runtime model for cognition",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analysis identifies need for two extensions beyond process semantics: task-relative worlds and revisable time",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: POSIX process model does not provide a complete runtime model for cognition; requires extensions for task-relative worlds and revisable time to fully support agent cognition.",
+   "ids": [
+    "2603.18030"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the key architectural components, capabilities, efficiency considerations, and security challenges for Personal LLM Agents that integrate with personal data and devices?",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Surveys the field of Personal LLM Agents by summarizing key components and design choices in architecture, conducting in-depth analysis of opinions from domain experts, and comprehensively surveying representative solutions to address identified challenges.",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Personal LLM Agents are envisioned to become a major software paradigm for end-users in the upcoming era",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key architecture components include user intent understanding, task planning, tool using, and personal data management",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs enable intelligent agents to solve complex problems autonomously with powerful semantic understanding and reasoning",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key challenges exist in achieving intelligent, efficient, and secure Personal LLM Agents",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Several key challenges remain to achieve intelligent, efficient and secure Personal LLM Agents; existing IPAs still have limited practicality and scalability due to lack of capabilities in user intent understanding, task planning, tool using, and personal data management.",
+   "ids": [
+    "2401.05459"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can current state-of-the-art LLM agents reliably reproduce web vulnerabilities from vulnerability reports in real-world scenarios?",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematically assesses 20 agents from software engineering, cybersecurity, and general domains across 16 dimensions on 3 representative web vulnerabilities, then evaluates top 3 agents (OpenHands, SWE-agent, CAI) on a benchmark of 80 real-world CVEs spanning 7 vulnerability types and 6 web technologies.",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM agents achieve reasonable success on simple library-based vulnerabilities but consistently fail on complex service-based vulnerabilities requiring multi-component environments",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Complex environment configurations and authentication barriers create a gap where agents can execute exploit code but fail to trigger actual vulnerabilities",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance degrades by over 33% under incomplete authentication information, showing high sensitivity to input guidance",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is a significant gap between current LLM agent capabilities and the demands of reliable automated vulnerability reproduction",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study reveals that current agents struggle with complex service-based vulnerabilities requiring multi-component environments; the evaluation is limited to 80 CVEs across 7 vulnerability types, and results show high sensitivity to input completeness.",
+   "ids": [
+    "2510.14700"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can evaluation be embedded as a continuous, governing function throughout the LLM agent lifecycle rather than as a terminal checkpoint?",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducted multivocal literature review (MLR) synthesizing academic and industrial evaluation practices; developed two empirically derived artifacts: a process model and reference architecture for evaluation-driven development and operations (EDDOps) that unifies offline and online evaluation within a closed feedback loop.",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Traditional evaluation methods built around fixed benchmarks and static test suites fail to capture emergent behaviors",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "EDDOps unifies offline (development-time) and online (runtime) evaluation within a closed feedback loop",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation evidence drives both runtime adaptation and governed redevelopment",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Approach supports safer, more traceable evolution of LLM agents",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Based on literature review synthesis; specific implementation details may vary across different agent architectures and organizational contexts; requires empirical validation in production settings.",
+   "ids": [
+    "2411.13768"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How effective are LLM agents at deploying computer science research code repositories and setting up experimental environments?",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Created CSR-Bench benchmark assessing accuracy, efficiency, and deployment script quality across NLP/CV/AI/ML/DM topics; introduced CSR-Agents framework using multiple LLM agents to automate GitHub repository deployment by interpreting markdown instructions and repository structures to generate and iteratively improve bash commands.",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM agents can significantly enhance the workflow of repository deployment",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agents can automatically set up experimental environments and deploy code to conduct research tasks",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework boosts developer productivity in research settings",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves management of developmental workflows through automated deployment",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Results are preliminary; benchmark focuses on NLP/CV/AI/ML/DM topics and may not generalize to other research domains or more complex multi-repository setups.",
+   "ids": [
+    "2502.06111"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do LLM agents unnecessarily select or escalate to higher-privilege tools when lower-privilege alternatives would suffice?",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced ToolPrivBench to evaluate agent tool selection across 8 domains and 5 risk patterns, measuring both initial selection and escalation behavior after transient tool failures.",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Over-privileged tool selection is common among mainstream LLM agents",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transient failures amplify the tendency to select higher-privilege tools",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "General safety alignment does not reliably transfer to least-privilege tool choice",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prompt-level controls provide only limited mitigation under transient failures",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focus is on tool selection scenarios in benchmark settings; may not cover all privilege escalation patterns that occur in real-world deployments with more complex tool ecosystems.",
+   "ids": [
+    "2606.20023"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do LLM agents perform at generating code for microservice-based applications across different specification complexity levels?",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Defined standard template for specifying microservice applications; proposed metric for scoring specification difficulty; evaluated agents using strong LLMs (like GPT-3o-mini) across different difficulty levels; analyzed errors in synthesized code to identify key challenges.",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agents using strong LLMs perform fairly well on medium difficulty specifications",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance drops significantly on higher difficulty specifications",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Higher difficulty involves intricate business logic, greater use of external services, database integration, and non-functional capabilities like authentication",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-grained approach to code generation improves correctness of synthesized code",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focus is specifically on microservice architecture; the difficulty metric may not capture all dimensions of specification complexity; results depend on the specific LLMs tested.",
+   "ids": [
+    "2508.20119"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does externalizing capabilities into memory, skills, protocols, and harness infrastructure transform LLM agent architecture and performance compared to relying on internal model weights?",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Reviews the historical progression from weights to context to harness through the lens of cognitive artifacts, analyzing memory, skills, and protocols as three distinct but coupled forms of externalization within a systems-level framework.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Memory externalizes state across time, skills externalize procedural expertise, and protocols externalize interaction structure",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Harness engineering serves as the unification layer that coordinates externalized modules into governed execution",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agent infrastructure matters because it transforms hard cognitive burdens into forms that the model can solve more reliably",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Practical agent progress increasingly depends on better external cognitive infrastructure, not just stronger models",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Open challenges remain in evaluation, governance, and understanding the long-term co-evolution of models and external infrastructure; the trade-off between parametric and externalized capability requires further investigation.",
+   "ids": [
+    "2604.08224"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,564 @@
+{
+ "stats": {
+  "ambiguous": 5,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Tripathi et al. (2026) introduced LAARA, which uses Fisher information estimates to guide rank allocation across transformer layers without requiring expensive search procedures.",
+   "ids": [
+    "2607.19391"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hwang et al. (2025) introduced PiCa, which projects gradients onto the principal column space of pretrained weights, providing theoretical grounding for the inductive bias this projection creates.",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) conducted a comparative analysis revealing that LoRA-family methods approximately preserve pretrained geometry, and that restoring drifted singular-value spectra largely preserves task performance.",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Peng et al. (2026) proposed Echo-LoRA, which collects boundary hidden states from deeper layers and injects aggregated \"echo representations\" into shallow LoRA modules via lightweight projection and gating networks.",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lee et al. (2025) introduced Memba for State Space Models, incorporating bio-inspired Leaky Integrate Membrane neurons as gating mechanisms that naturally accumulate membrane potentials over time.",
+   "ids": [
+    "2506.18184"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Anumasa and Liu (2026) introduced EulerLoRA, a stochastic extension of LoRA that generates multiple predictive trajectories by sampling structured variations along rank-one components while preserving the deterministic LoRA transformation in expectation.",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chai et al. (2025) proposed BH-PEFT, which integrates Bayesian learning into hybrid PEFT by modeling learnable parameters as distributions and using Bayesian dynamic fine-tuning where posterior serves as prior for subsequent rounds.",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Koike-Akino et al. (2025) introduced Quantum-PEFT, which leverages quantum computations with Pauli parameterization to achieve full-rank quantum unitary parameterization where trainable parameters grow logarithmically with ambient dimension, contrasting sharply with the linear growth in LoRA-based methods.",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: The surveyed papers collectively agree that uniform rank allocation in LoRA is suboptimal, with multiple studies providing both theoretical analysis and empirical evidence for this claim (Tripathi et al., 2026; Li et al., 2026).",
+   "ids": [
+    "2607.19391",
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also strong convergence around the finding that pretrained weight geometry should be preserved during adaptation, with spectral preservation emerging as important for both task performance and retention of pretrained knowledge (Li et al., 2026; Hwang et al., 2025).",
+   "ids": [
+    "2610.09122",
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Some approaches focus on adaptive rank allocation within the LoRA framework (Tripathi et al., 2026; Xu & Bu, 2025), while others argue for fundamentally different parameterizations such as quantum unitary transformations (Koike-Akino et al., 2025) or representation injection mechanisms (Peng et al., 2026).",
+   "ids": [
+    "2607.19391",
+    "2503.05431",
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) found that DoRA achieves higher mean task scores than LoRA in most comparisons, while PiSSA often incurs greater retention costs, suggesting that different LoRA variants have distinct trade-offs that are not yet fully understood.",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The comparative analysis by Li et al. (2026) also reveals that while LoRA most consistently limits forgetting at competitive performance, the relative performance of different methods varies across tasks and settings, indicating that no single approach dominates universally.",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the intersection of PEFT with catastrophic forgetting remains underexplored—while Li et al. (2026) examine forgetting across methods, systematic approaches to balancing adaptation with retention are not well-developed.",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can Low-Rank Adaptation be extended to support predictive uncertainty estimation while maintaining parameter efficiency?",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce EulerLoRA, a stochastic extension of LoRA that generates multiple predictive trajectories by sampling structured variations along rank-one components of shared low-rank adapters while preserving the deterministic LoRA transformation in expectation, evaluated on vision transformers across multiple benchmarks.",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "EulerLoRA achieves comparable or improved performance relative to strong LoRA-Ensemble baselines",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Using two rank-20 adapters, EulerLoRA requires approximately 3 million trainable parameters versus 10 million for a rank-8, 16-adapter LoRA-Ensemble",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "EulerLoRA achieves roughly 69% fewer trainable parameters than comparable ensemble approaches",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Useful predictive diversity can be obtained from a small number of shared adapters",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2608.01142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hybrid PEFT methods be improved to quantify uncertainty and dynamically adapt to emerging data for specialized business applications?",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose BH-PEFT, which integrates Bayesian learning into hybrid PEFT by combining Adapter, LoRA, and prefix-tuning to fine-tune feedforward and attention layers, modeling learnable parameters as distributions and using Bayesian dynamic fine-tuning where posterior serves as prior for subsequent rounds.",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BH-PEFT enables uncertainty quantification by modeling learnable parameters as distributions",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Bayesian dynamic fine-tuning approach enables effective adaptation to new data",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BH-PEFT outperforms existing PEFT baselines on business tasks including sentiment analysis, news categorization, and commonsense reasoning",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method supports uncertainty-aware and adaptive decision-making in real-world situations",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2508.02711"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the geometry of pre-trained weights be exploited with theoretical grounding to improve parameter-efficient fine-tuning?",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce PiCa, a theoretically grounded PEFT method that projects gradients onto the principal column space of pre-trained weights and enhances parameter efficiency through a novel weight-sharing strategy.",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Projecting gradients onto the principal column space of pre-trained weights provides an effective inductive bias for adaptation",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PiCa consistently outperforms state-of-the-art baselines across diverse NLP and vision tasks",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method achieves superior performance under comparable or smaller parameter budgets than existing approaches",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PiCa provides both theoretical rigor and practical effectiveness for parameter-efficient fine-tuning",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2505.20211"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can quantum computations enable ultra parameter-efficient fine-tuning with logarithmic parameter growth compared to linear growth in LoRA-based methods?",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Quantum-PEFT, which leverages quantum computations with Pauli parameterization to achieve full-rank yet parameter-efficient quantum unitary parameterization where trainable parameters grow logarithmically with ambient dimension.",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Quantum-PEFT exploits full-rank quantum unitary parameterization that is surprisingly parameter efficient",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The number of trainable parameters grows logarithmically with ambient dimension, unlike linear growth in LoRA-based methods",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Quantum-PEFT achieves vanishingly smaller number of trainable parameters than the lowest-rank LoRA as dimensions grow",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method demonstrates significant advantages in parameter efficiency on language and vision transfer learning benchmarks while maintaining competitive performance",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.05431"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can parameter-efficient fine-tuning methods be adapted to address the unique temporal processing dynamics of State Space Models like Mamba?",
+   "ids": [
+    "2506.18184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Memba, a membrane-driven PEFT approach that introduces Leaky Integrate Membrane neurons as bio-inspired gating mechanisms, combined with Low-Rank Adaptations and cross-layer membrane transfer to enhance Mamba's temporal modeling capabilities.",
+   "ids": [
+    "2506.18184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Memba introduces LIM neurons that naturally accumulate membrane potentials over time, enhancing selective information retention",
+   "ids": [
+    "2506.18184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach strategically combines LIM neurons with LoRA and cross-layer membrane transfer",
+   "ids": [
+    "2506.18184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments demonstrate substantial improvements over existing PEFT methods across language and vision tasks",
+   "ids": [
+    "2506.18184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2506.18184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the methodological and functional differences between parameter-efficient fine-tuning methods, and is spectral preservation important for adaptation and retention?",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors compare six PEFT methods in language and diffusion models, examining how parameterizations relate to task performance, forgetting, and pretrained weight geometry, with intervention experiments on spectral component modifications.",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA-family methods approximately preserve pretrained geometry, and restoring their drifted singular-value spectra largely preserves task performance",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA most consistently limits forgetting at competitive performance across settings",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DoRA achieves higher mean task scores than LoRA in most comparisons, while PiSSA often incurs greater retention costs",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Restoring dominant spectral components produces the largest mean reduction in general-text NLL or base-image drift",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2610.09122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can intermediate representations from deeper layers be leveraged to improve parameter-efficient fine-tuning beyond weight-space modifications?",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Echo-LoRA, which collects boundary hidden states from deeper source layers, aggregates them into sample-level echo representations, and injects the signal into shallow LoRA/DoRA modules via lightweight projection and gating networks, using answer-only masking, masked distillation, and stochastic routing for stability.",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Echo-LoRA exceeds LoRA baselines by 5.7 percentage points on average across eight commonsense reasoning benchmarks",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Under reproduced baselines in unified implementation, Echo-LoRA achieves 3.0 points average gain; combined with DoRA, the gain is 2.7 points",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Echo path is discarded after training, so deployed models retain original low-rank LoRA/DoRA form with no inference-time overhead",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-layer representation injection effectively utilizes intermediate representations that are typically unused in existing LoRA variants",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2605.08177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can rank allocation in Low-Rank Adaptation be optimized to address the suboptimality of uniform rank assignment across transformer layers?",
+   "ids": [
+    "2607.19391"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose LAARA, a search-free framework that dynamically allocates ranks using lightweight diagonal Fisher estimates computed during training, combining projection-wise normalization, logarithmic compression, blended adapter importance estimation, and a vote-to-change dampening mechanism.",
+   "ids": [
+    "2607.19391"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uniform rank allocation in LoRA is theoretically and empirically suboptimal due to heterogeneous adaptation requirements across transformer layers",
+   "ids": [
+    "2607.19391"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LAARA matches or outperforms state-of-the-art methods (LoRA, AdaLoRA, DyLoRA, BitFit) on GLUE and MathInstruct benchmarks",
+   "ids": [
+    "2607.19391"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LAARA achieves comparable or better performance while using significantly fewer trainable parameters",
+   "ids": [
+    "2607.19391"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fisher-guided rank allocation provides a principled foundation for adaptive parameter-efficient fine-tuning",
+   "ids": [
+    "2607.19391"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2607.19391"
+   ]
+  }
+ ]
+}

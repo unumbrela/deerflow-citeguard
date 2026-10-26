@@ -1,0 +1,750 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2025) introduced CogAD, which aligns autonomous driving with human cognitive principles through hierarchical perception and intent-conditioned trajectory generation.",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Lu et al. (2025) proposed ReAL-AD, a three-tier framework based on human cognitive models (Driving Strategy, Driving Decision, Driving Operation) that integrates Vision-Language Models for hierarchical reasoning.",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2025) introduced GaussianFusion, which uses 2D Gaussian representations as intermediate carriers to aggregate multi-sensor information, addressing interpretability and computational overhead limitations of traditional fusion approaches.",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yin et al. (2025) proposed MAP (Map-Assisted Planning), which explicitly integrates segmentation-based map features and ego status through a Plan-enhancing Online Mapping module, achieving a 16.6% reduction in L2 displacement error.",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xing et al. (2025) explored RS2AD, which reconstructs vehicle-mounted LiDAR data from roadside sensor observations, reducing dependence on costly vehicle-mounted data collection while improving dataset diversity.",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2025) presented KDP, a knowledge-driven diffusion policy combining generative diffusion modeling with sparse mixture-of-experts routing for adaptive, robust decision-making across diverse scenarios.",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kou et al. (2025) proposed UniSTPA, a Unified System Theoretic Process Analysis framework that extends safety analysis from the operational phase to the entire lifecycle including information gathering, data preparation, training, verification, and deployment.",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zheng et al. (2024) conducted extensive analysis of data scaling laws for imitation learning-based end-to-end autonomous driving using approximately 4 million demonstrations from 23 scenario types.",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Moon et al. (2026) proposed CaAD, a Causality-aware end-to-end Autonomous Driving framework with ego-centric joint-causal modeling that learns causal dependencies between the ego vehicle and interaction-relevant agents.",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) formulated the model stitching problem for preserving policy compatibility under perception updates, demonstrating that lightweight latent-space alignment can maintain downstream driving behavior when perception modules are updated.",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, hierarchical or structured approaches consistently outperform flat end-to-end mapping, with Wang et al. (2025), Lu et al. (2025), and Xu et al. (2025) all showing benefits of multi-level architectures.",
+   "ids": [
+    "2505.21581",
+    "2507.12499",
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, incorporating external information—whether maps (Yin et al., 2025), infrastructure sensors (Xing et al., 2025), or causal models (Moon et al., 2026)—improves robustness and generalization.",
+   "ids": [
+    "2509.13926",
+    "2503.07085",
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there is an implicit tension between approaches emphasizing data scaling (Zheng et al., 2024) versus those emphasizing architectural innovation (Wang et al., 2025; Lu et al., 2025).",
+   "ids": [
+    "2412.02689",
+    "2505.21581",
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Zheng et al. (2024) find that data distribution matters more than volume in closed-loop evaluation, suggesting architectural changes alone may not suffice without appropriate data.",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while safety is addressed by Kou et al. (2025), most papers focus on benchmark performance rather than comprehensive safety validation in real-world deployment scenarios.",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the inconsistency between open-loop and closed-loop evaluation metrics (Zheng et al., 2024) suggests the field lacks reliable evaluation protocols that predict real-world performance.",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can policy compatibility in end-to-end autonomous driving systems be preserved through lightweight latent-space alignment when perception models are updated?",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formulate the model stitching problem and test low-complexity model stitching methods including linear and convolutional stitchers for restoring compatibility between updated perception modules and frozen downstream policy modules.",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Stitching effectively preserves downstream driving behavior under diverse perception updates including changes in random initialization, sensor configuration, and training domain",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In the cross-domain setting from nuScenes to CARLA, convolutional stitching retains over 91% of the no-shift driving score",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Stitching reduces adaptation time from 22.18 hours to 0.91 hours compared to retraining or fine-tuning",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model stitching provides an effective and computationally efficient alternative to retraining for maintaining end-to-end autonomous driving systems",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2606.21509"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-sensor fusion be improved for end-to-end autonomous driving to address limitations in interpretability and computational overhead?",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce GaussianFusion, a framework using 2D Gaussian representations as intermediate carriers to aggregate multi-sensor information, with explicit and implicit features refined through a cascade planning head, evaluated on NAVSIM and Bench2Drive benchmarks.",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gaussian-based representation provides an intuitive and compact approach for multi-sensor fusion",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explicit features capture rich semantic and spatial information about the traffic scene",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Implicit features provide complementary cues beneficial for trajectory planning",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The cascade planning head effectively exploits spatial and semantic information through iterative refinement",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework demonstrates effectiveness and robustness on NAVSIM and Bench2Drive benchmarks",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2506.00034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hierarchical reasoning processes similar to human drivers be incorporated into end-to-end autonomous driving systems?",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ReAL-AD, a Reasoning-Augmented Learning framework based on a three-tier human cognitive model (Driving Strategy, Driving Decision, Driving Operation) incorporating Vision-Language Models, with a Strategic Reasoning Injector, Tactical Reasoning Integrator, and Hierarchical Trajectory Decoder.",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrating the ReAL-AD framework improves planning accuracy and safety by over 30%",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Strategic Reasoning Injector formulates high-level driving strategies from VLM-generated insights about complex traffic contexts",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Tactical Reasoning Integrator refines strategic intent into interpretable tactical choices such as lane changes, overtaking, and speed adjustments",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Hierarchical Trajectory Decoder translates tactical decisions into precise control actions for smooth and human-like trajectory execution",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework makes end-to-end autonomous driving more interpretable and aligned with human-like hierarchical reasoning",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2507.12499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can causal inter-dependencies between the ego vehicle and surrounding agents be captured to improve trajectory prediction in end-to-end autonomous driving?",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose CaAD, a Causality-aware end-to-end Autonomous Driving framework with an ego-centric joint-causal modeling module that learns causal dependencies between the ego vehicle and interaction-relevant agents, and a causality-aware policy alignment stage with joint-mode embeddings for closed-loop feedback.",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CaAD achieves a Driving Score of 87.53 on the Bench2Drive benchmark",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CaAD achieves a Success Rate of 71.81 on Bench2Drive",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CaAD achieves a PDMS of 91.1 on the NAVSIM benchmark",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework addresses causal oversight that leads to inconsistent trajectory predictions in interaction-critical scenarios",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2605.13646"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can end-to-end autonomous driving be improved by aligning with human cognitive principles in perception and planning?",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose CogAD, a hierarchical cognition-based model with dual mechanisms: global-to-local context processing for perception and intent-conditioned multi-mode trajectory generation for planning, evaluated on nuScenes and Bench2Drive benchmarks.",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CogAD achieves state-of-the-art performance in end-to-end planning on nuScenes and Bench2Drive benchmarks",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model demonstrates comprehensive environmental understanding through hierarchical perception",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Robust planning exploration is enabled by multi-level planning mechanisms",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diverse yet reasonable multi-modal trajectory generation is facilitated by dual-level uncertainty modeling",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach shows particular superiority in long-tail scenarios and robust generalization to complex real-world conditions",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2505.21581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can vehicle-mounted LiDAR data be reconstructed and synthesized from roadside sensor observations to reduce data acquisition costs and improve dataset diversity?",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose RS2AD, a framework that transforms roadside LiDAR point clouds into the vehicle-mounted LiDAR coordinate system using the target vehicle's relative pose, then synthesizes high-fidelity vehicle-mounted LiDAR data through virtual LiDAR modeling, point cloud classification, and resampling techniques.",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This is the first approach to reconstruct vehicle-mounted LiDAR data from roadside sensor inputs",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incorporating RS2AD-generated data (RS2V-L dataset) as a supplement to KITTI significantly enhances 3D object detection accuracy",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method greatly improves the efficiency of end-to-end autonomous driving data generation",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework reduces dependence on costly vehicle-mounted data collection while improving model robustness",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.07085"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can end-to-end autonomous driving achieve adaptive, robust, and interpretable decision-making across diverse scenarios?",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present KDP, a knowledge-driven diffusion policy combining generative diffusion modeling with sparse mixture-of-experts routing to generate temporally coherent actions while enabling modular knowledge composition through specialized expert activation.",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "KDP achieves consistently higher success rates compared to prevailing paradigms",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method reduces collision risk and produces smoother control",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse expert activation proves effective according to ablation studies",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Activation analyses reveal structured specialization and cross-scenario reuse of experts",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diffusion with expert routing establishes a scalable and interpretable paradigm for knowledge-driven autonomous driving",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2509.04853"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can online mapping module information be better utilized to enhance trajectory planning in end-to-end autonomous driving?",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose MAP (Map-Assisted Planning), a framework that explicitly integrates segmentation-based map features and ego status through a Plan-enhancing Online Mapping module, Ego-status-guided Planning module, and Weight Adapter, evaluated on the DAIR-V2X-seq-SPD dataset.",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAP achieves a 16.6% reduction in L2 displacement error compared to the UniV2X baseline",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method reduces off-road rate by 56.2% without post-processing",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Overall score improved by 44.5% compared to the baseline",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model achieved top ranking in Track 2 of the End-to-End Autonomous Driving through V2X Cooperation Challenge, outperforming the second-best model by 39.5%",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explicitly leveraging semantic map features in planning proves effective for improving end-to-end autonomous driving systems",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2509.13926"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the scaling laws associated with imitation learning-based end-to-end autonomous driving when trained on large-scale real-world data?",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors collected approximately 4 million demonstrations from 23 scenario types (over 30,000 hours) and conducted extensive open-loop and closed-loop evaluations on 1,400 diverse driving demonstrations to study data scaling laws.",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model performance exhibits a power-law relationship with data amount in open-loop evaluation, but not in closed-loop evaluation",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The inconsistency between open-loop and closed-loop assessments indicates data distribution matters more than mere volume expansion",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Small increases in long-tailed data quantity can significantly improve performance for corresponding scenarios",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Appropriate data scaling enables models to achieve combinatorial generalization in novel scenes and actions",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Data scaling plays a critical role in improving model generalizability across diverse autonomous driving scenarios",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2412.02689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can safety risks in end-to-end autonomous driving systems be comprehensively identified across the entire development and deployment lifecycle?",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose the Unified System Theoretic Process Analysis (UniSTPA) framework, which extends STPA from the operational phase to the entire lifecycle including information gathering, data preparation, closed loop training, verification, and deployment, with hazard analysis at both component level and within model internal layers.",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UniSTPA uncovers multi-stage hazards overlooked by conventional approaches, including scene design defects, sensor fusion biases, and internal model flaws",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework traces hazards to deeper issues such as data quality, network architecture, and optimisation objectives through multi-level causal analysis",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UniSTPA enables construction of safety monitoring and safety response mechanisms supporting continuous improvement from hazard identification to system optimisation",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework provides both theoretical and practical guidance for safe development and deployment of end-to-end autonomous driving systems",
+   "ids": [
+    "2505.15005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2505.15005"
+   ]
+  }
+ ]
+}

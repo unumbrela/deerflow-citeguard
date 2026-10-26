@@ -1,0 +1,412 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 6
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Joshi (2025) demonstrates that Transformers can be viewed as message passing GNNs operating on fully connected graphs of tokens, revealing that self-attention mechanisms capture relative token importance through dense matrix operations more efficient than sparse message passing on modern hardware.",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Complementing this, Roddenberry and Baraniuk (2026) extend GNN theory through Finsler geometry, showing that discrete estimates of the Finsler Laplacian on point clouds converge to the true operator and can be expressed as GNN layers.",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Goel and Kanniainen (2026) propose Topology-Aware Gaussian Repair (TAGR), which constructs sparse feature-neighborhood graphs using adaptive Gaussian kernels combined with topology-aware residual correction.",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Tolloso and Bacciu (2025) introduce credal graph neural networks (CGNNs) that output set-valued predictions as credal sets, delivering more reliable epistemic uncertainty representations.",
+   "ids": [
+    "2512.02722"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bessone (2025) presents a spectral theory-based dynamic pruning method for Asynchronous Recurrent Graph Neural Networks (ARGNNs), leveraging the imaginary component of eigenvalues from the network graph's Laplacian to identify and remove unnecessary edges.",
+   "ids": [
+    "2502.17522"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "De Jong et al. (2025) identify a busbar information asymmetry problem in homogeneous graph representations for transmission grid topology control and propose heterogeneous graph representations to resolve it.",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Han et al. (2025) develop a Causal Spatiotemporal Graph Neural Network (CSTGNN) for epidemic forecasting that integrates physics-based Spatio-Contact SIR models with data-driven GNNs.",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jena et al. (2025) introduce QuantumGraphLIME (QGraphLIME), a model-agnostic post-hoc framework for explaining quantum graph neural networks.",
+   "ids": [
+    "2510.05683"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Tanis et al. (2024) provide an introductory framework for understanding GNN behavior through the encoder-decoder paradigm, emphasizing the importance of understanding oversmoothing and oversquashing phenomena.",
+   "ids": [
+    "2412.19419"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Goel and Kanniainen (2026), De Jong et al. (2025), and Han et al. (2025) all demonstrate that structural choices—whether through repair mechanisms, heterogeneous representations, or physics-informed connectivity—fundamentally determine GNN effectiveness.",
+   "ids": [
+    "2606.03462",
+    "2501.07186",
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is strong agreement on the need for uncertainty quantification and robustness under distributional shift, with Tolloso and Bacciu (2025) and Goel and Kanniainen (2026) both addressing reliability under out-of-distribution conditions.",
+   "ids": [
+    "2512.02722",
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Joshi (2025) argues for the universality of GNN-like mechanisms (positioning Transformers as GNNs), while Roddenberry and Baraniuk (2026) advocate for specialized geometric frameworks (Finsler geometry) beyond standard Laplacian-based approaches.",
+   "ids": [
+    "2506.22084",
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Similarly, efficiency-focused papers differ on whether optimization should target structure (Bessone, 2025, pruning edges) or computation depth (Knyazhitskiy & Di Francesco, 2026, early-exiting), suggesting context-dependent optimal strategies rather than universal solutions.",
+   "ids": [
+    "2502.17522"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the emerging area of quantum graph neural networks (Jena et al., 2025) lacks theoretical foundations connecting quantum and classical GNN frameworks.",
+   "ids": [
+    "2510.05683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can unnecessary edges be pruned in Asynchronous Recurrent Graph Neural Networks to enhance efficiency without compromising performance?",
+   "ids": [
+    "2502.17522"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents a dynamic pruning method based on graph spectral theory, leveraging the imaginary component of the eigenvalues of the network graph's Laplacian for edge pruning in ARGNNs.",
+   "ids": [
+    "2502.17522"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proposes a spectral theory-based approach for edge pruning in ARGNNs",
+   "ids": [
+    "2502.17522"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Leverages eigenvalues of the network graph's Laplacian to identify unnecessary edges",
+   "ids": [
+    "2502.17522"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2502.17522"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can graph neural networks be made more robust to noisy and missing edges in real-world graph topology?",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Propose Topology-Aware Gaussian Repair (TAGR), which constructs a sparse feature-neighborhood graph using an adaptive Gaussian kernel and combines it with topology-aware residual correction of the observed graph.",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluated through extensive experiments on benchmark citation networks under noisy-edge and missing-edge settings.",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TAGR improves the robustness of GNNs under both noisy-edge and missing-edge settings on benchmark citation networks",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gaussian feature-neighborhood repair provides the main robustness gain",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Topology-aware residual correction improves stability when the observed graph is incomplete",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective graph robustness can be achieved through lightweight sparse graph repair rather than dense graph structure learning",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2606.03462"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the relationship between Transformer architectures and Graph Neural Networks?",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analyzes the Transformer architecture and shows how it can be viewed as message passing GNNs operating on fully connected graphs of tokens.",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transformers can be viewed as message passing GNNs operating on fully connected graphs of tokens",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Self-attention mechanisms capture the relative importance of all tokens with respect to each other",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Positional encodings provide hints about sequential ordering or structure",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transformers are implemented via dense matrix operations that are more efficient on modern hardware than sparse message passing",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transformers are GNNs that are currently winning the hardware lottery",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can Finsler geometry be expressed through graph neural network architectures as a nonlinear alternative to Laplacian-based GNNs?",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Consider estimates of the Finsler Laplacian on point clouds sampled from a manifold and prove convergence to the true operator.",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Show this operator can be expressed as a GNN layer and use it to define Finslerian graph neural networks constrained to express Finsler geometry.",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GNN architectures based on graph Laplacian approximate the Laplace-Beltrami operator, limiting them to isotropic operators",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Discrete estimates of the Finsler Laplacian converge to the true operator as point samples grow",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Finsler Laplacian operator can be expressed as a graph neural network layer",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Finslerian graph neural networks recover the geometry underlying nonlinear diffusion equations in practice",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2606.17185"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can uncertainty quantification be improved in Graph Neural Networks for reliable deployment under out-of-distribution conditions?",
+   "ids": [
+    "2512.02722"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduce credal graph neural networks (CGNNs) that extend credal learning to the graph domain by training GNNs to output set-valued predictions in the form of credal sets, leveraging layer-wise information propagation.",
+   "ids": [
+    "2512.02722"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Assessed on uncertainty quantification in node classification under out-of-distribution conditions.",
+   "ids": [
+    "2512.02722"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CGNNs deliver more reliable representations of epistemic uncertainty",
+   "ids": [
+    "2512.02722"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CGNNs achieve state-of-the-art performance under distributional shift on heterophilic graphs",
+   "ids": [
+    "2512.02722"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Graph homophily assumption plays a critical role in shaping the effectiveness of uncertainty estimates",
+   "ids": [
+    "2512.02722"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2512.02722"
+   ]
+  }
+ ]
+}

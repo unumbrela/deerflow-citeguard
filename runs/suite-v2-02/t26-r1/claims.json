@@ -1,0 +1,741 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Narula et al. (2025) introduced HarmNet, a framework that systematically explores the adversarial space through hierarchical semantic networks and feedback-driven simulation, achieving 99.4% attack success rate on Mistral-7B.",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Cheng et al. (2024) developed PBI-Attack, which uses bidirectional cross-modal interaction optimization to iteratively enhance malicious features in vision-language models.",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) demonstrated that traditional text jailbreaks cannot be directly ported to large audio-language models (LALMs) via text-to-speech, prompting their development of AudioJailbreak with suffixal jailbreak audios that operate asynchronously from user prompts.",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yin et al. (2025) addressed multimodal large language models (MLLMs), showing that adversarial perturbations can be generated through contrastive embedding attacks across multiple modalities.",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cheng et al. (2024) also targeted large vision-language models (LVLMs) with prior-guided bimodal attacks.",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Huang et al. (2026) proposed JailMeter, an Information Bottleneck-inspired framework that achieves 97.27% accuracy in evaluating jailbreak attacks by filtering noise while preserving malicious intent signals.",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2026) introduced the Security Cube, a multi-dimensional evaluation framework that moves beyond narrow metrics like attack success rate to capture the full landscape of LLM security.",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kadali and Papalexakis (2026) conducted systematic layer-wise analysis across multiple architectures (GPT-J, LLaMA, Mistral, Mamba), identifying consistent latent-space patterns associated with harmful inputs and proposing a tensor-based detection framework that blocks 78% of jailbreak attempts.",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yi et al. (2025) developed LATPC, which dynamically identifies safety-critical latent dimensions through contrastive analysis of harmful and benign inputs, enabling targeted defense with minimal over-defense.",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yu et al. (2024) proposed LLM-Virus, treating jailbreak as an evolutionary process where LLMs serve as heuristic operators within an evolutionary algorithm framework, achieving high transferability and transparency compared to opaque optimization techniques.",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhou et al. (2025) formulated CCJA as a combinatorial optimization problem balancing attack success with semantic coherence in the embedding space.",
+   "ids": [
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yin et al. (2025) introduced SafeMLLM, an adversarial training framework that alternates between generating perturbations and updating model parameters to neutralize attack effects.",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yi et al. (2025) proposed embedding-level calibration mechanisms that minimize over-defense behaviors.",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2026) conducted benchmark studies on 13 attacks and 5 defenses, establishing a comprehensive view of the defense landscape.",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Narula et al. (2025), Cheng et al. (2024), and Zhou et al. (2025) all demonstrate that adaptive, iterative approaches significantly outperform static baselines.",
+   "ids": [
+    "2510.18728",
+    "2412.05892",
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that evaluation practices need standardization, with Huang et al. (2026) and Xu et al. (2026) independently proposing comprehensive frameworks.",
+   "ids": [
+    "2607.19424",
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature does not yet resolve whether latent-space interventions (Kadali & Papalexakis, 2026; Yi et al., 2025) or adversarial training approaches (Yin et al., 2025) offer superior long-term robustness.",
+   "ids": [
+    "2602.11495",
+    "2501.10639",
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, the transferability of attacks across model architectures remains incompletely understood, with Yu et al. (2024) claiming high transferability for evolutionary approaches while others focus on model-specific optimizations.",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can jailbreak attacks be effectively executed against end-to-end large audio-language models, particularly in scenarios where adversaries cannot fully manipulate user prompts?",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors first evaluate existing text jailbreak attacks ported to LALMs via TTS, then propose AUDIOJAILBREAK featuring asynchrony, universality, stealthiness, and over-the-air robustness through suffixal jailbreak audios and intent concealment strategies.",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Advanced text jailbreak attacks cannot be easily ported to end-to-end LALMs via text-to-speech techniques",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AUDIOJAILBREAK achieves asynchrony by crafting suffixal jailbreak audios that don't need to align with user prompts in the time axis",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attack demonstrates universality with a single jailbreak perturbation effective for different prompts",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AUDIOJAILBREAK can jailbreak OpenAI's GPT-4o-Audio and bypass Meta's Llama-Guard-3 safeguard in the weak adversary scenario",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The jailbreak audios remain effective when played over the air by incorporating reverberation into perturbation generation",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2505.14103"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can jailbreak attacks on Large Vision Language Models be effective in black-box scenarios without requiring model gradients?",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose PBI-Attack, which extracts malicious features from a harmful corpus using an alternative LVLM, embeds these features into a benign image as prior information, and enhances them through bidirectional cross-modal interaction optimization using greedy search to maximize toxicity.",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Toxicity levels are quantified using a trained evaluation model.",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PBI-Attack achieves an average attack success rate of 92.5% across three open-source LVLMs",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PBI-Attack achieves around 67.3% attack success rate on three closed-source LVLMs",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method outperforms previous state-of-the-art jailbreak methods",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Bidirectional cross-modal interaction optimization effectively enhances malicious features",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2412.05892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can jailbreak attack evaluation against large language models be made more reliable and consistent?",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose JailMeter, an evidence-based evaluation framework inspired by Information Bottleneck theory that applies dual-feedback optimization to filter jailbreak noise while preserving content relevant to the original malicious question.",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluate it on JailMeter-Eva, a benchmark with 330 human-labeled jailbreak instances, and distill it into a small language model for large-scale evaluation.",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JailMeter achieves an accuracy of 97.27% on the JailMeter-Eva benchmark",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JailMeter substantially outperforms existing evaluation methods",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The distilled JailMeter_SLM maintains comparable reliability with significantly reduced computational costs",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework validates attacks only when responses capture malicious intent and deliver complete answers",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2607.19424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do internal representations in large language models differ between jailbreak and benign prompts, and can these differences be used for jailbreak detection?",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a systematic layer-wise analysis across multiple open-source models (GPT-J, LLaMA, Mistral, Mamba) to identify latent-space patterns associated with harmful inputs, then propose a tensor-based latent representation framework for lightweight jailbreak detection without fine-tuning.",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consistent latent-space patterns associated with harmful inputs were identified across multiple models including GPT-J, LLaMA, Mistral, and Mamba",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed tensor-based framework enables lightweight jailbreak detection without requiring model fine-tuning or auxiliary LLM-based detectors",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Selectively bypassing high-susceptibility layers blocks 78% of jailbreak attempts while preserving benign behavior on 94% of benign prompts",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The intervention operates entirely at inference time with minimal overhead",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2602.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-turn jailbreak attacks on Large Language Models be made more adaptive and effective?",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce HarmNet, a modular framework with three components: ThoughtNet (a hierarchical semantic network), a feedback-driven Simulator for iterative query refinement, and a Network Traverser for real-time adaptive attack execution.",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments were conducted across closed-source and open-source LLMs to measure attack success rates.",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HarmNet systematically explores and refines the adversarial space to uncover stealthy, high-success attack paths",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HarmNet outperforms state-of-the-art methods in attack success rates",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On Mistral-7B, HarmNet achieves a 99.4% attack success rate, 13.9% higher than the best baseline",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2510.18728"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the current landscape of jailbreak attacks and defenses in large language models, and how can they be comprehensively evaluated beyond narrow metrics like attack success rate?",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a systematic taxonomy of jailbreak attacks and defenses, introduce the Security Cube framework for multi-dimensional evaluation, and conduct benchmark studies on 13 representative attacks and 5 defenses.",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing evaluation practices are inadequate, often relying on narrow metrics like attack success rate that fail to capture the multidimensional nature of LLM security",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Security Cube provides a unified, multi-dimensional framework for comprehensive evaluation of jailbreak techniques",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Benchmark studies on 13 attacks and 5 defenses establish a clear view of the current landscape encompassing jailbreak attacks, defenses, automated judges, and LLM vulnerabilities",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The analysis identifies unresolved problems and outlines promising research directions for enhancing LLM robustness",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2605.05058"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can latent-space adversarial training with post-aware calibration defend against jailbreak attacks while minimizing over-defense behavior in large language models?",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce LATPC, a framework that dynamically identifies safety-critical latent dimensions by contrasting harmful and benign inputs, enabling targeted refusal feature removal attacks, and employs an embedding-level calibration mechanism during inference to minimize over-defense.",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LATPC dynamically identifies safety-critical latent dimensions by contrasting harmful and benign inputs",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework achieves a superior balance between safety and utility compared to existing defense frameworks across five types of disguise-based jailbreak attacks",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The embedding-level calibration mechanism minimizes over-defense behaviors with negligible computational overhead",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Leveraging safety-critical dimensions is effective for developing robust defense methods against jailbreak attacks",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2501.10639"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can adversarial training improve the robustness of multimodal large language models against jailbreak attacks without relying on external inference steps or safety alignment training?",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce SafeMLLM, an adversarial training framework that alternates between generating adversarial perturbations through a contrastive embedding attack (CoE-Attack) and updating model parameters to neutralize perturbation effects while preserving utility on benign inputs.",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SafeMLLM generates adversarial perturbations through a newly proposed contrastive embedding attack (CoE-Attack) that optimizes token embeddings under a contrastive objective",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework effectively defends against diverse attacks across six MLLMs and six jailbreak methods spanning multiple modalities",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SafeMLLM maintains robust performance and utilities on benign inputs while neutralizing perturbation effects",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2502.00653"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can jailbreak attacks on LLMs be made more transparent, transferable, and computationally efficient compared to existing opaque optimization techniques?",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose LLM-Virus, inspired by biological virus evolution and infection processes, which treats jailbreak attacks as both an evolutionary and transfer learning problem.",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method uses LLMs as heuristic evolutionary operators within an evolutionary algorithm framework to ensure high attack efficiency, transferability, and low time cost.",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-Virus achieves competitive or superior performance compared to existing attack methods on multiple safety benchmarks",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The evolutionary algorithm approach provides better transparency than opaque optimization techniques",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method demonstrates high transferability across different models",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Using LLMs as heuristic evolutionary operators ensures low computational cost",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2501.00055"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can jailbreak attacks on open-source LLMs leverage access to model parameters and gradient information while maintaining semantic coherence?",
+   "ids": [
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors define jailbreak attacks as an optimization problem within the embedding space of masked language models and use combinatorial optimization to balance attack success rate with semantic coherence.",
+   "ids": [
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They also integrate semantically coherent jailbreak prompts into black-box methodologies targeting closed-source commercial LLMs.",
+   "ids": [
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CCJA maintains semantic consistency while surpassing state-of-the-art baselines in attack effectiveness",
+   "ids": [
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrating CCJA-generated prompts into black-box methodologies enhances their success rates against closed-source commercial LLMs",
+   "ids": [
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Open-source LLMs pose a security threat to commercial counterparts through this approach",
+   "ids": [
+    "2502.11379"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2502.11379"
+   ]
+  }
+ ]
+}

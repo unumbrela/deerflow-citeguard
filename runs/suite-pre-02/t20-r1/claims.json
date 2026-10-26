@@ -1,0 +1,814 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Joshi (2025) demonstrates that Transformers can be mathematically viewed as message passing GNNs operating on fully connected graphs, where self-attention captures token relationships and positional encodings provide structural information.",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Power Systems: de Jong et al. (2025) address topology control in power transmission grids, identifying a \"busbar information asymmetry\" problem in homogeneous graph representations and proposing heterogeneous GNNs that better capture grid structure.",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wireless Networks: Zhao et al. (2025) apply GNNs to distributed link scheduling in wireless networks, developing a link sparsification scheme that reduces signaling overhead while maintaining network capacity.",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Analog Circuit Design: Pan et al. (2025) tackle circuit link prediction with GNN-ACLP, which combines the SEAL framework for link prediction with a RAG-enhanced LLM tool for netlist format conversion.",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Robotics: Lai et al. (2025) develop RoboBallet, a GNN policy trained via reinforcement learning for multi-robot coordination, successfully coordinating 8 robots performing 40 tasks in shared workspaces with zero-shot generalization to unseen configurations.",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Epidemiology: Han et al. (2025) propose CSTGNN, integrating physics-based SIR models with GNNs for interpretable epidemic forecasting that captures spatiotemporal disease dynamics while providing insights into transmission mechanisms.",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Thermodynamics: Rittig and Mitsos (2024) develop GE-GNNs that ensure thermodynamic consistency by architecture design, predicting activity coefficients of binary mixtures through automatic differentiation of thermodynamic relations.",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bajaj et al. (2024) provide a comprehensive empirical comparison of full-graph versus mini-batch GNN training systems, finding that mini-batch training consistently converges faster and achieves similar or higher accuracy.",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Heterophilous Graphs: Zheng et al. (2024) address the limitation that most GNNs assume homophily (nearby nodes exhibit similar behaviors), which fails in many real-world graphs.",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Energy-Efficient Continuous GNNs: Fan et al. (2024) develop COS-GNN, combining continuous GNNs with spiking neural networks for energy-efficient deployment on battery-powered devices.",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pan et al. (2025) combine GNNs with LLMs via retrieval-augmented generation for netlist format conversion.",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Han et al. (2025) integrate physics-based compartmental models with data-driven GNNs for interpretable forecasting.",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lai et al. (2025) merge GNNs with reinforcement learning for multi-robot planning.",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Fan et al. (2024) fuse GNNs with spiking neural networks for energy efficiency.",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, graph representation quality critically impacts GNN performance, with multiple papers demonstrating that domain-appropriate representations (heterogeneous graphs for power grids, dynamic graphs for mobility networks) substantially outperform generic approaches (de Jong et al., 2025; Han et al., 2025).",
+   "ids": [
+    "2501.07186",
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, mini-batch training achieves comparable or superior accuracy to full-graph training while converging faster (Bajaj et al., 2024).",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, integrating domain knowledge—whether physics constraints, thermodynamic relations, or epidemiological models—improves both performance and interpretability (Han et al., 2025; Rittig & Mitsos, 2024).",
+   "ids": [
+    "2504.05140",
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Fourth, GNNs demonstrate strong generalization capabilities when trained on diverse synthetic data, with multiple papers reporting zero-shot or cross-dataset generalization (Lai et al., 2025; Pan et al., 2025).",
+   "ids": [
+    "2509.05397",
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Joshi (2025) suggests Transformers (a general architecture) may be sufficient for many tasks due to hardware efficiency, while domain-specific papers (de Jong et al., 2025; Zheng et al., 2024) demonstrate clear benefits from specialized graph representations and message passing schemes.",
+   "ids": [
+    "2506.22084",
+    "2501.07186",
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Real-World Deployment: Multiple papers evaluate primarily in simulation (Zhao et al., 2025; Lai et al., 2025), with limited real-world deployment validation.",
+   "ids": [
+    "2509.05447",
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Scalability: Several papers note challenges scaling to large graphs or networks (Pan et al., 2025), with linear computational complexity becoming prohibitive for large-scale applications.",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Latency-Critical Applications: GNN approaches for scheduling and control focus on delay-tolerant scenarios (Zhao et al., 2025), with limited work on latency-critical real-time applications requiring millisecond-level response times.",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Energy Efficiency Metrics: Despite claims of energy efficiency (Fan et al., 2024), few papers report comprehensive energy consumption metrics or real-device deployment results, making it difficult to assess practical energy benefits.",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Multi-Component Systems: Thermodynamics-focused work addresses only binary mixtures (Rittig & Mitsos, 2024), with extension to multi-component systems remaining unexplored.",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do full-graph and mini-batch GNN training systems compare in terms of convergence speed, accuracy, and overall performance?",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducts comprehensive empirical comparison of representative full-graph and mini-batch GNN training systems across multiple datasets, GNN models, and system configurations, using time-to-accuracy as the primary performance metric.",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mini-batch training systems consistently converge faster than full-graph training systems across all tested configurations",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mini-batch training converges to similar or often higher accuracy values than full-graph training",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mini-batch sampling is not necessarily detrimental to model accuracy",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Time-to-accuracy is more appropriate than epoch time for performance comparison between training methods",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Appropriate hyperparameters should be selected separately for each training method rather than using shared configurations",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Empirical findings may vary with different system configurations, hardware setups, or future system optimizations; the study does not provide definitive guidance for all possible GNN architectures and application domains.",
+   "ids": [
+    "2406.00552"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does the choice of graph representation affect GNN effectiveness for power grid topology control applications?",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Investigates homogeneous versus heterogeneous graph representations for power grids, identifies the busbar information asymmetry problem, and evaluates GNNs with both representations plus an FCNN baseline on an imitation learning task using classification accuracy and grid operation ability metrics.",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Homogeneous graph representations suffer from a busbar information asymmetry problem that limits GNN effectiveness",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Heterogeneous graph representations resolve the busbar information asymmetry problem",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Heterogeneous GNNs achieve the best performance on in-distribution network configurations",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FCNNs outperform homogeneous GNNs but underperform heterogeneous GNNs on in-distribution data",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both GNN types generalize better to out-of-distribution network configurations than FCNNs",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation is limited to imitation learning tasks on specific power grid configurations; real-world deployment performance and computational requirements for large-scale grids are not thoroughly addressed.",
+   "ids": [
+    "2501.07186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can continuous graph neural networks be made more energy-efficient for deployment on battery-powered devices while maintaining their ability to capture long-range dependencies?",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors incorporate spiking neural networks with continuous GNNs in a unified framework called COS-GNN, employing SNNs for graph node representation at each time step integrated into ODE processes, with a high-order structure using second-order ODE for enhanced information preservation and continuous propagation.",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "COS-GNN effectively mitigates exploding and vanishing gradient problems with theoretical proof",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The architecture enables capture of long-range dependencies between nodes",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The spiking neural network integration provides energy-efficient inference suitable for battery-powered devices",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experimental results demonstrate effectiveness over competitive baselines on graph-based learning tasks",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not report specific energy consumption metrics or real-device deployment results; the computational overhead of second-order ODE integration may offset some energy gains.",
+   "ids": [
+    "2404.01897"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can epidemic forecasting be improved by integrating physics-based disease transmission models with deep learning while maintaining interpretability of epidemiological parameters?",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a Causal Spatiotemporal Graph Neural Network (CSTGNN) that integrates a Spatio-Contact SIR model with GNNs, using an adaptive static connectivity graph for stable human mobility components and a temporal dynamics model to capture fluctuations, combined with a temporal decomposition model for handling temporal dependence.",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The CSTGNN effectively models spatiotemporal dynamics of infectious diseases with improved forecasting accuracy",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model was validated on real-world datasets at provincial level in China and state level in Germany",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analysis of learned parameters provides interpretable insights into disease transmission mechanisms",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hybrid framework bridges the gap between traditional compartmental models and pure deep learning approaches",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Validation was limited to specific geographic regions (Chinese provinces and German states); generalizability to other regions with different mobility patterns and healthcare systems requires further investigation.",
+   "ids": [
+    "2504.05140"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the mathematical and architectural relationship between Transformer models and Graph Neural Networks?",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Establishes theoretical connections by showing Transformers can be viewed as message passing GNNs operating on fully connected token graphs, where self-attention captures token relationships and positional encodings provide structural information.",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transformers are mathematically equivalent to message passing GNNs on fully connected graphs of tokens",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Self-attention mechanisms capture the relative importance of all tokens with respect to each other",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Positional encodings provide hints about sequential ordering or structure to the model",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transformers are expressive set processing networks that learn relationships without requiring predefined graph structures",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transformers outperform sparse GNN implementations due to efficient dense matrix operations on modern hardware",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: This is a theoretical position paper that establishes conceptual connections rather than proposing new architectures or empirical improvements; practical implications for model design remain to be explored.",
+   "ids": [
+    "2506.22084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we achieve automated collision-free coordination of multiple robots for joint task allocation, scheduling, and motion planning in shared obstacle-rich workspaces without relying on manual human-designed trajectories?",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a reinforcement learning framework using a graph neural network policy trained on procedurally-generated environments with diverse obstacle layouts, robot configurations, and task distributions.",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach employs a graph representation of scenes to jointly solve task allocation, scheduling, and motion planning sub-problems.",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The GNN-RL policy successfully coordinates 8 robots performing 40 reaching tasks in a shared obstacle-rich workspace",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The trained policy generalizes zero-shot to unseen settings with varying robot placements, obstacle geometries, and task poses",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The high-speed capability enables workcell layout optimization with improved solution times",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The planner supports fault-tolerant planning and online perception-based re-planning for rapid adaptation to dynamic task sets",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach was primarily validated in simulation environments; real-world deployment challenges and hardware-specific constraints are not fully addressed in the abstract.",
+   "ids": [
+    "2509.05397"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can GNNs improve circuit link prediction accuracy while addressing insufficient topological pattern use, data scarcity, and limited netlist format adaptability?",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes GNN-ACLP featuring the SEAL framework for link prediction, Netlist Babel Fish (a RAG-enhanced LLM tool for netlist format conversion), and introduces the SpiceNetlist dataset with 775 annotated circuits.",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SEAL framework achieves port-level accuracy in circuit link prediction by leveraging subgraphs, embeddings, and attributes",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Netlist Babel Fish enhances compatibility across different netlist formats using retrieval-augmented generation with LLMs",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SpiceNetlist dataset comprises 775 annotated circuits of 7 types across 10 component classes",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 16.08% accuracy improvement on SpiceNetlist, 11.38% on Image2Net, and 16.01% on Masala-CHAI in intra-dataset evaluation",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains 92.05% to 99.07% accuracy in cross-dataset evaluation, demonstrating robust feature transfer capabilities",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Linear computational complexity makes processing large-scale netlists challenging and requires future optimization; dataset size, while comprehensive, may still limit generalization to rare circuit configurations.",
+   "ids": [
+    "2504.10240"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can graph neural networks be improved for heterophilous graphs where the homophily assumption (nearby nodes exhibit similar behaviors) is violated?",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose heterophilous distribution propagation (HDP) that adaptively separates neighbors into homophilous and heterophilous parts based on pseudo assignments during training, with orthogonality-oriented constraint via trusted prototype contrastive learning and a novel semantic-aware message passing mechanism for both patterns.",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HDP outperforms representative baselines on heterophilous datasets across multiple benchmarks",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method was extensively evaluated on 9 benchmark datasets with different levels of homophily",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adaptive neighborhood separation addresses the insufficient neighborhood partition problem in existing HeterGNNs",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The orthogonality-oriented constraint and prototype contrastive learning effectively model heterophilous neighborhood distributions",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Performance emphasis is on heterophilous datasets; potential trade-offs or performance degradation on strongly homophilous graphs is not explicitly discussed in the abstract.",
+   "ids": [
+    "2405.20640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can GNNs reduce signaling overhead in distributed link scheduling for dense wireless networks while maintaining network capacity?",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes a distributed link sparsification scheme using a GNN module trained via a novel offline constrained unsupervised learning algorithm that adjusts contention thresholds for individual links based on traffic statistics and network topology.",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GNN-based link sparsification effectively reduces scheduling overhead for delay-tolerant traffic",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach enables links to withdraw from scheduling contention when unlikely to succeed",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Method maintains network capacity while minimizing signaling overhead",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Technique alleviates network congestion and reduces radio footprints across four distinct distributed link scheduling protocols",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective in simulated wireless multi-hop networks with up to 500 links",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Approach is designed for delay-tolerant traffic and may not suit latency-critical applications; evaluation is limited to simulated environments rather than real-world wireless network deployments.",
+   "ids": [
+    "2509.05447"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can graph neural networks predict composition-dependent activity coefficients of binary mixtures while ensuring thermodynamic consistency without requiring additional loss terms?",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose excess Gibbs free energy GNNs (GE-GNNs) that predict molar excess Gibbs free energy and use automatic differentiation with thermodynamic relations to obtain activity coefficients in an end-to-end manner, ensuring thermodynamic consistency by architecture design rather than loss constraints.",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The GE-GNN architecture achieves high accuracy in activity coefficient predictions for binary mixtures",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Thermodynamic consistency is ensured by the architecture without requiring additional loss terms",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach avoids thermodynamic modeling limitations and assumptions by outputting a fundamental property",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Automatic differentiation enables end-to-end learning of differential thermodynamic relations",
+   "ids": [
+    "2407.18372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach is demonstrated only for binary mixtures; extension to multi-component systems with more complex thermodynamic interactions is not addressed in the abstract.",
+   "ids": [
+    "2407.18372"
+   ]
+  }
+ ]
+}

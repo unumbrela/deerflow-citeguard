@@ -1,0 +1,531 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 4
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hewa Kaluannakkage and Buyya (2025) identify that participating entities are often unwilling to contribute unless they receive benefits, or may free-ride on others' contributions.",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yashwanth et al. (2026) formalize this problem through FedUCA, a framework that addresses client attrition in cross-silo environments where statistical heterogeneity causes rational clients to opt out when perceived benefits fail to meet local utility thresholds.",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sen et al. (2025) provide a comprehensive review of partial client participation challenges, noting that existing research has focused more on full participation assumptions, leaving practical deployment scenarios underexplored.",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kritharakis et al. (2025) develop a loss-based client clustering approach that functions effectively with only two honest participants (the server and one client) without prior knowledge of malicious client count.",
+   "ids": [
+    "2508.12672"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xia et al. (2025) propose Fed-DPRoC, a unified framework that jointly provides differential privacy, Byzantine robustness, and communication efficiency without compromising any property.",
+   "ids": [
+    "2508.12978"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Stricker et al. (2026) address evaluation challenges, demonstrating that common aggregation strategies like weighted averaging based on local samples do not produce results consistent with centralized evaluation.",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ho (2026) presents the first federated learning framework for automated infant movement analysis using skeletal motion data, addressing privacy and data-sharing constraints that make centralized training impractical in clinical settings.",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Banik et al. (2025) propose a lightweight graph-aware FL approach for traffic forecasting that captures spatial relationships between clients while remaining computationally efficient.",
+   "ids": [
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers (Németh et al., 2025; Düsing & Cimiano, 2025; Yashwanth et al., 2026) converge on the finding that client selection and participation mechanisms must be explicitly designed rather than assumed.",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Disagreements: While there is consensus on the importance of incentive mechanisms, papers differ in their approach: Hewa Kaluannakkage and Buyya (2025) emphasize economic and game-theoretic foundations, while Yashwanth et al. (2026) focus on utility-constrained optimization without explicit economic modeling.",
+   "ids": [
+    "2510.14208",
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while multiple papers address partial client participation (Sen et al., 2025; Yashwanth et al., 2026), there is limited empirical validation in real-world cross-silo deployments with actual rational agents.",
+   "ids": [
+    "2506.02887",
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the evaluation gap identified by Stricker et al. (2026) suggests that many existing FL benchmarks may not accurately reflect true model performance.",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the application-specific papers (Ho, 2026; Banik et al., 2025) point to a need for more domain-specific federated learning frameworks that account for unique constraints in healthcare, transportation, and other critical sectors.",
+   "ids": [
+    "2609.31463",
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can federated learning approaches capture spatial relationships between clients in traffic prediction tasks while remaining computationally efficient?",
+   "ids": [
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a lightweight graph-aware FL approach that blends FedAvg simplicity with graph learning principles, applying neighbourhood aggregation to guide parameter updates by weighting client models based on graph connectivity, evaluated on METR-LA and PEMS-BAY datasets.",
+   "ids": [
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The graph-aware approach captures spatial relationships between clients effectively",
+   "ids": [
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method achieves competitive performance compared to standard baselines and recent graph-based federated learning techniques",
+   "ids": [
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach remains computationally efficient compared to full Federated Graph Learning methods",
+   "ids": [
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2507.09805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can incentive mechanisms be designed to address the participation dilemma in federated learning systems?",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The chapter identifies fundamental challenges in designing incentive mechanisms and examines how concepts from economics and game theory can be applied to federated learning, alongside technology-driven solutions like blockchain and deep reinforcement learning, presenting a comprehensive taxonomy covering both centralized and decentralized architectures.",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Participating entities in federated learning are often unwilling to contribute unless they receive benefits, or may pretend to participate and free-ride on others",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Foundational concepts from economics and game theory can be applied to federated learning alongside blockchain and deep reinforcement learning solutions",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Well-designed incentive mechanisms are essential components for the practical success of federated learning, not merely optional features",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The analysis reveals both promising solutions that have emerged and significant challenges remaining in building sustainable, fair, and robust federated learning ecosystems",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2510.14208"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can federated learning be applied to automated infant movement analysis while addressing privacy and data-sharing constraints in clinical settings?",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper presents the first federated learning framework for automated infant movement analysis using skeletal motion data, evaluated on fidgety movement classification with Monte Carlo Dropout for uncertainty estimation and an Uncertainty-Aware Federated Averaging (UA-FedAvg) strategy, using a cross-subject evaluation protocol under a three-client federated learning setting.",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Federated learning substantially improves classification performance compared with independently trained local models",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Federated learning achieves performance approaching that of centralized training",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UA-FedAvg and its variant incorporating validation loss generally outperform conventional FedAvg across evaluated data-split configurations",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework addresses privacy, governance, and data-sharing constraints that make centralized training impractical in clinical settings",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2609.31463"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can federated learning maintain model quality when clients are subject to adversarial Byzantine attacks without prior knowledge of the number of malicious clients?",
+   "ids": [
+    "2508.12672"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors develop an approach requiring only two honest participants (the server and one client) to function effectively, using loss-based client clustering, with theoretical analysis demonstrating bounded optimality gaps and experimental validation on MNIST, FMNIST, and CIFAR-10 using the Flower framework under various attack strategies.",
+   "ids": [
+    "2508.12672"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The algorithm functions effectively with only two honest participants without prior knowledge of malicious client count",
+   "ids": [
+    "2508.12672"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical analysis demonstrates bounded optimality gaps even under strong Byzantine attacks",
+   "ids": [
+    "2508.12672"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The algorithm significantly outperforms standard and robust FL baselines (Mean, Trimmed Mean, Median, Krum, Multi-Krum) under various attack strategies including label flipping, sign flipping, and Gaussian noise addition",
+   "ids": [
+    "2508.12672"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2508.12672"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the practical and theoretical challenges of partial client participation in federated learning, and what methods exist to address them?",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey paper provides an extensive review of existing FL methods designed to cope with partial client participation, offering comprehensive analysis supported by theoretical insights and empirical findings, along with a structured categorization of these methods highlighting their advantages and disadvantages.",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Partial client participation is common in real-world scenarios but has received limited attention compared to full client participation assumptions",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing research has focused more on addressing generalization, robustness, and fairness caused by data heterogeneity under full client participation assumptions",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey provides in-depth review of FL methods designed for partial client participation with theoretical and empirical support",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper offers a structured categorization of methods with their respective advantages and disadvantages",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2506.02887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can performance evaluation in federated learning produce results consistent with centralized evaluation across different metrics beyond accuracy?",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors examine the reasons for discrepancies between participant-based and centralized evaluation in FL, then propose FLAM, a performance evaluation method based on aggregatable measures that yields the same results as centralized evaluation without requiring a global test dataset.",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Common aggregation strategies like weighted averaging based on local samples do not always produce the same results as centralized evaluation",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing performance evaluation definitions tailored to accuracy do not generalize to other metrics, leading to inconsistencies",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FLAM produces results matching centralized evaluation without needing a global test dataset",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2605.07962"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can federated learning frameworks jointly provide differential privacy, Byzantine robustness, and communication efficiency without compromising any of these properties?",
+   "ids": [
+    "2508.12978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Fed-DPRoC, a framework introducing robust-compatible compression that reduces bi-directional communication overhead without undermining aggregation robustness, instantiated as RobAJoL integrating Johnson-Lindenstrauss-based compression with robust averaging, with theoretical analysis and simulations on CIFAR-10, Fashion MNIST, and FEMNIST.",
+   "ids": [
+    "2508.12978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JL transform is compatible with robust averaging, maintaining both robustness guarantees and differential privacy",
+   "ids": [
+    "2508.12978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RobAJoL substantially reduces communication overhead while preserving robustness and utility",
+   "ids": [
+    "2508.12978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RobAJoL outperforms existing methods in robustness and utility under different Byzantine attacks",
+   "ids": [
+    "2508.12978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2508.12978"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can federated learning sustain client participation when clients are rational agents who may prioritize local utility over global model performance?",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce FedUCA, a framework that formalizes the server's role as an optimizer seeking to maximize global model performance by sustaining client participation through utility-constrained stochastic aggregation, substantiated through extensive experiments on standard datasets.",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Clients in real-world cross-silo environments are often rational agents who may prioritize local model performance over global model performance",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In settings with significant statistical heterogeneity, rational clients may opt out of the federation if perceived benefits fail to meet local utility thresholds",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Client attrition degrades global model performance and can lead to the collapse of the federated training process",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FedUCA achieves significantly higher client retention and superior global model performance by prioritizing participation feasibility",
+   "ids": [
+    "2605.18020"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2605.18020"
+   ]
+  }
+ ]
+}

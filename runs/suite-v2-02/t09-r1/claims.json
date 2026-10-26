@@ -1,0 +1,742 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Namazifard and Poech (2025) demonstrated that culture is encoded in distinct neuron populations, predominantly in upper layers, and can be modulated independently from language-specific neurons.",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Building on this line of inquiry, Kim et al. (2026) introduced a distribution-aware approach to language neuron identification that leverages pairwise relationships between per-language activation distributions, achieving up to 4.9× higher on-target language damage per neuron compared to entropy-based methods.",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Le and Li (2026) proposed CRANE, a causal relevance analysis framework that identifies language-specific neurons through functional necessity rather than activation-based heuristics, enabling more precise isolation of language-selective components.",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cui et al. (2025) provided a comprehensive framework for understanding annotation bias, proposing a typology distinguishing instruction bias, annotator bias, and contextual/cultural bias, with detection methods including inter-annotator agreement, model disagreement, and multilingual model divergence.",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Valentini et al. (2026) investigated translationese in MLLM generations across five languages, revealing that MLLM-produced text exhibits characteristics of translated content that differ from direct human translation.",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cahyawijaya et al. (2024) exposed cross-lingual word sense disambiguation failures, showing that MLLMs tend to bias toward higher-resource languages when processing false friends across language pairs.",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lee et al. (2026) conducted a systematic comparison of equitable tokenizers across 11 Southeast Asian languages, finding that parity-aware BPE achieves strong compression parity at competitive cost, while morphology-driven byte encoding delivers superior semantic reasoning at higher computational expense.",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Complementing this work, Bu et al. (2025) proposed AlignX, a two-stage representation-level framework that aligns multilingual representations through semantic alignment and language feature integration, bringing multilingual representations closer together and improving cross-lingual alignment compared to existing fine-tuning approaches.",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kaneko et al. (2025) introduced balanced multi-factor in-context learning (BMF-ICL), which quantifies and optimally balances semantic similarity, linguistic alignment, and language-specific performance for example selection.",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2024) provided a comprehensive survey covering MLLM architecture, pre-training objectives, multilingual dataset construction, evaluation benchmarks, and applications across diverse domains including biology, medicine, computer science, mathematics, and law.",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, multiple studies converge on the finding that MLLMs encode language-specific and culture-specific information in separable neural populations that can be selectively manipulated (Namazifard & Poech, 2025; Kim et al., 2026; Le & Li, 2026).",
+   "ids": [
+    "2508.02241",
+    "2609.10993",
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is consensus that current MLLMs exhibit systematic biases toward high-resource languages and Latin scripts, particularly in tokenization and cross-lingual disambiguation (Cahyawijaya et al., 2024; Lee et al., 2026; Cui et al., 2025).",
+   "ids": [
+    "2410.21573",
+    "2606.15044",
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, the literature agrees that data quality and diversity in multilingual pre-training and alignment datasets are crucial for enhancing MLLM performance (Zhu et al., 2024; Bu et al., 2025).",
+   "ids": [
+    "2411.11072",
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "For instance, Kim et al. (2026) advocate for distribution-aware neuron identification based on activation distributions, while Le and Li (2026) argue for causal relevance analysis based on functional necessity—though both approaches aim to improve upon entropy-based methods.",
+   "ids": [
+    "2609.10993",
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is tension between efficiency-focused approaches like parity-aware BPE (Lee et al., 2026) and performance-focused approaches like morphology-driven encoding, reflecting ongoing debate about optimal trade-offs in multilingual system design.",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the multilingual performance gap in pre-trained LLMs be bridged, particularly for non-dominant languages that lag in performance and cross-lingual alignment?",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose AlignX, a two-stage representation-level framework: (1) aligning multilingual representations with multilingual semantic alignment and language feature integration, and (2) stimulating multilingual capability via multilingual instruction fine-tuning.",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments were conducted on several pre-trained LLMs.",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AlignX enhances LLMs' multilingual general and cross-lingual generation capability",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach brings multilingual representations closer together",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AlignX improves cross-lingual alignment compared to existing fine-tuning approaches",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2509.24338"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can multilingual LLMs reliably disambiguate cross-lingual word sense, particularly for false friends across different language pairs?",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study introduces StingrayBench, a novel benchmark for cross-lingual sense disambiguation using false friends (orthographically similar words with different meanings) across four language pairs: Indonesian-Malay, Indonesian-Tagalog, Chinese-Japanese, and English-German.",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multilingual LLMs tend to be biased toward higher-resource languages when disambiguating false friends",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The study collects false friends in four language pairs to challenge LLMs' cross-lingual sense disambiguation capabilities",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "New metrics are proposed for quantifying cross-lingual sense bias and comprehension",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current multilingual LLMs show limitations in distinguishing orthographically similar words with different meanings across languages",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The work contributes to developing more diverse and inclusive language modeling for fairer multilingual community access",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2410.21573"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can annotation bias in NLP datasets be understood, detected, and mitigated in multilingual LLM development?",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes a comprehensive framework for understanding annotation bias and reviews detection methods including inter-annotator agreement, model disagreement, and metadata analysis, while highlighting emerging techniques such as multilingual model divergence and cultural inference.",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Annotation bias stems from task framing, annotator subjectivity, and cultural mismatches, which can distort model outputs and exacerbate social harms",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The authors propose a typology distinguishing instruction bias, annotator bias, and contextual and cultural bias",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Detection methods include inter-annotator agreement, model disagreement, metadata analysis, multilingual model divergence, and cultural inference",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mitigation strategies include diverse annotator recruitment, iterative guideline refinement, and post-hoc model adjustments",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The work provides an ethical analysis of annotation processes for more equitable and culturally grounded LLM pipelines",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2511.14662"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can example selection in multilingual in-context learning be optimized by explicitly disentangling and balancing the combined impact of semantic similarity, linguistic alignment, and language-specific performance?",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose balanced multi-factor ICL (BMF-ICL), a method that quantifies and optimally balances three key factors (semantic similarity, linguistic alignment, and language-specific performance) for improved example selection.",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments were conducted on mCSQA and TYDI datasets across four MLLMs.",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BMF-ICL outperforms existing methods on mCSQA and TYDI across four MLLMs",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incorporating all three factors (semantic similarity, linguistic alignment, language-specific performance) is important for optimal performance",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Selecting examples from multiple languages improves results",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2502.11495"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can language-specific neuron identification in multilingual LLMs be improved by leveraging pairwise relationships between per-language activation distributions rather than using entropy-based measures?",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Distribution-aware Language Neuron selection, which leverages pairwise relationships between per-language activation distributions over the full activation range (including negative values).",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They quantify language specificity by clustering languages using pairwise overlap coefficients between their activation distributions, evaluated across two mLLMs and two held-out corpora.",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed identifier more effectively isolates language-specific causal effects compared to existing entropy-based approaches",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method yields up to 4.9× higher on-target language damage per neuron",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach preserves off-target language performance better than existing methods",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2609.10993"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can language-specific neurons in multilingual LLMs be identified through functional necessity rather than activation-based heuristics?",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes CRANE, a relevance-based analysis framework that identifies language-specific neurons through targeted neuron-level interventions, characterizing neuron specialization by their contribution to language-conditioned predictions rather than activation magnitude.",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Masking neurons relevant to a target language selectively degrades performance on that language while preserving performance on other languages",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Language-selective but non-exclusive neuron specializations exist in multilingual LLMs",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CRANE isolates language-specific components more precisely than activation-based methods",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments on English, Chinese, and Vietnamese across multiple benchmarks validate the approach",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework includes a dedicated relevance-based metric and base-to-chat model transfer analysis",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2601.04664"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do different tokenizer designs balance efficiency and equity for multilingual LLMs, particularly for underrepresented Southeast Asian languages?",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper presents a systematic comparison of equitable tokenizers on a unified benchmark spanning 11 Southeast Asian languages, including downstream task performance through controlled 1.5B-parameter language model training using the same training data.",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "State-of-the-art multilingual LLMs often use Byte-level BPE tokenizers that structurally favor high-resource languages and Latin scripts",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parity-aware BPE achieves strong compression parity at competitive cost, lying on the Pareto frontier of the efficiency-equity trade-off",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Morphology-Driven Byte Encoding delivers the best semantic reasoning performance through morphologically richer representations, albeit at higher computational expense",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Byte Latent Transformer underperforms on downstream tasks, possibly due to misalignment with limited low-resource training data constraints",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-lingual fairness and tokenization efficiency are not fundamentally at odds, offering practical guidance for equitable multilingual model design",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2606.15044"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How and where do multilingual large language models encode culture, and can culture-specific neurons be isolated and disentangled from language-specific neurons?",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors build on established methodology for identifying language-specific neurons to localize and isolate culture-specific neurons, using a curated dataset (MUREL) of 85.2 million tokens spanning six cultures.",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They conduct localization and intervention experiments to modulate culture neurons independently.",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs encode different cultures in distinct neuron populations, predominantly in upper layers",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Culture neurons can be modulated largely independently of language-specific neurons",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Culture neurons can be modulated largely independently of neurons specific to other cultures",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cultural knowledge and propensities in multilingual language models can be selectively isolated and edited",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2508.02241"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does text generated by multilingual large language models resemble translationese, and how does MLLM-produced translationese differ from translationese produced through direct translation?",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors leverage established indicators of translated text to evaluate MLLM-generated text in five languages, comparing to both non-translated and human-written baselines.",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They use high-accuracy classification models, analyses of variance on individual linguistic features, and human annotations (in German and Spanish) to assess translationese content.",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The study assesses the translationese content of MLLM generations across five languages",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The research examines key linguistic features that distinguish MLLM-generated text from typical translation-related interference",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Human annotations were collected in German and Spanish to validate findings",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2608.17399"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the current architectures, datasets, evaluation methods, and applications of multilingual large language models?",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This paper provides a comprehensive survey covering MLLM architecture and pre-training objectives, multilingual dataset construction, evaluation benchmarks and taxonomies, interpretability analysis, and real-world applications across diverse domains.",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MLLMs represent an important advancement in AI with capabilities to understand and generate language across linguistic boundaries",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey presents a detailed taxonomy and roadmap for assessing MLLMs' cross-lingual knowledge, reasoning, alignment, safety, interpretability, and specialized applications",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Data quality and diversity in multilingual pre-training and alignment datasets are crucial for enhancing MLLM performance",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper addresses interpretability of multilingual capabilities, cross-lingual transfer, and language bias within these models",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MLLMs have driven innovation in specialized fields including biology, medicine, computer science, mathematics, and law",
+   "ids": [
+    "2411.11072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2411.11072"
+   ]
+  }
+ ]
+}

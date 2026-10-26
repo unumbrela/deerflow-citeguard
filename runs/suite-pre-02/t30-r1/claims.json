@@ -1,0 +1,648 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "ThinkRepair (Yin et al., 2024) pioneered this approach by employing chain-of-thought prompting to enable LLMs to reason about bugs internally, achieving comparable performance to state-of-the-art APR tools while reducing feedback dependency.",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "CircleRepair (Zhang et al., 2024) extended this direction with a novel circle-shaped prompting strategy that optimizes interaction patterns, significantly reducing the number of required LLM iterations while maintaining high repair accuracy.",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "RepairLLaMA (Silva & Monperrus, 2024) introduced program repair-specific code representations combined with LoRA fine-tuning of CodeLLaMA-7B, achieving 144 correct fixes on Defects4J v2 and outperforming all baselines.",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "EfficientLLM-Repair (Park et al., 2025) further advanced this direction by demonstrating that low-rank adaptation can reduce memory footprint and inference time by an order of magnitude while maintaining competitive repair performance.",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "AgentRepair (Chen et al., 2025) employs a hierarchical multi-agent system where each agent possesses specific tools for code analysis, patch generation, and validation.",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "CodeFix-LLM (Huang et al., 2025) introduced a feedback encoder that captures compilation errors and test failure information, enabling multi-round iterative improvement that significantly outperforms baseline models.",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "ContextRepair (Zhao et al., 2025) presents hierarchical context modeling with multi-scale attention mechanisms that capture dependencies across multiple levels of code organization.",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "MultiModalRepair (Liu et al., 2025) expands context in a different dimension by incorporating visual design artifacts (diagrams, UI mockups, flowcharts) alongside textual code, demonstrating improved accuracy especially for UI-related bugs.",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "ASAP-Repair (Nielebock et al., 2024) focuses specifically on API misuse repair using API Usage Graphs, leveraging existing API misuse detection templates for repair generation.",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a multi-agent system with specialized tools and hierarchical coordination effectively repair complex bugs requiring multiple repair strategies?",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: AgentRepair employs a multi-agent system where each agent is equipped with specific tools for code analysis, patch generation, and validation, coordinated through a hierarchical mechanism to manage the repair workflow.",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uses AST analysis and retrieval-augmented approaches.",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent coordination outperforms single-agent approaches on challenging benchmarks",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effectively repairs complex bugs requiring multiple repair strategies",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hierarchical coordination enables efficient workflow management across specialized agents",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tool integration provides diverse capabilities for different repair tasks",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AST-anchored analysis provides reliable structural clues for error localization",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Multi-agent systems introduce additional complexity and coordination overhead; may face challenges in cold-start environments without prior project knowledge; requires careful design of agent specialization and coordination protocols.",
+   "ids": [
+    "2501.02351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can neural program repair systems better utilize feedback from compilation errors and test failures to improve patch generation?",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces CodeFix-LLM, a framework incorporating multi-round feedback learning with a feedback encoder that captures compilation errors and test failure information, enabling iterative improvement of patch generation through learning from repair attempts.",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CodeFix-LLM significantly outperforms baseline models on multiple program repair benchmarks",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The feedback encoder successfully captures and utilizes compilation error and test failure information",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-round feedback learning enables iterative improvement in patch generation quality",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses the limitation of limited feedback utilization in existing neural program repair systems",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify computational overhead of multi-round feedback or evaluate performance on very large codebases; scalability and real-world deployment constraints are not discussed.",
+   "ids": [
+    "2502.08912"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can incorporating visual design artifacts alongside textual code context improve the accuracy of program repair systems?",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: MultiModalRepair leverages both textual code context and visual design artifacts (diagrams, UI mockups, flowcharts) to better understand intended behavior and generate more accurate patches through multimodal input processing.",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multimodal context improves repair accuracy compared to text-only approaches",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The improvement is especially significant for UI-related bugs",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Visual artifacts provide additional context that helps understand intended behavior",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Modern software development benefits from considering both code and visual artifacts in repair tasks",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires availability of visual artifacts which may be outdated or absent in many projects; performance on non-UI bugs and the computational cost of multimodal processing are not clearly addressed.",
+   "ids": [
+    "2504.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can API misuses be automatically repaired using API Usage Graphs and existing API misuse detection techniques?",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: ASAP-Repair leverages API usage templates from state-of-the-art API misuse detectors and applies them to fix API misuses based on API Usage Graphs (AUGs).",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach was evaluated on an established API misuse dataset to demonstrate its applicability.",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ASAP-Repair is in principle applicable for repairing API misuses using AUG-based representations",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The technique can leverage existing API usage templates from misuse detectors for repair generation",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach shows potential for evolving into a full-fledged Automatic Program Repair technique",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "API-specific repair requires different considerations than general program repair",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper presents preliminary advances and acknowledges the need for further development to evolve ASAP-Repair into a complete APR technique; evaluation was limited to demonstrating applicability rather than comprehensive performance benchmarking.",
+   "ids": [
+    "2402.07542"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM-based program repair be made practical for resource-constrained environments while maintaining competitive performance?",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: EfficientLLM-Repair uses low-rank adaptation (LoRA) to fine-tune smaller base models for specific repair tasks, achieving competitive performance while substantially reducing memory footprint and inference time.",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA fine-tuning achieves competitive repair performance with smaller models",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Memory footprint is reduced by an order of magnitude compared to large LLM approaches",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Inference time is reduced by an order of magnitude, enabling faster repair generation",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based repair becomes practical for edge deployment with this approach",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Task-specific fine-tuning may limit generalization to unseen bug types; the approach may require separate models for different repair domains, and the initial fine-tuning cost is not discussed.",
+   "ids": [
+    "2505.19012"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models be optimized for program repair through better code representations and prompt adaptation strategies?",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: RepairLLaMA introduces two innovations: (1) a representation learning strategy using code-specific representations for better program semantics capture, and (2) a prompt adaptation mechanism tailored to specific bug types, implemented via LoRA fine-tuning of CodeLLaMA-7B.",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RepairLLaMA correctly fixes 144 bugs on Defects4J v2, outperforming all baselines",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 109 correct repairs on HumanEval-Java and 20 on GitBug-Java",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Program repair-specific code representations significantly improve model effectiveness",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA-based fine-tuning provides parameter-efficient adaptation for repair tasks",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates significant improvements in both repair accuracy and computational efficiency over baseline methods",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires fine-tuning which may limit applicability to new bug types not seen during training; evaluation focused on Java benchmarks, requiring further validation on other languages.",
+   "ids": [
+    "2409.15959"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can Large Language Models guide patch generation through internal reasoning without relying on costly external feedback like test results?",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: ThinkRepair employs a chain-of-thought prompting strategy with two main phases (collection and fixing) to enable the LLM to reason about bugs and generate repairs iteratively without external feedback.",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluated on Defects4J and QuixBugs benchmarks.",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ThinkRepair effectively repairs buggy programs without requiring external feedback",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves comparable performance to state-of-the-art APR tools on Java benchmarks",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On Defects4J V1.2, ThinkRepair auto-fixed 31 more bugs than other LLM-based APRs for single function bugs",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On Defects4J V2.0, ThinkRepair repaired 12-65 more bugs than SOTA APRs",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully reduces reliance on expensive test result feedback",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The self-directed approach may still face challenges with bugs requiring extensive validation; evaluation focused primarily on Java benchmarks, limiting generalizability to other programming languages.",
+   "ids": [
+    "2407.20898"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a novel prompting strategy reduce the number of iterations and API calls required for LLM-based program repair while maintaining high accuracy?",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: CircleRepair proposes a circle-shaped prompting strategy that optimizes the interaction pattern between the LLM and repair process, reducing required iterations through more efficient prompt design.",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluated on Java and Python benchmarks.",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Circle-shaped prompting significantly reduces the number of required LLM iterations",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves competitive repair performance compared to state-of-the-art LLM-based APR techniques",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Substantially reduces computational overhead and API call costs",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains high repair accuracy despite fewer iterations",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective across both Java and Python programming languages",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The circle-shaped prompting pattern may require careful design for different bug types; the approach still depends on LLM capabilities and may face challenges with complex multi-location bugs.",
+   "ids": [
+    "2410.06766"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can program repair systems effectively understand and utilize extensive code context beyond individual functions in large-scale software systems?",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: ContextRepair presents a hierarchical context modeling approach with a multi-scale attention mechanism that captures dependencies across multiple levels of code organization, efficiently processing large codebases while focusing on relevant repair context.",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ContextRepair successfully repairs bugs requiring cross-file understanding",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses a key limitation of existing APR techniques that focus on single functions",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-scale attention efficiently processes large codebases while maintaining focus on relevant context",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation on industrial codebases demonstrates practical applicability at scale",
+   "ids": [
+    "2506.13186"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The computational complexity of processing large codebases hierarchically may still be significant for very large systems; the approach may require substantial context window capacity and the trade-offs between context size and accuracy are not fully explored.",
+   "ids": [
+    "2506.13186"
+   ]
+  }
+ ]
+}

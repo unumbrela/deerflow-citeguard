@@ -1,0 +1,502 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 3
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Herserant and Guigue (2025) conducted experiments across six representative summarization evaluation metrics, from classical ROUGE to recent LLM-based methods like G-Eval and SEval-Ex.",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "As Larionov et al. (2025) note in their comparison of reasoning-enabled LLMs for evaluation tasks, the utility of newer model architectures for evaluating natural language generation remains an open question requiring systematic investigation.",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2024) introduced QAPyramid, which improves upon the widely-adopted Pyramid human evaluation protocol for assessing content selection in text summarization.",
+   "ids": [
+    "2412.07096"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Fang et al. (2024) proposed a Multi-LLM summarization framework with two strategies: centralized and decentralized.",
+   "ids": [
+    "2412.15487"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Alansary and Hamdi (2026) presented a Multi-Model Summarization Framework that integrates multiple fine-tuned transformer-based models with a metric-based selection mechanism.",
+   "ids": [
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Balde et al. (2025) focused on medical text summarization, showing that LLMs exhibit significant performance drops for data points with high concentrations of out-of-vocabulary (OOV) words or high novelty.",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Aly et al. (2025) similarly found notable performance variations based on dataset properties when evaluating six LLMs across four datasets spanning news, dialog, and scientific domains.",
+   "ids": [
+    "2507.05123"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Katwe et al. (2026) introduced Reference Abstraction (RA), Summary Abstraction (SA), and Abstraction Ratio (AR)—heuristic metrics that measure how much a summary diverges from extractive copying of the source text.",
+   "ids": [
+    "2607.10806"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Herserant and Guigue (2025), Aly et al. (2025), and Rehman et al. (2025) all emphasize the importance of using multiple metrics to capture different aspects of summarization quality.",
+   "ids": [
+    "2508.21389",
+    "2507.05123",
+    "2502.19339"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that domain-specific considerations matter: Balde et al. (2025) and Aly et al. (2025) both demonstrate that summarization performance varies significantly across domains, requiring tailored approaches.",
+   "ids": [
+    "2505.21242",
+    "2507.05123"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Both Fang et al. (2024) and Alansary and Hamdi (2026) demonstrate that leveraging multiple models improves summarization quality and robustness compared to single-model approaches.",
+   "ids": [
+    "2412.15487",
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Herserant and Guigue (2025) highlight concerns about LLM-based evaluation reliability, randomness, and limited reproducibility, Larionov et al. (2025) explore whether reasoning-enabled LLMs can overcome these limitations.",
+   "ids": [
+    "2508.21389",
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Herserant and Guigue (2025) identify this as a structural trade-off, but no paper offers a satisfactory solution.",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Similarly, while vocabulary adaptation shows promise for domain-specific summarization (Balde et al., 2025), the optimal strategies for vocabulary expansion and their generalizability across domains remain open questions.",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "While Balde et al. (2025) and Aly et al. (2025) address specific aspects of this challenge, a comprehensive framework for evaluating summarization under difficult conditions remains undeveloped.",
+   "ids": [
+    "2505.21242",
+    "2507.05123"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a multi-model framework improve the robustness and quality of abstractive text summarization compared to single-model approaches?",
+   "ids": [
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors developed a Multi-Model Summarization Framework that integrates multiple fine-tuned transformer-based models with a metric-based selection mechanism, evaluated on the CNN/DailyMail dataset.",
+   "ids": [
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework achieved the highest BERTScore (88.63%) among all compared methods",
+   "ids": [
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperformed several LLMs including GPT3-D2, Falcon-7b, and Mpt-7b",
+   "ids": [
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Metric-based selection of the best summary from multiple candidates improves quality and robustness",
+   "ids": [
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2606.05494"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do LLMs perform on medical text summarization under difficult settings with high out-of-vocabulary word concentration, and can vocabulary adaptation improve performance?",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Benchmarking study across three medical summarization datasets evaluating multiple vocabulary adaptation strategies and two continual pretraining strategies, with human evaluation by medical experts.",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs show significant performance drop for data points with high OOV word concentration or high novelty",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Llama-3.1 faces over-fragmentation issues with medical words despite large vocabulary size",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Vocabulary adaptation improves LLM summarization performance even in difficult settings",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Medical experts found vocabulary adaptation results in more relevant and faithful summaries",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2505.21242"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-LLM frameworks improve text summarization quality compared to single-LLM approaches?",
+   "ids": [
+    "2412.15487"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed Multi-LLM summarization framework with centralized and decentralized strategies, where k different LLMs generate diverse summaries and evaluation is performed by either a single LLM (centralized) or k LLMs (decentralized).",
+   "ids": [
+    "2412.15487"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-LLM approaches significantly outperform single-LLM baselines by up to 3x",
+   "ids": [
+    "2412.15487"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both centralized and decentralized strategies are effective",
+   "ids": [
+    "2412.15487"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-model generation and evaluation steps improve summarization quality",
+   "ids": [
+    "2412.15487"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2412.15487"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How reproducible are automatic text summarization evaluation metrics, and how do reported performances compare to observed experimental results?",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Experiments across six representative summarization evaluation metrics (ROUGE to LLM-based methods like G-Eval and SEval-Ex) using the SummEval dataset with a unified open-source framework for fair comparison.",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant discrepancies exist between reported performances in literature and observed experimental results",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Metrics with highest alignment to human judgments tend to be computationally intensive and less stable across runs",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs for evaluation exhibit randomness, technical dependencies, and limited reproducibility",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Structural trade-off exists between alignment quality and computational efficiency/stability",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2508.21389"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do reasoning-enabled large language models compare to non-reasoning LLMs for evaluating natural language generation in machine translation and text summarization tasks?",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematic comparison of eight models including reasoning models (DeepSeek-R1, OpenAI o3), distilled variants (8B-70B parameters), and equivalent non-reasoning LLMs on WMT23 and SummEval benchmarks using correlation analysis.",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OpenAI o3-mini models show improved performance with increased reasoning on machine translation tasks",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DeepSeek-R1 underperforms compared to non-reasoning variant except in summarization consistency evaluation",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reasoning token usage correlates with evaluation quality only in specific models",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distillation maintains reasonable performance up to 32B parameters but degrades at 8B scale",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2504.08120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do leading pre-trained and open-source large language models compare in their text summarization capabilities across diverse datasets?",
+   "ids": [
+    "2502.19339"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluation of four models (BART, FLAN-T5, LLaMA-3-8B, and Gemma-7B) across five datasets (CNN/DM, Gigaword, News Summary, XSum, and BBC News) using ROUGE-1, ROUGE-2, ROUGE-L, BERTScore, and METEOR metrics.",
+   "ids": [
+    "2502.19339"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation reveals comparative strengths and limitations of the four models across different text types",
+   "ids": [
+    "2502.19339"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different models show varying performance across the five diverse datasets",
+   "ids": [
+    "2502.19339"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multiple automatic metrics provide comprehensive assessment of summarization capabilities",
+   "ids": [
+    "2502.19339"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2502.19339"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the Pyramid human evaluation protocol for text summarization be improved to address its lack of systematicity in defining and granularizing sub-units?",
+   "ids": [
+    "2412.07096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed QAPyramid, which decomposes reference summaries into finer-grained question-answer pairs using the QA-SRL framework, with collection of QA-SRL annotations for CNN/DM reference summaries and evaluation of 10 summarization systems (8.9K QA-level annotations).",
+   "ids": [
+    "2412.07096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "QAPyramid provides more systematic and fine-grained content selection evaluation compared to Pyramid",
+   "ids": [
+    "2412.07096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains high inter-annotator agreement without requiring expert annotations",
+   "ids": [
+    "2412.07096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proposed automated metrics achieve higher correlations with QAPyramid than other widely adopted metrics",
+   "ids": [
+    "2412.07096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "QA-SRL framework enables decomposition into finer-grained evaluative units",
+   "ids": [
+    "2412.07096"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2412.07096"
+   ]
+  }
+ ]
+}

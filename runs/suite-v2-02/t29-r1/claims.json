@@ -1,0 +1,561 @@
+{
+ "stats": {
+  "ambiguous": 5,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim et al. (2025) propose I-LLMRec, which uses images instead of lengthy textual descriptions to represent items, achieving both efficiency gains and improved effectiveness by reducing noise sensitivity.",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhou et al. (2025) introduce multi-head early exit mechanisms in RAG-enhanced recommenders, allowing dynamic termination of inference based on predictive confidence while maintaining accuracy.",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kang et al. (2026) tackle rare medication recommendation with GenRxR, using LLMs to generate counterfactual medical data that augments scarce training examples, achieving up to 30.9% improvement for rare medications.",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ebrat et al. (2025) address limited user feedback scenarios by using LLMs to generate semantically meaningful user and item profiles from metadata, which serve as initial features in graph-based collaborative filtering.",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sah et al. (2025) introduce FairEval, integrating personality traits with demographic attributes to comprehensively assess user-level bias, revealing fairness disparities reaching 34.79% across dimensions despite high overall PAFS scores.",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Epure et al. (2025) argue that standard accuracy metrics are questionable for generative LLM-based music recommenders, calling for evaluation beyond traditional train/test protocols.",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Doh et al. (2026) empirically validate LLM-as-a-judge for conversational recommendation, finding moderate positive alignment with human expert judgments while outperforming reference-based baselines.",
+   "ids": [
+    "2607.25640"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kekuda et al. (2025) demonstrate this with a cross-pollination framework bridging grocery and general merchandise, using LLMs for item-item association identification combined with real-time cart context, achieving 36% lift in add-to-cart rates.",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, multiple papers agree that offline or selective LLM usage is preferable to real-time scoring for efficiency (Yang et al., 2025; Zhou et al., 2025).",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Doh et al. (2026) validate LLM-as-a-judge as a practical evaluation tool, Epure et al. (2025) caution that LLMs introduce challenges including hallucinations, non-determinism, and opaque training data that complicate their use as evaluators.",
+   "ids": [
+    "2607.25640",
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also implicit disagreement about the role of images versus text: Kim et al. (2025) advocate image-based representations for efficiency, while most other papers assume text-based LLM inputs, suggesting unresolved questions about optimal modality.",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, the hallucination risk identified by Epure et al. (2025) is not addressed by any proposed mitigation strategy in the surveyed papers.",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, fairness evaluation by Sah et al. (2025) reveals significant disparities, but no paper proposes concrete debiasing interventions beyond evaluation frameworks.",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can recommender systems improve both personalization and interpretability, particularly in scenarios involving limited user feedback or heterogeneous item attributes?",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a hybrid framework combining Graph Attention Networks with LLMs, where LLMs generate semantically meaningful user and item profiles from metadata serving as initial node features in a bipartite graph processed by GAT-based collaborative filtering, with a hybrid loss function combining Bayesian Personalized Ranking, cosine similarity, and robust negative sampling.",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hybrid model consistently outperforms strong baselines on MovieLens 100k and 1M datasets",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based embeddings significantly contribute to performance gains as confirmed by ablation studies",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cosine similarity in the hybrid loss function improves ranking accuracy",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM post-processing enables reranking and provides natural-language justifications for transparency",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2508.01514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How should evaluation practices for Music Recommender Systems be rethought in light of the shift toward LLM-driven approaches?",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors review LLM impacts on user modeling, item modeling, and natural language-based recommendation in music, analyze evaluation practices from NLP, and synthesize insights on LLM prompting applications to music recommendation systems to outline success and risk dimensions.",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Standard accuracy metrics are questionable for generative LLM-based music recommenders",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs introduce challenges including hallucinations, knowledge cutoffs, non-determinism, and opaque training data",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs create opportunities for natural language interaction and enable models to act as evaluators",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The shift requires rethinking evaluation beyond traditional train/test protocols",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2511.16478"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can AI-based medication recommendation systems improve predictive performance for rarely prescribed medications given data scarcity and limited consideration of co-recommended medications?",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose GenRxR, leveraging LLMs to generate counterfactual medical data for mitigating rare medication data scarcity, integrating an LLM into the recommendation process to model relationships among co-recommended medications, and using instruction tuning to align the LLM's capability with the recommendation task.",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GenRxR outperforms 14 baselines (including 5 LLM-based) in most cases",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves up to 30.9% higher predictive performance for rare medications than the strongest baseline",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Counterfactual data augmentation effectively mitigates data scarcity",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Instruction tuning enables better handling of clinical context including rare medication cases",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2607.24829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can e-commerce platforms effectively recommend general merchandise to customers focused on grocery shopping by leveraging cross-category associations and real-time cart context?",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a cross-pollination framework with two stages: candidate generation using co-purchase market basket analysis and LLM-based item-item association identification, followed by a transformer-based ranker leveraging real-time sequential cart context and optimizing for engagement signals.",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based retrieval on the item page increased add-to-cart rate by 36%",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cart context-based ranker achieved a 15% lift in add-to-cart rate",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework successfully bridges grocery and general merchandise cross-category recommendations",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-source product associations combined with real-time cart context improve relevance",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2509.02890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM-based recommender systems address the trade-off between efficiency and effectiveness when representing items consumed by users?",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose I-LLMRec, leveraging images as an alternative to lengthy textual descriptions for representing items, aiming to reduce token usage while preserving rich semantic information, evaluated through extensive experiments comparing efficiency and effectiveness against existing methods.",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "I-LLMRec outperforms existing methods in both efficiency and effectiveness",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is significant information overlap between images and descriptions associated with items",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Using images reduces sensitivity to noise in descriptions, leading to more robust recommendations",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Image-based representation reduces token usage while preserving semantic information",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can fairness in LLM-based recommender systems be systematically evaluated across demographic and psychological user dimensions?",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce FairEval, integrating personality traits with eight sensitive demographic attributes to enable comprehensive assessment of user-level bias, evaluating models including ChatGPT 4o and Gemini 1.5 Flash on music and movie recommendations using the PAFS fairness metric.",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PAFS metric achieves scores up to 0.9969 for ChatGPT 4o and 0.9997 for Gemini 1.5 Flash",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fairness disparities reaching 34.79% were observed across demographic and psychological dimensions",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework enables comprehensive assessment by integrating personality traits with demographic attributes",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Results highlight the importance of robustness in prompt sensitivity for inclusive recommendation systems",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2504.07801"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can RAG-enhanced LLM recommender systems concurrently enhance computational efficiency and predictive accuracy for Click-Through Rate prediction?",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper presents an optimization framework combining Retrieval-Augmented Generation with a multi-head early exit architecture, integrating Graph Convolutional Networks as efficient retrieval mechanisms, with an early exit strategy allowing dynamic termination of model inference using real-time predictive confidence assessments.",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The architecture effectively decreases computation time without sacrificing accuracy",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GCNs as retrieval mechanisms significantly reduce data retrieval times while maintaining high performance",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The early exit strategy quickens LLM responsiveness while upholding or improving accuracy",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach establishes a new standard for efficient, real-time LLM deployment in commercial systems",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How reliably does LLM-as-a-judge align with human judgment when evaluating conversational recommendation system responses?",
+   "ids": [
+    "2607.25640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conducted the first user study to empirically assess LLM-as-a-judge reliability for CRS responses, sampling 20 multi-turn music recommendation sessions and generating candidate responses using four instruction-tuned LLMs, collecting 400 ratings from 20 domain-expert annotators evaluating Personalization Quality and Explanation Quality, then performing bootstrapped correlation analysis.",
+   "ids": [
+    "2607.25640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based judges exhibit moderate positive alignment with human assessments",
+   "ids": [
+    "2607.25640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-as-a-judge outperforms all reference-based baselines for evaluating CRS responses",
+   "ids": [
+    "2607.25640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Judge performance varies according to model scale and conditioning information",
+   "ids": [
+    "2607.25640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The study provides practical guidance for deploying LLM-as-a-judge in conversational recommendation contexts",
+   "ids": [
+    "2607.25640"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2607.25640"
+   ]
+  }
+ ]
+}

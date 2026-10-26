@@ -1,0 +1,560 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "MASS-RAG (Xiao et al., 2026) exemplifies this approach with role-specialized agents for evidence summarization, extraction, and reasoning, whose outputs are combined through a dedicated synthesis stage.",
+   "ids": [
+    "2604.18509"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, MAIN-RAG (Chang et al., 2024) employs multiple LLM agents to collaboratively filter and score retrieved documents, using inter-agent consensus to ensure robust document selection without requiring additional training.",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "FAIR-RAG (Aghajani Asl et al., 2025) extends this paradigm with an Iterative Refinement Cycle where agents deconstruct queries into checklists, audit evidence for gaps, and generate targeted sub-queries until evidence is sufficient.",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Parametric RAG (Su et al., 2025) represents a fundamental departure from this approach, integrating external knowledge directly into the parameters of feed-forward networks through document parameterization.",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "RetroRAG (Xiao et al., 2025) introduces another novel paradigm: retroactive reasoning that revises and updates evidence to redirect reasoning chains.",
+   "ids": [
+    "2501.05475"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In Quranic studies, Khalila et al. (2025) investigated how 13 open-source LLMs of varying sizes perform when augmented with RAG for domain-specific religious queries, finding that RAG mitigates hallucination issues common in general-purpose LLMs when applied to sensitive religious contexts.",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chakraborty et al. (2025) conducted the first systematic mapping study of Federated RAG, identifying key challenges including privacy-preserving retrieval, cross-client heterogeneity, and evaluation limitations.",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "SimGRAG (Cai et al., 2024) targets knowledge graph-driven RAG, addressing the challenge of aligning query texts with KG structures through a two-stage process of query-to-pattern transformation and pattern-to-subgraph alignment.",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nyx (Zhang et al., 2025) represents a unified mixed-modal to mixed-modal retriever tailored for Universal RAG scenarios.",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, evaluation limitations are explicitly identified as a key challenge in Federated RAG (Chakraborty et al., 2025), and notably, none of the surveyed papers state their own limitations in their abstracts—a concerning pattern suggesting the field may lack systematic self-critique.",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Only the Quranic studies paper (Khalila et al., 2025) mentions human-assessed metrics.",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can RAG systems be improved to handle complex, multi-hop queries that require synthesizing information from disparate sources?",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: FAIR-RAG introduces an Iterative Refinement Cycle with a Structured Evidence Assessment (SEA) module that deconstructs queries into checklists, audits evidence for gaps, and generates targeted sub-queries until evidence is sufficient.",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework was evaluated on HotpotQA, 2WikiMultiHopQA, and MusiQue benchmarks.",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FAIR-RAG significantly outperforms strong baselines on multi-hop QA benchmarks",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On HotpotQA, FAIR-RAG achieved an F1-score of 0.453, an 8.3-point improvement over the strongest iterative baseline",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The structured evidence-driven refinement process with explicit gap analysis improves reliability and accuracy in complex reasoning tasks",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach establishes a new state-of-the-art for iterative RAG methods on these benchmarks",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2510.22344"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge graph-driven RAG effectively align query texts with KG structures to eliminate hallucinations in LLMs?",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: SimGRAG is a two-stage method using query-to-pattern transformation (LLM converts queries to graph patterns) and pattern-to-subgraph alignment (using graph semantic distance metric), with an optimized retrieval algorithm for efficient subgraph identification.",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SimGRAG effectively addresses the challenge of aligning query texts and KG structures through a two-stage process",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The optimized retrieval algorithm identifies top-k subgraphs within 1-second on a 10-million-scale KG",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SimGRAG outperforms state-of-the-art KG-driven RAG methods in both question answering and fact verification",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The code is publicly available at https://github.com/YZ-Cai/SimGRAG",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2412.15272"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the current state of research on Federated Retrieval-Augmented Generation, including its architectural patterns, challenges, and application domains?",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Following Kitchenham's guidelines for evidence-based software engineering, the authors conducted a systematic mapping study covering literature published between 2020 and 2025, developing a structured classification of research focuses, contribution types, and application domains.",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This is the first systematic mapping study of Federated RAG, covering literature from 2020 to 2025",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The study identifies key challenges including privacy-preserving retrieval, cross-client heterogeneity, and evaluation limitations",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The analysis synthesizes recurring design patterns and architectural patterns in Federated RAG research",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The findings provide a foundation for future work at the intersection of RAG and federated systems",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation limitations are identified as a key challenge in the field, though specific study limitations are not detailed in the abstract",
+   "ids": [
+    "2505.18906"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can RAG systems improve the quality of retrieved documents to reduce noise and enhance response reliability?",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: MAIN-RAG is a training-free RAG framework that uses multiple LLM agents to collaboratively filter and score retrieved documents, with an adaptive filtering mechanism that dynamically adjusts relevance thresholds based on score distributions.",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAIN-RAG leverages inter-agent consensus to ensure robust document selection without requiring additional training data or fine-tuning",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach achieves 2-11% improvement in answer accuracy across four QA benchmarks",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The adaptive filtering mechanism effectively minimizes noise while maintaining high recall of relevant documents",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAIN-RAG reduces the number of irrelevant retrieved documents compared to traditional RAG approaches",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2501.00332"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do 13 open-source LLMs of varying sizes perform when augmented with RAG for domain-specific Quranic studies queries?",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study categorizes 13 open-source LLMs into large, medium, and small sizes, applies RAG using a descriptive dataset of Quranic surahs, and evaluates models using human-assessed metrics: context relevance, answer faithfulness, and answer relevance.",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Large models consistently outperform smaller models in capturing query semantics and producing accurate responses",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Llama3.2:3b model achieved high faithfulness (4.619) and relevance (4.857) scores despite its small size",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RAG mitigates hallucination issues common in general-purpose LLMs when applied to sensitive religious contexts",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Well-optimized smaller architectures show promise for domain-specific applications",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.16581"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can external knowledge be more deeply integrated into LLMs beyond in-context document injection in traditional RAG?",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Parametric RAG, a new paradigm that integrates external knowledge directly into the parameters of feed-forward networks (FFN) of an LLM through document parameterization, eliminating the need to inject multiple documents into the input context.",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parametric RAG substantially enhances both effectiveness and efficiency of knowledge augmentation in LLMs",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach saves online computational costs by eliminating the need to inject multiple documents into the LLM's input context",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parametric RAG deepens the integration of external knowledge into the parametric knowledge space of the LLM",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method can be combined with in-context RAG methods to achieve even better performance",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All code, data, and models have been open-sourced",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2501.15915"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can RAG systems be extended to handle mixed-modal (text and image) queries and documents in real-world scenarios?",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Nyx, a unified mixed-modal retriever, using a four-stage automated pipeline to generate and filter mixed-modal data, followed by a two-stage training framework with pre-training on NyxQA dataset and supervised fine-tuning using VLM feedback.",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Nyx is a unified mixed-modal to mixed-modal retriever tailored for Universal RAG scenarios",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The NyxQA dataset comprises diverse mixed-modal question-answer pairs constructed from web documents",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Nyx performs competitively on standard text-only RAG benchmarks",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Nyx significantly improves generation quality in vision-language tasks in the URAG setting",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2510.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can literature reviews be automatically generated from PDF files using different NLP techniques and RAG with LLMs?",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study evaluates three approaches—frequency-based (spaCy), transformer-based (Simple T5), and RAG with GPT-3.5-turbo—on the SciTLDR dataset, using ROUGE scores for system evaluation.",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GPT-3.5-turbo achieved the highest ROUGE-1 score of 0.364 among the three systems",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The transformer model (Simple T5) performed second best",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The frequency-based spaCy method ranked last in performance",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A graphical user interface was created for the best-performing LLM-based system",
+   "ids": [
+    "2411.18583"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2411.18583"
+   ]
+  }
+ ]
+}

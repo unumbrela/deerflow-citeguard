@@ -1,0 +1,267 @@
+{
+ "stats": {
+  "ambiguous": 4,
+  "unmatched": 8
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Multiple papers propose different detection paradigms: Shaheer et al. (2025) train traditional ML classifiers (LSTM, Random Forest, Naive Bayes) on curated datasets; Wu and Maslowski (2025) introduce CourtGuard, a multiagent system where LLMs argue opposing positions before a judge makes the final classification; Jacob et al. (2025) develop PromptShield, a benchmark-driven detector optimized for low false positive rates; and Zou et al. (2025) propose PIShield, which leverages internal LLM residual-stream representations with a linear classifier for efficient detection.",
+   "ids": [
+    "2512.12583",
+    "2510.19844",
+    "2501.15145",
+    "2510.14005"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2026) contribute AgentWatcher, which attributes outputs to causally influential context segments and applies explicit rules for explainable detection.",
+   "ids": [
+    "2604.01194"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2026) introduce LongPIBench, demonstrating that defenses effective on short-context benchmarks fail dramatically on long-context scenarios with thousands to tens of thousands of tokens.",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jacob et al. (2025) similarly note that many existing detectors are not suitable for practical deployment, and their PromptShield benchmark includes both conversational and application-structured data to better reflect real-world usage.",
+   "ids": [
+    "2501.15145"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) demonstrate backdoor-powered prompt injection attacks, where attackers poison supervised fine-tuning samples to insert backdoors that activate when triggers are present, nullifying instruction hierarchy defenses.",
+   "ids": [
+    "2510.03705"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xie et al. (2026) introduce cross-session stored prompt injection, inspired by stored cross-site scripting, where malicious instructions persist in agent state (memories, filesystems, tools) and influence future executions long after the original interaction.",
+   "ids": [
+    "2606.04425"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xie et al. (2026) argue that the persistent state in modern agents—memories, filesystems, tools—creates vulnerabilities that transcend single interactions.",
+   "ids": [
+    "2606.04425"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, there is broad agreement that existing prompt injection defenses are insufficient for real-world deployment, with Jacob et al. (2025), Liu et al. (2026), and Wang et al. (2026) all identifying gaps between current evaluation practices and practical requirements.",
+   "ids": [
+    "2501.15145",
+    "2608.28411",
+    "2604.01194"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, papers consistently find that long-context scenarios expose critical vulnerabilities in current defenses—both Liu et al. (2026) and Wang et al. (2026) demonstrate that detection effectiveness degrades substantially as context length increases.",
+   "ids": [
+    "2608.28411",
+    "2604.01194"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, there is consensus that prompt injection exploits the fundamental inability of LLMs to distinguish instructions from data, as noted by Chen et al. (2024a), Chen et al. (2024b), and Chen et al. (2025).",
+   "ids": [
+    "2510.03705"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Detection-based approaches (Shaheer et al., 2025; Jacob et al., 2025; Zou et al., 2025; Wang et al., 2026) focus on identifying and blocking malicious inputs, while architectural approaches (Chen et al., 2024a; Chen et al., 2024b) modify the model itself to be resistant.",
+   "ids": [
+    "2512.12583",
+    "2501.15145",
+    "2510.14005",
+    "2604.01194"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wu and Maslowski (2025) note that their multiagent CourtGuard approach achieves lower false positive rates but worse overall detection accuracy compared to direct detection, highlighting inherent tradeoffs.",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while most papers focus on single-interaction attacks, Xie et al. (2026) argue this framing is fundamentally incomplete for agentic systems, suggesting the field may be solving the wrong problem.",
+   "ids": [
+    "2606.04425"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, evaluation methodologies remain inadequate—Liu et al. (2026) demonstrate that short-context benchmarks substantially overestimate defense effectiveness, yet most papers still evaluate primarily in these settings.",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, the computational overhead of defense mechanisms is underexplored; while Zou et al. (2025) emphasize efficiency, multiagent approaches like CourtGuard (Wu & Maslowski, 2025) and causal attribution in AgentWatcher (Wang et al., 2026) introduce non-trivial latency.",
+   "ids": [
+    "2510.14005",
+    "2510.19844",
+    "2604.01194"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, cross-session and persistent state vulnerabilities identified by Xie et al. (2026) represent an almost entirely unexplored threat model with no proposed defenses.",
+   "ids": [
+    "2606.04425"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, backdoor-powered attacks (Chen et al., 2025) that nullify instruction hierarchy defenses suggest current training-based approaches may be fragile to supply-chain attacks.",
+   "ids": [
+    "2510.03705"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a multiagent court-like system improve prompt injection classification by considering both adversarial and benign scenarios?",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: CourtGuard evaluates prompts through a multiagent system where a \"defense attorney\" argues the prompt is benign, a \"prosecution attorney\" argues it's an injection, and a \"judge\" provides final classification.",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CourtGuard achieves lower false positive rates than direct LLM-as-judge detection",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multiagent approach is generally worse at overall detection accuracy",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Considering both adversarial and benign scenarios improves classification reliability",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Full implementations are available for Gemma-3-12b-it, Llama-3.3-8B, and Phi-4-mini-instruct",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Lower overall detection accuracy limits practical deployment; multiagent systems introduce computational complexity and latency.",
+   "ids": [
+    "2510.19844"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do persistent system states in agentic systems create new vulnerability vectors for prompt injection attacks that persist and activate across sessions?",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formalize the lifecycle of cross-session stored prompt injection, develop a taxonomy of persistence channels and incorporation mechanisms, and build a sandbox toolkit for systematic evaluation.",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Malicious instructions can persist in agent state and influence future executions long after original interactions end",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-session stored prompt injection extends threats across both time and space dimensions",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The fundamental challenge is governing how external information acquires authority across persistent boundaries",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agent security requires a shift from interaction-centric to state-centric security paradigms",
+   "ids": [
+    "2608.28411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Sandbox toolkit may not capture all real-world agent configurations; taxonomy may require expansion as new agent architectures emerge.",
+   "ids": [
+    "2608.28411"
+   ]
+  }
+ ]
+}

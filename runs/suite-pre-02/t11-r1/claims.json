@@ -1,0 +1,790 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Fixed Point Diffusion Models (FPDM) introduce implicit fixed-point solving layers that significantly reduce model size and memory usage while accelerating training (Bai & Melas-Kyriazi, 2024).",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Complementing this, Decentralized Diffusion Models eliminate the need for centralized high-bandwidth networking by training expert models in isolation and ensembling them at inference time (McAllister et al., 2025).",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Additionally, pixel-space diffusion models have been investigated through latent-to-pixel strategies that acquire generative priors efficiently in latent space before transitioning to pixel space, achieving 3.18 to 4.75 times end-to-end inference speedups while matching or exceeding latent-space model quality (Jiang et al., 2026).",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Controllable text-to-image generation has emerged as a critical area, with research revealing how novel conditions can be introduced into the denoising process through theoretical frameworks including novel score prediction and multi-condition generation (Cao et al., 2024).",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "More specialized work demonstrates illumination control through open-source pipelines that finetune diffusion models on supervised triplets of poorly-lit inputs, natural language instructions, and well-lit outputs (Anand et al., 2026).",
+   "ids": [
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Video diffusion models extend these controllability concepts to temporal domains, with architectures designed to maintain temporal consistency across frames while supporting diverse input modalities including text, images, videos, and audio signals (Melnik et al., 2024).",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Diffusion classifiers have been proven to possess O(1) Lipschitzness and certified robustness against adversarial attacks (Chen et al., 2024).",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The alignment literature further examines how diffusion models can be aligned with human expectations and preferences, drawing inspiration from alignment techniques developed for large language models (Liu et al., 2024).",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In medical imaging, label-efficient 3D brain segmentation leverages complementary 2D diffusion models with orthogonal views to achieve reliable segmentation with minimal annotated data (Cho et al., 2024).",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In computer graphics, diffusion models successfully denoise Monte Carlo renders containing heavy-tailed noise from specular and refractive objects (Vavilala et al., 2024).",
+   "ids": [
+    "2404.00491"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The 3D generation survey establishes structured roadmaps connecting 3D representation choices to generation methodologies, categorizing approaches into feedforward, optimization-based, procedural, and novel view synthesis paradigms (Li et al., 2024).",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers emphasize that computational efficiency remains a primary bottleneck, with both Bai and Melas-Kyriazi (2024) and McAllister et al. (2025) independently developing approaches to reduce training infrastructure requirements.",
+   "ids": [
+    "2401.08741",
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is broad agreement that controllability is essential for practical deployment, as evidenced by parallel work on general controllable generation frameworks (Cao et al., 2024) and specialized illumination control (Anand et al., 2026).",
+   "ids": [
+    "2403.04279",
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While McAllister et al. (2025) demonstrate that decentralized training can outperform standard approaches FLOP-for-FLOP, other work on pixel-space models (Jiang et al., 2026) and fixed-point models (Bai & Melas-Kyriazi, 2024) assumes centralized training infrastructure.",
+   "ids": [
+    "2501.05450",
+    "2608.16887",
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while some papers focus on theoretical guarantees (Chen et al., 2024), others prioritize practical performance without formal guarantees, reflecting different research philosophies about what constitutes sufficient validation.",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, evaluation standardization remains inconsistent — while Melnik et al. (2024) and Liu et al. (2024) call for better evaluation metrics, no unified benchmark suite emerges across papers.",
+   "ids": [
+    "2405.03150",
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the certified robustness work by Chen et al. (2024) is limited to CIFAR-10, leaving open whether theoretical guarantees scale to ImageNet-scale problems.",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, while several papers mention safety concerns about undesirable content generation (Cao et al., 2024; Liu et al., 2024), concrete mitigation techniques remain underdeveloped.",
+   "ids": [
+    "2403.04279",
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fifth, the medical imaging application by Cho et al. (2024) demonstrates promising label efficiency but requires validation across diverse anatomical structures and multi-institutional datasets before clinical adoption.",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create a fully open-source and reproducible pipeline for learning illumination control in diffusion models without requiring heavy control inputs like depth maps?",
+   "ids": [
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors build a data engine that transforms well-lit images into supervised training triplets consisting of a poorly-illuminated input image, a natural language lighting instruction, and a well-illuminated output image, then finetune a diffusion model on this data.",
+   "ids": [
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach demonstrates significant improvements over baseline SD 1.5, SDXL, and FLUX.1-dev models in perceptual similarity, structural similarity, and identity preservation",
+   "ids": [
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The pipeline is fully open-source and reproducible, built entirely with open-source tools and publicly available data",
+   "ids": [
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Natural language lighting instructions enable effective illumination control without requiring depth maps or other heavy control inputs",
+   "ids": [
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The work is built on SD 1.5 architecture which is relatively older; the abstract does not specify comparisons against the latest closed-source illumination control models or detail computational requirements.",
+   "ids": [
+    "2604.24877"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can fixed-point solving be integrated into diffusion models to reduce model size, memory usage, and training time while maintaining generation quality?",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors embed an implicit fixed-point solving layer into the denoising network, transforming the diffusion process into a sequence of closely-related fixed point problems, combined with a new stochastic training method that enables computation reallocation across timesteps and solution reuse between timesteps.",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FPDM contains 87% fewer parameters than state-of-the-art DiT models",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training memory consumption is reduced by 60%",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach improves image generation quality when sampling computation or time is limited",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "New techniques for reallocating computation across timesteps and reusing fixed point solutions significantly improve sampling efficiency",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Experiments focus on ImageNet, FFHQ, CelebA-HQ, and LSUN-Church datasets; the abstract does not address whether fixed-point approaches generalize to newer architectures beyond DiT or to conditional generation tasks.",
+   "ids": [
+    "2401.08741"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can precise control be achieved over text-to-image diffusion models to fulfill complex and diverse human needs beyond text-only conditioning?",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey undertakes a thorough review of controllable generation techniques, covering theoretical foundations including novel score prediction and multi-condition frameworks, alongside practical advancements organized by condition type.",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieving precise control over diffusion models is a critical challenge as generative capabilities advance",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Novel score prediction methods enable finer-grained control over the generation process",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-condition frameworks allow integration of diverse control signals beyond text prompts",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Controllable generation techniques address both creative flexibility and safety concerns about undesirable content",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: While comprehensive in reviewing existing methods, the survey notes that strong generative capabilities raise concerns about unsafe or undesirable content generation, and concept erasure techniques to mitigate these risks remain an active area of research with room for improvement.",
+   "ids": [
+    "2403.04279"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can diffusion classifiers be theoretically proven to have certified robustness against adversarial attacks, and can this robustness be tightened?",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors prove that diffusion classifiers possess O(1) Lipschitzness and establish their certified robustness, then generalize to Noised Diffusion Classifiers (NDCs) that classify Gaussian-corrupted data by deriving ELBOs, approximating likelihood, and calculating classification probabilities via Bayes' theorem.",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diffusion classifiers possess O(1) Lipschitzness and have inherent resilience to adversarial attacks",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Noised Diffusion Classifiers achieve over 80% certified robustness on CIFAR-10 under ℓ₂ norm perturbations less than 0.25",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NDCs achieve over 70% certified robustness on CIFAR-10 under ℓ₂ norm perturbations less than 0.5",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach works with a single off-the-shelf diffusion model without requiring any additional training data",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Results are demonstrated primarily on CIFAR-10; the abstract does not address performance on larger-scale datasets like ImageNet or robustness against other attack types beyond ℓ₂ norm perturbations.",
+   "ids": [
+    "2402.02316"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can reliable 3D brain segmentation be achieved without requiring extensive labeled training data, which is challenging to acquire in clinical applications?",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The approach mines 2D features with semantic information from 2D diffusion models using orthogonal views as input, fuses them into 3D contextual feature representations, then trains multi-layer perceptrons to classify segmentation labels.",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach outperforms state-of-the-art self-supervised learning methods for brain subcortical structure segmentation",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective segmentation is achieved with training data from only one subject",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Promising results are obtained with minimal annotation requiring only nine slices and a labeled background region",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Complementary 2D diffusion models with orthogonal views effectively capture 3D contextual information",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Experiments focus on brain subcortical structure segmentation; the approach may need validation on other anatomical structures and larger multi-subject datasets to establish broader clinical applicability.",
+   "ids": [
+    "2407.12329"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is a practical recipe for training pixel-space diffusion models that rival or exceed well-established latent-space counterparts?",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Through comprehensive empirical study, the authors develop a latent-to-pixel strategy that acquires generative priors efficiently in latent space and transitions to pixel space during post-training, systematically investigating weight initialization, data composition, prediction target, decoder architecture, and noise schedule.",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Direct large-scale pre-training in pixel space converges substantially more slowly than in latent space",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The latent-to-pixel strategy makes pixel-space models match or outperform latent-space counterparts",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach delivers 3.18 to 4.75 times end-to-end inference speedups",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key design choices governing the transition include weight initialization, data composition, prediction target, decoder architecture, and noise schedule",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses on empirical findings without theoretical analysis of why the latent-to-pixel transition works; generalizability to architectures beyond those tested remains an open question.",
+   "ids": [
+    "2608.16887"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the fundamental methodologies for 3D generation and how can they be organized into a structured roadmap?",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey introduces fundamental methodologies of 3D generation methods and establishes a structured roadmap encompassing 3D representation, generation methods, datasets, and applications, while providing comprehensive overview of generation paradigms including feedforward, optimization-based, procedural generation, and generative novel view synthesis.",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "3D representations serve as the backbone for 3D generation, determining how objects are formatted and rendered",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generation methods can be categorized by algorithmic paradigms: feedforward generation, optimization-based generation, procedural generation, and generative novel view synthesis",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methods utilize various supervision signals including 2D supervision with rendering techniques to generate images",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The field encompasses diverse applications spanning computer graphics and computer vision domains",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The survey focuses on fundamental methodologies and may not cover all emerging techniques in the rapidly evolving 3D generation landscape.",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The comprehensive nature means some specialized or very recent approaches may not receive detailed treatment.",
+   "ids": [
+    "2401.17807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can diffusion models be aligned with human expectations and preferences, and what are the current challenges and future directions in alignment research?",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This work reviews alignment of diffusion models, covering advancements in fundamentals of alignment, alignment techniques of diffusion models, preference benchmarks, and evaluation for diffusion models, drawing inspiration from alignment success in large language models.",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diffusion models often misalign with human intentions and generate results with undesired properties or harmful content",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Alignment techniques from large language models can be adapted to diffusion models",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Preference benchmarks and evaluation frameworks specifically designed for diffusion models are emerging",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The field is in early stages compared to LLM alignment, with significant open challenges remaining",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As the first comprehensive review of diffusion model alignment, the work identifies many open problems but provides limited prescriptive solutions; the field requires substantial further research to mature.",
+   "ids": [
+    "2409.07253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can diffusion model training be distributed across independent clusters or datacenters without requiring centralized high-bandwidth networking infrastructure?",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The method trains a set of expert diffusion models over partitions of the dataset in full isolation from one another, then at inference time the experts ensemble through a lightweight router, collectively optimizing the same objective as a single model trained over the whole dataset.",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Decentralized diffusion models FLOP-for-FLOP outperform standard diffusion models on ImageNet and LAION Aesthetics",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The ensemble collectively optimizes the same objective as a single model trained over the whole dataset",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach scales to 24 billion parameters",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High-quality diffusion models can be trained with just eight individual GPU nodes in less than a week",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The router mechanism at inference time introduces additional complexity; the abstract does not address potential quality trade-offs compared to fully centralized training or communication overhead during the ensembling phase.",
+   "ids": [
+    "2501.05450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the critical components, architectural designs, and temporal dynamics modeling approaches for diffusion models in video generation?",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey provides a comprehensive overview by consolidating recent research on video diffusion models, categorizing them based on applications, architectural choices, and temporal consistency mechanisms, while examining training and evaluation practices.",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diffusion models have become powerful techniques for creating high-quality, coherent video content with impressive text-guided generative functions",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Architectural choices significantly impact temporal consistency, with various mechanisms proposed to maintain coherence across video frames",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Applications span multiple input modalities including text prompts, images, videos, and audio signals, each requiring different modeling approaches",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current state-of-the-art faces challenges in generating longer videos and managing computational costs",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The survey acknowledges ongoing challenges in generating longer videos with consistent quality and the high computational costs associated with training and inference.",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Managing temporal dynamics over extended sequences remains an open problem.",
+   "ids": [
+    "2405.03150"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can diffusion models effectively denoise low-fidelity physically-based renderings containing Monte Carlo noise to enable faster rendering with fewer rays per pixel?",
+   "ids": [
+    "2404.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors demonstrate that diffusion models can denoise low-fidelity renders, with the method conditioned on various natural render information to improve performance.",
+   "ids": [
+    "2404.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diffusion models successfully denoise low-fidelity physically-based renderings with Monte Carlo noise",
+   "ids": [
+    "2404.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method is competitive with state-of-the-art approaches across a range of sampling rates",
+   "ids": [
+    "2404.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Conditioning on natural render information improves denoising performance",
+   "ids": [
+    "2404.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The image prior applied by diffusion methods favors reconstructions resembling real images with straight shadow boundaries, curved specularities, and no fireflies",
+   "ids": [
+    "2404.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify computational costs of the diffusion denoising process itself or address performance on specific challenging render types beyond scenes with specular or refractive objects.",
+   "ids": [
+    "2404.00491"
+   ]
+  }
+ ]
+}

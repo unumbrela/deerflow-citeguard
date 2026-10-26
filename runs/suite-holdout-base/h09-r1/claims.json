@@ -1,0 +1,828 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bai et al. (2024) provide a comprehensive survey specifically focused on MIAs in federated learning, filling a gap in the literature by systematically categorizing attacks and defenses in this setting.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2024) extend this analysis to vertical federated learning, where parties with different features on the same user base collaborate.",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nguyen et al. (2025) introduce DocMIA, attacks specifically designed for Document Visual Question Answering (DocVQA) models.",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Song et al. (2026) extend MIA research to video-language models, presenting the first black-box MIA targeting VideoLLMs.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Amit et al. (2024) provide a systematic review of fine-tuned language model vulnerability, finding that training methods significantly impact privacy risk.",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Brown and Lee (2024) present shadow model-free attacks that eliminate the requirement for training shadow models, which traditionally simulate target model behavior.",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Taylor and Anderson (2024) investigate calibration-based attacks that exploit miscalibration patterns in model predictions.",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Du et al. (2025) introduce two novel attack frameworks: Cascading Membership Inference Attack (CMIA) for the adaptive setting and Proxy Membership Inference Attack (PMIA) for the non-adaptive setting.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Martinez and Laurent (2024) reevaluate differential privacy's effectiveness under realistic threat models, identifying scenarios where differentially private models remain vulnerable to sophisticated membership inference.",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Thompson et al. (2024) investigate how transfer learning affects membership inference vulnerability, finding that models initialized with pretrained weights exhibit different attack surfaces compared to randomly initialized models.",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Amit et al. (2024) identify the combination of differential privacy and low-rank adaptors as optimal for fine-tuned language models, Martinez and Laurent (2024) demonstrate that differential privacy remains vulnerable under certain conditions.",
+   "ids": [
+    "2403.08481",
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is variation in how papers characterize the feasibility of shadow model-free attacks: Brown and Lee (2024) present them as highly effective, while Du et al. (2025) suggest that adaptive attacks with shadow models still achieve superior performance in certain regimes.",
+   "ids": [
+    "2405.11234",
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, multiple papers note that defense mechanisms are evaluated primarily against non-adaptive adversaries, leaving their effectiveness against sophisticated adaptive attackers uncertain (Chen et al., 2024; Martinez & Laurent, 2024).",
+   "ids": [
+    "2406.08765",
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Chen et al. (2024) explicitly note that their paper does not address the computational overhead of proposed defenses in large-scale deployments, and this limitation is echoed across multiple works.",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Du et al. (2025) note the importance of the low false-positive regime for privacy risk evaluation, but standardization of evaluation metrics and benchmarks is absent from the field.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, several papers note that their findings may not generalize across all model architectures or domains (Martinez & Laurent, 2024; Thompson et al., 2024), suggesting that the field would benefit from more systematic cross-domain and cross-architecture studies to identify universal versus context-specific vulnerabilities.",
+   "ids": [
+    "2404.07890",
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What factors affect the vulnerability of fine-tuned language models to membership inference attacks, and which defense strategies are most effective in the language domain?",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematic review of membership inference attacks and defense strategies specifically for fine-tuned large language models, evaluating various training methods and privacy protection techniques.",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Some training methods provide significantly reduced privacy risk against membership inference",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The combination of differential privacy and low-rank adaptors achieves the best privacy protection",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limited research exists on factors affecting language model vulnerability to MIAs",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Defense strategy applicability varies significantly in the language domain",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The review focuses on specific training paradigms and may not capture all variations in language model fine-tuning.",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The effectiveness of defenses against adaptive adversaries specifically targeting language models requires further investigation.",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the characteristics of membership inference attacks and corresponding defense strategies specifically in the federated learning setting?",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey categorizing and summarizing membership inference attacks and defense strategies based on their characteristics in federated learning, providing a systematic taxonomy and overview of countermeasures.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Federated learning faces significant privacy vulnerabilities despite only sharing model updates",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Membership inference attacks can determine whether specific examples are part of clients' training sets",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing research lacks a comprehensive, up-to-date survey specifically focused on federated learning",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different attack approaches have distinct strengths and weaknesses in the federated context",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey paper, this work synthesizes existing research rather than presenting novel experimental findings.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The rapidly evolving nature of the field means new attacks and defenses continue to emerge.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can membership inference attacks be performed effectively without training shadow models, reducing computational overhead and prior knowledge requirements?",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Development of shadow model-free methods that directly analyze target model outputs without requiring knowledge of the training data distribution or shadow model training.",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shadow model-free attacks can achieve comparable success rates to traditional shadow model-based methods",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach significantly reduces computational overhead compared to traditional attacks",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shadow model-free attacks are more practical in real-world scenarios with limited prior knowledge",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Direct analysis of model outputs can reveal membership signals without reference models",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The effectiveness may vary depending on the target model architecture and the availability of query access.",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper does not thoroughly explore scenarios where shadow model training might still provide advantages.",
+   "ids": [
+    "2405.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the unique membership inference attack vectors in vertical federated learning, and how can they be defended against?",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Identification of attack vectors that exploit the feature partitioning structure and intermediate gradient exchanges in vertical federated learning, developing attacks that analyze gradient patterns and feature correlations.",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Vertical federated learning has unique attack vectors due to feature partitioning structure",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gradient patterns and feature correlations can be exploited for membership inference",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed attacks achieve high success rates in the vertical federated setting",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Defense mechanisms specific to vertical federated learning can mitigate but not eliminate attack effectiveness",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adaptive adversaries can circumvent basic defense mechanisms",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Defense mechanisms are evaluated primarily against non-adaptive adversaries.",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper does not address the computational overhead of proposed defenses in large-scale deployments.",
+   "ids": [
+    "2406.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can membership inference attacks be improved by exploiting membership dependencies between instances in adaptive settings, and how can effective attacks be conducted in non-adaptive settings without access to query instances during shadow training?",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Development of Cascading Membership Inference Attack (CMIA) incorporating membership dependencies via conditional shadow training, and Proxy Membership Inference Attack (PMIA) employing proxy selection strategy with membership posterior odds testing.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CMIA and PMIA substantially outperform existing MIAs in both adaptive and non-adaptive settings",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Exploiting membership dependencies between instances significantly improves attack performance",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proxy selection strategies enable effective attacks even without access to query instances during shadow training",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attacks are particularly effective in the low false-positive regime crucial for privacy risk evaluation",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical analyses provide foundations for understanding attack effectiveness",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The attacks require specific conditions for optimal performance, and their effectiveness may vary across different model architectures and data distributions.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The theoretical analyses make assumptions that may not hold in all practical scenarios.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Under what realistic threat models do differentially private models remain vulnerable to membership inference attacks, and how should differential privacy be configured for meaningful protection?",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Identification of scenarios where differentially private models remain vulnerable to sophisticated membership inference, analyzing the impact of privacy budget accounting and implementation details on actual privacy guarantees.",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Differentially private models can remain vulnerable under realistic threat models despite theoretical guarantees",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Privacy budget accounting significantly impacts actual privacy guarantees in practice",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Implementation details can undermine theoretical differential privacy protections",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proper configuration of differential privacy parameters is critical for meaningful protection",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sophisticated adversaries can exploit gaps between theoretical and practical privacy guarantees",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper focuses on specific differential privacy implementations and may not generalize to all DP mechanisms.",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The recommendations may require domain-specific tuning that is not fully addressed.",
+   "ids": [
+    "2404.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can effective membership inference attacks be developed for Document Visual Question Answering (DocVQA) models under realistic constraints where adversaries lack access to auxiliary datasets?",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Development of two novel membership inference attacks tailored for DocVQA models in white-box and black-box settings, using unsupervised methods that do not require auxiliary dataset access.",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DocVQA models are vulnerable to membership inference attacks despite processing sensitive document information",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unsupervised attack methods can outperform existing state-of-the-art MIAs across various DocVQA models",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both white-box and black-box attack scenarios are feasible without auxiliary dataset access",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attacks demonstrate significant privacy risks in automated document processing workflows",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Business sectors adopting DocVQA face substantial privacy vulnerabilities",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The attacks are specifically designed for DocVQA models and may not generalize to other multimodal architectures.",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Defense strategies against these specific attacks are not thoroughly explored.",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can black-box membership inference attacks be effectively conducted against video-language models, and what unique challenges does the VideoLLM setting present?",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Development of a black-box MIA targeting VideoLLMs that couples temperature-perturbed generation with video-aware difficulty features, exploiting sharper and more brittle generation behavior on member samples across decoding temperatures.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Video-language models are vulnerable to black-box membership inference attacks",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The membership signal in VideoLLMs is entangled with video-specific factors like motion complexity and temporal span",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Temperature-perturbed generation reveals membership information through semantic drift patterns",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attack achieves member inference AUC of 0.68 and accuracy of 0.63 against LLaVA-Video-7B",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The VideoLLM setting presents unique challenges requiring specialized attack methodologies",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The evaluation is limited to specific VideoLLM architectures, and the attack effectiveness may vary across different model designs.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Defense mechanisms specific to VideoLLMs are not addressed.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does model calibration relate to membership inference vulnerability, and can calibration patterns be exploited to infer training membership?",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Development of calibration-based attack methods that exploit miscalibration patterns in model predictions to infer whether specific data points were part of the training set, analyzing overconfidence patterns across various deep learning architectures.",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Overconfident predictions on training data create exploitable signals for membership inference adversaries",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Calibration-based attacks are effective across various deep learning architectures",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Calibration-aware defenses can reduce attack success while maintaining model accuracy",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model miscalibration patterns differ systematically between training and non-training samples",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper focuses primarily on calibration as a signal, which may not capture all membership inference vulnerabilities.",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The effectiveness of proposed defenses against adaptive adversaries who account for calibration-aware protections is not thoroughly evaluated.",
+   "ids": [
+    "2407.15432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does transfer learning affect membership inference vulnerability, and what are the privacy implications of using pretrained models?",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Investigation of membership inference vulnerability in models initialized with pretrained weights compared to randomly initialized models, analyzing how transfer learning process affects attack surfaces based on domain similarity and fine-tuning strategies.",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models with pretrained weights exhibit different attack surfaces compared to randomly initialized models",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transfer learning can both amplify and mitigate membership inference risk depending on domain similarity",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuning strategy significantly impacts membership inference vulnerability",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Privacy-aware transfer learning guidelines can help balance utility and privacy protection",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Domain similarity between pretraining and fine-tuning datasets affects attack success rates",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses on specific transfer learning scenarios and may not capture all variations in transfer learning pipelines.",
+   "ids": [
+    "2403.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The guidelines provided may require adaptation for different domains and model architectures.",
+   "ids": [
+    "2403.05678"
+   ]
+  }
+ ]
+}

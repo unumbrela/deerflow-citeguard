@@ -1,0 +1,788 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sanogo & Ardiccioni (2025) propose a training-free self-correction framework that reduces hallucination rates by 9.8 percentage points through uncertainty-guided visual re-attention, demonstrating that iterative refinement can ground corrections in visual evidence without requiring model retraining.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Arokiaraj et al. (2026) reveal a striking dissociation between corrupted internal representations during training and correct outputs during free generation, showing that adversarial robustness in autoregressive VLMs is substantially a property of the language decoder's prior rather than the visual encoder.",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Vice et al. (2025) demonstrate that VLMs exhibit critical vulnerabilities to subtle, structured perturbations in the frequency domain, undermining both authenticity/DeepFake detection and automated image captioning tasks.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jang et al. (2026) introduce MedLayXPlain, a large-scale benchmark revealing a systematic Expert-Lay Gap: medical VLMs achieve strong expert captioning but suffer significant lay-register degradation when generating patient-accessible descriptions.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "This finding aligns with broader survey work by Kalpelbe et al. (2025), who identify interpretability issues as a key challenge alongside data scarcity and narrow task generalization.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shen (2025) introduces GLIMPSE, a lightweight model-agnostic framework that jointly attributes VLM outputs to relevant visual evidence and textual signals, producing holistic response-level heat maps for interpreting cross-modal reasoning.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Basu Bir et al. (2026) show that carefully adapted lightweight VLMs (up to 7B parameters) can provide sustainable, private alternatives to commercial APIs for OCR-to-structure extraction in heritage digitization, extracting text and generating schema-compliant JSON from document images.",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Sapkota & Karkee (2025) examine VLMs for object detection, finding that large vision-language models revolutionize the field by enhancing adaptability, contextual reasoning, and generalization beyond traditional architectures.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Poppi et al. (2025) introduce HySAC (Hyperbolic Safety-Aware CLIP), which encodes safe and unsafe content as an entailment hierarchy in hyperbolic space, shifting from unlearning unsafe concepts to awareness-based discrimination.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, implicit tensions exist between specialization and generalization approaches: medical VLM research (Jang et al., 2026; Kalpelbe et al., 2025) emphasizes domain-specific adaptation, while explainability work (Shen, 2025) and reliability frameworks (Sanogo & Ardiccioni, 2025) pursue model-agnostic solutions applicable across architectures.",
+   "ids": [
+    "2606.21194",
+    "2503.01863",
+    "2506.18985",
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, the Expert-Lay Gap in medical VLMs (Jang et al., 2026) highlights a broader challenge: VLMs' inability to adapt their output register for different audiences, a capability critical for democratizing AI access.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while multiple papers identify adversarial vulnerabilities (Vice et al., 2025; Arokiaraj et al., 2026), the literature lacks consensus on robust architectural solutions beyond detection and mitigation.",
+   "ids": [
+    "2507.22398",
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, explainability methods (Shen, 2025) demonstrate feasibility but require broader validation across diverse VLM architectures and tasks.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, safety-aware architectures (Poppi et al., 2025) remain nascent, with limited empirical validation of their effectiveness in real-world deployment scenarios.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Why do vision-language models show a dissociation between corrupted internal representations during training and correct outputs during free generation?",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conducted a controlled two-stage PGD attack on 200 held-out COCO images using Qwen2.5-VL-7B-Instruct, analyzing image-level pixel statistics, using the logit lens to localize the train/inference gap, and tracking target-token rank across all 28 LLM decoder layers.",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Image-level pixel statistics have essentially no predictive power over which images are corrupted (best predictor r=-0.050, ridge regression R^2=0.069).",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The train/inference gap localizes to a single autoregressive step where the target token rank is fixed at exactly 3,488 out of 152,064 vocabulary entries for every image with zero variance.",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The visual encoder corrupts every image's representation by a comparable margin, but the language model decoder differentially arbitrates by amplifying or suppressing the corrupted signal.",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A linear probe on the merger hidden state separates susceptible and resistant outcomes with AUC=0.858.",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adversarial robustness in autoregressive VLMs is substantially a property of the language decoder's prior, not the visual encoder.",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The linear probe AUC estimate has a flagged circularity concern that needs further investigation.",
+   "ids": [
+    "2610.03445"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can open-source lightweight vision-language models provide a sustainable, private alternative to commercial APIs for OCR-to-structure extraction in heritage digitization?",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a comparative study of eight open-source lightweight VLMs (up to 7B parameters) for OCR-to-structure across three university heritage collections, evaluating models under a constraint-aware protocol across zero-shot, few-shot, and fine-tuning settings using CER, ANLS, and mAP-F1 metrics, while testing the impact of hyperparameter optimization, classical image preprocessing, and multi-stage training.",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Carefully adapted VLMs with up to 7B parameters can provide a sustainable, private, high-performing alternative to manual transcription or commercial black-box systems.",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models can extract text and generate schema-compliant JSON from document images, enabling automatic validation and downstream use.",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint training enables one model to operate across collections but can shift performance between datasets.",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Classical image preprocessing techniques (illumination flattening, denoising, CLAHE) and hyperparameter optimization independently impact extraction quality.",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses data autonomy concerns, recurring costs, and environmental footprint of hyperscale computing in heritage digitization.",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2610.11818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can medical vision-language models (Med-VLMs) generate patient-accessible descriptions that bridge the Expert-Lay Gap in medical communication?",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces MedLayXPlain, a large-scale multimodal benchmark with 122,789 region-grounded samples across 8 imaging modalities, using a Hierarchical Ontology-Verified Refinement (HOVER) pipeline combining patient-centric vocabulary mapping, LLM-based constrained rewriting, and cross-model visual verification.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The study also introduces MedLayEval, a 3B evaluator distilled from a 27B verifier to score expert-lay alignment across five clinically grounded attributes, and benchmarks 33 VLMs on the dataset.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Medical VLMs achieve strong expert-level performance but their ability to generate patient-accessible descriptions remains underexplored.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is a systematic Expert-Lay Gap: medical VLMs achieve strong expert captioning but suffer significant lay-register degradation.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "General-purpose VLMs produce more accessible language yet lack clinical precision.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Neither current paradigm (medical VLMs nor general-purpose VLMs) adequately serves patient-facing communication.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark spans 7 semantic groups, 43 semantic types, and 2,411 medical concepts across 12 publicly available source datasets.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study confirms that neither current VLM paradigm adequately serves patient-facing communication, indicating a gap in existing approaches.",
+   "ids": [
+    "2606.21194"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the current advancements, applications, challenges, and future directions of Medical Vision-Language Models in healthcare?",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey provides an extensive review of recent advancements in Medical Vision-Language Models, discussing foundational technology, illustrating how general models are adapted for complex medical tasks, and examining their applications in healthcare through a comprehensive literature review.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Med-VLMs integrate visual and textual data to enhance healthcare outcomes across clinical practice, education, and patient care.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key challenges include data scarcity, narrow task generalization, interpretability issues, and ethical concerns like fairness, accountability, and privacy.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations are exacerbated by uneven dataset distribution, computational demands, and regulatory hurdles.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Future directions include leveraging large-scale diverse datasets, improving cross-modal generalization, and enhancing interpretability.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Innovations like federated learning, lightweight architectures, and EHR integration are pathways to democratize access and improve clinical relevance.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The survey identifies that rigorous evaluation methods and robust regulatory frameworks are essential for safe integration into healthcare workflows, indicating current gaps in these areas.",
+   "ids": [
+    "2503.01863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hyperbolic space be leveraged to create safety-aware vision-language models that discern between safe and unsafe content rather than simply unlearning unsafe concepts?",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce HySAC (Hyperbolic Safety-Aware CLIP), which encodes safe and unsafe content as an entailment hierarchy in different regions of hyperbolic space using entailment loss functions to model hierarchical and asymmetrical relations between safe and unsafe image-text pairs.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hyperbolic space approach enables modeling of entailment hierarchies that is ineffective in standard vision-language models due to their reliance on Euclidean embeddings.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HySAC serves as both a multimodal unsafe classifier and a flexible content retriever.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model can dynamically redirect unsafe queries toward safer alternatives or retain the original output.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach enhances safety recognition while establishing a more adaptable and interpretable framework for content moderation.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paradigm shifts from unlearning to awareness, preserving the model's capacity to discern between safe and unsafe content.",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2503.12127"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can hallucinations in vision-language models (VLMs) be reduced without requiring model retraining?",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes a training-free self-correction framework enabling VLMs to iteratively refine responses through uncertainty-guided visual re-attention, combining multidimensional uncertainty quantification (token entropy, attention dispersion, semantic consistency, claim confidence) with attention-guided cropping of under-explored regions.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach operates entirely with frozen, pretrained VLMs without gradient updates and is validated on POPE and MMHAL BENCH benchmarks using Qwen2.5-VL-7B.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed method reduces hallucination rates by 9.8 percentage points compared to the baseline.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Object existence accuracy improves by 4.7 points on adversarial splits.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uncertainty-guided re-attention successfully grounds corrections in visual evidence where standard decoding fails.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework operates entirely with frozen, pretrained VLMs requiring no gradient updates.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qualitative analysis confirms the method's effectiveness in reducing hallucinated content.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Validation is currently limited to Qwen2.5-VL-7B architecture, with plans to extend validation across diverse architectures in future versions.",
+   "ids": [
+    "2512.07564"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do large vision-language models (LVLMs) enhance object detection compared to traditional deep learning architectures?",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This paper presents a structured three-step research review process examining the state-of-the-art in LVLMs for object detection, including analysis of architectural innovations, training paradigms, and output flexibility.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The review includes comprehensive visualizations and comparative analysis of real-time performance, adaptability, and complexity against traditional systems.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LVLMs revolutionize object detection by enhancing adaptability, contextual reasoning, and generalization beyond traditional architectures.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LVLMs integrate visual and textual information to achieve advanced contextual understanding for object detection and localization.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LVLMs demonstrate effectiveness in diverse scenarios including localization and segmentation tasks.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LVLMs are expected to meet or surpass the performance of conventional methods in object detection.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current LVLM modes have identified limitations, and the paper proposes solutions and a roadmap for future advancement.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The review identifies major limitations of current LVLM modes but specific details are not elaborated in the abstract.",
+   "ids": [
+    "2508.19294"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we interpret where large vision-language models (LVLMs) direct their visual attention to understand model behavior in visual question answering?",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces GLIMPSE, a lightweight, model-agnostic framework that jointly attributes LVLM outputs to the most relevant visual evidence and textual signals using gradient-weighted attention, adaptive layer propagation, and relevance-weighted token aggregation to produce holistic response-level heat maps for interpreting cross-modal reasoning.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GLIMPSE produces holistic response-level heat maps for interpreting cross-modal reasoning in LVLMs.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework outperforms prior methods in faithfulness and pushes the state-of-the-art in human-attention alignment.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GLIMPSE enables fine-grained insights into LVLM cross-modal attribution and reasoning dynamics.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method can trace systematic misalignment, diagnose hallucination and bias, and ensure transparency.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GLIMPSE is a lightweight, model-agnostic framework applicable to open-ended generation tasks.",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2506.18985"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How vulnerable are vision-language models (VLMs) to subtle, structured perturbations in the frequency domain when performing visual content reasoning tasks?",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study designs targeted image transformations operating in the frequency domain to systematically adjust VLM outputs when exposed to frequency-perturbed real and synthetic images, testing generalization across five state-of-the-art VLMs including Qwen2/2.5 and BLIP models.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments were conducted across ten real and generated image datasets under realistic, black-box constraints.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VLMs exhibit critical vulnerabilities when exposed to subtle, structured perturbations in the frequency domain.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Feature transformations in the frequency domain undermine authenticity/DeepFake detection and automated image captioning tasks.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The perturbation injection method generalizes across five state-of-the-art VLMs including different-parameter Qwen2/2.5 and BLIP models.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VLM judgments are sensitive to frequency-based cues and may not wholly align with semantic content.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Visually-imperceptible spatial frequency transformations expose the fragility of VLMs deployed for automated image captioning and authenticity detection tasks.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study operates under realistic, black-box constraints, but specific limitations of the methodology are not stated in the abstract.",
+   "ids": [
+    "2507.22398"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the color vision capacity of large vision-language models, and how can their performance on color vision tests be improved?",
+   "ids": [
+    "2507.11153"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors defined a color vision testing task for large vision-language models and constructed a dataset covering multiple categories of test questions and tasks of varying difficulty levels, then analyzed error types and proposed fine-tuning strategies to enhance performance.",
+   "ids": [
+    "2507.11153"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The color vision abilities of large vision-language models have not been thoroughly explored prior to this work.",
+   "ids": [
+    "2507.11153"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A comprehensive color vision test dataset was constructed with multiple categories and varying difficulty levels.",
+   "ids": [
+    "2507.11153"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Error analysis reveals specific types of mistakes made by large vision-language models in color vision tasks.",
+   "ids": [
+    "2507.11153"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuning strategies can enhance model performance in color vision tests.",
+   "ids": [
+    "2507.11153"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract",
+   "ids": [
+    "2507.11153"
+   ]
+  }
+ ]
+}

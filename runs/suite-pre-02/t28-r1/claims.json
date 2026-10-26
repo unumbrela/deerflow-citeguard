@@ -1,0 +1,582 @@
+{
+ "stats": {
+  "ambiguous": 7,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Fang et al. (2024) established that dense retrieval performance follows precise power-law scaling with both model size and training data volume, providing a theoretical foundation for resource allocation decisions.",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li and Gaussier (2024) combined query generation with self-supervised pseudo-relevance labeling using T5-3B, achieving improvements over adversarial learning approaches.",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Su et al. (2026) introduced Dynamic Dense Retrieval (DDR), which uses prefix tuning modules combined through dynamic routing, enabling flexible domain adaptation with only 2% of training parameters.",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pandey (2026) demonstrated a practical blueprint for domain-adaptive retrieval in e-commerce, fine-tuning on Amazon Reviews with FAISS HNSW indexing for efficient serving.",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Erker et al. (2025) introduced GRITHopper-7B, a decomposition-free multi-hop retrieval model combining generative and representational instruction tuning with causal language modeling.",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2024) demonstrated that generative retrieval can be understood as a special case of multi-vector dense retrieval, with both computing relevance as sums of products of query and document vectors with alignment matrices.",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhuang et al. (2024) investigated the Vec2Text threat—embedding inversion attacks that can reconstruct original text—and analyzed factors affecting recoverability including distance metrics, pooling functions, and embedding quantization.",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2024) addressed robustness through counterfactual contrastive learning, training models to be sensitive to fine-grained relevance signals while resisting adversarial attacks.",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Multiple papers converge on the effectiveness of contrastive learning approaches for training dense retrieval models (Pandey, 2026; Fang et al., 2024; Chen et al., 2024).",
+   "ids": [
+    "2602.00899",
+    "2403.18684",
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Fang et al. (2024) and Huang et al. (2024) advocate for LLM-based scaling with distillation, Su et al. (2026) demonstrate that parameter-efficient prefix tuning can achieve strong results with minimal training overhead.",
+   "ids": [
+    "2403.18684",
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Similarly, while Erker et al. (2025) pursue larger generative models for multi-hop reasoning, other work emphasizes efficiency through quantization and indexing optimization (Pandey, 2026).",
+   "ids": [
+    "2503.07519",
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Generalization across domains: Multiple papers note that their approaches may not generalize well to all domains or query types (Li & Gaussier, 2024; Chen et al., 2024; Huang et al., 2024).",
+   "ids": [
+    "2403.08970",
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Computational cost analysis: Several papers acknowledge high computational costs from large models (T5-3B in Li & Gaussier, 2024; 7B parameters in Erker et al., 2025) without detailed cost-benefit comparisons to alternative approaches.",
+   "ids": [
+    "2403.08970",
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Production-scale evaluation: While some papers report production metrics (Pandey, 2026; Huang et al., 2024), many evaluations remain at benchmark scale without concurrent load testing or real-world latency measurements.",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Privacy-robustness trade-offs: Zhuang et al. (2024) identify effective mitigations for Vec2Text attacks, but the broader landscape of privacy threats and their interactions with retrieval effectiveness requires further exploration.",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Annotation quality and scaling: Fang et al. (2024) examine data augmentation impacts, but the field lacks comprehensive understanding of how annotation quality interacts with scaling laws across different retrieval tasks.",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can dense retrieval models be made more robust and explainable by improving their sensitivity to fine-grained relevance signals without requiring passage-level annotations?",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed counterfactual regularization methods based on game theory and unsupervised learning with counterfactual passages, training models to exhibit high variance when key relevance-determining passages are modified while maintaining low variance for irrelevant changes.",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method can extract key passages without reliance on passage-level relevance annotations",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Regularized dense retrieval models exhibit heightened robustness against adversarial attacks",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach surpasses state-of-the-art anti-attack methods",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Counterfactual analysis improves model explainability by identifying which document parts are relevant to queries",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Computational cost of generating counterfactual passages during training is not fully characterized; generalization across different domains and query types requires further validation.",
+   "ids": [
+    "2412.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-hop dense retrieval achieve strong performance on longer queries and out-of-distribution data without the computational cost and non-differentiability of decomposition-based methods?",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed GRITHopper-7B combining generative and representational instruction tuning by integrating causal language modeling with dense retrieval training, leveraging post-retrieval language modeling with elements like final answers during training.",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art performance on both in-distribution and out-of-distribution benchmarks",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Post-retrieval language modeling enhances dense retrieval performance",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Better generalization to longer multi-hop problems than existing decomposition-free methods",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains end-to-end differentiability unlike decomposition-based approaches",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: 7B parameter model size may be prohibitive for resource-constrained deployments; computational cost of generative approach not fully compared to decomposition methods.",
+   "ids": [
+    "2503.07519"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does the performance of dense retrieval models follow predictable scaling laws correlated with model size and training data, similar to other neural models?",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed contrastive log-likelihood as evaluation metric and conducted extensive experiments with dense retrieval models varying in parameter count and training annotation volume to identify power-law relationships.",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dense retrieval performance follows precise power-law scaling with model size and number of annotations",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling laws enable optimal resource allocation strategy under budget constraints",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Examined impact of annotation quality through prevalent data augmentation methods",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Scaling laws may not generalize across all retrieval tasks and metrics; discrete nature of retrieval metrics complicates scaling analysis; findings specific to their experimental settings.",
+   "ids": [
+    "2403.18684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can dense retrieval models be improved to generalize to target domains with different distributions, where prior adversarial learning and query generation approaches showed limited success?",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Combined query-generation with self-supervision using T5-3B for pseudo-positive labeling and meticulous hard negative selection; extended to conversational retrieval with query-rewriting module for conversational query labeling.",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pseudo-relevance labeling on target domain enables effective domain adaptation",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Approach improves over baseline models for both standard and conversational dense retrieval",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms prior adversarial learning and query generation approaches",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Query-rewriting module enhances conversational dense retrieval performance",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Relies on large T5-3B model for pseudo-labeling, which is computationally expensive; effectiveness may vary across different target domains; hard negative selection process requires careful tuning.",
+   "ids": [
+    "2403.08970"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can e-commerce recommendation systems overcome vocabulary mismatch when user intent has limited lexical overlap with product metadata?",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Built a two-tower bi-encoder dense retrieval system fine-tuned on Amazon Reviews 2023 (Fashion) using supervised contrastive learning with Multiple Negatives Ranking Loss, combined with FAISS HNSW indexing and ONNX Runtime with INT8 dynamic quantization for efficient CPU serving.",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improved Recall@10 from 0.26 (BM25 baseline) to 0.66 on review-to-title benchmark",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved 6.1 ms median CPU inference latency at batch size 1",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reduced model size by 4x through INT8 quantization",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully scaled to 826,402 catalog items",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluated only on Fashion subset of Amazon Reviews; CPU latency measurements may not reflect production-scale concurrent load; training limited to 50,000 sampled interactions.",
+   "ids": [
+    "2602.00899"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we address the limitations of fine-tuning dense retrieval models for new tasks, particularly when training data is limited or models need frequent updates?",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed Dynamic Dense Retrieval (DDR), which uses prefix tuning as domain-specialized modules that can be compositionally combined with a dynamic routing strategy for flexible domain adaptation.",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DDR surpasses traditional dense retrieval while utilizing only 2% of training parameters",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The modular approach enables highly flexible domain adaptation in retrieval",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Specialized modules can be dynamically combined for different domains",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive evaluation on six zero-shot downstream tasks validates the approach",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Complexity of managing multiple modules and routing strategies; evaluation limited to zero-shot scenarios without testing on tasks requiring substantial training data.",
+   "ids": [
+    "2602.22547"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the theoretical relationship between generative retrieval and multi-vector dense retrieval, particularly regarding how they measure query-document relevance?",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analyzed attention layers and prediction heads of generative retrieval to demonstrate it as a special case of multi-vector dense retrieval, examining how both compute relevance through query-document vector products and alignment matrices.",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generative retrieval and multi-vector dense retrieval share the same relevance measurement framework",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both compute relevance as sum of products of query and document vectors with alignment matrix",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both paradigms exhibit commonalities in term matching within their alignment matrices",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Bridges understanding between generative and dense retrieval paradigms",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Primarily theoretical analysis that may not capture all practical implementation differences; experimental validation scope not fully detailed.",
+   "ids": [
+    "2404.00684"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What factors influence text recoverability via Vec2Text in dense retrieval systems, and how can privacy risks be mitigated while maintaining retrieval effectiveness?",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensively analyzed factors affecting text recoverability (distance metrics, pooling functions, bottleneck pre-training, noise addition, quantization, embedding dimensions) and proposed a simple embedding transformation that maintains ranking effectiveness while mitigating recoverability risk.",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Vec2Text poses a genuine threat to current dense retrieval systems using embeddings from providers like OpenAI and Cohere",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multiple embedding model factors significantly impact text recoverability",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed embedding transformation guarantees equal ranking effectiveness while mitigating recoverability risk",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides insights for practitioners designing privacy-aware dense retrieval systems",
+   "ids": [
+    "2402.12784"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Proposed fix may require implementation changes to existing systems; analysis focuses on specific embedding models and attack scenarios that may not cover all Vec2Text variants.",
+   "ids": [
+    "2402.12784"
+   ]
+  }
+ ]
+}

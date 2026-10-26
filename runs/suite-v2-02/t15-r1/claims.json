@@ -1,0 +1,751 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2026) showed that vanilla SAM3 performance degrades substantially on medical data, relying heavily on ground-truth-derived bounding boxes, necessitating full fine-tuning across 33 datasets spanning 10 medical imaging modalities.",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Zhang et al. (2025) constructed PETS-5k, the largest PET segmentation dataset with 5,731 3D whole-body images, to train SegAnyPET with cross-prompting confident learning that handles discrepant annotation quality.",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Stenhede et al. (2025) took a different approach, training ENSAM from scratch on under 5,000 volumes using a SegResNet-based architecture optimized for 3D medical image interactive segmentation.",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Malaisree et al. (2026) demonstrated that Low-Rank Adaptation (LoRA) applied to SAM3, updating only 0.121% to 1.341% of parameters, achieved dramatic improvements in structural defect segmentation—with pixel IoU improving from 0.017 to 0.855 on an independent dataset.",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jalilian and Bais (2026) proposed CLIP-Guided SAM, which injects CLIP-derived semantic features through lightweight multi-modal adapters directly into SAM's image encoder, achieving superior performance against SAM+PEFT baselines while remaining parameter-efficient in both training and deployment.",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pang et al. (2026) introduced HyperSAM, which couples a physics-informed hyperspectral synthesis pipeline with spectral adaptation architecture, generating full-spectrum hyperspectral cubes from SpaceNet multispectral imagery using SAM3-derived pseudo-masks.",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2025) developed AutoMiSeg, a zero-shot automatic segmentation pipeline combining vision-language and segmentation foundation models with test-time adaptation using learnable adaptors that align medical inputs with foundation model representations, achieving a 69% relative improvement in Dice Score without requiring ground-truth labels for hyperparameter optimization.",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Mei et al. (2025) introduced SAM-I2V, which upgrades pre-trained SAM to support promptable video segmentation through an image-to-video feature extraction upgrader, memory filtering strategy, and memory-as-prompt mechanism.",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Magg et al. (2026) tested 11 promptable foundation models using human prompts collected through observer studies on musculoskeletal CT segmentation, finding that all models were sensitive to prompt variations and that performance drops significantly when using human prompts compared to ideal prompts.",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chattopadhyay et al. (2025) similarly emphasized that promptable foundation models show potential in bridging domain gaps via smart prompting techniques, but their comprehensive experimental study across 12 datasets highlighted the variability in zero-shot domain generalization capabilities.",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Multiple papers converge on the finding that vanilla SAM-family models experience substantial performance degradation when applied directly to specialized domains, particularly medical imaging (Jiang et al., 2026; Zhang et al., 2025; Stenhede et al., 2025).",
+   "ids": [
+    "2601.10880",
+    "2502.14351",
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also consensus that parameter-efficient adaptation strategies can achieve dramatic improvements while preserving the promptable interface (Malaisree et al., 2026; Jalilian & Bais, 2026).",
+   "ids": [
+    "2609.00469",
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, several works agree that synthetic data generation and test-time adaptation offer viable pathways to reduce annotation dependency (Pang et al., 2026; Li et al., 2025).",
+   "ids": [
+    "2609.37340",
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Some works demonstrate success with full fine-tuning on domain-specific datasets (Jiang et al., 2026; Zhang et al., 2025), while others achieve comparable gains through lightweight parameter-efficient methods updating less than 2% of parameters (Malaisree et al., 2026; Jalilian & Bais, 2026).",
+   "ids": [
+    "2601.10880",
+    "2502.14351",
+    "2609.00469",
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the human-centric evaluation of promptable models remains nascent—only Magg et al. (2026) conducted observer studies with human prompts, suggesting that most reported performance metrics may not reflect real-world usability.",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do foundation models trained on diverse large-scale data generalize across domains in 3D medical image segmentation without additional training?",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducts a comprehensive experimental study examining 6 medical segmentation foundation models across 12 public datasets spanning multiple modalities and anatomies to evaluate their zero-shot domain generalization capabilities.",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Promptable foundation models show potential in bridging the domain gap via smart prompting techniques",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides valuable insights into the viability of foundation models for domain generalization",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identifies promising avenues for future research in zero-shot domain generalization",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Study encompasses diverse modalities including CT, MRI, and other imaging protocols",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.22862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can promptable segmentation models like SAM be made semantically aware without losing their promptable interface?",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes CLIP-Guided SAM, a framework that injects CLIP-derived text, vision, and similarity features directly into SAM's image encoder through lightweight multi-modal semantic adapters.",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supports two operating modes: Manual mode for interactive segmentation with text and spatial prompts, and Semi-Automatic text-only mode for concept-specific segmentation.",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Robustness depends on aligning training with the type of prompts used at inference, making train-test prompt consistency an important design principle",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves superior or competitive performance against SAM+PEFT baselines without semantic conditioning, vision-language + SAM pipelines, SAM 3, and strong semi-supervised segmentation methods",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Remains parameter-efficient in both training and deployment",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Applies to both general-domain benchmarks and specialized downstream tasks in low labeled-data settings",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2605.24807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can SAM3 be adapted to overcome domain shifts and achieve robust prompt-driven medical image segmentation across diverse imaging modalities?",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Medical SAM3 was developed by fully fine-tuning SAM3 on 33 datasets spanning 10 medical imaging modalities with paired segmentation masks and text prompts, enabling the model to acquire domain-specific representations while preserving prompt-driven flexibility for 2D and 3D medical imaging.",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Vanilla SAM3 performance degrades substantially on medical data, relying heavily on ground-truth-derived bounding boxes",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Medical SAM3 demonstrates consistent and significant performance gains across organs, imaging modalities, and dimensionalities",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model excels in challenging scenarios with semantic ambiguity, complex morphology, and long-range 3D context",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Full model adaptation beyond prompt engineering is necessary for robust medical image segmentation",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Medical SAM3 establishes itself as a universal, text-guided segmentation foundation model for medical imaging",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2601.10880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a zero-shot automatic segmentation pipeline combining vision-language and segmentation foundation models achieve competitive performance without requiring extensive annotation or interactive prompts?",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The method uses a grounding model to generate initial bounding boxes from task definitions, followed by visual prompt boosting and promptable segmentation.",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A test-time adaptation framework with learnable adaptors aligns medical inputs with foundation model representations, with hyperparameters optimized via Bayesian Optimization guided by a proxy validation model without ground-truth labels.",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The pipeline achieved a 69% relative improvement in Dice Score (from 42.53 to 71.81) over the previously best-performing method",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The fully automatic pipeline performs competitively with weakly-prompted interactive foundation models",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach was evaluated successfully on seven diverse medical imaging datasets",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method offers an annotation-efficient and scalable solution for zero-shot medical image segmentation",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2505.17931"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do different promptable foundation models perform when using human-generated prompts for musculoskeletal CT segmentation?",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Tests 11 promptable foundation models using non-iterative 2D and 3D prompting strategies on private and public datasets focusing on bone and implant segmentation in four anatomical regions, identifies Pareto-optimal models, and further analyzes them using human prompts collected through a dedicated observer study.",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Segmentation performance varies significantly between foundation models and prompting strategies",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pareto-optimal models identified: SAM and SAM2.1 in 2D, nnInteractive and Med-SAM2 in 3D",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Localization accuracy and rater consistency vary with anatomical structures, with higher consistency for simple structures (wrist bones) and lower consistency for complex structures (pelvis, tibia, implants)",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance drops using human prompts, suggesting that performance reported on ideal prompts from reference labels might overestimate performance in human-driven settings",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All models were sensitive to prompt variations; while two models demonstrated intra-rater robustness, it did not scale to inter-rater settings",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2603.10541"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Low-Rank Adaptation (LoRA) be applied to SAM3 for multi-class structural defect segmentation while addressing failure modes specific to concept-promptable models?",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study applies LoRA to SAM3 with two methodological contributions: (1) a supervision procedure that trains directly from COCO-style class-labeled instance segmentation using category names as prompts, and (2) exhaustive hard-negative prompting to prevent the model from degenerating into responding to any prompt.",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Two adapter configurations updating 0.121% and 1.341% of parameters were compared.",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On a tunnel lining dataset, pixel IoU improved from 0.017 to 0.338 and instance-level recall from 0.375 to 0.672",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On the independent Structural Defects Dataset, pixel IoU improved from 0.017 to 0.855 and recall from 0.574 to 1.000",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improvements were consistent across ten metrics on both datasets",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The largest per-category gains occurred where zero-shot competence was absent",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hard-negative prompting addresses model collapse at no annotation cost",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2609.00469"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can SAM's promptable segmentation capabilities be extended to videos with minimal training cost?",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces SAM-I2V, an image-to-video upgradation method with three key innovations: an image-to-video feature extraction upgrader built upon SAM's static image encoder, a memory filtering strategy that selects the most relevant past frames, and a memory-as-prompt mechanism leveraging object memory for temporally consistent mask propagation.",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves over 90% of SAM 2's performance while using only 0.2% of its training cost",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strategically upgrades pre-trained SAM to support promptable video segmentation, significantly reducing training complexity and resource requirements",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables spatiotemporal video perception and temporally consistent mask propagation in dynamic scenes",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Presents a resource-efficient pathway to PVS, lowering barriers for further research and broader applications",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2506.01304"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a general-purpose hyperspectral foundation model be constructed despite limited high-resolution annotations and the need to reuse geometric priors from vision foundation models?",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: HyperSAM couples a data-centric hyperspectral synthesis pipeline (generating full-spectrum hyperspectral cubes from SpaceNet multispectral imagery via physics-informed abundance-transfer with SAM3-derived pseudo-masks) with a spectral adaptation architecture based on SAM3, featuring a frozen RGB branch, trainable hyperspectral encoder, ControlNet-style feature injection, mixture-of-experts mask refiner, and Cross-modal Sample Selection for noisy-label weighting.",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HyperSAM obtains strong generalization on diverse hyperspectral tasks including classification, anomaly detection, change detection, target detection, and airborne oil-spill mapping",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High-quality synthetic data can be more effective than simply scaling noisy hyperspectral supervision",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach successfully reuses geometric and interactive priors from modern vision foundation models",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The spectral adaptation architecture with ControlNet-style injection enables effective hyperspectral learning",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2609.37340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create an efficient 3D medical image segmentation model that performs well under limited data and computational budgets?",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Combines a SegResNet-based encoder with a prompt encoder and mask decoder in a U-Net-style architecture, using latent cross-attention, relative positional encoding, normalized attention, and the Muon optimizer.",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trained from scratch on under 5,000 volumes from multiple modalities on a single 32 GB GPU in 6 hours.",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms two previously published baseline models (VISTA3D, SAM-Med3D) and matches the third (SegVol) in challenge evaluation on hidden test set",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ranks 5th of 10 overall and best among approaches not utilizing pretrained weights in the coreset track",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Relative positional encodings and the Muon optimizer each substantially speed up convergence and improve segmentation quality",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves DSC AUC of 2.404, NSD AUC of 2.266, final DSC of 0.627, and final NSD of 0.597",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2509.15874"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can segmentation foundation models be adapted to overcome insufficient annotation data and weak generalization in PET image segmentation?",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors constructed PETS-5k, the largest PET segmentation dataset with 5,731 3D whole-body PET images (over 1.3M 2D images), and developed SegAnyPET, a modality-specific 3D foundation model using cross prompting confident learning (CPCL) with uncertainty-guided self-rectification to learn from both high-quality and noisy labeled data.",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SegAnyPET can segment seen and unseen target organs using only one or a few prompt points",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model outperforms state-of-the-art foundation models and task-specific fully supervised models",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SegAnyPET achieves higher accuracy and strong generalization ability for universal segmentation",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The CPCL strategy effectively handles discrepant annotation quality in PET imaging data",
+   "ids": [
+    "2502.14351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2502.14351"
+   ]
+  }
+ ]
+}

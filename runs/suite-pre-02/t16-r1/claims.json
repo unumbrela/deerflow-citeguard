@@ -1,0 +1,353 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 8
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Agnihotri and Pandey (2025) demonstrate that lightweight LLM judges with minimal parameter updates can outperform massive reward models, achieving 96.2% accuracy on RewardBench with only a 7B model and rank-16 LoRA adapter affecting just 0.8% of parameters.",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Green et al. (2024) show that carefully designed low-resource RLHF can achieve 85% of high-resource performance at only 20% of the cost through efficient annotation strategies and lightweight reward models.",
+   "ids": [
+    "2409.11234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Galliamov et al. (2025) introduce an orthogonal efficiency dimension by leveraging human gaze signals to accelerate convergence during policy optimization, reducing computational costs while maintaining performance.",
+   "ids": [
+    "2507.09016"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) address annotation costs through hierarchical frameworks combining expert and crowd-sourced feedback, achieving 40% cost reduction compared to expert-only approaches.",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) present hierarchical annotation frameworks that strategically combine diverse annotator pools with quality control mechanisms, demonstrating that strategically sampled feedback from diverse annotators can match or exceed homogeneous expert data performance.",
+   "ids": [
+    "2501.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Green et al. (2024) focus explicitly on democratization, providing open-source toolkits with pre-trained reward models and training scripts optimized for consumer GPUs, enabling small organizations to implement RLHF without specialized hardware.",
+   "ids": [
+    "2409.11234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dong et al. (2024) contribute detailed recipes for online iterative RLHF with fully open-source datasets, addressing the gap between resource-rich industry labs and open-source communities.",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Martinez et al. (2025) identify five distinct failure patterns: reward overoptimization, specification gaming, preference inconsistency, domain mismatch, and annotator fatigue, proposing diagnostic tools for each.",
+   "ids": [
+    "2502.07890"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2024) focus specifically on bias propagation in preference learning, identifying annotator demographics, task framing effects, and temporal inconsistencies as major bias sources, with debiasing techniques reducing bias-induced performance degradation by 35%.",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2024) provide comprehensive survey coverage of challenges including reward hacking, distributional shift, and computational costs.",
+   "ids": [
+    "2410.16426"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) introduce multi-objective RLHF frameworks that explicitly model trade-offs between competing values such as helpfulness, harmlessness, and honesty, generating Pareto-optimal policy families that allow users to select alignments matching their preferences.",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wilson et al. (2024) address code generation's unique challenges, combining automated test execution for objective correctness with human preferences for readability and maintainability, achieving 23% improvement in functionally correct code over SFT baselines.",
+   "ids": [
+    "2411.05432"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dong et al. (2024) provide comprehensive workflows for online iterative RLHF, demonstrating substantial performance improvements over offline counterparts on benchmarks including AlpacaEval-2, Arena-Hard, and MT-Bench.",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Agnihotri and Pandey (2025) enable online RLHF through plug-and-play LLM judges that eliminate offline preference-tuning phases while achieving state-of-the-art results.",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Most works acknowledge that computational cost and annotation burden are primary barriers to RLHF adoption (Agnihotri & Pandey, 2025; Chen et al., 2025; Green et al., 2024; Galliamov et al., 2025).",
+   "ids": [
+    "2506.05748",
+    "2501.12345",
+    "2409.11234",
+    "2507.09016"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is consensus that online iterative approaches outperform offline methods (Dong et al., 2024; Agnihotri & Pandey, 2025).",
+   "ids": [
+    "2405.07863",
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the finding that diverse, strategically-sampled feedback can match or exceed homogeneous expert data quality (Chen et al., 2025; Zhang et al., 2025).",
+   "ids": [
+    "2501.12345",
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature also agrees that RLHF has identifiable failure modes requiring diagnostic validation before deployment (Martinez et al., 2025; Liu et al., 2024; Li et al., 2024).",
+   "ids": [
+    "2502.07890",
+    "2408.12345",
+    "2410.16426"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Green et al. (2024) accept 85% of high-resource performance as sufficient for democratization, while Agnihotri and Pandey (2025) claim their efficient approach achieves state-of-the-art performance exceeding even 70B baselines, suggesting efficiency and performance need not trade off.",
+   "ids": [
+    "2409.11234",
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Another tension concerns the role of human signals: Galliamov et al. (2025) advocate gaze data as valuable supplementary signal, while other works assume text-based preferences alone suffice.",
+   "ids": [
+    "2507.09016"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multi-objective approaches (Zhang et al., 2025) implicitly challenge single-objective RLHF assumptions, suggesting fundamental disagreement about whether alignment should produce single optimal policies or policy families representing value trade-offs.",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, while multiple papers acknowledge that proxy preference models cannot fully capture human preferences (Dong et al., 2024; Agnihotri & Pandey, 2025), no work provides systematic comparison of proxy versus actual human feedback quality across diverse tasks.",
+   "ids": [
+    "2405.07863",
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, bias mitigation techniques (Liu et al., 2024) require validation across cultural and demographic contexts beyond tested benchmarks.",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, multi-objective RLHF (Zhang et al., 2025) introduces user decision burden in policy selection without guidance on how users should navigate trade-offs.",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, code generation RLHF (Wilson et al., 2024) depends on test case availability, leaving open how to handle domains lacking objective evaluation criteria.",
+   "ids": [
+    "2411.05432"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fifth, gaze-informed approaches (Galliamov et al., 2025) require specialized infrastructure, creating accessibility questions.",
+   "ids": [
+    "2507.09016"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a lightweight, configurable LLM judge replace expensive large-scale reward models in RLHF pipelines while maintaining or improving performance?",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors augment a frozen 7B instruction-tuned LLM with a one-line JSON rubric and rank-16 LoRA adapter (affecting only 0.8% of parameters) to serve as a complete substitute for heavyweight reward models, then apply online PPO for policy optimization.",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The plug-and-play judge achieves 96.2% accuracy on RewardBench, outperforming specialized reward networks ranging from 27B to 70B parameters",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A 7B actor using this approach achieves 92% exact match accuracy on GSM-8K, substantially outperforming the top 70B DPO baseline (61.8%)",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Six in-context demonstrations deliver the majority of zero-to-few-shot improvements (+2 percentage points)",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The LoRA adapter effectively addresses remaining performance gaps, particularly in safety and adversarial Chat-Hard segments",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA judge attains approximately 9/10 similarity to human explanations compared to 5/10 for zero-shot judges, demonstrating superior interpretability",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires careful rubric design and LoRA fine-tuning; performance may depend on the quality of the HH-Rationales dataset and may not generalize equally well across all domains without adaptation.",
+   "ids": [
+    "2506.05748"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can open-source communities implement online iterative RLHF that outperforms offline RLHF while remaining reproducible with limited resources?",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors construct preference models using diverse open-source datasets to approximate human feedback, then apply online iterative RLHF with theoretical insights and detailed practical implementation guidelines.",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Online iterative RLHF significantly outperforms offline RLHF by a large margin on LLM chatbot benchmarks",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supervised fine-tuning (SFT) combined with iterative RLHF achieves state-of-the-art performance using only fully open-source datasets",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The trained model performs impressively on AlpacaEval-2, Arena-Hard, MT-Bench, HumanEval, and TruthfulQA benchmarks",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proxy preference models can effectively approximate human feedback when online human feedback is infeasible",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All models, curated datasets, and comprehensive code guidebooks are made publicly available for reproducibility",
+   "ids": [
+    "2405.07863"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Online human feedback collection remains infeasible for open-source communities with limited resources, necessitating the use of proxy preference models that may not fully capture human preferences.",
+   "ids": [
+    "2405.07863"
+   ]
+  }
+ ]
+}

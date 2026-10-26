@@ -1,0 +1,595 @@
+{
+ "stats": {
+  "ambiguous": 6,
+  "unmatched": 2
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li & Kingsford (2026) exemplify this approach by adapting Means-Ends Analysis—a classical AI problem-solving technique—into a structured prompting framework called Medaka for continuous-state domains.",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jia et al. (2026) extend this pattern to multimodal data analysis with WeaveData, which generates typed logical plans with pre-execution critique and post-execution verification, accumulating planning experience across queries.",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2024) provide the most direct evidence, showing that advanced planning methods like tree search and iterative correction require discriminators with at least 90% accuracy to outperform simpler re-ranking approaches.",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The structural enumeration deficit identified by Huang et al. (2026) can be understood as a specialized form of discrimination failure: LLMs struggle to evaluate whether a sequence of actions makes a goal reachable, even when they can assess local action applicability.",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Huang et al. (2026) apply multidimensional item response theory to reveal two distinct planning abilities: operational reasoning (evaluating local action applicability and immediate state transitions) and structural enumeration (reasoning about goal reachability and landmark structure).",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "For instance, Huang et al. (2024) find that fine-tuning on planning corpora does not produce robust planning skills on out-of-distribution tasks, yet Chain-of-Thought and reinforcement learning with their \"Longest Contiguous Common Subsequence\" reward do improve plan executability.",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wei et al. (2025) synthesize these disparate evaluation approaches into a unified framework of six criteria: completeness, executability, optimality, representation, generalization, and efficiency.",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li & Kingsford (2026) explicitly address the gap between discrete-state domains, where actions are enumerable, and continuous-state domains, where actions form a continuum.",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jia et al. (2026) tackle multimodal data analysis, where plans must coordinate operations across relational tables, text, and images.",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kang (2025) focuses on workflow composition, generating 2,296 parametric problems to evaluate LLMs at scale.",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Chen et al. (2024), Göbel et al. (2026), and Huang et al. (2024) all demonstrate that LLMs alone achieve 60-70% success rates on standard benchmarks, with diminishing returns from scaling inference-time compute.",
+   "ids": [
+    "2402.10890",
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025), Chen et al. (2024), and Zhang et al. (2025) in SPIRAL all demonstrate that the choice of search method—whether bidirectional search, MCTS, or iterative correction—significantly impacts both success rates and token efficiency.",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Huang et al. (2024) argue that fine-tuning does not produce robust, generalizable planning skills, while Kang (2025) reports 86% validity rates with structured intermediate representations.",
+   "ids": [
+    "2412.10675",
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Continuous-state planning: Li & Kingsford (2026) note that their evaluation is limited to liquid mixing domains, and generalizability to other continuous-state domains remains untested.",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Out-of-distribution generalization: Huang et al. (2024) and Kang (2025) both identify poor OOD performance as a limitation.",
+   "ids": [
+    "2412.10675",
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Discriminator improvement: Chen et al. (2024) identify the 90% discrimination accuracy threshold but do not provide a path to reaching it.",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Computational efficiency: Multiple papers note high token costs (Göbel et al., 2026: 5.7× cost for agentic planning; Chen et al., 2024: 10-20× slower tree search) without clear paths to efficiency improvements.",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Structural enumeration: Huang et al. (2026) identify this competency as insensitive to scaling and extended reasoning, but do not offer architectural solutions.",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Evaluation standardization: Wei et al. (2025) note the lack of consistent evaluation criteria across the field.",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Under what conditions do advanced planning methods like tree search and iterative correction provide practical utility for LLM-based multi-step problem solving?",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analyzed how discrimination accuracy affects agent performance using iterative correction and tree search versus re-ranking, experimenting on text-to-SQL parsing and mathematical reasoning tasks.",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Advanced planning methods require discriminators with at least 90% accuracy to achieve significant improvements over re-ranking",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current LLMs' discrimination abilities have not met the threshold needed for advanced planning methods to show improvements",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tree search is at least 10-20 times slower than other methods but leads to negligible performance gains",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Advanced planning methods may not adequately balance accuracy and efficiency when using LLM-based discriminators",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Current LLM discriminators lack the accuracy needed to make advanced planning methods worthwhile; tree search has significant efficiency problems that hinder real-world applications.",
+   "ids": [
+    "2402.10890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Which strategies actually lead to robust LLM planning skills, and do current approaches address key misconceptions in the literature?",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed an end-to-end LLM planner and employed diverse metrics to evaluate strategies including fine-tuning, Chain-of-Thought, and reinforcement learning with a novel 'Longest Contiguous Common Subsequence' reward.",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuning LLMs on planning corpora does not lead to robust planning skills on out-of-distribution test sets",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Chain-of-Thought and similar strategies enhance plan executability but do not directly improve final validity rates",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reinforcement learning with the Longest Contiguous Common Subsequence reward emerged as the most effective strategy",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The RL approach contributes to both plan validity and executability simultaneously",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incremental progress exists in plan executability even though plan validity remains challenging",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Plan validity remains a significant challenge despite improvements in executability; strategies must address both aspects, and out-of-distribution generalization is still poor with simple fine-tuning approaches.",
+   "ids": [
+    "2412.10675"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do uneven LLM planning performances across tasks reflect distinct latent planning competencies rather than differences along a single ability spectrum?",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluated multiple LLM families on ACPBench-Hard under varying test-time reasoning budgets and applied multidimensional item response theory model to uncover latent competency structure underlying LLM planning performance.",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Two principal dimensions shape planning performance: operational reasoning and structural enumeration",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Operational reasoning evaluates local action applicability and immediate state transitions",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Structural enumeration reasons about goal reachability and landmark structure",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Operational reasoning improves under model scaling and longer reasoning traces",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Structural enumeration remains comparatively insensitive to scaling and extended reasoning time",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Analysis limited to ACPBench-Hard benchmark; multidimensional IRT model assumptions may not capture all planning competency dimensions; findings require validation on diverse planning tasks.",
+   "ids": [
+    "2607.11197"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM-generated plans for multimodal data analysis be made more reliable through self-critiquing and self-evolving mechanisms?",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: WeaveData generates typed logical plans with step-by-step critique before execution, checks results against questions afterwards, diagnoses failures using actual data, reuses valid results, and accumulates planning experience grounded in a metadata knowledge graph.",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pre-execution step-by-step critique reduces errors in LLM-generated analysis plans",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Post-execution result checking against the original question catches silent computation errors",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Failed plans can be diagnosed and evolved by reusing results that remain valid",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Planning experience accumulation improves performance on later questions",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Grounding planning in a metadata knowledge graph enables clarification of ambiguous questions with evidence-backed judgments",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The system was demonstrated on only two public multimodal datasets, and scalability or computational overhead of the self-critiquing process is not discussed.",
+   "ids": [
+    "2609.34764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can scalable evaluation data be generated to overcome the scarcity hindering progress in LLM planning and workflow composition?",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: NL2Flow is introduced as a fully automated pipeline that parametrically generates workflow planning problems in a structured intermediate representation, translating them into both natural language and formal PDDL for evaluation.",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Best-performing model achieved 86% success in generating valid plans and 69% in generating optimal plans",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Translating natural language to structured JSON representation before symbolic planning significantly improved success rates",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The influence of problem characteristics on plan generation is contingent on both model and prompt design",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "2,296 low-difficulty problems were generated and evaluated across multiple open-source instruct-tuned LLMs",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Neuro-symbolic integration shows clear benefits for LLM planning tasks",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation was limited to low-difficulty problems only; the paper acknowledges that understanding error sources and shifting bottlenecks remains crucial as LLM reasoning systems scale to more complex tasks.",
+   "ids": [
+    "2507.02253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLMs plan effectively in continuous-state domains where actions form a continuum and cannot be enumerated?",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed Medaka, an MEA-inspired structured prompting framework that encourages recursive goal decomposition, algebraic derivation, and per-step state tracking, evaluated on Liquidworld, a systematic testbed on liquid mixing.",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Traditional LLM planning frameworks assume enumerable actions, which breaks down in continuous-state domains",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Means-Ends Analysis from human psychology provides an effective remedy for continuous-state planning challenges",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Medaka improves performance across multiple model families on the Liquidworld benchmark",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Classical means-ends analysis elicits LLM-native reasoning abilities that are helpful for continuous-state planning",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation limited to liquid mixing domain (Liquidworld); generalizability to other continuous-state domains remains untested.",
+   "ids": [
+    "2610.24928"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we comprehensively overview and compare current LLM planners with clear, consistent evaluation criteria?",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Survey examining six key performance criteria (completeness, executability, optimality, representation, generalization, and efficiency) with thorough analysis of representative works, building on foundational work by Kartam and Wilkins (1990).",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing LLM planning systems are tailored to specific problems, making comparison and approach selection challenging",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The field lacks clear and consistent evaluation criteria for LLM planners",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Survey provides comprehensive framework based on six performance criteria for evaluating and comparing LLM planners",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analysis highlights strengths and weaknesses of representative works across each performance dimension",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identifies crucial future directions for advancing LLM planning to support agentic workflows",
+   "ids": [
+    "2502.11221"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey paper, synthesizes existing work rather than presenting new empirical findings; proposed evaluation criteria framework requires validation through application.",
+   "ids": [
+    "2502.11221"
+   ]
+  }
+ ]
+}

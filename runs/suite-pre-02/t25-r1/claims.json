@@ -1,0 +1,746 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) introduced DriveCoT, which collects chain-of-thought labels alongside sensor data and control decisions in the CARLA simulator, enabling the model to generate interpretable reasoning before making driving decisions.",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Extending this concept, Tan et al. (2025) proposed LCDrive, which represents chain-of-thought reasoning in a latent action-aligned space rather than natural language.",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zimmerlin et al. (2024) systematically analyzed training dataset factors and discovered that expert driving style significantly affects downstream policy performance, and that frame weighting based on simplistic criteria like class frequencies is ineffective for complex datasets.",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nguyen et al. (2025) extended this analysis by studying the misalignment between privileged expert demonstrations and sensor-based student observations in imitation learning.",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2026) identified that waypoint-based supervision creates physically incoherent intermediate trajectories, and introduced Endpoint-Constrained Optimization (ECO), a lightweight postprocessing layer that preserves predicted endpoints while reshaping intermediate waypoints for controller feasibility.",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Da Col et al. (2026) proposed OPTED, which decouples reinforcement learning from end-to-end policy post-training.",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rowe et al. (2026) introduced Gigapixel, a high-throughput batched driving simulator achieving 50k agent steps per second with simplified bounding-box rendering that preserves essential scene structure.",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chai et al. (2025) addressed the computational cost of generative models for multi-modal planning by proposing AnchDrive, which bootstraps diffusion policies with hybrid trajectory anchors.",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Guo et al. (2025) demonstrated that combining end-to-end architectural design with knowledgeable VLMs yields impressive performance on driving tasks.",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2026) presented ControlPed, a framework that combines trajectory-level conflict synthesis with 3D Gaussian Splatting to generate photorealistic, motion-controllable safety-critical pedestrian scenarios.",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Multiple papers converge on the importance of addressing the open-loop to closed-loop gap as a fundamental challenge in end-to-end driving (Zhang et al., 2026; Da Col et al., 2026; Nguyen et al., 2025).",
+   "ids": [
+    "2609.31383",
+    "2609.20756",
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also consensus that dataset quality and composition significantly impact performance, often more than architecture design choices (Zimmerlin et al., 2024; Nguyen et al., 2025).",
+   "ids": [
+    "2412.09602",
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) and Tan et al. (2025) prioritize interpretable reasoning, whereas other works prioritize performance gains through latent representations or postprocessing without explicit interpretability.",
+   "ids": [
+    "2403.16996",
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also variation in the emphasis on human supervision: some works achieve competitive results without human trajectory supervision through self-play (Rowe et al., 2026), while others rely heavily on carefully curated human demonstrations (Zimmerlin et al., 2024; Nguyen et al., 2025).",
+   "ids": [
+    "2606.19641",
+    "2412.09602",
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "The sim-to-real gap remains a significant challenge, with only a few papers addressing perception adaptation for transfer (Rowe et al., 2026; Da Col et al., 2026).",
+   "ids": [
+    "2606.19641",
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, safety evaluation is underexplored relative to performance optimization, with only one paper (Liu et al., 2026) focusing specifically on generating safety-critical scenarios.",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the computational cost of training and deployment is mentioned but not systematically addressed across papers, with only AnchDrive (Chai et al., 2025) and OPTED (Da Col et al., 2026) explicitly targeting efficiency improvements.",
+   "ids": [
+    "2509.20253",
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "The reliance on privileged information (HD-maps, bounding boxes, expert knowledge) in several approaches (Da Col et al., 2026; Nguyen et al., 2025; Rowe et al., 2026) raises questions about deployment in environments where such information is unavailable.",
+   "ids": [
+    "2609.20756",
+    "2512.20563",
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Additionally, while vision-language models show promise (Guo et al., 2025), their computational requirements and latency for real-time deployment are not thoroughly addressed.",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can diffusion policies for end-to-end driving be bootstrapped to reduce the high computational cost of traditional generative models?",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: AnchDrive initializes its planner with hybrid trajectory anchors derived from both static driving priors and dynamic context-aware trajectories decoded by a Transformer, then uses diffusion to refine these anchors by predicting trajectory offset distributions.",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Anchor-based bootstrapping enables efficient generation of diverse, high-quality trajectories compared to traditional diffusion from pure noise",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hybrid anchors combining static priors and dynamic context-aware trajectories provide rich initialization",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AnchDrive sets a new state-of-the-art on the NAVSIM benchmark",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework demonstrates strong generalizability across driving scenarios",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach depends on the quality of both static priors and the Transformer that generates dynamic anchors; evaluation is primarily demonstrated on NAVSIM benchmark with limited discussion of performance on other datasets or real-world deployment.",
+   "ids": [
+    "2509.20253"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can closed-loop post-training for end-to-end driving policies be performed efficiently without costly simulation requirements for sensor-based policies?",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: OPTED decouples reinforcement learning from policy post-training: a privileged teacher trained via RL on vectorized inputs provides supervision to pre-trained camera-based students during closed-loop post-training using neural reconstructions (3DGS) of real driving logs.",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Closed-loop post-training mitigates compounding errors that occur when vehicles operate outside the training data distribution",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OPTED applied to TransFuser and VaVAM increased driving scores by factors of 1.6× and 9.5× respectively",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OPTED matches closed-loop performance with approximately 1000× fewer simulator interactions than direct RL post-training",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach stays closer to the human prior compared to direct reinforcement learning methods",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The method requires a privileged teacher with access to HD-map and bounding box information, and relies on neural reconstructions of driving logs which may not perfectly capture real-world complexity.",
+   "ids": [
+    "2609.20756"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can powerful large language models, particularly multi-modality Vision Language Models, benefit end-to-end autonomous driving tasks?",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Combined end-to-end architectural design with knowledgeable Vision Language Models (VLMs), implementing a camera-only solution that leverages VLM capabilities for driving task execution.",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining end-to-end architecture with VLMs yields impressive performance on driving tasks",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method achieved the best camera-only solution across the CVPR2024 E2E Challenge leaderboard",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A single camera input is sufficient for competitive end-to-end driving when paired with VLMs",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Large language models can successfully contribute to autonomous driving decision-making",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The camera-only approach may not match the robustness of multi-sensor fusion systems in adverse conditions, and the evaluation was specific to the CVPR challenge environment.",
+   "ids": [
+    "2509.02659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can photorealistic, controllable safety-critical pedestrian scenarios be generated to evaluate end-to-end driving systems under rare vehicle-pedestrian interactions?",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: ControlPed combines trajectory-level conflict synthesis with 3D Gaussian Splatting, generating conflict trajectories from the HazardPed dataset, lifting them into 3D human motion sequences via text-conditioned motion diffusion, and rendering multi-view sensor observations using animatable 3DGS avatars.",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Seven leading end-to-end driving models suffer severe performance drops in safety-critical pedestrian scenarios, with mean HDScore plunging from 88.8 to 47.4",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework successfully generates photorealistic, motion-controllable safety-critical scenarios",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "HazardPed dataset comprises 10,352 traffic videos with 422 conflict trajectories and 857 annotated 3D human motions",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Safety evaluation in 88 rendered scenarios exposes major failure modes under dangerous pedestrian behaviors",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Safety evaluation was conducted on only 88 rendered scenarios which may not cover the full space of dangerous pedestrian behaviors; the framework is specifically focused on vehicle-pedestrian interactions.",
+   "ids": [
+    "2610.06171"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does misalignment between privileged expert demonstrations and sensor-based student observations limit imitation learning effectiveness in autonomous driving?",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Empirically studied visibility and uncertainty asymmetries between experts and students in CARLA simulation, then implemented modifications to TransFuser v6 to narrow these gaps through improved student-expert alignment and better navigational intent specification.",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experts have significantly higher visibility and far lower uncertainty than students, making them difficult to imitate reliably",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Navigational intent is under-specified in student models at test time when provided via only a single target point",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TransFuser v6 achieves 95 DS on Bench2Drive after addressing learner-expert asymmetries",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance more than doubles on Longest6 v2 and Town13 benchmarks",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integration of perception supervision shows consistent gains on NAVSIM and Waymo benchmarks",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The work primarily focuses on simulation (CARLA) and requires sim-to-real transfer techniques for real-world deployment; the interventions are specific to the TransFuser architecture.",
+   "ids": [
+    "2512.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can large-scale self-play training from pixel observations in simulation overcome the limitations of offline human demonstration datasets for end-to-end driving?",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced Gigapixel, a high-throughput batched driving simulator with perspective rendering at 50k agent steps per second, and proposed self-play DAgger training where pixel-based policies are trained via on-policy distillation from a privileged RL teacher.",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Policies trained via self-play achieve competitive performance on HUGSIM and NAVSIM-v2 benchmarks without any human trajectory supervision",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling self-play training yields proportional gains in policy performance",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Simplified bounding-box rendering preserves essential scene structure while achieving high throughput",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Self-play DAgger training addresses the sample inefficiency of direct pixel-space self-play RL",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach relies on simulation with simplified rendering that may not capture all real-world visual complexity; the sim-to-real gap still requires perception adaptation techniques.",
+   "ids": [
+    "2606.19641"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can latent representations rather than natural language provide more efficient chain-of-thought reasoning for autonomous driving decisions?",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: LCDrive represents CoT reasoning in an action-aligned latent space using interleaved action-proposal tokens and world model tokens grounded in a learned latent world model, with cold-start supervision from ground-truth future rollouts followed by closed-loop reinforcement learning.",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latent language representations capture possible outcomes of driving actions more efficiently than natural language text",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LCDrive achieves faster inference compared to both non-reasoning and text-reasoning baselines",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model produces better trajectory quality than baseline approaches",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Interactive reinforcement learning yields larger improvements for LCDrive",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The latent CoT representations are less interpretable than natural language reasoning; the approach requires ground-truth future rollouts for cold-start supervision which may be expensive to obtain.",
+   "ids": [
+    "2512.10226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can interpretability and controllability be improved in end-to-end driving systems to enable real-world deployment?",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Created a comprehensive end-to-end driving dataset (DriveCoT) using the CARLA simulator with sensor data, control decisions, and chain-of-thought labels; proposed a rule-based expert policy to generate ground truth reasoning labels and a baseline model trained on this dataset.",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "End-to-end driving systems lack interpretability and controllability, hindering real-world deployment",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Chain-of-thought reasoning can be successfully integrated with end-to-end driving architectures",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The DriveCoT dataset enables evaluation of accuracy across different reasoning aspects and final driving decisions",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DriveCoT-Agent demonstrates strong performance in both open-loop and closed-loop evaluations",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The dataset relies on CARLA simulator data rather than real-world driving scenarios, and the rule-based expert policy may not fully capture the nuances of human driving behavior.",
+   "ids": [
+    "2403.16996"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the open-loop/closed-loop performance gap in end-to-end driving models be addressed, particularly regarding trajectory physical feasibility?",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Identified that waypoint-based supervision creates physically incoherent intermediate trajectories; introduced Endpoint-Constrained Optimization (ECO), a lightweight postprocessing layer that preserves predicted endpoints while reshaping intermediate waypoints for controller feasibility.",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Waypoint-based supervision does not ensure physically coherent or controller-trackable intermediate trajectories",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trajectory inconsistencies concentrate primarily at intermediate waypoints while predicted endpoints remain comparatively reliable",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ECO requires no additional training and can be inserted between various waypoint-emitting policies and controllers",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ECO improved VaVAM from 18.1 to 31.0 HD-Score (+71%) on HUGSIM, achieving 1st place on the HUGSIM Closed-Loop Driving Challenge",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: ECO is a postprocessing solution that addresses symptoms rather than root causes of the open-loop/closed-loop gap; evaluation was conducted in simulation environments.",
+   "ids": [
+    "2609.31383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does training dataset quality and composition impact end-to-end driving performance on the challenging CARLA Leaderboard 2.0?",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematically analyzed training dataset factors including expert style, frame weighting strategies, and data reduction techniques; applied findings to achieve top rankings on the 2024 CARLA Challenge and Bench2Drive test routes.",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Expert driving style significantly affects downstream policy performance",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Frame weighting based on simplistic criteria like class frequencies is ineffective for complex datasets",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Estimating frame importance by label changes can reduce dataset size without losing important information",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incorporating these dataset insights achieved 1st and 2nd place on the 2024 CARLA Challenge",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current evaluation metrics contain design flaws that the authors propose modifications to address",
+   "ids": [
+    "2412.09602"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The analysis focuses primarily on CARLA simulator environments, and findings may not fully generalize to real-world autonomous driving scenarios.",
+   "ids": [
+    "2412.09602"
+   ]
+  }
+ ]
+}

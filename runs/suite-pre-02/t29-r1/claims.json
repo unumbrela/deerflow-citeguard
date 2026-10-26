@@ -1,0 +1,776 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 1
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ravikumar (2026) conducted a comprehensive audit of four zero-shot LLM recommenders across three catalogs, finding hallucination rates ranging from 0.6-2.7% on MovieLens to 49.3-61.0% on Amazon Toys.",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Suresh (2026) audited the RecSys Challenge 2026 TalkPlay benchmark and found that official labels contradict user exact-song requests in half of audited turns.",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Aouali et al. (2026) introduced RecoAtlas, a benchmark that complements held-out interaction metrics with learned utility proxies for relevance, complementarity, and diversity derived from interaction data.",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang (2026) exposed a fundamental flaw in LLM reranker evaluation protocols, showing that oracle protocols (which guarantee the ground-truth item is present in the scored set) overestimate realistic NDCG@10 by 92-95%.",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhou et al. (2025) presented an optimization framework combining Retrieval-Augmented Generation (RAG) with a multi-head early exit architecture to balance computational efficiency and predictive accuracy for CTR prediction.",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim et al. (2025) addressed the efficiency-accuracy trade-off from a different angle, proposing I-LLMRec, which leverages images as alternatives to lengthy textual descriptions for item representation.",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shi et al. (2026) provided theoretical insights into why beam-search negatives consistently outperform random negatives in RL-based LLM recommenders.",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lichtenberg et al. (2024) explored whether LLMs contribute to or can alleviate popularity bias, introducing a principled metric for measuring popularity bias that fulfills a series of desiderata.",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang and Shi (2025) addressed bias through their Selective LLM-Guided Regularization framework, which activates LLM-based pairwise ranking supervision only when a trainable gating mechanism predicts the LLM to be reliable.",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zheng et al. (2024) proposed LSVCR, which combines a sequential recommendation model as the primary backbone with a supplemental LLM recommender.",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The recall ceiling findings by Wang (2026) further support this strategy, showing that improving retrieval (typically handled by collaborative filtering) is more consequential than increasing reranker sophistication in low-recall regimes.",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, the selective activation strategy proposed by Yang and Shi (2025) recognizes that LLMs excel particularly in challenging scenarios rather than uniformly across all contexts, advocating for targeted deployment rather than blanket application.",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple studies converge on the need for behavior-grounded evaluation rather than semantic plausibility (Aouali et al., 2026; Wang, 2026), the importance of addressing hallucination through catalog-anchored approaches (Ravikumar, 2026; Suresh, 2026), and the value of hybrid architectures combining LLMs with traditional methods (Zheng et al., 2024; Yang & Shi, 2025).",
+   "ids": [
+    "2605.18805",
+    "2609.27953",
+    "2608.10008",
+    "2609.39696",
+    "2403.13574",
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that efficiency considerations must be central to LLM recommender design, not an afterthought (Zhou et al., 2025; Kim et al., 2025).",
+   "ids": [
+    "2501.02173",
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Lichtenberg et al. (2024) found that LLMs naturally exhibit less popularity bias without mitigation, Yang and Shi (2025) observed that standalone LLM recommenders are costly, biased, and unreliable across large regions of the user-item space, requiring selective activation.",
+   "ids": [
+    "2406.01285",
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Real-time vs. offline trade-offs: While several papers propose offline LLM scoring to reduce inference costs (Yang & Shi, 2025; Zheng et al., 2024), the field lacks clear guidance on when offline knowledge transfer suffices versus when real-time LLM reasoning is necessary.",
+   "ids": [
+    "2512.21526",
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM recommendation agents be evaluated beyond semantic plausibility to measure behavior-grounded set-level utility?",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced RecoAtlas benchmark with behavior-grounded metrics for relevance, complementarity, and diversity derived from interaction data, using a controlled tool environment that exposes agents to semantic, behavior-aligned, or faulty tools.",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance scales with model capacity and test-time compute",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agent performance improves with stronger and better-aligned tools",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance degrades under noisy or misaligned signals",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Semantic plausibility does not necessarily capture behavior-grounded utility",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark successfully diagnoses whether performance gains arise from stronger reasoning, better signals, or more effective tool-use policies",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Benchmark focuses specifically on shopping agents and requires interaction data to derive learned utility proxies, which may not be available in all domains.",
+   "ids": [
+    "2605.18805"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the trade-off between efficiency and effectiveness in item representation for LLM recommenders be addressed?",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed I-LLMRec leveraging images as alternatives to lengthy textual descriptions for item representation, based on the observation of significant information overlap between images and descriptions, aiming to reduce token usage while preserving semantic information.",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "I-LLMRec outperforms existing attribute-based and description-based representation methods in both efficiency and effectiveness",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Using images significantly reduces token usage compared to textual descriptions",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method reduces sensitivity to noise in descriptions, leading to more robust recommendations",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Images preserve rich semantic information comparable to lengthy text descriptions",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses the efficiency-effectiveness trade-off inherent in existing representation approaches",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Method requires items to have associated images, limiting applicability to domains where visual representations are unavailable or irrelevant.",
+   "ids": [
+    "2503.06238"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do Large Language Models contribute to or can they alleviate popularity bias in recommender systems?",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced a principled way to measure popularity bias by discussing existing metrics and proposing a novel metric fulfilling specific desiderata, then compared a simple LLM-based recommender to traditional recommender systems on a movie recommendation task.",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The LLM recommender exhibits less popularity bias than traditional recommender systems, even without explicit mitigation",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM integration presents a novel opportunity to address popularity bias via prompt tuning",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed novel metric fulfills a series of desiderata for measuring popularity bias",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Contrary to concerns, LLM training data dominance by popular items does not necessarily exacerbate popularity bias in recommendations",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study is limited to a movie recommendation task and a simple LLM-based recommender; findings may not generalize to other domains, more complex LLM architectures, or real-world production systems with different user behavior patterns.",
+   "ids": [
+    "2406.01285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do LLM recommender systems know when they're hallucinating by recommending items outside their target catalog?",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Jointly audit hallucination rate (OOD@10) and verbalized-confidence calibration (ECE, Brier, reliability) for four zero-shot LLM recommenders across three catalogs, validating the catalog membership instrument against 201 human judgments.",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hallucination rates are strongly catalog-dependent, ranging from 0.6-2.7% on MovieLens to 49.3-61.0% on Amazon Toys",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models maintain near-constant confidence levels barely responsive to catalog, while catalog-hit rates swing 60 points",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "7 of 12 model-catalog combinations are under-confident and 5 over-confident, with all four models under-confident on MovieLens and over-confident on Amazon Toys",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Conformal abstention thresholds over verbalized confidence change hallucination by at most 1.65 percentage points because the channel cannot separate correct items from hallucinations",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Catalog membership measurement is highly sensitive to the string matcher used, with reported rates varying by an order of magnitude",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Study focuses only on zero-shot LLM recommenders without grounding or fine-tuning, and catalog membership validation remains challenging with fuzzy matching introducing bias.",
+   "ids": [
+    "2608.10008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Why do beam-search negatives outperform random negatives in RL-based LLM recommenders, and how can optimization objectives be better aligned with Top-K recommendation metrics?",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Theoretical analysis showing GRPO with binary rewards equals AUC maximization, then propose Windowed Partial AUC (WPAUC) constraining false positive rate to a window, with efficient Threshold-Adjusted Windowed reweighting (TAWin) RL method.",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Under binary reward feedback, optimizing LLM recommenders with GRPO is theoretically equivalent to maximizing AUC, which is often misaligned with Top-K recommendation",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Replacing random negatives with beam-search negatives reshapes the objective toward partial AUC, improving alignment with Top-K metrics",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Windowed Partial AUC constraining FPR to [α,α+d] more directly aligns with Top-K performance",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TAWin method enables explicit control over targeted Top-K performance",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments on four real-world datasets validate the theory and deliver consistent state-of-the-art performance",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Theoretical analysis assumes binary reward feedback, and the approach is specifically designed for RL-based recommenders rather than other recommendation paradigms.",
+   "ids": [
+    "2604.22504"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How often do official labels in synthetic conversational recommendation benchmarks contradict the user's actual request, particularly for exact-song requests?",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Audited the RecSys Challenge 2026 TalkPlay benchmark by examining turns where users ask for exact songs by name, comparing official labels to user requests using visible dialogue and catalog metadata, and tested a training-time supplement adding catalog-resolved request-satisfying targets to a small fraction of training turns.",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Official labels contradict the user's exact-song request in half of the audited development turns",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Naming the desired item is the dominant intent in real music search",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adding catalog-resolved request-satisfying targets to a small fraction of training turns yields a 53.3% relative gain in nDCG@20 on the 43 conflict turns",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The improvement is verified against a matched control that detects the same requests but trains only on official labels",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The issue matters beyond one benchmark as deployed systems avoid substituting alternatives for exactly named items",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The audit focuses only on exact-song request turns (a subset of all conversation turns), and the training supplement was tested on a limited number of conflict turns (43 development turns); results may not generalize to other types of user requests or larger-scale deployments.",
+   "ids": [
+    "2609.39696"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does the oracle evaluation protocol affect measured performance of LLM-based recommendation rerankers, and what is the realistic upper bound on reranking performance given retrieval limitations?",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analyzed three primary Amazon datasets to demonstrate oracle protocol overestimation, examined recall across eight datasets in three domains, tested multiple optimization strategies (prompt engineering, model scaling over 168× parameter range, sequential models, supervised neural rerankers, LoRA fine-tuning, hybrid retrieval, score-aware prompting, and LLM+CF fusion), and proposed the Recall-Aware Evaluation Protocol (RAEP).",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Oracle protocol overestimates realistic NDCG@10 by 92-95%",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Realistic retrieval covers only 2-19% of relevant items at K=100 across eight datasets in three domains, imposing a deterministic upper bound on reranker performance",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "None of the tested optimization strategies significantly improves over the collaborative-filtering baseline under realistic retrieval",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Text-aware retrieval increases recall on one dataset but does not improve end-to-end NDCG",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Providing upstream CF scores mainly makes the LLM reproduce the CF order rather than improve recommendations",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In low-recall regimes, improving retrieval is more consequential than increasing reranker sophistication",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The author explicitly acknowledges that findings are specific to the evaluated datasets and may not hold in production systems with higher recall, richer features, or online feedback; the proposed RAEP requires classification of retrieval-recall regimes which may add evaluation complexity.",
+   "ids": [
+    "2609.27953"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLMs be leveraged to improve recommendation models without incurring the costs and reliability issues of standalone LLM recommenders or global knowledge distillation?",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced Selective LLM-Guided Regularization, a model-agnostic framework that activates LLM-based pairwise ranking supervision only when a trainable gating mechanism (informed by user history length, item popularity, and model uncertainty) predicts the LLM to be reliable, with all LLM scoring performed offline.",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The selective strategy consistently improves overall accuracy across multiple datasets",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Substantial gains are achieved in cold start and long tail regimes",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach outperforms global distillation baselines",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework is model-agnostic and computation efficient",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Knowledge transfer occurs without increasing inference cost since all LLM scoring is performed offline",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach requires offline LLM scoring infrastructure, and the gating mechanism's effectiveness depends on the quality of its input signals (user history length, item popularity, and model uncertainty estimates); performance may vary in scenarios where these signals are unreliable or unavailable.",
+   "ids": [
+    "2512.21526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can user interactions with both videos and comments be jointly modeled for personalized video and comment recommendation?",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed LSVCR combining a sequential recommendation model as primary backbone with a supplemental LLM recommender, using two-stage training: personalized preference alignment followed by recommendation-oriented fine-tuning.",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LSVCR effectively performs joint video and comment recommendation by modeling heterogeneous interaction behaviors",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The two-stage training paradigm successfully aligns preference representations from SR and LLM components",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Online A/B testing on KuaiShou platform verified practical benefits with 4.13% cumulative gain in comment watch time",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The SR model retains deployment efficiency while the supplemental LLM is discarded after training",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments demonstrate effectiveness on both video and comment recommendation tasks",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The supplemental LLM recommender is discarded in deployment, limiting real-time LLM inference benefits, and validation was platform-specific on KuaiShou.",
+   "ids": [
+    "2403.13574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models be deployed in recommender systems for CTR prediction while balancing computational efficiency and predictive accuracy?",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presented an optimization framework combining Retrieval-Augmented Generation (RAG) with a multi-head early exit architecture, using Graph Convolutional Networks (GCNs) as efficient retrieval mechanisms and dynamic termination of model inference based on real-time predictive confidence assessments across multiple heads.",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GCNs significantly reduce data retrieval times while maintaining high model performance",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The early exit strategy quickens LLM responsiveness while upholding or improving accuracy",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The architecture decreases computation time without sacrificing accuracy needed for reliable recommendations",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is ideal for real-time application scenarios in commercial systems",
+   "ids": [
+    "2501.02173"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the approach appears focused on CTR prediction specifically and may not generalize to all recommendation scenarios or address the computational cost of training the multi-head architecture.",
+   "ids": [
+    "2501.02173"
+   ]
+  }
+ ]
+}

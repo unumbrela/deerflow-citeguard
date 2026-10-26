@@ -1,0 +1,466 @@
+{
+ "stats": {
+  "ambiguous": 8,
+  "unmatched": 2
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2025) push this further, demonstrating that selecting merely the top 1% of data based on their Model Instruction Weakness Value metric can outperform full dataset training.",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bai et al. (2026) confirm these findings with MADS, where a 15% core set achieves 2.5% average improvement on Alpaca-GPT4.",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhao et al. (2025) introduce G2IS, which constructs gradient-based instruction graphs to capture interdependencies between instructions.",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yuan et al. (2026) propose GRADFILTERING, using gradient signal-to-noise ratios from a small GPT-2 proxy with LoRA ensemble to score data quality.",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bai et al. (2026) distinguish their MADS approach by using neural activation states during inference rather than text features for diversity measurement.",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2025) derive their MIWV metric from discrepancies in model responses during in-context learning, directly leveraging the target model's behavior.",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dai et al. (2025) develop BIDS, which normalizes influence scores and iteratively selects examples with highest influence on underrepresented tasks, addressing the bias problem in earlier influence-based methods.",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dai et al. (2025) explicitly address the bias problem in influence-based selection, showing that without normalization, methods favor high-influence tasks at the expense of balanced capability development.",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bai et al. (2026) use model activation features to ensure the selected core set activates diverse neural pathways.",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ivison et al. (2025) find that RDS+, using weighted mean pooling of pretrained LM hidden states, consistently outperforms more complex methods partly due to better coverage properties.",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Fourth, the field agrees that influence-based methods require normalization to avoid task bias (Dai et al., 2025; Ivison et al., 2025).",
+   "ids": [
+    "2501.12147",
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Ivison et al. (2025) report that many sophisticated methods \"fall short of random selection at scale\" and decline when given larger pools, while other papers claim strong results without addressing scaling behavior.",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also methodological disagreement: gradient-based approaches (Zhao et al., 2025; Yuan et al., 2026) contrast with gradient-free methods like RICo (Yang et al., 2025) and ADG (Li et al., 2026), with each camp claiming superiority.",
+   "ids": [
+    "2502.11062",
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, Ivison et al. (2025) note that scaling properties \"need closer examination,\" yet few papers systematically test their methods beyond initial demonstrations.",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can model-intrinsic activation features be used to ensure diversity when selecting core sets for instruction tuning?",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: MADS uses neural activation states during LLM inference rather than text features for coverage-based selection, with a 3B model selecting data effective for larger 7B-13B models.",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A 15% core set selected by a 3B model performs effectively when fine-tuning 7B, 8B, and 13B models",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On Alpaca-GPT4, the 15% core set achieves 2.5% average improvement over full dataset training",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method was validated across six benchmarks covering five distinct tasks",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model activation features provide better diversity guarantees than text-based approaches",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2605.30857"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can influence-based instruction tuning data selection methods be improved to achieve balanced performance across different tasks rather than being biased toward high-influence tasks?",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: BIDS normalizes influence scores and iteratively selects training examples with highest influence on the most underrepresented task, evaluated on Llama-3 and Mistral-v0.3 across seven benchmarks.",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training on 15% subset selected by BIDS outperforms full-dataset training with balanced performance across five capabilities",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BIDS consistently outperforms state-of-the-art influence-based algorithms and non-influence frameworks",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both instance-level normalization and iterative optimization are essential for balanced learning",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method addresses systematic bias in prior influence-based approaches",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2501.12147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do automated data selection methods for instruction tuning scale when selecting millions of samples from pools of millions of samples?",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematic study testing data selection methods at scale, selecting up to 2.5M samples from pools up to 5.8M samples, evaluating across 7 diverse tasks with comparison to RDS+ using weighted mean pooling.",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many recently proposed methods fall short of random selection at scale while using more compute",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Some methods decline in performance with access to larger selection pools",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RDS+ consistently outperforms more complex methods across all settings",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RDS+ is more compute-efficient than competing methods",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling properties require closer examination",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2503.01807"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we select instruction-tuning data that maximally enhances the performance of a given LLM by leveraging the model's inherent capabilities and weaknesses?",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: MIWV metric derived from discrepancies in model responses during in-context learning to quantify instruction data importance and identify most beneficial samples.",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Selecting only the top 1% of data based on MIWV can outperform training on the full dataset",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach offers strong empirical evidence beyond existing data quality scoring methods",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MIWV addresses the need to select data that maximally enhances instruction tuning for specific LLMs",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method leverages model-specific weaknesses for targeted improvement",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2511.07074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can uncertainty-aware data selection improve instruction tuning by utilizing gradient signal-to-noise ratios from a small proxy model?",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: GRADFILTERING uses a small GPT-2 proxy with LoRA ensemble, aggregating per-example gradients into Gradient Signal-to-Noise Ratio (G-SNR) utility scores for uncertainty-aware selection.",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRADFILTERING matches or surpasses random subsets and strong baselines in LLM-as-a-judge evaluations",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method performs well in human assessment evaluations",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRADFILTERING-selected subsets converge faster than competitive filters under same compute budget",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uncertainty-aware scoring provides benefits over methods ignoring evolving uncertainty",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2601.13697"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can instruction tuning data selection methods better capture the joint distribution and interdependencies between instructions to improve domain adaptation efficiency?",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: G2IS constructs a mixed gradient-based instruction graph to capture relationships between instructions, combined with a gradient walk algorithm to refine data selection.",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "G2IS outperforms traditional methods across various domain adaptation tasks",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method yields significant performance gains in complex, data-scarce scenarios",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Accounting for relationships between instructions improves domain adaptation efficiency",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The graph-based approach enables better knowledge transfer",
+   "ids": [
+    "2502.11062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Not stated in abstract.",
+   "ids": [
+    "2502.11062"
+   ]
+  }
+ ]
+}

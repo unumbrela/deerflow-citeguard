@@ -1,0 +1,632 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yuan et al. (2026) introduce SAIGE, which models collaboration as a dynamically evolving graph where agent instances are spawned on-demand and edges encode semantic dependencies established through content-based retrieval.",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Dang et al. (2025) propose a \"puppeteer-style\" paradigm where a centralized orchestrator, trained via reinforcement learning, dynamically directs agents in response to evolving task states.",
+   "ids": [
+    "2505.19591"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qian et al. (2024) take a scaling-focused approach with MacNet, organizing agents into directed acyclic graphs and demonstrating that irregular topologies outperform regular ones, with performance following a logistic growth pattern as agents scale to over 1,000.",
+   "ids": [
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yuan et al. (2026) systematically delineate capability boundaries, finding that multi-agent collaboration confers benefits specifically in long-horizon tasks with sparse dependencies, while single-agent harnesses remain superior in tightly coupled, sequential workflows.",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2025) present MedAgentBoard, a benchmark spanning four medical task categories, and find a nuanced landscape: multi-agent collaboration enhances task completeness in clinical workflow automation but does not consistently outperform advanced single LLMs in textual medical QA, and specialized conventional methods generally maintain better performance in medical VQA and EHR-based prediction.",
+   "ids": [
+    "2505.12371"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Park et al. (2026) introduce PAC-Bench to evaluate collaboration under privacy constraints, finding that privacy substantially degrades performance and introduces coordination breakdowns including early-stage violations and privacy-induced hallucinations.",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Shu et al. (2024) benchmark enterprise applications and demonstrate 90% end-to-end goal success rates with their coordination framework, showing up to 70% improvement over single-agent approaches—but crucially, this benefit is demonstrated on handcrafted scenarios from specific enterprise domains, raising questions about generalizability.",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2024) propose ReAd, a framework that introduces Reinforced Advantage feedback for efficient self-refinement of plans in embodied multi-agent collaboration.",
+   "ids": [
+    "2405.14314"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yoon et al. (2026) tackle multimodal sensing with ConSensus, a training-free framework that decomposes tasks into specialized, modality-aware agents and uses hybrid fusion balancing semantic aggregation with statistical consensus.",
+   "ids": [
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2026) address a different efficiency challenge: concurrent editing of shared codebases.",
+   "ids": [
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Straub et al. (2025) demonstrate that persona-based multi-agent brainstorming produces greater idea depth and cross-domain coverage compared to generalized collaboration.",
+   "ids": [
+    "2512.04488"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Yuan et al. (2026), Zhu et al. (2025), and Park et al. (2026) all demonstrate that benefits are task-dependent, with multi-agent approaches excelling in specific scenarios (long-horizon tasks, workflow automation) but underperforming in others (tightly coupled workflows, medical VQA, privacy-constrained settings).",
+   "ids": [
+    "2609.19759",
+    "2505.12371",
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that dynamic, adaptive orchestration outperforms static structures (Dang et al., 2025; Yuan et al., 2026; Qian et al., 2024).",
+   "ids": [
+    "2505.19591",
+    "2609.19759",
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Disagreements: While most papers report positive results for their proposed methods, there is tension between the scaling optimism of Qian et al. (2024), who find logistic growth up to 1,000+ agents, and the more skeptical findings of Yuan et al. (2026), who show that scaling the agent pool does not consistently improve outcomes.",
+   "ids": [
+    "2406.07155",
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Shu et al. (2024) use handcrafted scenarios; Zhu et al. (2025) focus on medical tasks; Liu et al. (2026) evaluate on code benchmarks.",
+   "ids": [
+    "2412.05449",
+    "2505.12371",
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Privacy and Safety: Park et al. (2026) identify privacy-aware collaboration as \"a distinct and unresolved challenge,\" but none of the other papers address privacy, safety, or alignment concerns in multi-agent settings.",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Cost-Benefit Analysis: While several papers mention computational costs (Dang et al., 2025; Yoon et al., 2026), none provide comprehensive cost-benefit analyses comparing multi-agent overhead to performance gains across diverse task types.",
+   "ids": [
+    "2505.19591",
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can multi-agent LLM collaboration overcome the limitations of static organizational structures that struggle to adapt as task complexity and agent numbers grow?",
+   "ids": [
+    "2505.19591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a puppeteer-style paradigm where a centralized orchestrator dynamically directs agents in response to evolving task states, trained via reinforcement learning to adaptively sequence and prioritize agents.",
+   "ids": [
+    "2505.19591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The puppeteer approach achieves superior performance with reduced computational costs compared to static organizational structures",
+   "ids": [
+    "2505.19591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key improvements stem from the emergence of more compact, cyclic reasoning structures under the orchestrator's evolution",
+   "ids": [
+    "2505.19591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method demonstrates effectiveness in both closed- and open-domain scenarios",
+   "ids": [
+    "2505.19591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The centralized orchestrator architecture may introduce a single point of failure, and the approach's effectiveness depends on the quality of reinforcement learning training.",
+   "ids": [
+    "2505.19591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we address conflicts and inconsistent views when multiple agents edit a shared codebase concurrently?",
+   "ids": [
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose STORM (STate-ORiented Management), which manages agent states by mediating interactions with the shared workspace, ensuring consistent views and detecting/resolving conflicting edits at write time.",
+   "ids": [
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "STORM outperforms git-worktree-based multi-agent baseline by +18.7 on Commit0-Lite and +1.4 on PaperBench",
+   "ids": [
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "STORM achieves comparable or better cost efficiency than workspace isolation approaches",
+   "ids": [
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explicit state management is a more effective foundation for multi-agent collaboration than workspace isolation",
+   "ids": [
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation focuses on code-related benchmarks; effectiveness may vary for other types of collaborative tasks beyond code editing.",
+   "ids": [
+    "2605.20563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do privacy constraints affect the dynamics and performance of multi-agent collaboration?",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present PAC-Bench, a benchmark for systematic evaluation of multi-agent collaboration under privacy constraints, analyzing coordination breakdowns and performance degradation patterns.",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Privacy constraints substantially degrade collaboration performance",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outcomes depend more on the initiating agent than the partner under privacy constraints",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Coordination breakdowns include early-stage privacy violations, overly conservative abstraction, and privacy-induced hallucinations",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark may not cover all privacy scenarios and constraint types; findings are specific to the evaluated coordination mechanisms.",
+   "ids": [
+    "2604.11523"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can continuous addition of collaborative agents yield performance benefits similar to neural scaling laws in LLM-based multi-agent systems?",
+   "ids": [
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors utilize directed acyclic graphs to organize agents into a multi-agent collaboration network (MacNet), evaluating scaling effects across configurations with up to over a thousand agents.",
+   "ids": [
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MacNet effectively supports collaboration among over a thousand agents",
+   "ids": [
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Irregular topologies outperform regular ones in multi-agent collaboration networks",
+   "ids": [
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance follows a logistic growth pattern as agents scale, with collaborative emergence occurring earlier than traditional neural emergence",
+   "ids": [
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The logistic growth pattern suggests diminishing returns at very large scales, and coordination overhead may become a concern as agent numbers continue to increase.",
+   "ids": [
+    "2406.07155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we design and evaluate multi-agent collaboration frameworks that effectively address complex, multi-faceted problems in enterprise applications?",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a comprehensive evaluation framework with two operational modes: coordination mode for parallel communication with payload referencing, and routing mode for efficient message forwarding, benchmarked on handcrafted scenarios from three enterprise domains.",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent collaboration enhances goal success rates by up to 70% compared to single-agent approaches",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Payload referencing improves performance on code-intensive tasks by 23%",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "End-to-end goal success rates of 90% achieved with inter-agent communication and payload referencing mechanisms",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation relies on handcrafted scenarios that may not represent all enterprise use cases; the framework may not generalize to other contexts.",
+   "ids": [
+    "2412.05449"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does persona-based agent selection and domain curation improve brainstorming outcomes compared to generalized multi-agent collaboration?",
+   "ids": [
+    "2512.04488"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors develop a framework for persona-based agent selection and evaluate brainstorming outputs across different persona pairings and agent-to-agent dynamics including separate, together, and separate-then-together collaboration modes.",
+   "ids": [
+    "2512.04488"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Persona choice shapes idea domains, influencing the types of ideas generated",
+   "ids": [
+    "2512.04488"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Collaboration mode shifts the diversity of idea generation",
+   "ids": [
+    "2512.04488"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent persona-driven brainstorming produces greater idea depth and cross-domain coverage",
+   "ids": [
+    "2512.04488"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The effectiveness depends on the quality of persona curation and domain selection, and generalizability beyond the tested experimental setups remains to be demonstrated.",
+   "ids": [
+    "2512.04488"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can heterogeneous multimodal sensor data be accurately interpreted when single monolithic LLMs fail to reason coherently across modalities?",
+   "ids": [
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce ConSensus, a training-free multi-agent collaboration framework that decomposes multimodal sensing tasks into specialized, modality-aware agents with hybrid fusion balancing semantic aggregation and statistical consensus.",
+   "ids": [
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ConSensus demonstrates 7.1% average accuracy improvement over single-agent baselines across five multimodal sensing benchmarks",
+   "ids": [
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework matches or exceeds iterative multi-agent debate performance with 12.7x reduction in fusion token cost",
+   "ids": [
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The combination of semantic aggregation and statistical consensus enables reliable inference under sensor noise and missing data",
+   "ids": [
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The training-free approach may not optimize for specific domains, and the hybrid fusion mechanism may require careful tuning for different sensor modalities.",
+   "ids": [
+    "2601.06453"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: When does multi-agent collaboration offer genuine value compared to increasingly capable single-agent alternatives?",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Through systematic analysis of capability boundaries, the authors propose SAIGE (Semantic-Aware Incremental Graph Evolution), modeling collaboration as a dynamically evolving graph with agent instances spawned on demand.",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent collaboration confers systematic benefits specifically in long-horizon tasks with sparse dependencies",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Single-agent harnesses remain superior in tightly coupled, sequential workflows",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling the agent pool or deepening recursion level does not consistently improve outcomes",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The analysis focuses on specific task types and may not capture all collaboration scenarios; SAIGE's effectiveness may vary across different domains.",
+   "ids": [
+    "2609.19759"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM planning for embodied multi-agent collaboration be made more efficient without excessive querying of LLMs for physical verification or self-reflection?",
+   "ids": [
+    "2405.14314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ReAd, a framework that introduces Reinforced Advantage feedback for efficient self-refinement of plans, using critic regression to learn a sequential advantage function from LLM-planned data.",
+   "ids": [
+    "2405.14314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ReAd surpasses baselines in success rate on Overcooked-AI and RoCoBench",
+   "ids": [
+    "2405.14314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework significantly decreases both agent interaction steps and LLM query rounds",
+   "ids": [
+    "2405.14314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ReAd endows the LLM with foresight to discern whether actions contribute to accomplishing subtasks",
+   "ids": [
+    "2405.14314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach depends on the quality of LLM-planned data for training the critic, and generalizability beyond the tested benchmarks remains to be demonstrated.",
+   "ids": [
+    "2405.14314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the practical advantages of multi-agent collaboration approaches compared to single-LLM and conventional methods across diverse medical tasks?",
+   "ids": [
+    "2505.12371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce MedAgentBoard, a comprehensive benchmark encompassing four medical task categories with rigorous comparisons across multi-agent, single-LLM, and conventional approaches.",
+   "ids": [
+    "2505.12371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent collaboration demonstrates benefits in clinical workflow automation but not consistently in textual medical QA",
+   "ids": [
+    "2505.12371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Specialized conventional methods generally maintain better performance in medical VQA and EHR-based prediction",
+   "ids": [
+    "2505.12371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task-specific, evidence-based approach is necessary for selecting AI solutions in medicine",
+   "ids": [
+    "2505.12371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark covers specific medical task categories that may not represent all healthcare applications; results may not generalize to all clinical contexts.",
+   "ids": [
+    "2505.12371"
+   ]
+  }
+ ]
+}

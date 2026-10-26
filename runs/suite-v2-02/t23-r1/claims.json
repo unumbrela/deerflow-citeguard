@@ -1,0 +1,827 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Multiple papers advocate for hybrid methodologies that leverage LLM flexibility alongside traditional planning rigor (Aghzal et al., 2025; Tantakoun et al., 2025; Puerta-Merino et al., 2025).",
+   "ids": [
+    "2502.12435",
+    "2503.18971",
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The integration of neuro-symbolic approaches within automated planning and NLP communities is identified as a promising direction to address LLM planning limitations (Tantakoun et al., 2025).",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Monti et al. (2026) demonstrate that planning performance consistently degrades when more than 25 moves are required, suggesting a fundamental constraint on forward planning capacity in large reasoning models.",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Schepanowski and Ling (2025) provide even more stark evidence, finding that none of the tested models could solve 8-puzzle tasks even with an external move validator providing only valid moves, due to brittle internal state representations and weak heuristic planning.",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "These findings suggest that inherent architectural limitations might not be overcome by test-time scaling approaches alone (Monti et al., 2026; Schepanowski & Ling, 2025).",
+   "ids": [
+    "2601.20856",
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) propose CoPlanner, a framework that separates reasoning steps between a planning agent providing high-level strategic hints and a reasoning agent following those hints, achieving significant performance improvements on reasoning benchmarks.",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Srivastava et al. (2026) introduce GRASP, a strategy-aware multi-stage planning framework that decouples the planning pipeline across specialized modules for generating, revising, and assessing plans.",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Guan et al. (2025) present NormCode, a semi-formal language that enforces data isolation at each inference step and separates semantic operations from syntactic operations, eliminating cross-step contamination by enforcing explicit input passing.",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The multi-format ecosystem enables inspection by developers, domain experts, and auditors in formats suited to their needs (Guan et al., 2025).",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Cao et al. (2025) categorize LLM-based planning methodologies into three principal approaches: External Module Augmented Methods, Finetuning-based Methods, and Searching-based Methods.",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Aghzal et al. (2025) provide a critical survey examining both successes and shortcomings of LLMs in automated planning.",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Puerta-Merino et al. (2025) present a taxonomy of integration methods for hierarchical planning and provide standardized benchmark datasets.",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yan et al. (2026) propose a Bayesian account grounding planning behavior in the evolving generative context, demonstrating that accumulated self-generated context drives a planning-shift during inference that creates the appearance of compromised planning behavior.",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, there is broad agreement that LLMs demonstrate remarkable capacity for multi-step reasoning and generalization across domains, but have significant limitations in performance when handling intricacies of long-horizon reasoning (Aghzal et al., 2025; Monti et al., 2026; Schepanowski & Ling, 2025).",
+   "ids": [
+    "2502.12435",
+    "2601.20856",
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, the literature consistently finds that LLMs are not well-suited to serve as standalone planners due to brittle internal state representations and weak heuristic planning capabilities (Schepanowski & Ling, 2025; Tantakoun et al., 2025).",
+   "ids": [
+    "2511.21591",
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, there is consensus that hybrid approaches combining LLMs with traditional planning methods, formal specifications, or external tools offer the most promising path forward (Aghzal et al., 2025; Guan et al., 2025; Puerta-Merino et al., 2025; Tantakoun et al., 2025).",
+   "ids": [
+    "2502.12435",
+    "2512.10563",
+    "2501.08068",
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Monti et al. (2026) suggest that inherent architectural limitations might not be overcome by test-time scaling alone, Srivastava et al. (2026) demonstrate substantial accuracy gains through their multi-stage framework, suggesting that architectural innovations at the system level can achieve significant improvements even if individual model capabilities remain constrained.",
+   "ids": [
+    "2601.20856",
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, Yan et al. (2026) focus on characterizing rather than solving the planning behavior gap, offering a theoretical explanation that differs from the more solution-oriented approaches of other papers.",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while multiple papers identify fundamental architectural limitations in LLM planning capabilities, few provide concrete pathways for overcoming these constraints beyond general calls for hybrid approaches (Schepanowski & Ling, 2025; Monti et al., 2026).",
+   "ids": [
+    "2511.21591",
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the integration of LLMs into hierarchical planning remains largely unexplored, with Puerta-Merino et al. (2025) noting that LLM planners exhibited only 3% correct plans with none achieving correct hierarchical decomposition.",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, there is a gap in understanding how to maintain explicit state and perform structured search within LLM architectures, identified as necessary for further progress (Schepanowski & Ling, 2025).",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the capabilities and limitations of Large Language Models when applied to automated planning tasks?",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a critical survey investigating existing research on LLMs in automated planning, examining both successes and shortcomings.",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They analyze LLM performance on long-horizon reasoning tasks and advocate for hybrid approaches combining LLMs with traditional planning methods.",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs demonstrate remarkable capacity for multi-step reasoning and generalization across domains",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs have significant limitations in performance when handling intricacies of long-horizon reasoning",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs are not well-suited to serve as standalone planners due to these limitations",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs present enormous opportunity to enhance planning applications when combined with other approaches",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A balanced methodology leveraging LLM flexibility alongside traditional planning rigor is recommended",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2502.12435"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM-based planning approaches be systematically categorized and what evaluation frameworks exist for assessing their performance?",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a comprehensive systematic review structured around theoretical foundations, a taxonomy of LLM-based planning methodologies categorized into three principal approaches (External Module Augmented Methods, Finetuning-based Methods, and Searching-based Methods), and a summary of evaluation frameworks including benchmark datasets and metrics.",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based planning methodologies can be categorized into three principal approaches: External Module Augmented Methods, Finetuning-based Methods, and Searching-based Methods",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "External Module Augmented Methods combine LLMs with additional components for planning",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Finetuning-based Methods use trajectory data and feedback signals to adjust LLMs for improved planning abilities",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Searching-based Methods decompose complex tasks and navigate planning space or enhance decoding strategies",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing evaluation frameworks include benchmark datasets, evaluation metrics, and performance comparisons between representative methods",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2505.19683"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can AI workflows be made auditable by addressing context pollution and implicit data flow in LLM-based multi-step reasoning?",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present NormCode, a semi-formal language that enforces data isolation at each inference step and separates semantic operations (probabilistic LLM reasoning) from syntactic operations (deterministic data flow).",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A four-phase compilation pipeline transforms natural language intent into executable JSON repositories, with a visual Canvas application for graph visualization and breakpoint debugging.",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NormCode eliminates cross-step contamination by enforcing explicit input passing at each inference step",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-format ecosystem (NCDS, NCD, NCN, NCDN files) enables inspection by developers, domain experts, and auditors in formats suited to their needs",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach achieved full accuracy on base X addition tasks",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The NormCode compiler was validated through self-hosted execution",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Structured intermediate representations can bridge human intuition and machine rigor while maintaining full transparency",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2512.10563"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the long-horizon planning capabilities of state-of-the-art Large Reasoning Models?",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study proposes a novel benchmark based on Sokoban puzzles, intentionally simplified to isolate long-horizon planning from state persistence, and systematically assesses planning and long-horizon reasoning capabilities of LRMs.",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Planning performance consistently degrades when more than 25 moves are required to reach the solution",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This suggests a fundamental constraint on forward planning capacity in LRMs",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Equipping LRMs with PDDL parsing, validation, and solving tools allows for modest improvements",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Inherent architectural limitations might not be overcome by test-time scaling approaches alone",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark uses intentionally simplified Sokoban puzzles to isolate long-horizon planning from state persistence",
+   "ids": [
+    "2601.20856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models be integrated into Hierarchical Planning?",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study presents a taxonomy of integration methods exploring how LLMs can be utilized within the HP life cycle, provides a benchmark with a standardized dataset, and presents initial results for a state-of-the-art HP planner and LLM planner.",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The integration of LLMs into Hierarchical Planning remains largely unexplored",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A taxonomy of integration methods was developed to address this gap",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A standardized benchmark dataset was provided for evaluating future LLM-based HP approaches",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The LLM planner exhibited limited performance with only 3% correct plans and none with correct hierarchical decomposition",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The LLM planner baseline shows very limited performance, indicating significant challenges for future approaches",
+   "ids": [
+    "2501.08068"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the capacity of large language models for planning and stateful reasoning without external tools?",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study tests four models under common prompting conditions (Zero-Shot, Chain-of-Thought, Algorithm-of-Thought) and with tiered corrective feedback using the 8-puzzle task, then examines models with an external move validator.",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Feedback improves success rates for some model-prompt combinations",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many successful runs are long, computationally expensive, and indirect",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "None of the models solve any puzzles even with an external move validator providing only valid moves",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models exhibit brittle internal state representations leading to frequent invalid moves",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models show weak heuristic planning, entering loops or selecting actions that do not reduce distance to the goal",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Current LLMs have substantial limitations in planning without external tools such as code interpreters; further progress may require mechanisms for maintaining explicit state and performing structured search",
+   "ids": [
+    "2511.21591"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can high-quality natural language executable plans be generated for complex tasks despite LLM reliability degradation with increasing task complexity?",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study introduces GRASP, a strategy-aware multi-stage planning framework that decouples the planning pipeline across specialized modules: GenPlan (pre-compiles global macro-guidelines), RevPlan (explores alternative localized strategies), and VerPlan (evaluates trajectories using a multi-criteria discriminator).",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRASP establishes a new state-of-the-art frontier across diverse datasets",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Substantial accuracy gains over direct LLM planners on Natural Plan Calendar Scheduling (~12.4%↑), ZebraLogic (~30.8%↑), and SciBench Math",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRASP completely flattens the multi-task degradation penalty under multi-task scaling",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In interleaved dual-task environments, GRASP achieves an absolute accuracy gain of up to 16.7% over direct LLM planners",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRASP outperforms frontier reasoning models (such as GPT-5-mini) by a margin of 14.5%",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2609.30147"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models be leveraged to formalize and refine planning specifications to support reliable off-the-shelf automated planning?",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a systematic survey reviewing current research on integrating LLMs with Automated Planning, positioning LLMs as tools for formalizing and refining planning specifications to support traditional AP planners, and analyzing methodologies, challenges, and future directions.",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs excel in various natural language tasks but struggle with long-horizon planning problems requiring structured reasoning",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrating neuro-symbolic approaches within Automated Planning and NLP communities addresses LLM planning limitations",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs can serve as tools for formalizing and refining planning specifications to support off-the-shelf AP planners",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identifying optimal AP deployment frameworks introduces new challenges",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey highlights methodologies and identifies critical challenges and future directions for joint NLP and Automated Planning research",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2503.18971"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can cooperative multi-agent frameworks enhance LLM reasoning capabilities for complex multi-step problems?",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose CoPlanner, a cooperative multi-agent reasoning framework that separates reasoning steps between a planning agent (providing high-level strategic hints) and a reasoning agent (following hints and inferring answers).",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The planning agent's policy is trained through interactive reasoning using Proximal Policy Optimization (PPO).",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoPlanner consists of two LLM agents: a planning agent and a reasoning agent with distinct duties",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The planning agent provides high-level strategic hints while the reasoning agent follows these hints to infer answers",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLaMA-3-8B-based CoPlanner outperforms the previous best method by 9.94% on LogiQA",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoPlanner outperforms the previous best method by 3.09% on BBH",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Guidance from the planning agent and effective cooperation between agents contribute to superior performance on multi-step reasoning problems",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: not stated in abstract",
+   "ids": [
+    "2410.20007"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Why does LLM planning behavior at inference time appear short-sighted and inconsistent with their acquired sequence-level planning abilities?",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study proposes a Bayesian account grounding planning behavior in the evolving generative context and validates it through two controlled experiments: a random-generation task and a Gaussian-sampling task.",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Accumulated self-generated context drives a planning-shift during inference",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This creates the appearance of compromised planning behavior",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The random-generation task demonstrates constrained planning under human prompts and increasing planning strength as self-generated context accumulates",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Gaussian-sampling task shows reduced initial bias when conditioning on self-generated sequences",
+   "ids": [
+    "2602.02991"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study provides a theoretical explanation and empirical evidence but focuses on characterizing rather than solving the planning behavior gap",
+   "ids": [
+    "2602.02991"
+   ]
+  }
+ ]
+}
