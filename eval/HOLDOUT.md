@@ -23,3 +23,5 @@
 - **次要指标**：引用已验证率、窗口率、类别率、耗时、token；v3 另报关卡拒绝过的运行数、最后一次关卡决定不是「通过」的运行数。
 - **判定**：v3 的主要指标置信区间下限 ≥ 第一轮 v2.1 的点估计减 20 个百分点(即不出现明显退化)，就算 P0.1 达标。
 - 失败处理同第一轮：只有服务商额度拒绝不计入，归档后原样重跑。
+
+**运行期间的一次误提交(如实记录)**:第二轮运行期间,提交 `72570e1`(说明写的是"只改 ROADMAP")误把尚未部署的日期修复(插件 `wrong_year_dates`、SKILL.md 的 `report_dates` 规则)一起提交并推送了。**这些代码没有部署到评测中的网关**,可核查的证据:(1) 网关加载的是安装时的快照 `deer-flow/backend/extensions/sources/deerflow-extension-scholar/`,其中没有 `wrong_year_dates`;(2) 部署的 `deer-flow/skills/custom/.../SKILL.md` 没有 `report_dates`;(3) 第二轮 v3 臂所有 `gate.jsonl` 都没有新版本才会写入的 `date_errors` 字段。日期修复在两臂跑完后才部署。
