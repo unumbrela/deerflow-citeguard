@@ -1,0 +1,32 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  scholar-extension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # The public extension contract is not on PyPI; take it from the pinned upstream commit.
+      - name: Fetch deerflow-extension-api at the pinned DeerFlow commit
+        run: |
+          git init -q upstream && cd upstream
+          git remote add origin https://github.com/bytedance/deer-flow
+          git sparse-checkout set backend/packages/extension-api
+          git fetch -q --depth 1 origin 3fdd9bdfff1b2ecffa8d45698db6cd914af79915
+          git checkout -q FETCH_HEAD
+      - name: Install
+        run: |
+          pip install -e upstream/backend/packages/extension-api
+          pip install -e "extensions/scholar[dev]"
+      - name: Lint
+        working-directory: extensions/scholar
+        run: ruff check . && ruff format --check .
+      - name: Unit tests (offline)
+        working-directory: extensions/scholar
+        run: pytest -q

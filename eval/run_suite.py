@@ -11,6 +11,7 @@ Citation checking is a separate step (aggregate.py), so this script never calls 
 
 import argparse
 import json
+import shutil
 import subprocess
 import sys
 import time
@@ -21,6 +22,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 BASE = "http://localhost:2026"
+# Where the scholar plugin keeps per-thread citation-gate decisions (storage_path in config.yaml, seen from the host).
+GATE_LOGS = ROOT / "deer-flow" / "backend" / ".deer-flow" / "scholar" / "threads"
 PROMPT = "Do a systematic literature review on {topic}. 10 papers, last 2 years, category {category}, APA format. Save to default output location."
 
 
@@ -38,8 +41,9 @@ def download_report(meta: dict, dest: Path) -> bool:
     if not arts:
         return False
     ck = cookies()
+    # The latest delivery: after a citation-gate rejection the model may present a corrected file under a new name.
     req = urllib.request.Request(
-        f"{BASE}/api/threads/{meta['thread_id']}/artifacts{arts[0]}",
+        f"{BASE}/api/threads/{meta['thread_id']}/artifacts{arts[-1]}",
         headers={"Cookie": "; ".join(f"{k}={v}" for k, v in ck.items()), "Origin": BASE},
     )
     dest.write_bytes(urllib.request.urlopen(req, timeout=60).read())
@@ -62,6 +66,9 @@ def run_one(job: dict, out_root: Path, model: str) -> str:
     if not (out / "meta.json").exists():
         return f"{out.name}: FAILED before meta ({time.time() - t0:.0f}s)"
     meta = json.loads((out / "meta.json").read_text())
+    gate_log = GATE_LOGS / meta["thread_id"] / "gate.jsonl"
+    if gate_log.exists():
+        shutil.copy(gate_log, out / "gate.jsonl")
     got = False
     try:
         got = download_report(meta, out / "report.md")

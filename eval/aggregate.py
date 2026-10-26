@@ -44,6 +44,11 @@ def main() -> None:
         ev = run / "events.jsonl"  # holds every state snapshot, so it still has tool output that summarization later dropped
         ev_text = ev.read_text(errors="replace") if ev.exists() else ""
         row["search_429"] = "HTTP Error 429" in ev_text or "Too Many Requests" in ev_text
+        gate = run / "gate.jsonl"  # citation-gate decisions, only present when the scholar plugin ran
+        if gate.exists():
+            events = [json.loads(line)["event"] for line in gate.read_text().splitlines() if line.strip()]
+            row["gate_rejections"] = events.count("rejected")
+            row["gate_final"] = events[-1] if events else None
         report = run / "report.md"
         if not report.exists():
             row["status"] = "no_report"
@@ -74,6 +79,14 @@ def main() -> None:
         "mean_seconds": round(statistics.mean(r["seconds"] for r in rows if "seconds" in r), 1) if rows else None,
         "mean_tokens": round(statistics.mean(r["tokens"] for r in rows if "tokens" in r)) if rows else None,
     }
+    gated = [r for r in rows if "gate_rejections" in r]
+    if gated:
+        summary.update(
+            gate_runs=len(gated),
+            gate_runs_with_rejection=sum(r["gate_rejections"] > 0 for r in gated),
+            # Last decision not "accepted": the model either gave up after a rejection or was released unverified.
+            gate_final_not_accepted=sum(r["gate_final"] != "accepted" for r in gated),
+        )
     if ok:
         refs = sum(r["refs"] for r in ok)
         summary.update(
