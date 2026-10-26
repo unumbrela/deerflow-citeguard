@@ -4,14 +4,14 @@
 
 让「文献综述 Agent」不再编造论文。
 
-在字节开源的多 Agent 框架 [DeerFlow](https://github.com/bytedance/deer-flow) 上,我量化了它的文献综述 skill 会不会编造引用,查清了原因,并用确定性的代码把这条失败路径堵死。**不改 DeerFlow 核心**,以 custom skill 的方式覆盖上游同名 skill。
+在字节开源的多 Agent 框架 [DeerFlow](https://github.com/bytedance/deer-flow) 上,我先量化了它的文献综述 skill 编造引用的频率,再查清原因,最后用代码把这条失败路径堵住。全部改动做成 **插件 + custom skill**,不改 DeerFlow 核心。
 
-- **问题**:30 个主题里,4/29 份报告有一半以上引用是虚构的(编号、标题、作者全是编的);时间窗口、类别约束也只满足约 70%。
-- **根因**:检索输出过长被 DeerFlow 换成"摘要",Agent 没把原文读回来,就把凭空补全的"论文"抄给子 Agent。
-- **做法**:论文数据由脚本落盘、分批,子 Agent 直接读文件,模型不再转述;报告写完由脚本核对每个 arXiv 编号是否出自检索结果。
-- **结果**(10 个未见过的主题):三项约束全满足的运行 **1/10 → 10/10**。代价:token +21%。
+- **问题**:上游 skill 在 10 个未见主题 × 3 次里,三分之一的报告有一半以上引用是编的(编号、标题、作者都是假的);时间窗口、类别约束也常不满足。
+- **根因**:检索输出太长,被 DeerFlow 换成摘要。Agent 没把原文读回来,就把凭空补全的"论文"抄给了子 Agent。
+- **做法**:检索、过滤、分批都由插件代码完成,子 Agent 按批次号直接取论文数据,模型不再转述;报告交付时由关卡核对每个 arXiv 编号是否出自本次检索,不通过就拒收。
+- **结果**:三项约束全满足的运行 **1/30 → 29/30**,耗时 −38%,token 持平;不再需要 `allow_host_bash`。
 
-> 完整过程、每次实验的原始记录和走过的弯路:[BASELINE.md](BASELINE.md) · 项目日志:[PLAN.md](PLAN.md) · 面试讲解稿:[docs/INTERVIEW.md](docs/INTERVIEW.md)
+> 完整过程和每次实验的原始记录:[BASELINE.md](BASELINE.md) · 改进计划:[ROADMAP.md](ROADMAP.md) · 面试讲解稿:[docs/INTERVIEW.md](docs/INTERVIEW.md)
 
 ## 问题是怎么发生的,又是怎么修的
 
@@ -24,84 +24,96 @@ flowchart LR
   A3 --> A4["中间的论文凭空编造<br/>写进综合分析"]
 ```
 
-**v2.1:代码搬运,模型不转述**
+**v3:代码搬运,模型不转述**
 
 ```mermaid
 flowchart LR
-  B1["search<br/>日期、主类别<br/>由代码过滤"] --> B2["落盘<br/>papers.json<br/>batch_N.json"]
-  B2 --> B3["子 Agent<br/>直接读批次文件"]
-  B3 --> B4["写报告"]
-  B4 --> B5["verify<br/>每个编号必须<br/>出自检索结果"]
+  B1["search 工具<br/>日期、主类别<br/>由代码过滤"] --> B2["按线程保存<br/>分批,每批 ≤ 9,000 字符"]
+  B2 --> B3["子 Agent<br/>get_batch 取数据"]
+  B3 --> B4["写报告<br/>present_files 交付"]
+  B4 --> B5["关卡<br/>编号必须出自检索<br/>否则拒收"]
+  B5 -.->|"拒收 + 原因"| B4
 ```
 
-证据(基线 29 个运行,逐个追踪调用链):检索输出被外置后,**Agent 读回原文的 18 个运行 0 个编造;没读回的 4 个运行 4 个全部编造**(Fisher p = 0.00014)。这是观察性分组,不是对照实验。
+证据:上游 skill 的检索输出被外置后,**读回原文的运行几乎不编造,没读回的几乎都编造**(30 主题基线 0/18 对 4/4,第二轮留出 0/18 对 9/10)。这是观察性分组,不是对照实验。
 
 ## 结果
 
-![留出评测:上游 skill 与 v2.1 的对比](docs/holdout.svg)
+![留出评测:上游 skill 与 v3 的对比](docs/holdout.svg)
 
-| 留出评测(10 个未见主题 × 1 次) | 上游 skill | v2.1 |
+10 个没调过参的主题,每臂每题跑 3 次,方案运行前已提交([eval/HOLDOUT.md](eval/HOLDOUT.md))。
+
+| | 上游 skill | v3 |
 |---|---|---|
-| 三项约束每条引用都满足的运行 | 1 / 10 | **10 / 10**(p = 0.0001) |
-| 凑够 10 篇的运行 | 8 / 10 | 10 / 10 |
-| 一半以上编造的运行 | 2 / 9 | 0 / 10(不显著) |
-| 平均耗时 | 291 秒 | 190 秒 |
-| 平均 token | 209,938 | **253,674(+21%)** |
+| **三项约束全满足且交付 10 篇的运行** | 1 / 30(95% CI 0.6%–16.7%) | **29 / 30**(83.3%–99.4%) |
+| 一半以上引用编造的运行 | 9 / 28 | **0 / 30**(p = 0.0006) |
+| 交付报告 | 28 / 30 | 30 / 30 |
+| 平均耗时 | 310 秒 | 191 秒 |
+| 平均 token | 208,090 | 207,323 |
 
-**要如实说的**:样本只有 10 个主题 × 1 次,无置信区间;编造次数的差异在这个样本量下**不显著**,可信度主要来自上面追踪到的机制;**成本没有改善**;评测只核对引用能否对上 arXiv,不评价综述内容本身的质量。基线臂有 1 个运行原因不明地中断,按预先写定的规则计为未交付(排除它结论不变)。
-
-改进过程中还有一个教训:v2.0 消除了编造,却让 7/30 的报告凑不够 10 篇(精确短语匹配太窄,Agent 凑不够时还自己去掉了类别过滤)。v2.1 改为由代码放宽查询、保持用户约束不动。**这个修复是看过失败后写的,所以 30 主题上的成绩是样本内的;可信的是上表的留出结果**,其方案在运行前就已提交([eval/HOLDOUT.md](eval/HOLDOUT.md))。
+**要如实说的**:
+- 同一主题的 3 次不独立;按主题算,3 次都达标的主题是 0/10 对 9/10。
+- 编造率是次要指标,预先指定的主指标是第一行。
+- v3 唯一不达标的运行检索到 10 篇、只引了 9 篇。v3.1 已在关卡里加了篇数检查,还没做正式评测。
 
 ## 评测怎么做
 
 ```mermaid
 flowchart LR
-  T["topics.json<br/>30 个主题 + 10 个留出主题"] --> R["run_suite.py<br/>调用本机 DeerFlow"]
-  R --> P["report.md<br/>APA 综述报告"]
-  P --> C["check_citations.py<br/>逐条对照 arXiv 官方 API"]
-  C --> M["已验证 · 第一作者 · 时间窗口 · 类别"]
+  T["主题集<br/>开发 30 · 留出 10<br/>综述覆盖率 19"] --> R["run_suite.py<br/>调用本机 DeerFlow"]
+  R --> P["report.md"]
+  P --> C["check_citations.py<br/>对照 arXiv 官方 API"]
+  P --> L["claims.py<br/>论断是否有依据"]
+  P --> V["coverage.py<br/>和真实综述比选文"]
 ```
 
-主指标是 **已验证**(arXiv 编号存在**且标题对得上**)。早期用过"编号存在",结果被虚构编号蒙混过关(假通过 10/10,实为 1/10),所以改了。
+| 指标 | 含义 | 状态 |
+|---|---|---|
+| 引用已验证 | arXiv 编号存在**且标题对得上**(只查编号会被虚构编号蒙混过关) | 主指标 |
+| 时间窗口 / 类别 | 每条引用是否满足用户的约束 | 主指标 |
+| 论断支持率 | 报告里每句话引用的论文,摘要是否支持它(LLM 评判) | 初步:v3 86.9%,上游 58.4%;评判器待人工校准 |
+| 覆盖率 | 选的论文里,同主题真实综述也引用了的比例 | 开发集起点 12.5%(v3.1);主要受检索限制,是下一阶段要提升的指标 |
 
 ## 仓库结构
 
 ```
-eval/      评测框架:主题集、运行器、arXiv 引用核查、汇总;HOLDOUT.md 是留出评测方案
-skills/    改进版 systematic-literature-review(源码)+ 19 个离线单元测试
-scripts/   install_skill.sh:把 skills/ 部署为 DeerFlow 的 custom skill
-runs/      各次实验的报告、引用核查和元数据(原始 trace 因体积未入库)
-docs/      面试讲解稿、结果图(make_chart.py 从 summary.json 生成)
+extensions/scholar/  DeerFlow 插件:search、get_batch 工具 + 引用关卡(离线单测)
+skills/              改进版 systematic-literature-review,以 custom skill 覆盖上游同名 skill
+eval/                主题集、运行器、引用核查、论断支持率、覆盖率基准(离线单测)
+scripts/             install_skill.sh 部署 skill;switch_arm.sh 在两个评测配置间切换
+runs/                每次实验的报告、核查结果和元数据(原始 trace 因体积未入库)
+docs/                面试讲解稿、结果图(make_chart.py 从 summary.json 生成)
 ```
 
 `deer-flow/`(上游代码)不在本仓库内,基线固定在上游 commit `3fdd9bd`。
 
 ## 复现
 
-前置:本机 Docker 里跑着 DeerFlow(`make docker-start`),`config.yaml` 配好模型。评测用的设置:`qwen3.5-plus`(阿里云百炼)、`memory.enabled: false`、`allow_host_bash: true`、递归上限 1000。
+前置:本机 Docker 里跑着 DeerFlow(`make docker-start`),`config.yaml` 配好模型(评测用 `qwen3.5-plus`、`memory.enabled: false`)。
 
 ```bash
 git clone https://github.com/bytedance/deer-flow deer-flow && git -C deer-flow checkout 3fdd9bd
-scripts/install_skill.sh && docker restart deer-flow-gateway     # 部署 v2.1(网关会缓存技能列表,必须重启)
+# 安装插件:见 extensions/scholar/README.md
+scripts/switch_arm.sh v3            # 或 baseline;会改 config.yaml 并重启网关
 
 cd eval
-python3 -I run_suite.py --name my-run --reps 1 --workers 2       # 跑 30 个主题;留出集加 --topics holdout_topics.json
-python3 -I aggregate.py --name my-run                            # 逐条核对 arXiv 并汇总
-python3 -m unittest discover -s ../skills/systematic-literature-review/tests
+python3 -I run_suite.py --name my-run --topics holdout_topics.json --reps 3
+python3 -I aggregate.py --name my-run          # 逐条核对 arXiv 并汇总
+python3 -I holdout_report.py my-run            # 主指标与置信区间
 ```
 
 `run_task.py` 需要本地 DeerFlow 账号的 cookie,放在被忽略的 `.local/cookies.txt`。
 
-## 联调中发现的三个环境事实
+## 踩过的坑
 
-1. 网关按配置缓存技能列表,新增 skill 后必须重启。
-2. custom skill 在沙箱里的路径是 `/mnt/skills/legacy/<name>/`,不是 `custom`。
-3. LocalSandbox 只翻译**命令行里出现的** `/mnt/user-data/...`;脚本内部默认的路径落在容器字面路径上,文件工具和子 Agent 都看不到。所以 `--out-dir` 必须由调用方显式传入。
+1. 网关会缓存技能列表,改了 skill 必须重启。
+2. 插件以快照方式安装,改代码后要 `deerflow extensions upgrade`。
+3. 插件的 `wrap_tool_call` 只能观察、不能否决,所以关卡放在 `before_model`,按消息 ID 改写 `present_files` 的结果。代价是被拒的文件用户仍看得到,提示语会如实说明。
 
-## 安全提示
+## 安全
 
-评测期间为让 skill 脚本能跑,打开了 `allow_host_bash: true`:模型可以在网关容器内执行任意 shell,而容器环境变量里有模型 API key,存在提示注入外泄的风险。只适合本机单用户场景,不要在多用户或暴露公网的部署里开启。
+v3 关闭了 `allow_host_bash`。只有评测里的上游 skill 一臂需要打开它,因为上游 skill 要靠 bash 跑检索脚本。打开时,模型可以在装着 API key 的容器里执行任意命令,所以只适合本机单用户。
 
 ## 许可
 
-基于 [DeerFlow](https://github.com/bytedance/deer-flow)(MIT)。`arxiv_search.py` 与引用模板来自上游 skill,本仓库在其基础上修改。许可证见 [LICENSE](LICENSE)(MIT,保留上游版权声明)。
+基于 [DeerFlow](https://github.com/bytedance/deer-flow)(MIT)。arXiv 检索逻辑与引用模板来自上游 skill,本仓库在其基础上修改。许可证见 [LICENSE](LICENSE)(MIT,保留上游版权声明)。
