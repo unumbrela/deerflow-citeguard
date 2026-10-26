@@ -1,0 +1,713 @@
+{
+ "stats": {
+  "ambiguous": 10,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bernard et al. (2024) introduced CRS Arena, a platform for pairwise battles between anonymous CRSs that collects human feedback to generate Elo-based rankings, demonstrating that both open and closed crowdsourcing setups produce highly correlated system rankings.",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Building on this, Bernard and Balog (2025) released UserSimCRS v2, which enhances simulation-based evaluation with LLM-based simulators and LLM-as-a-judge utilities to address the scarcity of evaluation resources.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) proposed CoRE, a user-centric evaluation framework that uses multi-agent debate among four roles (common user, domain expert, linguist, HCI expert) to synthesize 12 user experience factors into a unified score, achieving significantly better alignment with human feedback than rule-based metrics.",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) addressed the unrealistic behavior of existing simulators by introducing Hesitator, which explicitly models human decision-making under choice overload, reproducing established behavioral patterns from psychological economics.",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Surana et al. (2025) conducted a systematic empirical study on zero-data bootstrapping, demonstrating that synthetic conversational supervision generated from non-conversational signals (item reviews, metadata, user-item interactions) can outperform zero-shot prompting and even scarce real dialogues in low-resource settings.",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zou et al. (2025) proposed MCCRS, a mixture-of-experts architecture where each expert specializes in a specific context type (knowledge graph, conversation history, item reviews), coordinated by a ChairBot to generate final recommendations.",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang and Fang (2025) introduced ReGeS, a reciprocal Retrieval-Generation Synergy framework that unifies generation-augmented retrieval for user intent distillation with retrieval-augmented generation for item feature differentiation, achieving state-of-the-art performance while reducing hallucination risks.",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2025) proposed CRAG, the first approach to combine state-of-the-art LLMs with collaborative filtering for conversational recommendations, demonstrating superior item coverage and recommendation accuracy particularly for recently released movies.",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) specifically addressed the problem that LLM-based simulators exhibit unrealistically strong information-processing capabilities and rarely show hesitation or decision deferral common in real consumer behavior.",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Bernard et al. (2024), Chen et al. (2025), and Bernard and Balog (2025) all demonstrate that human-feedback-based or LLM-based evaluation aligns better with genuine user experience than separate metrics for recommendation accuracy and dialogue management.",
+   "ids": [
+    "2412.10514",
+    "2501.09493",
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that data scarcity is a fundamental challenge: Surana et al. (2025), Zhang et al. (2025), and Zhang et al. (2025) all propose methods to augment or synthesize training data rather than relying solely on collected dialogues.",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Finally, multiple papers converge on the value of hybrid architectures: Zou et al. (2025), Yang and Fang (2025), and Zhu et al. (2025) all demonstrate that combining LLMs with structured knowledge or collaborative filtering outperforms pure LLM or pure traditional approaches.",
+   "ids": [
+    "2504.13655",
+    "2509.21371",
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there is an implicit tension between papers advocating for LLM-based evaluation (Chen et al., 2025; Bernard & Balog, 2025) and those noting the limitations of LLM simulators (Li et al., 2026; Zhang et al., 2025).",
+   "ids": [
+    "2501.09493",
+    "2512.04588",
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) argue that LLMs can authentically capture user experience, while Li et al. (2026) demonstrate that LLM-based simulators exhibit unrealistic decision-making patterns.",
+   "ids": [
+    "2501.09493",
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while Surana et al. (2025) show synthetic data can outperform scarce real dialogues, Zhang et al. (2025) note that synthetic conversations still face a gap between text semantic space and behavioral semantics, indicating unresolved questions about the fidelity of synthetic data.",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2025) evaluated CRAG only on movie datasets, limiting generalizability.",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Zou et al. (2025) note that performance across diverse recommendation domains remains unestablished.",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Zou et al. (2025) note that mixture-of-experts architectures increase training costs.",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) note that multi-agent debate adds overhead compared to simpler metrics.",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Validation against real user behavior: Li et al. (2026) acknowledge potential concerns about validation against actual human user behavior data.",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Bernard et al. (2024) released only 474 conversations, suggesting limited data for stable comparisons.",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "LLM bias inheritance: Chen et al. (2025), Bernard and Balog (2025), and Yang and Fang (2025) all acknowledge that LLM-based evaluation or generation may inherit biases from underlying language models, but none propose mitigation strategies.",
+   "ids": [
+    "2501.09493",
+    "2512.04588",
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create a scalable benchmarking platform for Conversational Recommender Systems that reliably evaluates and ranks CRSs based on human feedback?",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed CRS Arena, a platform that displays pairwise battles between anonymous CRSs where users interact with systems sequentially before declaring a winner or draw, collecting conversations and feedback through both open and closed crowdsourcing platforms.",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both open and closed crowdsourcing setups produce highly correlated rankings of CRSs",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Conversations across both platforms exhibit similar characteristics",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Released CRSArena-Dial dataset containing 474 conversations with corresponding user feedback",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Established preliminary CRS rankings using the Elo rating system",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Platform enables scalable, human-feedback-based CRS benchmarking",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The dataset size is relatively limited (474 conversations), and the Elo-based ranking is preliminary, requiring more data for stable, definitive system comparisons.",
+   "ids": [
+    "2412.10514"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can conversational recommender systems be evaluated using a unified metric that authentically reflects user experience across both recommendation accuracy and dialogue management quality?",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed CoRE framework with two components: LLM-As-Evaluator (summarizes 12 user experience factors and scores each using LLM) and Multi-Agent Debater (four roles—common user, domain expert, linguist, HCI expert—synthesize factors into unified overall score).",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoRE aligns well with human evaluation across most of the 12 user experience factors",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Overall evaluation scores demonstrate significantly better alignment with human feedback compared to existing rule-based metrics",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent debate framework effectively synthesizes diverse evaluation perspectives into unified scores",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully evaluated four CRSs on two benchmark datasets demonstrating framework applicability",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based evaluation captures authentic user experience better than separate rule-based metrics for recommendation and dialogue",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: LLM-based evaluation may inherit biases from the underlying language models, and the multi-agent debate framework adds computational overhead compared to simpler rule-based metrics.",
+   "ids": [
+    "2501.09493"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can conversational recommender systems be bootstrapped without domain-specific dialogue data by leveraging non-conversational signals?",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducts a systematic empirical study comparing two information-theoretic selection strategies (Jensen-Shannon diversity and Fisher information) for generating synthetic conversational supervision from item reviews, metadata, and user-item interactions without any in-domain dialogue corpus.",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Domain-grounded synthetic data consistently outperforms zero-shot prompting and naive synthetic baselines",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Active selection improves data efficiency over random sampling",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Metadata and collaborative filtering signals each improve selection quality",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In low-resource settings, synthetic data can outperform scarce real dialogues",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Synthetic data can further complement real dialogues when both are available",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Establishes non-conversational domain signals as a viable path toward building CRS without conversational training data",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Code available through anonymous repository suggests work may be under review; synthetic data generation may require domain-specific tuning; quality of synthetic conversations depends on availability and quality of non-conversational source signals.",
+   "ids": [
+    "2504.15476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can different types of contextual information (structured and unstructured) be effectively combined to improve conversational recommender systems?",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed MCCRS, a mixture-of-experts architecture where each expert specializes in a specific context type (knowledge graph, conversation history, item reviews), coordinated by a ChairBot to generate final recommendations.",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MCCRS achieves significantly higher performance compared to existing baselines",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-expert approach successfully breaks the bottleneck of relying on single contextual information",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective fusion of structured knowledge graphs with unstructured conversation history and item reviews",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ChairBot coordination enables specialization while maintaining coherent output",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different contextual information types provide complementary benefits when properly combined",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The mixture-of-experts architecture may increase computational complexity and training costs, and performance across diverse recommendation domains beyond the tested scenarios remains unestablished.",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large language models in conversational recommender systems effectively leverage behavioral data from collaborative filtering approaches?",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes CRAG (Collaborative Retrieval Augmented Generation), the first approach combining state-of-the-art LLMs with collaborative filtering for conversational recommendations.",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates superior item coverage and recommendation performance compared to several CRS baselines",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improvements are mainly attributable to better recommendation accuracy on recently released movies",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully bridges LLM contextual understanding with CF behavioral data",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Validated on two publicly available movie conversational recommendation datasets (Reddit-v2 and Redial)",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Code and data made publicly available for reproducibility",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluated only on movie recommendation datasets, which may limit generalizability to other domains; the approach depends on availability of behavioral data for collaborative filtering.",
+   "ids": [
+    "2502.14137"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can conversational recommender systems connect conversations with external domain knowledge without requiring domain-specific engineering or risking LLM hallucinations?",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes ReGeS, a reciprocal Retrieval-Generation Synergy framework that unifies generation-augmented retrieval to distill informative user intent from conversations and retrieval-augmented generation to differentiate subtle item features.",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art performance in recommendation accuracy on multiple CRS benchmarks",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The reciprocal synergy obviates the need for extra annotations",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reduces hallucination risks compared to LLM-only approaches",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Simplifies continuous updates to the recommendation system",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates effectiveness for knowledge-intensive CRS tasks",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; potential concerns include evaluation scope across diverse domains and computational overhead of the reciprocal framework.",
+   "ids": [
+    "2509.21371"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can simulation-based evaluation resources for conversational recommender systems be upgraded to align with state-of-the-art research capabilities?",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Enhanced the UserSimCRS toolkit with an improved agenda-based user simulator, introduced LLM-based simulators, expanded integration for wider CRS and dataset compatibility, and added LLM-as-a-judge evaluation utilities, demonstrated through a case study.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UserSimCRS v2 successfully aligns the toolkit with state-of-the-art CRS research",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based simulators provide more realistic and diverse user interaction patterns",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enhanced agenda-based simulator improves simulation fidelity",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Wider CRS and dataset integration increases toolkit applicability",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-as-a-judge utilities enable automated, scalable evaluation of CRS performance",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Simulation-based evaluation inherently cannot fully capture real user behavior and preferences, and LLM-as-judge evaluation may inherit biases from the underlying language models used.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can user simulators for CRS evaluation better model realistic human decision-making, including hesitation and decision deferral commonly observed in real consumer behavior?",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes Hesitator, a theory-grounded user simulation framework with a modular Decision Module that separates utility-based item selection from overload-aware commitment decisions.",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrating the Decision Module consistently mitigates unrealistic behaviors under increasing overload conditions",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reproduces established behavioral patterns from psychological economics",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates ability to model human decision behavior more realistically than existing LLM-based simulators",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Validated across multiple user simulation frameworks, domains, sales modes, and LLM backbones",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Addresses the problem of overly high acceptance probabilities in existing simulators",
+   "ids": [
+    "2605.05250"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; potential concerns include validation against actual human user behavior data and applicability across diverse product categories beyond tested domains.",
+   "ids": [
+    "2605.05250"
+   ]
+  }
+ ]
+}

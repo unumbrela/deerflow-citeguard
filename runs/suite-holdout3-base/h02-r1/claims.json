@@ -1,0 +1,156 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Executive Summary",
+   "kind": "synthesis",
+   "text": "Key findings include: (a) the LLM-judge ecosystem remains fragmented, hindering reproducibility and systematic study [citation:JudgeArena](https://arxiv.org/abs/2608.02620); (b) current judges achieve accuracies below 55% on fine-grained failure detection tasks, particularly struggling with evidence verification [citation:REFLECT](https://arxiv.org/abs/2605.19196); (c) calibration methods like DA-RAC can significantly reduce false-pass risk by anchoring judgments to relevant reference examples [citation:DA-RAC](https://arxiv.org/abs/2608.14950); and (d) production deployments demonstrate strong correlation between offline LLM-judge metrics and online outcomes when evaluation pipelines are rigorously designed [citation:Nubank](https://arxiv.org/abs/2606.08867).",
+   "ids": [
+    "2608.02620",
+    "2605.19196",
+    "2608.14950",
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "JudgeArena [citation:JudgeArena](https://arxiv.org/abs/2608.02620) introduces a unified framework integrating four major benchmarks (AlpacaEval, Arena-Hard, MT-Bench, m-Arena-Hard) under a single interface with swappable judges.",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "REFLECT [citation:REFLECT](https://arxiv.org/abs/2605.19196) addresses a different standardization gap: the lack of fine-grained, verifiable meta-evaluation benchmarks for judges themselves.",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "DA-RAC [citation:DA-RAC](https://arxiv.org/abs/2608.14950) tackles calibration standardization, proposing that judge scores should be anchored to semantically similar labeled references weighted by distance.",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Judge Reliability: REFLECT [citation:REFLECT](https://arxiv.org/abs/2605.19196) delivers sobering findings: even best-performing judges achieve <55% accuracy on fine-grained failure detection, with particularly poor performance on evidence verification.",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Context-Induced Miscalibration: DA-RAC [citation:DA-RAC](https://arxiv.org/abs/2608.14950) identifies a previously underexplored failure mode: judges can be miscalibrated by irrelevant in-context reference examples, creating false confidence.",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Independence from Factuality: Medical fine-tuning research [citation:Medical-Risk](https://arxiv.org/abs/2610.24807) finds risk-bearing language is statistically independent of factual hallucination rate (Spearman ρ=-0.065, p=0.24).",
+   "ids": [
+    "2610.24807"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Divergence from Gold Standards: LongEval-RAG evaluation [citation:LongEval-RAG](https://arxiv.org/abs/2607.04008) reports that LLM-judge evaluation emphasizes different systems than primary gold-answer and nugget-based evaluation, highlighting the need for multi-metric approaches.",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Inter-Rater Agreement: Production deployment at Nubank [citation:Nubank](https://arxiv.org/abs/2606.08867) demonstrates that rigorous LLM-judge evaluation with measured inter-rater agreement and GEPA optimization can achieve consistency sufficient for production iteration, though specific agreement scores are not reported.",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Customer Support at Scale: Nubank's deployment [citation:Nubank](https://arxiv.org/abs/2606.08867) across five domains (card delivery, debt management, credit-limit support, card management, product explanation) achieved 37 percentage-point improvement in AI transactional NPS and 29 percentage-point gain in self-service rate.",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "E-Commerce Image Assistants: SkillChain [citation:SkillChain](https://arxiv.org/abs/2606.12984) uses dual-path LLM-judge evaluation for iterative skill refinement in image-based e-commerce assistants, showing significant gains in structural compliance, content quality, user engagement, and retention.",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Medical Risk Evaluation: Rubric-based LLM-judge ensemble [citation:Medical-Risk](https://arxiv.org/abs/2610.24807) evaluates six categories of risk-bearing language in patient-facing medical QA, finding that medical fine-tuning reshapes rather than reduces aggregate risk.",
+   "ids": [
+    "2610.24807"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Counseling Quality: CounselPlex [citation:CounselPlex](https://arxiv.org/abs/2610.32702) uses LLM-judge evaluation to demonstrate improved counseling quality and stressor grounding in full-duplex speech models, though clinical validation with human counselors is noted as future work.",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Mathematical Theorem Generation: COMPOSE [citation:COMPOSE](https://arxiv.org/abs/2605.30333) achieves best overall performance under LLM-judge evaluation for generating plausible future mathematical claims, though the validity of LLM judges for mathematical quality assessment is not independently verified.",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Divergence: Medical risk evaluation [citation:Medical-Risk](https://arxiv.org/abs/2610.24807) explicitly acknowledges low inter-rater reliability for clinical-judgment-dependent categories (α=0.19, 0.31), contrasting with more optimistic reports from other domains.",
+   "ids": [
+    "2610.24807"
+   ]
+  },
+  {
+   "section": "Critical Gaps and Future Directions",
+   "kind": "synthesis",
+   "text": "Medical risk evaluation [citation:Medical-Risk](https://arxiv.org/abs/2610.24807) and counseling quality assessment [citation:CounselPlex](https://arxiv.org/abs/2610.32702) both acknowledge limitations in LLM-judge reliability for domains requiring expert human judgment.",
+   "ids": [
+    "2610.24807",
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Critical Gaps and Future Directions",
+   "kind": "synthesis",
+   "text": "JudgeArena [citation:JudgeArena](https://arxiv.org/abs/2608.02620) mentions multilingual validation but does not report whether judge performance varies across languages or cultural contexts.",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Critical Gaps and Future Directions",
+   "kind": "synthesis",
+   "text": "LongEval-RAG [citation:LongEval-RAG](https://arxiv.org/abs/2607.04008) explicitly notes divergence between LLM-judge and gold-standard evaluation.",
+   "ids": [
+    "2607.04008"
+   ]
+  }
+ ]
+}

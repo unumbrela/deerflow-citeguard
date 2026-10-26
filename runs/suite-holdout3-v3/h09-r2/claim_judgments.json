@@ -1,0 +1,1875 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2412.06157",
+   "label": "unsupported",
+   "reason": "The abstract describes the paper as a survey categorizing existing attacks and defenses, but does not mention extending membership inference methodologies to specific systems like retrieval-augmented generation or video large language models.",
+   "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 49,
+    "total_tokens": 555,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 506
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a membership inference attack framework specifically for Retrieval-Augmented Generation (RAG) systems.",
+   "usage": {
+    "prompt_tokens": 618,
+    "completion_tokens": 35,
+    "total_tokens": 653,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 618
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2605.04116",
+   "label": "unsupported",
+   "reason": "The abstract discusses membership inference attacks on retrieval-based in-context learning for document QA, but does not mention federated learning systems, video LLMs, LoRA fine-tuning, or chat agent memory systems attributed to this paper in the sentence.",
+   "usage": {
+    "prompt_tokens": 470,
+    "completion_tokens": 60,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 470
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract confirms the paper presents a membership inference attack specifically targeting Video Large Language Models, aligning with the sentence's attribution.",
+   "usage": {
+    "prompt_tokens": 570,
+    "completion_tokens": 36,
+    "total_tokens": 606,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 570
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces a framework for membership inference attacks specifically against LoRA fine-tuned language models.",
+   "usage": {
+    "prompt_tokens": 634,
+    "completion_tokens": 33,
+    "total_tokens": 667,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 634
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The abstract confirms the paper focuses on membership inference attacks specifically targeting chat agent memory systems.",
+   "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 28,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 476
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of CMIA and PMIA, detailing their use of conditional shadow training to exploit membership dependencies and a proxy selection strategy.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 41,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a mask-based framework that masks words in a target document and uses the accuracy of mask prediction to infer membership.",
+   "usage": {
+    "prompt_tokens": 545,
+    "completion_tokens": 37,
+    "total_tokens": 582,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 545
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents a black-box MIA that couples temperature-perturbed generation with video-aware difficulty features.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 42,
+    "total_tokens": 536,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a second attack that eliminates the reference model and computes a membership statistic using a weighted-averaging scheme.",
+   "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 36,
+    "total_tokens": 431,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 395
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly states that utilizing the pre-trained model induces more information leakage and highlights this as a key finding of their proposed framework.",
+   "usage": {
+    "prompt_tokens": 560,
+    "completion_tokens": 37,
+    "total_tokens": 597,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 560
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of MRMMIA using multiple recall probes across black-box, gray-box, and white-box settings.",
+   "usage": {
+    "prompt_tokens": 411,
+    "completion_tokens": 37,
+    "total_tokens": 448,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 411
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of an evaluation framework and the conclusion that MIAs represent weak privacy threats under realistic conditions.",
+   "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 35,
+    "total_tokens": 388,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 353
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that non-overfitted models can leak information about a small subset of training data, which are identified as outliers within their classes.",
+   "usage": {
+    "prompt_tokens": 489,
+    "completion_tokens": 41,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 489
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors conducted the largest synthetic data privacy benchmark to date and studied the challenge as a decision theoretic problem under uncertainty.",
+   "usage": {
+    "prompt_tokens": 376,
+    "completion_tokens": 39,
+    "total_tokens": 415,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 376
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper categorizes attacks and defenses to provide a unique taxonomy, matching the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 34,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors introduced LoRA-Leak as a holistic evaluation framework incorporating fifteen membership inference attacks to assess vulnerabilities in LoRA fine-tuned models.",
+   "usage": {
+    "prompt_tokens": 567,
+    "completion_tokens": 44,
+    "total_tokens": 611,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 567
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study found only dropout and excluding specific LM layers effectively mitigate MIA risks while maintaining utility.",
+   "usage": {
+    "prompt_tokens": 567,
+    "completion_tokens": 35,
+    "total_tokens": 602,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 567
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors adapted an existing ensemble prompting defense which substantially mitigates privacy leakage caused by their second attack (the weighted-averaging scheme).",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 43,
+    "total_tokens": 443,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors propose defensive strategies to protect vulnerable samples identified as outliers and enhance privacy-preserving capabilities.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 34,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper provides a systematic overview of various countermeasures.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 28,
+    "total_tokens": 454,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that relying on MIA metrics can lead to overestimated risk and unnecessary sacrifices in model utility due to overly strong defenses.",
+   "usage": {
+    "prompt_tokens": 347,
+    "completion_tokens": 39,
+    "total_tokens": 386,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 347
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that non-overfitted models can still leak information and investigates vulnerabilities beyond traditional overfitting.",
+   "usage": {
+    "prompt_tokens": 492,
+    "completion_tokens": 34,
+    "total_tokens": 526,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 492
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2507.18302",
+   "label": "partial",
+   "reason": "The abstract confirms LoRA models are vulnerable to MIAs but does not explicitly discuss or confirm that these vulnerabilities persist specifically 'beyond traditional overfitting scenarios'.",
+   "usage": {
+    "prompt_tokens": 571,
+    "completion_tokens": 44,
+    "total_tokens": 615,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 571
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2412.06157",
+   "label": "unsupported",
+   "reason": "The abstract focuses on a survey of membership inference attacks in federated learning and does not mention emerging AI architectures, novel attack surfaces, or the need for domain-specific methodologies.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 45,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2410.20142",
+   "label": "partial",
+   "reason": "The abstract supports the need for a domain-specific methodology for RAG attacks but does not mention 'consensus' or explicitly discuss 'novel attack surfaces' as a general concept.",
+   "usage": {
+    "prompt_tokens": 571,
+    "completion_tokens": 47,
+    "total_tokens": 618,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 571
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2604.27002",
+   "label": "partial",
+   "reason": "The abstract demonstrates a novel attack surface for VideoLLMs but does not support the claim of a broad 'consensus' or reference other architectures.",
+   "usage": {
+    "prompt_tokens": 523,
+    "completion_tokens": 40,
+    "total_tokens": 563,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 523
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2605.27825",
+   "label": "partial",
+   "reason": "The abstract supports the need for domain-specific methodologies for chat agent memory but does not mention a broader consensus or other emerging AI architectures.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 37,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that no single MIA is a strictly dominant strategy and proposes ensemble methods as a more robust solution.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 35,
+    "total_tokens": 422,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2507.21412",
+   "label": "unsupported",
+   "reason": "The abstract proposes specific attack frameworks (CMIA and PMIA) that outperform existing methods, but does not discuss the convergence of literature on the lack of a single dominant method or the necessity of ensemble approaches.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 53,
+    "total_tokens": 506,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MIAs represent weak privacy threats under realistic conditions and that relying on them leads to an overestimation of risk.",
+   "usage": {
+    "prompt_tokens": 355,
+    "completion_tokens": 39,
+    "total_tokens": 394,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 355
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly warns that relying on MIAs can lead to unnecessary sacrifices in model utility due to employing overly strong defenses.",
+   "usage": {
+    "prompt_tokens": 374,
+    "completion_tokens": 35,
+    "total_tokens": 409,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 374
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2507.18302",
+   "label": "unsupported",
+   "reason": "The abstract discusses evaluating defenses and identifying effective ones but does not mention cautioning against unnecessary utility sacrifices or engaging in a debate about the appropriate strength of defensive responses.",
+   "usage": {
+    "prompt_tokens": 596,
+    "completion_tokens": 43,
+    "total_tokens": 639,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 596
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2511.16792",
+   "label": "unsupported",
+   "reason": "The abstract discusses proposing defenses for vulnerable samples but does not mention cautioning against utility sacrifices or disagreeing with the strength of other defenses.",
+   "usage": {
+    "prompt_tokens": 517,
+    "completion_tokens": 38,
+    "total_tokens": 555,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 517
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2605.04116",
+   "label": "unsupported",
+   "reason": "The abstract discusses membership inference attacks and defenses, with no mention of limitations in abstracts or transparency of methodological constraints.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 35,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2507.18302",
+   "label": "unsupported",
+   "reason": "The abstract discusses membership inference attacks and privacy risks in LoRA fine-tuning, not the transparency of limitations stated in paper abstracts.",
+   "usage": {
+    "prompt_tokens": 612,
+    "completion_tokens": 38,
+    "total_tokens": 650,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 612
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2603.22987",
+   "label": "unsupported",
+   "reason": "The abstract discusses the effectiveness and privacy threats of membership inference attacks, not whether papers explicitly state limitations in their abstracts.",
+   "usage": {
+    "prompt_tokens": 390,
+    "completion_tokens": 35,
+    "total_tokens": 425,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 390
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2511.16792",
+   "label": "unsupported",
+   "reason": "The abstract discusses membership inference attacks and model overfitting but does not mention limitations of the paper or the transparency of abstracts in other papers.",
+   "usage": {
+    "prompt_tokens": 533,
+    "completion_tokens": 40,
+    "total_tokens": 573,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 533
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2605.27825",
+   "label": "unsupported",
+   "reason": "The abstract focuses on membership inference attacks and privacy risks, with no mention of the paper's own limitations or a discussion about other papers failing to state limitations.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 42,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract supports the claim by stating that MIAs are the 'de facto standard' for measuring privacy leaks but arguing they often represent 'weak privacy threats,' highlighting a disconnect between the attack metric and actual threat significance.",
+   "usage": {
+    "prompt_tokens": 351,
+    "completion_tokens": 54,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 351
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly reports an accuracy of 0.63 for the proposed attack, which matches the value attributed to the paper in the sentence.",
+   "usage": {
+    "prompt_tokens": 507,
+    "completion_tokens": 40,
+    "total_tokens": 547,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 507
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's goal is to categorize and summarize membership inference attacks and defense strategies in federated learning.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 36,
+    "total_tokens": 462,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper categorizes and summarizes membership inference attacks and defenses, introduces a unique taxonomy, and provides a systematic overview of countermeasures.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 43,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that despite only sharing model updates, federated learning still faces several privacy vulnerabilities.",
+   "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 31,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 418
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly defines membership inference attacks as determining whether a specific example is part of the training set and states they can compromise sensitive information.",
+   "usage": {
+    "prompt_tokens": 421,
+    "completion_tokens": 38,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 421
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper categorizes and summarizes membership inference attacks and defense strategies based on their characteristics in federated learning.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 37,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper introduces a unique taxonomy of existing attack research and provides a systematic overview of various countermeasures.",
+   "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 37,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 418
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper identifies and discusses key future research directions.",
+   "usage": {
+    "prompt_tokens": 413,
+    "completion_tokens": 26,
+    "total_tokens": 439,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 413
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2412.06157",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the work as a survey that categorizes and analyzes existing research rather than presenting new experimental results.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 34,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly poses the question of whether an external auditor can determine video membership via black-box attacks and confirms the paper addresses this by presenting such an attack.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 42,
+    "total_tokens": 536,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the methodology as a black-box attack coupling temperature-perturbed generation with video-aware difficulty features, querying at low and high temperatures to measure semantic drift.",
+   "usage": {
+    "prompt_tokens": 516,
+    "completion_tokens": 45,
+    "total_tokens": 561,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 516
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VideoLLMs are vulnerable to black-box membership inference attacks and notes the challenge that auditors observe only generated text.",
+   "usage": {
+    "prompt_tokens": 487,
+    "completion_tokens": 39,
+    "total_tokens": 526,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 487
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly states the key intuition that member samples tend to induce sharper, more brittle generation behavior across decoding temperatures.",
+   "usage": {
+    "prompt_tokens": 480,
+    "completion_tokens": 34,
+    "total_tokens": 514,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 480
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly states the attack achieved an AUC of 0.68 and accuracy of 0.63 against the specified LLaVA-Video model.",
+   "usage": {
+    "prompt_tokens": 504,
+    "completion_tokens": 45,
+    "total_tokens": 549,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 504
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the membership signal is entangled with video-specific factors such as motion complexity and temporal span.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 34,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes by highlighting an urgent need for the community to systematically evaluate and mitigate privacy risks in VideoLLMs.",
+   "usage": {
+    "prompt_tokens": 485,
+    "completion_tokens": 35,
+    "total_tokens": 520,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 485
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly reports the accuracy (0.63) and AUC (0.68) values and confirms evaluation was performed on a single model architecture.",
+   "usage": {
+    "prompt_tokens": 509,
+    "completion_tokens": 44,
+    "total_tokens": 553,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 509
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly describes proposing CMIA to exploit membership dependencies in adaptive settings and PMIA for non-adaptive settings, directly addressing the research question.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 40,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly details both the CMIA and PMIA frameworks, their respective settings (adaptive and non-adaptive), their specific mechanisms, and the provision of theoretical analyses, matching the sentence perfectly.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 50,
+    "total_tokens": 531,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in the adaptive setting, exploiting membership dependencies between instances boosts membership inference performance.",
+   "usage": {
+    "prompt_tokens": 424,
+    "completion_tokens": 31,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 424
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CMIA incorporates membership dependencies via conditional shadow training to boost membership inference performance.",
+   "usage": {
+    "prompt_tokens": 421,
+    "completion_tokens": 31,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 421
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PMIA employs a proxy selection strategy to identify samples with similar behaviors and uses them for a membership posterior odds test.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 39,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experimental results demonstrate CMIA and PMIA substantially outperform existing MIAs, particularly in the low false-positive regime.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 39,
+    "total_tokens": 467,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the low false-positive regime is crucial for evaluating privacy risks.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 28,
+    "total_tokens": 451,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract confirms the presence of theoretical analyses and experimental results but does not mention any discussion of computational overhead limitations.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 33,
+    "total_tokens": 473,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that no single MIA is a strictly dominant strategy across various architectures and domains, which directly supports the premise of the research question.",
+   "usage": {
+    "prompt_tokens": 367,
+    "completion_tokens": 41,
+    "total_tokens": 408,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 367
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper conducts the largest benchmark, studies MIAs as a decision theoretic problem, finds no strictly dominant strategy, and proposes ensemble MIAs based on these findings.",
+   "usage": {
+    "prompt_tokens": 393,
+    "completion_tokens": 48,
+    "total_tokens": 441,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 393
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that no MIA constitutes a strictly dominant strategy across various model architectures and dataset domains.",
+   "usage": {
+    "prompt_tokens": 358,
+    "completion_tokens": 32,
+    "total_tokens": 390,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 358
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in realistic threat scenarios, an adversary must choose a single method without a priori guarantee of it being the highest performing option.",
+   "usage": {
+    "prompt_tokens": 364,
+    "completion_tokens": 40,
+    "total_tokens": 404,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 364
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that unsupervised ensembles built on individual attacks offer empirically more robust, regret-minimizing strategies than individual attacks.",
+   "usage": {
+    "prompt_tokens": 365,
+    "completion_tokens": 40,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 365
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 'many diverse methods have been proposed that each exploit different privacy leakage signals' in the context of tabular generative models.",
+   "usage": {
+    "prompt_tokens": 363,
+    "completion_tokens": 41,
+    "total_tokens": 404,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 363
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors conducted 'the largest synthetic data privacy benchmark to date'.",
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 30,
+    "total_tokens": 384,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 354
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2509.05350",
+   "label": "unsupported",
+   "reason": "The abstract does not mention computational cost, overhead, or scalability constraints of the proposed ensemble methods.",
+   "usage": {
+    "prompt_tokens": 375,
+    "completion_tokens": 30,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 375
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a mask-based approach to address limitations where existing attacks are influenced by other documents or internal knowledge, aiming for a more document-specific solution.",
+   "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 45,
+    "total_tokens": 594,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 549
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly details the MBA framework's use of a masking algorithm, prompting the RAG system for mask prediction, and applying a threshold-based method to infer membership.",
+   "usage": {
+    "prompt_tokens": 574,
+    "completion_tokens": 44,
+    "total_tokens": 618,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 574
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing MIAs are insufficient because they rely solely on the RAG system's judgment or are easily influenced by other documents or the LLM's internal knowledge.",
+   "usage": {
+    "prompt_tokens": 548,
+    "completion_tokens": 47,
+    "total_tokens": 595,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 548
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the mask-based approach is more document-specific and makes the RAG system's generation less susceptible to distractions.",
+   "usage": {
+    "prompt_tokens": 534,
+    "completion_tokens": 37,
+    "total_tokens": 571,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 534
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly states that if the target document is in the database, the masked text retrieves it as context to allow for accurate mask prediction.",
+   "usage": {
+    "prompt_tokens": 538,
+    "completion_tokens": 39,
+    "total_tokens": 577,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 538
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework adopts a threshold-based method to infer membership by analyzing mask prediction accuracy.",
+   "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 33,
+    "total_tokens": 561,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 528
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments demonstrate the effectiveness of the proposed mask-based approach compared to existing baseline models.",
+   "usage": {
+    "prompt_tokens": 530,
+    "completion_tokens": 33,
+    "total_tokens": 563,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 530
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a mask prediction mechanism and acknowledges using a 'simple' threshold method without detailing specific optimization criteria or word counts.",
+   "usage": {
+    "prompt_tokens": 548,
+    "completion_tokens": 37,
+    "total_tokens": 585,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 548
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly states that such applications can be vulnerable to membership-inference attacks even when the service provider and users are separate parties.",
+   "usage": {
+    "prompt_tokens": 396,
+    "completion_tokens": 37,
+    "total_tokens": 433,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 396
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly details the two proposed black-box attacks, their specific mechanisms (reference model vs. weighted-averaging), and the empirical evaluation conditions including paraphrased texts and comparison to prior attacks.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 51,
+    "total_tokens": 485,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly states that remotely hosted applications using retrieval-based in-context learning are vulnerable to membership inference attacks even when service providers and users are separate parties.",
+   "usage": {
+    "prompt_tokens": 390,
+    "completion_tokens": 41,
+    "total_tokens": 431,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 390
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed attacks outperform three prior attacks in many cases with a small number of prefixes.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 34,
+    "total_tokens": 421,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed attacks exhibit stronger resilience to paraphrasing.",
+   "usage": {
+    "prompt_tokens": 376,
+    "completion_tokens": 26,
+    "total_tokens": 402,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 376
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2605.04116",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors adapted an existing ensemble prompting defense which substantially mitigates the privacy leakage caused by their second attack.",
+   "usage": {
+    "prompt_tokens": 380,
+    "completion_tokens": 37,
+    "total_tokens": 417,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 380
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly investigates LoRA vulnerability to MIAs and identifies that utilizing the pre-trained model induces information leakage.",
+   "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 33,
+    "total_tokens": 591,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 558
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of LoRA-Leak with fifteen attacks, its application to three models and tasks, and the exploration of four defenses.",
+   "usage": {
+    "prompt_tokens": 589,
+    "completion_tokens": 41,
+    "total_tokens": 630,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 589
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LoRA-based fine-tuned LMs are vulnerable to MIAs and cites the exact example of 0.775 AUC under conservative settings.",
+   "usage": {
+    "prompt_tokens": 563,
+    "completion_tokens": 47,
+    "total_tokens": 610,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 563
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly states that utilizing the pre-trained model induces more information leakage which was neglected by existing attacks.",
+   "usage": {
+    "prompt_tokens": 543,
+    "completion_tokens": 32,
+    "total_tokens": 575,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 543
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study found only dropout and excluding specific LM layers effectively mitigate MIA risks while maintaining utility.",
+   "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 35,
+    "total_tokens": 584,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 549
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2507.18302",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the existence of the pre-trained model makes MIA a more severe risk for LoRA-based LMs under the pre-training and fine-tuning paradigm.",
+   "usage": {
+    "prompt_tokens": 559,
+    "completion_tokens": 46,
+    "total_tokens": 605,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 559
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a framework to define the conditions under which membership inference attacks constitute a genuine privacy threat.",
+   "usage": {
+    "prompt_tokens": 327,
+    "completion_tokens": 35,
+    "total_tokens": 362,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 327
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors propose an evaluation framework defining conditions for genuine privacy threats and review representative MIAs against it.",
+   "usage": {
+    "prompt_tokens": 344,
+    "completion_tokens": 35,
+    "total_tokens": 379,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 344
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that under the realistic conditions defined in the proposed framework, MIAs represent weak privacy threats.",
+   "usage": {
+    "prompt_tokens": 323,
+    "completion_tokens": 33,
+    "total_tokens": 356,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 323
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that relying on MIAs as a privacy metric can lead to an overestimation of risk.",
+   "usage": {
+    "prompt_tokens": 327,
+    "completion_tokens": 34,
+    "total_tokens": 361,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 327
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2603.22987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that relying on MIAs as a privacy metric can lead to unnecessary sacrifices in model utility due to employing too strong defenses.",
+   "usage": {
+    "prompt_tokens": 327,
+    "completion_tokens": 39,
+    "total_tokens": 366,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 327
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates the root causes of membership inference vulnerabilities beyond traditional overfitting.",
+   "usage": {
+    "prompt_tokens": 473,
+    "completion_tokens": 31,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 473
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors empirically analyze vulnerable samples in non-overfitted models and propose targeted defensive strategies.",
+   "usage": {
+    "prompt_tokens": 493,
+    "completion_tokens": 34,
+    "total_tokens": 527,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 493
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that membership inference attacks can succeed even in non-overfitted models, implying overfitting is not the sole cause.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 39,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study's findings reveal vulnerable samples in non-overfitted models are often outliers within their classes, such as being noisy or hard to classify.",
+   "usage": {
+    "prompt_tokens": 479,
+    "completion_tokens": 45,
+    "total_tokens": 524,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 479
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that literature shows non-overfitted models can leak information about a small subset of training data, which the paper then investigates.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 40,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2511.16792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors propose potential defensive strategies to protect vulnerable samples and enhance privacy-preserving capabilities.",
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 33,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 463
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper focuses on membership inference attacks against chat agent memory containing sensitive user-agent interactions and demonstrates their effectiveness.",
+   "usage": {
+    "prompt_tokens": 392,
+    "completion_tokens": 36,
+    "total_tokens": 428,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 392
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the proposed method, settings, and experimental findings described in the abstract.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 29,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed attack exposes privacy risks in chat agent memory, confirming their vulnerability to membership inference attacks.",
+   "usage": {
+    "prompt_tokens": 381,
+    "completion_tokens": 35,
+    "total_tokens": 416,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 381
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments demonstrate MRMMIA consistently outperforms baselines across black-box, gray-box, and white-box settings.",
+   "usage": {
+    "prompt_tokens": 384,
+    "completion_tokens": 39,
+    "total_tokens": 423,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 384
+    }
+   }
+  },
+  {
+   "claim": 92,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed MRMMIA attack extracts membership signals across black-box, gray-box, and white-box settings.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 37,
+    "total_tokens": 426,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 93,
+   "id": "2605.27825",
+   "label": "supported",
+   "reason": "The abstract explicitly states that agent memory can contain sensitive user-agent interactions, retrieved facts, and user preferences, and concludes that the results expose privacy risks in agents.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 43,
+    "total_tokens": 430,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  }
+ ]
+}

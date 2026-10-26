@@ -77,3 +77,41 @@ class KappaTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReferenceLineTest(unittest.TestCase):
+    TEXT = """## Annotated Bibliography
+
+### 1. Long Tasks Break Agents
+
+Smith, A., & Jones, B. (2025). Long Tasks Break Agents. *arXiv preprint arXiv:2501.00001*. https://arxiv.org/abs/2501.00001v2
+
+**Summary:** The authors show that agents fail on tasks longer than ten steps.
+
+### 2. Something Else
+
+Lee, C. (2026). Something Else. *arXiv preprint arXiv:2601.00002*. https://arxiv.org/abs/2601.00002
+
+- Agents are mostly fine in short horizons according to this work.
+
+## References
+
+Smith, A., & Jones, B. (2025). Long Tasks Break Agents. *arXiv preprint arXiv:2501.00001*.
+Lee, C. (2026). Something Else. *arXiv preprint arXiv:2601.00002*.
+"""
+
+    def test_reference_lines_are_not_claims_but_name_the_block(self):
+        found, _ = claims.extract_claims(self.TEXT)
+        self.assertEqual([(c["ids"], c["kind"]) for c in found], [(["2501.00001"], "annotation"), (["2601.00002"], "annotation")])
+        self.assertTrue(all("preprint" not in c["text"] for c in found))
+
+    def test_bare_citation_fragment_has_no_content(self):
+        self.assertEqual(claims._content_words("arXiv preprint arXiv:2602.23574. https://arxiv.org/abs/2602.23574v2"), 0)
+        self.assertGreater(claims._content_words("Smith et al. (2025) show agents fail on long tasks."), 3)
+
+
+class PlaceholderTest(unittest.TestCase):
+    def test_template_placeholder_is_not_a_claim(self):
+        text = "## Per-Paper Annotations\n\n### Smith et al. (2025)\n\n- **Limitations**: not stated in abstract\n- **Findings**: agents fail on tasks longer than ten steps\n\n## References\n\nSmith, A. (2025). Long Tasks. *arXiv preprint arXiv:2501.00001*.\n"
+        found, _ = claims.extract_claims(text)
+        self.assertEqual([c["text"] for c in found], ["Findings: agents fail on tasks longer than ten steps"])

@@ -1,0 +1,1654 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states the three principles (observation, prediction, regularization) and proves that combining observation and prediction without regularization admits the constant encoder as a global minimizer.",
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 44,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 463
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states that augmentation-based methods excel at learning invariant features but often neglect equivariant ones, which reduces generalizability for downstream tasks requiring equivariance.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 43,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors observe ViT layers converge in order of depth during video MAE training and exploit this observation in LayerLock.",
+   "usage": {
+    "prompt_tokens": 379,
+    "completion_tokens": 40,
+    "total_tokens": 419,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 379
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DSeq-JEPA integrates a discriminatively ordered sequential process with a JEPA-style learning objective.",
+   "usage": {
+    "prompt_tokens": 496,
+    "completion_tokens": 36,
+    "total_tokens": 532,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 496
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies feature normalization in IJEPA as the specific architectural choice being analyzed and modified.",
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 31,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 463
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work systematically investigates and compares the pretraining-followed-by-finetuning (PFT) and joint training (JT) paradigms.",
+   "usage": {
+    "prompt_tokens": 532,
+    "completion_tokens": 45,
+    "total_tokens": 577,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 532
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces LAVIE as a framework designed to bridge the modality gap between text-centric LLMs and vision-centric ViTs.",
+   "usage": {
+    "prompt_tokens": 505,
+    "completion_tokens": 39,
+    "total_tokens": 544,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 505
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a self-supervised approach using an attention mechanism to learn feature importance from unlabeled videos.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 36,
+    "total_tokens": 442,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method enables Chain-of-Thought reasoning for multi-image tasks without relying on manually curated question-answer pairs.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 36,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly describes PartCrop as a unified method motivated by shared part-aware capability that crops object parts to query responses in the representation space.",
+   "usage": {
+    "prompt_tokens": 537,
+    "completion_tokens": 39,
+    "total_tokens": 576,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 537
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current augmentation-based methods often neglect equivariant features, which aligns with the sentence's attribution to this paper.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 38,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2608.08309",
+   "label": "partial",
+   "reason": "The abstract supports the claim about formalizing why regularization is necessary to prevent collapse, but it does not mention 'equivariant features' or attribute that specific gap to this paper.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 46,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2412.03314",
+   "label": "unsupported",
+   "reason": "The abstract focuses on using image reconstruction to learn equivariant features via augmentations, but does not discuss extracting self-supervision signals from diverse sources like audio-visual correspondences or sequential structure.",
+   "usage": {
+    "prompt_tokens": 478,
+    "completion_tokens": 50,
+    "total_tokens": 528,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 478
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a self-supervised approach that learns representations based on audio-visual correspondence from unlabeled videos.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 34,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract confirms the paper uses self-supervised signals derived from inherent constraints within image triplets (multi-image constraints) to train the model without human annotations.",
+   "usage": {
+    "prompt_tokens": 502,
+    "completion_tokens": 46,
+    "total_tokens": 548,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 502
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2511.17354",
+   "label": "unsupported",
+   "reason": "The abstract describes a specific sequential prediction architecture but does not discuss the broader concept of extracting self-supervision signals from diverse sources like audio-visual correspondences or multi-image constraints.",
+   "usage": {
+    "prompt_tokens": 545,
+    "completion_tokens": 47,
+    "total_tokens": 592,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 545
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the relative effectiveness of the two paradigms depends on the task, labeled data availability, and domain complexity, confirming there is no universal winner.",
+   "usage": {
+    "prompt_tokens": 532,
+    "completion_tokens": 45,
+    "total_tokens": 577,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 532
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2508.02829",
+   "label": "partial",
+   "reason": "The abstract supports the claim that feature normalization is harmful in IJEPA but does not mention the author 'Colton' or discuss whether the findings generalize to other SSL frameworks.",
+   "usage": {
+    "prompt_tokens": 491,
+    "completion_tokens": 50,
+    "total_tokens": 541,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 491
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that theoretical claims are paired with controlled experiments and a specific patch-retrieval evaluation.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 32,
+    "total_tokens": 481,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2505.10351",
+   "label": "partial",
+   "reason": "The abstract confirms the paper demonstrates effective attacks and defenses, but it does not mention or imply the broader concept of a 'security arms race' or that this work is merely the beginning of one.",
+   "usage": {
+    "prompt_tokens": 532,
+    "completion_tokens": 50,
+    "total_tokens": 582,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 532
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2507.00754",
+   "label": "partial",
+   "reason": "The abstract confirms LAVIE improves various vision tasks but does not mention cross-modal generalization or transfer across different modalities as claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 530,
+    "completion_tokens": 40,
+    "total_tokens": 570,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 530
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2412.07406",
+   "label": "unsupported",
+   "reason": "The abstract discusses sound recommendations and correlation accuracy but does not mention cross-modal generalization across different vision tasks or modalities.",
+   "usage": {
+    "prompt_tokens": 422,
+    "completion_tokens": 39,
+    "total_tokens": 461,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 422
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly investigates the impact of layer normalization on IJEPA's performance and representation learning capabilities.",
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 31,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 462
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal to replace layer normalization with DynTanh to preserve token energies and lists the exact evaluation metrics mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 40,
+    "total_tokens": 522,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 482
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that feature normalization disrupts the natural energy hierarchy by forcing all features to have identical L2 norms.",
+   "usage": {
+    "prompt_tokens": 461,
+    "completion_tokens": 35,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 461
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that IJEPA models trained with feature LN exhibit loss maps with significant checkerboard-like artifacts.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 34,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that replacing LN with DynTanh preserves token energies and results in a longer-tailed loss distribution.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 35,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed DynTanh modification improves ImageNet linear probe accuracy from 38% to 42.7% for ViT-Small.",
+   "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 46,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 466
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2508.02829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed modification reduces RMSE by 0.08 on NYU Depth V2 monocular depth estimation.",
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 39,
+    "total_tokens": 502,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 463
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly states that progressive layer freezing accelerates MAE and enables latent prediction without representation collapse.",
+   "usage": {
+    "prompt_tokens": 367,
+    "completion_tokens": 31,
+    "total_tokens": 398,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 367
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the observation of layer convergence by depth, the use of progressive freezing to accelerate MAE and enable latent prediction, and the evaluation on the 4DS perception suite.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 48,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly states the observation that during video MAE training, shallower ViT layers converge early while deeper layers converge late.",
+   "usage": {
+    "prompt_tokens": 364,
+    "completion_tokens": 37,
+    "total_tokens": 401,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 364
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly states that exploiting the observation of layer convergence order to progressively freeze the model accelerates standard MAE training.",
+   "usage": {
+    "prompt_tokens": 359,
+    "completion_tokens": 35,
+    "total_tokens": 394,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 359
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the same schedule used for progressive freezing is applied to a simple and scalable approach to latent prediction.",
+   "usage": {
+    "prompt_tokens": 360,
+    "completion_tokens": 35,
+    "total_tokens": 395,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 360
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LayerLock is an approach to latent prediction that does not suffer from representation collapse.",
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 32,
+    "total_tokens": 386,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 354
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2509.10156",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach yields results surpassing non-latent masked prediction on the 4DS perception suite for models up to 4B parameters.",
+   "usage": {
+    "prompt_tokens": 370,
+    "completion_tokens": 43,
+    "total_tokens": 413,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 370
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2509.10156",
+   "label": "unsupported",
+   "reason": "The abstract does not mention any limitations, architecture specificity, or the need for schedule tuning.",
+   "usage": {
+    "prompt_tokens": 379,
+    "completion_tokens": 29,
+    "total_tokens": 408,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 379
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly argues for three 'necessary principles' to prevent representation collapse (degeneracy) in self-supervised learning.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 36,
+    "total_tokens": 467,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the formalization of three principles, the specific theoretical proofs mentioned, and the use of controlled experiments including patch-retrieval evaluation.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 41,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that combining observation and prediction without regularization admits the constant encoder as a global minimizer under negative-free alignment.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 36,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper proves the two objectives are gradient-complementary and structurally non-conflicting at the encoder output.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 37,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states as a proven claim that the momentum encoder converges to the same fixed point as the online encoder and provides no collapse guarantee at convergence.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 42,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that contrastive alignment provides only self-limiting collapse resistance, formalized via an explicit gradient-decay argument.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 38,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that every major self-supervised method is a special case of a single unified energy decomposition.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 33,
+    "total_tokens": 458,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly mentions proving claims under 'negative-free alignment' and 'momentum encoder convergence' while pairing them with 'controlled experiments' and a specific 'patch-retrieval evaluation'.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 52,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly states the work achieves multi-image reasoning improvements without relying on any human-annotated question-answer pairs.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 34,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the construction of image triplets, the use of rule-based reinforcement learning for visual comparison reasoning, and evaluation on multi-image and general vision benchmarks.",
+   "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 44,
+    "total_tokens": 521,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 477
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly states the observation that 'images contain inherent constraints that can serve as supervision' as the core insight for their self-supervised approach.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 40,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method achieves improvements 'Without relying on any human-annotated question-answer pairs'.",
+   "usage": {
+    "prompt_tokens": 435,
+    "completion_tokens": 33,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 435
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the learned reasoning ability from visual comparison tasks generalizes effectively to a wide range of questions.",
+   "usage": {
+    "prompt_tokens": 439,
+    "completion_tokens": 34,
+    "total_tokens": 473,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 439
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves significant improvements on multi-image reasoning benchmarks.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 27,
+    "total_tokens": 458,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2506.22434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method shows strong performance on general vision tasks.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 26,
+    "total_tokens": 456,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes DSeq-JEPA to integrate discriminatively ordered sequential predictions and demonstrates through experiments that this approach yields more generalizable representations.",
+   "usage": {
+    "prompt_tokens": 492,
+    "completion_tokens": 40,
+    "total_tokens": 532,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 492
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the methodology, mechanism, and evaluation tasks described in the abstract.",
+   "usage": {
+    "prompt_tokens": 535,
+    "completion_tokens": 28,
+    "total_tokens": 563,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 535
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The abstract explicitly states that standard I-JEPA predicts target regions in parallel and lacks the ability to order predictions meaningfully.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 36,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DSeq-JEPA 'bridges latent predictive and autoregressive self-supervised learning'.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 35,
+    "total_tokens": 516,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method induces a curriculum-like semantic progression from primary to secondary cues in pre-training.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 33,
+    "total_tokens": 514,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments show DSeq-JEPA consistently learns more discriminative representations compared to I-JEPA variants.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 37,
+    "total_tokens": 520,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2511.17354",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments across classification, fine-grained categorization, detection, segmentation, and reasoning tasks show the model learns more generalizable representations.",
+   "usage": {
+    "prompt_tokens": 487,
+    "completion_tokens": 43,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 487
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper evaluates learned representations for both sound effect recommendation and audio-visual correlation classification, confirming these as the core research objectives.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 41,
+    "total_tokens": 430,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of an attention mechanism for feature encoding, the evaluation tasks, and the application of cross-modal contrastive learning to improve performance.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 42,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the attention model improves correlation accuracy by 18% compared to the baseline on the VGG-Sound dataset.",
+   "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 39,
+    "total_tokens": 421,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 382
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach improves recommendation accuracy by 10% for the VGG-Sound dataset.",
+   "usage": {
+    "prompt_tokens": 377,
+    "completion_tokens": 34,
+    "total_tokens": 411,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 377
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of a self-supervised approach for learning audio and visual representations from unlabeled videos based on their correspondence.",
+   "usage": {
+    "prompt_tokens": 375,
+    "completion_tokens": 38,
+    "total_tokens": 413,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 375
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly states that training with cross-modal contrastive learning further improves recommendation performance.",
+   "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 28,
+    "total_tokens": 399,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 371
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2412.07406",
+   "label": "supported",
+   "reason": "The abstract explicitly states the model was evaluated using VGG-Sound and a dataset of gameplay video recordings.",
+   "usage": {
+    "prompt_tokens": 378,
+    "completion_tokens": 32,
+    "total_tokens": 410,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 378
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the modality mismatch as a fundamental challenge and proposes LAVIE as the specific framework to bridge this gap for vision-only tasks.",
+   "usage": {
+    "prompt_tokens": 503,
+    "completion_tokens": 40,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 503
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the LAVIE framework's use of MAE for ViT pre-training and LoRA layers within the LLM block, both optimized jointly and evaluated on downstream vision tasks.",
+   "usage": {
+    "prompt_tokens": 533,
+    "completion_tokens": 49,
+    "total_tokens": 582,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 533
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly states that direct fusion often fails to fully exploit the LLM's potential and suffers from unstable finetuning.",
+   "usage": {
+    "prompt_tokens": 493,
+    "completion_tokens": 36,
+    "total_tokens": 529,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 493
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly states that prior works typically keep LLM blocks frozen while learning only the vision components.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 31,
+    "total_tokens": 514,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the joint optimization guides the ViT to produce LLM-aligned features and the LLM to effectively interpret visual information.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 39,
+    "total_tokens": 533,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LAVIE significantly improves performance in various downstream vision tasks.",
+   "usage": {
+    "prompt_tokens": 480,
+    "completion_tokens": 27,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 480
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2507.00754",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that the proposed method offers an effective and efficient way to enhance visual understanding using frozen LLM knowledge.",
+   "usage": {
+    "prompt_tokens": 487,
+    "completion_tokens": 41,
+    "total_tokens": 528,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 487
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2507.00754",
+   "label": "unsupported",
+   "reason": "The abstract does not mention any limitations, dependencies on specific architectures, or constraints regarding LoRA effectiveness.",
+   "usage": {
+    "prompt_tokens": 502,
+    "completion_tokens": 31,
+    "total_tokens": 533,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 502
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work systematically investigates whether jointly optimizing self-supervised and supervised objectives provides a better alternative to the pretrain-then-finetune pipeline.",
+   "usage": {
+    "prompt_tokens": 519,
+    "completion_tokens": 44,
+    "total_tokens": 563,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 519
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the systematic comparison of PFT and JT paradigms across eight SSL methods, the specified diverse domains, and varying labeled data percentages.",
+   "usage": {
+    "prompt_tokens": 547,
+    "completion_tokens": 42,
+    "total_tokens": 589,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 547
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the relative effectiveness of PFT and JT depends strongly on the task, availability of labeled data, and domain complexity.",
+   "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 39,
+    "total_tokens": 545,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 506
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that joint training consistently improves data and training efficiency while being robust in low-label settings.",
+   "usage": {
+    "prompt_tokens": 499,
+    "completion_tokens": 32,
+    "total_tokens": 531,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 499
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that pretrain-finetuning (PFT) is more reliable in more specialized domains.",
+   "usage": {
+    "prompt_tokens": 496,
+    "completion_tokens": 33,
+    "total_tokens": 529,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 496
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors analyze representation quality and other factors, 'providing new insights into how self-supervised and supervised objectives interact during optimization.'",
+   "usage": {
+    "prompt_tokens": 500,
+    "completion_tokens": 43,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 500
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states in its final sentence that the work establishes a comprehensive empirical benchmark for hybrid SSL-based semi-supervised learning.",
+   "usage": {
+    "prompt_tokens": 499,
+    "completion_tokens": 36,
+    "total_tokens": 535,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 499
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2607.13192",
+   "label": "unsupported",
+   "reason": "The abstract describes the study's scope and findings but does not explicitly state or imply limitations regarding the specific methods, datasets, or label percentages used.",
+   "usage": {
+    "prompt_tokens": 515,
+    "completion_tokens": 40,
+    "total_tokens": 555,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 515
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's goal is to enhance augmentation-based self-supervised learning to facilitate equivariant feature learning alongside invariant ones for improved generalizability.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 43,
+    "total_tokens": 471,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the proposed method, mechanism, evaluation tasks, and datasets described in the abstract.",
+   "usage": {
+    "prompt_tokens": 457,
+    "completion_tokens": 31,
+    "total_tokens": 488,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 457
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states that augmentation-based self-supervised learning methods excel in learning invariant features but often neglect equivariant ones.",
+   "usage": {
+    "prompt_tokens": 414,
+    "completion_tokens": 35,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 414
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states that neglecting equivariant features reduces the generalizability of foundation models for downstream tasks requiring equivariance.",
+   "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 36,
+    "total_tokens": 446,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 410
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method facilitates equivariant feature learning without additional parameters.",
+   "usage": {
+    "prompt_tokens": 411,
+    "completion_tokens": 28,
+    "total_tokens": 439,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 411
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed approach is adaptable to various datasets and augmented-pair based learning methods.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 32,
+    "total_tokens": 444,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2412.03314",
+   "label": "supported",
+   "reason": "The abstract explicitly states that results demonstrate significant improvements over standard and state-of-the-art methods, particularly in scenarios involving combined augmentations.",
+   "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 37,
+    "total_tokens": 454,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 417
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2412.03314",
+   "label": "unsupported",
+   "reason": "The abstract claims consistent improvements across datasets and scenarios without mentioning dependencies on augmentation choices or specific tasks as limitations.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 32,
+    "total_tokens": 462,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper performs membership inference on visual self-supervised models in a black-box setting where training methods and details are unknown.",
+   "usage": {
+    "prompt_tokens": 523,
+    "completion_tokens": 39,
+    "total_tokens": 562,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 523
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of PartCrop as a unified method exploiting part-aware capability via cropping, its evaluation across protocols and datasets, and the assessment of defense strategies.",
+   "usage": {
+    "prompt_tokens": 551,
+    "completion_tokens": 45,
+    "total_tokens": 596,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 551
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PartCrop is a unified method effective against models trained with different paradigms like masked image modeling and contrastive learning.",
+   "usage": {
+    "prompt_tokens": 518,
+    "completion_tokens": 40,
+    "total_tokens": 558,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 518
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly states that results verify the effectiveness and generalization of PartCrop on models with different training protocols and structures.",
+   "usage": {
+    "prompt_tokens": 508,
+    "completion_tokens": 35,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 508
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments indicate early stopping, differential privacy, and the proposed shrinking crop scale range are all effective defenses.",
+   "usage": {
+    "prompt_tokens": 511,
+    "completion_tokens": 36,
+    "total_tokens": 547,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 511
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors quantitatively study scaling impacts from both data and model aspects in a realistic scenario.",
+   "usage": {
+    "prompt_tokens": 510,
+    "completion_tokens": 34,
+    "total_tokens": 544,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 510
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2505.10351",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors propose a scalable PartCrop-v2 by introducing two structural improvements.",
+   "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 31,
+    "total_tokens": 537,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 506
+    }
+   }
+  }
+ ]
+}

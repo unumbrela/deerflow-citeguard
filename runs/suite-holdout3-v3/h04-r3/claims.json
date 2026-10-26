@@ -1,0 +1,680 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Duan and Wong (2026) identify that existing uncertainty quantification methods fail to separately capture both aleatoric (data) and epistemic (model) uncertainties, often compromising rendering quality or incurring significant computational overhead.",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hung et al. (2025) introduce TimeNeRF, which builds generalizable neural radiance fields across time from few-shot input views without per-scene optimization.",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qazi et al. (2025) propose NeuGen, a brain-inspired normalization technique that extracts domain-invariant features and integrates seamlessly into existing NeRF architectures like MVSNeRF and GeoNeRF.",
+   "ids": [
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Huang et al. (2026) investigate how accelerated NeRF variants (DS-NeRF, TensoRF, HashNeRF) can be extended to work effectively in low-compute, low-data regimes, presenting architectural variants and depth-supervision extensions to characterize tradeoffs under constrained settings.",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gao et al. (2024) address planar reflections, which standard NeRF interprets as erroneous geometries, by introducing a reflection-aware NeRF that jointly models planar reflectors and explicitly casts reflected rays.",
+   "ids": [
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Matta et al. (2024) tackle lens flare removal as a multi-view image problem, proposing GN-FR within the Generalizable NeRF Transformer framework that leverages the view-dependent nature of flare artifacts to recover obscured details.",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Barreiro et al. (2025) focus on anisotropic specular surfaces like brushed metals with ShinyNeRF, which jointly estimates surface normals, tangents, specular concentration, and anisotropy magnitudes.",
+   "ids": [
+    "2512.21692"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wagner et al. (2025) propose Semantic Neural Radiance Fields for multi-date satellite data, deriving 3D semantic neural fields from satellite images with pixel-wise semantic labels to address temporal inconsistencies caused by non-stationary categories such as vehicles.",
+   "ids": [
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gu et al. (2025) introduce MaintaAvatar, a maintainable avatar based on NeRF using continual learning to update human avatars with new appearances and poses while avoiding catastrophic forgetting of past states.",
+   "ids": [
+    "2502.02372"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xiao et al. (2025) provide a comprehensive survey of NeRF for real-world applications, compiling key theoretical advancements and alternative scene representations, investigating emerging challenges, exploring applications in reconstruction, and reviewing essential datasets and toolkits.",
+   "ids": [
+    "2501.13104"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Both Huang et al. (2026) and Qazi et al. (2025) emphasize reducing computational requirements and improving generalization, suggesting broad agreement that accessibility and deployability are critical barriers.",
+   "ids": [
+    "2605.09312",
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also convergence on the value of multi-view information: Matta et al. (2024), Wagner et al. (2025), and Gao et al. (2024) all leverage multiple views to overcome limitations of single-image approaches, whether for flare removal, semantic labeling, or reflection handling.",
+   "ids": [
+    "2412.08200",
+    "2502.16992",
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Some works prioritize rendering quality above all (Duan & Wong, 2026; Barreiro et al., 2025), while others emphasize generalization and transferability (Qazi et al., 2025; Hung et al., 2025).",
+   "ids": [
+    "2602.23574",
+    "2512.21692",
+    "2505.06894",
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Computational efficiency: Huang et al. (2026) note that long training times and reliance on dense input views limit NeRF accessibility, yet none of the extensions they tested conclusively outperformed baselines under iso-time evaluation.",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Dataset limitations: Hung et al. (2025) explicitly note the lack of dedicated datasets for temporal 3D scene modeling, while Wagner et al. (2025) created a new dataset with manually generated labels for multi-view satellite images.",
+   "ids": [
+    "2507.13929",
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Uncertainty quantification: Duan and Wong (2026) identify that existing methods fail to capture both uncertainty types effectively, suggesting this remains an open challenge despite their proposed solution.",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Qazi et al. (2025) and Huang et al. (2026) propose complementary approaches, but a unified framework remains elusive.",
+   "ids": [
+    "2505.06894",
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Real-world deployment: Xiao et al. (2025) identify gaps between research advances and practical deployment, particularly in robotics and industrial applications where reliability and efficiency are paramount.",
+   "ids": [
+    "2501.13104"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Neural Radiance Fields accurately model anisotropic specular surfaces like brushed metals?",
+   "ids": [
+    "2512.21692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce ShinyNeRF, which jointly estimates surface normals, tangents, specular concentration, and anisotropy magnitudes of an Anisotropic Spherical Gaussian distribution by learning an approximation of outgoing radiance as an encoded mixture of isotropic von Mises-Fisher distributions.",
+   "ids": [
+    "2512.21692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ShinyNeRF handles both isotropic and anisotropic reflections effectively",
+   "ids": [
+    "2512.21692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method achieves state-of-the-art performance on digitizing anisotropic specular reflections",
+   "ids": [
+    "2512.21692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework offers plausible physical interpretations of material properties",
+   "ids": [
+    "2512.21692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach enables editing of material properties compared to existing methods",
+   "ids": [
+    "2512.21692"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can neural radiance fields quantify both aleatoric and epistemic uncertainties without compromising rendering quality or incurring significant computational overhead?",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Evidential Neural Radiance Fields, a probabilistic approach that integrates with the NeRF rendering process to enable direct quantification of both aleatoric and epistemic uncertainties from a single forward pass.",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They compare multiple uncertainty quantification methods on three standardized benchmarks.",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing uncertainty quantification methods for NeRFs fail to separately capture both aleatoric and epistemic uncertainties",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many existing methods either compromise rendering quality or incur significant computational overhead",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed approach demonstrates state-of-the-art scene reconstruction fidelity and uncertainty estimation quality",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method enables direct quantification of both uncertainty types from a single forward pass",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Neural Radiance Fields be improved to accurately handle complex planar reflections?",
+   "ids": [
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a reflection-aware NeRF that jointly models planar reflectors and explicitly casts reflected rays to capture high-frequency reflections, using sparse edge regularization to prevent duplicate scene representations.",
+   "ids": [
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method accurately handles planar reflections that standard NeRF interprets as erroneous geometries",
+   "ids": [
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Rendering along the primary ray produces clean, reflection-free views",
+   "ids": [
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explicitly rendering along reflected rays reconstructs highly detailed reflections",
+   "ids": [
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach obtains accurate scene geometry without duplicated representations",
+   "ids": [
+    "2411.04984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can NeRF-based human avatars be updated with new appearances and poses while maintaining rendering quality of past states?",
+   "ids": [
+    "2502.02372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose MaintaAvatar, which uses a Global-Local Joint Storage Module and Pose Distillation Module with continual learning to update avatars while avoiding catastrophic forgetting of past appearances and poses.",
+   "ids": [
+    "2502.02372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model resolves color bleeding issues and incorrect human body poses that occur with standard continual learning approaches",
+   "ids": [
+    "2502.02372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MaintaAvatar requires only limited data collection to quickly fine-tune the model",
+   "ids": [
+    "2502.02372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach avoids catastrophic forgetting of past appearance rendering quality",
+   "ids": [
+    "2502.02372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experimental results validate the effectiveness of the maintainable virtual avatar model",
+   "ids": [
+    "2502.02372"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can accelerated NeRF variants be extended to work effectively in low-compute, low-data regimes?",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a comparative study of three accelerated NeRF variants (DS-NeRF, TensoRF, and HashNeRF) with extensions for constrained settings.",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They add depth-supervision loss to TensoRF, ablate the feature-decoding MLP, and propose four architectural variants of HashNeRF color and density networks, reporting PSNR/training-time tradeoffs under matched iteration budgets.",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Long training times and reliance on dense input views limit NeRF accessibility",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Depth-supervision loss derived from COLMAP keypoints was added to TensoRF and evaluated on LLFF dataset under reduced view counts",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Under iso-time evaluation, none of the extensions conclusively outperform the published baselines",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The experiments characterize which extensions transfer to constrained settings and surface design questions for future work",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can neural radiance fields render novel views at arbitrary viewpoints and times from few input views without per-scene optimization?",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The approach harnesses multi-view stereo, neural radiance fields, and disentanglement strategies across diverse datasets to construct an implicit content radiance field for scene representation and enable building neural radiance fields at any arbitrary time.",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Novel views are synthesized via volume rendering.",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TimeNeRF can render novel views in a few-shot setting without per-scene optimization",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model excels in creating realistic novel views that transition smoothly across different times",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "It adeptly captures intricate natural scene changes from dawn to dusk",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current NeRF techniques have limited exploration for temporal 3D scene modeling with no dedicated datasets available",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can flare removal be addressed as a multi-view image problem using neural radiance fields to overcome limitations of single-image approaches?",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose GN-FR, a framework within the Generalizable NeRF Transformer that incorporates Flare-occupancy Mask Generation, View Sampler, and Point Sampler modules.",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They introduce a masking loss function for unsupervised settings and present a 3D multi-view flare dataset with 17 real flare scenes, 782 images, 80 flare patterns, and annotated flare-occupancy masks.",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Flare removal is highly ill-posed when relying on single-image approaches",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-view approach leverages view-dependent nature of flare artifacts and information from neighboring views to recover obscured details",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GN-FR can render flare-free views from sparse input images affected by lens flare and generalizes across different scenes unsupervised",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This is the first work to address flare removal within a Neural Radiance Fields framework",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A new 3D multi-view flare dataset was created with 17 real flare scenes and 782 images",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Neural Radiance Fields be improved to generalize better across diverse scenes and conditions?",
+   "ids": [
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose NeuGen, a brain-inspired normalization technique that extracts domain-invariant features and can be seamlessly integrated into existing NeRF architectures like MVSNeRF and GeoNeRF to enhance generalization capabilities.",
+   "ids": [
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeuGen improves generalization capabilities of NeRF models across diverse scenes",
+   "ids": [
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The technique surpasses existing models in generalizability on benchmark evaluations",
+   "ids": [
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeuGen markedly improves rendering quality in novel view synthesis",
+   "ids": [
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach merges neuroscientific principles with deep learning frameworks for enhanced efficiency",
+   "ids": [
+    "2505.06894"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Neural Radiance Fields be adapted to generate three-dimensional semantic representations from multi-date satellite images?",
+   "ids": [
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a satellite-specific NeRF model that derives 3D semantic neural fields from multi-date satellite images with pixel-wise semantic labels, enhancing color prediction by utilizing semantic information to address temporal inconsistencies.",
+   "ids": [
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach demonstrates robustness in generating 3D semantic representations from multi-date satellite imagery",
+   "ids": [
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model improves noisy input labels through its neural semantic field approach",
+   "ids": [
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Semantic information helps address temporal image inconsistencies caused by non-stationary categories such as vehicles",
+   "ids": [
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A new dataset with manually generated labels for multi-view satellite images was created to facilitate research",
+   "ids": [
+    "2502.16992"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the key theoretical advancements, applications, challenges, and future directions for Neural Radiance Fields in real-world settings?",
+   "ids": [
+    "2501.13104"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This survey compiles key theoretical advancements and alternative scene representations, investigates emerging challenges, explores applications in reconstruction, highlights NeRFs' impact on computer vision and robotics, and reviews essential datasets and toolkits through comprehensive literature review.",
+   "ids": [
+    "2501.13104"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeRFs have remodeled 3D scene representation since release and can effectively reconstruct complex 3D scenes from 2D images",
+   "ids": [
+    "2501.13104"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeRFs advance different fields including scene understanding, 3D content generation, and robotics",
+   "ids": [
+    "2501.13104"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Despite significant research progress, a thorough review of recent innovations, applications, and challenges was lacking",
+   "ids": [
+    "2501.13104"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey identifies gaps in the literature and discusses open challenges with directions for future research",
+   "ids": [
+    "2501.13104"
+   ]
+  }
+ ]
+}

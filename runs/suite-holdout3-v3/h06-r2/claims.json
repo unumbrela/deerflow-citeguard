@@ -1,0 +1,780 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hooper et al. (2025) introduced Efficient Tree Search (ETS), which uses a linear programming cost model to promote KV cache sharing while maintaining semantic diversity across trajectories.",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Wang et al. (2025) proposed block-wise value-guided search (VGS) that trains token-level value models without requiring fine-grained step definitions, collecting 2.5 million reasoning traces to train a 1.5B value model.",
+   "ids": [
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kaloga et al. (2026) introduced LARM, a depth-conditioned looped Transformer that structures recurrent encoder depth as a controllable test-time compute axis for automatic speech recognition.",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Labovich (2026) provided theoretical analysis of looped transformers, establishing a fixed-point based framework along three stability axes (reachability, input-dependence, geometry).",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sareen et al. (2025) demonstrated that prevalent RL methods (GRPO, Leave-one-out PPO) abandon learned value functions, hindering test-time compute scaling that relies on verification.",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2026) proposed UTTSI (Uncertainty-Triggered Test-Time Selective Inference), a training-free model-agnostic framework that uses a dual-signal estimator combining model logit confidence with data-level frequency prior to trigger adaptive feature filtering and stochastic feature-path explorations for uncertain instances.",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jia (2026) identified a \"Deliberation Drift Cliff\" phenomenon where unconstrained recurrent latent models suffer catastrophic reasoning collapse at deeper thinking steps (K >= 16), with performance dropping 22-62% across benchmarks.",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Olausson et al. (2026) studied diffusion language model sampling, introducing an idealized formal model of fork tokens to study the impact of remasking on expected entropy.",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Hamid et al. (2025) introduced a polychromic objective for policy gradient methods that explicitly enforces exploration and refinement of diverse generations, adapting PPO with vine sampling and a modified advantage function.",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Rodkin et al. (2025) used a controlled cellular-automata framework with disjoint training and test rules to exclude memorization, requiring models to infer hidden local rules from short state sequences and chain them to predict multiple future steps.",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Multiple papers converge on the finding that test-time compute scaling is most effective when combined with architectural modifications that enable controllable computation (Kaloga et al., 2026; Labovich, 2026) and verification mechanisms that can guide search (Sareen et al., 2025; Wang et al., 2025).",
+   "ids": [
+    "2606.04678",
+    "2604.15259",
+    "2505.04842",
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is broad agreement that naive increases in computation without structural support yield diminishing returns (Rodkin et al., 2025; Jia, 2026).",
+   "ids": [
+    "2508.16745",
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature also converges on the importance of maintaining diversity in generated trajectories for effective exploration (Olausson et al., 2026; Hamid et al., 2025; Hooper et al., 2025).",
+   "ids": [
+    "2604.09921",
+    "2509.25424",
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Disagreements: The literature shows some tension between approaches that emphasize efficiency through selective computation (Zhang et al., 2026) versus those that focus on maximizing exploration through diverse sampling (Olausson et al., 2026; Hamid et al., 2025).",
+   "ids": [
+    "2605.24989",
+    "2604.09921",
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is disagreement about the relative importance of architectural modifications versus search algorithm improvements: some work suggests architectural changes are fundamental (Labovich, 2026; Kaloga et al., 2026), while others demonstrate significant gains from algorithmic improvements alone (Hooper et al., 2025; Wang et al., 2025).",
+   "ids": [
+    "2604.15259",
+    "2606.04678",
+    "2502.13575",
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while several papers address stability challenges (Jia, 2026; Labovich, 2026), there remains limited understanding of the fundamental theoretical limits of test-time scaling across different architectures.",
+   "ids": [
+    "2609.37351",
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can reinforcement learning fine-tuning maintain diversity in policy outputs to prevent collapse into easily exploitable behaviors while enabling effective exploration?",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a polychromic objective for policy gradient methods that explicitly enforces exploration and refinement of diverse generations, adapting proximal policy optimization (PPO) with vine sampling for on-policy rollouts and a modified advantage function reflecting the new objective.",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluate on BabyAI, Minigrid, and Algorithmic Creativity environments.",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The polychromic objective improves success rates by reliably solving a larger set of environment configurations",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method generalizes better under large perturbations compared to standard RLFT",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In pass@k experiments with multiple attempts, the policy achieves substantially higher coverage",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach maintains and exploits a diverse repertoire of strategies",
+   "ids": [
+    "2509.25424"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can tree search for test-time compute scaling maintain trajectory diversity for exploration while reducing memory consumption and latency through KV cache sharing?",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Efficient Tree Search (ETS), which uses a linear programming cost model that penalizes the number of nodes retained to promote KV cache sharing, while incorporating a semantic coverage term to retain semantically different trajectories.",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluate ETS by measuring KV cache size reduction and throughput improvement compared to prior methods.",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ETS achieves 1.8× reduction in average KV cache size during the search process",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ETS leads to 1.4× increased throughput relative to prior state-of-the-art methods",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach maintains minimal accuracy degradation compared to existing methods",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ETS does not require any custom kernel implementation",
+   "ids": [
+    "2502.13575"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can catastrophic deliberation drift in test-time latent reasoning be mitigated while preserving expressivity and computational efficiency?",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Through a 22-round empirical and theoretical investigation, the author establishes Port-Hamiltonian Latent Deliberation (PH-LD) and proposes Direct-Gradient Pure-Tensor Helmholtz-Hodge Decomposition (DG-HHD) to decouple conservative and rotational flows in latent deliberation.",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is evaluated on logical benchmarks and small language model multi-hop causal reasoning tasks.",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unconstrained recurrent latent models suffer a Deliberation Drift Cliff, with reasoning collapsing at deeper thinking steps (K >= 16), dropping 22-62% across benchmarks",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strictly conservative scalar potential gradient flows suppress long-range drift (3.40% cliff) but bottleneck peak reasoning accuracy at 32.73%",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unconstrained rotational flows achieve high symbolic expressivity (82.33%) but suffer a severe 36.87% drift cliff",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DG-HHD achieves 58.67% peak accuracy (+25.94% over conservative HHD) and retains 35.27% at K=32",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DG-HHD achieves 1.84x vector field and 2.09x RK45 rollout speedups by eliminating runtime autograd dependencies",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All 30 Level 0 deterministic invariants are certified with Hodge machine error 1.65e-17 and contraction error 5.55e-17",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations, though the focus on Level 0 deterministic invariants suggests the approach may be constrained to specific problem classes.",
+   "ids": [
+    "2609.37351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can test-time computation be scaled to improve automatic speech recognition (ASR) performance without training larger models?",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce LARM, a depth-conditioned looped Transformer that uses sparse CTC checkpoints, supervision-clock embeddings, FiLM depth conditioning, and delayed soft-posterior feedback to structure recurrent encoder depth as a controllable test-time compute axis.",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is evaluated on LibriSpeech, measuring word error rate (WER) as inference loops increase.",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Naive looping of shared Transformer blocks does not fully exploit additional recurrent compute for ASR",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LARM improves WER as the number of inference loops increases",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LARM achieves performance competitive with deeper unshared-parameter baselines",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Test-time compute scaling can extend beyond autoregressive language-model reasoning to continuous non-autoregressive speech recognition",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The combination of sparse CTC checkpoints, FiLM conditioning, and delayed feedback enables shared weights to specialize across recurrent steps",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not report limitations of the approach or evaluation constraints.",
+   "ids": [
+    "2606.04678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Which architectural choices enable looped transformers to extrapolate to harder problems at test time rather than memorize training-specific solutions?",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The author introduces a fixed-point based framework analyzing looped architectures along three stability axes (reachability, input-dependence, geometry), proves theoretical results about fixed points in looped networks with and without recall, and empirically trains single-layer looped transformers on chess, sudoku, and prefix-sums tasks.",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A novel internal recall placement variant is also introduced and evaluated.",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Looped networks without recall have countable fixed points and cannot achieve strong input-dependence at any spectral regime",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Recall combined with outer normalization produces a regime where fixed points are simultaneously reachable, locally smooth in the input, and supported by stable backpropagation",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Downstream performance tracks the framework's predictions across tasks and architectural configurations",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Internal recall becomes competitive with—and on sudoku, substantially better than—standard recall placement when outer normalization is applied",
+   "ids": [
+    "2604.15259"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can diversity across samples be ensured in diffusion language model sampling while maintaining computational efficiency?",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce an idealized formal model of fork tokens to study the impact of remasking on expected entropy, then propose using softened, tempered versions of confidence-based remasking heuristics to increase diversity while retaining computational benefits.",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They empirically evaluate tempered heuristics against existing confidence-based and autoregressive sampling methods.",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tempered heuristics close the exploration gap (pass@k) between existing confidence-based and autoregressive sampling",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tempered heuristics outperform both methods when controlling for cost (pass@NFE)",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Increased diversity translates to benefits in downstream post-training and test-time compute scaling",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach offers simple implementations with retained computational benefits",
+   "ids": [
+    "2604.09921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do neural architectures learn and execute multi-step reasoning, and what factors limit reasoning depth beyond memorization?",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors use a controlled cellular-automata (1dCA) framework with disjoint training and test rules to exclude memorization, requiring models to infer hidden local rules from short state sequences and chain them to predict multiple future steps.",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluate LLMs and neural architectures trained from scratch, testing the effects of model depth, recurrence, memory, and test-time compute.",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs largely fail to reliably solve a natural-language proxy of the proposed cellular-automata reasoning task",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most neural architectures trained from scratch can learn rule inference and achieve high next-step accuracy",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance drops sharply as the required number of intermediate reasoning steps increases",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Increasing model depth is crucial for extending reasoning capability",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extending effective depth via recurrence, memory, or test-time compute improves results but remains bounded",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations, though the controlled 1dCA framework may not fully capture the complexity of real-world multi-step reasoning tasks.",
+   "ids": [
+    "2508.16745"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can reinforcement learning for LLM fine-tuning be designed to support test-time compute scaling by jointly training reasoners and verifiers?",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose RL^V, which augments any value-free RL method by jointly training the LLM as both a reasoner and a generative verifier using RL-generated data.",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is evaluated on MATH benchmarks with parallel sampling and sequential test-time compute scaling, including easy-to-hard and out-of-domain generalization tests.",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prevalent RL methods (GRPO, Leave-one-out PPO) abandon learned value functions, hindering test-time compute scaling that relies on verification",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL^V boosts MATH accuracy by over 20% with parallel sampling",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL^V enables 8-32x more efficient test-time compute scaling compared to base RL methods",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL^V exhibits strong generalization for easy-to-hard and out-of-domain tasks",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL^V achieves 1.2-1.6x higher performance when jointly scaling parallel and sequential test-time compute with a long reasoning R1 model",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations, though the approach requires joint training of reasoner and verifier capabilities, which may add complexity to the training pipeline.",
+   "ids": [
+    "2505.04842"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can value models be trained for long-context reasoning traces without requiring fine-grained step definitions, and can value-guided search improve test-time scaling efficiency?",
+   "ids": [
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a token-level value model training method that does not require fine-grained step definitions, collecting 2.5 million reasoning traces to train a 1.5B value model, then applying block-wise value-guided search (VGS) with final weighted majority vote to DeepSeek models for test-time compute scaling.",
+   "ids": [
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Block-wise VGS with final weighted majority vote achieves better test-time scaling than standard majority voting or best-of-n",
+   "ids": [
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VGS significantly reduces the inference FLOPs required to achieve the same performance as majority voting",
+   "ids": [
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dataset, model, and codebase are open-sourced",
+   "ids": [
+    "2505.17373"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can test-time compute be selectively scaled for industrial CTR prediction to address unreliable predictions on sparsely observed feature combinations?",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose UTTSI (Uncertainty-Triggered Test-Time Selective Inference), a training-free model-agnostic framework that uses a dual-signal estimator combining model logit confidence with data-level frequency prior to trigger adaptive feature filtering and stochastic feature-path explorations for uncertain instances.",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is evaluated on four datasets with three backbone architectures and tested in a seven-day online A/B test.",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CTR models suffer from asymmetry: well-represented feature combinations yield confident predictions, while sparsely observed ones produce unreliable outputs",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UTTSI scales inference depth proportionally to per-instance uncertainty while keeping average overhead at approximately 2.8x base model cost",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments on four datasets with three backbones demonstrate consistent, statistically significant gains over all training-phase baselines",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A seven-day online A/B test confirms a 5.3% relative CTR gain (p < 0.01)",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Selective test-time compute allocation serves as a practical complement to training-phase advances for CTR prediction",
+   "ids": [
+    "2605.24989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations, though worst-case latency remains unchanged, suggesting potential deployment constraints for real-time systems.",
+   "ids": [
+    "2605.24989"
+   ]
+  }
+ ]
+}

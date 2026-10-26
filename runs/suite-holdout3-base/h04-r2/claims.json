@@ -1,0 +1,728 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Duan and Wong (2026) introduced Evidential Neural Radiance Fields, which separately quantify both aleatoric (data) and epistemic (model) uncertainties from a single forward pass without compromising rendering quality.",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Huang et al. (2026) conducted a systematic comparative study of accelerated NeRF variants (DS-NeRF, TensoRF, HashNeRF) in low-compute, low-data regimes, exploring extensions like depth supervision and architectural modifications.",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Forestry and Environmental Monitoring: Castorena (2024) showed that NeRFs can express fine features of forest 3D structure, fuse remote sensing modalities, and improve forest metrics derived from 3D structure.",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Medical Imaging: Wang et al. (2024) surveyed NeRF applications in medical imaging, identifying four critical challenges: fundamental imaging principles, inner structure requirements, object boundary definition, and color density significance.",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hyperspectral Imaging: Chen et al. (2024) extended NeRF to hyperspectral reconstruction, where every point in space is characterized by wavelength-dependent radiance and transmittance spectra.",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Motion Blur: Qi et al. (2024) proposed EBAD-NeRF, which leverages event cameras to jointly optimize learnable poses and NeRF parameters under motion blur.",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lens Flare: Matta et al. (2024) framed flare removal as a multi-view problem within the Generalizable NeRF Transformer framework.",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Large-Scale Scenes: Ni et al. (2024) addressed reconstruction in complex and large-scale scenes with Torch-NeRF, which enlarges the ray perception field by rendering patches of pixels simultaneously and replaces the standard MLP with distance-aware convolutions for enhanced feature propagation.",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "TimeNeRF (Hung et al., 2025) addresses the underexplored problem of temporal 3D scene modeling, enabling rendering at arbitrary viewpoints and arbitrary times from few-shot inputs.",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nguyen et al. (2024) comprehensively reviewed semantically-aware NeRFs, which integrate semantic labels as viewpoint-invariant functions mapping spatial coordinates to semantic categories.",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can neural radiance fields improve upon existing remote sensing methods for forestry applications and forest monitoring?",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The work presents experiments demonstrating NeRF's potential to express fine features of forest 3D structure, fuse available remote sensing modalities, and improve upon 3D structure-derived forest metrics.",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeRFs can express fine features of forest 3D structure",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeRFs can fuse available remote sensing modalities effectively",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeRFs improve upon 3D structure-derived forest metrics",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Neural fields offer a wide range of possibilities to improve existing remote sensing methods in forest monitoring",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Neural fields are attractive computational tools for advancing scalability and accuracy of forest monitoring programs",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract presents potential capabilities rather than fully validated results; specific experimental details, dataset scales, and quantitative improvements over baselines are not specified.",
+   "ids": [
+    "2401.15029"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can Neural Radiance Fields be extended to create 3D hyperspectral reconstructions that provide both spatial and spectral information?",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed hyperspectral NeRF that computes wavelength-dependent radiance and transmittance spectra for every point in space and view direction, evaluated on a collected dataset of nearly 2000 hyperspectral images across 8 scenes and 2 cameras.",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables fast, accurate volumetric 3D hyperspectral scene reconstruction",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Every point in space and view direction characterized by wavelength-dependent radiance and transmittance spectra",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms traditional RGB NeRF baselines in hyperspectral reconstruction tasks",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates potential for hyperspectral super-resolution applications",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables imaging sensor simulation and mitigates common HSI challenges with non-Lambertian surfaces and translucent objects",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires specialized hyperspectral camera data which has technological limitations; the approach depends on recent NeRF advances and may not address all traditional 3D reconstruction challenges with HSI.",
+   "ids": [
+    "2403.14839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Neural Radiance Fields separately capture both aleatoric and epistemic uncertainties without compromising rendering quality or incurring significant computational overhead?",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Evidential Neural Radiance Fields, a probabilistic approach that seamlessly integrates with the NeRF rendering process, enabling direct quantification of both uncertainty types from a single forward pass.",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach demonstrates state-of-the-art scene reconstruction fidelity across three standardized benchmarks",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method achieves state-of-the-art uncertainty estimation quality",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both aleatoric and epistemic uncertainties are captured simultaneously from a single forward pass",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach does not compromise rendering quality compared to existing methods",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method avoids significant computational overhead for obtaining uncertainty estimates",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; evaluation is limited to three standardized benchmarks which may not reflect all real-world deployment scenarios.",
+   "ids": [
+    "2602.23574"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can accelerated NeRF variants be adapted and extended for low-compute, low-data regimes?",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conduct a comparative study of three accelerated NeRF variants (DS-NeRF, TensoRF, HashNeRF) with proposed extensions including depth-supervision loss for TensoRF, MLP architecture ablation, and four HashNeRF network variants with residual and convolutional designs.",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Added depth-supervision loss derived from COLMAP keypoints to TensoRF and evaluated on LLFF dataset under reduced view counts",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ablation studies revealed the effect of input downsampling on PSNR and runtime for synthetic Lego scene",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Four architectural variants of HashNeRF color and density networks were proposed and evaluated",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Under iso-time evaluation, none of the extensions conclusively outperformed the published baselines",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments characterized which extensions transfer to constrained settings and identified design questions for future work",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: None of the proposed extensions conclusively outperformed existing baselines under iso-time evaluation, suggesting limited immediate practical benefit for constrained settings.",
+   "ids": [
+    "2605.09312"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can we build generalizable NeRFs that render novel views at arbitrary viewpoints and times from few-shot input views without per-scene optimization?",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: TimeNeRF harnesses multi-view stereo, neural radiance fields, and disentanglement strategies across diverse datasets to construct an implicit content radiance field for scene representation, enabling neural radiance field construction at arbitrary times with novel view synthesis via volume rendering.",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TimeNeRF renders novel views in a few-shot setting without per-scene optimization",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method creates realistic novel views that transition smoothly across different times",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "It captures intricate natural scene changes from dawn to dusk effectively",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses the lack of dedicated datasets for temporal 3D scene modeling",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Real-world applications benefit from reduced cost in collecting multiple views and avoiding re-optimization for unseen scenes",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The few-shot input constraint may limit performance in certain scenarios; the abstract does not specify computational requirements, generalization boundaries across scene types, or quantitative comparisons with temporal NeRF baselines.",
+   "ids": [
+    "2507.13929"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can lens flare artifacts be effectively removed from images by leveraging multi-view information rather than single-image approaches?",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Frame flare removal as a multi-view problem using the Generalizable NeRF Transformer framework with Flare-occupancy Mask Generation, View Sampler, and Point Sampler modules, plus a masking loss function for unsupervised learning.",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully renders flare-free views from sparse sets of flare-corrupted input images",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generalizes across different scenes in an unsupervised manner without requiring paired flare-free training data",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Introduced the first 3D multi-view flare dataset with 17 real scenes, 782 images, 80 flare patterns, and annotated flare-occupancy masks",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Leverages view-dependent nature of flare artifacts to recover details obscured in individual images",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "First work to address flare removal within a Neural Radiance Fields framework",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As the first work addressing flare removal in NeRF framework, comparisons to prior methods are limited; the unsupervised masking approach may have constraints in handling complex flare patterns without ground truth supervision.",
+   "ids": [
+    "2412.08200"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can NeRF be improved to handle complex and large-scale scene reconstruction where background variance and limited contextual information pose challenges?",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Propose Torch-NeRF that enlarges ray perception field by having each camera ray render a patch of pixels simultaneously, and replace the standard MLP with distance-aware convolutions to enhance feature propagation among sample points on each ray.",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Novel inference pattern enables single camera rays to possess more contextual information by rendering patches instead of individual pixels",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distance-aware convolutions enhance feature propagation among sample points from the same camera ray",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully addresses background variance challenges in complex scenes",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments on KITTI-360 and LLFF datasets demonstrate excellent performance",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables better reconstruction in complex and large-scale scenes compared to prevalent small-scale methods",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The patch-based rendering approach may increase computational requirements; performance on extremely large-scale outdoor scenes beyond KITTI-360 and LLFF remains to be validated.",
+   "ids": [
+    "2404.02617"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do semantically-aware Neural Radiance Fields contribute to visual scene understanding, and what applications do they enable?",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This comprehensive review analyzes over 250 scholarly papers on semantically-aware NeRFs, exploring how they infer 3D representations for stationary and dynamic objects, with semantic labels functioning as viewpoint-invariant functions mapping spatial coordinates to semantic labels.",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeRFs adeptly infer 3D representations for both stationary and dynamic objects in a scene",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Semantic labels serve as viewpoint-invariant functions that facilitate recognition of distinct objects within scenes",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Applications include novel viewpoint generation, scene inpainting, panoptic segmentation, 3D bounding box prediction, 3D scene editing, and object-centric 3D model extraction",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey highlights significant progression in semantically-aware NeRF applications for visual scene interpretation",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The capability is pivotal for generating high-quality new viewpoints and completing missing scene details",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a review paper, it synthesizes existing work rather than proposing novel methods; the analysis of 250+ papers may not capture all relevant research, and specific gaps or future directions are not detailed in the abstract.",
+   "ids": [
+    "2402.11141"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can motion blur in images be addressed to improve NeRF reconstruction quality in low-light and high-speed motion scenes?",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Event-driven Bundle Adjustment for Deblurring Neural Radiance Fields (EBAD-NeRF) that jointly optimizes learnable poses and NeRF parameters using hybrid event-RGB data, with an intensity-change-metric event loss and a photo-metric blur loss to explicitly model camera motion blur.",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "EBAD-NeRF obtains accurate camera trajectory during exposure time",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method learns sharper 3D representations compared to prior works",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Event cameras compensate for information deficiency in pose and lighting estimation during exposure",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach works effectively on both synthetic and real-captured data",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Previous deblurring NeRF methods struggle with pose and lighting estimation during exposure time, which EBAD-NeRF addresses",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The method requires event camera data, which limits applicability to scenarios where such specialized hardware is available; standard RGB-only setups cannot benefit from this approach.",
+   "ids": [
+    "2406.14360"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the unique challenges and opportunities when applying Neural Radiance Fields to medical imaging applications?",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey examining NeRF applications in medical imaging, identifying four key challenges, reviewing current methods across different organs, and analyzing datasets and evaluation metrics.",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NeRF offers significant potential for synthesizing 3D representations from 2D medical image data",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Four imminent challenges identified: fundamental imaging principles, inner structure requirements, object boundary definition, and color density significance",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current methods reviewed across different organ systems with associated limitations documented",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing datasets and evaluation metrics for medical NeRF applications catalogued",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Several promising directions proposed for future research in medical NeRF applications",
+   "ids": [
+    "2402.17797"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey paper, does not propose novel solutions; medical NeRF applications face fundamental challenges due to differences between natural and medical imaging that remain unresolved.",
+   "ids": [
+    "2402.17797"
+   ]
+  }
+ ]
+}

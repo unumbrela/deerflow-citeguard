@@ -1,0 +1,774 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2026) propose Value-Rectified Distillation (VRD), which reformulates policy distillation as value-guided generative trajectory alignment.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Upadhyay (2026) introduces UNIQ, which uses conformal prediction to compute state-adaptive uncertainty estimates, relaxing conservatism in well-covered regions while strengthening it near data frontiers.",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Arnob et al. (2025) demonstrate that offline RL algorithms overfit on small datasets and propose Sparse-Reg, a sparsity-based regularization technique.",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Cao et al. (2025) present adversarial data augmentation in model-based RL, dynamically selecting ensemble models to expand training data without rollout horizon tuning.",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Gao et al. (2025) propose Only Support Constraint (OSC), which restricts policies to the behavior policy's support without imposing extra constraints on in-support actions.",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2025) show that classical offline RL fails to generalize to new environments and propose pessimistic empirical risk minimization (PERM) and pessimistic proximal policy optimization (PPPO).",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Chenreddy and Delage (2026) propose replacing discrete ensembles with compact uncertainty sets over Q-values, achieving improved robustness across tabular and continuous domains.",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Ni et al. (2026) argue that offline RL should prioritize learning adaptive policy priors—policies preserving capacity for improvement during subsequent online interaction—rather than static deployment.",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Research Themes",
+   "kind": "synthesis",
+   "text": "Jiang and Xie (2025) provide a comprehensive survey of offline RL theory in large state spaces, mapping the landscape of algorithms based on expressivity assumptions (Bellman completeness vs. realizability) and data coverage requirements (all-policy vs. single-policy).",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can we address the Out-of-Distribution Mode Averaging problem that occurs when distilling Flow Matching based behavior policies in offline reinforcement learning?",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Value-Rectified Distillation (VRD), a framework that reformulates offline policy distillation as a value-guided generative trajectory alignment problem using a dynamic coupling mechanism.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They instantiate VRD through two algorithms: VRD-Q (value-quantile behavior distillation to filter low-value behaviors) and VRD-R (latent space reorganization to geometrically isolate high-value trajectories).",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD actively rectifies flow dynamics to explicitly decouple distinct behavioral modes, preventing action collapse into invalid OOD regions",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework cleanly isolates high-value actions from multi-modal datasets",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD improves existing generative baselines across diverse continuous control and planning tasks",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance gains are especially pronounced on multi-modal, non-expert datasets",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Empirical validation spans D4RL, OGBench, and Minari benchmarks",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation is limited to continuous control and planning tasks on specific benchmarks; the approach may not generalize to discrete action spaces or other RL domains beyond the tested environments.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can we effectively train off-policy models from a limited number of suboptimal trajectories in offline reinforcement learning?",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a trajectory-based augmentation technique that exploits task structure and the geometric relationship between rewards, value functions, and mathematical properties of logging policies.",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach supports suboptimal logging policies during data collection to improve data quality.",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trajectory-level augmentation enables training from limited suboptimal trajectories",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method supports suboptimal logging policies during data collection, leading to higher data quality",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical justification is provided for the augmentation strategies",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Empirical validation shows improved offline RL performance across positioning tasks",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach works under varying dimensionality and partial observability conditions",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The method is motivated by and validated primarily on active positioning problems; generalization to other task domains beyond positioning tasks remains unexplored.",
+   "ids": [
+    "2605.13401"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can an agent trained on offline data from multiple environments achieve zero-shot generalization to unseen test environments without further interaction?",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose two algorithms: pessimistic empirical risk minimization (PERM) and pessimistic proximal policy optimization (PPPO), both leveraging pessimistic policy evaluation to guide policy learning and enhance generalization across environments.",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Classical offline RL methods fail to generalize to new, unseen environments",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both PERM and PPPO can find near-optimal policies with zero-shot generalization property",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pessimistic policy evaluation effectively guides policy learning for enhanced generalization",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This work provides the first theoretical understanding of the generalization phenomenon in offline RL",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The results establish a foundation for understanding zero-shot generalization in offline settings",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: This work represents a first step in understanding generalization in offline RL; the theoretical results may rely on assumptions that limit practical applicability, and empirical validation scope is not extensively detailed.",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can we prevent overfitting in offline reinforcement learning when working with considerably smaller datasets than typical benchmarks?",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Sparse-Reg, a regularization technique based on sparsity designed to mitigate overfitting in offline RL, enabling effective learning in limited data settings.",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Offline RL algorithms overfit on small datasets, resulting in poor performance",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many offline RL applications rely on datasets considerably smaller than the million+ data points in common benchmarks",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse-Reg enables effective learning in limited data settings",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method outperforms state-of-the-art baselines in continuous control tasks",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparsity-based regularization addresses the sample complexity challenge in small-data offline RL",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The focus is primarily on small dataset scenarios; evaluation is concentrated on continuous control tasks, and applicability to other RL domains or larger datasets is not thoroughly explored.",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can offline RL apply state-adaptive conservatism instead of fixed uniform penalties across all states regardless of local data coverage?",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: UNIQ (Uncertainty-Informed Quantile) is built on the IQL backbone and trains a multi-expectile value ensemble, computes distribution-free uncertainty estimates using split conformal prediction, and maps the uncertainty signal to a state-dependent expectile that adjusts conservatism based on data coverage.",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UNIQ introduces state-adaptive conservatism through conformally calibrated uncertainty estimation",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method relaxes conservatism in well-covered regions while strengthening it in uncertain regions near the data frontier",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "UNIQ consistently improves over IQL on D4RL MuJoCo benchmarks, with largest gains on Walker2d and replay-heavy tasks",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Memory cost is approximately 250 MB peak VRAM, providing roughly 10x reduction compared to EDAC",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach improves the performance-efficiency trade-off in offline reinforcement learning",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: UNIQ is positioned as a practical mechanism contribution rather than pursuing overall state-of-the-art performance; evaluation is primarily on D4RL MuJoCo benchmarks, and generalization to other domains is not extensively validated.",
+   "ids": [
+    "2606.07592"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How should offline RL be reformulated when offline-trained policies are subsequently updated through online interaction rather than deployed statically?",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Position paper that formalizes adaptive offline reinforcement learning (AORL), distinguishes it from offline-to-online RL, and proposes Bayesian offline RL as a principled direction for constructing adaptive policy priors that preserve epistemic uncertainty.",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Offline RL objective should extend beyond immediate deployment to prioritize learning adaptive policy priors with capacity for improvement during subsequent interaction",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adaptability becomes critical under distributional shift, limited dataset coverage, and changing test-time conditions",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Bayesian offline RL can preserve epistemic uncertainty over plausible environments, enabling better test-time adaptation",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Offline RL should be treated as preparation for future experience rather than as a static deployment problem",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: This is a position paper outlining conceptual frameworks and research directions rather than presenting empirical validation; open challenges remain for practically implementing adaptive policy priors.",
+   "ids": [
+    "2609.35880"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: What are the theoretical foundations, algorithms, and guarantees for offline reinforcement learning in large state spaces?",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Survey article introducing theory covering expressivity assumptions on function approximation (Bellman completeness vs. realizability) and data coverage requirements (all-policy vs. single-policy coverage), mapping the landscape of algorithms under different assumptions.",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different expressivity assumptions on function approximation lead to distinct algorithmic approaches and theoretical guarantees",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Data coverage requirements (all-policy vs. single-policy) fundamentally affect what sample and computational complexity guarantees are achievable",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Rich landscape of algorithms exists depending on which assumptions one is willing to make",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Important connections exist between offline RL theory and adjacent research areas",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey article, it synthesizes existing work rather than proposing new algorithms; theoretical guarantees depend on assumptions that may not hold in practical applications.",
+   "ids": [
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can policy constraint methods reduce excessive conservatism while still addressing distributional shift in offline RL?",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes Only Support Constraint (OSC) derived from maximizing total probability of learned policy within the behavior policy's support, using a diffusion model to effectively characterize the support of behavior policies.",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OSC presents a regularization term that restricts policies to the support without imposing extra constraints on actions within the support",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Diffusion model effectively characterizes the support of behavior policies for constraint enforcement",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significantly enhances performance across various offline RL benchmarks compared to existing policy constraint methods",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully alleviates distributional shift challenges while mitigating excessive conservatism of prior policy constraint approaches",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires diffusion model for support characterization which adds complexity; evaluation limited to standard offline RL benchmarks without demonstration on real-world tasks.",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can offline RL better handle epistemic uncertainty from limited or biased data coverage without relying on large ensembles?",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes unified framework replacing discrete ensembles with compact uncertainty sets over Q-values, and introduces a benchmark for evaluating offline RL algorithms under risk-sensitive behavior policies.",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Compact uncertainty sets over Q-values provide unified and generalizable alternative to discrete ensemble methods",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves improved robustness and generalization over ensemble-based baselines (e.g., SAC-N) across both tabular and continuous state domains",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Avoids conflation of epistemic with aleatoric uncertainty that plagues ensemble-based approaches",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "New benchmark enables evaluation of offline RL algorithms under risk-sensitive behavior policies",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires further validation on additional real-world benchmarks; uncertainty set construction may have computational considerations not fully explored.",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research Question: How can model-based offline RL develop robust policies from static data without requiring rollout horizon tuning?",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces MORAL framework employing adversarial data augmentation with alternating sampling from ensemble models, integrating a differential factor for regularization to minimize extrapolation errors.",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adversarial process dynamically selects ensemble models against policy for biased sampling, mitigating optimistic estimation of fixed models",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Robustly expands training data for policy optimization without requiring rollout horizon tuning",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Differential factor regularization ensures error minimization in extrapolations",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms other model-based offline RL methods on D4RL benchmark in terms of policy learning and sample efficiency",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shows remarkable applicability across diverse offline tasks without task-specific tuning",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation primarily on D4RL benchmarks; adversarial sampling process introduces additional computational overhead compared to standard model-based approaches.",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Both UNIQ (Upadhyay, 2026) and OSC (Gao et al., 2025) advocate for state-dependent or support-aware constraint mechanisms rather than fixed penalties.",
+   "ids": [
+    "2606.07592",
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Small-Data Challenges: Three papers independently address the gap between benchmark datasets and real-world applications (Arnob et al., 2025; Schmähling et al., 2026; Cao et al., 2025), converging on the need for specialized regularization and augmentation techniques.",
+   "ids": [
+    "2506.17155",
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Beyond Static Deployment: The shift from viewing offline RL as static policy deployment toward adaptive preparation for online interaction appears in both the AORL position paper (Ni et al., 2026) and the generalization work (Wang et al., 2025).",
+   "ids": [
+    "2609.35880",
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Ensemble Alternatives: Both UNIQ and the epistemic robustness work (Chenreddy & Delage, 2026) propose alternatives to large ensembles, converging on compact uncertainty representations for efficiency.",
+   "ids": [
+    "2604.07072"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Pessimism vs. Adaptivity: While Wang et al. (2025) emphasize pessimistic policy evaluation for generalization, Upadhyay (2026) and Gao et al. (2025) advocate for adaptive mechanisms that relax conservatism in well-covered regions.",
+   "ids": [
+    "2503.07988",
+    "2606.07592",
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Model-Based vs. Model-Free: The literature includes both model-based approaches (Cao et al., 2025) and model-free methods (most others), with no clear convergence on which paradigm dominates for specific scenarios.",
+   "ids": [
+    "2503.20285"
+   ]
+  },
+  {
+   "section": "Research Gaps",
+   "kind": "synthesis",
+   "text": "Theoretical-Practical Gap: Theoretical results (Wang et al., 2025; Jiang & Xie, 2025) rely on assumptions that may not hold in practice, and empirical papers often lack theoretical grounding.",
+   "ids": [
+    "2503.07988",
+    "2510.04088"
+   ]
+  },
+  {
+   "section": "Research Gaps",
+   "kind": "synthesis",
+   "text": "Generalization Validation: While generalization is a stated goal (Wang et al., 2025), most papers do not test on genuinely unseen environments or distribution shifts beyond standard benchmark splits.",
+   "ids": [
+    "2503.07988"
+   ]
+  }
+ ]
+}

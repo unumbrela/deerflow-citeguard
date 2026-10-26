@@ -1,0 +1,1365 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract confirms UNIQ uses conformal prediction for state-adaptive conservatism near the data frontier and achieves a 10x memory reduction compared to EDAC.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 43,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2503.05207",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that OSC restricts policies to the support without extra constraints and utilizes a diffusion model to characterize that support.",
+   "usage": {
+    "prompt_tokens": 485,
+    "completion_tokens": 36,
+    "total_tokens": 521,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 485
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper addresses OOD mode averaging in flow-based policies using Value-Rectified Distillation (VRD) to decouple behavioral modes and isolate high-value actions.",
+   "usage": {
+    "prompt_tokens": 473,
+    "completion_tokens": 49,
+    "total_tokens": 522,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 473
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of Sparse-Reg as a sparsity-based technique that mitigates overfitting in small datasets and outperforms baselines in continuous control.",
+   "usage": {
+    "prompt_tokens": 343,
+    "completion_tokens": 46,
+    "total_tokens": 389,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 343
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MORAL replaces fixed horizon rollout with adversarial data augmentation to dynamically select ensemble models against the policy, enriching training data without requiring rollout horizon tuning.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 46,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that classical offline RL fails to generalize and introduces PERM and PPPO using pessimistic policy evaluation to achieve zero-shot generalization.",
+   "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 41,
+    "total_tokens": 436,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 395
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a unified framework replacing discrete ensembles with compact uncertainty sets to address epistemic uncertainty and avoid conflating it with aleatoric uncertainty, achieving improved robustness.",
+   "usage": {
+    "prompt_tokens": 427,
+    "completion_tokens": 51,
+    "total_tokens": 478,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 427
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper introduces theory on offline RL in large state spaces, covering the specific expressivity and data coverage assumptions mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 342,
+    "completion_tokens": 41,
+    "total_tokens": 383,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 342
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper formalizes adaptive offline reinforcement learning (AORL) and argues that traditional conservative objectives are incomplete for policies updated via online interaction.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 43,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing methods using fixed uniform penalties are suboptimal and proposes a state-adaptive approach to address this.",
+   "usage": {
+    "prompt_tokens": 471,
+    "completion_tokens": 37,
+    "total_tokens": 508,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 471
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2503.05207",
+   "label": "unsupported",
+   "reason": "The abstract does not mention state-adaptive approaches or advocate for selectivity, focusing instead on a support-based constraint to reduce uniform conservatism.",
+   "usage": {
+    "prompt_tokens": 500,
+    "completion_tokens": 38,
+    "total_tokens": 538,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 500
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2610.29075",
+   "label": "unsupported",
+   "reason": "The abstract proposes a specific method (VRD) to address mode averaging but does not explicitly discuss 'uniform conservatism' or advocate for 'state-adaptive approaches' as described in the sentence.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 49,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2506.17155",
+   "label": "partial",
+   "reason": "The abstract confirms the paper addresses the gap between large benchmarks and small real-world datasets, but does not explicitly state that there is 'broad agreement' on this being a critical challenge.",
+   "usage": {
+    "prompt_tokens": 360,
+    "completion_tokens": 48,
+    "total_tokens": 408,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 360
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2503.20285",
+   "label": "unsupported",
+   "reason": "The abstract discusses sample efficiency and benchmark performance but does not mention addressing the gap between benchmark datasets and real-world data constraints.",
+   "usage": {
+    "prompt_tokens": 475,
+    "completion_tokens": 35,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 475
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2503.07988",
+   "label": "unsupported",
+   "reason": "The abstract discusses pessimism and generalization but does not mention 'epistemic uncertainty' or attribute the challenge specifically to 'limited coverage'.",
+   "usage": {
+    "prompt_tokens": 385,
+    "completion_tokens": 40,
+    "total_tokens": 425,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 385
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies epistemic uncertainty from limited data coverage as a key challenge and proposes a framework specifically designed to address it.",
+   "usage": {
+    "prompt_tokens": 416,
+    "completion_tokens": 37,
+    "total_tokens": 453,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 416
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The abstract confirms the paper describes a landscape of algorithms dependent on various assumptions and explicitly discusses open questions, aligning with the claim of presenting competing assumptions without resolving them.",
+   "usage": {
+    "prompt_tokens": 324,
+    "completion_tokens": 44,
+    "total_tokens": 368,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 324
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the work as a 'position paper' that outlines directions and challenges rather than presenting empirical results or concrete construction methods.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 44,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2510.04088",
+   "label": "partial",
+   "reason": "The abstract confirms the paper surveys theoretical foundations and algorithms with guarantees, but it does not explicitly state that these algorithms fail to scale to real-world complexity.",
+   "usage": {
+    "prompt_tokens": 330,
+    "completion_tokens": 41,
+    "total_tokens": 371,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 330
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates overfitting in offline RL with small datasets and introduces a technique to mitigate it.",
+   "usage": {
+    "prompt_tokens": 318,
+    "completion_tokens": 35,
+    "total_tokens": 353,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 318
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper introduces Sparse-Reg as a sparsity-based regularization technique to mitigate overfitting and enable learning in limited data settings.",
+   "usage": {
+    "prompt_tokens": 333,
+    "completion_tokens": 42,
+    "total_tokens": 375,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 333
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that offline RL algorithms can overfit on small datasets, resulting in poor performance.",
+   "usage": {
+    "prompt_tokens": 312,
+    "completion_tokens": 31,
+    "total_tokens": 343,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 312
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Sparse-Reg is a regularization technique based on sparsity introduced to mitigate overfitting.",
+   "usage": {
+    "prompt_tokens": 311,
+    "completion_tokens": 34,
+    "total_tokens": 345,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 311
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Sparse-Reg enables effective learning in limited data settings.",
+   "usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 27,
+    "total_tokens": 334,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 307
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Sparse-Reg outperforms state-of-the-art baselines in continuous control.",
+   "usage": {
+    "prompt_tokens": 314,
+    "completion_tokens": 32,
+    "total_tokens": 346,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 314
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly contrasts large benchmark datasets with smaller real-world application datasets and states the method is designed to address this specific challenge.",
+   "usage": {
+    "prompt_tokens": 312,
+    "completion_tokens": 36,
+    "total_tokens": 348,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 312
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the challenge of developing robust policies from static data without environment access and presents MORAL as the solution to this specific problem.",
+   "usage": {
+    "prompt_tokens": 435,
+    "completion_tokens": 39,
+    "total_tokens": 474,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 435
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MORAL replaces fixed horizon rollout with adversarial data augmentation, dynamically selects ensemble models against the policy, and integrates a differential factor for regularization.",
+   "usage": {
+    "prompt_tokens": 450,
+    "completion_tokens": 44,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 450
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly states that static data makes it challenging to develop a robust policy, which directly supports the claim that existing approaches struggle with this issue.",
+   "usage": {
+    "prompt_tokens": 427,
+    "completion_tokens": 40,
+    "total_tokens": 467,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 427
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MORAL employs adversarial data augmentation to execute alternating sampling with ensemble models to enrich training data.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 35,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the adversarial process mitigates optimistic estimation of fixed models and robustly expands training data.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 34,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments on D4RL benchmarks demonstrate MORAL outperforms other methods in policy learning and sample efficiency.",
+   "usage": {
+    "prompt_tokens": 435,
+    "completion_tokens": 38,
+    "total_tokens": 473,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 435
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2503.20285",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method adapts to diverse offline tasks without rollout horizon tuning.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 30,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies limitations of ensemble-based methods and proposes a new framework to address epistemic uncertainty more effectively.",
+   "usage": {
+    "prompt_tokens": 390,
+    "completion_tokens": 34,
+    "total_tokens": 424,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 390
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of a framework replacing ensembles with uncertainty sets and the introduction of a benchmark for risk-sensitive policies.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 37,
+    "total_tokens": 443,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly states that epistemic uncertainty arising from limited or biased data coverage leads to inaccurate value estimates and unreliable generalization.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 37,
+    "total_tokens": 426,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly states that ensemble-based methods like SAC-N require large ensembles and often conflate epistemic with aleatoric uncertainty.",
+   "usage": {
+    "prompt_tokens": 391,
+    "completion_tokens": 39,
+    "total_tokens": 430,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 391
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method achieves improved robustness and generalization over ensemble-based baselines.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 32,
+    "total_tokens": 419,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2604.07072",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method is demonstrated across both tabular and continuous state domains.",
+   "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 29,
+    "total_tokens": 411,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 382
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2503.05207",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies excessive conservatism in current policy constraint methods as a problem and presents OSC as a solution to address it while mitigating distributional shift.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 41,
+    "total_tokens": 497,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2503.05207",
+   "label": "supported",
+   "reason": "The abstract explicitly states that OSC is derived from maximizing total probability within the support and utilizes a diffusion model to characterize that support.",
+   "usage": {
+    "prompt_tokens": 480,
+    "completion_tokens": 36,
+    "total_tokens": 516,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 480
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2503.05207",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current policy constraint methods tend to exhibit excessive conservatism, hindering the policy from surpassing the behavior policy's performance.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 39,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2503.05207",
+   "label": "supported",
+   "reason": "The abstract explicitly states that OSC presents a regularization term that only restricts policies to the support without imposing extra constraints on actions within the support.",
+   "usage": {
+    "prompt_tokens": 452,
+    "completion_tokens": 39,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 452
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2503.05207",
+   "label": "supported",
+   "reason": "The abstract explicitly states that OSC utilizes a diffusion model to effectively characterize the support of behavior policies.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 30,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2503.05207",
+   "label": "supported",
+   "reason": "The abstract explicitly states that OSC significantly enhances performance across benchmarks by alleviating distributional shift challenges and mitigating conservatism.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 34,
+    "total_tokens": 489,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the article introduces the theory, key concepts, algorithms, and guarantees for offline reinforcement learning in large state spaces.",
+   "usage": {
+    "prompt_tokens": 312,
+    "completion_tokens": 38,
+    "total_tokens": 350,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 312
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the abstract's description of introducing theory, key concepts like expressivity and data coverage, and their implications for algorithms and guarantees.",
+   "usage": {
+    "prompt_tokens": 331,
+    "completion_tokens": 40,
+    "total_tokens": 371,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 331
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The abstract explicitly lists Bellman completeness and realizability as key expressivity assumptions introduced in the paper's theory of offline RL.",
+   "usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 36,
+    "total_tokens": 343,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 307
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the landscape of results and guarantees depends on data coverage assumptions like all-policy vs. single-policy coverage.",
+   "usage": {
+    "prompt_tokens": 306,
+    "completion_tokens": 36,
+    "total_tokens": 342,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 306
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a rich landscape of algorithms and results is described depending on the assumptions made and the desired sample and computational complexity guarantees.",
+   "usage": {
+    "prompt_tokens": 308,
+    "completion_tokens": 39,
+    "total_tokens": 347,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 308
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2510.04088",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper discusses connections to adjacent areas.",
+   "usage": {
+    "prompt_tokens": 299,
+    "completion_tokens": 24,
+    "total_tokens": 323,
+    "completion_tokens_details": {
+     "text_tokens": 24
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 299
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's aim is to address Out-of-Distribution (OOD) Mode Averaging in Flow Matching based offline RL.",
+   "usage": {
+    "prompt_tokens": 460,
+    "completion_tokens": 39,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 460
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD reformulates offline policy distillation as a value-guided generative trajectory alignment problem using a dynamic coupling mechanism to decouple distinct behavioral modes.",
+   "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 46,
+    "total_tokens": 522,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 476
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD is instantiated through two algorithms named VRD-Q (utilizing value-quantile behavior distillation) and VRD-R (reorganizing the latent space).",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 50,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD actively rectifies flow dynamics to decouple distinct behavioral modes and isolate high-value actions.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 35,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD-Q utilizes value-quantile behavior distillation to statistically filter out low-value behaviors.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 35,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD-R reorganizes the latent space to geometrically isolate high-value generative trajectories.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 35,
+    "total_tokens": 489,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD improves existing generative baselines across diverse continuous control and planning tasks on the D4RL, OGBench, and Minari benchmarks.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 46,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD improves baselines 'especially over those multi-modal, non-expert datasets'.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 34,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly argues that the objective of offline RL should be reformulated to prioritize learning adaptive policy priors when policies are updated via online interaction.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 40,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper formalizes AORL, distinguishes it from offline-to-online RL, and discusses Bayesian offline RL as a direction for adaptive priors.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 46,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly argues that the traditional conservative formulation of offline RL is incomplete when policies are subsequently updated via online interaction or test-time adaptation.",
+   "usage": {
+    "prompt_tokens": 419,
+    "completion_tokens": 38,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 419
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly argues that offline RL should prioritize learning adaptive policy priors to preserve the capacity for improvement during subsequent interaction.",
+   "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 35,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 417
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly states that adaptability becomes important under distributional shift, limited dataset coverage, and changing test-time conditions.",
+   "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 35,
+    "total_tokens": 453,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 418
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Bayesian offline RL is a principled direction for constructing adaptive policy priors by preserving epistemic uncertainty over plausible environments.",
+   "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 40,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 417
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2609.35880",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the work as a 'position paper' that 'outlines connections, open challenges, and research directions' without mentioning any empirical results or specific algorithm implementations.",
+   "usage": {
+    "prompt_tokens": 424,
+    "completion_tokens": 46,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 424
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper addresses the limitation of fixed uniform penalties by introducing a method for state-adaptive conservatism.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 35,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the methodology described in the abstract, including the IQL backbone, multi-expectile ensemble, split conformal prediction, and state-dependent expectile mapping.",
+   "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 46,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 466
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UNIQ introduces state-adaptive conservatism through conformally calibrated uncertainty estimation.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 30,
+    "total_tokens": 450,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method 'relaxes conservatism in well-covered regions while strengthening it in uncertain regions near the data frontier.'",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 37,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UNIQ consistently improves over IQL on D4RL MuJoCo benchmarks with the largest gains observed on Walker2d and replay-heavy tasks.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 45,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UNIQ operates at near-IQL memory cost (approximately 250 MB peak VRAM) and provides roughly a 10x reduction compared to EDAC.",
+   "usage": {
+    "prompt_tokens": 438,
+    "completion_tokens": 50,
+    "total_tokens": 488,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 438
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2606.07592",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UNIQ is positioned as a mechanism that improves the performance-efficiency trade-off in offline reinforcement learning.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 36,
+    "total_tokens": 456,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly defines the study's goal as training a policy on offline datasets from different environments to perform well on unseen test environments without further interaction.",
+   "usage": {
+    "prompt_tokens": 364,
+    "completion_tokens": 40,
+    "total_tokens": 404,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 364
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of PERM and PPPO methods that leverage pessimistic policy evaluation to enhance generalization.",
+   "usage": {
+    "prompt_tokens": 383,
+    "completion_tokens": 35,
+    "total_tokens": 418,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 383
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing work showed classical offline RL fails to generalize to new, unseen environments.",
+   "usage": {
+    "prompt_tokens": 350,
+    "completion_tokens": 31,
+    "total_tokens": 381,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 350
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PERM and PPPO leverage pessimistic policy evaluation to guide policy learning.",
+   "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 31,
+    "total_tokens": 384,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 353
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that both PERM and PPPO are capable of finding a near-optimal policy with zero-shot generalization.",
+   "usage": {
+    "prompt_tokens": 359,
+    "completion_tokens": 37,
+    "total_tokens": 396,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 359
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the result serves as a first step in understanding the foundation of the generalization phenomenon in offline reinforcement learning.",
+   "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 37,
+    "total_tokens": 390,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 353
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the result serves as a first step in understanding the foundation of the generalization phenomenon in offline reinforcement learning.",
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 37,
+    "total_tokens": 391,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 354
+    }
+   }
+  }
+ ]
+}

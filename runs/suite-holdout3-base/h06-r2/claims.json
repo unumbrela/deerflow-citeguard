@@ -1,0 +1,130 @@
+{
+ "stats": {
+  "ambiguous": 11,
+  "unmatched": 10
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "This taxonomy is echoed across multiple papers, with Chen et al. (2025) applying it specifically to code generation, and Zhang et al. (2025) examining its interaction with Chain-of-Thought prompting.",
+   "ids": [
+    "2503.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2025) propose Adaptive Test-Time Scaling (ATTS), which dynamically allocates computation based on problem difficulty and model confidence, achieving comparable performance to fixed-budget methods while reducing computation by 40-60%.",
+   "ids": [
+    "2507.18080"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2024) address edge deployment with GreenTTS, using early-exit mechanisms and hardware-aware scheduling to achieve 70-85% of full TTS performance with only 30-40% energy consumption.",
+   "ids": [
+    "2412.18765"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) explore an orthogonal approach through multi-agent collaboration, distributing computation across specialized agents to achieve comparable performance with 3-5x less total computation.",
+   "ids": [
+    "2411.08234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xia et al. (2025) address factual reasoning, where TTS is challenging due to open-ended knowledge; their Retrieval-Augmented TTS (RATTS) improves accuracy by 10-18% by grounding candidates in retrieved evidence.",
+   "ids": [
+    "2501.15432"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ge et al. (2026) examine TTS through the lens of on-policy distillation, revealing that distillation improvements do not uniformly extend across all sampling budgets—a critical finding for post-training optimization.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) conduct a comprehensive empirical study examining how TTS affects CoT across three dimensions: number of samples, chain length, and recursive decomposition depth.",
+   "ids": [
+    "2503.12345"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, TTS consistently improves performance across domains, with typical gains of 8-18% reported across mathematical reasoning (Chen et al., 2025), code generation (Chen et al., 2025), multimodal reasoning (Liu et al., 2025), and factual reasoning (Xia et al., 2025).",
+   "ids": [
+    "2501.15432"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, all surveyed papers agree that naive compute scaling is suboptimal—adaptive allocation based on problem characteristics is essential for efficiency (Wang et al., 2025; Li et al., 2024).",
+   "ids": [
+    "2507.18080",
+    "2412.18765"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, there is consensus that TTS effectiveness depends on task structure: tasks with clear verification mechanisms (math, code execution) benefit more than open-ended tasks (factual reasoning) (Xia et al., 2025).",
+   "ids": [
+    "2501.15432"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Ge et al. (2026) demonstrate that on-policy distillation improvements can reverse at large sampling budgets—improving small-budget performance while reducing large-budget pass@K.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while Wang et al. (2024) advocate multi-agent collaboration as more efficient than single-model scaling, other papers assume single-model architectures, suggesting unresolved questions about the optimal architectural paradigm for TTS.",
+   "ids": [
+    "2411.08234"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, adaptive computation allocation remains underdeveloped—while ATTS (Wang et al., 2025) and GreenTTS (Li et al., 2024) demonstrate feasibility, optimal difficulty prediction and confidence estimation across diverse tasks remain open challenges.",
+   "ids": [
+    "2507.18080",
+    "2412.18765"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, integration with retrieval-augmented generation is identified as an open direction by Liu et al. (2025) and partially addressed by Xia et al. (2025), but systematic understanding of TTS-RAG interaction is incomplete.",
+   "ids": [
+    "2501.15432"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the reversal phenomenon identified by Ge et al. (2026) suggests fundamental questions about the relationship between training-time optimization and test-time scaling that require deeper investigation.",
+   "ids": [
+    "2608.11829"
+   ]
+  }
+ ]
+}

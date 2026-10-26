@@ -1,0 +1,1569 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART predicts logits for multiple future masked positions in parallel within a single forward pass to eliminate autoregressive rollouts.",
+   "usage": {
+    "prompt_tokens": 473,
+    "completion_tokens": 39,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 473
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SpecFormer integrates unidirectional and bidirectional attention mechanisms to enable parallel generation and eliminate reliance on large prefix trees.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 39,
+    "total_tokens": 511,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing algorithms suffer speed degradation under large batch sizes due to high rejection rates and under-utilization of dynamic token budgets.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 39,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LAPS-SD is a semi-clairvoyant algorithm that maintains multiple priority queues and allows request execution preemption.",
+   "usage": {
+    "prompt_tokens": 491,
+    "completion_tokens": 40,
+    "total_tokens": 531,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 491
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of automatic task partitioning, heterogeneous draft models, dynamic routing via a classifier, task-specific alignment, and the specific 6% to 50% accuracy improvement range.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 52,
+    "total_tokens": 488,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2512.11280",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms all key claims: the method is hyperparameter-free, uses token entropy and Jensen-Shannon distance for dynamic adjustment, and achieves up to 1.46x speedup with minimal accuracy degradation.",
+   "usage": {
+    "prompt_tokens": 457,
+    "completion_tokens": 55,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 457
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper presents three lossless methods that remove the shared-vocabulary constraint and enable any off-the-shelf model to serve as a drafter.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 44,
+    "total_tokens": 475,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Mirror-SD launches branch-complete rollouts from early-exit signals and maps computation across heterogeneous accelerators (GPU and NPU).",
+   "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 42,
+    "total_tokens": 570,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 528
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2510.13161",
+   "label": "partial",
+   "reason": "The abstract confirms drafting latency is a bottleneck but does not explicitly state that this issue emerges specifically as draft accuracy improves.",
+   "usage": {
+    "prompt_tokens": 530,
+    "completion_tokens": 34,
+    "total_tokens": 564,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 530
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing methods improve accuracy at the cost of high drafting latency, which renders the drafting stage a performance bottleneck.",
+   "usage": {
+    "prompt_tokens": 487,
+    "completion_tokens": 37,
+    "total_tokens": 524,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 487
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2511.20340",
+   "label": "unsupported",
+   "reason": "The abstract discusses resource constraints and proposes a new architecture but does not state that drafting latency is the primary performance limiter as accuracy improves.",
+   "usage": {
+    "prompt_tokens": 488,
+    "completion_tokens": 37,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 488
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2608.24004",
+   "label": "partial",
+   "reason": "The abstract confirms batch inference causes speed degradation requiring a specialized solution (AgentSpec), but does not support the claim that the literature 'uniformly demonstrates' this or that existing methods are limited to single-request optimization.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 53,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2505.17074",
+   "label": "unsupported",
+   "reason": "The abstract focuses on scheduling individual requests with uncertain execution times and does not mention batch inference or challenges specific to batching.",
+   "usage": {
+    "prompt_tokens": 498,
+    "completion_tokens": 34,
+    "total_tokens": 532,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 498
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2511.20340",
+   "label": "unsupported",
+   "reason": "The abstract discusses batching as a method that compresses idle computing power but does not mention unique challenges requiring specialized solutions beyond single-request optimization.",
+   "usage": {
+    "prompt_tokens": 485,
+    "completion_tokens": 38,
+    "total_tokens": 523,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 485
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART leverages parallel generation to eliminate autoregressive rollouts in the draft model.",
+   "usage": {
+    "prompt_tokens": 484,
+    "completion_tokens": 33,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 484
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2510.13161",
+   "label": "partial",
+   "reason": "The abstract supports the claim about parallelizing execution across heterogeneous hardware but does not explicitly state that the method advocates for 'maintaining autoregressive drafting,' only that it addresses the costs associated with it.",
+   "usage": {
+    "prompt_tokens": 527,
+    "completion_tokens": 56,
+    "total_tokens": 583,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 527
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2608.24004",
+   "label": "partial",
+   "reason": "The abstract supports the claim about structure-isolated drafting reducing rejection rates but contains no information regarding Ge et al. (2025) or task-specific heterogeneous drafters.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 46,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2505.08600",
+   "label": "partial",
+   "reason": "The abstract supports the focus on task-specific heterogeneous drafters to improve accuracy but does not mention 'structure-isolated drafting' or attribute that concept to this paper.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 43,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2512.11280",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes AdaSD as a hyperparameter-free scheme that eliminates the need for training, tuning, or prior analysis.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 36,
+    "total_tokens": 461,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2512.11280",
+   "label": "supported",
+   "reason": "The abstract explicitly describes AdaSD as a hyperparameter-free scheme that dynamically adjusts generation length and acceptance criteria using two components based on token entropy and Jensen-Shannon distance.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 44,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2512.11280",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing approaches often require additional training, extensive hyperparameter tuning, or prior analysis before deployment.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 34,
+    "total_tokens": 454,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2512.11280",
+   "label": "supported",
+   "reason": "The abstract explicitly states that AdaSD eliminates the need for pre-analysis or fine-tuning and is compatible with off-the-shelf models.",
+   "usage": {
+    "prompt_tokens": 422,
+    "completion_tokens": 38,
+    "total_tokens": 460,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 422
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2512.11280",
+   "label": "supported",
+   "reason": "The abstract explicitly states that AdaSD achieves up to 1.46x speedup over vanilla speculative decoding.",
+   "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 34,
+    "total_tokens": 451,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 417
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2512.11280",
+   "label": "supported",
+   "reason": "The abstract explicitly states that AdaSD limits accuracy degradation to under 1.8% and describes it as a practical solution for efficient LLM inference.",
+   "usage": {
+    "prompt_tokens": 422,
+    "completion_tokens": 41,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 422
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies speed degradation under large batch sizes as a key problem and proposes AgentSpec to address it.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 33,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work presents a systematic analysis of speculative decoding for LLM agents and identifies two dominant factors of speedup degradation.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 39,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of AgentSpec with the specified techniques and details the exact evaluation setup mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 35,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly states that state-of-the-art speculative decoding algorithms exhibit substantial speed degradation under large batch sizes.",
+   "usage": {
+    "prompt_tokens": 437,
+    "completion_tokens": 32,
+    "total_tokens": 469,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 437
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies high rejection rate and under-utilization of dynamic token budgets as the two dominant factors of speedup degradation.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 36,
+    "total_tokens": 481,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly states that AgentSpec's structure-isolated drafting constrains speculation to semantically coherent segments, reducing irrelevant drafts and achieving an extremely low rejection rate.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 43,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly states that AgentSpec adopts redundancy-aware budget allocation to exploit agent-level information and better utilize the dynamically-free token budget.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 37,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2608.24004",
+   "label": "supported",
+   "reason": "The abstract explicitly states that AgentSpec was evaluated on five workloads and four models from four LLM families, demonstrating superiority over state-of-the-art methods.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 42,
+    "total_tokens": 487,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper presents methods to remove the shared-vocabulary constraint between drafter and target models.",
+   "usage": {
+    "prompt_tokens": 407,
+    "completion_tokens": 34,
+    "total_tokens": 441,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 407
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents three new methods that remove the shared-vocabulary constraint, are lossless, and work with off-the-shelf models without training.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 44,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the algorithms were empirically evaluated on summarization, programming, and long-context tasks.",
+   "usage": {
+    "prompt_tokens": 401,
+    "completion_tokens": 33,
+    "total_tokens": 434,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 401
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing SD approaches require the drafter and target models to share the same vocabulary, which limits the pool of possible drafters.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 41,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that all three methods preserve the target distribution (lossless) and work with off-the-shelf models without requiring additional training or modifications.",
+   "usage": {
+    "prompt_tokens": 407,
+    "completion_tokens": 42,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 407
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the algorithms demonstrate significant speedups of up to 2.8x over standard autoregressive decoding.",
+   "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 36,
+    "total_tokens": 441,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 405
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2502.05202",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work enables any off-the-shelf model to serve as a drafter and substantially broadens the applicability of the SD framework.",
+   "usage": {
+    "prompt_tokens": 409,
+    "completion_tokens": 43,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 409
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the trade-off between acceptance rate and decoding speed in diverse tasks as the problem addressed and proposes a method to optimize it.",
+   "usage": {
+    "prompt_tokens": 413,
+    "completion_tokens": 39,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 413
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a speculative decoding algorithm with automatic task partitioning that categorizes tasks and assigns them to heterogeneous draft models.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 39,
+    "total_tokens": 462,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method incorporates an online lightweight prompt classifier for dynamic routing and aligns draft models with the target model using task-specific data.",
+   "usage": {
+    "prompt_tokens": 422,
+    "completion_tokens": 40,
+    "total_tokens": 462,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 422
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing methods face a trade-off between acceptance rate and decoding speed due to the limited capacity of the draft model.",
+   "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 38,
+    "total_tokens": 448,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 410
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method improves draft accuracy by 6% to 50% over vanilla speculative decoding.",
+   "usage": {
+    "prompt_tokens": 411,
+    "completion_tokens": 36,
+    "total_tokens": 447,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 411
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method achieves a speedup of 1.10x to 2.64x in LLM inference.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 42,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2505.08600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that assigning heterogeneous draft models to automatically categorized sub-tasks enhances the consistency of inference results.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 33,
+    "total_tokens": 441,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2411.13157",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper surveys speculative decoding methods to guide future research in optimizing efficient inference for large language models.",
+   "usage": {
+    "prompt_tokens": 342,
+    "completion_tokens": 34,
+    "total_tokens": 376,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 342
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2411.13157",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper provides a comprehensive survey of speculative decoding methods and categorizes them into draft-centric and model-centric approaches.",
+   "usage": {
+    "prompt_tokens": 350,
+    "completion_tokens": 37,
+    "total_tokens": 387,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 350
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2411.13157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper discusses key ideas associated with each method and highlights their potential for scaling LLM inference.",
+   "usage": {
+    "prompt_tokens": 343,
+    "completion_tokens": 35,
+    "total_tokens": 378,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 343
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2411.13157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speculative decoding addresses computational inefficiencies via a two-stage framework of drafting and verification.",
+   "usage": {
+    "prompt_tokens": 347,
+    "completion_tokens": 32,
+    "total_tokens": 379,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 347
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2411.13157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speculative decoding involves a smaller model generating a draft which is then refined by a larger model.",
+   "usage": {
+    "prompt_tokens": 346,
+    "completion_tokens": 34,
+    "total_tokens": 380,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 346
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2411.13157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper categorizes speculative decoding methods into draft-centric and model-centric approaches.",
+   "usage": {
+    "prompt_tokens": 337,
+    "completion_tokens": 31,
+    "total_tokens": 368,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 337
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2411.13157",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the survey aims to guide future research in optimizing speculative decoding and its integration into real-world LLM applications.",
+   "usage": {
+    "prompt_tokens": 343,
+    "completion_tokens": 37,
+    "total_tokens": 380,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 343
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART eliminates autoregressive rollouts to reduce drafting latency while preserving high draft accuracy.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 33,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART is inspired by diffusion-based LLMs and leverages parallel generation to reduce drafting latency.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 36,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART predicts logits for multiple future masked positions in parallel within a single forward pass based on hidden states of the target model, thereby eliminating autoregressive rollouts.",
+   "usage": {
+    "prompt_tokens": 465,
+    "completion_tokens": 48,
+    "total_tokens": 513,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 465
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART introduces an efficient tree pruning algorithm that constructs high-quality draft token trees with N-gram-enforced semantic continuity.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 40,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing designs like EAGLE3 improve accuracy at the cost of multi-step autoregressive inference, causing high latency and a performance bottleneck.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 43,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART predicts logits for multiple future masked positions in parallel within a single forward pass to eliminate autoregressive rollouts while preserving a lightweight design.",
+   "usage": {
+    "prompt_tokens": 465,
+    "completion_tokens": 44,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 465
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method introduces an efficient tree pruning algorithm constructing high-quality draft token trees with N-gram-enforced semantic continuity based on parallel logit predictions.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 45,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART achieves a 2.03x--3.44x wall-clock time speedup across multiple datasets.",
+   "usage": {
+    "prompt_tokens": 457,
+    "completion_tokens": 41,
+    "total_tokens": 498,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 457
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2601.19278",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DART surpasses EAGLE3 by 30% on average and offers a practical speculative decoding framework.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 39,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper presents an algorithm designed to break the latency-acceptance tradeoff caused by draft generation costs.",
+   "usage": {
+    "prompt_tokens": 500,
+    "completion_tokens": 37,
+    "total_tokens": 537,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 500
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Mirror-SD launches branch-complete rollouts from early-exit signals in parallel and maps computation across heterogeneous accelerators (GPU and NPU).",
+   "usage": {
+    "prompt_tokens": 521,
+    "completion_tokens": 44,
+    "total_tokens": 565,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 521
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method adds speculative streaming for multi-token emission and combines it with parallel heterogeneous execution.",
+   "usage": {
+    "prompt_tokens": 501,
+    "completion_tokens": 33,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 501
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that prior methods like Medusa, Hydra, and EAGLE partially reduce draft cost but either degrade acceptance or introduce overheads limiting scaling.",
+   "usage": {
+    "prompt_tokens": 504,
+    "completion_tokens": 43,
+    "total_tokens": 547,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 504
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Mirror-SD converts speculation into two complementary execution pipelines where the draft speculates forward continuations and the target simultaneously speculates correction paths.",
+   "usage": {
+    "prompt_tokens": 512,
+    "completion_tokens": 43,
+    "total_tokens": 555,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 512
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speculative streaming is added to let the draft emit multiple tokens per step, cutting latency without weakening acceptance semantics.",
+   "usage": {
+    "prompt_tokens": 497,
+    "completion_tokens": 37,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 497
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Mirror-SD achieves 2.8x-5.8x wall-time speedups on SpecBench with server-scale models from 14B to 66B parameters.",
+   "usage": {
+    "prompt_tokens": 515,
+    "completion_tokens": 54,
+    "total_tokens": 569,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 515
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2510.13161",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Mirror-SD achieves a 30% average relative improvement over the strongest baseline, EAGLE3.",
+   "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 38,
+    "total_tokens": 533,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 495
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies performing speculative decoding with low verification resources and low scheduling costs as an important research problem to be solved.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 35,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SpecFormer is a novel architecture integrating unidirectional and bidirectional attention mechanisms to combine autoregressive information extraction with parallel generation benefits.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 42,
+    "total_tokens": 514,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed design eliminates reliance on large prefix trees and demonstrates results through lossless speculative decoding experiments across models of various scales.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 40,
+    "total_tokens": 498,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current methods assume considerable computing power to generate complex draft trees and identifies batching as a superior alternative that compresses idle computing power.",
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 41,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 462
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SpecFormer allows for parallel generation on draft sequences and eliminates reliance on large prefix trees.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 33,
+    "total_tokens": 482,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed SpecFormer design achieves consistent acceleration even in large-batch scenarios.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 31,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2511.20340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SpecFormer sets a new standard for scaling LLM inference with lower training demands and reduced computational costs.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 36,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the challenge of scheduling requests when execution time depends on both output length and token acceptance rate, which aligns directly with the research question stated in the sentence.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 46,
+    "total_tokens": 527,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LAPS-SD maintains multiple priority queues and allows request execution preemption across different queues.",
+   "usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 34,
+    "total_tokens": 516,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 482
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the algorithm adaptively schedules requests based on features and accurately estimates execution time once the token acceptance rate becomes stable.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 38,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing work estimates execution time based solely on predicted output length, which is inaccurate because it also depends on the token acceptance rate.",
+   "usage": {
+    "prompt_tokens": 475,
+    "completion_tokens": 41,
+    "total_tokens": 516,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 475
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LAPS-SD maintains multiple priority queues and allows preemption when the token acceptance rate is dynamic and execution time is difficult to estimate.",
+   "usage": {
+    "prompt_tokens": 475,
+    "completion_tokens": 43,
+    "total_tokens": 518,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 475
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly states that once the token acceptance rate becomes stable, LAPS-SD can accurately estimate execution time and schedule requests accordingly.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 38,
+    "total_tokens": 506,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2505.17074",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LAPS-SD reduces inference latency by approximately 39% compared to state-of-the-art scheduling methods.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 38,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Speculative Decoding achieves speedups while maintaining original distributions.",
+   "usage": {
+    "prompt_tokens": 377,
+    "completion_tokens": 28,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 377
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states the tutorial presents a comprehensive introduction to speculative decoding, including draft model architectures and verification strategies.",
+   "usage": {
+    "prompt_tokens": 383,
+    "completion_tokens": 33,
+    "total_tokens": 416,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 383
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the tutorial explores acceleration potential and future research directions in Speculative Decoding.",
+   "usage": {
+    "prompt_tokens": 378,
+    "completion_tokens": 31,
+    "total_tokens": 409,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 378
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speculative decoding drafts several future tokens, verifies them in parallel, and facilitates simultaneous decoding of multiple tokens per step.",
+   "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 38,
+    "total_tokens": 420,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 382
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach achieves promising 2x-4x speedups while maintaining original distributions.",
+   "usage": {
+    "prompt_tokens": 380,
+    "completion_tokens": 33,
+    "total_tokens": 413,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 380
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Speculative Decoding is an innovative paradigm introduced to mitigate high inference latency stemming from traditional autoregressive decoding.",
+   "usage": {
+    "prompt_tokens": 378,
+    "completion_tokens": 37,
+    "total_tokens": 415,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 378
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the tutorial delves into latest techniques including draft model architectures and verification strategies.",
+   "usage": {
+    "prompt_tokens": 373,
+    "completion_tokens": 31,
+    "total_tokens": 404,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 373
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2503.00491",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the tutorial explores future research directions in speculative decoding to contribute to more efficient LLM inference.",
+   "usage": {
+    "prompt_tokens": 375,
+    "completion_tokens": 34,
+    "total_tokens": 409,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 375
+    }
+   }
+  }
+ ]
+}

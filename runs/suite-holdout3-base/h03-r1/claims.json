@@ -1,0 +1,221 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "DistillLens (Dhakal et al., 2026) introduces symmetric knowledge distillation through the Logit Lens, projecting intermediate hidden states into vocabulary space and enforcing structural alignment between student and teacher.",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Decoder-based Sense Knowledge Distillation (Wang et al., 2026) addresses a different aspect of intermediate knowledge: structured lexical semantics.",
+   "ids": [
+    "2602.22351"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Generative Adversarial Distillation (GAD) (Ye et al., 2025) frames black-box distillation as a minimax game: the student acts as generator while a discriminator learns to distinguish student from teacher responses.",
+   "ids": [
+    "2511.10643"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Bounded Behavioral Indistinguishability (Hasan, 2026) challenges the assumption that output similarity implies behavioral equivalence.",
+   "ids": [
+    "2605.30448"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "PLaD (Zhang et al., 2024) generates pseudo-preference pairs by exploiting teacher-student capacity discrepancies, then uses ranking loss to recalibrate the student's sequence likelihood estimation.",
+   "ids": [
+    "2406.02886"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "ORPO-Distill (Singh et al., 2025) formulates cross-architecture distillation as preference optimization rather than standard chain-of-thought imitation.",
+   "ids": [
+    "2509.25100"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "DistiLLM-2 (Ko et al., 2025) introduces a contrastive approach that simultaneously increases the likelihood of teacher responses while decreasing the likelihood of student responses.",
+   "ids": [
+    "2503.07067"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Decoupling KL and Trajectories (Zhao et al., 2026) provides a unified theoretical framework showing that off-policy and on-policy distillation implicitly couple two orthogonal choices: prefix source and token-level KL direction.",
+   "ids": [
+    "2605.16826"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Knowledge Distillation with Chain-of-Thought RL (Paredes La Torre et al., 2026) combines KD with guided chain-of-thought reinforcement learning using Group Relative Policy Optimization.",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Bangladesh Legal RAG (Kamal et al., 2026) addresses legal information accessibility in resource-constrained settings.",
+   "ids": [
+    "2609.24177"
+   ]
+  },
+  {
+   "section": "3. Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Few-Shot MCQA (Sutanto et al., 2024) uses LLMs to generate multiple-choice questions with probability scores, then distills this knowledge into DeBERTa-v3-base.",
+   "ids": [
+    "2412.09807"
+   ]
+  },
+  {
+   "section": "4. Performance Metrics and Compression Efficiency",
+   "kind": "synthesis",
+   "text": "Parameter reduction: DistillLens achieves improvements without explicit size reduction, focusing on quality gains (Dhakal et al., 2026)",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "4. Performance Metrics and Compression Efficiency",
+   "kind": "synthesis",
+   "text": "4-bit quantization further reduces memory footprint and latency (Paredes La Torre et al., 2026)",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "4. Performance Metrics and Compression Efficiency",
+   "kind": "synthesis",
+   "text": "1.6 GB model size enables smartphone deployment (Kamal et al., 2026)",
+   "ids": [
+    "2609.24177"
+   ]
+  },
+  {
+   "section": "4. Performance Metrics and Compression Efficiency",
+   "kind": "synthesis",
+   "text": "4-8 tokens/second on Pixel 6 without network access (Kamal et al., 2026)",
+   "ids": [
+    "2609.24177"
+   ]
+  },
+  {
+   "section": "4. Performance Metrics and Compression Efficiency",
+   "kind": "synthesis",
+   "text": "3× reduction in response length via entropy-gated curriculum (Zhao et al., 2026)",
+   "ids": [
+    "2605.16826"
+   ]
+  },
+  {
+   "section": "5. Limitations and Open Challenges",
+   "kind": "synthesis",
+   "text": "Task diversity: Many methods evaluated primarily on instruction-following or math reasoning, with limited cross-domain validation (Dhakal et al., 2026; Zhao et al., 2026)",
+   "ids": [
+    "2602.13567",
+    "2605.16826"
+   ]
+  },
+  {
+   "section": "5. Limitations and Open Challenges",
+   "kind": "synthesis",
+   "text": "Adversarial robustness: Behavioral indistinguishability studies reveal that semantic similarity does not guarantee robustness to adversarial probing (Hasan, 2026)",
+   "ids": [
+    "2605.30448"
+   ]
+  },
+  {
+   "section": "5. Limitations and Open Challenges",
+   "kind": "synthesis",
+   "text": "Training complexity: Methods like GAD (Ye et al., 2025) and contrastive approaches (Ko et al., 2025) introduce additional training components (discriminators, dual losses) that increase computational costs",
+   "ids": [
+    "2511.10643",
+    "2503.07067"
+   ]
+  },
+  {
+   "section": "5. Limitations and Open Challenges",
+   "kind": "synthesis",
+   "text": "Hyperparameter tuning: Several papers note that optimal settings were determined for specific languages or tasks, requiring re-tuning for new domains (Paredes La Torre et al., 2026)",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "5. Limitations and Open Challenges",
+   "kind": "synthesis",
+   "text": "Loss landscape: While Zhao et al. (2026) provide a unified framework connecting KD objectives to RL paradigms, the interaction between different loss components remains incompletely understood",
+   "ids": [
+    "2605.16826"
+   ]
+  },
+  {
+   "section": "5. Limitations and Open Challenges",
+   "kind": "synthesis",
+   "text": "Information bottlenecks: The mechanisms by which intermediate representations transfer knowledge—and which aspects are most critical—require further investigation (Dhakal et al., 2026; Wang et al., 2026)",
+   "ids": [
+    "2602.13567",
+    "2602.22351"
+   ]
+  },
+  {
+   "section": "5. Limitations and Open Challenges",
+   "kind": "synthesis",
+   "text": "Cross-lingual transfer: While Paredes La Torre et al. (2026) and Kamal et al. (2026) demonstrate multilingual capabilities, systematic understanding of language-specific distillation challenges is limited",
+   "ids": [
+    "2603.13765",
+    "2609.24177"
+   ]
+  },
+  {
+   "section": "6. Future Directions",
+   "kind": "synthesis",
+   "text": "Unified evaluation frameworks: Standardized adversarial probing suites and behavioral benchmarks (as proposed by Hasan, 2026) should be adopted across distillation research to enable fair comparison",
+   "ids": [
+    "2605.30448"
+   ]
+  },
+  {
+   "section": "6. Future Directions",
+   "kind": "synthesis",
+   "text": "Architecture-agnostic methods: Cross-architecture distillation techniques (Singh et al., 2025; Ko et al., 2025) should be extended to support arbitrary teacher-student pairs without manual alignment",
+   "ids": [
+    "2509.25100",
+    "2503.07067"
+   ]
+  },
+  {
+   "section": "6. Future Directions",
+   "kind": "synthesis",
+   "text": "Theoretical foundations: Further work is needed to understand the information-theoretic limits of distillation and the relationship between different loss objectives (Zhao et al., 2026)",
+   "ids": [
+    "2605.16826"
+   ]
+  }
+ ]
+}

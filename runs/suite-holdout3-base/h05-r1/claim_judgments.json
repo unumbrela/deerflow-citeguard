@@ -1,0 +1,1229 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper discusses a shank angle-based control system for soft exoskeletons, while the sentence describes a student-teacher machine learning framework (BYOL) unrelated to the abstract's content.",
+   "usage": {
+    "prompt_tokens": 511,
+    "completion_tokens": 50,
+    "total_tokens": 561,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 511
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The abstract describes a generative model based on Conditional Flow Matching, with no mention of Barlow Twins or redundancy reduction techniques.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 36,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses search engine design and 'Search Plurality' but makes no mention of VicReg, representation learning, or regularizing variance, invariance, and covariance.",
+   "usage": {
+    "prompt_tokens": 399,
+    "completion_tokens": 53,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 399
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states the three principles (observation, prediction, regularization) and their corresponding definitions exactly as described in the sentence.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 36,
+    "total_tokens": 500,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2607.13192",
+   "label": "contradicted",
+   "reason": "The abstract states that joint training consistently improves efficiency and is robust in low-label settings, directly contradicting the sentence's claim that pretrain-finetuning outperforms joint training when labeled data is limited.",
+   "usage": {
+    "prompt_tokens": 532,
+    "completion_tokens": 57,
+    "total_tokens": 589,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 532
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The paper focuses on vector quantization for large language models and does not mention SimCLR, contrastive learning, or the specific factors listed in the sentence.",
+   "usage": {
+    "prompt_tokens": 570,
+    "completion_tokens": 42,
+    "total_tokens": 612,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 570
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract discusses DINOv3 and spatial/spectral cues for face forgery detection, but makes no mention of Contrastive Predictive Coding (CPC), van den Oord, negative sampling, or dense prediction tasks.",
+   "usage": {
+    "prompt_tokens": 542,
+    "completion_tokens": 62,
+    "total_tokens": 604,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 542
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses topological entropy and smooth surface endomorphisms, while the sentence describes Masked Autoencoders (MAE) in machine learning.",
+   "usage": {
+    "prompt_tokens": 313,
+    "completion_tokens": 42,
+    "total_tokens": 355,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 313
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly argues that the three principles are necessary and states that dropping any one of them forfeits a critical training signal, implying other methods lack completeness.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 42,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2607.13192",
+   "label": "partial",
+   "reason": "The abstract supports the context-dependent finding but does not mention computational constraints as a factor for the optimal choice.",
+   "usage": {
+    "prompt_tokens": 533,
+    "completion_tokens": 32,
+    "total_tokens": 565,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 533
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses search engine design and result prioritization, with no mention of self-supervised representations or regularization of variance, invariance, and covariance.",
+   "usage": {
+    "prompt_tokens": 384,
+    "completion_tokens": 48,
+    "total_tokens": 432,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 384
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses search engine design and result categorization, while the sentence describes specific machine learning regularization techniques not mentioned in the text.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 37,
+    "total_tokens": 434,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses search interface design and conceptual frameworks, with no mention of self-supervised methods or performance benchmarks.",
+   "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 33,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 372
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses the conceptual design and benefits of Search Plurality but makes no mention of implementation complexity or tuning difficulty compared to other approaches.",
+   "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 39,
+    "total_tokens": 410,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 371
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses a design concept and user comprehension but makes no mention of testing across different architectures or datasets.",
+   "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 32,
+    "total_tokens": 401,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 369
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses search engine design and result categorization, with no mention of regularization terms or representation quality.",
+   "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 32,
+    "total_tokens": 403,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 371
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2501.00987",
+   "label": "unsupported",
+   "reason": "The abstract discusses search engine design and result prioritization, with no mention of three-term regularization, hyperparameters, or representation flexibility.",
+   "usage": {
+    "prompt_tokens": 383,
+    "completion_tokens": 37,
+    "total_tokens": 420,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 383
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The paper focuses on vector quantization for compressing Large Language Models, not on learning visual representations via contrastive learning.",
+   "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 35,
+    "total_tokens": 587,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 552
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2506.05432",
+   "label": "contradicted",
+   "reason": "The paper focuses on vector quantization for large language models using polar coordinate decoupling, whereas the sentence describes a contrastive learning method for image augmentation which is unrelated to the paper's domain and technique.",
+   "usage": {
+    "prompt_tokens": 566,
+    "completion_tokens": 54,
+    "total_tokens": 620,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 566
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The abstract focuses on vector quantization and polar coordinate decoupling, with no mention of data augmentation or learning representations.",
+   "usage": {
+    "prompt_tokens": 543,
+    "completion_tokens": 35,
+    "total_tokens": 578,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 543
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The abstract discusses vector quantization, polar coordinate decoupling, and codebook construction, but makes no mention of projection head design.",
+   "usage": {
+    "prompt_tokens": 541,
+    "completion_tokens": 38,
+    "total_tokens": 579,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 541
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The paper focuses on vector quantization and polar coordinate decoupling for LLM compression, with no mention of batch sizes or contrastive learning.",
+   "usage": {
+    "prompt_tokens": 543,
+    "completion_tokens": 40,
+    "total_tokens": 583,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 543
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The abstract focuses on quantizing Large Language Models (LLMs) and mentions zero-shot task accuracy, with no reference to ImageNet or self-supervised methods.",
+   "usage": {
+    "prompt_tokens": 548,
+    "completion_tokens": 43,
+    "total_tokens": 591,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 548
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The abstract discusses quantization accuracy on zero-shot tasks but does not mention learning representations or their transferability to downstream tasks.",
+   "usage": {
+    "prompt_tokens": 542,
+    "completion_tokens": 35,
+    "total_tokens": 577,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 542
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2506.05432",
+   "label": "unsupported",
+   "reason": "The abstract does not mention batch size requirements or high computational costs as limitations of the proposed method.",
+   "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 30,
+    "total_tokens": 587,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 557
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper focuses on a shank angle-based control system for soft exoskeletons and does not mention self-supervised learning or negative samples.",
+   "usage": {
+    "prompt_tokens": 488,
+    "completion_tokens": 40,
+    "total_tokens": 528,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 488
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper discusses a shank angle-based control system for soft exoskeletons using IMU measurements and dual-Gaussian models, with no mention of BYOL, neural networks, or image augmentation.",
+   "usage": {
+    "prompt_tokens": 523,
+    "completion_tokens": 51,
+    "total_tokens": 574,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 523
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper discusses a shank angle-based control system for soft exoskeletons, while the sentence refers to BYOL (a machine learning method) and negative samples, which are not mentioned in the abstract.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 53,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper focuses on exoskeleton control systems for locomotion and does not mention contrastive learning or negative samples.",
+   "usage": {
+    "prompt_tokens": 484,
+    "completion_tokens": 34,
+    "total_tokens": 518,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 484
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper focuses on exoskeleton control systems for human locomotion, not the BYOL machine learning model or computer vision tasks.",
+   "usage": {
+    "prompt_tokens": 484,
+    "completion_tokens": 37,
+    "total_tokens": 521,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 484
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The abstract discusses exoskeleton control using shank angles and Gaussian models, with no mention of target networks, exponential moving averages, or model collapse.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 41,
+    "total_tokens": 522,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper focuses on exoskeleton control systems for locomotion and does not mention BYOL, ablation studies, or theoretical analysis of that algorithm.",
+   "usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 41,
+    "total_tokens": 523,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 482
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2508.09876",
+   "label": "unsupported",
+   "reason": "The paper discusses exoskeleton control systems, while the sentence describes limitations of the BYOL machine learning algorithm.",
+   "usage": {
+    "prompt_tokens": 500,
+    "completion_tokens": 33,
+    "total_tokens": 533,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 500
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's goal is to argue for and formalize three necessary principles for learning visual representations without labels.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 36,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the formalization of three principles, the proof of theoretical claims, and the inclusion of controlled experiments with patch-retrieval evaluation.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 41,
+    "total_tokens": 488,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that combining observation and prediction without regularization admits the constant encoder as a global minimizer under negative-free alignment.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 36,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper proves the two objectives are gradient-complementary and structurally non-conflicting at the encoder output.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 37,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states as a proven claim that the momentum encoder converges to the same fixed point as the online encoder and provides no collapse guarantee at convergence.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 42,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that contrastive alignment provides only self-limiting collapse resistance, formalized via an explicit gradient-decay argument.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 38,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that every major self-supervised method is a special case of a single unified energy decomposition.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 33,
+    "total_tokens": 458,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2608.08309",
+   "label": "partial",
+   "reason": "The abstract explicitly limits claims to 'the scale we study' but does not mention the framework failing to capture practical considerations in real-world applications.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 39,
+    "total_tokens": 475,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses smooth saddle surface endomorphisms and entropy measures, while the sentence is about masked autoencoders and Vision Transformers.",
+   "usage": {
+    "prompt_tokens": 296,
+    "completion_tokens": 38,
+    "total_tokens": 334,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 296
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2511.12345",
+   "label": "contradicted",
+   "reason": "The paper focuses on smooth dynamical systems and entropy measures, whereas the sentence describes a deep learning image reconstruction method (MAE) unrelated to the paper's mathematical content.",
+   "usage": {
+    "prompt_tokens": 321,
+    "completion_tokens": 47,
+    "total_tokens": 368,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 321
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses mathematical properties of surface endomorphisms and entropy, not machine learning models or data scalability.",
+   "usage": {
+    "prompt_tokens": 289,
+    "completion_tokens": 33,
+    "total_tokens": 322,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 289
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses mathematical properties of smooth surface endomorphisms and entropy, with no mention of MAE, ImageNet, or computer vision tasks.",
+   "usage": {
+    "prompt_tokens": 291,
+    "completion_tokens": 41,
+    "total_tokens": 332,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 291
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses mathematical dynamics and entropy on surfaces, not the MAE model or semantic understanding in computer vision.",
+   "usage": {
+    "prompt_tokens": 288,
+    "completion_tokens": 33,
+    "total_tokens": 321,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 288
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses measures of maximal entropy in dynamical systems, not a method called MAE for self-supervised learning.",
+   "usage": {
+    "prompt_tokens": 292,
+    "completion_tokens": 35,
+    "total_tokens": 327,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 292
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses mathematical properties of surface endomorphisms and entropy, with no mention of masking strategies, decoder design, or training protocols.",
+   "usage": {
+    "prompt_tokens": 289,
+    "completion_tokens": 39,
+    "total_tokens": 328,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 289
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2511.12345",
+   "label": "unsupported",
+   "reason": "The paper discusses mathematical dynamics and entropy measures, while the sentence refers to Vision Transformers and pixel-level reconstruction which are unrelated topics.",
+   "usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 36,
+    "total_tokens": 343,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 307
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work systematically investigates and compares the pretrain-finetune and joint training paradigms.",
+   "usage": {
+    "prompt_tokens": 509,
+    "completion_tokens": 35,
+    "total_tokens": 544,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 509
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2607.13192",
+   "label": "partial",
+   "reason": "The abstract confirms the empirical study and analysis of representation quality but does not explicitly mention analyzing convergence behavior or transfer learning capabilities.",
+   "usage": {
+    "prompt_tokens": 524,
+    "completion_tokens": 35,
+    "total_tokens": 559,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 524
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2607.13192",
+   "label": "contradicted",
+   "reason": "The abstract states that joint training consistently improves efficiency and is robust in low-label settings, whereas the sentence claims pretrain-finetuning outperforms in those same settings.",
+   "usage": {
+    "prompt_tokens": 505,
+    "completion_tokens": 53,
+    "total_tokens": 558,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 505
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2607.13192",
+   "label": "contradicted",
+   "reason": "The abstract states that joint training is robust in low-label settings, whereas the sentence claims it becomes competitive only when substantial labeled data is available.",
+   "usage": {
+    "prompt_tokens": 499,
+    "completion_tokens": 41,
+    "total_tokens": 540,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 499
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors analyze representation quality and compare the two paradigms, implying differences in their characteristics and behaviors.",
+   "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 37,
+    "total_tokens": 532,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 495
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2607.13192",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper analyzes cross-domain generalization and finds that the effectiveness of the two paradigms depends on the domain, implying differences in transfer capabilities.",
+   "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 45,
+    "total_tokens": 540,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 495
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2607.13192",
+   "label": "partial",
+   "reason": "The abstract supports guidelines based on data availability and task/domain requirements but does not mention computational budget.",
+   "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 30,
+    "total_tokens": 536,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 506
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2607.13192",
+   "label": "unsupported",
+   "reason": "The abstract does not mention computational constraints or limitations regarding resource-rich environments.",
+   "usage": {
+    "prompt_tokens": 515,
+    "completion_tokens": 25,
+    "total_tokens": 540,
+    "completion_tokens_details": {
+     "text_tokens": 25
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 515
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract discusses benchmarking face forgery detection using DINOv3 and various cues, but does not mention Contrastive Predictive Coding, negative sampling strategies, or data augmentation techniques.",
+   "usage": {
+    "prompt_tokens": 509,
+    "completion_tokens": 48,
+    "total_tokens": 557,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 509
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract discusses face forgery detection using spatial, spectral, and self-supervised cues but makes no mention of CPC (Contrastive Predictive Coding), negative sampling strategies, or the specific experimental variations described in the sentence.",
+   "usage": {
+    "prompt_tokens": 517,
+    "completion_tokens": 56,
+    "total_tokens": 573,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 517
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract mentions DINOv3 as the self-supervised method evaluated but does not mention CPC or compare it to modern methods.",
+   "usage": {
+    "prompt_tokens": 493,
+    "completion_tokens": 37,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 493
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract discusses face forgery detection and model architectures but makes no mention of Contrastive Predictive Coding (CPC).",
+   "usage": {
+    "prompt_tokens": 488,
+    "completion_tokens": 35,
+    "total_tokens": 523,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 488
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract discusses model architectures, input representations, and image degradations but never mentions the number of negative samples or its impact on representation quality.",
+   "usage": {
+    "prompt_tokens": 493,
+    "completion_tokens": 39,
+    "total_tokens": 532,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 493
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract discusses DINOv3, Xception, and spectral cues but never mentions CPC or its specific representation capabilities.",
+   "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 35,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 495
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract does not mention CPC (Contrastive Predictive Coding) or its suitability for dense prediction tasks.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 33,
+    "total_tokens": 527,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2609.01511",
+   "label": "unsupported",
+   "reason": "The abstract does not mention CPC or its hyperparameter tuning requirements.",
+   "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 24,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 24
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 506
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The paper focuses on generative models for remote sensing imagery fusion and cloud imputation, with no mention of redundancy reduction principles or self-supervised learning without contrastive pairs.",
+   "usage": {
+    "prompt_tokens": 421,
+    "completion_tokens": 45,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 421
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The abstract describes a Conditional Flow Matching framework for image fusion and inpainting, with no mention of minimizing cross-correlation matrix deviation between distorted views.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 40,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The abstract does not mention batch sizes or any specific training hyperparameters.",
+   "usage": {
+    "prompt_tokens": 409,
+    "completion_tokens": 25,
+    "total_tokens": 434,
+    "completion_tokens_details": {
+     "text_tokens": 25
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 409
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The abstract does not mention weight decay, regularization techniques, or the model's sensitivity to hyperparameters.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 31,
+    "total_tokens": 443,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The abstract discusses remote sensing imagery and does not mention ImageNet or general computer vision benchmarks.",
+   "usage": {
+    "prompt_tokens": 416,
+    "completion_tokens": 29,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 416
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The abstract describes the model's training via Conditional Flow Matching and its performance but makes no mention of information maximization principles or any theoretical connection to them.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 41,
+    "total_tokens": 453,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2502.01098",
+   "label": "unsupported",
+   "reason": "The abstract does not mention cross-correlation matrices, computational intensity issues, or limitations regarding architectural generalization.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 32,
+    "total_tokens": 462,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  }
+ ]
+}

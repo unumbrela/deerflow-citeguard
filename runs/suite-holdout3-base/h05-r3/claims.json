@@ -1,0 +1,746 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "As MLLMs have demonstrated impressive capabilities in connecting vision and language, their proficiency in fundamental visual reasoning tasks remains limited due to over-reliance on textual supervision (Caffagni et al., 2025).",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, self-supervised visual preference alignment eliminates the need for GPT-4 or human supervision in VLM preference learning by using properly designed image augmentations to generate hard negative responses (Zhu et al., 2024).",
+   "ids": [
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The dino.txt framework extends this integration by aligning self-supervised visual encoders like DINOv2 with text, achieving CLIP-like capabilities at a fraction of the computational cost while maintaining performance on dense tasks (Jose et al., 2024).",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2026) argue that effective SSL requires three jointly necessary principles: semantic invariance across augmented views (observation), patch-level spatial prediction, and representational non-degeneracy (regularization).",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Complementing this, research on latent masked image modeling identifies the specific challenges of learning representations through masked reconstruction in latent space, including representation collapsing and high region correlation (Wei et al., 2024).",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "For road damage detection, self-supervised visual prompting derives defect-aware prompts from unlabeled target data to guide a frozen ViT backbone, achieving robust zero-shot transfer across domains (Xiao et al., 2025).",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In writer identification, decorrelation-based self-supervised pretraining learns disentangled stroke features, outperforming both contemporary SSL frameworks and several supervised methods (Maitra et al., 2024).",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Self-supervised visual on-policy distillation constructs learning signals from asymmetric augmented views, improving fine-grained perception benchmarks without ground-truth annotations (Li et al., 2026).",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Aubret et al. (2024) explore whether object-related actions can boost SSL by extracting actions performed to transition between ego-centric views from video datasets and introducing a loss function that aligns actions with visual representations.",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "SPOOK investigates the relationship between embedding similarity and human-visible semantics far from the natural-image manifold by applying sparse pixel edits to blank canvases (Gupta et al., 2026).",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, there is broad agreement that pure language supervision is insufficient for robust visual understanding, motivating the integration of self-supervised objectives into MLLM and VLM training (Caffagni et al., 2025; Zhu et al., 2024; Jose et al., 2024).",
+   "ids": [
+    "2512.15885",
+    "2404.10501",
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, multiple papers emphasize the importance of augmentation design—whether for creating asymmetric views in distillation (Li et al., 2026), generating hard negatives in preference alignment (Zhu et al., 2024), or structuring latent representations through actions (Aubret et al., 2024).",
+   "ids": [
+    "2608.14144",
+    "2404.10501",
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, there is consensus that self-supervised methods can match or exceed supervised performance in domain-specific tasks when properly adapted (Maitra et al., 2024; Xiao et al., 2025).",
+   "ids": [
+    "2410.01441",
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2026) propose that all SSL methods are special cases of a unified framework with three necessary principles, suggesting a path toward general theory.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, the success of highly specialized methods for specific domains—writer identification (Maitra et al., 2024), road damage detection (Xiao et al., 2025), and visual prompting (Li et al., 2026)—suggests that domain-specific inductive biases remain important.",
+   "ids": [
+    "2410.01441",
+    "2511.12410",
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while some work focuses on improving in-domain performance through better self-supervised objectives (Wei et al., 2024), others prioritize cross-domain generalization through prompting and adaptation (Xiao et al., 2025), reflecting different priorities in the field.",
+   "ids": [
+    "2407.15837",
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, many methods require careful tuning of augmentation strength or prompt design, yet there is limited theoretical guidance on how to select these hyperparameters without labeled validation data (Li et al., 2026; Zhu et al., 2024).",
+   "ids": [
+    "2608.14144",
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while several papers demonstrate success on specific benchmarks, few provide comprehensive evaluation across diverse tasks and domains, making it difficult to assess generalizability (Caffagni et al., 2025; Maitra et al., 2024).",
+   "ids": [
+    "2512.15885",
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the theoretical framework proposed by Giakoumoglou et al. (2026) focuses on specific architectural assumptions that may not capture all practical SSL variants, leaving open the question of whether their three principles are truly universal.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, embodied SSL methods require action annotations or extractable action data from video clips, limiting their applicability to datasets without such information (Aubret et al., 2024).",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the off-manifold failure modes identified by Gupta et al. (2026) suggest that current encoders may have fundamental limitations not captured by standard evaluations, pointing to the need for more robust diagnostic tools.",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can object-related actions and embodied interactions boost self-supervised visual learning similar to how humans purposefully turn or move around objects during learning?",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors extract actions performed to transition between ego-centric views of objects from four video datasets and introduce a new loss function that learns visual and action embeddings by aligning the performed action with representations of two images from the same clip, allowing actions to structure the latent visual representation.",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method consistently outperforms previous methods on downstream category recognition",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improvement is associated with better viewpoint-wise alignment of different objects from the same category",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Embodied interactions with objects can improve self-supervised learning of object categories",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performed actions can effectively structure latent visual representations",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The method is evaluated on only four video datasets and may not generalize beyond ego-centric object interaction scenarios; requires action annotations or extractable action data from video clips.",
+   "ids": [
+    "2407.06704"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Multimodal Large Language Models improve their visual reasoning capabilities when they overfit language priors and overlook visual details due to reliance on textual supervision?",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce JARVIS, a JEPA-inspired framework that integrates I-JEPA learning into MLLM training by using frozen vision foundation models as context and target encoders while training the LLM's early layers as a predictor to learn structural and semantic regularities from images without exclusive language supervision.",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JARVIS consistently improves performance on vision-centric benchmarks across different LLM families",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach does not degrade multimodal reasoning abilities",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Addresses the overfitting to language priors that occurs from text-based supervision",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully leverages structural and semantic regularities from images independent of language",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach relies on frozen vision foundation models which may limit adaptability; the abstract does not report results on language-only tasks or address potential computational overhead from the additional JEPA training paradigm.",
+   "ids": [
+    "2512.15885"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the necessary and sufficient principles required for learning visual representations without labels?",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formalize three principles (observation, prediction, regularization) and provide theoretical proofs about their necessity, complemented by controlled experiments including patch-retrieval evaluation to assess spatial consequences.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Three non-overlapping objectives are jointly necessary: semantic invariance across augmented views, patch-level spatial prediction, and representational non-degeneracy",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining observation and prediction without regularization admits the constant encoder as a global minimizer under negative-free alignment",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The observation and prediction objectives are gradient-complementary and structurally non-conflicting at the encoder output",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Momentum encoder converges to the same fixed point as the online encoder and provides no collapse guarantee at convergence",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The theoretical framework focuses on specific architectural assumptions (negative-free alignment, momentum encoders) that may not capture all practical SSL variants; claims are scale-dependent and may not hold at different training regimes.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the relationship between embedding similarity and human-visible semantics in vision encoders when operating far from the natural-image manifold?",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors apply sparse pixel edits to blank canvases using a simple pixel-level hill-climbing procedure, then evaluate whether these optimized inputs can retrieve chosen targets in multimodal contrastive encoders (OpenCLIP) and self-supervised visual encoders (DINOv3) across ImageNet and Flickr30k.",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse edits on visually non-semantic blank canvases can enter target semantic basins in both language-aligned and self-supervised representation spaces",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On OpenCLIP, inputs optimized toward class prompts achieve strong top-1 and top-5 targeted retrieval performance",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On DINOv3, inputs optimized toward class prototypes achieve high target alignment and near-top prototype ranks",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The findings identify a shared off-manifold failure mode across modern vision encoders",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Black-box probing approach provides limited insight into internal encoder mechanisms; the sparse pixel edit methodology may not capture all off-manifold behaviors; evaluation limited to specific encoder architectures.",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can self-supervised visual foundation models like DINOv2 be aligned with language to enable open-vocabulary tasks while maintaining performance on dense prediction tasks?",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose dino.txt, building on the LiT training strategy to align a text encoder with frozen DINOv2, with key improvements including concatenating the [CLS] token with patch average for training and curating data using both text and image modalities to improve performance on both global and dense tasks.",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art results in zero-shot classification",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art results in open-vocabulary semantic segmentation",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Trains a CLIP-like model with only a fraction of the computational cost compared to CLIP",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully handles both global (image-level) and dense (pixel-level) tasks",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The method relies on frozen DINOv2 vision encoder which limits vision-side adaptability; performance depends on careful data curation using both modalities which may require significant effort.",
+   "ids": [
+    "2412.16334"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Where can informative asymmetry come from in visual on-policy distillation when no privileged information (larger teacher, ground-truth annotations, or rewards) is available?",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors invert the asymmetry source by subtracting information from the student rather than adding privileged info to the teacher, introducing S²VOPD which distills a teacher's distribution on original images into a student's distribution on strongly augmented views of the same image.",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Asymmetry matters: all four augmentation families improve performance, while symmetric self-distillation degrades it",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strength matters: performance peaks at moderate augmentation strength",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The gap must remain task-consistent: augmentations that completely remove question-relevant evidence induce large but uninformative discrepancies",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves Qwen3.5-4B from 70.7% to 77.4% across six fine-grained perception benchmarks, surpassing GPT-5.4",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach is evaluated primarily on fine-grained perception benchmarks and may not generalize to all visual tasks; the method requires careful tuning of augmentation strength to avoid removing task-relevant information.",
+   "ids": [
+    "2608.14144"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can decorrelation-based self-supervised learning be effectively applied to learn disentangled stroke features for writer identification?",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose SWIS, a modified decorrelation-based framework that standardizes features along each dimension, originally designed for signature verification, and adapt it for writer identification tasks.",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed SWIS framework outperforms contemporary self-supervised learning frameworks on writer identification benchmarks",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method outperforms several supervised methods for writer identification",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This represents the first application of self-supervised learning specifically for writer verification tasks",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Decorrelation-based self-supervised pretraining yields performance comparable to supervised and contrastive SSL baselines",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation is limited to writer identification tasks; the approach may not generalize to other document analysis or biometric recognition domains without modification.",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can masked reconstruction in latent space combine the locality benefits of Masked Image Modeling with high-level semantic targets for self-supervised visual representation learning?",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a thorough analysis of Latent MIM challenges through carefully designed experiments, identifying and sequentially addressing issues including representation collapsing, learning objectives, high region correlation in latent space, and decoding conditioning.",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint online/target optimization leads to representation collapsing in Latent MIM frameworks",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High region correlation in latent space and decoding conditioning present significant training challenges",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sequentially addressing identified challenges enables Latent MIM to learn high-level representations",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latent MIM can retain the locality benefits of traditional MIM while achieving high-level semantic learning",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The framework requires careful handling of multiple training challenges; the solution involves sequential mitigation of several issues which may complicate implementation; further validation across diverse downstream tasks may be needed.",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can self-supervised learning improve cross-domain generalization for pavement defect detection without requiring costly re-annotation for new environments?",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a self-supervised framework with a Self-supervised Prompt Enhancement Module (SPEM) that derives defect-aware prompts from unlabeled target data, and a Domain-Aware Prompt Alignment (DAPA) objective that aligns prompt-conditioned source and target representations.",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework consistently outperforms strong supervised, self-supervised, and adaptation baselines across four challenging benchmarks",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves robust zero-shot transfer capability to unseen target domains",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates improved resilience to domain variations in road damage detection",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shows high data efficiency in few-shot adaptation scenarios",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires access to unlabeled target domain data for prompt enhancement; evaluation is specific to road damage detection and may need adaptation for other visual inspection domains.",
+   "ids": [
+    "2511.12410"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can unsupervised preference alignment be achieved in Vision-Language Models without relying on GPT-4 or human supervision during the alignment process?",
+   "ids": [
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors generate chosen and rejected responses from original and augmented image pairs, then conduct preference alignment using direct preference optimization, where properly designed image augmentations induce the VLM to generate false but hard negative responses that help the model learn more robust answers.",
+   "ids": [
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 90% relative score to GPT-4 on complex reasoning in LLaVA-Bench with only 8k randomly sampled unsupervised data",
+   "ids": [
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves LLaVA-7B/13B by 6.7%/5.6% on the complex multi-modal benchmark MM-Vet",
+   "ids": [
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The pipeline requires no GPT-4 or human involvement during alignment",
+   "ids": [
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Highly efficient implementation requiring only a few lines of code",
+   "ids": [
+    "2404.10501"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach depends on properly designed augmentations to generate meaningful hard negatives; evaluation is limited to specific benchmarks (LLaVA-Bench, MM-Vet) and may not generalize to all preference alignment scenarios.",
+   "ids": [
+    "2404.10501"
+   ]
+  }
+ ]
+}

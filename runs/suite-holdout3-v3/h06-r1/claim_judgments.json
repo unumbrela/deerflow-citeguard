@@ -1,0 +1,1110 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of a 3D framework combining context, batch, and turn scaling, and states that this combination substantially improves performance on IOI, IMO, and CPHO benchmarks.",
+   "usage": {
+    "prompt_tokens": 514,
+    "completion_tokens": 52,
+    "total_tokens": 566,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 514
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact energy (4.64-4.86x) and latency (5.77-6.12x) multipliers attributed to the paper in the sentence.",
+   "usage": {
+    "prompt_tokens": 653,
+    "completion_tokens": 54,
+    "total_tokens": 707,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 653
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2608.11829",
+   "label": "partial",
+   "reason": "The abstract confirms the performance reversal patterns but does not explicitly state that this reversal depends on the 'diversity and quality of generated samples' as claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 51,
+    "total_tokens": 604,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 553
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that longer CoTs do not consistently enhance accuracy and that correct solutions are often shorter than incorrect ones for the same questions.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 43,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper introduces Self-Calibration by distilling Self-Consistency-derived confidence into the model to enable reliable confidence estimation at test time.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 47,
+    "total_tokens": 511,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly defines Hermes as configurable harnesses varying model control and Hermes-Learn as a two-stage framework for learning contextual reasoning.",
+   "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 37,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 418
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors formalize dense benchmark ranking under test-time scaling and introduce Scorio with the exact list of statistical methods mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 538,
+    "completion_tokens": 43,
+    "total_tokens": 581,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 538
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2502.12215",
+   "label": "partial",
+   "reason": "The abstract supports the claim about performance degradation via self-revision but does not mention 'mode collapse' or attribute findings to the specific authors listed in the sentence.",
+   "usage": {
+    "prompt_tokens": 452,
+    "completion_tokens": 43,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 452
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2609.38332",
+   "label": "partial",
+   "reason": "The abstract supports the mention of 'contextual reasoning' but does not address the broader claim about 'diversity in generation strategies' or compare it to other methods like mode-conditioning.",
+   "usage": {
+    "prompt_tokens": 437,
+    "completion_tokens": 49,
+    "total_tokens": 486,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 437
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2609.19499",
+   "label": "partial",
+   "reason": "The abstract supports the finding that batch-efficient generation improves efficiency, but does not mention or support the broader claim that 'diversity in generation strategies' is critical.",
+   "usage": {
+    "prompt_tokens": 644,
+    "completion_tokens": 44,
+    "total_tokens": 688,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 644
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces Self-Calibration to improve efficiency by allocating compute based on query difficulty, achieving better results with a fixed sample budget.",
+   "usage": {
+    "prompt_tokens": 490,
+    "completion_tokens": 40,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 490
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2609.19499",
+   "label": "unsupported",
+   "reason": "The abstract does not mention the authors Kashaniyan & Jannesari, the term 'batch scaling', or the year 2026.",
+   "usage": {
+    "prompt_tokens": 641,
+    "completion_tokens": 41,
+    "total_tokens": 682,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 641
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2502.12215",
+   "label": "unsupported",
+   "reason": "The abstract discusses limitations of test-time scaling due to self-revision and proposes a method to improve it, but does not attribute these limitations to model architecture or training as the sentence claims.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 48,
+    "total_tokens": 531,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract acknowledges test-time scaling is fundamentally limited by context length but demonstrates that a unified 3D framework achieves substantial performance gains, aligning with the sentence's description of papers showing achievable gains through sophisticated frameworks.",
+   "usage": {
+    "prompt_tokens": 536,
+    "completion_tokens": 53,
+    "total_tokens": 589,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 536
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2609.38332",
+   "label": "unsupported",
+   "reason": "The abstract does not mention any tension with other papers or attribute the view that test-time scaling is limited by architecture to this work.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 37,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2502.12215",
+   "label": "unsupported",
+   "reason": "The abstract discusses test-time scaling and CoT length but does not mention training-time compute, fine-tuning on long CoT data, or the balance between training and inference compute.",
+   "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 47,
+    "total_tokens": 513,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 466
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2511.15738",
+   "label": "partial",
+   "reason": "The abstract confirms human feedback is beneficial but does not support the claim that systematic studies of such approaches are limited.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 33,
+    "total_tokens": 516,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly poses the question of whether OPD improvements extend across the entire range of test-time sampling budgets as a central investigation.",
+   "usage": {
+    "prompt_tokens": 508,
+    "completion_tokens": 37,
+    "total_tokens": 545,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 508
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors revisit OPD expectations via test-time scaling with pass@K and propose the Teacher Advantage Score (TAS@K) to predict teacher performance.",
+   "usage": {
+    "prompt_tokens": 539,
+    "completion_tokens": 47,
+    "total_tokens": 586,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 539
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact two patterns described in the sentence regarding OPD's effect on pass@K at different sampling budgets.",
+   "usage": {
+    "prompt_tokens": 516,
+    "completion_tokens": 37,
+    "total_tokens": 553,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 516
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors show a condition guaranteeing reversal and provide an idealized reverse KL counterexample where it occurs despite the teacher having higher accuracy.",
+   "usage": {
+    "prompt_tokens": 519,
+    "completion_tokens": 42,
+    "total_tokens": 561,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 519
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2608.11829",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the TAS@K ordering agrees with observed pass@K improvements in 83.6% of experiments across three domains and thirteen benchmarks.",
+   "usage": {
+    "prompt_tokens": 513,
+    "completion_tokens": 44,
+    "total_tokens": 557,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 513
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that ranking models in the test-time scaling regime is underexplored and details the paper's formalization and evaluation of methods to address this specific question.",
+   "usage": {
+    "prompt_tokens": 505,
+    "completion_tokens": 45,
+    "total_tokens": 550,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 505
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the paper's contributions, methods, and experimental setup as described in the abstract.",
+   "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 31,
+    "total_tokens": 586,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 555
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that most full-trial rankings agree closely with the Bayesian gold standard Bayes_U@80 with a mean Kendall's τ_b of 0.93–0.95.",
+   "usage": {
+    "prompt_tokens": 521,
+    "completion_tokens": 53,
+    "total_tokens": 574,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 521
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that '19--34 methods recover exactly the same ordering' as the Bayesian gold standard.",
+   "usage": {
+    "prompt_tokens": 502,
+    "completion_tokens": 35,
+    "total_tokens": 537,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 502
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in the single-trial regime, the best methods reach a Kendall's tau_b of approximately 0.86.",
+   "usage": {
+    "prompt_tokens": 505,
+    "completion_tokens": 40,
+    "total_tokens": 545,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 505
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2603.10960",
+   "label": "supported",
+   "reason": "The abstract explicitly states that using greedy decoding as an empirical prior reduces variance at N=1 by 16–52% but can bias rankings when greedy and stochastic sampling disagree.",
+   "usage": {
+    "prompt_tokens": 517,
+    "completion_tokens": 48,
+    "total_tokens": 565,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 517
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's goal is to use model confidence to improve test-time scaling efficiency by handling queries of various difficulty levels.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 38,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract explicitly states the introduction of Self-Calibration via distilling Self-Consistency-derived confidence and the design of confidence-based scaling methods including Early-Stopping for Best-of-N.",
+   "usage": {
+    "prompt_tokens": 485,
+    "completion_tokens": 47,
+    "total_tokens": 532,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 485
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors design confidence-based methods to handle queries of various difficulty and improve test-time scaling efficiency.",
+   "usage": {
+    "prompt_tokens": 444,
+    "completion_tokens": 35,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 444
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Self-Calibration enables reliable confidence estimation at test time with one forward pass.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 31,
+    "total_tokens": 474,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact accuracy improvement, dataset, method, and sample budget mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 32,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 463
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2503.00031",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments on three LLMs across six datasets demonstrate the effectiveness of the approach.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 32,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly investigates how different generation schedules (strategies) with a fixed candidate count impact latency, throughput, and energy consumption.",
+   "usage": {
+    "prompt_tokens": 607,
+    "completion_tokens": 37,
+    "total_tokens": 644,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 607
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly details the study's use of Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts, the comparison of four generation schedules with N=8, and the measurement of latency, throughput, GPU-hours, and energy on A100 GPUs.",
+   "usage": {
+    "prompt_tokens": 670,
+    "completion_tokens": 76,
+    "total_tokens": 746,
+    "completion_tokens_details": {
+     "text_tokens": 76
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 670
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B.",
+   "usage": {
+    "prompt_tokens": 620,
+    "completion_tokens": 57,
+    "total_tokens": 677,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 620
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact energy and latency multipliers for eight serial calls compared to one batched call.",
+   "usage": {
+    "prompt_tokens": 627,
+    "completion_tokens": 33,
+    "total_tokens": 660,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 627
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the observed pattern appears across three independently scheduled A100 nodes and in short-output SciQ/V100 experiments.",
+   "usage": {
+    "prompt_tokens": 606,
+    "completion_tokens": 41,
+    "total_tokens": 647,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 606
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2609.19499",
+   "label": "supported",
+   "reason": "The abstract explicitly states that fewer generation calls with larger batch sizes are more efficient when candidates are independent and memory allows it.",
+   "usage": {
+    "prompt_tokens": 599,
+    "completion_tokens": 35,
+    "total_tokens": 634,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 599
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the challenge of deciding how to allocate fresh contexts and carry information between them as 'contextual reasoning' and presents a framework for learning these specific capabilities.",
+   "usage": {
+    "prompt_tokens": 399,
+    "completion_tokens": 45,
+    "total_tokens": 444,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 399
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly defines Hermes as configurable harnesses varying model control and Hermes-Learn as a two-stage framework for learning contextual reasoning.",
+   "usage": {
+    "prompt_tokens": 413,
+    "completion_tokens": 37,
+    "total_tokens": 450,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 413
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly states that capable models can exploit this flexibility to scale with additional inference-time compute.",
+   "usage": {
+    "prompt_tokens": 386,
+    "completion_tokens": 30,
+    "total_tokens": 416,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 386
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly states that training with Hermes-Learn closes the gap for smaller open-source models that initially struggle to exploit test-time scaling flexibility.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 39,
+    "total_tokens": 428,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly states that training induces adaptive contextual reasoning strategies that vary with both the problem and the progress of reasoning.",
+   "usage": {
+    "prompt_tokens": 388,
+    "completion_tokens": 34,
+    "total_tokens": 422,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 388
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the gains generalize across benchmarks and models and extrapolate beyond the inference-time compute seen during training.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 35,
+    "total_tokens": 424,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2609.38332",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the gains transfer to complementary test-time scaling methods beyond Hermes.",
+   "usage": {
+    "prompt_tokens": 384,
+    "completion_tokens": 28,
+    "total_tokens": 412,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 384
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2601.22230",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies training reliable LLM judges amidst distribution shifts as the core challenge and proposes DAJ as the solution.",
+   "usage": {
+    "prompt_tokens": 457,
+    "completion_tokens": 35,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 457
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2601.22230",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the core methodology described in the abstract, including the bi-level data-reweighted framework, verifiable rewards, and the optimization goal on held-out meta sets.",
+   "usage": {
+    "prompt_tokens": 479,
+    "completion_tokens": 46,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 479
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2601.22230",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DAJ achieves state-of-the-art performance on LiveCodeBench and BigCodeBench.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 35,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2601.22230",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach automatically emphasizes hard problems, in-distribution samples, and trajectory-aligned data without relying on hand-crafted heuristics.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 42,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2601.22230",
+   "label": "supported",
+   "reason": "The abstract explicitly states, 'To the best of our knowledge, this is the first application of data reweighting to LLM-as-a-Judge training for test-time scaling.'",
+   "usage": {
+    "prompt_tokens": 452,
+    "completion_tokens": 47,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 452
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2601.22230",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DAJ outperforms strong test-time scaling baselines and leading proprietary models on LiveCodeBench and BigCodeBench.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 42,
+    "total_tokens": 489,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's goal is to extend test-time scaling capacity beyond limited context length by introducing a unified framework incorporating batch and turn scaling.",
+   "usage": {
+    "prompt_tokens": 471,
+    "completion_tokens": 41,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 471
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors introduce a unified framework integrating context, batch, and turn scaling into 3D test-time scaling.",
+   "usage": {
+    "prompt_tokens": 500,
+    "completion_tokens": 37,
+    "total_tokens": 537,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 500
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract explicitly states as finding (1) that 'each dimension demonstrates a test-time scaling effect, but with a bounded capacity'.",
+   "usage": {
+    "prompt_tokens": 465,
+    "completion_tokens": 38,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 465
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract explicitly states that combining all three dimensions substantially improves reasoning performance on the specific testbeds IOI, IMO, and CPHO.",
+   "usage": {
+    "prompt_tokens": 475,
+    "completion_tokens": 40,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 475
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract explicitly states that combining all three dimensions substantially improves performance and 'further benefits from human preference feedback'.",
+   "usage": {
+    "prompt_tokens": 460,
+    "completion_tokens": 34,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 460
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2511.15738",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the human-in-the-loop framework extends to embodied learning for designing humanoid control behaviors.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 32,
+    "total_tokens": 500,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that whether these models truly possess test-time scaling capabilities remains underexplored, which directly aligns with the sentence framing this as the research question.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 44,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the study investigates longer CoTs' effect on accuracy, their link to self-revision, and compares sequential versus parallel scaling on QwQ, R1, and LIMO.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 51,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that longer CoTs do not consistently enhance accuracy and that correct solutions are often shorter than incorrect ones.",
+   "usage": {
+    "prompt_tokens": 424,
+    "completion_tokens": 35,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 424
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the phenomenon is closely related to self-revision capabilities and that longer CoTs containing more revisions often lead to performance degradation.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 40,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study found parallel scaling achieves better coverage and scalability compared to sequential scaling strategies.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 32,
+    "total_tokens": 440,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2502.12215",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed Shortest Majority Vote method significantly improves models' test-time scalability compared to conventional majority voting approaches.",
+   "usage": {
+    "prompt_tokens": 416,
+    "completion_tokens": 37,
+    "total_tokens": 453,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 416
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1722 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MLLMs' limited proficiency in visual reasoning is due to learning primarily from textual descriptions, which aligns with the sentence's claim of over-reliance on textual supervision.",
+   "usage": {
+    "prompt_tokens": 475,
+    "completion_tokens": 50,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 475
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method eliminates GPT-4/human supervision by using image augmentations to generate hard negative responses.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 36,
+    "total_tokens": 500,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2412.16334",
+   "label": "supported",
+   "reason": "The abstract confirms the method aligns DINOv2 with text, achieves CLIP-like results at a fraction of the computational cost, and performs well on dense tasks like semantic segmentation.",
+   "usage": {
+    "prompt_tokens": 439,
+    "completion_tokens": 48,
+    "total_tokens": 487,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 439
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly argues for three jointly necessary principles: semantic invariance (observation), patch-level spatial prediction, and representational non-degeneracy (regularization).",
+   "usage": {
+    "prompt_tokens": 460,
+    "completion_tokens": 44,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 460
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study identifies challenges including representation collapsing and high region correlation in latent space.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 31,
+    "total_tokens": 485,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework derives defect-aware prompts from unlabeled target data to guide a frozen ViT backbone and achieves robust zero-shot transfer.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 42,
+    "total_tokens": 489,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2410.01441",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method learns disentangled stroke features and outperforms both contemporary self-supervised frameworks and several supervised methods.",
+   "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 37,
+    "total_tokens": 442,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 405
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method constructs learning signals from asymmetric augmented views to improve fine-grained perception benchmarks without ground-truth annotations.",
+   "usage": {
+    "prompt_tokens": 613,
+    "completion_tokens": 38,
+    "total_tokens": 651,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 613
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper explores boosting SSL by extracting actions between ego-centric views and introducing a loss function to align these actions with visual representations.",
+   "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 40,
+    "total_tokens": 473,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 433
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2610.32835",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper probes the relationship between embedding similarity and semantics far from the natural-image manifold using sparse pixel edits on blank canvases.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 40,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The abstract explicitly states that textual descriptions are an incomplete supervisory signal and proposes a self-supervised framework to address this limitation.",
+   "usage": {
+    "prompt_tokens": 497,
+    "completion_tokens": 36,
+    "total_tokens": 533,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 497
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2404.10501",
+   "label": "unsupported",
+   "reason": "The abstract focuses on unsupervised preference alignment via image augmentation and does not discuss the insufficiency of pure language supervision or the integration of self-supervised objectives into general MLLM/VLM training.",
+   "usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 51,
+    "total_tokens": 533,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 482
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2412.16334",
+   "label": "unsupported",
+   "reason": "The abstract focuses on aligning self-supervised visual features with text, not on the insufficiency of pure language supervision or integrating self-supervised objectives into MLLM/VLM training.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 48,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors systematically explored visual augmentations and found that asymmetry in augmentation design is crucial for performance.",
+   "usage": {
+    "prompt_tokens": 643,
+    "completion_tokens": 40,
+    "total_tokens": 683,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 643
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The abstract explicitly states that properly designed image augmentation is used to generate hard negative responses for preference alignment.",
+   "usage": {
+    "prompt_tokens": 484,
+    "completion_tokens": 31,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 484
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method uses performed actions to structure the latent visual representation.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 28,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2410.01441",
+   "label": "partial",
+   "reason": "The abstract confirms the paper's method outperforms supervised baselines on a specific task but does not support the broader claim of a general 'consensus' across domain-specific tasks.",
+   "usage": {
+    "prompt_tokens": 409,
+    "completion_tokens": 51,
+    "total_tokens": 460,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 409
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2511.12410",
+   "label": "partial",
+   "reason": "The abstract shows the method outperforms baselines in cross-domain road damage detection but does not support the broad claim of a general consensus across all domain-specific tasks.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 44,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that every major self-supervised method is a special case of a unified framework based on three necessary principles.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 36,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2410.01441",
+   "label": "partial",
+   "reason": "The abstract confirms the paper addresses writer identification but does not support the specific claim that the method's success is due to 'domain-specific inductive biases'.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 42,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2511.12410",
+   "label": "partial",
+   "reason": "The abstract supports the paper's focus on road damage detection and visual prompting, but does not mention writer identification or explicitly argue for the importance of domain-specific inductive biases as a general principle.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 49,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2608.14144",
+   "label": "unsupported",
+   "reason": "The abstract does not mention writer identification, road damage detection, visual prompting, or the concept of domain-specific inductive biases.",
+   "usage": {
+    "prompt_tokens": 642,
+    "completion_tokens": 36,
+    "total_tokens": 678,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 642
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2407.15837",
+   "label": "unsupported",
+   "reason": "The abstract focuses on Latent Masked Image Modeling and does not mention cross-domain generalization, prompting, or adaptation strategies.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 36,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract confirms the paper prioritizes cross-domain generalization through a self-supervised prompting framework (SPEM and DAPA) rather than focusing solely on in-domain objectives.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 46,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2608.14144",
+   "label": "unsupported",
+   "reason": "The abstract discusses the empirical effects of augmentation strength but does not mention prompt design or the lack of theoretical guidance for hyperparameter selection.",
+   "usage": {
+    "prompt_tokens": 627,
+    "completion_tokens": 37,
+    "total_tokens": 664,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 627
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2404.10501",
+   "label": "unsupported",
+   "reason": "The abstract claims the method is efficient and requires few lines of code but does not mention difficulties with tuning augmentation strength, prompt design, or a lack of theoretical guidance for hyperparameters.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 47,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2512.15885",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states that the paper conducted extensive experiments on standard benchmarks and demonstrated consistent improvements across different LLM families, which contradicts the claim that the paper lacks comprehensive evaluation.",
+   "usage": {
+    "prompt_tokens": 485,
+    "completion_tokens": 48,
+    "total_tokens": 533,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 485
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2410.01441",
+   "label": "unsupported",
+   "reason": "The abstract focuses on proposing a specific method for writer identification and does not discuss the lack of comprehensive evaluation across diverse tasks or domains in other papers.",
+   "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 40,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 417
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2608.08309",
+   "label": "contradicted",
+   "reason": "The abstract explicitly claims that every major self-supervised method is a special case of their unified framework, directly contradicting the sentence's claim that the principles may not capture all practical variants.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 50,
+    "total_tokens": 508,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2407.06704",
+   "label": "partial",
+   "reason": "The abstract confirms the method extracts action data from videos but does not explicitly state that this requirement limits applicability to datasets lacking such information.",
+   "usage": {
+    "prompt_tokens": 427,
+    "completion_tokens": 38,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 427
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2610.32835",
+   "label": "partial",
+   "reason": "The abstract confirms the identification of off-manifold failure modes and suggests a probe tool, but does not explicitly state that current encoders have fundamental limitations or that standard evaluations fail to capture them.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 49,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper explores whether object-related actions and embodied interactions can boost self-supervised learning, mirroring human behavior.",
+   "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 37,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 418
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the methodology described in the abstract regarding extracting actions from four datasets and using a new loss function to align actions with image representations.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 40,
+    "total_tokens": 485,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the experiments show the method consistently outperforms previous methods on downstream category recognition.",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 32,
+    "total_tokens": 432,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the observed improvement is associated with better viewpoint-wise alignment of different objects from the same category.",
+   "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 34,
+    "total_tokens": 437,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 403
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that embodied interactions with objects can improve self-supervised learning of object categories.",
+   "usage": {
+    "prompt_tokens": 402,
+    "completion_tokens": 30,
+    "total_tokens": 432,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 402
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2407.06704",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method permits performed actions to structure the latent visual representation.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 28,
+    "total_tokens": 425,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2407.06704",
+   "label": "partial",
+   "reason": "The abstract confirms the use of four datasets and ego-centric scenarios but does not explicitly state that action annotations are a required input or limitation.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 41,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the problem of MLLMs overfitting language priors and overlooking visual details due to reliance on textual supervision, which the paper aims to address.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 45,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the methodology described in the abstract, including the use of frozen vision models and training early LLM layers as a predictor.",
+   "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 39,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 495
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JARVIS consistently improves performance on vision-centric benchmarks across different LLM families.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 32,
+    "total_tokens": 478,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach improves performance 'without degrading multimodal reasoning abilities'.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 30,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current models overfit language priors due to text-based supervision and introduces JARVIS to address this specific issue.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 45,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2512.15885",
+   "label": "supported",
+   "reason": "The abstract explicitly states the approach learns structural and semantic regularities from images without relying exclusively on language supervision.",
+   "usage": {
+    "prompt_tokens": 444,
+    "completion_tokens": 32,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 444
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2512.15885",
+   "label": "partial",
+   "reason": "The abstract confirms the use of frozen vision models but does not mention language-only task results or computational overhead, making those claims unsupported by the provided text.",
+   "usage": {
+    "prompt_tokens": 471,
+    "completion_tokens": 47,
+    "total_tokens": 518,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 471
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly argues for and formalizes three 'necessary principles' required for learning visual representations without labels.",
+   "usage": {
+    "prompt_tokens": 427,
+    "completion_tokens": 32,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 427
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the formalization of three principles, the provision of theoretical proofs, and the inclusion of controlled experiments with patch-retrieval evaluation.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 41,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that learning visual representations requires a training signal jointly complete across the three specified non-overlapping objectives.",
+   "usage": {
+    "prompt_tokens": 438,
+    "completion_tokens": 34,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 438
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that combining observation and prediction without regularization admits the constant encoder as a global minimizer under negative-free alignment.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 36,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper proves the two objectives are gradient-complementary and structurally non-conflicting at the encoder output.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 37,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2608.08309",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the momentum encoder converges to the same fixed point as the online encoder and provides no collapse guarantee at convergence.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 38,
+    "total_tokens": 467,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2608.08309",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on negative-free alignment and momentum encoders but does not explicitly state that these are limitations or that the claims are scale-dependent.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 41,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2610.32835",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper probes the relationship between embedding similarity and human-visible semantics far from the natural-image manifold.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 35,
+    "total_tokens": 447,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2610.32835",
+   "label": "supported",
+   "reason": "The abstract explicitly details the use of sparse pixel edits on blank canvases via hill-climbing to evaluate target retrieval in OpenCLIP and DINOv3 across ImageNet and Flickr30k.",
+   "usage": {
+    "prompt_tokens": 452,
+    "completion_tokens": 51,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 452
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2610.32835",
+   "label": "supported",
+   "reason": "The abstract explicitly states that sparse edits on blank, visually non-semantic inputs can enter target semantic basins in both language-aligned and self-supervised representation spaces.",
+   "usage": {
+    "prompt_tokens": 411,
+    "completion_tokens": 43,
+    "total_tokens": 454,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 411
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2610.32835",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on OpenCLIP, inputs optimized toward class prompts achieve strong top-1 and top-5 targeted retrieval performance.",
+   "usage": {
+    "prompt_tokens": 407,
+    "completion_tokens": 39,
+    "total_tokens": 446,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 407
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2610.32835",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on DINOv3, inputs optimized toward class prototypes achieve high target alignment and near-top prototype ranks.",
+   "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 37,
+    "total_tokens": 442,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 405
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2610.32835",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the findings identify a shared off-manifold failure mode of modern vision encoders.",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 32,
+    "total_tokens": 432,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2610.32835",
+   "label": "unsupported",
+   "reason": "The abstract describes the methodology and findings but does not explicitly state or acknowledge the specific limitations listed in the sentence.",
+   "usage": {
+    "prompt_tokens": 421,
+    "completion_tokens": 33,
+    "total_tokens": 454,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 421
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2412.16334",
+   "label": "supported",
+   "reason": "The abstract explicitly states the problem of aligning self-supervised models like DINOv2 with language for open-vocabulary tasks and details the proposed solution to achieve this while maintaining performance on dense tasks.",
+   "usage": {
+    "prompt_tokens": 419,
+    "completion_tokens": 51,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 419
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2412.16334",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the method name, the use of LiT with frozen DINOv2, and the specific improvements regarding token concatenation and data curation.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 44,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2412.16334",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method achieves state-of-the-art results in zero-shot classification.",
+   "usage": {
+    "prompt_tokens": 396,
+    "completion_tokens": 28,
+    "total_tokens": 424,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 396
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2412.16334",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method achieves state-of-the-art results in open-vocabulary semantic segmentation.",
+   "usage": {
+    "prompt_tokens": 398,
+    "completion_tokens": 30,
+    "total_tokens": 428,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 398
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2412.16334",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method trains a CLIP-like model with only a fraction of the computational cost compared to CLIP.",
+   "usage": {
+    "prompt_tokens": 404,
+    "completion_tokens": 36,
+    "total_tokens": 440,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 404
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2412.16334",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method achieves state-of-the-art results in both zero-shot classification (global) and open-vocabulary semantic segmentation (dense).",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 40,
+    "total_tokens": 440,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2412.16334",
+   "label": "partial",
+   "reason": "The abstract confirms the use of a frozen encoder and data curation but does not explicitly state that these are limitations or that they require significant effort.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 40,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly poses the exact same question regarding the source of informative asymmetry when no privileged information is available.",
+   "usage": {
+    "prompt_tokens": 611,
+    "completion_tokens": 33,
+    "total_tokens": 644,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 611
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method inverts asymmetry by subtracting information from the student and describes distilling the teacher's distribution on original images into the student's distribution on strongly augmented views.",
+   "usage": {
+    "prompt_tokens": 631,
+    "completion_tokens": 49,
+    "total_tokens": 680,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 631
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 'asymmetry matters: all four augmentation families improve performance, while symmetric self-distillation degrades it'.",
+   "usage": {
+    "prompt_tokens": 595,
+    "completion_tokens": 39,
+    "total_tokens": 634,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 595
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly states as a key finding that 'strength matters: performance peaks at a moderate strength'.",
+   "usage": {
+    "prompt_tokens": 584,
+    "completion_tokens": 32,
+    "total_tokens": 616,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 584
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly states as finding (3) that 'the gap must remain task-consistent' and warns that augmentations removing question-relevant evidence induce uninformative discrepancies.",
+   "usage": {
+    "prompt_tokens": 599,
+    "completion_tokens": 46,
+    "total_tokens": 645,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 599
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact performance metrics, benchmark count, and the claim of surpassing GPT-5.4 attributed to the paper.",
+   "usage": {
+    "prompt_tokens": 615,
+    "completion_tokens": 40,
+    "total_tokens": 655,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 615
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2608.14144",
+   "label": "supported",
+   "reason": "The abstract explicitly mentions evaluation on six fine-grained perception benchmarks and details the necessity of moderate augmentation strength to avoid removing task-relevant evidence.",
+   "usage": {
+    "prompt_tokens": 614,
+    "completion_tokens": 39,
+    "total_tokens": 653,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 614
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2410.01441",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work explores applying decorrelation-based self-supervised learning to learn disentangled stroke features for writer identification.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 37,
+    "total_tokens": 424,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2410.01441",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors propose SWIS, a modified decorrelation-based framework originally for signature verification, which standardizes features and is applied to writer identification.",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 44,
+    "total_tokens": 444,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2410.01441",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed SWIS framework outperforms contemporary self-supervised learning frameworks on writer identification benchmarks.",
+   "usage": {
+    "prompt_tokens": 381,
+    "completion_tokens": 35,
+    "total_tokens": 416,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 381
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2410.01441",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework outperforms several supervised methods on the writer identification benchmark.",
+   "usage": {
+    "prompt_tokens": 374,
+    "completion_tokens": 31,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 374
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2410.01441",
+   "label": "supported",
+   "reason": "The abstract explicitly states that this work is the first to apply self-supervised learning for writer verification tasks.",
+   "usage": {
+    "prompt_tokens": 378,
+    "completion_tokens": 32,
+    "total_tokens": 410,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 378
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2410.01441",
+   "label": "supported",
+   "reason": "The abstract explicitly states that decorrelation-based self-supervised pretraining yields performance at par with supervised and contrastive baselines.",
+   "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 36,
+    "total_tokens": 418,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 382
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2410.01441",
+   "label": "unsupported",
+   "reason": "The abstract claims the method outperforms baselines on writer identification but does not mention any limitations regarding generalization to other domains.",
+   "usage": {
+    "prompt_tokens": 391,
+    "completion_tokens": 40,
+    "total_tokens": 431,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 391
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies learning representations through masked reconstruction in latent space to combine MIM's locality with high-level targets as the promising framework the paper analyzes and addresses.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 43,
+    "total_tokens": 486,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study analyzes Latent MIM challenges through carefully designed experiments and sequentially addresses the specific issues listed in the sentence.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 39,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly lists 'representation collapsing for joint online/target optimization' as a challenge identified in the study of Latent MIM frameworks.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 38,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly lists 'the high region correlation in latent space and decoding conditioning' as identified sources of training challenges.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 34,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that by sequentially addressing the identified issues, the study demonstrates that Latent MIM can learn high-level representations.",
+   "usage": {
+    "prompt_tokens": 427,
+    "completion_tokens": 37,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 427
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed Latent MIM approach learns high-level representations while retaining the benefits of traditional MIM models.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 37,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2407.15837",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies multiple training challenges and confirms they were addressed sequentially, while the need for further validation is a reasonable inference given the paper's focus on foundational analysis rather than broad downstream benchmarking.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 50,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes a self-supervised framework to address poor cross-domain generalization in pavement defect detection without requiring labels for new environments.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 38,
+    "total_tokens": 467,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the proposed framework, SPEM, and DAPA objective with the exact details attributed in the sentence.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 35,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments on four benchmarks show the framework consistently outperforms strong supervised, self-supervised, and adaptation baselines.",
+   "usage": {
+    "prompt_tokens": 422,
+    "completion_tokens": 39,
+    "total_tokens": 461,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 422
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method achieves robust zero-shot transfer.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 25,
+    "total_tokens": 437,
+    "completion_tokens_details": {
+     "text_tokens": 25
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method achieves 'improved resilience to domain variations' in road damage detection experiments.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 34,
+    "total_tokens": 446,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method achieves high data efficiency in few-shot adaptation.",
+   "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 28,
+    "total_tokens": 438,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 410
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2511.12410",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method derives prompts from 'unlabeled target data' and frames the results specifically within the context of 'pavement defect detection' and 'visual inspection systems'.",
+   "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 56,
+    "total_tokens": 489,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 433
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper achieves unsupervised preference alignment without supervision from GPT-4 or human involvement.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 34,
+    "total_tokens": 480,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the core methodology described in the abstract, including the generation of responses from augmented images, the use of direct preference optimization, and the specific mechanism of inducing hard negative responses.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 49,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves a 90% relative score to GPT-4 on complex reasoning in LLaVA-Bench using only 8k randomly sampled unsupervised data.",
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 52,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 449
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method improves LLaVA-7B/13B by 6.7%/5.6% on the MM-Vet benchmark.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 45,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the pipeline no longer hinges on supervision from GPT-4 or human involvement during alignment.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 34,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2404.10501",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method is 'highly efficient with few lines of code'.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 29,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2404.10501",
+   "label": "partial",
+   "reason": "The abstract supports the dependence on augmentations but does not mention any limitations regarding benchmark generalization.",
+   "usage": {
+    "prompt_tokens": 460,
+    "completion_tokens": 30,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 460
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1637 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper reframes offline RL as an optimal transport problem to stitch best behaviors from datasets with sub-optimal experts.",
+   "usage": {
+    "prompt_tokens": 363,
+    "completion_tokens": 38,
+    "total_tokens": 401,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 363
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper introduces a framework that shifts focus from the dataset's state-action distribution to solely the state distribution.",
+   "usage": {
+    "prompt_tokens": 416,
+    "completion_tokens": 36,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 416
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that the paper identifies overfitting on small datasets, introduces the sparsity-based Sparse-Reg technique, and reports outperforming baselines in continuous control.",
+   "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 47,
+    "total_tokens": 400,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 353
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper addresses the difficulty of applying ORL in scenarios with scarce reward annotations by proposing a model to impute rewards from limited labeled data.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 44,
+    "total_tokens": 473,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the provision of 19 datasets including real-world human driver data, benchmarks for seven algorithms, and three driving scenarios.",
+   "usage": {
+    "prompt_tokens": 381,
+    "completion_tokens": 39,
+    "total_tokens": 420,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 381
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms linking offline RL to the HJB equation, using an operator-theoretic approach with infinitesimal generators of controlled diffusion processes in RKHS.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 43,
+    "total_tokens": 473,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly defines the work's focus as offline RL with zero-shot generalization, where an agent trains on data from different environments to perform well on unseen test environments.",
+   "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 45,
+    "total_tokens": 417,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 372
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study evaluates the robustness of offline RL methods against action perturbations simulating joint actuator faults.",
+   "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 37,
+    "total_tokens": 409,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 372
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2405.14374",
+   "label": "partial",
+   "reason": "The abstract confirms the paper introduces a state-constrained approach but does not mention action perturbations, safety-critical applications, or the specific claim of vulnerability requiring safeguards.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 44,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2503.07988",
+   "label": "partial",
+   "reason": "The abstract confirms the use of pessimistic methods to enhance generalization but does not mention action perturbations, safety-critical applications, or deployment contexts.",
+   "usage": {
+    "prompt_tokens": 411,
+    "completion_tokens": 41,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 411
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract confirms the paper provides autonomous driving datasets and benchmarks to address the limitation of relying on synthetic datasets, directly supporting the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 394,
+    "completion_tokens": 39,
+    "total_tokens": 433,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 394
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2412.18781",
+   "label": "unsupported",
+   "reason": "The abstract evaluates robustness using OpenAI Gym simulations and does not mention moving toward real-world applications or the development of new robotics benchmarks.",
+   "usage": {
+    "prompt_tokens": 391,
+    "completion_tokens": 38,
+    "total_tokens": 429,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 391
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes pessimistic policy evaluation methods (PERM and PPPO) to enhance generalization in offline RL, directly supporting the sentence's attribution.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 42,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2405.14374",
+   "label": "partial",
+   "reason": "The abstract confirms the use of state constraints to improve learning but does not mention mitigating overfitting or improving generalization as claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 41,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces sparsity regularization to mitigate overfitting in offline RL.",
+   "usage": {
+    "prompt_tokens": 374,
+    "completion_tokens": 29,
+    "total_tokens": 403,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 374
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed state-constrained framework allows policies to take high-quality out-of-distribution actions that lead to in-distribution states.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 41,
+    "total_tokens": 481,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method resolves OOD mode averaging by using a dynamic coupling mechanism to 'explicitly decouple distinct behavioral modes' and isolate high-value actions, which aligns with the sentence's claim about preventing OOD generation through mode decoupling.",
+   "usage": {
+    "prompt_tokens": 491,
+    "completion_tokens": 65,
+    "total_tokens": 556,
+    "completion_tokens_details": {
+     "text_tokens": 65
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 491
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2410.14069",
+   "label": "unsupported",
+   "reason": "The abstract discusses the algorithm's performance on D4RL but does not mention any stance on the relevance of these benchmarks or argue for domain-specific alternatives.",
+   "usage": {
+    "prompt_tokens": 394,
+    "completion_tokens": 41,
+    "total_tokens": 435,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 394
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2407.10839",
+   "label": "unsupported",
+   "reason": "The abstract discusses imputing rewards for D4RL tasks but does not mention any debate regarding the relevance of these benchmarks or compare them to domain-specific alternatives.",
+   "usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 43,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 482
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2404.02429",
+   "label": "unsupported",
+   "reason": "The abstract describes providing autonomous driving datasets but does not mention D4RL benchmarks or any disagreement regarding their relevance.",
+   "usage": {
+    "prompt_tokens": 419,
+    "completion_tokens": 33,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 419
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract confirms the paper demonstrates vulnerability to action perturbations and highlights the need for more robust approaches without proposing a concrete solution.",
+   "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 42,
+    "total_tokens": 460,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 418
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly states that global convergence is established under the assumption of a 'sufficiently small generator-approximation error', which matches the specific assumption cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 438,
+    "completion_tokens": 46,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 438
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2503.07988",
+   "label": "unsupported",
+   "reason": "The abstract does not mention specific assumptions like 'generator-approximation error' or discuss limitations regarding their practical validity.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 34,
+    "total_tokens": 431,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2404.02429",
+   "label": "partial",
+   "reason": "The abstract confirms the paper provides benchmarks but does not discuss the gap between benchmark performance and real-world deployment or the need for further validation.",
+   "usage": {
+    "prompt_tokens": 388,
+    "completion_tokens": 38,
+    "total_tokens": 426,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 388
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates overfitting in offline RL with small datasets and introduces a method to enable effective learning in such settings.",
+   "usage": {
+    "prompt_tokens": 323,
+    "completion_tokens": 39,
+    "total_tokens": 362,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 323
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Sparse-Reg is a sparsity-based regularization technique designed to mitigate overfitting in offline RL for limited data settings in continuous control.",
+   "usage": {
+    "prompt_tokens": 336,
+    "completion_tokens": 43,
+    "total_tokens": 379,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 336
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that offline RL algorithms can overfit on small datasets, resulting in poor performance.",
+   "usage": {
+    "prompt_tokens": 310,
+    "completion_tokens": 31,
+    "total_tokens": 341,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 310
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Sparse-Reg is a technique designed to mitigate overfitting in limited data settings.",
+   "usage": {
+    "prompt_tokens": 310,
+    "completion_tokens": 33,
+    "total_tokens": 343,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 310
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Sparse-Reg outperforms state-of-the-art baselines in continuous control.",
+   "usage": {
+    "prompt_tokens": 310,
+    "completion_tokens": 32,
+    "total_tokens": 342,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 310
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2506.17155",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method enables effective learning in limited data settings where applications rely on considerably smaller datasets than million-point benchmarks.",
+   "usage": {
+    "prompt_tokens": 308,
+    "completion_tokens": 36,
+    "total_tokens": 344,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 308
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2506.17155",
+   "label": "partial",
+   "reason": "The abstract confirms evaluation on continuous control tasks but does not explicitly state or imply that the method's effectiveness may vary across other domains.",
+   "usage": {
+    "prompt_tokens": 323,
+    "completion_tokens": 37,
+    "total_tokens": 360,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 323
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states the problem involves data from various experts with sub-optimal behaviors and proposes an algorithm to extract an efficient policy by stitching the best behaviors.",
+   "usage": {
+    "prompt_tokens": 341,
+    "completion_tokens": 42,
+    "total_tokens": 383,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 341
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states the algorithm reframes offline RL as an optimal transport problem to find a policy mapping states to a partial distribution of best expert actions for stitching behaviors.",
+   "usage": {
+    "prompt_tokens": 365,
+    "completion_tokens": 44,
+    "total_tokens": 409,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 365
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper rethinks offline RL as an optimal transport problem to stitch best behaviors from datasets containing sub-optimal experts.",
+   "usage": {
+    "prompt_tokens": 330,
+    "completion_tokens": 40,
+    "total_tokens": 370,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 330
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states the algorithm maps states to a 'partial distribution of the best expert actions'.",
+   "usage": {
+    "prompt_tokens": 332,
+    "completion_tokens": 31,
+    "total_tokens": 363,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 332
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the algorithm demonstrates improvements over existing methods on continuous control problems from the D4RL suite.",
+   "usage": {
+    "prompt_tokens": 326,
+    "completion_tokens": 34,
+    "total_tokens": 360,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 326
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states the algorithm was evaluated on continuous control problems from the D4RL suite and demonstrated improvements.",
+   "usage": {
+    "prompt_tokens": 326,
+    "completion_tokens": 33,
+    "total_tokens": 359,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 326
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states the algorithm addresses sub-optimal data by stitching the best behaviors from the dataset.",
+   "usage": {
+    "prompt_tokens": 330,
+    "completion_tokens": 31,
+    "total_tokens": 361,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 330
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract explicitly states evaluation is on continuous control problems from the D4RL suite and mentions no other domains, supporting the claim that other areas were not explored.",
+   "usage": {
+    "prompt_tokens": 347,
+    "completion_tokens": 43,
+    "total_tokens": 390,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 347
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2410.14069",
+   "label": "supported",
+   "reason": "The abstract describes the algorithm's motivation and evaluation but contains no mention of computational complexity or scalability analysis.",
+   "usage": {
+    "prompt_tokens": 335,
+    "completion_tokens": 31,
+    "total_tokens": 366,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 335
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study evaluates the robustness of offline reinforcement learning methods against joint actuator faults in robot control.",
+   "usage": {
+    "prompt_tokens": 364,
+    "completion_tokens": 36,
+    "total_tokens": 400,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 364
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the methodology described in the abstract, including the use of legged robots from OpenAI Gym, average episodic rewards, and random/adversarial perturbations to joint torque signals.",
+   "usage": {
+    "prompt_tokens": 385,
+    "completion_tokens": 51,
+    "total_tokens": 436,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 385
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments show existing offline RL methods exhibit significant vulnerabilities to action perturbations.",
+   "usage": {
+    "prompt_tokens": 349,
+    "completion_tokens": 30,
+    "total_tokens": 379,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 349
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing offline RL methods are more vulnerable to action perturbations than online RL methods.",
+   "usage": {
+    "prompt_tokens": 351,
+    "completion_tokens": 32,
+    "total_tokens": 383,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 351
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments using both random and adversarial perturbations revealed significant vulnerabilities in offline reinforcement learning methods.",
+   "usage": {
+    "prompt_tokens": 350,
+    "completion_tokens": 34,
+    "total_tokens": 384,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 350
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that the findings highlight the need for more robust approaches in offline reinforcement learning for robot control.",
+   "usage": {
+    "prompt_tokens": 352,
+    "completion_tokens": 33,
+    "total_tokens": 385,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 352
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2412.18781",
+   "label": "supported",
+   "reason": "The abstract explicitly states the study uses legged robots from OpenAI Gym and simulates failures by incorporating perturbations into joint torque signals.",
+   "usage": {
+    "prompt_tokens": 367,
+    "completion_tokens": 38,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 367
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper addresses the limitation of being confined to specific state-action distributions by introducing a state-constrained framework that allows out-of-distribution actions while focusing on the dataset's state distribution.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 52,
+    "total_tokens": 458,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of the state-constrained offline RL framework focusing on state distribution, the allowance of out-of-distribution actions leading to in-distribution states, and the implementation of the StaCQ algorithm.",
+   "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 55,
+    "total_tokens": 485,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 430
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the state-constrained approach allows policies to take high-quality out-of-distribution actions that lead to in-distribution states.",
+   "usage": {
+    "prompt_tokens": 399,
+    "completion_tokens": 40,
+    "total_tokens": 439,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 399
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed approach 'significantly enhancing learning potential' compared to traditional methods confined to batch-constrained settings.",
+   "usage": {
+    "prompt_tokens": 390,
+    "completion_tokens": 37,
+    "total_tokens": 427,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 390
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed setting improves the ability to combine different trajectories from the dataset effectively.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 31,
+    "total_tokens": 420,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2405.14374",
+   "label": "supported",
+   "reason": "The abstract explicitly states that StaCQ achieves state-of-the-art performance on the D4RL benchmark datasets.",
+   "usage": {
+    "prompt_tokens": 393,
+    "completion_tokens": 33,
+    "total_tokens": 426,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 393
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2405.14374",
+   "label": "unsupported",
+   "reason": "The abstract presents the theoretical findings and StaCQ's performance as achievements rather than limitations requiring further development or validation.",
+   "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 34,
+    "total_tokens": 437,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 403
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper addresses the lack of statistical understanding of approximation errors in offline RL by deriving explicit finite-sample guarantees for continuous-time systems.",
+   "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 40,
+    "total_tokens": 443,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 403
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper links RL to the HJB equation, proposes an operator-theoretic algorithm based on dynamic programming recursion, and represents the world model via the infinitesimal generator learned in a reproducing kernel Hilbert space.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 58,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors 'establish global convergence of the value function under sufficiently small generator-approximation error'.",
+   "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 36,
+    "total_tokens": 431,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 395
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors derive explicit finite-sample guarantees with bounds tied to system properties such as smoothness and stability.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 36,
+    "total_tokens": 433,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper integrates statistical learning methods and operator theory to establish convergence and derive finite-sample guarantees.",
+   "usage": {
+    "prompt_tokens": 390,
+    "completion_tokens": 33,
+    "total_tokens": 423,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 390
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that operator-based approaches show promise for solving offline RL using continuous-time optimal control.",
+   "usage": {
+    "prompt_tokens": 396,
+    "completion_tokens": 31,
+    "total_tokens": 427,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 396
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2511.10383",
+   "label": "supported",
+   "reason": "The abstract explicitly states the results are 'theoretical and proof-of-concept' and that convergence is established 'under sufficiently small generator-approximation error'.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 43,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's aim is to address Out-of-Distribution (OOD) Mode Averaging in Flow Matching based offline RL distillation.",
+   "usage": {
+    "prompt_tokens": 461,
+    "completion_tokens": 47,
+    "total_tokens": 508,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 461
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD reformulates offline policy distillation as a value-guided generative trajectory alignment problem using a dynamic coupling mechanism to rectify flow dynamics and decouple behavioral modes.",
+   "usage": {
+    "prompt_tokens": 479,
+    "completion_tokens": 50,
+    "total_tokens": 529,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 479
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD is instantiated through VRD-Q and VRD-R with the exact functions described in the sentence.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 37,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD resolves action collapse into OOD regions by using a dynamic coupling mechanism to decouple distinct behavioral modes.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 38,
+    "total_tokens": 486,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD improves existing generative baselines across diverse continuous control and planning tasks.",
+   "usage": {
+    "prompt_tokens": 444,
+    "completion_tokens": 32,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 444
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that VRD improves baselines 'especially over those multi-modal, non-expert datasets'.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 34,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the framework was evaluated on D4RL, OGBench, and Minari benchmarks.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 34,
+    "total_tokens": 480,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the dynamic coupling mechanism is employed to decouple behavioral modes and isolate high-value actions.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 33,
+    "total_tokens": 475,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evaluations were conducted on continuous control and planning tasks, implying no demonstration in other domains like discrete action spaces.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 37,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2610.29075",
+   "label": "supported",
+   "reason": "The abstract details the methodology and empirical results but contains no mention of computational overhead, runtime costs, or scalability analysis.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 34,
+    "total_tokens": 480,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper addresses the limitation of relying on synthetic game-task datasets by providing real-world autonomous driving datasets and benchmarks.",
+   "usage": {
+    "prompt_tokens": 362,
+    "completion_tokens": 37,
+    "total_tokens": 399,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 362
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the provision of 19 datasets, seven algorithms across three scenarios, and a unified decision-making model.",
+   "usage": {
+    "prompt_tokens": 391,
+    "completion_tokens": 36,
+    "total_tokens": 427,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 391
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper provides 19 datasets including real-world human driver's datasets.",
+   "usage": {
+    "prompt_tokens": 355,
+    "completion_tokens": 30,
+    "total_tokens": 385,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 355
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper provides seven popular offline reinforcement learning algorithms in three realistic driving scenarios.",
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 30,
+    "total_tokens": 384,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 354
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper provides a unified decision-making process model serving as a reference framework in algorithm design.",
+   "usage": {
+    "prompt_tokens": 356,
+    "completion_tokens": 33,
+    "total_tokens": 389,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 356
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper addresses the limitation of offline RL research relying on game tasks with synthetic datasets.",
+   "usage": {
+    "prompt_tokens": 355,
+    "completion_tokens": 33,
+    "total_tokens": 388,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 355
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper provides datasets and benchmarks to explore practical aspects of existing reinforcement learning methods in realistic driving scenarios.",
+   "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 35,
+    "total_tokens": 388,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 353
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2404.02429",
+   "label": "unsupported",
+   "reason": "The abstract describes the paper's focus on autonomous driving but does not discuss or imply limitations regarding generalization to other domains.",
+   "usage": {
+    "prompt_tokens": 361,
+    "completion_tokens": 35,
+    "total_tokens": 396,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 361
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2404.02429",
+   "label": "supported",
+   "reason": "The abstract mentions dataset count and scenarios but does not explicitly discuss specific dataset sizes, the diversity of driving conditions, or safety considerations for real-world deployment.",
+   "usage": {
+    "prompt_tokens": 370,
+    "completion_tokens": 41,
+    "total_tokens": 411,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 370
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the problem of applying Offline RL in data-scarce scenarios with few reward-annotated demonstrations and proposes a solution to address it.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 42,
+    "total_tokens": 474,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly describes proposing a Reward Model to estimate signals from limited annotated samples and impute rewards for reward-free transitions to enable ORL.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 39,
+    "total_tokens": 498,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the learned reward model imputes rewards using only 1% of reward-labeled transitions from the original datasets.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 39,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly states that performant agents can be learned using the 99% of transitions with imputed rewards.",
+   "usage": {
+    "prompt_tokens": 422,
+    "completion_tokens": 35,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 422
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method enables ORL in data-scarce scenarios by imputing rewards from a very limited sample of ground-truth annotations.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 42,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach was demonstrated on several D4RL continuous locomotion tasks.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 30,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the proposed reward model as 'simple but effective' and demonstrates its success using only 1% of reward-labeled transitions.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 40,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2407.10839",
+   "label": "supported",
+   "reason": "The abstract explicitly states the approach was demonstrated on D4RL continuous locomotion tasks without mentioning any other domains or task types.",
+   "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 36,
+    "total_tokens": 469,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 433
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2407.10839",
+   "label": "unsupported",
+   "reason": "The abstract mentions using a 1% sample but does not discuss the dependency of reward quality on representativeness or the risk of bias from poor distribution.",
+   "usage": {
+    "prompt_tokens": 438,
+    "completion_tokens": 42,
+    "total_tokens": 480,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 438
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work studies offline RL with zero-shot generalization where the agent trains on multiple environments to perform well on unseen test environments.",
+   "usage": {
+    "prompt_tokens": 363,
+    "completion_tokens": 41,
+    "total_tokens": 404,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 363
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of PERM and PPPO methods that leverage pessimistic policy evaluation to enhance generalization.",
+   "usage": {
+    "prompt_tokens": 381,
+    "completion_tokens": 35,
+    "total_tokens": 416,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 381
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that both PERM and PPPO are capable of finding a near-optimal policy with zero-shot generalization.",
+   "usage": {
+    "prompt_tokens": 356,
+    "completion_tokens": 37,
+    "total_tokens": 393,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 356
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing work showed classical offline RL fails to generalize to new, unseen environments.",
+   "usage": {
+    "prompt_tokens": 350,
+    "completion_tokens": 31,
+    "total_tokens": 381,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 350
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed methods leverage pessimistic policy evaluation to guide policy learning and enhance generalization.",
+   "usage": {
+    "prompt_tokens": 351,
+    "completion_tokens": 33,
+    "total_tokens": 384,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 351
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2503.07988",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the result serves as a 'first step in understanding the foundation of the generalization phenomenon'.",
+   "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 35,
+    "total_tokens": 388,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 353
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2503.07988",
+   "label": "partial",
+   "reason": "The abstract confirms the 'first step' claim but does not mention any limitations regarding theoretical assumptions about environment structure.",
+   "usage": {
+    "prompt_tokens": 365,
+    "completion_tokens": 39,
+    "total_tokens": 404,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 365
+    }
+   }
+  }
+ ]
+}

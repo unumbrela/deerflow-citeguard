@@ -1,0 +1,630 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "JudgeArena (Lushtaku et al., 2026) represents a significant effort to unify major benchmarks (AlpacaEval, Arena-Hard, MT-Bench, and m-Arena-Hard) under a single interface with swappable judges and comprehensive metadata logging.",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The reproducibility crisis in LLM evaluation is further highlighted by REFLECT (Wang et al., 2026), which exposes how existing meta-evaluations fall short due to reliance on coarse, subjective human-preference agreement rather than fine-grained, verifiable benchmarks.",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "DA-RAC (Wu et al., 2026) introduces distance-aware reference-anchored calibration, demonstrating that judge scores vary systematically with anchor distance and that static references can induce misleading decision boundaries.",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The trustworthiness problem is starkly illustrated by REFLECT's findings that current LLM judges remain unreliable for evaluating deep research agents, with particularly poor performance on evidence verification tasks (Wang et al., 2026).",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "SkillChain (Hu et al., 2026) employs dual-path LLM-judge evaluation for iterative skill refinement in e-commerce AI assistants, achieving significant gains in user engagement and content consumption confirmed through one-week A/B testing.",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, customer support agents at 100M-user scale (Gupta et al., 2026) integrate rigorous LLM judge evaluation with measured inter-rater agreement, demonstrating strong correlation between offline simulation metrics and online outcomes.",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Debatable Intelligence (Sternlicht et al., 2025) leverages over 600 annotated debate speeches to compare LLM judges against human evaluators, finding that while larger models can approximate individual human judgments in some respects, they differ substantially in overall judgment behavior.",
+   "ids": [
+    "2506.05062"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "CounselPlex (Kim et al., 2026) uses LLM-judge evaluations to demonstrate improved counseling quality and stressor grounding over strong baselines in full-duplex counseling models.",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "COMPOSE (Busbib & Werman, 2026) employs LLM-judge evaluation to assess generated mathematical theorems, achieving best overall performance compared to baselines.",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Both JudgeArena (Lushtaku et al., 2026) and DA-RAC (Wu et al., 2026) emphasize the importance of reference selection and configuration transparency.",
+   "ids": [
+    "2608.02620",
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Production deployments (Gupta et al., 2026; Hu et al., 2026) converge on the finding that offline LLM-judge metrics must be validated against online outcomes to ensure reliability.",
+   "ids": [
+    "2606.08867",
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is broad agreement that multi-metric evaluation is necessary for comprehensive assessment (Yang & Wu, 2026).",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While SkillChain and customer support deployments report significant gains (Hu et al., 2026; Gupta et al., 2026), REFLECT finds judges unreliable with accuracies below 55% on fine-grained tasks (Wang et al., 2026).",
+   "ids": [
+    "2606.12984",
+    "2606.08867",
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while some papers treat LLM judges as evaluation tools (Lushtaku et al., 2026; Wu et al., 2026), others use them as optimization targets within training loops (Hu et al., 2026), raising questions about circular evaluation.",
+   "ids": [
+    "2608.02620",
+    "2608.14950",
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while REFLECT exposes systematic judge failures (Wang et al., 2026), there is limited guidance on when judges can be safely deployed versus when human evaluation remains necessary.",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, multilingual and cross-cultural judge evaluation is underrepresented, with JudgeArena being a notable exception in addressing multilingual settings (Lushtaku et al., 2026).",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the computational and financial costs of large-scale LLM-judge evaluation versus human annotation receive limited systematic treatment, despite JudgeArena's claim of offering a low-cost alternative (Lushtaku et al., 2026).",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can plausible future mathematical theorem-like claims be generated by combining scientific citation context with formal theorem dependency structure?",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: COMPOSE is a dual-graph framework that conditions a language model on both scientific citation context and formal theorem structure, evaluated using retrieval and LLM-judge evaluation on a dataset of 108K paired examples.",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "COMPOSE outperforms strong baselines on retrieval to real future papers",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "COMPOSE achieves the best overall performance under LLM-judge evaluation",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generated outputs are more grounded and mathematically richer than baseline approaches",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Future mathematical generation benefits from combining scientific context with formal structure",
+   "ids": [
+    "2605.30333"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can evaluation-driven development bridge offline development with online impact for customer support AI agents at massive scale?",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Unified framework deployed at Nubank (100M+ users) integrating structured context engineering, human-in-the-loop prompt iteration, rigorous LLM judge evaluation with measured inter-rater agreement and GEPA optimization, validated through large-scale A/B testing.",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation-pipeline quality directly determines iteration velocity for AI agent development",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Card-delivery deployment yielded 37 percentage-point improvement in AI transactional Net Promoter Score and 29 percentage-point gain in self-service rate",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strong correlation between offline simulation metrics and online outcomes demonstrates reliable production impact prediction",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AI satisfaction reaches within a few percentage points of expert human agents on most use cases",
+   "ids": [
+    "2606.08867"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can image-based AI assistants on e-commerce platforms automatically evolve skills to handle heterogeneous user intents without manual engineering?",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: SkillChain automates the skill lifecycle through three stages (Skill Creator, Route Optimizer, Body Refiner) with dual-path LLM-Judge evaluation for iterative refinement, deployed and evaluated on production-scale e-commerce assistant.",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SkillChain substantially improves aggregate response quality on production-scale e-commerce image assistants",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strongest gains observed in structural compliance and content quality",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "One-week A/B experiment confirmed significant gains in user engagement, content consumption, and long-term retention",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Three-stage automation successfully closes the production feedback loop on skill evolution",
+   "ids": [
+    "2606.12984"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can full-duplex speech models for counseling avoid stressor blindness and maintain track of the seeker's underlying problem?",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: CounselPlex is a stressor-aware full-duplex framework that updates a short stressor state during seeker silence and injects this state into <PAD> positions, with RoPE Position Shift Augmentation (RPSA) for broader positional coverage, evaluated using LLM-judge evaluations.",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CounselPlex addresses stressor blindness in full-duplex counseling models",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-judge evaluations show improved counseling quality over strong baselines",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-judge evaluations show improved stressor grounding over strong baselines",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RPSA improves performance at longer turn depths",
+   "ids": [
+    "2610.32702"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create a unified, reproducible framework for studying how design choices in LLM-as-a-judge evaluation affect conclusions about model quality?",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: JudgeArena unifies major LLM-judge benchmarks (AlpacaEval, Arena-Hard, MT-Bench, m-Arena-Hard) under a single interface with swappable judges and comprehensive metadata logging, validated against human preference datasets in English and multilingual settings.",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JudgeArena unifies four major LLM-judge benchmarks under a single interface with swappable judges and comprehensive metadata logging for reproducibility",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Framework enables systematic studies of judge choices, supporting any model accessible via vLLM, llama.cpp, or OpenRouter as both candidate and judge",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tuned judge configurations for open models match or outperform closed-model judges in both English and multilingual settings",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JudgeArena can simulate LMArena Elo scores with high accuracy by combining existing human annotations with LLM-judge evaluations, offering low-cost alternative to large-scale human annotation",
+   "ids": [
+    "2608.02620"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do state-of-the-art LLMs compare to human judges in evaluating debate speeches?",
+   "ids": [
+    "2506.05062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: In-depth analysis leveraging dataset of over 600 meticulously annotated debate speeches, systematically comparing judgment behavior of larger models against human judges and investigating frontier LLMs' ability to generate persuasive speeches.",
+   "ids": [
+    "2506.05062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluating debate speeches requires deep understanding at multiple levels including argument strength, coherence, organization, style, and tone",
+   "ids": [
+    "2506.05062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Larger LLM models can approximate individual human judgments in some respects",
+   "ids": [
+    "2506.05062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs differ substantially from human judges in their overall judgment behavior",
+   "ids": [
+    "2506.05062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Frontier LLMs may perform at human level in generating persuasive, opinionated speeches",
+   "ids": [
+    "2506.05062"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How reliable are LLM judges for evaluating deep research agents, and what systematic failure modes do they exhibit in agentic environments?",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: REFLECT meta-evaluation benchmark defines detailed taxonomy of process- and outcome-level failure modes instantiated through controlled and localized interventions on quality-screened agent execution traces, evaluating current LLM judges across reasoning, tool-use, and report-quality failures.",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current LLM judges remain unreliable for evaluating deep research agents, with best-performing models achieving overall accuracies below 55% across reasoning, tool-use, and report-quality failures",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM judges show especially poor performance on evidence verification tasks",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing meta-evaluations fall short due to reliance on coarse, subjective human-preference agreement and focus on instruction-following or verifiable tasks rather than open-ended agent executions",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "REFLECT taxonomy exposes systematic judge limitations and reveals tradeoffs in cost and reliability for building evaluation pipelines",
+   "ids": [
+    "2605.19196"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM judges be calibrated to avoid false confidence caused by context-induced miscalibration from irrelevant reference examples?",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: DA-RAC introduces distance-aware reference-anchored calibration method that retrieves semantically and structurally similar labeled anchors for each judgment scenario, weights them by distance, and exposes neighborhood difficulty as calibration and triage signal, evaluated on multi-run LLM-judge evaluation benchmarks.",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DA-RAC improves calibration and reduces false-pass risk relative to zero-shot, chain-of-thought evaluation, and static-anchor baselines",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Judge scores vary systematically with anchor distance",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Static references can induce misleading decision boundaries",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM judgment requires calibrated, auditable reference selection grounded in relevant, inspectable, and contestable interpretive artifacts",
+   "ids": [
+    "2608.14950"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a retrieval-augmented generation system be designed for LongEval-RAG where all retrieved evidence and citations must remain within an organizer-provided candidate set?",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: System combining deterministic provenance tracking with passage-based retrieval, query expansion, pseudo-relevance feedback, reciprocal rank fusion, evidence reranking, citation-aware evidence aggregation, and optional MiniLM sentence reranking, evaluated using organizer evaluation and supplementary LLM-judge evaluation protocol.",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Rule-minilm variant achieves highest BERTScore, retrieval precision, nugget coverage, and average grade",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Main gain comes from pairing stable rule-based evidence units with sentence-level neural selection before generation",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supplementary LLM-judge evaluation emphasizes different systems than primary gold-answer and nugget-based evaluation",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-metric RAG evaluation is needed for comprehensive system assessment",
+   "ids": [
+    "2607.04008"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we create a synthesized spoken dialogue dataset that simultaneously covers persona/scenario settings, full-duplex behaviors, expressive speech, and sound events?",
+   "ids": [
+    "2609.12872"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: DuplexDrama built via 4-stage pipeline producing synthesized spoken dialogues covering persona/scenario settings, three full-duplex behaviors, expressive speech with emotion labels, and script-aware sound events, validated through internal full-duplex model training.",
+   "ids": [
+    "2609.12872"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DuplexDrama is first synthesized spoken dialogue dataset covering all four dimensions: persona/scenario settings, full-duplex behaviors, expressive speech with emotion labels, and sound events",
+   "ids": [
+    "2609.12872"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dataset contains more than 2,000 hours of audio data with 64-voice timbre pool spanning 13 personas and 5 age buckets",
+   "ids": [
+    "2609.12872"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "3.8% of all turns carry at least one full-duplex behavior",
+   "ids": [
+    "2609.12872"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Curated subset of 6,400 bilingual dialogues (800 hours) will be released to advance full-duplex spoken dialogue model research",
+   "ids": [
+    "2609.12872"
+   ]
+  }
+ ]
+}

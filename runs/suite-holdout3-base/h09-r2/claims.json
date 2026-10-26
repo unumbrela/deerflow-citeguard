@@ -1,0 +1,212 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 10
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bai et al. (2024) documented the proliferation of MIAs in federated learning settings, where the decentralized nature of training creates unique attack surfaces.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) and Song et al. (2026) extended attacks to large vision-language models and video-language models respectively, exploiting the multimodal nature of these systems.",
+   "ids": [
+    "2506.12340",
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nguyen et al. (2025) targeted document VQA models, while Liu et al. (2024) focused on retrieval-augmented generation systems.",
+   "ids": [
+    "2502.03692",
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lassila et al. (2025) addressed graph neural networks with node-level MIAs.",
+   "ids": [
+    "2505.24089"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Song et al. (2026) introduced temperature-perturbed generation queries to extract membership signals from video-language models through semantic drift analysis.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) demonstrated that output text embeddings alone suffice for effective attacks against vision-language models.",
+   "ids": [
+    "2506.12340"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nguyen et al. (2025) developed unsupervised black-box attacks against DocVQA models without requiring auxiliary datasets.",
+   "ids": [
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2024) employed mask-based queries to RAG systems, inferring membership from prediction accuracy patterns.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Galli et al. (2024) introduced the \"noisy neighbors\" approach, which operates the target model in inference mode only by adding stochastic noise in embedding space.",
+   "ids": [
+    "2406.16565"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Galli et al. (2024) explicitly positioned their noisy neighbors method as eliminating the computationally intensive training of additional models.",
+   "ids": [
+    "2406.16565"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lassila et al. (2025) demonstrated that their BASE and G-BASE methods match or exceed state-of-the-art MIAs like LiRA and RMIA at significantly lower computational cost.",
+   "ids": [
+    "2505.24089"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Du et al. (2025) proposed attack-agnostic frameworks (CMIA and PMIA) that incorporate membership dependencies without requiring attack-specific customization.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lassila et al. (2025) derived Bayes-optimal membership inference rules building on the decision-theoretic framework of Sablayrolles et al., providing theoretical justification for existing methods like RMIA.",
+   "ids": [
+    "2505.24089"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Du et al. (2025) provided theoretical analyses for both cascading and proxy attacks, establishing conditions under which membership dependencies can be exploited.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ward et al. (2025) framed MIA selection as a decision-theoretic problem under uncertainty, conducting the largest synthetic data privacy benchmark to date.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all papers agree that membership inference attacks represent the primary method for assessing privacy risks in machine learning systems, particularly under regulatory frameworks like GDPR and CCPA (Galli et al., 2024; Amit et al., 2024).",
+   "ids": [
+    "2406.16565",
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is consensus that black-box attack scenarios are more practically relevant than white-box settings, with multiple papers explicitly designing attacks for query-only access (Song et al., 2026; Wu et al., 2025; Nguyen et al., 2025).",
+   "ids": [
+    "2604.27002",
+    "2506.12340",
+    "2502.03692"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, the literature converges on the finding that no single attack method dominates across all model architectures and datasets, motivating ensemble approaches (Ward et al., 2025) and architecture-specific methodologies (Lassila et al., 2025).",
+   "ids": [
+    "2509.05350",
+    "2505.24089"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there is implicit tension between papers emphasizing attack sophistication (Du et al., 2025; Lassila et al., 2025) and those highlighting defense possibilities (Amit et al., 2024; Bai et al., 2024).",
+   "ids": [
+    "2507.21412",
+    "2505.24089",
+    "2403.08481",
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Amit et al. (2024) found that combining differential privacy with low-rank adaptors achieves best privacy protection for fine-tuned language models, suggesting defenses are viable, while other papers emphasize vulnerability without proposing equally strong countermeasures.",
+   "ids": [
+    "2403.08481"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is variation in assumptions about attacker capabilities: some papers assume no auxiliary data access (Nguyen et al., 2025), while others assume adversaries can train shadow models (Du et al., 2025), leading to different attack designs that are not directly comparable.",
+   "ids": [
+    "2502.03692",
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "While Amit et al. (2024) and Bai et al. (2024) survey defense approaches for language models and federated learning respectively, comparable systematic treatment is absent for vision-language models, video-language models, and document VQA systems.",
+   "ids": [
+    "2403.08481",
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, most evaluations are limited to one or two model architectures per paper, limiting generalizability claims (Song et al., 2026 evaluated only LLaVA-Video-7B-Qwen2-Video-Only; Lassila et al., 2025 noted performance dependence on hyperparameter tuning).",
+   "ids": [
+    "2604.27002",
+    "2505.24089"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the assumption of no auxiliary dataset access (Nguyen et al., 2025) while realistic, may underestimate attacker capabilities in scenarios where public data or leaked training corpora are available.",
+   "ids": [
+    "2502.03692"
+   ]
+  }
+ ]
+}

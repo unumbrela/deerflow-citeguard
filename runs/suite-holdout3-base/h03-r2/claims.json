@@ -1,0 +1,698 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Dhakal et al. (2026) introduced DistillLens, which projects intermediate hidden states into vocabulary space via the Logit Lens and enforces structural alignment using symmetric divergence.",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Wang et al. (2025) proposed attention-guided distillation that aligns attention patterns between transformer models, preserving the teacher's attention structure during compression and achieving superior performance on long-context understanding tasks.",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wilson et al. (2025) presented a task-aware framework that weights different aspects of teacher knowledge according to task relevance, achieving superior downstream performance compared to generic distillation.",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) combined curriculum learning with distillation, progressively increasing training example difficulty to improve convergence and final performance on complex reasoning tasks.",
+   "ids": [
+    "2507.05432"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) introduced adaptive techniques for low-resource environments, using temperature scaling and progressive layer skipping to achieve 95% of teacher performance with only 30% of parameters.",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Garcia et al. (2025) investigated cross-lingual distillation from high-resource to low-resource languages within multilingual models, demonstrating significant improvements on underrepresented languages while maintaining efficiency gains.",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Takrouri et al. (2025) explored domain-specific transfer, distilling temporal pattern recognition capabilities from large language models to specialized household energy forecasting models.",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim et al. (2025) proposed using a model's own predictions from previous tasks as soft targets, enabling retention of earlier task knowledge while learning new ones.",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Taylor et al. (2025) proposed incorporating adversarial training directly during distillation, producing student models that maintain both efficiency and adversarial robustness.",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Clark et al. (2025) demonstrated that NAS-discovered student architectures achieve better accuracy-efficiency tradeoffs than manually designed models, identifying structures specifically tailored for distillation from large teachers.",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The emphasis on intermediate alignment (Dhakal et al., 2026; Wang et al., 2025) contrasts with task-aware weighting (Wilson et al., 2025) regarding what knowledge is most valuable to transfer.",
+   "ids": [
+    "2602.13567",
+    "2506.20134",
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge distillation be optimized to efficiently transfer capabilities from large pretrained language models to smaller models operating in low-resource environments?",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces adaptive temperature scaling combined with progressive layer skipping to enable efficient knowledge transfer while reducing computational requirements.",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 95% of teacher model performance with only 30% of parameters",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adaptive temperature scaling improves distillation efficiency in resource-constrained settings",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive layer skipping reduces computational overhead without significant performance loss",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables deployment of capable language models in low-resource environments",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Performance metrics focus on parameter efficiency rather than inference speed or memory footprint.",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "No discussion of which capabilities are preserved versus lost, or applicability to specific downstream tasks.",
+   "ids": [
+    "2503.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can neural architecture search automatically discover student architectures optimized for knowledge distillation that outperform manually designed models?",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Automates student architecture design through neural architecture search (NAS) specifically optimized for knowledge distillation from large teacher models.",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "NAS-discovered student architectures achieve better accuracy-efficiency tradeoffs than manually designed models",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Architecture search can identify structures specifically tailored for distillation scenarios",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Automated design reduces human bias in student model architecture",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distillation-optimized architectures differ from standard compression architectures",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: NAS requires significant computational resources for the search process; discovered architectures may not transfer optimally across different teacher models or tasks.",
+   "ids": [
+    "2510.22341"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge distillation be improved by aligning the intermediate thought processes of teacher and student models rather than treating them as black boxes?",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Projects intermediate hidden states into vocabulary space via Logit Lens and enforces structural alignment using a symmetric divergence objective that imposes dual-sided penalties on both overconfidence and underconfidence.",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Symmetric divergence constraint prevents both overconfidence and underconfidence in student models",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Preserves high-entropy information conduits essential for final deduction",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consistently outperforms standard knowledge distillation and feature-transfer baselines",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates effectiveness across both GPT-2 and Llama architectures",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves performance on diverse instruction-following benchmarks",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation limited to GPT-2 and Llama architectures; generalizability to other model families remains unverified.",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Code availability suggests reproducibility but computational requirements for Logit Lens projection not discussed.",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can knowledge distillation techniques effectively transfer knowledge from high-resource to low-resource languages in multilingual language models?",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Investigates cross-lingual distillation techniques that transfer knowledge from high-resource languages to underrepresented low-resource languages within multilingual model frameworks.",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-lingual distillation significantly improves performance on underrepresented languages",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Efficiency gains are maintained while improving low-resource language capabilities",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Knowledge transfer from high-resource languages benefits multilingual model performance",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Addresses performance disparity between high and low-resource languages",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Does not specify which languages were tested or the magnitude of performance improvements.",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unclear whether improvements come at the cost of high-resource language performance or how the approach handles language families with different structures.",
+   "ids": [
+    "2504.08921"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can self-distillation mitigate catastrophic forgetting in language models performing continual learning across sequential tasks?",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes a self-distillation framework that uses the model's own predictions from previous tasks as soft targets, enabling retention of earlier task knowledge while learning new tasks.",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Self-distillation effectively mitigates catastrophic forgetting in continual learning scenarios",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains performance on earlier tasks while successfully learning new ones",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art results on sequential task benchmarks",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model's own predictions serve as effective soft targets for knowledge preservation",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluated only on sequential task benchmarks; performance on more complex continual learning scenarios with task interleaving or varying task distributions not addressed.",
+   "ids": [
+    "2505.15678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can large language models transfer temporal pattern recognition capabilities to specialized energy forecasting models for improved household energy consumption prediction?",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Applies knowledge distillation from large language models to domain-specific energy forecasting models, focusing on transferring temporal pattern recognition capabilities for energy prediction tasks.",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs can successfully transfer temporal pattern recognition capabilities to domain-specific energy models",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distillation improves energy prediction accuracy compared to non-distilled baselines",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables more accurate modeling of household energy consumption patterns",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supports transition to sustainable energy systems through better forecasting",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Abstract provides minimal detail on specific architectures, datasets, or quantitative performance metrics.",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unclear which temporal patterns were most effectively transferred or how the approach scales to different household types.",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can distilled language models be made robust against adversarial attacks while maintaining efficiency?",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes a robust distillation technique that incorporates adversarial training directly during the distillation process to produce adversarially resilient student models.",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adversarial training during distillation produces student models with improved robustness",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Student models maintain both efficiency gains and adversarial resistance",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Robust distillation addresses a critical vulnerability in compressed models",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrated approach avoids separate adversarial fine-tuning stages",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Adversarial training increases computational cost during distillation; robustness may vary depending on the type of adversarial attacks encountered.",
+   "ids": [
+    "2509.17856"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge distillation better preserve teacher model capabilities, particularly for long-context understanding tasks?",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces an attention-guided distillation method that aligns attention patterns between teacher and student transformer models, preserving the teacher's attention structure during model compression.",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attention pattern alignment preserves the teacher's structural knowledge better than standard distillation",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Superior performance on long-context understanding tasks compared to conventional distillation methods",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model compression maintains attention-based reasoning capabilities",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attention structure preservation leads to better knowledge transfer efficiency",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach focuses primarily on attention mechanisms and may not address other aspects of model knowledge; computational overhead of attention alignment is not thoroughly discussed.",
+   "ids": [
+    "2506.20134"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can distillation be adapted to specific target tasks to achieve better downstream performance than generic approaches?",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents a task-aware distillation framework that adapts the distillation objective by weighting different aspects of the teacher's knowledge according to task relevance.",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task-specific weighting achieves superior performance on downstream tasks versus generic distillation",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adapting distillation objectives to task requirements improves knowledge transfer efficiency",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Framework is flexible and adaptable to different task requirements",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Relevance-based weighting reduces unnecessary knowledge transfer overhead",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires upfront task specification which may limit generalization to unseen tasks; task relevance weighting scheme may need domain-specific tuning.",
+   "ids": [
+    "2508.11289"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can curriculum learning improve knowledge distillation convergence and final performance on complex tasks?",
+   "ids": [
+    "2507.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Combines curriculum learning with knowledge distillation by progressively increasing the difficulty of training examples during the distillation process.",
+   "ids": [
+    "2507.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Curriculum-based approach improves student model convergence speed",
+   "ids": [
+    "2507.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Better final performance on complex reasoning tasks compared to standard distillation",
+   "ids": [
+    "2507.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive difficulty scaling facilitates more effective knowledge transfer",
+   "ids": [
+    "2507.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Student models learn more robust representations through staged training",
+   "ids": [
+    "2507.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Curriculum design may be task-specific and requires manual tuning; the optimal difficulty progression strategy is not clearly defined for all scenarios.",
+   "ids": [
+    "2507.05432"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1467 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper introduces a method that exploits internal architectural heterogeneity in hybrid models by isolating SSM/linear-attention subgraphs as a zero-cost internal draft.",
+   "usage": {
+    "prompt_tokens": 561,
+    "completion_tokens": 47,
+    "total_tokens": 608,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 561
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of lightweight block diffusion models, the 6x lossless acceleration, and the 2.5x speedup over EAGLE-3.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 47,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2604.12989",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that DDTree constructs draft trees from block diffusion distributions using a best-first heap algorithm and verifies them in a single forward pass.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 40,
+    "total_tokens": 482,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2510.12966",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PyramidSD inserts an intermediate qualifier model to bridge distributional gaps and builds on fuzzy acceptance criteria.",
+   "usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 35,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 482
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2503.13565",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of MXFP4 quantized drafts in a plug-and-play fashion, reports speedups up to 2.72x over BF16 baselines, and states that accuracy is not sacrificed.",
+   "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 57,
+    "total_tokens": 611,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 554
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2610.07659",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the method name, the mechanism of adaptive multiple drafting stages before verification, the specific speedup range of 5 to 41 percent, and the preservation of lossless decoding.",
+   "usage": {
+    "prompt_tokens": 504,
+    "completion_tokens": 51,
+    "total_tokens": 555,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 504
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that RASD uses pruning based on probability distributions and longest prefix matching for tree fusion.",
+   "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 33,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 466
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speed-up from speculative decoding consistently diminishes for under-fit and often underrepresented tasks.",
+   "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 33,
+    "total_tokens": 404,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 371
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly describes Mistletoe as jointly optimizing degradation and semantic-preservation objectives using a null-space projection mechanism to reduce drafter-target agreement.",
+   "usage": {
+    "prompt_tokens": 516,
+    "completion_tokens": 41,
+    "total_tokens": 557,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 516
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2605.30580",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speculative decoding is far less effective for low-resource languages compared to English, which aligns directly with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 398,
+    "completion_tokens": 40,
+    "total_tokens": 438,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 398
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces DFlash as a speculative decoding framework that employs a 'block diffusion model' for drafting, which aligns with the sentence's attribution of advocating for block diffusion architectural innovations.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 49,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2604.12989",
+   "label": "unsupported",
+   "reason": "The abstract does not mention the authors Chen et al. or Ringel & Romano, nor does it discuss a divergence of opinions on drafting strategies.",
+   "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 40,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 477
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2503.13565",
+   "label": "unsupported",
+   "reason": "The abstract does not mention the author 'Georganas' or explicitly categorize the work as a 'quantization-based approach' in the context of diverging drafting strategies.",
+   "usage": {
+    "prompt_tokens": 582,
+    "completion_tokens": 46,
+    "total_tokens": 628,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 582
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2510.12966",
+   "label": "unsupported",
+   "reason": "The abstract describes a hierarchical multi-model design but does not mention the author 'Byun et al., 2025' or explicitly frame the work as part of a broader disagreement on drafting strategies.",
+   "usage": {
+    "prompt_tokens": 525,
+    "completion_tokens": 52,
+    "total_tokens": 577,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 525
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2605.30580",
+   "label": "partial",
+   "reason": "The abstract supports the use of n-gram models for speed-ups but does not state they outperform neural drafters, only that they offer moderate improvements due to low cost.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 46,
+    "total_tokens": 454,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract confirms the paper identifies and exploits a new adversarial vulnerability in speculative decoding, supporting the claim that it addresses security implications.",
+   "usage": {
+    "prompt_tokens": 514,
+    "completion_tokens": 37,
+    "total_tokens": 551,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 514
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly analyzes the 'disparate impacts' and 'unfairness' of speculative decoding across tasks, confirming the sentence's claim about raising questions regarding equitable access to acceleration benefits.",
+   "usage": {
+    "prompt_tokens": 384,
+    "completion_tokens": 48,
+    "total_tokens": 432,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 384
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces 'component-aware self-speculative decoding' as the first method to exploit internal architectural heterogeneity in hybrid models for zero-cost drafting.",
+   "usage": {
+    "prompt_tokens": 543,
+    "completion_tokens": 41,
+    "total_tokens": 584,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 543
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of component-aware self-speculative decoding isolating SSM/linear-attention subgraphs and lists evaluations on Falcon-H1, Qwen3.5, and a pure Transformer control.",
+   "usage": {
+    "prompt_tokens": 565,
+    "completion_tokens": 54,
+    "total_tokens": 619,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 565
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact acceptance rates for Falcon-H1 and Qwen3.5 at the specified draft length and confirms the 18x gap.",
+   "usage": {
+    "prompt_tokens": 567,
+    "completion_tokens": 43,
+    "total_tokens": 610,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 567
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the property is scale-invariant, noting that Falcon-H1 at 3B reproduces the rates observed at 0.5B.",
+   "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 44,
+    "total_tokens": 572,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 528
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states that perplexity degradation from an ablation study predicts speculative viability without running speculative decoding.",
+   "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 32,
+    "total_tokens": 560,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 528
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states that for sequential hybrids, generic LayerSkip achieves 12x higher acceptance rates than the component-aware strategy.",
+   "usage": {
+    "prompt_tokens": 535,
+    "completion_tokens": 37,
+    "total_tokens": 572,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 535
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that the composition pattern of hybrid models determines whether component-level self-speculation is viable.",
+   "usage": {
+    "prompt_tokens": 525,
+    "completion_tokens": 32,
+    "total_tokens": 557,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 525
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly limits the evaluation to two specific hybrid families (Falcon-H1 and Qwen3.5) and focuses solely on the component-aware isolation strategy without mentioning other drafting approaches.",
+   "usage": {
+    "prompt_tokens": 545,
+    "completion_tokens": 52,
+    "total_tokens": 597,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 545
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2510.12966",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the trade-off between draft model size and token acceptance as a fundamental limitation and presents PyramidSD as the solution to overcome it.",
+   "usage": {
+    "prompt_tokens": 465,
+    "completion_tokens": 40,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 465
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2510.12966",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PyramidSD inserts an intermediate qualifier model and uses fuzzy acceptance criteria to support relaxed divergence thresholds.",
+   "usage": {
+    "prompt_tokens": 480,
+    "completion_tokens": 34,
+    "total_tokens": 514,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 480
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2510.12966",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PyramidSD achieves up to 1.91x generation speed over standard SD.",
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 33,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 462
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2510.12966",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PyramidSD reaches 124 tokens per second on an RTX 4090.",
+   "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 35,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 466
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2510.12966",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in small-memory settings, the method 'minimally trades target model quality for improved throughput'.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 36,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2510.12966",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the hierarchical decoding strategy improves alignment, enabling higher acceptance rates and allowing the use of significantly smaller draft models.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 37,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces DFlash as a framework that employs a block diffusion model for parallel drafting to overcome the sequential limitations of existing speculative decoding methods.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 40,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DFlash employs a lightweight block diffusion model for parallel drafting in a single forward pass while conditioning on context features from the target model.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 42,
+    "total_tokens": 462,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DFlash achieves over 6x lossless acceleration across a range of models and tasks.",
+   "usage": {
+    "prompt_tokens": 402,
+    "completion_tokens": 34,
+    "total_tokens": 436,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 402
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DFlash delivers up to 2.5x higher speedup than EAGLE-3.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 36,
+    "total_tokens": 442,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DFlash enables efficient drafting with high-quality outputs and higher acceptance rates.",
+   "usage": {
+    "prompt_tokens": 399,
+    "completion_tokens": 30,
+    "total_tokens": 429,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 399
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2602.06036",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing methods rely on sequential autoregressive drafting while the proposed block diffusion model enables parallel generation.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 34,
+    "total_tokens": 431,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2503.13565",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the lack of plug-and-play capability due to pre-training requirements as a problem and proposes a quantized draft method to solve it.",
+   "usage": {
+    "prompt_tokens": 530,
+    "completion_tokens": 41,
+    "total_tokens": 571,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 530
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2503.13565",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of using MXFP4 models as plug-and-play drafts and describes ML-SpecQD as a method that recursively applies speculative decoding to accelerate draft-token generation.",
+   "usage": {
+    "prompt_tokens": 542,
+    "completion_tokens": 49,
+    "total_tokens": 591,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 542
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2503.13565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the plug-and-play MXFP4 solution yields speedups up to 2x over the BF16 baseline.",
+   "usage": {
+    "prompt_tokens": 525,
+    "completion_tokens": 39,
+    "total_tokens": 564,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 525
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2503.13565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method yields speedups up to 2.72x over the BF16 baseline.",
+   "usage": {
+    "prompt_tokens": 523,
+    "completion_tokens": 36,
+    "total_tokens": 559,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 523
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2503.13565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speculative decoding accelerates LLM inference without sacrificing accuracy over 16-bit model inference, and the proposed method builds upon this premise.",
+   "usage": {
+    "prompt_tokens": 516,
+    "completion_tokens": 49,
+    "total_tokens": 565,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 516
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2503.13565",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method recursively applies speculation to accelerate draft-token generation.",
+   "usage": {
+    "prompt_tokens": 512,
+    "completion_tokens": 27,
+    "total_tokens": 539,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 512
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2610.07659",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the problem of unnecessary target-model forward passes when draft models are capable and proposes DLoop to address it.",
+   "usage": {
+    "prompt_tokens": 475,
+    "completion_tokens": 36,
+    "total_tokens": 511,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 475
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2610.07659",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DLoop is a looped form performing multiple drafting stages before verification and uses loop-aware training to expose the draft model to its own hidden states for unverified tokens.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 49,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2610.07659",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DLoop reduces target-model forward passes by spending additional draft-model forward passes.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 31,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2610.07659",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DLoop improves wall-clock speedup by 5 to 41 percent across the listed methods including EAGLE-3, DFlash, Domino, and DSpark.",
+   "usage": {
+    "prompt_tokens": 489,
+    "completion_tokens": 51,
+    "total_tokens": 540,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 489
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2610.07659",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DLoop improves wall-clock speedup while preserving lossless decoding.",
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 29,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 463
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2610.07659",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states that adaptive draft length methods raise speedup only for autoregressive draft models, not parallel ones.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 36,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2605.30580",
+   "label": "supported",
+   "reason": "The abstract explicitly states the hypothesis that speculative decoding is less effective for low-resource languages due to the limited multilingual capacities of smaller models.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 38,
+    "total_tokens": 427,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2605.30580",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms testing eleven languages, attempting distillation, and proposing n-gram models as draft models.",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 33,
+    "total_tokens": 433,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2605.30580",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors found strong evidence that speculative decoding is far less effective for low-resource languages due to limited multilingual capacities of smaller models.",
+   "usage": {
+    "prompt_tokens": 381,
+    "completion_tokens": 41,
+    "total_tokens": 422,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 381
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2605.30580",
+   "label": "supported",
+   "reason": "The abstract explicitly states that distillation generalizes poorly across tasks in the same language.",
+   "usage": {
+    "prompt_tokens": 379,
+    "completion_tokens": 28,
+    "total_tokens": 407,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 379
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2605.30580",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors argue assembling a task-agnostic, fully representative dataset is infeasible for low-resource languages.",
+   "usage": {
+    "prompt_tokens": 380,
+    "completion_tokens": 37,
+    "total_tokens": 417,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 380
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2605.30580",
+   "label": "supported",
+   "reason": "The abstract explicitly states that weaker n-gram models provide moderate speed-ups due to their minuscule inference cost.",
+   "usage": {
+    "prompt_tokens": 380,
+    "completion_tokens": 34,
+    "total_tokens": 414,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 380
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2605.30580",
+   "label": "partial",
+   "reason": "The abstract confirms the study covers eleven languages but does not explicitly state that alternative drafting strategies were excluded for specific language families.",
+   "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 39,
+    "total_tokens": 434,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 395
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current model-based speculative decoding is less effective in out-of-domain scenarios and proposes RASD, which uses retrieval methods to address this limitation.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 44,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly details the proposal of RASD, including tree pruning based on probability distributions and tree fusion via longest prefix matching.",
+   "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 37,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 466
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that RASD achieves state-of-the-art inference acceleration across DocQA, Summary, Code, and In-Domain QA tasks.",
+   "usage": {
+    "prompt_tokens": 452,
+    "completion_tokens": 41,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 452
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper develops a pruning method to construct the optimal retrieval tree.",
+   "usage": {
+    "prompt_tokens": 439,
+    "completion_tokens": 29,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 439
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the longest prefix matching algorithm is employed to merge the draft model tree with the retrieval tree, resulting in a unified tree for verification.",
+   "usage": {
+    "prompt_tokens": 441,
+    "completion_tokens": 42,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 441
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that RASD exhibits strong scalability and seamlessly integrates with both generation-based and retrieval-based methods.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 34,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2503.03434",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current model-based speculative decoding becomes less effective in out-of-domain scenarios due to small draft models and proposes RASD, which uses retrieval methods, to address this limitation.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 50,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2503.03434",
+   "label": "unsupported",
+   "reason": "The abstract does not mention computational overhead metrics or evaluations on low-resource languages, so it cannot support a claim about their absence.",
+   "usage": {
+    "prompt_tokens": 451,
+    "completion_tokens": 36,
+    "total_tokens": 487,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 451
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2604.12989",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the limitation of verifying only a single trajectory and introduces DDTree as the method to address this specific research question.",
+   "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 37,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 418
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2604.12989",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms all key components: DDTree constructs draft trees from per-position distributions, uses a best-first heap algorithm under fixed node budgets, and verifies via a single forward pass with ancestor-only attention masks.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 53,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2604.12989",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DDTree builds on DFlash and describes DFlash as a leading draft model for speculative decoding.",
+   "usage": {
+    "prompt_tokens": 409,
+    "completion_tokens": 35,
+    "total_tokens": 444,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 409
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2604.12989",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the introduced DDTree method constructs a draft tree and verifies it efficiently in a single target model forward pass.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 37,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2604.12989",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DDTree uses a simple best-first heap algorithm to select continuations most likely to match the target model.",
+   "usage": {
+    "prompt_tokens": 413,
+    "completion_tokens": 37,
+    "total_tokens": 450,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 413
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2604.12989",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the gains place DDTree among the leading approaches to speculative decoding.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 29,
+    "total_tokens": 437,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper analyzes whether speed-up rates are uniformly distributed and concludes they are not, directly addressing the research question.",
+   "usage": {
+    "prompt_tokens": 370,
+    "completion_tokens": 37,
+    "total_tokens": 407,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 370
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the analysis of disparate speed-up rates, the derivation of a quantitative measure for unfairness, and the proposal and validation of mitigation strategies across model pairs.",
+   "usage": {
+    "prompt_tokens": 384,
+    "completion_tokens": 45,
+    "total_tokens": 429,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 384
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the speed-up gained from speculative decoding is not uniformly distributed across tasks.",
+   "usage": {
+    "prompt_tokens": 357,
+    "completion_tokens": 30,
+    "total_tokens": 387,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 357
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly states that speed-up from speculative decoding consistently diminishes for under-fit and often underrepresented tasks.",
+   "usage": {
+    "prompt_tokens": 359,
+    "completion_tokens": 33,
+    "total_tokens": 392,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 359
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors derive an analysis to quantify the observed unfairness in speed-up distribution.",
+   "usage": {
+    "prompt_tokens": 358,
+    "completion_tokens": 32,
+    "total_tokens": 390,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 358
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed mitigation strategy reveals on average a 12% improvement in the fairness metric.",
+   "usage": {
+    "prompt_tokens": 360,
+    "completion_tokens": 34,
+    "total_tokens": 394,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 360
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper draws attention to factors motivating disparate speed-ups and proposes a validated mitigation strategy to address them.",
+   "usage": {
+    "prompt_tokens": 359,
+    "completion_tokens": 36,
+    "total_tokens": 395,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 359
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2510.02128",
+   "label": "supported",
+   "reason": "The abstract mentions 'under-fit' and 'underrepresented tasks' generally without naming specific tasks, and states a mitigation strategy was proposed without detailing its implementation.",
+   "usage": {
+    "prompt_tokens": 367,
+    "completion_tokens": 42,
+    "total_tokens": 409,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 367
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the drafter-target mismatch as a hidden attack surface and demonstrates an attack that collapses acceleration while preserving output quality.",
+   "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 37,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 506
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly details the Mistletoe attack's joint optimization of degradation and semantic-preservation objectives and its use of null-space projection to resolve conflicts.",
+   "usage": {
+    "prompt_tokens": 520,
+    "completion_tokens": 42,
+    "total_tokens": 562,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 520
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly states that drafter-target mismatch creates a hidden attack surface where small perturbations reduce draft-token acceptability while preserving the target model's visible behavior.",
+   "usage": {
+    "prompt_tokens": 498,
+    "completion_tokens": 43,
+    "total_tokens": 541,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 498
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments show Mistletoe substantially reduces average accepted length τ and collapses speedup on various speculative decoding systems.",
+   "usage": {
+    "prompt_tokens": 496,
+    "completion_tokens": 38,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 496
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed attack lowers averaged token throughput while preserving output quality and perplexity.",
+   "usage": {
+    "prompt_tokens": 489,
+    "completion_tokens": 31,
+    "total_tokens": 520,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 489
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a null-space projection mechanism is introduced to resolve the conflict between degradation and semantic-preservation objectives.",
+   "usage": {
+    "prompt_tokens": 490,
+    "completion_tokens": 35,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 490
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that speculative decoding introduces a mechanism-level attack surface beyond existing output robustness.",
+   "usage": {
+    "prompt_tokens": 491,
+    "completion_tokens": 30,
+    "total_tokens": 521,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 491
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2605.14005",
+   "label": "supported",
+   "reason": "The abstract mentions testing on 'various' systems without naming them and states the reduction is 'substantial' without providing specific numerical values.",
+   "usage": {
+    "prompt_tokens": 501,
+    "completion_tokens": 39,
+    "total_tokens": 540,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 501
+    }
+   }
+  }
+ ]
+}

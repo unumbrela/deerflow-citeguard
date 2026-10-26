@@ -1,0 +1,587 @@
+{
+ "stats": {
+  "ambiguous": 7,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kashaniyan and Jannesari (2026) demonstrated that candidate count alone inadequately describes the systems cost of multi-candidate test-time scaling.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ding and Zhang (2026) addressed efficiency in the software engineering domain with SWE-Replay, which optimizes scaling by recycling trajectories from prior trials rather than repeatedly sampling from scratch.",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "He et al. (2026) introduced DiffCodeGen for code generation, which performs candidate selection without additional LLM inference calls by using coverage-guided fuzzing to synthesize inputs and clustering candidates based on behavioral similarity.",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hariri et al. (2026) formalized dense benchmark ranking under test-time scaling and introduced Scorio, an open-source library implementing statistical ranking methods including paired-comparison models, item response theory, voting rules, and graph-based methods.",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zeng et al. (2025) challenged assumptions about test-time scaling capabilities in o1-like models, finding that longer chains-of-thought do not consistently enhance accuracy—correct solutions are often shorter than incorrect ones for the same questions.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ge et al. (2026) examined on-policy distillation through the lens of test-time scaling, revealing that OPD improvements do not uniformly extend across all test-time sampling budgets.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xiao et al. (2025) introduced state tuning for RWKV-7, a novel state-based approach to test-time scaling tailored to RNN architectures.",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Muennighoff et al. (2025) sought the simplest approach to achieve test-time scaling and strong reasoning performance comparable to proprietary models like o1.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Kashaniyan and Jannesari (2026) showed that naive scaling (increasing sample count without considering generation strategy) incurs substantial efficiency penalties.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is broad agreement that parallel scaling strategies outperform sequential approaches in terms of both efficiency and coverage (Zeng et al., 2025; Ding & Zhang, 2026).",
+   "ids": [
+    "2502.12215",
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Zeng et al. (2025) found that longer CoTs often correlate with worse performance due to self-revision errors, challenging the assumption that more computation time inherently improves results.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The resolution may lie in the quality rather than quantity of reasoning: budget forcing (Muennighoff et al., 2025) can improve performance by prompting models to \"double-check\" answers, but unstructured length increases may introduce errors faster than corrections.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Xiao et al. (2025) evaluated state tuning on a single target task without broader benchmark coverage, and Muennighoff et al. (2025) focused primarily on math competition questions.",
+   "ids": [
+    "2504.05097",
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "While Wang et al. (2025) derived unified mathematical structures for scaling bounds, the mechanistic explanations for phenomena like the self-revision degradation observed by Zeng et al. (2025) remain empirical rather than theoretical.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Kashaniyan and Jannesari (2026) explicitly call for evaluations to report generation schedules and GPU-level metrics alongside accuracy, suggesting this has been neglected in prior work.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "SWE-Replay (Ding & Zhang, 2026) is designed specifically for software engineering agents with repository exploration workflows, and DiffCodeGen (He et al., 2026) targets code generation—whether these approaches transfer to other domains requires investigation.",
+   "ids": [
+    "2601.22129",
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can test-time scaling for software engineering agents be made more efficient without relying on potentially noisy LLM-based value estimates?",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: SWE-Replay optimizes scaling by recycling trajectories from prior trials, dynamically choosing to explore from scratch or exploit archived experience by branching at critical intermediate steps based on repository exploration potential and reasoning significance.",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms naive scaling on SWE-Bench Verified while reducing costs by up to 17.4%",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains or improves performance by up to 3.8% compared to standard approaches",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generalizes successfully to SWE-Bench Pro and Multilingual benchmarks",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Avoids reliance on potentially miscalibrated LLM-based value estimates",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Approach is specifically designed for software engineering agents with repository exploration workflows; effectiveness may vary for different agent architectures or task domains beyond SWE.",
+   "ids": [
+    "2601.22129"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does on-policy distillation (OPD) yield improvements across the entire range of test-time sampling budgets?",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors examine OPD through test-time scaling by varying sampling budget K and evaluating performance with pass@K, and propose the Teacher Advantage Score at K (TAS@K) to predict which teacher will lead to larger improvements before OPD training.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OPD can improve pass@K at both small and large sampling budgets, or improve small-budget performance while reducing large-budget pass@K",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Conditions guaranteeing performance reversal are identified with reverse KL counterexamples",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TAS@K can be computed before OPD training to predict teacher selection at target sampling budgets",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TAS@K ordering agrees with observed improvements in 83.6% of experiments across thirteen benchmarks",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: TAS@K does not perfectly predict outcomes (only 83.6% agreement rate), and counterexamples demonstrate that even idealized reverse KL cases can exhibit performance reversals.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can reasoning LLMs be effectively ranked under test-time scaling regimes?",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formalize dense benchmark ranking under test-time scaling and introduce Scorio, implementing statistical ranking methods including paired-comparison models, item response theory, voting rules, and graph/spectral-based methods, evaluated across 20 reasoning models on four Olympiad-style math benchmarks.",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most full-trial rankings agree closely with Bayesian gold standard Bayes_U@80 (mean Kendall's τ_b = 0.93-0.95)",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "19-34 methods recover exactly the same ordering as the gold standard in full-trial regime",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In single-trial regime, best methods reach τ_b ≈ 0.86",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Using greedy decoding as empirical prior reduces variance at N=1 by 16-52%, but can bias rankings",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Greedy decoding as empirical prior can bias rankings when it disagrees with stochastic sampling; evaluation limited to Olympiad-style math benchmarks which may not generalize to other reasoning domains.",
+   "ids": [
+    "2603.10960"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can code generation test-time scaling be improved without relying on public test cases or extensive LLM inference for candidate selection?",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: DiffCodeGen generates diverse code candidates using various sampling and prompting strategies, applies coverage-guided fuzzing to synthesize inputs without requiring existing tests, clusters candidates based on behavioral similarity, and selects the medoid of the largest cluster.",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves competitive or superior performance compared to state-of-the-art methods while using only a fraction of time and tokens",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Candidate selection requires no additional LLM model calls, incurring little to no additional token consumption",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fully asynchronous, model-agnostic, and naturally suited to agentic coding workflows",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluated across 4 large language models with consistent improvements over baselines",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Relies on coverage-guided fuzzing which may not capture all edge cases; behavioral clustering may not always identify the semantically best solution; effectiveness depends on quality of synthesized test inputs.",
+   "ids": [
+    "2605.20473"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does candidate-generation strategy (not just candidate count) affect the systems cost and performance of LLM test-time scaling?",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Fixed candidate count N=8 and compared four generation schedules (1x8, 2x4, 4x2, 8x1) measuring latency, throughput, GPU-hours, and GPU-device energy on A100 GPUs using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eight serial calls use 4.64-4.86× as much gross GPU-device energy as one batched call",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eight serial calls have 5.77-6.12× the P95 latency of one batched call",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fewer generation calls with larger batch sizes are more efficient when candidates are independent",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Experiments limited to A100 and V100 GPUs with independent candidates; memory constraints may limit batch size options in practice.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the simplest approach to achieve test-time scaling and strong reasoning performance comparable to proprietary models like o1?",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Curated s1K, a small dataset of 1,000 questions with reasoning traces validated on difficulty, diversity, and quality criteria, and developed budget forcing to control test-time compute by terminating or lengthening the model's thinking process.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "s1-32B exceeds o1-preview on competition math questions by up to 27% (MATH and AIME24)",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Budget forcing enables performance extrapolation from 50% to 57% on AIME24",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Three dataset criteria (difficulty, diversity, quality) validated through ablation studies",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Simple supervised finetuning combined with budget forcing achieves strong reasoning performance",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation concentrated on math competition benchmarks; budget forcing mechanism using \"Wait\" appending may not transfer effectively to non-mathematical reasoning domains.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can test-time scaling be applied to RNN-based RWKV-7 models to enhance performance without altering pre-trained weights?",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed an observer framework enabling smaller models to replicate RWKV-7 state dynamics, employed kernel methods to dynamically upscale state size, and integrated Decorrelated Backpropagation to optimize the upscaled state matrix.",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "State tuning achieves state-of-the-art performance on target tasks without modifying pre-trained weights",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Smaller models can outperform larger models by tuning only the state matrix",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Method preserves RWKV-7's original efficiency while harnessing test-time scaling benefits",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Three innovations (observer framework, kernel upscaling, DBP) collectively enable effective state tuning",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Approach specifically tailored to RWKV-7 architecture and may not generalize to other model types; evaluation focused on single target task without broader benchmark coverage.",
+   "ids": [
+    "2504.05097"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do o1-like models (QwQ, Deepseek-R1, LIMO) truly possess test-time scaling capabilities, and does longer chain-of-thought consistently enhance accuracy?",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Analyzed relationship between CoT length and accuracy, examined self-revision patterns in longer CoTs, compared sequential versus parallel scaling strategies on QwQ, R1, and LIMO, and proposed Shortest Majority Vote combining parallel scaling with CoT length characteristics.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Longer CoTs of o1-like models do not consistently enhance accuracy; correct solutions are often shorter than incorrect ones",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Longer CoTs contain more self-revisions, which often lead to performance degradation",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parallel scaling achieves better coverage and scalability than sequential scaling",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shortest Majority Vote significantly improves test-time scalability compared to conventional majority voting",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Study focused on specific o1-like models and may not generalize to all reasoning models; self-revision analysis is empirical rather than mechanistic; findings based on specific benchmark datasets.",
+   "ids": [
+    "2502.12215"
+   ]
+  }
+ ]
+}

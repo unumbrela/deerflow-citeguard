@@ -48,3 +48,15 @@ class ReferenceIdsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CoverageScoreTest(unittest.TestCase):
+    def test_precision_and_recall_bounded_by_ten(self):
+        import coverage as cov
+
+        ids = cov.cited_ids("arXiv:2401.00001 https://arxiv.org/abs/2401.00002 arXiv:2401.00001 arXiv:2401.00003")
+        self.assertEqual(ids, ["2401.00001", "2401.00002", "2401.00003"])
+        big = {f"2401.{i:05d}" for i in range(1, 40)}
+        self.assertEqual(cov.score(ids, big), {"cited": 3, "hits": 3, "precision": 1.0, "recall": 0.3})
+        self.assertEqual(cov.score(ids, {"2401.00002", "2509.11111"})["recall"], 0.5)
+        self.assertEqual(cov.score([], big)["precision"], 0.0)

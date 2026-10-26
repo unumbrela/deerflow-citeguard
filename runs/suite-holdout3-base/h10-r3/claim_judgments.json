@@ -1,0 +1,1110 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of a fully generative system using discrete semantic IDs within an autoregressive framework and reports a 29% gain on Recall@1.",
+   "usage": {
+    "prompt_tokens": 439,
+    "completion_tokens": 45,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 439
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2504.13655",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the model name (MCCRS), the mixture-of-experts architecture, the specific types of contextual information fused, and the role of the ChairBot in coordinating specialized experts.",
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 50,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 462
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly describes STARCRS as integrating a screen-reading pathway that encodes text as visual tokens and an LLM-based textual pathway for fine-grained reasoning.",
+   "usage": {
+    "prompt_tokens": 485,
+    "completion_tokens": 45,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 485
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2503.00999",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a federated framework that de-centralizes both estimation and elicitation stages while enforcing user-level differential privacy with selected budgets.",
+   "usage": {
+    "prompt_tokens": 498,
+    "completion_tokens": 42,
+    "total_tokens": 540,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 498
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the presentation of UserSimCRS v2 with enhanced agenda-based simulators, LLM-based simulators, and LLM-as-a-judge utilities.",
+   "usage": {
+    "prompt_tokens": 339,
+    "completion_tokens": 46,
+    "total_tokens": 385,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 339
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of DACRS to address data sparsity in dialogue and entity spaces using the three specific modules and techniques described in the sentence.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 42,
+    "total_tokens": 523,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing approaches decouple recommendation from dialog generation, leading to suboptimal modeling, which aligns with the sentence's claim about traditional architectures being insufficient.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 46,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2504.13655",
+   "label": "partial",
+   "reason": "The abstract supports the 'multi-expert fusion' aspect but does not mention or imply that traditional architectures with decoupled components are insufficient.",
+   "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 39,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 476
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2512.04588",
+   "label": "partial",
+   "reason": "The abstract confirms the paper presents a simulation toolkit but does not mention a consensus on moving toward human-in-the-loop approaches or cite the specific authors listed.",
+   "usage": {
+    "prompt_tokens": 357,
+    "completion_tokens": 41,
+    "total_tokens": 398,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 357
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2512.04588",
+   "label": "partial",
+   "reason": "The abstract confirms the use of LLMs as simulation agents and evaluation judges but does not mention their use as annotation tools.",
+   "usage": {
+    "prompt_tokens": 366,
+    "completion_tokens": 36,
+    "total_tokens": 402,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 366
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a fully generative system that unifies recommendation and dialog generation by representing items as tokens for next-token modeling.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 42,
+    "total_tokens": 498,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2504.13655",
+   "label": "unsupported",
+   "reason": "The abstract does not mention treating recommendation as token generation or maintaining a separation between understanding and generation stages.",
+   "usage": {
+    "prompt_tokens": 474,
+    "completion_tokens": 31,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 474
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2601.13505",
+   "label": "unsupported",
+   "reason": "The abstract does not mention treating recommendation as token generation or maintaining a separation between understanding and generation stages.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 31,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2512.04588",
+   "label": "unsupported",
+   "reason": "The abstract mentions LLM-as-a-judge utilities but does not discuss crowdsourced human feedback, scaling trade-offs, or model biases as attributed in the sentence.",
+   "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 43,
+    "total_tokens": 396,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 353
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2503.00999",
+   "label": "partial",
+   "reason": "The abstract confirms the use of federated learning to limit central data processing for privacy, but it does not explicitly state that this creates a conflict with context-enrichment goals or limits the types of context processed.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 57,
+    "total_tokens": 551,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2605.21987",
+   "label": "unsupported",
+   "reason": "The abstract focuses on recommendation performance and dialog quality without mentioning computational efficiency, latency, memory, or cost implications.",
+   "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 33,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 477
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2504.13655",
+   "label": "unsupported",
+   "reason": "The abstract discusses performance improvements and architecture but does not mention computational efficiency, latency, memory, cost, or production overhead.",
+   "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 35,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 495
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2601.13505",
+   "label": "contradicted",
+   "reason": "The sentence claims the paper introduces overhead without discussing efficiency, while the abstract explicitly frames the method as a solution to practical issues like input length constraints caused by context enrichment.",
+   "usage": {
+    "prompt_tokens": 515,
+    "completion_tokens": 46,
+    "total_tokens": 561,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 515
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2503.00999",
+   "label": "unsupported",
+   "reason": "The abstract focuses on privacy protection and recommendation performance, with no mention of computational efficiency, latency, memory, or cost overhead.",
+   "usage": {
+    "prompt_tokens": 540,
+    "completion_tokens": 36,
+    "total_tokens": 576,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 540
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2512.04588",
+   "label": "unsupported",
+   "reason": "The abstract describes toolkit upgrades and LLM-based simulators but does not mention evaluation dependency on LLM-annotated data or issues of annotation bias.",
+   "usage": {
+    "prompt_tokens": 346,
+    "completion_tokens": 41,
+    "total_tokens": 387,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 346
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents UserSimCRS v2 to address the scarcity of resources by upgrading the toolkit to align with state-of-the-art research.",
+   "usage": {
+    "prompt_tokens": 320,
+    "completion_tokens": 43,
+    "total_tokens": 363,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 320
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly lists all four key extensions and the case study demonstration mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 347,
+    "completion_tokens": 29,
+    "total_tokens": 376,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 347
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2512.04588",
+   "label": "partial",
+   "reason": "The abstract confirms the existence of an 'enhanced agenda-based user simulator' but does not explicitly state that it provides 'more realistic and structured' interaction patterns.",
+   "usage": {
+    "prompt_tokens": 305,
+    "completion_tokens": 43,
+    "total_tokens": 348,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 305
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2512.04588",
+   "label": "partial",
+   "reason": "The abstract mentions the introduction of LLM-based simulators but does not explicitly state they offer more flexible or natural conversation patterns compared to rule-based approaches.",
+   "usage": {
+    "prompt_tokens": 309,
+    "completion_tokens": 41,
+    "total_tokens": 350,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 309
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly lists 'integration for a wider range of CRSs and datasets' as a key extension of UserSimCRS v2.",
+   "usage": {
+    "prompt_tokens": 305,
+    "completion_tokens": 39,
+    "total_tokens": 344,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 305
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly lists 'new LLM-as-a-judge evaluation utilities' as a key extension of the toolkit, implying their function in automated evaluation.",
+   "usage": {
+    "prompt_tokens": 311,
+    "completion_tokens": 41,
+    "total_tokens": 352,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 311
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the work as a 'significant upgrade' to an existing toolkit and states that the extensions are demonstrated in a 'case study', aligning with the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 321,
+    "completion_tokens": 48,
+    "total_tokens": 369,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 321
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2512.04588",
+   "label": "unsupported",
+   "reason": "The abstract mentions the introduction of LLM-as-a-judge utilities but does not discuss potential biases or limitations associated with them.",
+   "usage": {
+    "prompt_tokens": 312,
+    "completion_tokens": 36,
+    "total_tokens": 348,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 312
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2503.00999",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the problem of privacy risks in centralized CRS collecting fine-grained preferences and proposes a federated framework to address it.",
+   "usage": {
+    "prompt_tokens": 480,
+    "completion_tokens": 38,
+    "total_tokens": 518,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 480
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2503.00999",
+   "label": "supported",
+   "reason": "The abstract explicitly details the proposed federated framework, its de-centralization of specific stages, the enforcement of user-level differential privacy with selected budgets, and the basis on defined privacy guidelines.",
+   "usage": {
+    "prompt_tokens": 493,
+    "completion_tokens": 48,
+    "total_tokens": 541,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 493
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2503.00999",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments show the proposed framework satisfies the defined user privacy protection guidelines.",
+   "usage": {
+    "prompt_tokens": 461,
+    "completion_tokens": 29,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 461
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2503.00999",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework achieves competitive recommendation performance compared to state-of-the-art non-private approaches.",
+   "usage": {
+    "prompt_tokens": 465,
+    "completion_tokens": 33,
+    "total_tokens": 498,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 465
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2503.00999",
+   "label": "supported",
+   "reason": "The abstract explicitly states the framework reduces privacy risks by preventing the leakage of sensitive information such as financial status, political stands, and health information.",
+   "usage": {
+    "prompt_tokens": 470,
+    "completion_tokens": 39,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 470
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2503.00999",
+   "label": "supported",
+   "reason": "The abstract states the framework enforces user-level differential privacy while achieving competitive recommendation performance compared to non-private approaches.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 33,
+    "total_tokens": 497,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2503.00999",
+   "label": "partial",
+   "reason": "The abstract mentions using privacy budgets and achieving competitive performance but does not explicitly discuss the trade-offs, communication overhead, or coordination complexity.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 37,
+    "total_tokens": 518,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies severe data sparsity in both dialogue and entity spaces as the core challenges the paper addresses.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 33,
+    "total_tokens": 486,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly details the DACRS framework and its three specific modules with the exact mechanisms described in the sentence.",
+   "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 33,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 477
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the Dialogue Augmentation module uses a two-stage pipeline to improve robustness to linguistic variation.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 34,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the Knowledge-Guided Entity Modeling module uses entity substitution to enhance representation learning for sparsely supervised entities.",
+   "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 38,
+    "total_tokens": 471,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 433
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the Knowledge-Guided Entity Modeling module uses an entity similarity constraint to enhance learning for unseen entities.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 36,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments on two public benchmark datasets demonstrate DACRS consistently outperforms state-of-the-art conversational recommender systems.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 40,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed model relies on large knowledge graphs, which directly supports the sentence's claim about this dependency.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 36,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states experiments were conducted on two public benchmark datasets, supporting the claim about limited evaluation scope.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 32,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the limitation of decoupled or retrieval-based approaches and proposes a unified generative framework to better integrate recommendation and dialog generation.",
+   "usage": {
+    "prompt_tokens": 419,
+    "completion_tokens": 40,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 419
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of a fully generative system unifying recommendation and dialog in an autoregressive framework, using discrete semantic IDs and a structured generation paradigm.",
+   "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 44,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 433
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method achieves gains of up to 29% on Recall@1 over strong baselines.",
+   "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 35,
+    "total_tokens": 440,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 405
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method improves recommendation performance while maintaining competitive dialog quality.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 26,
+    "total_tokens": 423,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed structured generation paradigm enables end-to-end optimization and enforces a more coherent dependency structure.",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 35,
+    "total_tokens": 435,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed design supports faithful item generation via constrained decoding.",
+   "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 27,
+    "total_tokens": 422,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 395
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2605.21987",
+   "label": "unsupported",
+   "reason": "The abstract does not mention or imply any limitations regarding computational complexity or generalization to unseen domains.",
+   "usage": {
+    "prompt_tokens": 416,
+    "completion_tokens": 30,
+    "total_tokens": 446,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 416
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the challenges of longer, heterogeneous inputs including length constraints, style inconsistency, and noise as the motivation for the proposed STARCRS model.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 42,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the STARCRS methodology, including its two pathways and fusion mechanisms, as explicitly described in the abstract.",
+   "usage": {
+    "prompt_tokens": 498,
+    "completion_tokens": 36,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 498
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the screen-reading pathway as encoding auxiliary textual information as visual tokens to mimic skim reading on a screen.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 36,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the LLM-based textual pathway focuses on a limited set of critical content for fine-grained reasoning.",
+   "usage": {
+    "prompt_tokens": 441,
+    "completion_tokens": 36,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 441
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper designs a knowledge-anchored fusion framework that combines contrastive alignment and cross-attention to integrate the two modes.",
+   "usage": {
+    "prompt_tokens": 444,
+    "completion_tokens": 40,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 444
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments on two widely used benchmarks demonstrate STARCRS consistently improves both recommendation accuracy and generated response quality.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 37,
+    "total_tokens": 480,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2601.13505",
+   "label": "unsupported",
+   "reason": "The abstract mentions the proposed method and its benefits but does not discuss computational resource requirements or limitations related to visual token encoding.",
+   "usage": {
+    "prompt_tokens": 444,
+    "completion_tokens": 35,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 444
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2601.13505",
+   "label": "partial",
+   "reason": "The abstract mentions that auxiliary information introduces noise and inconsistency but does not explicitly state that the method's effectiveness depends on the quality or relevance of that information.",
+   "usage": {
+    "prompt_tokens": 441,
+    "completion_tokens": 41,
+    "total_tokens": 482,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 441
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2504.13655",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies combining different types of contextual information as a challenge and proposes a method to effectively fuse structured and unstructured data to improve conversational recommender systems.",
+   "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 44,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 433
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2504.13655",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the MCCRS model, its use of mixture-of-experts for fusing knowledge graphs, conversation history, and item reviews, and the coordination by a ChairBot.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 48,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2504.13655",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method achieves significantly higher performance compared to existing baselines.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 29,
+    "total_tokens": 444,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2504.13655",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed model's use of experts and a ChairBot 'breaks the model bottleneck on a single contextual information'.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 40,
+    "total_tokens": 460,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2504.13655",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MCCRS incorporates structured knowledge graphs and unstructured conversation history and item reviews.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 31,
+    "total_tokens": 456,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2504.13655",
+   "label": "supported",
+   "reason": "The abstract explicitly states that multiple experts are coordinated by a ChairBot to generate final results, directly supporting the claim.",
+   "usage": {
+    "prompt_tokens": 414,
+    "completion_tokens": 34,
+    "total_tokens": 448,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 414
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2504.13655",
+   "label": "unsupported",
+   "reason": "The abstract describes the proposed method and its benefits but does not mention any limitations, complexity concerns, or scalability issues.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 34,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  }
+ ]
+}

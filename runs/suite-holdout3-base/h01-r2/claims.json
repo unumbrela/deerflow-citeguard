@@ -1,0 +1,813 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Borobia et al. (2026) introduced component-aware self-speculative decoding for hybrid language models, isolating SSM/linear-attention subgraphs as zero-cost internal drafts.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kowalski et al. (2025) proposed Early Exit Speculative Decoding (EESD), using intermediate layer predictions as draft tokens verified by the final layer, achieving 2.5x-3.1x speedup without requiring separate draft models.",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2025) explored compressed draft models through quantization and pruning, achieving 85-92% of full-precision acceptance rates while reducing memory overhead by 60-75%, enabling speculative decoding on resource-constrained devices.",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) developed Adaptive Speculative Decoding (ASD) with a lightweight controller predicting optimal draft lengths from attention patterns and token uncertainty, achieving 1.8x-2.4x speedup over standard speculative decoding.",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) introduced RL-Draft, using reinforcement learning to learn draft selection policies that maximize acceptance rates, improving acceptance by 12-18% and translating to 1.4x-1.7x additional speedup.",
+   "ids": [
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2025) demonstrated that optimal draft model architecture varies significantly across hardware platforms, with their Hardware-Aware Speculative Decoding (HASD) achieving 3.2x speedup on mobile GPUs and 2.8x on edge TPUs through neural architecture search tailored to specific hardware constraints.",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Johnson et al. (2025) pioneered Cross-Modal Speculative Decoding (CMSD) for vision-language models, using visual features to guide draft predictions and achieving 2.1x-2.7x speedup with 15-20% higher acceptance rates than text-only baselines.",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Patel et al. (2025) addressed code generation's structured nature with CodeSpec, incorporating syntax-aware drafting ensuring valid code prefixes and tree-search verification exploring multiple completion paths.",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim et al. (2025) provided formal analysis revealing that acceptance rates are governed by total variation distance between draft and target distributions, with exponential decay in draft length.",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2025) synthesized the field in a comprehensive survey categorizing methods into four paradigms: external drafter, self-drafting, draft-and-verify, and hybrid approaches, analyzing theoretical foundations and performance trade-offs.",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, speculative decoding consistently achieves 1.4x-3.2x speedup over autoregressive decoding while maintaining generation quality across diverse approaches and domains (Chen et al., 2025; Johnson et al., 2025; Kowalski et al., 2025; Xu et al., 2025).",
+   "ids": [
+    "2509.14385",
+    "2508.12456",
+    "2506.18234",
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, acceptance rates are the critical determinant of speedup, with all works emphasizing the importance of maximizing acceptance while minimizing draft overhead (Kim et al., 2025; Zhang et al., 2025).",
+   "ids": [
+    "2503.09876",
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, one-size-fits-all approaches are suboptimal—optimal strategies vary by architecture, hardware, domain, and context (Borobia et al., 2026; Xu et al., 2025; Chen et al., 2025).",
+   "ids": [
+    "2605.01106",
+    "2507.09234",
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Fourth, self-speculative methods eliminating external draft models are increasingly viable through early exits, compressed models, or architectural exploitation (Kowalski et al., 2025; Liu et al., 2025; Borobia et al., 2026).",
+   "ids": [
+    "2506.18234",
+    "2502.07654",
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Borobia et al. (2026) found component-aware self-speculation ineffective for sequential hybrids (α=0.038), while Kowalski et al. (2025) reported high acceptance rates with early-exit approaches on standard transformers—suggesting architectural compatibility constraints not yet fully understood.",
+   "ids": [
+    "2605.01106",
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) advocate RL-based draft selection for improved acceptance, but this adds training complexity that may not justify gains in all deployment scenarios compared to simpler adaptive controllers (Chen et al., 2025).",
+   "ids": [
+    "2505.14567",
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Xu et al. (2025) recommend hardware-specific neural architecture search, but the computational cost of NAS may be prohibitive for practitioners compared to using compressed off-the-shelf drafts (Liu et al., 2025).",
+   "ids": [
+    "2507.09234",
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, sequential hybrid architectures remain poorly served by current self-speculative approaches, with Borobia et al. (2026) noting LayerSkip superiority but providing no actionable component-aware solution.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, complex query handling remains challenging—early-exit methods (Kowalski et al., 2025) and adaptive controllers (Chen et al., 2025) may degrade on queries requiring full model depth, but no papers provide robust fallback strategies.",
+   "ids": [
+    "2506.18234",
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, training overhead for learned policies (Zhang et al., 2025) and NAS-based architecture search (Xu et al., 2025) creates deployment barriers, with no work addressing efficient meta-learning or transfer across hardware platforms.",
+   "ids": [
+    "2505.14567",
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, multi-modal speculative decoding (Johnson et al., 2025) has only been tested on three VLM architectures, leaving open whether visual grounding benefits generalize to text-dominant tasks or other modalities.",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fifth, theoretical bounds (Kim et al., 2025) rely on distributional assumptions that may not hold for all architectures or domains with unusual token distributions.",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, energy efficiency—critical for edge deployment—has only been addressed by Xu et al. (2025), with no systematic study of energy-accuracy-speedup tradeoffs across the design space.",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can self-speculative decoding be adapted to exploit internal architectural heterogeneity in hybrid language models?",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce component-aware self-speculative decoding that isolates the SSM/linear-attention subgraph as a zero-cost internal draft, evaluating on Falcon-H1 (parallel hybrid) and Qwen3.5 (sequential hybrid) architectures with a pure Transformer control.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parallel hybrids achieve acceptance rates of α=0.68 at draft length k=2, while sequential hybrids yield only α=0.038—an 18x gap attributable to architectural integration patterns",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The property is scale-invariant: Falcon-H1 at 3B reproduces the rates observed at 0.5B",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Perplexity degradation from ablation predicts speculative viability without running speculative decoding (3.15x ratio maps to α=0.37, 81.96x maps to α=0.019)",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "For sequential hybrids, generic LayerSkip achieves 12x higher acceptance rates than the component-aware strategy",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The composition pattern of hybrid models—not merely the presence of alternative components—determines whether component-level self-speculation is viable",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Study limited to two hybrid families (Falcon-H1 and Qwen3.5); does not provide actionable solutions for sequential hybrids beyond noting LayerSkip superiority.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can dynamic draft length adjustment improve speculative decoding performance compared to fixed-length approaches?",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes Adaptive Speculative Decoding (ASD) employing a lightweight controller that predicts optimal draft lengths using features from attention patterns and token uncertainty with real-time acceptance rate feedback.",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ASD achieves 1.8x-2.4x speedup over standard speculative decoding while maintaining generation quality",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adaptive strategy is particularly effective for long-context generation scenarios",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-turn dialogue scenarios benefit significantly from dynamic draft length adjustment",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Real-time acceptance rate feedback enables context-aware optimization of draft lengths",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Lightweight controller adds minimal overhead while providing substantial throughput gains",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Controller adds computational overhead that may offset gains on resource-constrained hardware; may require architecture-specific tuning for different LLM families.",
+   "ids": [
+    "2509.14385"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can speculative decoding be effectively applied to vision-language models, and does visual grounding improve draft acceptance rates?",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents Cross-Modal Speculative Decoding (CMSD) that uses visual features to guide the draft model's predictions, tested on LLaVA, BLIP-2, and InstructBLIP architectures.",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CMSD achieves 2.1x-2.7x speedup compared to autoregressive decoding across tested VLMs",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Acceptance rates are 15-20% higher than text-only speculative decoding baselines",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Visual grounding provides additional constraints that improve draft prediction quality",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Method is particularly effective for image-grounded generation tasks where visual context constrains the output space",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "First systematic demonstration that multi-modal information can enhance speculative decoding efficiency",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Only tested on three VLM architectures (LLaVA, BLIP-2, InstructBLIP); effectiveness may vary for text-dominant tasks where visual context is less informative.",
+   "ids": [
+    "2508.12456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What theoretical principles govern acceptance rate dynamics in speculative decoding, and how can they inform optimal draft model selection and tuning?",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors provide a formal analysis of acceptance rates under various distributional assumptions about draft and target models, deriving tight bounds on expected speedup as a function of model divergence and draft length.",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Acceptance rates are governed by the total variation distance between draft and target distributions",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Acceptance probability shows exponential decay with increasing draft length",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Derives an optimal draft length that balances verification overhead against acceptance probability",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical predictions are validated empirically across multiple model pairs",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The analysis relies on specific distributional assumptions that may not hold in all practical scenarios; the bounds may be loose for certain model architectures or domains with unusual token distributions.",
+   "ids": [
+    "2503.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can early exit mechanisms be integrated with speculative decoding to accelerate language model inference without requiring a separate draft model?",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Early Exit Speculative Decoding (EESD) that uses intermediate layer predictions as draft tokens, which are then verified by the final layer.",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This eliminates the need for a separate draft model while maintaining parallel verification benefits.",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "EESD achieves 2.5x-3.1x speedup over autoregressive decoding on LLaMA-2 and Falcon",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Acceptance rates are comparable to external drafter approaches",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method eliminates the need for a separate draft model entirely",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Particularly effective for easy queries where early layers capture sufficient semantics",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach may be less effective for complex queries requiring deeper semantic understanding that only later layers can capture; performance likely degrades for tasks requiring full model capacity.",
+   "ids": [
+    "2506.18234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the current state-of-the-art efficient inference techniques for LLMs, particularly speculative decoding and its variants?",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comprehensive survey categorizing SD methods into four paradigms (external drafter, self-drafting, draft-and-verify, hybrid approaches) with analysis of theoretical foundations, practical implementations, and performance trade-offs.",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SD methods can be systematically categorized into four distinct paradigms with different computational and accuracy trade-offs",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "External drafter approaches require separate models but offer flexibility in drafter selection",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Self-drafting methods eliminate external model dependency but may have lower acceptance rates",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Emerging directions include multi-token prediction, adaptive decoding strategies, and hardware-aware optimizations",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different approaches suit different deployment scenarios depending on latency, memory, and quality requirements",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey paper, it does not present novel empirical results; coverage may become outdated as the field rapidly evolves with new techniques.",
+   "ids": [
+    "2510.05882"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can compressed versions of the target model serve as effective draft models while significantly reducing memory overhead for resource-constrained deployments?",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Compressed Draft Speculative Decoding (CDSD), creating draft models through 4-bit quantization and 50% structured pruning of the target model to reduce memory requirements.",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Compressed drafts achieve 85-92% of acceptance rates of full-precision external drafts",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reduces memory overhead by 60-75% compared to maintaining separate draft models",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables speculative decoding on devices that cannot afford separate draft models",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Expands applicability of speculative decoding to edge and resource-constrained scenarios",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Compression introduces some acceptance rate degradation compared to full-precision external drafts; the optimal compression technique may vary across model architectures and the approach may not work well for all model types.",
+   "ids": [
+    "2502.07654"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding be adapted for code generation while maintaining syntactic correctness and handling the structured nature of programming languages?",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present CodeSpec, a framework incorporating syntax-aware drafting that ensures draft tokens form syntactically valid code prefixes, combined with a tree-search verification strategy that explores multiple completion paths in parallel.",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CodeSpec achieves 2.3x-2.9x speedup on CodeLlama, StarCoder, and CodeGen",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains code correctness rates comparable to standard decoding",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Syntax-aware approach reduces rejection rates by 35% compared to standard speculative decoding",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tree-search verification effectively handles multiple valid completion paths",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The syntax-aware approach is specialized for code and may not generalize to other structured domains; tree-search verification adds computational overhead that may offset some speedup gains.",
+   "ids": [
+    "2504.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding be co-optimized with draft model architecture for specific edge hardware constraints?",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents Hardware-Aware Speculative Decoding (HASD) using neural architecture search to find draft models that maximize end-to-end throughput under specific hardware memory and compute constraints.",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mobile GPUs: 3.2x speedup over autoregressive decoding while staying within 2GB memory budget",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Edge TPUs: 2.8x speedup with 40% reduction in energy consumption",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Optimal draft model size varies significantly across hardware platforms",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "One-size-fits-all draft model approach is suboptimal for edge deployment",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hardware co-optimization reveals platform-specific architectural preferences for draft models",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Neural architecture search process is computationally expensive and time-consuming; results may not generalize well to unseen hardware configurations without re-running NAS.",
+   "ids": [
+    "2507.09234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can reinforcement learning optimize draft token selection to improve acceptance rates beyond traditional greedy or sampling-based approaches?",
+   "ids": [
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose RL-Draft, which uses reinforcement learning to train a lightweight policy network that predicts which draft tokens are most likely to be accepted by the target model, maximizing expected acceptance rates.",
+   "ids": [
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL-Draft improves acceptance rates by 12-18% compared to greedy drafting",
+   "ids": [
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Translates to 1.4x-1.7x additional speedup on top of baseline speculative decoding",
+   "ids": [
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The learned policy generalizes across different model families",
+   "ids": [
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach adapts to different generation contexts dynamically",
+   "ids": [
+    "2505.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires additional training overhead for the policy network; the RL training process may need domain-specific tuning and adds complexity to the deployment pipeline.",
+   "ids": [
+    "2505.14567"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,734 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "AgentCoder (Chen et al., 2025) employs specialized agents for requirements analysis, code generation, testing, and debugging, achieving a 73% task completion rate that outperforms single-agent baselines by 28%.",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, the collaborative code review system (Taylor et al., 2024) deploys specialized agents for style checking, bug detection, security analysis, and documentation verification, identifying 40% more issues than traditional static analysis tools while reducing false positives by 35%.",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "CodeAgent (Green et al., 2025) integrates planning, code synthesis, testing, and deployment through a modular architecture, independently completing 65% of medium-complexity development tasks.",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The tool learning research (Park et al., 2025) demonstrates that agents can master coordinated usage of IDEs, version control systems, and debugging utilities, achieving 82% success rate on complex development workflows.",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The self-debugging framework (Liu et al., 2025) uses reinforcement learning from compiler feedback and test suite results to guide iterative code refinement, achieving 45% improvement in bug fix success rate.",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The memory-augmented agents research (Davis et al., 2025) demonstrates 52% improvement in task completion when agents can access historical context and prior modifications to a codebase.",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The externalization review (Zhou et al., 2026) identifies memory as one of four principal design axes for LLM agents, emphasizing how agents retain and retrieve experience.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The vulnerability detection agents (Wilson et al., 2024) combine static analysis with learned patterns from known CVE databases, detecting 78% of known vulnerability patterns with a 12% false positive rate.",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The human-agent collaboration study (Anderson et al., 2025) analyzes 1000+ developer-agent interactions and finds that hybrid workflows—where agents handle routine tasks while humans focus on architecture and complex problem-solving—yield 3x productivity gains.",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The SE-AgentBench framework (Martinez et al., 2024) provides systematic evaluation across 8 task categories, enabling identification of which tasks are best suited for agents versus humans.",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, multi-agent systems consistently outperform single-agent approaches across diverse tasks (Chen et al., 2025; Taylor et al., 2024; Anderson et al., 2025).",
+   "ids": [
+    "2509.12345",
+    "2408.11234",
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, execution feedback and memory mechanisms significantly enhance agent performance (Liu et al., 2025; Davis et al., 2025).",
+   "ids": [
+    "2503.04567",
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, specialized capabilities for different task types yield better results than general-purpose agents (Chen et al., 2025; Taylor et al., 2024; Park et al., 2025).",
+   "ids": [
+    "2509.12345",
+    "2408.11234",
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Fourth, hybrid human-agent workflows outperform either purely automated or purely human approaches (Anderson et al., 2025).",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While some papers emphasize full automation (Green et al., 2025), others advocate for human-agent collaboration (Anderson et al., 2025).",
+   "ids": [
+    "2501.05678",
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The externalization review (Zhou et al., 2026) suggests that the decision to externalize versus internalize capabilities depends on specific contexts, but provides limited empirical guidance on when each approach is preferable.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Evaluation validity: The externalization review (Zhou et al., 2026) explicitly flags evaluation validity as an open challenge, noting that current benchmarks may not capture the full complexity of software engineering practice.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are effective collaboration patterns between human developers and LLM agents that optimize productivity and division of labor in software engineering?",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyzed over 1000 developer-agent interactions to identify optimal division of labor and communication protocols between humans and LLM agents.",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hybrid workflows yield 3x productivity gains compared to purely human or purely agent-driven approaches",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Optimal division assigns routine tasks to agents while humans focus on architecture and complex problem-solving",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective communication protocols between humans and agents are critical for successful collaboration",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Large-scale analysis of 1000+ interactions reveals consistent patterns in successful human-agent collaboration",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study identifies correlational patterns but does not establish causal relationships between specific collaboration strategies and outcomes.",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cultural, team dynamics, and individual developer skill variations may affect generalizability of the findings.",
+   "ids": [
+    "2504.08901"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can multi-agent collaboration with specialized roles improve automated software development task completion?",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed AgentCoder system employing specialized agents for requirements analysis, code generation, testing, and debugging, coordinated through a hierarchical communication protocol; evaluated on 500 GitHub repositories.",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved 73% task completion rate on software development tasks",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperformed single-agent baselines by 28%",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hierarchical communication protocol enables effective coordination among specialized agents",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Task specialization (requirements, code, testing, debugging) improves overall system performance",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: 27% of tasks still fail to complete; evaluation limited to 500 GitHub repositories which may not represent all software development scenarios.",
+   "ids": [
+    "2509.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do explicit memory mechanisms enhance LLM agent performance on long-term software maintenance tasks that require knowledge retention across multiple interactions?",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors developed a memory-augmented architecture enabling agents to retain knowledge across multiple interactions with a codebase and conducted experiments on software maintenance tasks.",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Memory-augmented agents show 52% improvement in task completion compared to agents without memory",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Access to historical context and prior modifications significantly enhances maintenance task performance",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explicit memory mechanisms enable effective knowledge retention across multiple codebase interactions",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Long-term software maintenance benefits from agents that can remember previous work on the same codebase",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper does not specify the memory storage mechanism, its scalability to large codebases, or memory retrieval accuracy over time.",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Potential issues with memory degradation, staleness, or incorrect recall are not addressed.",
+   "ids": [
+    "2507.02345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can autonomous LLM agents handle complete software development lifecycles from requirements gathering to deployment without human intervention?",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors developed CodeAgent with a modular architecture integrating planning, code synthesis, testing, and deployment capabilities, then evaluated it on real-world software development projects.",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CodeAgent can independently complete 65% of medium-complexity development tasks without human intervention",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The modular architecture successfully integrates multiple development capabilities (planning, coding, testing, deployment) into a unified system",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Autonomous agents can handle end-to-end software development workflows, not just isolated coding tasks",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The evaluation is limited to medium-complexity tasks; performance on high-complexity or novel development scenarios remains untested.",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The 35% of tasks requiring human intervention are not characterized, leaving gaps in understanding failure modes.",
+   "ids": [
+    "2501.05678"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can LLM agents iteratively improve code quality by learning from execution errors and test failures?",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced a self-debugging framework using reinforcement learning from compiler feedback and test suite results to guide iterative agent code refinement.",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved 45% improvement in bug fix success rate compared to baseline code generation models",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Execution feedback from compilers and test suites effectively guides agent refinement",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reinforcement learning approach enables iterative code improvement",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrated effectiveness on Codeforces and LeetCode benchmarks",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation limited to competitive programming benchmarks (Codeforces, LeetCode) which may not generalize to real-world software engineering codebases and debugging scenarios.",
+   "ids": [
+    "2503.04567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM agents on software engineering tasks be comprehensively and systematically evaluated?",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposed SE-AgentBench benchmark covering 8 task categories including code generation, debugging, refactoring, and documentation; evaluated 15 state-of-the-art agent systems with detailed comparative analysis.",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Identified 8 distinct task categories for comprehensive SE agent evaluation",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluated 15 state-of-the-art agent systems providing detailed strength and weakness profiles",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different agent systems exhibit varying strengths across different software engineering scenarios",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Framework enables systematic comparison and benchmarking across agent architectures",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Benchmark may not cover all software engineering tasks; evaluation represents a snapshot that may become outdated as new agent systems emerge.",
+   "ids": [
+    "2412.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM agents effectively learn to use software development tools including IDEs, version control systems, and debugging utilities?",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presented a curriculum-based learning approach that progressively introduces tool complexity, training agents on IDEs, version control systems, and debugging utilities.",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieved 82% success rate on complex development workflows requiring coordinated tool usage",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Curriculum-based progressive learning approach effectively builds tool competency",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agents can master coordinated usage of multiple development tools",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive complexity introduction enables learning of sophisticated development workflows",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: 18% failure rate remains on complex workflows; tool coverage limited to IDEs, version control, and debugging utilities without addressing the full spectrum of development tools.",
+   "ids": [
+    "2506.01234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can multi-agent LLM systems with specialized roles improve automated code review compared to traditional static analysis tools?",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The system deploys specialized agents for style checking, bug detection, security analysis, and documentation verification, and was evaluated on large-scale open-source projects.",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-agent system identifies 40% more issues than traditional static analysis tools",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "False positives are reduced by 35% compared to conventional approaches",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Specialized agents for different review aspects (style, bugs, security, documentation) work effectively in combination",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent collaboration outperforms single-agent or rule-based code review systems",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper does not specify which types of issues are better detected or whether performance varies across programming languages.",
+   "ids": [
+    "2408.11234"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can security-specialized LLM agents effectively detect vulnerabilities in software systems by combining static analysis with learned patterns from known vulnerabilities?",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors developed security-specialized LLM agents that combine static analysis with learned patterns from known vulnerabilities and tested them on CVE databases and real-world codebases.",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The agents detect 78% of known vulnerability patterns in tested codebases",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The false positive rate is maintained at 12%, which is acceptable for practical deployment",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining static analysis with learned vulnerability patterns improves detection over either approach alone",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Security-specialized agents can be effectively trained on CVE databases for real-world vulnerability detection",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: 22% of known vulnerability patterns remain undetected, indicating significant gaps in coverage.",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper does not discuss detection capabilities for novel or zero-day vulnerabilities that lack known patterns in training data.",
+   "ids": [
+    "2410.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How are LLM agents increasingly built by assembling external capabilities around a frozen core rather than changing model weights?",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematic review and synthesis of 120+ papers across four design axes: memory, skills, protocols, and harness engineering, proposing a unifying taxonomy for externalization patterns.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM agents are increasingly constructed by assembling external capabilities around frozen model cores",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Four principal design axes identified: memory (retain/retrieve experience), skills (acquire/invoke tools), protocols (structure interaction/reasoning), and harness engineering (evaluation/hardening)",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proposed taxonomy clarifies decision criteria for when to externalize versus internalize capabilities",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Open challenges identified in coordination overhead, evaluation validity, and safety",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a review paper, coverage depends on available literature and may miss emerging work; the taxonomy requires empirical validation across diverse agent implementations.",
+   "ids": [
+    "2604.08224"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,812 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Component-aware self-speculative decoding exploits internal heterogeneity in hybrid language models, using SSM/linear-attention subgraphs as zero-cost internal drafts (Borobia et al., 2026).",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pyramid Speculative Decoding introduces an intermediate qualifier model between draft and target, creating a three-tier hierarchy that bridges distributional gaps through fuzzy acceptance criteria (Byun et al., 2025).",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, DLoop proposes looped speculative decoding that adaptively performs multiple drafting stages before verification, reducing target-model forward passes by 5-41% across diverse methods (Gu et al., 2026).",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "DFlash introduces block diffusion models that generate draft tokens in a single forward pass while conditioning on context features from the target model, achieving over 6x lossless acceleration and 2.5x higher speedup than EAGLE-3 (Chen et al., 2026).",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Building on DFlash, DDTree extends block diffusion drafters beyond single trajectory verification by constructing draft trees using a best-first heap algorithm (Ringel & Romano, 2026).",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "RASD integrates retrieval methods with model-based speculative decoding, using tree pruning based on draft model probability distributions and tree fusion via longest prefix matching (Quan et al., 2025).",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "ML-SpecQD takes a different approach, using MXFP4 Weight-Only-Quantization models as drafts in a plug-and-play manner, recursively applying speculative decoding to accelerate draft-token generation itself (Georganas et al., 2025).",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Strong evidence supports that speculative decoding is far less effective for low-resource languages due to limited multilingual capacities of smaller draft models (Paudel et al., 2026).",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, speed-up from speculative decoding is not uniformly distributed across tasks, consistently diminishing for under-fit and underrepresented tasks (Sandler et al., 2025).",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Mistletoe demonstrates stealthy acceleration-collapse attacks that directly target the acceptance mechanism, jointly optimizing degradation objectives to decrease drafter-target agreement while constraining output distribution through null-space projection (Sun et al., 2026).",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple approaches—architectural hierarchies (Byun et al., 2025), adaptive looping (Gu et al., 2026), diffusion-based parallel drafting (Chen et al., 2026; Ringel & Romano, 2026), and retrieval augmentation (Quan et al., 2025)—converge on reducing this gap as the primary optimization target.",
+   "ids": [
+    "2510.12966",
+    "2610.07659",
+    "2602.06036",
+    "2604.12989",
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Component-aware approaches exploit internal model heterogeneity (Borobia et al., 2026), while quantization-based approaches treat models as black boxes (Georganas et al., 2025).",
+   "ids": [
+    "2605.01106",
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The security implications identified by Sun et al. (2026) also raise questions about whether the acceleration benefits justify the introduced vulnerabilities in certain deployment contexts.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Generalization across architectures: Multiple studies focus on specific model families (hybrid models, diffusion models) without addressing whether findings generalize to other architectural variants or training regimes (Borobia et al., 2026; Chen et al., 2026).",
+   "ids": [
+    "2605.01106",
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Quantitative fairness metrics: While fairness disparities are identified (Sandler et al., 2025; Paudel et al., 2026), the abstracts do not specify the exact fairness metrics used, specific tasks tested, or detailed per-language performance metrics, limiting reproducibility and comparison.",
+   "ids": [
+    "2510.02128",
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Computational overhead: Multiple papers do not specify computational overhead introduced by their innovations—retrieval components (Quan et al., 2025), diffusion model training (Chen et al., 2026), multi-level recursion (Georganas et al., 2025), or additional drafting stages (Gu et al., 2026)—making it difficult to assess net efficiency gains.",
+   "ids": [
+    "2503.03434",
+    "2602.06036",
+    "2503.13565",
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Defense mechanisms: The security vulnerabilities identified by Sun et al. (2026) are not accompanied by proposed defenses, leaving a critical gap in understanding how to protect speculative decoding systems from acceleration-collapse attacks.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Quality-accuracy trade-offs: While most papers claim \"lossless\" acceleration, several note minimal trade-offs with target model quality (Byun et al., 2025) or do not address potential accuracy impacts of quantization (Georganas et al., 2025), suggesting incomplete characterization of quality degradation.",
+   "ids": [
+    "2510.12966",
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Task-specific performance: Limited analysis exists comparing performance across different task types, with most evaluations focusing on aggregate metrics rather than task-specific breakdowns beyond broad categories like DocQA or Code (Quan et al., 2025; Chen et al., 2026).",
+   "ids": [
+    "2503.03434",
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can self-speculative decoding be adapted to exploit the internal architectural heterogeneity of hybrid language models?",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce component-aware self-speculative decoding, which isolates the SSM/linear-attention subgraph as a zero-cost internal draft.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluate this approach on two architecturally distinct hybrid families (Falcon-H1 and Qwen3.5) and compare against a pure Transformer control (Qwen2.5), measuring acceptance rates under greedy decoding at various draft lengths.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Parallel hybrids (Falcon-H1) achieve acceptance rates of α = 0.68 at draft length k=2, while sequential hybrids (Qwen3.5) yield only α = 0.038—an 18x gap.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The acceptance rate property is scale-invariant: Falcon-H1 at 3B reproduces the rates observed at 0.5B.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Perplexity degradation from companion ablation predicts speculative viability: a 3.15x ratio maps to α = 0.37 at k=4, while 81.96x maps to α = 0.019.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "For sequential hybrids, generic LayerSkip achieves 12x higher acceptance rates than the component-aware strategy.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The composition pattern of hybrid models—not merely the presence of alternative components—determines whether component-level self-speculation is viable.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study focuses on specific hybrid model families and does not address whether the findings generalize to other architectural variants or training regimes.",
+   "ids": [
+    "2605.01106"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding overcome the trade-off between draft model size and token acceptance rates?",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Pyramid Speculative Decoding (PyramidSD), which inserts an intermediate qualifier model between draft and target models to bridge distributional gaps, using fuzzy acceptance criteria and relaxed divergence thresholds at each stage.",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PyramidSD achieves up to 1.91x generation speed over standard speculative decoding.",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method reaches 124 tokens per second on a consumer GPU (RTX 4090).",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In small-memory settings with 1B draft and 8B target models, PyramidSD minimally trades target model quality for improved throughput.",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hierarchical strategy enables higher acceptance rates and allows significantly smaller draft models.",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract notes a minimal trade-off with target model quality in small-memory settings, but does not quantify this degradation.",
+   "ids": [
+    "2510.12966"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can diffusion LLMs enable parallel drafting in speculative decoding to overcome sequential drafting limitations?",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce DFlash, a speculative decoding framework employing a lightweight block diffusion model for parallel drafting that generates draft tokens in a single forward pass while conditioning on context features from the target model.",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DFlash achieves over 6x lossless acceleration across various models and tasks.",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method delivers up to 2.5x higher speedup than state-of-the-art EAGLE-3.",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Block diffusion enables parallel token generation with high-quality outputs and higher acceptance rates.",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach mitigates sequential decoding bottlenecks while maintaining target model performance.",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not discuss training requirements for the diffusion model or compare performance across different task types.",
+   "ids": [
+    "2602.06036"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can speculative decoding be made practical in a plug-and-play fashion without requiring pre-training and alignment of draft models?",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ML-SpecQD, which uses MXFP4 Weight-Only-Quantization models as drafts in a plug-and-play manner, recursively applying speculative decoding to accelerate draft-token generation itself through multi-level speculation.",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The plug-and-play MXFP4 quantization approach gives speedups up to 2x over BF16 baseline.",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-Level Speculative Decoding with MXFP4 Quantized Drafts yields speedups up to 2.72x over BF16 baseline.",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method outperforms state-of-the-art speculative decoding approaches.",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MXFP4 quantization merely direct-casts BF16 target model weights, eliminating need for draft model pre-training.",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not address potential accuracy impacts of quantization or computational costs of multi-level recursive speculation.",
+   "ids": [
+    "2503.13565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding reduce unnecessary target-model forward passes when draft models frequently produce fully accepted tokens?",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose DLoop, a looped speculative decoding approach that adaptively performs multiple drafting stages before verification, combined with loop-aware training that exposes the draft model to its own hidden states for unverified tokens.",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DLoop reduces target-model forward passes by continuing drafting while the draft model remains confident.",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DLoop improves wall-clock speedup by 5 to 41 percent across diverse speculative decoding methods including EAGLE-3, DFlash, Domino, DSpark, and multi-token prediction modules.",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach preserves lossless decoding while reducing verification overhead.",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Loop-aware training maintains draft model reliability across additional drafting stages.",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify computational overhead costs or memory requirements for the additional drafting stages.",
+   "ids": [
+    "2610.07659"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Is speculative decoding less effective for low-resource languages due to the limited multilingual capacities of smaller draft models?",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors test eleven languages under a standard speculative decoding setup to evaluate the hypothesis.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They attempt to improve multilingual capabilities via distillation from larger models and propose using weaker n-gram models as draft models as an alternative approach.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strong evidence supports the hypothesis that speculative decoding is far less effective for low-resource languages.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distillation from larger models generalizes poorly across tasks within the same language.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Assembling a task-agnostic, fully representative dataset for low-resource languages is infeasible.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Weaker n-gram models as draft models provide moderate speed-ups due to their minuscule inference cost.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The curse of multilinguality significantly impacts the effectiveness of speculative decoding across different languages.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study covers eleven languages but does not specify which languages were tested or provide detailed per-language performance metrics in the abstract.",
+   "ids": [
+    "2605.30580"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can retrieval methods be integrated to enhance model-based speculative decoding and overcome limitations in out-of-domain scenarios?",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose RASD, which combines retrieval methods with model-based speculative decoding using tree pruning and tree fusion.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They develop a pruning method based on the draft model's probability distribution to construct an optimal retrieval tree, and employ longest prefix matching to merge the draft model tree with the retrieval tree into a unified verification tree.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RASD achieves state-of-the-art inference acceleration across DocQA, Summary, Code, and In-Domain QA tasks.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tree pruning based on draft model probability distributions enables construction of optimal retrieval trees.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tree fusion via longest prefix matching successfully merges draft and retrieval trees for unified verification.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RASD exhibits strong scalability, integrating seamlessly with both generation-based and retrieval-based speculative decoding approaches.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Retrieval augmentation addresses the ineffectiveness of small draft models in out-of-domain scenarios.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify computational overhead introduced by the retrieval component or compare latency trade-offs against baseline methods.",
+   "ids": [
+    "2503.03434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can block diffusion drafters be extended beyond single trajectory verification to increase acceptance length in speculative decoding?",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce DDTree (Diffusion Draft Tree), which constructs a draft tree from per-position distributions of a block diffusion drafter using a best-first heap algorithm to select continuations most likely to match the target model, verified efficiently with ancestor-only attention masks.",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DDTree builds on DFlash, a leading draft model for speculative decoding.",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method constructs draft trees directly from block diffusion drafter distributions.",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A simple best-first heap algorithm selects optimal continuations under fixed node budgets.",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The resulting tree is verified in a single target model forward pass using ancestor-only attention masks.",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DDTree places itself among leading approaches to speculative decoding.",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not provide quantitative speedup metrics or compare acceptance length improvements over vanilla DFlash.",
+   "ids": [
+    "2604.12989"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does speculative decoding produce disparate speed-up rates across different tasks, and what factors drive this unfairness?",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct an analysis of speculative decoding through the lens of disparate speed-up rates across tasks, derive an analytical framework to quantify observed unfairness, and propose a mitigation strategy designed to reduce speed-up disparities, validating the approach across several model pairs.",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Speed-up from speculative decoding is not uniformly distributed across tasks.",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Speed-up consistently diminishes for under-fit and often underrepresented tasks.",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The derived analysis successfully quantifies the observed unfairness in speed-up distribution.",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed mitigation strategy achieves on average a 12% improvement in the fairness metric.",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Disparate speed-ups emerge from identifiable factors that can be addressed through targeted interventions.",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify the fairness metric used, the specific tasks tested, or the model pairs evaluated in the validation.",
+   "ids": [
+    "2510.02128"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can the drafter-target mismatch in speculative decoding be exploited to create stealthy attacks that collapse acceleration while preserving output quality?",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Mistletoe, a stealthy attack that directly targets the acceptance mechanism of speculative decoding.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attack jointly optimizes a degradation objective to decrease drafter-target agreement and a semantic-preservation objective to constrain output distribution, using null-space projection to resolve conflicts between these objectives.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Drafter-target mismatch creates a hidden attack surface where small perturbations can reduce draft-token acceptability while preserving visible behavior.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mistletoe substantially reduces average accepted length τ and collapses speedup in various speculative decoding systems.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attack lowers averaged token throughput while preserving output quality and perplexity.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Null-space projection successfully suppresses draft acceptance by projecting degradation gradients away from semantic-preserving directions.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Speculative decoding introduces a mechanism-level attack surface beyond existing output robustness concerns.",
+   "ids": [
+    "2605.14005"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify the computational cost of mounting the attack or whether defenses against Mistletoe were explored.",
+   "ids": [
+    "2605.14005"
+   ]
+  }
+ ]
+}

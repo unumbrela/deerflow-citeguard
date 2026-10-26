@@ -1,0 +1,617 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2412.06157",
+   "label": "unsupported",
+   "reason": "The abstract describes the paper as a survey that categorizes existing research but does not attribute the specific documentation of MIA proliferation or the identification of unique attack surfaces to Bai et al. (2024) specifically.",
+   "usage": {
+    "prompt_tokens": 435,
+    "completion_tokens": 55,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 435
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2506.12340",
+   "label": "unsupported",
+   "reason": "The abstract does not mention the authors Wu et al. or Song et al., nor does it discuss extending attacks to video-language models.",
+   "usage": {
+    "prompt_tokens": 490,
+    "completion_tokens": 38,
+    "total_tokens": 528,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 490
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2604.27002",
+   "label": "partial",
+   "reason": "The abstract confirms the paper addresses membership inference attacks on video-language models but does not mention extending attacks to large vision-language models or explicitly attribute the work to Wu et al. (2025).",
+   "usage": {
+    "prompt_tokens": 509,
+    "completion_tokens": 51,
+    "total_tokens": 560,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 509
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2502.03692",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces membership inference attacks specifically tailored to Document Visual Question Answering (DocVQA) models.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 35,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2410.20142",
+   "label": "unsupported",
+   "reason": "The abstract does not mention the author name 'Liu' or the year 2024, so it cannot support the attribution of this work to them.",
+   "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 44,
+    "total_tokens": 594,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 550
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2505.24089",
+   "label": "supported",
+   "reason": "The abstract explicitly states the development of node-level membership inference attacks against graph neural networks.",
+   "usage": {
+    "prompt_tokens": 393,
+    "completion_tokens": 28,
+    "total_tokens": 421,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 393
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a black-box attack that uses temperature-perturbed generation and measures semantic drift to infer membership in VideoLLMs.",
+   "usage": {
+    "prompt_tokens": 496,
+    "completion_tokens": 38,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 496
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2506.12340",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors conduct attacks in a black-box setting by utilizing output text embeddings' similarity, validating their effectiveness.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 37,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2502.03692",
+   "label": "supported",
+   "reason": "The abstract explicitly describes unsupervised black-box attacks that do not require auxiliary datasets.",
+   "usage": {
+    "prompt_tokens": 450,
+    "completion_tokens": 28,
+    "total_tokens": 478,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 450
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2410.20142",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a framework that masks words in target documents to prompt the RAG system and infers membership based on the accuracy of the resulting mask predictions.",
+   "usage": {
+    "prompt_tokens": 541,
+    "completion_tokens": 43,
+    "total_tokens": 584,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 541
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2406.16565",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper introduces a methodology generating 'noisy neighbors' by adding stochastic noise in the embedding space and requires operating the target model in inference mode only.",
+   "usage": {
+    "prompt_tokens": 366,
+    "completion_tokens": 45,
+    "total_tokens": 411,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 366
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2406.16565",
+   "label": "supported",
+   "reason": "The abstract explicitly contrasts the proposed method with traditional approaches that require computationally intensive training, stating the new method operates in inference mode only.",
+   "usage": {
+    "prompt_tokens": 357,
+    "completion_tokens": 44,
+    "total_tokens": 401,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 357
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2505.24089",
+   "label": "supported",
+   "reason": "The abstract explicitly states that BASE matches or exceeds prior state-of-the-art MIAs like LiRA and RMIA at a significantly lower computational cost.",
+   "usage": {
+    "prompt_tokens": 413,
+    "completion_tokens": 40,
+    "total_tokens": 453,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 413
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly names CMIA and PMIA as an 'attack-agnostic framework' that incorporates 'membership dependencies' to improve inference performance.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 39,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2505.24089",
+   "label": "supported",
+   "reason": "The abstract confirms the derivation of Bayes-optimal rules based on Sablayrolles et al. and explicitly states that the work provides a principled justification for RMIA.",
+   "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 46,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 417
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2507.21412",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors provide theoretical analyses for both the Cascading (CMIA) and Proxy (PMIA) attacks.",
+   "usage": {
+    "prompt_tokens": 439,
+    "completion_tokens": 38,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 439
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors study MIA selection as a decision-theoretic problem under uncertainty and conducted the largest synthetic data privacy benchmark to date.",
+   "usage": {
+    "prompt_tokens": 376,
+    "completion_tokens": 41,
+    "total_tokens": 417,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 376
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2406.16565",
+   "label": "partial",
+   "reason": "The abstract confirms MIA is a primary method for LLMs under GDPR/CCPA but does not support the claim that 'all papers agree' or that this applies broadly to all 'machine learning systems'.",
+   "usage": {
+    "prompt_tokens": 383,
+    "completion_tokens": 54,
+    "total_tokens": 437,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 383
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2403.08481",
+   "label": "partial",
+   "reason": "The abstract confirms MIAs are the most common attack for assessing privacy but does not mention regulatory frameworks like GDPR or CCPA.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 36,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2604.27002",
+   "label": "partial",
+   "reason": "The abstract confirms the paper designs a black-box attack but does not state or imply that there is a community consensus favoring black-box over white-box settings.",
+   "usage": {
+    "prompt_tokens": 526,
+    "completion_tokens": 46,
+    "total_tokens": 572,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 526
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2506.12340",
+   "label": "partial",
+   "reason": "The abstract confirms the paper designs a black-box attack for query-only access but does not state or imply that such scenarios are 'more practically relevant' than white-box settings.",
+   "usage": {
+    "prompt_tokens": 507,
+    "completion_tokens": 45,
+    "total_tokens": 552,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 507
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2502.03692",
+   "label": "partial",
+   "reason": "The abstract confirms the paper designs a black-box attack and calls it realistic, but does not state or imply a broader consensus that black-box scenarios are more relevant than white-box settings.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 47,
+    "total_tokens": 530,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2509.05350",
+   "label": "supported",
+   "reason": "The abstract explicitly states that no single MIA is a strictly dominant strategy across architectures and datasets, which directly motivates the proposed ensemble approach.",
+   "usage": {
+    "prompt_tokens": 396,
+    "completion_tokens": 39,
+    "total_tokens": 435,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 396
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2505.24089",
+   "label": "unsupported",
+   "reason": "The abstract does not mention ensemble approaches, architecture-specific methodologies, or the finding that no single attack method dominates across all scenarios.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 36,
+    "total_tokens": 462,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2507.21412",
+   "label": "unsupported",
+   "reason": "The abstract describes specific attack methods and their performance but does not mention any tension between attack sophistication and defense possibilities.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 33,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2505.24089",
+   "label": "unsupported",
+   "reason": "The abstract focuses on developing optimal attack methods and does not mention any tension between attack sophistication and defense possibilities.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 32,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2403.08481",
+   "label": "unsupported",
+   "reason": "The abstract describes a systematic review of vulnerabilities and defenses but does not mention any tension between papers emphasizing attack sophistication versus those highlighting defense possibilities.",
+   "usage": {
+    "prompt_tokens": 435,
+    "completion_tokens": 38,
+    "total_tokens": 473,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 435
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2412.06157",
+   "label": "unsupported",
+   "reason": "The abstract describes a general survey of attacks and defenses but does not mention specific papers, authors, or an implicit tension between attack sophistication and defense possibilities.",
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 41,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 462
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2403.08481",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the combination of differential privacy and low-rank adaptors achieves the best privacy protection, directly matching the sentence's core claim.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 45,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2502.03692",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed attacks assume the adversary lacks access to auxiliary datasets.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 32,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2507.21412",
+   "label": "partial",
+   "reason": "The abstract confirms the paper assumes adversaries can train shadow models but does not mention a variant assuming no auxiliary data access or explicitly claim such differences make attacks incomparable.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 43,
+    "total_tokens": 511,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2403.08481",
+   "label": "unsupported",
+   "reason": "The abstract does not mention Amit et al. (2024), Bai et al. (2024), or specific domains like vision-language models and document VQA systems.",
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 49,
+    "total_tokens": 478,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 429
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2412.06157",
+   "label": "contradicted",
+   "reason": "The sentence claims the paper surveys defenses for federated learning, but the abstract explicitly states the paper focuses on membership inference attacks and their defenses, not a general survey of defense approaches.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 49,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2604.27002",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the evaluation was conducted against only one specific model architecture, LLaVA-Video-7B-Qwen2-Video-Only.",
+   "usage": {
+    "prompt_tokens": 532,
+    "completion_tokens": 43,
+    "total_tokens": 575,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 532
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2505.24089",
+   "label": "unsupported",
+   "reason": "The abstract does not mention LLaVA-Video-7B-Qwen2-Video-Only, the year 2026, or limitations regarding evaluating only one or two model architectures.",
+   "usage": {
+    "prompt_tokens": 438,
+    "completion_tokens": 54,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 438
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2502.03692",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed attacks assume the adversary lacks access to auxiliary datasets and describes this assumption as more realistic.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 39,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  }
+ ]
+}

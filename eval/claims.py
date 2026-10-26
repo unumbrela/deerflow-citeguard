@@ -34,7 +34,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 
-from check_citations import parse_references  # noqa: E402
+from check_citations import REF_RE, parse_references  # noqa: E402
 
 LABELS = ("supported", "partial", "unsupported", "contradicted")
 SURNAME = r"[A-Z][A-Za-z'’\-]+(?:\s(?:van|de|der|von|da|del|Van|De|Der|Von)\s[A-Z][A-Za-z'’\-]+)?"
@@ -44,7 +44,10 @@ PAREN_ITEM_RE = re.compile(rf"({SURNAME})(?:\s+et al\.?|,?\s+(?:&|and)\s+{SURNAM
 ARXIV_RE = re.compile(r"arxiv\.org/(?:abs|pdf|html)/(\d{4}\.\d{4,5})|arXiv:\s*(\d{4}\.\d{4,5})", re.I)
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*)$")
 # Sections that describe the review itself or list references, not claims about the literature.
-SKIP_SECTIONS = re.compile(r"reference|bibliograph|methodolog|sources|appendix|search strategy", re.I)
+# "Annotated Bibliography" holds per-paper claims, so only a section that IS the reference list is skipped.
+SKIP_SECTIONS = re.compile(r"^(?:\d+[.)]?\s*)?(?:references?|bibliography|sources|works cited|citations)\b|methodolog|appendix|search strategy", re.I)
+# "Limitations: not stated in abstract" is the extraction template's placeholder, a remark about the abstract, not a claim about the paper.
+PLACEHOLDER_RE = re.compile(r"not (?:explicitly )?(?:stated|mentioned|discussed|specified|reported)(?: in (?:the )?abstract)?", re.I)
 _ABBREV = ("et al.", "e.g.", "i.e.", "vs.", "cf.", "approx.", "Fig.", "Eq.")
 
 
@@ -101,12 +104,25 @@ def _resolve(keys: list[tuple[str, str]], index: dict, stats: dict) -> list[str]
     return ids
 
 
+def _norm_title(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
+
+
+def _content_words(sentence: str) -> int:
+    """Words left once citations, ids and links are removed: a bare "arXiv preprint arXiv:2501.00001" has none."""
+    stripped = ARXIV_RE.sub(" ", re.sub(r"https?://\S+", " ", sentence))
+    stripped = PAREN_RE.sub(" ", NARRATIVE_RE.sub(" ", stripped))
+    stripped = re.sub(r"\b(arxiv|preprint)\b", " ", stripped, flags=re.I)
+    return len(re.findall(r"[A-Za-z]{2,}", stripped))
+
+
 def extract_claims(text: str) -> tuple[list[dict], dict]:
     """Claims with the arXiv ids they cite, plus counts of citations that could not be resolved."""
     index = reference_index(text)
+    titles = {_norm_title(r["title"]): r["id"] for r in parse_references(text) if r.get("parsed") and r.get("title")}
     stats = {"ambiguous": 0, "unmatched": 0}
     claims: list[dict] = []
-    section, skip, annotated = "", False, []
+    section, skip, annotated, in_block = "", False, [], False
     for raw in text.splitlines():
         line = raw.strip()
         heading = HEADING_RE.match(line)
@@ -114,15 +130,28 @@ def extract_claims(text: str) -> tuple[list[dict], dict]:
             level, title = len(heading.group(1)), heading.group(2).strip()
             if level <= 2:
                 section, skip = title, bool(SKIP_SECTIONS.search(title))
-            # A per-paper heading such as "### Koren et al. (2026)" attributes the lines below it to that paper.
-            annotated = _resolve(cited_keys(title), index, stats) if level >= 3 else []
+            # A per-paper heading ("### Koren et al. (2026)" or "### 3. <paper title>") attributes the lines below it to that paper.
+            annotated, in_block = [], level >= 3
+            if in_block:
+                annotated = _resolve(cited_keys(title), index, stats)
+                bare = _norm_title(re.sub(r"^\d+[.)]\s*", "", re.sub(r"\*\*?", "", title)))
+                if not annotated and bare in titles:
+                    annotated = [titles[bare]]
             continue
         if skip or not line or line.startswith("|"):
             continue
         body = re.sub(r"^([-*+]|\d+\.)\s+", "", line)
+        ref_ids = [a or b for a, b in ARXIV_RE.findall(body)]
+        if REF_RE.match(re.sub(r"\*\*?|__", "", body)) and len(ref_ids) == 1:
+            # An APA line inside a per-paper block names that block's paper; it is a reference, not a claim.
+            if in_block:
+                annotated = annotated or ref_ids
+            continue
         kind = "annotation" if annotated else "synthesis"
         for sentence in split_sentences(body):
             plain = re.sub(r"\*\*?|__", "", sentence)
+            if _content_words(plain) < 3 or (PLACEHOLDER_RE.search(plain) and len(plain.split()) < 12):
+                continue
             ids = [a or b for a, b in ARXIV_RE.findall(plain)]
             ids += [i for i in _resolve(cited_keys(plain), index, stats) if i not in ids]
             if not ids and annotated and len(plain.split()) >= 5:
@@ -220,8 +249,27 @@ def cmd_extract(args) -> None:
         print(f"{run.name}: {len(claims)} claims, {sum(len(c['ids']) for c in claims)} pairs, unresolved {stats}")
 
 
+JUDGE_CACHE = HERE / ".judge_cache.jsonl"  # (model, paper id, claim text) -> verdict; re-extraction does not re-pay
+
+
+def _cache_key(model: str, pid: str, text: str) -> str:
+    import hashlib
+
+    return hashlib.sha256(f"{model}|{pid}|{text}".encode()).hexdigest()
+
+
+def _load_judge_cache() -> dict[str, dict]:
+    cache: dict[str, dict] = {}
+    if JUDGE_CACHE.exists():
+        for line in JUDGE_CACHE.read_text().splitlines():
+            row = json.loads(line)
+            cache[row.pop("key")] = row
+    return cache
+
+
 def cmd_judge(args) -> None:
     key = _api_key()
+    cache = _load_judge_cache()
     runs = runs_of(args.suite)
     payloads = {run: json.loads((run / "claims.json").read_text()) for run in runs}
     abstracts = load_abstracts({i for p in payloads.values() for c in p["claims"] for i in c["ids"]})
@@ -236,11 +284,21 @@ def cmd_judge(args) -> None:
             paper = abstracts.get(pid)
             if paper is None:  # not a real arXiv paper: the citation check already counts it
                 return {"claim": n, "id": pid, "label": "no_paper", "reason": "id not on arXiv"}
-            prompt = JUDGE_PROMPT.format(title=paper["title"], abstract=paper["abstract"], claim=payload["claims"][n]["text"])
-            return {"claim": n, "id": pid, **call_judge(prompt, args.model, key)}
+            text = payload["claims"][n]["text"]
+            ck = _cache_key(args.model, pid, text)
+            if ck in cache:
+                return {"claim": n, "id": pid, **cache[ck]}
+            verdict = call_judge(JUDGE_PROMPT.format(title=paper["title"], abstract=paper["abstract"], claim=text), args.model, key)
+            if verdict["label"] != "error":
+                cache[ck] = verdict
+                new_rows.append({"key": ck, **verdict})
+            return {"claim": n, "id": pid, **verdict}
 
+        new_rows: list[dict] = []
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             judged = list(pool.map(judge_one, pairs))
+        with JUDGE_CACHE.open("a") as fh:
+            fh.writelines(json.dumps(r, ensure_ascii=False) + "\n" for r in new_rows)
         out_f.write_text(json.dumps({"model": args.model, "judgments": judged}, ensure_ascii=False, indent=1))
         counts = {lab: sum(j["label"] == lab for j in judged) for lab in (*LABELS, "no_paper", "error")}
         print(f"{run.name}: {counts}")

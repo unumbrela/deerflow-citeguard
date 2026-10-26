@@ -1,0 +1,532 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2602.13567",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DistillLens symmetrically aligns thought processes by projecting intermediate hidden states into vocabulary space via the Logit Lens to enforce structural alignment.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 43,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2602.22351",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper introduces a framework to integrate structured lexical knowledge like word senses into decoder models.",
+   "usage": {
+    "prompt_tokens": 335,
+    "completion_tokens": 32,
+    "total_tokens": 367,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 335
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2511.10643",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GAD frames the student as a generator and trains a discriminator to distinguish its responses from the teacher's in a minimax game.",
+   "usage": {
+    "prompt_tokens": 424,
+    "completion_tokens": 42,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 424
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2605.30448",
+   "label": "supported",
+   "reason": "The abstract explicitly states that output similarity does not imply behavioral indistinguishability, which directly supports the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 596,
+    "completion_tokens": 34,
+    "total_tokens": 630,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 596
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2406.02886",
+   "label": "supported",
+   "reason": "The abstract explicitly states that PLaD exploits teacher-student capacity discrepancies to generate pseudo-preference pairs and uses a ranking loss to re-calibrate the student's estimation of sequence likelihood.",
+   "usage": {
+    "prompt_tokens": 467,
+    "completion_tokens": 48,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 467
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2509.25100",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method formulates distillation as a preference optimization task and contrasts it with standard CoT distillation.",
+   "usage": {
+    "prompt_tokens": 333,
+    "completion_tokens": 36,
+    "total_tokens": 369,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 333
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2503.07067",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DistiLLM-2 is a contrastive approach that simultaneously increases the likelihood of teacher responses and decreases that of student responses.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 42,
+    "total_tokens": 439,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2605.16826",
+   "label": "supported",
+   "reason": "The abstract explicitly states that prevailing paradigms like off-policy and on-policy distillation implicitly couple the two orthogonal choices of prefix source and token-level KL direction.",
+   "usage": {
+    "prompt_tokens": 609,
+    "completion_tokens": 43,
+    "total_tokens": 652,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 609
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the combination of knowledge distillation with guided chain-of-thought reinforcement learning using Group Relative Policy Optimization.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 35,
+    "total_tokens": 480,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2609.24177",
+   "label": "supported",
+   "reason": "The abstract explicitly states the system addresses inaccessible legal information in Bangladesh where cloud-dependent AI fails due to unreliable connectivity, confirming the focus on resource-constrained settings.",
+   "usage": {
+    "prompt_tokens": 689,
+    "completion_tokens": 42,
+    "total_tokens": 731,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 689
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2412.09807",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of LLMs to generate MCQA data with probability scores and the subsequent distillation into DeBERTa-v3-base.",
+   "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 42,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 468
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2602.13567",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states that standard Knowledge Distillation compresses models, implying size reduction is a core mechanism, whereas the sentence claims improvements occur without explicit size reduction.",
+   "usage": {
+    "prompt_tokens": 421,
+    "completion_tokens": 45,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 421
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2603.13765",
+   "label": "supported",
+   "reason": "The abstract explicitly states that post-training 4-bit weight quantization further reduces memory footprint and inference latency.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 32,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2609.24177",
+   "label": "supported",
+   "reason": "The abstract explicitly states the model quantizes to 1.6 GB and runs on a Pixel 6 smartphone.",
+   "usage": {
+    "prompt_tokens": 685,
+    "completion_tokens": 34,
+    "total_tokens": 719,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 685
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2609.24177",
+   "label": "supported",
+   "reason": "The abstract explicitly states the model runs at 4-8 tokens per second on a Pixel 6 with no network access.",
+   "usage": {
+    "prompt_tokens": 689,
+    "completion_tokens": 36,
+    "total_tokens": 725,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 689
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2605.16826",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the entropy-gated length curriculum cuts average response length by roughly 3x.",
+   "usage": {
+    "prompt_tokens": 586,
+    "completion_tokens": 32,
+    "total_tokens": 618,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 586
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2602.13567",
+   "label": "partial",
+   "reason": "The abstract confirms evaluation on instruction-following benchmarks but does not mention math reasoning or explicitly state a lack of cross-domain validation.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 36,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2605.16826",
+   "label": "unsupported",
+   "reason": "The abstract explicitly states the study was conducted on math reasoning and does not mention evaluating instruction-following tasks or lacking cross-domain validation.",
+   "usage": {
+    "prompt_tokens": 605,
+    "completion_tokens": 43,
+    "total_tokens": 648,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 605
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2605.30448",
+   "label": "partial",
+   "reason": "The abstract confirms that semantic similarity does not guarantee behavioral indistinguishability against adversaries, but it identifies specific artifacts in robustness rather than making a broad claim about general adversarial robustness.",
+   "usage": {
+    "prompt_tokens": 604,
+    "completion_tokens": 48,
+    "total_tokens": 652,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 604
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2511.10643",
+   "label": "supported",
+   "reason": "The abstract confirms GAD introduces a discriminator and frames the process as a minimax game, which implies additional training components beyond standard distillation.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 39,
+    "total_tokens": 464,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2503.07067",
+   "label": "unsupported",
+   "reason": "The abstract describes the method's benefits and mechanism but does not mention increased training complexity, additional components like discriminators, or higher computational costs.",
+   "usage": {
+    "prompt_tokens": 409,
+    "completion_tokens": 39,
+    "total_tokens": 448,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 409
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2603.13765",
+   "label": "partial",
+   "reason": "The abstract confirms hyperparameters were tuned for the English setting but does not explicitly state that re-tuning is required for new domains.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 37,
+    "total_tokens": 482,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2605.16826",
+   "label": "partial",
+   "reason": "The abstract confirms the unified framework connecting KD to RL but does not explicitly discuss the 'loss landscape' or state that interactions between loss components remain incompletely understood.",
+   "usage": {
+    "prompt_tokens": 599,
+    "completion_tokens": 49,
+    "total_tokens": 648,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 599
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2602.13567",
+   "label": "partial",
+   "reason": "The abstract proposes a specific solution (DistillLens) for aligning intermediate representations rather than stating that the mechanisms require further investigation as an open problem.",
+   "usage": {
+    "prompt_tokens": 437,
+    "completion_tokens": 41,
+    "total_tokens": 478,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 437
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2602.22351",
+   "label": "unsupported",
+   "reason": "The abstract focuses on integrating lexical resources for knowledge distillation in decoder models and does not mention information bottlenecks or the investigation of intermediate representation mechanisms.",
+   "usage": {
+    "prompt_tokens": 351,
+    "completion_tokens": 41,
+    "total_tokens": 392,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 351
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2603.13765",
+   "label": "unsupported",
+   "reason": "The abstract reports performance metrics on Spanish data but does not discuss cross-lingual transfer mechanisms or claim to address systematic challenges in language-specific distillation.",
+   "usage": {
+    "prompt_tokens": 453,
+    "completion_tokens": 41,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 453
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2609.24177",
+   "label": "unsupported",
+   "reason": "The abstract does not mention Paredes La Torre et al. or Kamal et al., nor does it discuss systematic understanding of language-specific distillation challenges.",
+   "usage": {
+    "prompt_tokens": 711,
+    "completion_tokens": 43,
+    "total_tokens": 754,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 711
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2605.30448",
+   "label": "partial",
+   "reason": "The abstract describes a specific behavioral probe suite and advocates for adversarial evaluation but does not explicitly propose a unified framework or call for standardized adoption across the field.",
+   "usage": {
+    "prompt_tokens": 606,
+    "completion_tokens": 42,
+    "total_tokens": 648,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 606
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2509.25100",
+   "label": "partial",
+   "reason": "The abstract confirms the paper presents a cross-architecture method but does not mention extending existing techniques or the specific requirement of avoiding manual alignment for arbitrary pairs.",
+   "usage": {
+    "prompt_tokens": 343,
+    "completion_tokens": 41,
+    "total_tokens": 384,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 343
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2503.07067",
+   "label": "unsupported",
+   "reason": "The abstract describes a contrastive loss approach for distillation but does not mention architecture-agnostic methods, cross-architecture techniques, or the elimination of manual alignment.",
+   "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 43,
+    "total_tokens": 448,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 405
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2605.16826",
+   "label": "contradicted",
+   "reason": "The abstract claims the paper already provides a unified theoretical framework and gradient-level identities connecting loss objectives, contradicting the sentence's claim that further work is needed to understand these relationships.",
+   "usage": {
+    "prompt_tokens": 600,
+    "completion_tokens": 48,
+    "total_tokens": 648,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 600
+    }
+   }
+  }
+ ]
+}

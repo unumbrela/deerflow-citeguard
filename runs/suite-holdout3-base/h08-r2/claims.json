@@ -1,0 +1,991 @@
+{
+ "stats": {
+  "ambiguous": 4,
+  "unmatched": 1
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liang et al. (2025) demonstrate that state-of-the-art models achieve up to 76% accuracy in identifying buggy file paths using only issue descriptions without repository access, dropping to 53% on non-SWE-Bench repositories—strong evidence of data contamination.",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Egashira et al. (2026) introduce TestSuiteBench with 165 applications and find that even frontier coding agents achieve mutation scores below 60%, despite generating implementations that pass 82% of reference tests—revealing that agents can build software they cannot verify.",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Kim et al. (2026) show that realistic user inputs reduce resolution rates by 6.4 percentage points compared to curated benchmark descriptions, with 88% of real prompts containing only problem statements versus 7% of benchmark tasks.",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim et al. (2026) propose CODESTRUCT, which reframes codebases as structured action spaces operating on AST entities rather than text spans, improving Pass@1 accuracy by 1.2-5.0% while reducing token consumption by 12-38%.",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2026) introduce RepoMirage, using perturbation-based diagnostics to reveal that agents exhibit \"exploration drift\"—accessing broader repository context but failing to convert it into effective structural information.",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2026) extend this reasoning-focused evaluation with RACE-Bench, which tracks intermediate reasoning alignment alongside patch correctness.",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Guo et al. (2024) introduce RedCode, a benchmark with 4,050 risky test cases revealing that agents are more likely to reject risky OS operations than buggy code, and that risky operations in natural language achieve lower rejection rates than code format.",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Building on this, Guo et al. (2025) develop RedCodeAgent, the first automated red-teaming agent that systematically uncovers vulnerabilities across diverse code agents.",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Peng et al. (2025) reveal a novel threat: Functionally Correct yet Vulnerable (FCV) patches that pass all tests but contain security vulnerabilities.",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2026) present CRANE, a training-free parameter-editing method that merges Instruct and Thinking model checkpoints, achieving 66.2% pass1 (+19.5%) on Roo-Eval while preserving tool-use discipline.",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gandhi et al. (2026) train small critic models (4B-8B) to steer larger coding agents through high-level planning guidance, improving resolved rates by up to 16% while reducing inference costs by over 50% for some agents.",
+   "ids": [
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "While most work targets general-purpose programming, Joel et al. (2024) survey LLM capabilities for low-resource programming languages (LRPLs) and domain-specific languages (DSLs), finding that millions of developers (e.g., 3.5 million Rust users) cannot fully utilize LLM capabilities due to data scarcity and specialized syntax.",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, there is widespread agreement that current benchmarks—particularly SWE-Bench—overstate agent capabilities through memorization, unrealistic task formulations, or insufficient reasoning demands (Liang et al., 2025; Kim et al., 2026; Egashira et al., 2026).",
+   "ids": [
+    "2506.12286",
+    "2608.27831",
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, multiple papers independently identify that structure-aware approaches outperform text-based methods, whether through AST manipulation (Kim et al., 2026), explicit structural scaffolding (Li et al., 2026), or reasoning-augmented evaluation (Liu et al., 2026).",
+   "ids": [
+    "2608.27831",
+    "2605.26177",
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, all safety-focused papers agree that current evaluation paradigms inadequately capture real-world risks, particularly the gap between functional correctness and security (Guo et al., 2024; Guo et al., 2025; Peng et al., 2025).",
+   "ids": [
+    "2411.07781",
+    "2510.02609",
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there is tension between papers advocating for more sophisticated agent architectures (Zhu et al., 2026; Gandhi et al., 2026) and those suggesting simpler approaches may suffice.",
+   "ids": [
+    "2605.14084",
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Joel et al. (2024) note that improvement methods are fragmented across six categories without consensus on which approaches generalize best.",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Standardized benchmarks for specialized domains: Joel et al. (2024) identify the absence of standard benchmarks for LRPL/DSL code generation, a gap that persists across the literature.",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Cross-repository generalization: Multiple papers note evaluation limited to specific repositories or benchmarks, with Liang et al. (2025) showing dramatic performance drops on non-SWE-Bench repositories.",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Long-term maintainability focus: Lin et al. (2026) and Egashira et al. (2026) highlight that benchmarks prioritize functional correctness over maintainability, with agents struggling to eliminate code smells or generate comprehensive test suites.",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Treude (2026) notes accountability frameworks are poorly aligned with agent-mediated workflows, suggesting deployment realities outpace research.",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Human-agent collaboration dynamics: While BotDD (Treude & Poskitt, 2024) and CodePori (Rasheed et al., 2026) touch on practitioner perspectives, systematic understanding of human-agent teaming remains limited.",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Computational efficiency at scale: FASE (Lin et al., 2026) and CRANE (Zhu et al., 2026) address efficiency, but production-scale multi-agent workflows remain underexplored.",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can coding agents generate strong test suites from specifications for complex software projects?",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced TestSuiteBench with 165 open-source applications, each with structured specifications, reference implementations, reference test suites, and an average of 74 mutants per application.",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Frontier coding agents achieve mutation scores below 60% despite generating valid test suites",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "88% of generated tests pass on reference implementations, but suites lack relevant input combinations",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generated implementations pass 82% of reference tests, showing agents can build software they cannot verify",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Generated test suites are smaller than reference suites, missing critical edge cases",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Limited to 165 applications; mutation generation may not capture all real-world testing requirements.",
+   "ids": [
+    "2610.13065"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can small critic models specialized in high-level planning improve larger coding agents' performance?",
+   "ids": [
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Trained 4B and 8B critic models using SFT and DPO to identify errors and provide guidance without generating concrete actions, evaluated across 6 coding agents.",
+   "ids": [
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Critic models improve resolved rates by up to 16.0% on SWE-Bench Verified",
+   "ids": [
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reduces per-example inference cost from $0.07 to $0.03 for some agents (>50% reduction)",
+   "ids": [
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Critic guidance helps larger models avoid planning errors without concrete action generation",
+   "ids": [
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires separate critic training; effectiveness depends on quality of SFT/DPO data construction.",
+   "ids": [
+    "2606.21811"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we comprehensively evaluate code agents' safety regarding risky code execution and generation?",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Created RedCode benchmark with RedCode-Exec (4,050 risky test cases in Python/Bash across 25 vulnerability types) and RedCode-Gen (10 harmful code generation prompts), evaluating 19 LLMs across 3 agent frameworks.",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agents more likely to reject risky OS operations than technically buggy code",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Risky operations in natural language achieve lower rejection rates than code format",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "More capable models (e.g., GPT-4) produce more sophisticated harmful software",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "25 critical vulnerability types across 8 domains identified and benchmarked",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Limited to Python and Bash; RedCode-Gen includes only 10 prompts; evaluation limited to 19 LLMs.",
+   "ids": [
+    "2411.07781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we systematically uncover vulnerabilities in diverse code agents that current static safety benchmarks miss?",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed RedCodeAgent, an automated red-teaming agent with adaptive memory that dynamically selects effective red-teaming tools, evaluated using simulated sandbox environments.",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "First automated red-teaming agent for code agents, outperforming existing methods",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Exposes previously unidentified security risks in Cursor and Codeium",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adaptive memory enables dynamic tool combination selection for boundary condition coverage",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sandbox evaluation mitigates LLM judge biases from static code analysis",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation limited to specific code agents and languages; sandbox environments may not capture all deployment scenarios.",
+   "ids": [
+    "2510.02609"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the current capabilities, challenges, and opportunities for LLM-based code generation in low-resource programming languages and domain-specific languages?",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Systematic literature review filtering 111 papers from over 27,000 studies (2020-2024), analyzing LLMs, benchmarks, metrics, improvement strategies, and dataset methods.",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs perform poorly on LRPLs/DSLs due to data scarcity and specialized syntax",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Four evaluation techniques and multiple metrics identified across reviewed studies",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Six improvement method categories with novel architectures proposed",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "No standard benchmark or approach exists for LRPL/DSL code generation",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "3.5 million Rust users alone cannot fully utilize LLM capabilities",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Survey covers literature only through 2024; lacks standardized benchmarks for comparability.",
+   "ids": [
+    "2410.03981"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does the gap between structured benchmark descriptions and realistic user requests affect coding agent evaluation?",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Defined six-category information taxonomy and four linguistic style dimensions, created RealSWE with 381 multi-variant task families from SWE-bench, evaluated seven LLMs.",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "88% of real prompts contain only problem statements vs. 7% of benchmark tasks",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "87% of real prompts are casually written vs. 94% of benchmarks being formal",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Realistic inputs reduce resolution rates by 6.4 percentage points on average",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Desired Behavior and Motivation information significantly improves performance",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Linguistic style has small, model-dependent effects",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Based on SWE-bench variants; may not generalize to all real-world scenarios; limited to seven LLMs.",
+   "ids": [
+    "2608.27831"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does success on end-to-end tasks truly reflect repository context reasoning ability in code agents?",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced RepoMirage, a two-stage evaluation suite using semantics-preserving repository perturbations and explicit structural tasks built on SWE-Bench Verified.",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance drops from 66.8% to 25.3% when structural bottlenecks are explicit",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agents exhibit \"exploration drift\"—accessing context but not converting to structure",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Three perturbation types reveal clear performance degradation requiring broader context",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RepoAnchor structure-first prototype yields notable gains through explicit scaffolding",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Built on SWE-Bench Verified; RepoAnchor is prototype without comprehensive evaluation across diverse repositories.",
+   "ids": [
+    "2605.26177"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Are performance gains on SWE-Bench Verified driven by genuine reasoning or memorization/data contamination?",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced two diagnostic tasks (file path identification from issue descriptions, function reproduction with limited context), comparing SWE-Bench vs. non-SWE-Bench repository performance.",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models achieve 76% accuracy identifying file paths with only issue descriptions",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance drops to 53% on non-SWE-Bench repositories, suggesting contamination",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "35% consecutive 5-gram accuracy on SWE-Bench vs. 18% on other benchmarks",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current evaluation protocols may overstate true software engineering capabilities",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Diagnostic tasks probe specific knowledge aspects; exact contamination sources remain unclear.",
+   "ids": [
+    "2506.12286"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we evaluate repository-level code agents beyond final test correctness to understand reasoning quality?",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduced RACE-Bench with 528 feature addition instances from 12 repositories, each with executable patch verification and structured reference reasoning, using dual-track evaluation of correctness and reasoning alignment.",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Resolved Rate ranges from 29% to 70% across three agents on full benchmark",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agents perform well on high-level intent but degrade on concrete implementation steps",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Failed patches cover 35.7% fewer reasoning elements than successful patches",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Failed patches contain 94.1% more unsupported reasoning elements",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluates only three agents across 12 repositories; reasoning alignment depends on developer-accepted trajectories that may not capture all valid solutions.",
+   "ids": [
+    "2603.26337"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Are functionally correct patches generated by code agents actually safe from security vulnerabilities?",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed FCV-Attack demonstrating Functionally Correct yet Vulnerable patches, evaluated across 12 agent-model combinations on SWE-Bench with black-box single-query attacks.",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Functionally Correct yet Vulnerable (FCV) patches pass tests but contain security flaws",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "40.7% attack success rate on GPT-5 Mini + OpenHands for CWE-538 information exposure",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "All 12 agent-model combinations vulnerable across SWE-Bench",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Single black-box query sufficient to perform successful attacks",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focused on specific CWE types; defense mechanisms not explored in depth.",
+   "ids": [
+    "2510.17862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do LLM-based multi-agent systems perform on real-world autonomous software development tasks beyond binary benchmark evaluations?",
+   "ids": [
+    "2402.01411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed CodePori multi-agent system for automated code generation, conducted survey-based evaluation with practitioners assessing agent performance on challenging real-world tasks.",
+   "ids": [
+    "2402.01411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-agent systems show potential for autonomous code generation in practice",
+   "ids": [
+    "2402.01411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Specific challenges identified: short-term memory limitations, hallucinations, code smells",
+   "ids": [
+    "2402.01411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Practitioner perspective reveals gaps between benchmark and real-world applicability",
+   "ids": [
+    "2402.01411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Need to move beyond standard benchmarks for practical evaluation",
+   "ids": [
+    "2402.01411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Survey-based evaluation may not generalize; specific agent architecture details limited.",
+   "ids": [
+    "2402.01411"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do Terms of Service for AI coding assistants allocate accountability, and are existing frameworks aligned with agent-mediated software development?",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Comparative analysis of Terms of Service for widely-used AI coding assistants and agent-enabled tools, examining ownership, responsibility, liability, and disclosure obligations.",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Consistent tendency to shift responsibility for correctness, safety, and compliance onto users",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Substantial variation across providers in indemnification, data reuse, and acceptable use",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing policy frameworks poorly aligned with agent-mediated workflows",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research roadmap outlined for modeling responsibility and governance artifacts",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Analysis limited to ToS documents; empirical studies of developer perceptions needed.",
+   "ids": [
+    "2605.04532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does bot-driven development transform traditional software development roles and practices?",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conceptual exploration of bot-driven development paradigm, proposing research agenda addressing skill development, human-bot trust, interruption frequency, and ethical considerations.",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Bots transitioning from support tasks to proactive development workflow drivers",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BotDD redefines driver-navigator dynamics and aligns with DevOps goals",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Four key challenges identified: skill development, trust dynamics, interruption frequency, ethics",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Need for empirical studies and prototype systems to define best practices",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Vision paper without empirical validation; governance structures remain conceptual.",
+   "ids": [
+    "2411.16100"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we combine complementary capabilities of Instruct models (tool-disciplined) and Thinking models (strong planning) for code agents?",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed CRANE, training-free parameter-editing method using magnitude thresholding, Conservative Taylor Gate, and Graduated Sigmoidal Projection to merge Instruct/Thinking checkpoints.",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 66.2% pass1 (+19.5%) on Roo-Eval for Qwen3-30B-A3B",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Resolves up to 14 additional instances on SWE-bench-Verified at both scales",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves pass1/pass5 by up to 2.3%/7.8% on Terminal-Bench v2",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Preserves Instruct-level efficiency while outperforming alternative merging strategies",
+   "ids": [
+    "2605.14084"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Only applies to paired Instruct/Thinking checkpoints; training-free approach may limit applicability.",
+   "ids": [
+    "2605.14084"
+   ]
+  }
+ ]
+}

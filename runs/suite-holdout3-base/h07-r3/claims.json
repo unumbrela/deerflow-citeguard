@@ -1,0 +1,685 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2026) address the Out-of-Distribution (OOD) Mode Averaging problem in flow-based policy distillation, where standard methods interpolate across behavioral modes causing action collapse.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Rodriguez et al. (2026) propose causal representation learning to disentangle invariant causal factors from spurious correlations, enabling policies to focus on task-relevant features while ignoring environment-specific confounders.",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "White et al. (2025) take a multi-task approach, learning shared state-action representations across related tasks to achieve 40% improvement in data efficiency on robotic manipulation benchmarks.",
+   "ids": [
+    "2511.07890"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2026) present a framework combining ensemble methods with conformal prediction to produce statistically valid confidence bounds on policy value estimates that remain calibrated under distribution shift.",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kim et al. (2025) develop distributional critics that learn full return distributions rather than expected values, incorporating uncertainty into conservative Q-learning objectives for better risk-sensitive decision making.",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Park et al. (2026) introduce methods for automatic skill discovery that identify temporal abstractions without requiring reward signals, enabling transfer learning across related tasks through compositional reasoning.",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "O'Brien et al. (2025) analyze catastrophic forgetting in offline policy optimization and propose regularization techniques combining behavior cloning constraints with policy smoothness penalties.",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lee et al. (2025) introduce attention-based state representations that selectively focus on task-relevant features while filtering irrelevant information, improving sample efficiency and generalization particularly in high-dimensional observation spaces.",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Davis et al. (2025) present comprehensive benchmarking across robotics, healthcare, and finance domains, revealing significant performance gaps between simulated benchmarks and real-world applications.",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple approaches converge on the insight that simple conservatism constraints are insufficient—instead, methods must either actively enhance data coverage through augmentation (Schmähling et al., 2026; White et al., 2025), improve representation quality through causal or attention mechanisms (Rodriguez et al., 2026; Lee et al., 2025), or explicitly model uncertainty for safe deployment (Chen et al., 2026; Kim et al., 2025).",
+   "ids": [
+    "2511.07890",
+    "2601.09876",
+    "2509.06789",
+    "2604.08923",
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that hierarchical structures and skill reuse improve sample efficiency and generalization (Park et al., 2026).",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The causal representation approach (Rodriguez et al., 2026) assumes causal structure can be identified from observational data, which requires specific assumptions that may not hold in all domains.",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "In contrast, attention-based methods (Lee et al., 2025) make fewer structural assumptions but may struggle when task-relevant features are not clearly distinguishable.",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is tension between methods that aggressively augment data (Schmähling et al., 2026) versus those that emphasize staying close to the behavior distribution through regularization (O'Brien et al., 2025), reflecting different philosophies about the risks of distribution shift.",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, computational complexity is rarely analyzed in depth—methods like VRD's two-algorithm framework (Jiang et al., 2026), transformer-based augmentation (Schmähling et al., 2026), and ensemble-based uncertainty quantification (Chen et al., 2026) likely introduce significant overhead that may limit practical deployment.",
+   "ids": [
+    "2610.29075",
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, the benchmark study by Davis et al. (2025) reveals domain-specific challenges, but most proposed methods are not evaluated across diverse domains, raising questions about generalizability.",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we provide rigorous, statistically valid confidence bounds on policy value estimates in offline reinforcement learning?",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present an uncertainty quantification framework that combines ensemble methods with conformal prediction to produce statistically valid uncertainty intervals that remain calibrated even under distribution shift.",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework produces statistically valid uncertainty intervals for policy value estimates",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uncertainty intervals remain calibrated even under distribution shift between training and deployment",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method can reliably identify when a learned policy may fail in deployment",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ensemble methods combined with conformal prediction provide rigorous confidence bounds",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach enables safer offline RL applications in high-stakes domains like healthcare and autonomous driving",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper does not explicitly discuss limitations, but conformal prediction methods can be conservative, potentially producing wide intervals, and the ensemble approach may increase computational costs during both training and evaluation.",
+   "ids": [
+    "2604.08923"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How well do current offline reinforcement learning algorithms perform on real-world datasets compared to simulated benchmarks?",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a comprehensive benchmark study evaluating offline RL algorithms on real-world datasets from robotics, healthcare, and finance domains to identify performance gaps.",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significant performance gaps exist between simulated benchmarks and real-world applications",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current evaluation protocols do not adequately predict deployment success",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "New metrics and evaluation standards better predict practical application performance",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Algorithms perform differently across robotics, healthcare, and finance domains, revealing domain-specific challenges",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study is limited to three domains (robotics, healthcare, finance) and may not capture challenges in other application areas; the proposed metrics require further validation across additional real-world scenarios.",
+   "ids": [
+    "2503.05207"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we address the Out-of-Distribution (OOD) Mode Averaging problem that occurs when distilling Flow Matching based behavior policies in offline reinforcement learning?",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Value-Rectified Distillation (VRD), a framework that reformulates offline policy distillation as a value-guided generative trajectory alignment problem using a dynamic coupling mechanism.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They instantiate VRD through two algorithms: VRD-Q (value-quantile behavior distillation to filter low-value behaviors) and VRD-R (latent space reorganization to geometrically isolate high-value trajectories).",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD successfully decouples distinct behavioral modes, preventing action collapse into invalid OOD regions",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD improves existing generative baselines across diverse continuous control and planning tasks",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method shows particularly strong performance on multi-modal, non-expert datasets",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Empirical validation demonstrates effectiveness on D4RL, OGBench, and Minari benchmarks",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Dynamic coupling mechanism actively rectifies flow dynamics to isolate high-value actions",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper does not explicitly discuss limitations, but the approach appears specialized for continuous control tasks and may not generalize to discrete action spaces; the computational complexity of the two-algorithm framework is not thoroughly analyzed.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline reinforcement learning better handle risk-sensitive decision making in safety-critical tasks?",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors develop a distributional critic that models the full return distribution using quantile regression rather than just expected values, and incorporate uncertainty estimates into the conservative Q-learning objective.",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distributional critic enables more nuanced conservative policy learning compared to expected-value approaches",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Uncertainty estimates incorporated into the Q-learning objective improve decision quality",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach leads to better risk-sensitive decision making in safety-critical scenarios",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improved performance demonstrated on safety-critical offline RL tasks",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; the approach may be computationally intensive due to quantile regression and may require careful tuning for different safety-critical domains.",
+   "ids": [
+    "2512.03456"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline reinforcement learning achieve better sample efficiency and generalization in high-dimensional observation spaces?",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce an attention-based architecture that selectively focuses on task-relevant state features while filtering out irrelevant information to learn compact state representations.",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attention mechanism effectively filters out irrelevant state information",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "More sample-efficient learning compared to non-attention baselines",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Better generalization to unseen states, particularly in high-dimensional spaces",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Particularly effective for image-based observation spaces where feature selection is critical",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The attention mechanism may struggle when task-relevant features are not clearly distinguishable from irrelevant ones; computational overhead of attention may be significant for very large state spaces.",
+   "ids": [
+    "2509.06789"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline policy optimization be stabilized to prevent catastrophic forgetting during training?",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose novel regularization techniques that combine behavior cloning constraints with policy smoothness penalties to maintain proximity to the data distribution while allowing controlled exploration.",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combined regularization prevents catastrophic forgetting during offline policy training",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Behavior cloning constraints maintain proximity to the behavior policy's data distribution",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Policy smoothness penalties enable controlled exploration beyond the dataset",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical analysis provides convergence guarantees under realistic dataset coverage assumptions",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The convergence guarantees depend on realistic assumptions about dataset coverage that may not hold in all practical scenarios; the balance between behavior cloning and exploration requires careful hyperparameter tuning.",
+   "ids": [
+    "2510.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we automatically discover and learn reusable skills from offline demonstration data without requiring reward signals?",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce a hierarchical approach that identifies temporal abstractions in behavior data without requiring reward signals, enabling transfer learning across related tasks through a discovered skill hierarchy that supports compositional reasoning.",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Skills can be discovered from offline data without requiring reward signals",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The discovered skill hierarchy supports compositional reasoning for complex tasks",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method significantly improves sample efficiency when fine-tuning on new tasks with limited online interaction",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Temporal abstractions in behavior data enable transfer learning across related tasks",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hierarchical structure facilitates reuse of discovered skills across different problem domains",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper does not explicitly acknowledge limitations, but the approach may require related tasks for effective transfer, the quality of discovered skills may depend heavily on the diversity of the offline dataset, and the method's scalability to very complex skill hierarchies is not thoroughly evaluated.",
+   "ids": [
+    "2602.14567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we achieve better out-of-distribution generalization in offline reinforcement learning by identifying invariant features in datasets?",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a causal representation learning framework that identifies invariant features by disentangling causal factors from spurious correlations, enabling policies to focus on task-relevant state features while ignoring environment-specific confounders.",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Causal representations achieve better out-of-distribution generalization compared to standard approaches",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method successfully disentangles causal factors from spurious correlations in offline datasets",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Policies learn to focus on task-relevant state features while ignoring environment-specific confounders",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach leads to more robust performance across domain shifts",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Causal representation learning enables identification of invariant features that generalize across environments",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The paper does not explicitly discuss limitations, but causal discovery from observational data is inherently challenging and may require specific assumptions about the data generating process, and the method's effectiveness may depend on having sufficient variation in the offline dataset to identify causal structure.",
+   "ids": [
+    "2601.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline reinforcement learning reduce data requirements by leveraging shared structure across related tasks?",
+   "ids": [
+    "2511.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a multi-task offline RL framework that learns shared state-action representations across related tasks, leveraging common structure to achieve positive transfer between tasks.",
+   "ids": [
+    "2511.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shared representations enable positive transfer between related tasks",
+   "ids": [
+    "2511.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "40% improvement in data efficiency compared to single-task baselines on robotic manipulation benchmarks",
+   "ids": [
+    "2511.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reduced data requirements for each individual task through knowledge sharing",
+   "ids": [
+    "2511.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Common structure across tasks can be effectively captured in shared representations",
+   "ids": [
+    "2511.07890"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach assumes tasks are sufficiently related to benefit from shared representations; performance may degrade when tasks have conflicting objectives or vastly different state-action spaces.",
+   "ids": [
+    "2511.07890"
+   ]
+  }
+ ]
+}

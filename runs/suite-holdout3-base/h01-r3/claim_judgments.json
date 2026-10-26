@@ -1,0 +1,1331 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2506.08237",
+   "label": "contradicted",
+   "reason": "The paper focuses on solving partial differential equations in participating media, whereas the sentence attributes a method for Dynamic Speculative Decoding with drafter models to it.",
+   "usage": {
+    "prompt_tokens": 421,
+    "completion_tokens": 44,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 421
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces 'component-aware self-speculative decoding' as a new method that isolates SSM/linear-attention subgraphs as zero-cost internal drafts, matching the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 56,
+    "total_tokens": 612,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 556
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2401.06706",
+   "label": "unsupported",
+   "reason": "The abstract describes sampling multiple candidates from a draft model, not using shallow transformer layers as predictors for deeper layers within the same model.",
+   "usage": {
+    "prompt_tokens": 360,
+    "completion_tokens": 37,
+    "total_tokens": 397,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 360
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract discusses a cloud-based MDE platform and DSLs, with no mention of token groupings, latent block structures, or drafting mechanisms.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 40,
+    "total_tokens": 460,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The paper focuses on building climate control and Model Predictive Control, whereas the sentence describes a method for speculative decoding in large language models.",
+   "usage": {
+    "prompt_tokens": 516,
+    "completion_tokens": 38,
+    "total_tokens": 554,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 516
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The paper focuses on quantum reinforcement learning and Bayesian networks, with no mention of multi-modal LLMs, visual tokens, or modality-aware drafting.",
+   "usage": {
+    "prompt_tokens": 501,
+    "completion_tokens": 41,
+    "total_tokens": 542,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 501
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper focuses on backstepping control for mosquito population extinction, not reinforcement learning or speculative decoding policies.",
+   "usage": {
+    "prompt_tokens": 321,
+    "completion_tokens": 32,
+    "total_tokens": 353,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 321
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses AI infrastructure and the convergence of HPC and cloud technologies, with no mention of lookahead decoding, token spans, or attention masks.",
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 40,
+    "total_tokens": 503,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 463
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The abstract discusses stochastic modeling and Monte Carlo algorithms for PDEs in participating media, but does not mention adaptive methods, static approaches, or specific performance improvement metrics like 1.3-1.9x.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 54,
+    "total_tokens": 502,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The abstract describes a specific backstepping control law for mosquito extinction but does not mention adaptive methods, static approaches, or any quantitative performance improvements compared to fixed strategies.",
+   "usage": {
+    "prompt_tokens": 339,
+    "completion_tokens": 44,
+    "total_tokens": 383,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 339
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2605.01106",
+   "label": "partial",
+   "reason": "The abstract confirms the method avoids external drafters by using internal components, but does not explicitly mention eliminating memory overhead from loading separate models.",
+   "usage": {
+    "prompt_tokens": 561,
+    "completion_tokens": 38,
+    "total_tokens": 599,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 561
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2401.06706",
+   "label": "unsupported",
+   "reason": "The abstract describes a method using a separate draft model, whereas the sentence attributes self-speculation without external drafters to this work.",
+   "usage": {
+    "prompt_tokens": 366,
+    "completion_tokens": 37,
+    "total_tokens": 403,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 366
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract discusses Model-Driven Engineering and the Jjodel platform, with no mention of distributional alignment, acceptance rates, or latency penalties.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 40,
+    "total_tokens": 471,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2605.01106",
+   "label": "partial",
+   "reason": "The abstract supports the findings on parallel vs. sequential hybrids but does not mention Chen et al. (2024) or layer-wise self-speculation in deep transformers.",
+   "usage": {
+    "prompt_tokens": 576,
+    "completion_tokens": 46,
+    "total_tokens": 622,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 576
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2401.06706",
+   "label": "unsupported",
+   "reason": "The abstract does not mention the authors Chen et al. (2024), layer-wise self-speculation, or deep transformers.",
+   "usage": {
+    "prompt_tokens": 381,
+    "completion_tokens": 38,
+    "total_tokens": 419,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 381
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The abstract discusses building climate control and energy savings, with no mention of memory-constrained methods, speedups, or acceleration potential.",
+   "usage": {
+    "prompt_tokens": 520,
+    "completion_tokens": 37,
+    "total_tokens": 557,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 520
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The paper discusses solving partial differential equations in participating media and makes no mention of adaptive methods, training infrastructure, drafters, routers, or the cited authors.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 42,
+    "total_tokens": 484,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper discusses mosquito population control using backstepping, while the sentence attributes claims about adaptive methods and training infrastructure to it.",
+   "usage": {
+    "prompt_tokens": 333,
+    "completion_tokens": 36,
+    "total_tokens": 369,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 333
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The paper discusses quantum reinforcement learning and Bayesian networks, with no mention of multi-modal speculative decoding, MLLMs, or drafter training.",
+   "usage": {
+    "prompt_tokens": 504,
+    "completion_tokens": 39,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 504
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses integrating HPC and cloud technologies for AI Factories, with no mention of tree-based parallel verification, memory overhead, or draft trees.",
+   "usage": {
+    "prompt_tokens": 471,
+    "completion_tokens": 41,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 471
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2605.01106",
+   "label": "contradicted",
+   "reason": "The abstract explicitly concludes that the composition pattern determines speculative viability, contradicting the sentence's claim that this relationship remains poorly understood.",
+   "usage": {
+    "prompt_tokens": 561,
+    "completion_tokens": 38,
+    "total_tokens": 599,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 561
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces a method designed to exploit internal architectural heterogeneity in hybrid models for self-speculative decoding without an external drafter.",
+   "usage": {
+    "prompt_tokens": 546,
+    "completion_tokens": 42,
+    "total_tokens": 588,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 546
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the method's mechanism, the specific hybrid models evaluated (Falcon-H1 and Qwen3.5), their architectural descriptions, and the use of Qwen2.5 as a control.",
+   "usage": {
+    "prompt_tokens": 602,
+    "completion_tokens": 58,
+    "total_tokens": 660,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 602
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact acceptance rates, draft length, decoding method, and the attribution of the gap to architectural integration patterns found in the sentence.",
+   "usage": {
+    "prompt_tokens": 563,
+    "completion_tokens": 41,
+    "total_tokens": 604,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 563
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the property is scale-invariant and that Falcon-H1 at 3B reproduces the rates observed at 0.5B.",
+   "usage": {
+    "prompt_tokens": 545,
+    "completion_tokens": 43,
+    "total_tokens": 588,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 545
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The sentence directly quotes the specific numerical findings and conclusions regarding perplexity degradation ratios and acceptance rates presented in the abstract.",
+   "usage": {
+    "prompt_tokens": 580,
+    "completion_tokens": 34,
+    "total_tokens": 614,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 580
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states that for sequential hybrids, generic LayerSkip achieves 12x higher acceptance rates than the component-aware strategy.",
+   "usage": {
+    "prompt_tokens": 538,
+    "completion_tokens": 37,
+    "total_tokens": 575,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 538
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The final sentence of the abstract explicitly states that the composition pattern, rather than just the presence of components, determines the viability of component-level self-speculation.",
+   "usage": {
+    "prompt_tokens": 543,
+    "completion_tokens": 42,
+    "total_tokens": 585,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 543
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2605.01106",
+   "label": "supported",
+   "reason": "The abstract explicitly states that parallel hybrids achieve high acceptance rates while sequential hybrids yield very low rates, confirming the method's effectiveness is limited to parallel architectures due to specific composition patterns.",
+   "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 52,
+    "total_tokens": 609,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 557
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2401.06706",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states the method uses a 'fast draft model,' whereas the sentence claims the approach does not require a separate drafter model.",
+   "usage": {
+    "prompt_tokens": 344,
+    "completion_tokens": 41,
+    "total_tokens": 385,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 344
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2401.06706",
+   "label": "contradicted",
+   "reason": "The abstract describes sampling multiple candidates from a separate draft model, whereas the sentence claims the method uses shallow layers within the same model to predict deeper layers.",
+   "usage": {
+    "prompt_tokens": 360,
+    "completion_tokens": 43,
+    "total_tokens": 403,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 360
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2401.06706",
+   "label": "unsupported",
+   "reason": "The abstract mentions significant improvements but does not specify the exact speedup range (1.8-2.5x) or the specific model depth (24+ layers) claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 346,
+    "completion_tokens": 51,
+    "total_tokens": 397,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 346
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2401.06706",
+   "label": "partial",
+   "reason": "The abstract claims the method maintains the target model's distribution but does not explicitly state it achieves exact equivalence to sequential decoding with no approximation.",
+   "usage": {
+    "prompt_tokens": 334,
+    "completion_tokens": 38,
+    "total_tokens": 372,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 334
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2401.06706",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states the method uses a 'fast draft model' to generate candidates, contradicting the claim that it eliminates the need for a separate drafter model.",
+   "usage": {
+    "prompt_tokens": 336,
+    "completion_tokens": 46,
+    "total_tokens": 382,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 336
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2401.06706",
+   "label": "unsupported",
+   "reason": "The abstract discusses batching and parallel verification but does not mention a hierarchical approach or explicitly link the method to exploiting the transformer architecture for parallelization.",
+   "usage": {
+    "prompt_tokens": 333,
+    "completion_tokens": 39,
+    "total_tokens": 372,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 333
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2401.06706",
+   "label": "unsupported",
+   "reason": "The abstract does not mention model depth, layer counts, or specific transformer structural requirements as limitations.",
+   "usage": {
+    "prompt_tokens": 355,
+    "completion_tokens": 30,
+    "total_tokens": 385,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 355
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The paper focuses on infrastructure integration between HPC and cloud systems, not on algorithmic optimizations for speculative decoding or token generation.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 36,
+    "total_tokens": 490,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses infrastructure integration between HPC and cloud systems, while the sentence describes a specific token decoding algorithm for language models which is not mentioned.",
+   "usage": {
+    "prompt_tokens": 474,
+    "completion_tokens": 40,
+    "total_tokens": 514,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 474
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses infrastructure architecture and the convergence of HPC and cloud technologies, but does not mention specific decoding speedup metrics or performance benchmarks for LLaMA and Mistral models.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 47,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses infrastructure architecture and the convergence of HPC and cloud technologies, but does not mention speculative decoding or acceptance rates.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 36,
+    "total_tokens": 481,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses infrastructure architecture and the convergence of HPC and cloud technologies, with no mention of tree-based verification or model output distributions.",
+   "usage": {
+    "prompt_tokens": 450,
+    "completion_tokens": 38,
+    "total_tokens": 488,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 450
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses infrastructure integration between HPC and cloud technologies, not specific algorithms for autoregressive generation.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 31,
+    "total_tokens": 476,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2509.12849",
+   "label": "unsupported",
+   "reason": "The abstract discusses integrating HPC and cloud technologies for AI Factories, with no mention of tree construction, memory overhead, or verification complexity.",
+   "usage": {
+    "prompt_tokens": 461,
+    "completion_tokens": 39,
+    "total_tokens": 500,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 461
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The paper focuses on quantum reinforcement learning in partially observable environments, while the sentence discusses speculative decoding for multi-modal large language models, a topic not mentioned in the abstract.",
+   "usage": {
+    "prompt_tokens": 494,
+    "completion_tokens": 44,
+    "total_tokens": 538,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 494
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The paper discusses Quantum Bayesian Reinforcement Learning, while the sentence describes Multi-Modal Speculative Decoding for MLLMs, which is a completely different topic not mentioned in the abstract.",
+   "usage": {
+    "prompt_tokens": 513,
+    "completion_tokens": 48,
+    "total_tokens": 561,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 513
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The paper discusses Quantum Bayesian Reinforcement Learning, while the sentence refers to MMSD speedups on LLaVA and MiniGPT-4, which are unrelated topics.",
+   "usage": {
+    "prompt_tokens": 492,
+    "completion_tokens": 46,
+    "total_tokens": 538,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 492
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The paper discusses quantum reinforcement learning and Bayesian networks, with no mention of MLLMs, visual tokens, or textual tokens.",
+   "usage": {
+    "prompt_tokens": 484,
+    "completion_tokens": 36,
+    "total_tokens": 520,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 484
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The abstract discusses quantum reinforcement learning and Bayesian networks, with no mention of cross-modal attention, draft acceptance rates, or modality-conditioned training.",
+   "usage": {
+    "prompt_tokens": 483,
+    "completion_tokens": 40,
+    "total_tokens": 523,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 483
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The paper discusses quantum reinforcement learning and Bayesian networks, with no mention of speculative decoding or multi-modal drafting strategies.",
+   "usage": {
+    "prompt_tokens": 478,
+    "completion_tokens": 33,
+    "total_tokens": 511,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 478
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2507.18606",
+   "label": "unsupported",
+   "reason": "The abstract discusses quantum reinforcement learning and Bayesian networks, making no mention of modality-specific drafter training or multi-modal architectures.",
+   "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 36,
+    "total_tokens": 531,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 495
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The paper focuses on building climate control and Model Predictive Control, with no mention of speculative decoding or GPU memory constraints.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 35,
+    "total_tokens": 516,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The paper focuses on building climate control using Data-driven Predictive Control, not on speculative decoding or memory optimization techniques for language models.",
+   "usage": {
+    "prompt_tokens": 497,
+    "completion_tokens": 37,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 497
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The abstract discusses energy savings and comfort violations but makes no mention of computational speedup or edge device performance.",
+   "usage": {
+    "prompt_tokens": 474,
+    "completion_tokens": 32,
+    "total_tokens": 506,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 474
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The paper focuses on building climate control and energy savings, with no mention of speculative decoding or memory usage.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 32,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The paper focuses on building climate control and energy savings, with no mention of speculative decoding or consumer hardware acceleration.",
+   "usage": {
+    "prompt_tokens": 466,
+    "completion_tokens": 33,
+    "total_tokens": 499,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 466
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The abstract discusses energy savings and comfort violations in building climate control, with no mention of speedup benefits, memory constraints, or dynamic component swapping.",
+   "usage": {
+    "prompt_tokens": 470,
+    "completion_tokens": 40,
+    "total_tokens": 510,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 470
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2412.09238",
+   "label": "unsupported",
+   "reason": "The abstract discusses building climate control and energy savings, with no mention of CPU-GPU swapping or computational overhead.",
+   "usage": {
+    "prompt_tokens": 505,
+    "completion_tokens": 33,
+    "total_tokens": 538,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 505
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The paper focuses on solving partial differential equations in participating media, while the sentence discusses speculative decoding and drafter models for text generation.",
+   "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 37,
+    "total_tokens": 447,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 410
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The paper focuses on solving partial differential equations in participating media, while the sentence describes a dynamic speculative decoding method for language models which is not mentioned in the abstract.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 43,
+    "total_tokens": 475,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The paper discusses solving partial differential equations in participating media, while the sentence describes speedup metrics for static speculative decoding, a completely unrelated topic.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 39,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The paper focuses on solving partial differential equations in participating media, not on code generation, mathematical reasoning, or creative writing tasks.",
+   "usage": {
+    "prompt_tokens": 399,
+    "completion_tokens": 36,
+    "total_tokens": 435,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 399
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The paper focuses on solving partial differential equations in participating media and does not mention dynamic approaches, long-context generation, or content characteristics.",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 37,
+    "total_tokens": 437,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The paper discusses solving partial differential equations in participating media, not drafting strategies or multi-drafter pools.",
+   "usage": {
+    "prompt_tokens": 401,
+    "completion_tokens": 32,
+    "total_tokens": 433,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 401
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2506.08237",
+   "label": "unsupported",
+   "reason": "The abstract discusses solving PDEs in participating media using Monte Carlo algorithms and makes no mention of drafter models, router networks, or training complexity.",
+   "usage": {
+    "prompt_tokens": 414,
+    "completion_tokens": 41,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 414
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The paper discusses Model-Driven Engineering and a platform called Jjodel, with no mention of speculative decoding or token prediction.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 36,
+    "total_tokens": 442,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract discusses Model-Driven Engineering and the Jjodel platform, with no mention of speculative decoding, token groups, or learned tokenizers.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 40,
+    "total_tokens": 471,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract discusses a model-driven engineering platform and does not mention token-level speculative decoding or any performance speedup metrics.",
+   "usage": {
+    "prompt_tokens": 404,
+    "completion_tokens": 34,
+    "total_tokens": 438,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 404
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract discusses a modeling platform for domain-specific languages but does not mention token correlations or performance gains on structured text.",
+   "usage": {
+    "prompt_tokens": 402,
+    "completion_tokens": 34,
+    "total_tokens": 436,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 402
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract discusses model-driven engineering and DSL creation, with no mention of multi-token predictions or block-level drafting.",
+   "usage": {
+    "prompt_tokens": 396,
+    "completion_tokens": 33,
+    "total_tokens": 429,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 396
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract discusses a low-code platform for model-driven engineering but does not mention token groupings or pattern capture methods.",
+   "usage": {
+    "prompt_tokens": 396,
+    "completion_tokens": 34,
+    "total_tokens": 430,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 396
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2502.09146",
+   "label": "unsupported",
+   "reason": "The abstract describes a low-code modeling platform for domain-specific languages and does not mention training data, token groupings, or limitations regarding natural language text.",
+   "usage": {
+    "prompt_tokens": 416,
+    "completion_tokens": 41,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 416
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper focuses on backstepping control for mosquito population dynamics, not reinforcement learning or speculative decoding policies.",
+   "usage": {
+    "prompt_tokens": 304,
+    "completion_tokens": 32,
+    "total_tokens": 336,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 304
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper discusses backstepping control for mosquito population dynamics, while the sentence describes reinforcement learning for speculative decoding in text generation.",
+   "usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 36,
+    "total_tokens": 343,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 307
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper focuses on mosquito population control via backstepping, not speculative decoding or computational speedups.",
+   "usage": {
+    "prompt_tokens": 297,
+    "completion_tokens": 31,
+    "total_tokens": 328,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 297
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The abstract describes a model-based backstepping control law, not a learned policy that adapts automatically.",
+   "usage": {
+    "prompt_tokens": 288,
+    "completion_tokens": 32,
+    "total_tokens": 320,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 288
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper discusses backstepping control for mosquito population dynamics, not learning context-aware drafting strategies.",
+   "usage": {
+    "prompt_tokens": 291,
+    "completion_tokens": 30,
+    "total_tokens": 321,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 291
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper discusses backstepping control for mosquito population extinction, not reinforcement learning or draft quality optimization.",
+   "usage": {
+    "prompt_tokens": 291,
+    "completion_tokens": 31,
+    "total_tokens": 322,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 291
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2406.16719",
+   "label": "unsupported",
+   "reason": "The paper discusses backstepping control and sterile insect techniques, with no mention of reinforcement learning (RL), training infrastructure, or reward functions.",
+   "usage": {
+    "prompt_tokens": 303,
+    "completion_tokens": 39,
+    "total_tokens": 342,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 303
+    }
+   }
+  }
+ ]
+}

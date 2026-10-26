@@ -1,0 +1,648 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hepburn et al. (2024) introduce state-constrained offline RL, which shifts focus from constraining the state-action distribution to constraining only the state distribution.",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Asadulaev et al. (2024) take a different approach by reframing offline RL as an optimal transport problem.",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2026) address the specific problem of OOD mode averaging in flow-based policy distillation.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Arnob et al. (2025) identify that offline RL algorithms overfit on small datasets and propose Sparse-Reg, a sparsity-based regularization technique.",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Romeo and Bagdanov (2024) tackle the related problem of reward scarcity.",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2025) provide the first theoretical analysis of zero-shot generalization in offline RL, where agents trained on multiple environments must perform well on unseen test environments.",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hoischen et al. (2025) address the statistical understanding of approximation errors in continuous-time offline RL.",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lee et al. (2024) address the over-reliance on game tasks and synthetic datasets by creating AD4RL, a comprehensive autonomous driving benchmark for offline RL.",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ayabe et al. (2024) conduct a critical robustness evaluation of offline RL for robot control, specifically examining vulnerability to action perturbations that simulate joint actuator faults.",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2025) demonstrate that pessimistic policy evaluation enables zero-shot generalization, with both PERM and PPPO relying on pessimism to guide policy learning toward robust solutions that transfer across environments.",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jiang et al. (2026) employ value-guided mechanisms in their VRD framework, using value-quantile behavior distillation (VRD-Q) to statistically filter low-value behaviors and value-guided trajectory alignment to isolate high-value actions.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Robustness Solutions: Ayabe et al. (2024) identify critical vulnerabilities to action perturbations but do not propose solutions.",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline RL algorithms overcome overfitting when trained on small datasets considerably smaller than the million-plus data points common in benchmarks?",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces Sparse-Reg, a regularization technique based on sparsity designed to mitigate overfitting in offline reinforcement learning for limited data settings.",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Offline RL algorithms overfit on small datasets, resulting in poor performance",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many real-world offline RL applications rely on considerably smaller datasets than common benchmarks",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse-Reg enables effective learning in limited data settings",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms state-of-the-art baselines in continuous control tasks with small datasets",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focus primarily on continuous control domains; sparsity-based regularization may not generalize optimally to all offline RL application areas and dataset characteristics.",
+   "ids": [
+    "2506.17155"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we extract efficient policies from offline RL datasets containing behaviors from various experts, some of whom are sub-optimal?",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors reframe offline reinforcement learning as an optimal transportation problem and present an algorithm that finds a policy mapping states to a partial distribution of the best expert actions for each given state, effectively stitching together optimal behaviors.",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Optimal transport formulation enables stitching the best behaviors from heterogeneous expert datasets",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The algorithm maps states to partial distributions of best expert actions rather than full action distributions",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrates improvements over existing methods on D4RL continuous control benchmarks",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effectively handles datasets with mixed expert quality levels",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides a novel theoretical perspective on offline RL through optimal transport theory",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation is limited to continuous control problems from D4RL; optimal transport computations may introduce significant computational overhead for large-scale problems.",
+   "ids": [
+    "2410.14069"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How robust are existing offline reinforcement learning methods for robot control against real-world challenges such as joint actuator faults and action perturbations?",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Evaluates existing offline RL methods using legged robots from OpenAI Gym based on average episodic rewards, simulating failures by incorporating both random and adversarial perturbations into joint torque signals.",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing offline RL methods exhibit significant vulnerabilities to action perturbations",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Offline RL methods are more vulnerable to perturbations than online RL methods",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both random and adversarial perturbations to joint torque signals significantly degrade performance",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Highlights critical need for more robust offline RL approaches in robot control applications",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation limited to legged robots in OpenAI Gym; study identifies vulnerabilities but does not propose or validate solutions to improve robustness.",
+   "ids": [
+    "2412.18781"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline RL overcome the limitation of batch-constrained methods that restrict policies to only actions present in the dataset?",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces state-constrained offline RL framework that focuses on the dataset's state distribution rather than state-action distribution, allowing out-of-distribution actions that lead to in-distribution states, and proposes StaCQ deep learning algorithm.",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "State-constrained approach allows policies to take high-quality out-of-distribution actions leading to in-distribution states",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Broadens the learning horizon compared to traditional batch-constrained offline RL",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves ability to combine different trajectories from the dataset effectively",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "StaCQ achieves state-of-the-art performance on D4RL benchmark datasets",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Theoretical findings require further development; the new framework needs additional exploration and validation across more diverse domains beyond D4RL benchmarks.",
+   "ids": [
+    "2405.14374"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we establish statistical guarantees for approximation errors when learning policies from offline datasets in continuous-time stochastic systems?",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Links reinforcement learning to the Hamilton-Jacobi-Bellman equation and proposes an operator-theoretic algorithm based on dynamic programming recursion, representing the world model as the infinitesimal generator of controlled diffusion processes learned in a reproducing kernel Hilbert space.",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Establishes global convergence of the value function under sufficiently small generator-approximation error",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Derives explicit finite-sample guarantees with bounds tied directly to system properties such as smoothness and stability",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrates statistical learning methods and operator theory to analyze offline RL",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proof-of-concept results indicate operator-based approaches show promise for solving offline RL using continuous-time optimal control",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Results are primarily theoretical with proof-of-concept validation only; convergence guarantees require sufficiently small generator-approximation error which may be difficult to ensure in practice.",
+   "ids": [
+    "2511.10383"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we address Out-of-Distribution (OOD) Mode Averaging that occurs when distilling Flow Matching based behavior policies in offline reinforcement learning?",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Value-Rectified Distillation (VRD), a framework that reformulates offline policy distillation as a value-guided generative trajectory alignment problem with a dynamic coupling mechanism.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They instantiate VRD through two algorithms: VRD-Q (value-quantile behavior distillation to filter low-value behaviors) and VRD-R (latent space reorganization to geometrically isolate high-value trajectories).",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD actively rectifies flow dynamics to explicitly decouple distinct behavioral modes, preventing action collapse into invalid OOD regions",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD-Q statistically filters out low-value behaviors through value-quantile distillation",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD-R geometrically isolates high-value generative trajectories from the Flow Matching-based behavior policy",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VRD improves existing generative baselines across D4RL, OGBench, and Minari benchmarks",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance gains are especially pronounced on multi-modal, non-expert datasets",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The evaluation focuses on continuous control and planning tasks; the approach may not generalize to discrete action spaces or domains without clear value hierarchies.",
+   "ids": [
+    "2610.29075"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we address the limitation that offline RL research relies primarily on game tasks with synthetic datasets rather than real-world practical applications?",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors provide 19 autonomous driving datasets including real-world human driver data, implement seven popular offline RL algorithms, and create a unified decision-making process model that operates across three realistic driving scenarios as a benchmark framework.",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides 19 datasets including real-world human driver trajectories for offline RL research",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Benchmarks seven popular offline RL algorithms across three realistic driving scenarios",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Offers a unified decision-making process model serving as a reference framework for algorithm design",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables practical offline RL research beyond synthetic game environments",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Facilitates community collaboration on practical aspects of reinforcement learning methods",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The benchmark is focused specifically on autonomous driving applications; findings and algorithm performance may not generalize to other domains, and the unified decision model may not capture all driving scenario complexities.",
+   "ids": [
+    "2404.02429"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we apply offline reinforcement learning in data-scarce scenarios where only a very limited sample of transitions are annotated with ground-truth rewards?",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a Reward Model that estimates the reward signal from a limited sample of reward-annotated transitions, then uses this model to impute rewards for the remaining reward-free transitions, enabling ORL techniques to be applied to the augmented dataset.",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A learned reward model can effectively impute rewards using only 1% of reward-labeled transitions from original datasets",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The imputed rewards enable training of performant agents using standard Offline RL techniques",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach makes ORL applicable in scenarios where reward annotation is costly or limited",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Demonstrated successfully on D4RL continuous locomotion tasks",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables ORL deployment in real-world applications with limited reward supervision",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach still requires at least some reward-labeled transitions (minimum 1% tested); reward imputation quality depends on the representativeness of the initial labeled sample and may propagate errors.",
+   "ids": [
+    "2407.10839"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can offline RL agents trained on experiences from multiple environments generalize to unseen test environments without further interaction?",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes two algorithms: pessimistic empirical risk minimization (PERM) and pessimistic proximal policy optimization (PPPO), which leverage pessimistic policy evaluation to guide policy learning and enhance generalization.",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Classical offline RL fails to generalize to new, unseen environments",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both PERM and PPPO can find near-optimal policies with zero-shot generalization property",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pessimistic policy evaluation effectively guides policy learning for enhanced generalization",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides first theoretical understanding of the generalization phenomenon in offline reinforcement learning",
+   "ids": [
+    "2503.07988"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Represents only a first step in understanding generalization in offline RL; theoretical framework may not cover all environment types and generalization scenarios.",
+   "ids": [
+    "2503.07988"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,699 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li and Storhaug (2026) analyze 18 papers from top SE conferences and identify significant limitations in current evaluation practices, particularly the lack of reproducibility due to missing information in evaluation design descriptions.",
+   "ids": [
+    "2604.01437"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "This concern is echoed by Popescu (2026), who argues that existing evaluation techniques suffer from fragmented approaches and distorted projections of true model capabilities, often derived from hypothetical syntactic scenarios rather than real-world practice.",
+   "ids": [
+    "2607.06713"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xiang et al. (2026) contribute Rust-SWE-bench, a benchmark of 500 real-world repository-level tasks from 34 Rust repositories, demonstrating the field's move toward realistic, large-scale evaluation datasets.",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Oliveira et al. (2026) present a mixed-method experience report on developing LLM-based multi-agent systems, evaluating frameworks across documentation quality, feature coverage, and practical implementation.",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Nguyen et al. (2026) introduce Metagente, a Teacher-Student architecture where multiple LLM agents collaborate to generate summaries of software documentation, outperforming baseline methods.",
+   "ids": [
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Becattini et al. (2026) present CAPRA, a multi-agent system for automated software architecture assessment that coordinates specialized agents with deterministic Evidence Anchoring and cross-verification mechanisms, achieving 88.8% criterion satisfaction under strict evaluation.",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhou et al. (2026) review this trend through the lens of \"externalization,\" arguing that practical agent progress increasingly comes from reorganizing runtime infrastructure rather than changing model weights.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Feldt et al. (2026) extend this thinking with the \"Semi-Executable Stack,\" a six-ring diagnostic model spanning from executable artifacts to societal and institutional fit.",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xiang et al. (2026) focus on repository-level issue resolution in Rust, introducing RUSTFORGER which integrates automated test environment setup with Rust metaprogramming-driven dynamic tracing, achieving 28.6% task resolution compared to 21.2% for baseline agents.",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kikuta et al. (2025) present ChaosEater, a system automating the entire chaos engineering cycle for Kubernetes systems through a predefined agentic workflow.",
+   "ids": [
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Treude and Storey (2025) argue that LLMs and autonomous agents mark an enduring paradigm shift in software engineering, fundamentally transforming the phenomena studied, methods used, and data analyzed in empirical software engineering.",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, multiple papers converge on the inadequacy of current evaluation practices for LLM agents (Li & Storhaug, 2026; Popescu, 2026; Xiang et al., 2026), with consensus that transparent reporting of agent trajectories and real-world benchmarks are essential.",
+   "ids": [
+    "2604.01437",
+    "2607.06713",
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is widespread agreement that multi-agent architectures provide advantages over single-agent approaches for complex software engineering tasks (Nguyen et al., 2026; Becattini et al., 2026; Oliveira et al., 2026).",
+   "ids": [
+    "2606.24689",
+    "2606.18976",
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, the literature collectively acknowledges that infrastructure and externalization matter as much as or more than model capabilities (Zhou et al., 2026; Feldt et al., 2026).",
+   "ids": [
+    "2604.08224",
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "However, there is tension between the conceptual, agenda-setting work (Feldt et al., 2026; Treude & Storey, 2025) and the empirical, benchmark-focused papers (Xiang et al., 2026; Kikuta et al., 2025).",
+   "ids": [
+    "2604.15468",
+    "2502.08108",
+    "2602.22764",
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while Oliveira et al. (2026) find no significant difference in ROUGE scores across multi-agent frameworks for summarization tasks, Nguyen et al. (2026) report their multi-agent approach outperforms baselines, suggesting task-dependent effectiveness.",
+   "ids": [
+    "2608.11965",
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, limitations reporting is notably absent — 8 of 10 papers do not state limitations in their abstracts, suggesting either insufficient critical reflection or space constraints preventing discussion of constraints (Li & Storhaug, 2026; Oliveira et al., 2026; Nguyen et al., 2026; Xiang et al., 2026; Becattini et al., 2026; Popescu, 2026; Zhou et al., 2026; Kikuta et al., 2025).",
+   "ids": [
+    "2604.01437",
+    "2608.11965",
+    "2606.24689",
+    "2602.22764",
+    "2606.18976",
+    "2607.06713",
+    "2604.08224",
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Becattini et al. (2026) note that human oversight remains essential for subjective assessment dimensions, but do not specify which dimensions or under what conditions agents might operate autonomously.",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Oliveira et al. (2026) identify challenges in selecting technology, designing coordination rules, and defining agent roles, but the literature lacks systematic studies of how developers actually work with agents in practice.",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, the conceptual papers (Feldt et al., 2026; Treude & Storey, 2025) raise profound questions about the future of software engineering but offer limited concrete guidance for practitioners navigating the transition.",
+   "ids": [
+    "2604.15468",
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "The preserve-versus-purify heuristic proposed by Feldt et al. (2026) requires further operationalization.",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "While multiple papers call for better benchmarks and transparent reporting (Li & Storhaug, 2026; Popescu, 2026; Xiang et al., 2026), the field lacks agreed-upon standards for what constitutes rigorous evaluation of LLM agents in software engineering.",
+   "ids": [
+    "2604.01437",
+    "2607.06713",
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can automated assessment of software architecture deliverables be achieved while ensuring technical feedback accuracy and reliability for students?",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: CAPRA is a multi-agent LLM system that coordinates multiple specialized agents and employs a Python-based microservice for multi-modal document extraction using PyMuPDF and vision-enabled LLMs (gpt-4o) to parse text and UML diagrams, with deterministic Evidence Anchoring and a ConsistencyManager agent for cross-verification.",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CAPRA satisfied 88.8% of evaluated criteria under a strict two-rater aggregation rule in a preliminary evaluation on 10 student reports",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system achieved moderate inter-rater agreement with human evaluators (kappa = 0.582)",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Each report was processed in slightly over 4 minutes",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Results support viability of LLM-supported architectural feedback while indicating human oversight remains essential",
+   "ids": [
+    "2606.18976"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How should software engineering adapt to the rise of AI-driven agentic systems that expand engineering scope beyond executable code?",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This conceptual paper introduces the Semi-Executable Stack, a six-ring diagnostic reference model, and develops the argument through three worked cases to reframe objections as engineering targets.",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The shift in software engineering is toward semi-executable artifacts combining natural language, tools, workflows, and organizational routines",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Semi-Executable Stack model spans six rings: executable artifacts, instructional artifacts, orchestrated execution, controls, operating logic, and societal/institutional fit",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model helps locate where contributions, bottlenecks, or organizational transitions primarily sit and their dependencies",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper proposes a preserve-versus-purify heuristic for deciding which legacy SE processes should be kept or redesigned",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: This is a conceptual keynote companion paper that is diagnostic and agenda-setting rather than empirical",
+   "ids": [
+    "2604.15468"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models enable fully automated Chaos Engineering cycles to build resilient software systems at low cost?",
+   "ids": [
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose ChaosEater, a system that automates the entire Chaos Engineering cycle using LLMs through a predefined agentic workflow with subdivided processes, evaluated through case studies on small- and large-scale Kubernetes systems.",
+   "ids": [
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ChaosEater consistently completes reasonable Chaos Engineering cycles with significantly low time and monetary costs",
+   "ids": [
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system automates the entire CE cycle including requirement definition, code generation, testing, and debugging",
+   "ids": [
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ChaosEater's cycles are qualitatively validated by both human engineers and LLMs",
+   "ids": [
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach targets CE for software systems built on Kubernetes",
+   "ids": [
+    "2511.07865"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can evaluations of Agentic AI in software engineering be made more reproducible, explainable, and effective?",
+   "ids": [
+    "2604.01437"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study analyzes 18 papers on Agentic AI in software engineering published or accepted by top SE conferences (ICSE 2026, ICSE 2025, FSE 2025, ASE 2025, ISSTA 2025) to synthesize current evaluation practices and identify their limitations.",
+   "ids": [
+    "2604.01437"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current evaluation practices for Agentic AI in SE have significant limitations in reproducibility and explainability",
+   "ids": [
+    "2604.01437"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Missing information in evaluation design descriptions makes reproduction of results infeasible",
+   "ids": [
+    "2604.01437"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper proposes guidelines recommending researchers make Thought-Action-Result (TAR) trajectories and LLM interaction data publicly accessible",
+   "ids": [
+    "2604.01437"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A proof-of-concept case study demonstrates how TAR trajectories can support systematic analysis across different Agentic AI approaches",
+   "ids": [
+    "2604.01437"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM-based multi-agent systems improve the automated summarization of software documentation?",
+   "ids": [
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper presents Metagente, an LLM-based multi-agent system using a Teacher-Student architecture where multiple LLM agents collaborate to generate summaries, evaluated on real-world datasets against baseline approaches.",
+   "ids": [
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Metagente demonstrates effectiveness in streamlining workflows for software document summarization",
+   "ids": [
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-agent approach outperforms considered baseline methods",
+   "ids": [
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system improves summarization quality for requirements analysis and technical documentation",
+   "ids": [
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based multi-agent systems show transformative potential in software engineering",
+   "ids": [
+    "2606.24689"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the challenges and capabilities of existing multi-agent system frameworks for software engineering from a developer's perspective?",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study uses a mixed-method approach: first, a quantitative analysis of open source MAS frameworks evaluating documentation, features, and capabilities; second, a qualitative evaluation implementing a common use case (README.MD summarization) across selected frameworks.",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Selected MAS frameworks provide good coverage of fundamental multi-agent system components",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Advanced features such as telemetry of agents are still missing from current frameworks",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "No significant difference was found in ROUGE scores across frameworks for the summarization task",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Developers face challenges in selecting appropriate technology, designing coordination rules, and defining agent roles",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paper provides lessons learned and challenges to help practitioners select suitable MAS frameworks",
+   "ids": [
+    "2608.11965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can evaluation techniques for LLM-powered agents be improved to better reflect true model capabilities grounded in real-world software development practice?",
+   "ids": [
+    "2607.06713"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The research proposes a comprehensive evaluation methodology for LLM-powered agents grounded in real-world software development practice, focusing on contamination-awareness, in-the-wild agentic behavior assessment, and trajectory-aware benchmarks and metrics.",
+   "ids": [
+    "2607.06713"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing evaluation techniques are limited due to their fragmented nature and distorted projection of true model capabilities, often obtained from hypothetical syntactic scenarios",
+   "ids": [
+    "2607.06713"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed approach captures realistic coding contexts, human-aligned behavior, and model failure modes",
+   "ids": [
+    "2607.06713"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The methodology aims to bridge the gap between accelerated agent adoption and adequate evaluation techniques",
+   "ids": [
+    "2607.06713"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does the integration of Large Language Models and autonomous agents into software engineering disrupt established empirical research paradigms?",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This vision paper examines the paradigm shift caused by LLM integration in software engineering through discussion of transformed phenomena, methods, theories, data modalities, and validity threats in AI-mediated environments.",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs and autonomous agents mark an enduring paradigm shift in software engineering",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AI integration transforms the phenomena studied, methods and theories used, and data analyzed in empirical software engineering",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The boundaries between social and technical actors blur as humans and AI agents increasingly co-create",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reproducibility becomes contingent on model updates and prompt contexts",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Foundational constructs such as 'developer', 'artifact', and 'interaction' are fundamentally reshaped",
+   "ids": [
+    "2502.08108"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can LLM-powered agents be improved to automate issue resolution in Rust repositories given the language's steep learning curve and strict semantics?",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Rust-SWE-bench, a benchmark of 500 real-world repository-level tasks from 34 Rust repositories, and conduct a comprehensive study evaluating four representative agents and four state-of-the-art LLMs, then propose RUSTFORGER integrating automated test environment setup with Rust metaprogramming-driven dynamic tracing.",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ReAct-style agents resolve up to 21.2% of issues but are limited by challenges in comprehending repository-wide code structure and complying with Rust's strict type and trait semantics",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Issue reproduction is critical for task resolution in the Rust ecosystem",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RUSTFORGER using Claude-Sonnet-3.7 resolves 28.6% of tasks on Rust-SWE-bench, representing a 34.9% improvement over the strongest baseline",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RUSTFORGER uniquely solves 46 tasks that no other agent could solve across all adopted advanced LLMs",
+   "ids": [
+    "2602.22764"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Why has practical agent progress increasingly shifted from changing model weights to reorganizing runtime infrastructure through externalization of capabilities?",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This paper reviews the shift toward externalization through the lens of cognitive artifacts, tracing a historical progression from weights to context to harness, and analyzing memory, skills, and protocols as three distinct but coupled forms of externalization within a larger agent system.",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM agents are increasingly built by reorganizing the runtime around them rather than changing model weights",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Memory externalizes state across time, skills externalize procedural expertise, protocols externalize interaction structure, and harness engineering serves as the unification layer coordinating them into governed execution",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agent infrastructure matters because it transforms hard cognitive burdens into forms that the model can solve more reliably",
+   "ids": [
+    "2604.08224"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Emerging directions include self-evolving harnesses and shared agent infrastructure, with open challenges in evaluation, governance, and long-term co-evolution of models and external infrastructure",
+   "ids": [
+    "2604.08224"
+   ]
+  }
+ ]
+}

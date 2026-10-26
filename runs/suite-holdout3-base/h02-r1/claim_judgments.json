@@ -1,0 +1,379 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the LLM-as-a-judge ecosystem is fragmented, which hinders the study of design choices and reproducibility.",
+   "usage": {
+    "prompt_tokens": 642,
+    "completion_tokens": 39,
+    "total_tokens": 681,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 642
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current LLM judges achieve accuracies below 55% and perform especially poorly on evidence verification.",
+   "usage": {
+    "prompt_tokens": 694,
+    "completion_tokens": 36,
+    "total_tokens": 730,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 694
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DA-RAC reduces false-pass risk by retrieving and weighting semantically similar labeled anchors for judgment scenarios.",
+   "usage": {
+    "prompt_tokens": 615,
+    "completion_tokens": 36,
+    "total_tokens": 651,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 615
+    }
+   }
+  },
+  {
+   "claim": 0,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that production deployments showed a strong correlation between offline simulation metrics and online outcomes when using a rigorous evaluation-driven framework.",
+   "usage": {
+    "prompt_tokens": 695,
+    "completion_tokens": 37,
+    "total_tokens": 732,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 695
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JudgeArena unifies the four specified benchmarks under a single interface with swappable judges.",
+   "usage": {
+    "prompt_tokens": 507,
+    "completion_tokens": 33,
+    "total_tokens": 540,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 507
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that REFLECT is a meta-evaluation benchmark designed to address gaps in fine-grained failure detection and provide verifiable instances for validating judge models.",
+   "usage": {
+    "prompt_tokens": 546,
+    "completion_tokens": 44,
+    "total_tokens": 590,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 546
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DA-RAC retrieves semantically similar labeled anchors and weights them by distance to improve calibration.",
+   "usage": {
+    "prompt_tokens": 467,
+    "completion_tokens": 34,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 467
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that even the best-performing models achieve accuracies below 55% and have especially poor performance on evidence verification.",
+   "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 39,
+    "total_tokens": 596,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 557
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper studies 'context-induced miscalibration' where judges are 'miscalibrated by irrelevant in-context reference examples, creating false confidence'.",
+   "usage": {
+    "prompt_tokens": 479,
+    "completion_tokens": 45,
+    "total_tokens": 524,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 479
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2610.24807",
+   "label": "supported",
+   "reason": "The abstract explicitly states that risk-bearing language is statistically independent of factual hallucination rate with the exact Spearman rho and p-value cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 716,
+    "completion_tokens": 41,
+    "total_tokens": 757,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 716
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the supplementary LLM-judge evaluation emphasizes different systems than the primary gold-answer and nugget-based evaluation, highlighting the need for multi-metric RAG evaluation.",
+   "usage": {
+    "prompt_tokens": 510,
+    "completion_tokens": 48,
+    "total_tokens": 558,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 510
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of rigorous LLM judge evaluation with measured inter-rater agreement and GEPA optimization in production deployments at Nubank, while containing no specific agreement scores.",
+   "usage": {
+    "prompt_tokens": 566,
+    "completion_tokens": 48,
+    "total_tokens": 614,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 566
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the five deployment domains and attributes the specific 37 percentage-point NPS improvement and 29 percentage-point self-service gain to the card-delivery deployment within this study.",
+   "usage": {
+    "prompt_tokens": 576,
+    "completion_tokens": 56,
+    "total_tokens": 632,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 576
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of dual-path LLM-Judge evaluation for refinement and lists all the specific gains mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 38,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2610.24807",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of a rubric-based LLM-judge ensemble to evaluate six risk categories and states the finding that medical fine-tuning reshapes rather than reduces aggregate risk.",
+   "usage": {
+    "prompt_tokens": 713,
+    "completion_tokens": 49,
+    "total_tokens": 762,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 713
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2610.32702",
+   "label": "partial",
+   "reason": "The abstract supports the claims about LLM-judge evaluation and improved quality, but it does not mention that clinical validation with human counselors is noted as future work.",
+   "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 49,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 400
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2605.30333",
+   "label": "partial",
+   "reason": "The abstract confirms the performance claim but does not mention or imply the caveat regarding the lack of independent verification for LLM judges.",
+   "usage": {
+    "prompt_tokens": 499,
+    "completion_tokens": 36,
+    "total_tokens": 535,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 499
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2610.24807",
+   "label": "supported",
+   "reason": "The abstract explicitly reports low Krippendorff's alpha values (0.19 and 0.31) for the two clinical-judgment-dependent categories, confirming the sentence's claim about low inter-rater reliability.",
+   "usage": {
+    "prompt_tokens": 718,
+    "completion_tokens": 57,
+    "total_tokens": 775,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 718
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2610.24807",
+   "label": "partial",
+   "reason": "The abstract confirms limitations in LLM-judge reliability for clinical-judgment categories but does not mention 'counseling quality assessment' or the specific framework named 'CounselPlex' attributed to this citation.",
+   "usage": {
+    "prompt_tokens": 723,
+    "completion_tokens": 54,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 723
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2610.32702",
+   "label": "unsupported",
+   "reason": "The abstract claims LLM-judge evaluations show improved quality but does not mention or acknowledge any limitations regarding LLM-judge reliability.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 37,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract confirms multilingual validation but does not mention any analysis of performance variation across specific languages or cultural contexts.",
+   "usage": {
+    "prompt_tokens": 488,
+    "completion_tokens": 33,
+    "total_tokens": 521,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 488
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the supplementary LLM-judge evaluation emphasizes different systems than the primary gold-answer evaluation, confirming a divergence between the two methods.",
+   "usage": {
+    "prompt_tokens": 486,
+    "completion_tokens": 41,
+    "total_tokens": 527,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 486
+    }
+   }
+  }
+ ]
+}

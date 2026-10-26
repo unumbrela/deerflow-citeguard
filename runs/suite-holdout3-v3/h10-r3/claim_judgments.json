@@ -1,0 +1,1671 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract confirms all key claims: the introduction of CRS Arena, the pairwise battle mechanism, the collection of 474 conversations with feedback, and the use of Elo ratings for ranking.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 49,
+    "total_tokens": 438,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the presentation of UserSimCRS v2 with LLM-based simulators, enhanced agenda-based simulators, and new LLM-as-a-judge utilities.",
+   "usage": {
+    "prompt_tokens": 344,
+    "completion_tokens": 47,
+    "total_tokens": 391,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 344
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of CoRE, the summarization of 12 key factors, and the use of a multi-agent debate framework with the four specified roles to synthesize a unified score.",
+   "usage": {
+    "prompt_tokens": 574,
+    "completion_tokens": 52,
+    "total_tokens": 626,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 574
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing simulators fail to model human decision-making processes realistically, which directly supports the claim of a critical gap in realistic decision-making behavior.",
+   "usage": {
+    "prompt_tokens": 401,
+    "completion_tokens": 43,
+    "total_tokens": 444,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 401
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the paper's proposed framework name, its three specific modules, and their functions as described in the abstract.",
+   "usage": {
+    "prompt_tokens": 492,
+    "completion_tokens": 36,
+    "total_tokens": 528,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 492
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly states the study investigates bootstrapping CRS by generating synthetic data from non-conversational signals without any in-domain dialogue corpus.",
+   "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 39,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 433
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CRAG is the first approach combining state-of-the-art LLMs with collaborative filtering for conversational recommendations.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 38,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2509.21371",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed ReGeS framework reduces hallucinations in conversational recommender systems through a reciprocal Retrieval-Generation Synergy.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 41,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly describes STARCRS as addressing longer and heterogeneous inputs by integrating a screen-reading pathway that encodes text as visual tokens and an LLM-based textual pathway for fine-grained reasoning.",
+   "usage": {
+    "prompt_tokens": 487,
+    "completion_tokens": 57,
+    "total_tokens": 544,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 487
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a fully generative system that represents items as discrete semantic IDs and integrates them directly into the generation process.",
+   "usage": {
+    "prompt_tokens": 420,
+    "completion_tokens": 39,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 420
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2412.10514",
+   "label": "unsupported",
+   "reason": "The abstract describes a benchmarking platform and dataset but does not explicitly state or imply a necessity for multi-dimensional evaluation capturing both recommendation accuracy and dialogue quality.",
+   "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 41,
+    "total_tokens": 451,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 410
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2512.04588",
+   "label": "unsupported",
+   "reason": "The abstract describes toolkit upgrades and new features but does not mention a convergence of papers on the necessity of multi-dimensional evaluation.",
+   "usage": {
+    "prompt_tokens": 357,
+    "completion_tokens": 35,
+    "total_tokens": 392,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 357
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the inability to evaluate both recommendation accuracy and dialogue quality together as the principal challenge, implying the necessity of a multi-dimensional approach.",
+   "usage": {
+    "prompt_tokens": 574,
+    "completion_tokens": 40,
+    "total_tokens": 614,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 574
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2605.05250",
+   "label": "unsupported",
+   "reason": "The abstract focuses on modeling human decision-making and hesitation in user simulators, not on the necessity of multi-dimensional evaluation metrics like accuracy and dialogue quality.",
+   "usage": {
+    "prompt_tokens": 438,
+    "completion_tokens": 41,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 438
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2502.14137",
+   "label": "partial",
+   "reason": "The abstract supports augmenting LLMs with collaborative signals for this specific paper but does not establish a broad 'consensus' or address the alternative of using external knowledge mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 49,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2509.21371",
+   "label": "partial",
+   "reason": "The abstract supports augmenting LLMs with external knowledge but does not mention or imply the need for 'collaborative signals'.",
+   "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 38,
+    "total_tokens": 466,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 428
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2601.13505",
+   "label": "unsupported",
+   "reason": "The abstract proposes a specific vision-centric architecture for integrating context but does not discuss the general consensus on augmenting LLMs with external knowledge or collaborative signals.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 42,
+    "total_tokens": 523,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2507.00479",
+   "label": "partial",
+   "reason": "The abstract supports the use of data augmentation for this specific model but does not support the sentence's broad claim that 'all papers' agree on this approach.",
+   "usage": {
+    "prompt_tokens": 465,
+    "completion_tokens": 42,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 465
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2504.15476",
+   "label": "partial",
+   "reason": "The abstract supports the claim that synthetic data improves performance in low-resource settings for this specific study, but the sentence overgeneralizes by attributing a consensus among 'all papers' to this single source.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 51,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2512.04588",
+   "label": "unsupported",
+   "reason": "The abstract describes toolkit upgrades and features but does not mention crowdsourced human evaluation or any tension between evaluation methods.",
+   "usage": {
+    "prompt_tokens": 350,
+    "completion_tokens": 33,
+    "total_tokens": 383,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 350
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2605.05250",
+   "label": "unsupported",
+   "reason": "The abstract discusses modeling human decision-making in simulators but does not mention crowdsourced human evaluation or any tension between the two evaluation methods.",
+   "usage": {
+    "prompt_tokens": 431,
+    "completion_tokens": 38,
+    "total_tokens": 469,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 431
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2412.10514",
+   "label": "unsupported",
+   "reason": "The abstract describes a crowdsourcing platform and its correlation across setups but does not mention simulation-based evaluation or any tension between the two methods.",
+   "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 38,
+    "total_tokens": 441,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 403
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposed system is 'fully generative' and contrasts it with existing approaches that 'rely on retrieval-based pipelines', supporting the claim of divergence between generating items directly versus retrieving them.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 52,
+    "total_tokens": 524,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a retrieval-augmented approach (CRAG) that combines LLMs with collaborative filtering to retrieve items, distinguishing it from pure generative methods.",
+   "usage": {
+    "prompt_tokens": 474,
+    "completion_tokens": 51,
+    "total_tokens": 525,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 474
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2509.21371",
+   "label": "contradicted",
+   "reason": "The abstract describes the paper as a unified 'Retrieval-Generation Synergy' framework that combines both approaches, whereas the sentence claims it diverges by choosing direct generation over retrieval.",
+   "usage": {
+    "prompt_tokens": 457,
+    "completion_tokens": 50,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 457
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2601.13505",
+   "label": "unsupported",
+   "reason": "The abstract does not mention a comparison between generative and retrieval-augmented approaches regarding item generation versus retrieval from a candidate pool.",
+   "usage": {
+    "prompt_tokens": 510,
+    "completion_tokens": 37,
+    "total_tokens": 547,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 510
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2412.10514",
+   "label": "unsupported",
+   "reason": "The abstract describes a crowdsourced platform but does not mention simulation-based approaches or any direct comparison between the two evaluation methods.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 35,
+    "total_tokens": 447,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2512.04588",
+   "label": "unsupported",
+   "reason": "The abstract describes toolkit upgrades and a case study but does not mention comparing simulation-based and human-based evaluations or addressing unresolved tensions between them.",
+   "usage": {
+    "prompt_tokens": 359,
+    "completion_tokens": 38,
+    "total_tokens": 397,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 359
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2605.05250",
+   "label": "unsupported",
+   "reason": "The abstract focuses on modeling human decision-making to improve user simulators but does not mention comparing simulation-based and human-based evaluations or cite the specific studies referenced in the sentence.",
+   "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 45,
+    "total_tokens": 485,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 440
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2605.21987",
+   "label": "unsupported",
+   "reason": "The abstract does not mention scalability issues or limitations regarding large item catalogs.",
+   "usage": {
+    "prompt_tokens": 421,
+    "completion_tokens": 25,
+    "total_tokens": 446,
+    "completion_tokens_details": {
+     "text_tokens": 25
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 421
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces CRS Arena as a platform for scalable benchmarking of conversational recommender systems based on human feedback via crowdsourcing.",
+   "usage": {
+    "prompt_tokens": 368,
+    "completion_tokens": 38,
+    "total_tokens": 406,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 368
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the platform's methodology as displaying pairwise battles between anonymous systems where users interact sequentially before declaring a winner or draw.",
+   "usage": {
+    "prompt_tokens": 380,
+    "completion_tokens": 37,
+    "total_tokens": 417,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 380
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms experiments on open and closed platforms, the collection of 474 conversations with feedback, and the use of the Elo rating system for ranking.",
+   "usage": {
+    "prompt_tokens": 376,
+    "completion_tokens": 44,
+    "total_tokens": 420,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 376
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments confirmed both open and closed crowdsourcing platforms produce highly correlated rankings of CRSs.",
+   "usage": {
+    "prompt_tokens": 362,
+    "completion_tokens": 33,
+    "total_tokens": 395,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 362
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments confirmed both setups produce conversations with similar characteristics.",
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 26,
+    "total_tokens": 380,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 354
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract explicitly states the release of a dataset containing 474 conversations and their corresponding user feedback.",
+   "usage": {
+    "prompt_tokens": 358,
+    "completion_tokens": 32,
+    "total_tokens": 390,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 358
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2412.10514",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors released a preliminary ranking of the systems based on the Elo rating system.",
+   "usage": {
+    "prompt_tokens": 357,
+    "completion_tokens": 32,
+    "total_tokens": 389,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 357
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the challenge of evaluating both recommendation accuracy and dialogue management using a single metric that reflects user experience, which is the core problem the paper addresses.",
+   "usage": {
+    "prompt_tokens": 540,
+    "completion_tokens": 43,
+    "total_tokens": 583,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 540
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly details the CoRE framework, its two components (LLM-As-Evaluator and Multi-Agent Debater), the 12 key factors, and the four specific agent roles mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 579,
+    "completion_tokens": 54,
+    "total_tokens": 633,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 579
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors comprehensively summarize 12 key factors influencing user experience in CRSs as part of the CoRE framework.",
+   "usage": {
+    "prompt_tokens": 526,
+    "completion_tokens": 40,
+    "total_tokens": 566,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 526
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the multi-agent debate framework uses four distinct roles: common user, domain expert, linguist, and HCI expert.",
+   "usage": {
+    "prompt_tokens": 530,
+    "completion_tokens": 39,
+    "total_tokens": 569,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 530
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CoRE aligns well with human evaluation in most of the 12 factors and the overall assessment.",
+   "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 37,
+    "total_tokens": 565,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 528
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2501.09493",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CoRE's overall evaluation scores demonstrate significantly better alignment with human feedback compared to existing rule-based metrics.",
+   "usage": {
+    "prompt_tokens": 527,
+    "completion_tokens": 36,
+    "total_tokens": 563,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 527
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies data sparsity in dialogue and entity spaces as the core problem the paper addresses and proposes a framework to mitigate it.",
+   "usage": {
+    "prompt_tokens": 443,
+    "completion_tokens": 38,
+    "total_tokens": 481,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 443
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the three modules and their specific functions as described in the abstract.",
+   "usage": {
+    "prompt_tokens": 481,
+    "completion_tokens": 28,
+    "total_tokens": 509,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 481
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed DACRS framework addresses severe data sparsity in both dialogue and entity spaces.",
+   "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 33,
+    "total_tokens": 465,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 432
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the Dialogue Augmentation module uses a two-stage pipeline to improve robustness to linguistic variation.",
+   "usage": {
+    "prompt_tokens": 434,
+    "completion_tokens": 34,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 434
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the Knowledge-Guided Entity Modeling module enhances representation learning for sparsely supervised and unseen entities.",
+   "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 36,
+    "total_tokens": 472,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 436
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2507.00479",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments on two public benchmark datasets demonstrate DACRS consistently outperforms state-of-the-art conversational recommender systems.",
+   "usage": {
+    "prompt_tokens": 439,
+    "completion_tokens": 40,
+    "total_tokens": 479,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 439
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a method to combine LLMs with collaborative filtering to address the struggle of leveraging behavioral data in conversational recommendations.",
+   "usage": {
+    "prompt_tokens": 413,
+    "completion_tokens": 41,
+    "total_tokens": 454,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 413
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors propose CRAG, which combines state-of-the-art LLMs with collaborative filtering for conversational recommendations.",
+   "usage": {
+    "prompt_tokens": 424,
+    "completion_tokens": 39,
+    "total_tokens": 463,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 424
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments were conducted on the Reddit-v2 and Redial datasets.",
+   "usage": {
+    "prompt_tokens": 411,
+    "completion_tokens": 29,
+    "total_tokens": 440,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 411
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments demonstrate CRAG's superior item coverage and recommendation performance compared to several CRS baselines.",
+   "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 34,
+    "total_tokens": 439,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 405
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the observed improvements are mainly due to better recommendation accuracy on recently released movies.",
+   "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 31,
+    "total_tokens": 434,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 403
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CRAG is the first approach combining state-of-the-art LLMs with collaborative filtering for conversational recommendations.",
+   "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 38,
+    "total_tokens": 446,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 408
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2502.14137",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the code and data are available at the specified GitHub URL.",
+   "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 28,
+    "total_tokens": 438,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 410
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly describes conducting an empirical study on bootstrapping CRS using synthetic data from non-conversational signals without any in-domain dialogue corpus.",
+   "usage": {
+    "prompt_tokens": 427,
+    "completion_tokens": 40,
+    "total_tokens": 467,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 427
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly describes a systematic empirical study comparing Jensen-Shannon diversity and Fisher information across the specified signals, architectures, datasets, and paradigms.",
+   "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 41,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 455
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly states that domain-grounded synthetic data consistently outperforms zero-shot prompting and naive synthetic baselines.",
+   "usage": {
+    "prompt_tokens": 414,
+    "completion_tokens": 34,
+    "total_tokens": 448,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 414
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 'active selection improves data efficiency over random sampling'.",
+   "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 27,
+    "total_tokens": 432,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 405
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 'metadata and collaborative filtering signals each improve selection quality'.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 28,
+    "total_tokens": 434,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in low-resource settings, synthetic data can outperform scarce real dialogues while further complementing them.",
+   "usage": {
+    "prompt_tokens": 416,
+    "completion_tokens": 36,
+    "total_tokens": 452,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 416
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2504.15476",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that non-conversational domain signals are a viable path toward building CRS without conversational training data.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 35,
+    "total_tokens": 450,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2509.21371",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed ReGeS framework addresses the limitations of domain-specific engineering and reduces hallucination risks in conversational recommender systems using a retrieval-augmented approach.",
+   "usage": {
+    "prompt_tokens": 401,
+    "completion_tokens": 48,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 401
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2509.21371",
+   "label": "supported",
+   "reason": "The abstract explicitly states that ReGeS unifies generation-augmented retrieval and retrieval-augmented generation to distill user intent and differentiate item features, while obviating the need for extra annotations.",
+   "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 52,
+    "total_tokens": 478,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 426
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2509.21371",
+   "label": "supported",
+   "reason": "The abstract explicitly states that naive RAG is hindered by noisy dialogues and overlooked nuances, which ReGeS addresses through its proposed framework.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 40,
+    "total_tokens": 429,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2509.21371",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed synergy obviates the need for extra annotations and reduces hallucinations.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 32,
+    "total_tokens": 419,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2509.21371",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed synergy simplifies continuous updates.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 24,
+    "total_tokens": 411,
+    "completion_tokens_details": {
+     "text_tokens": 24
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2509.21371",
+   "label": "supported",
+   "reason": "The abstract explicitly states that ReGeS achieves state-of-the-art performance in recommendation accuracy on multiple CRS benchmarks.",
+   "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 33,
+    "total_tokens": 422,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 389
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents an upgrade to align the toolkit with state-of-the-art research to address scarce resources.",
+   "usage": {
+    "prompt_tokens": 318,
+    "completion_tokens": 35,
+    "total_tokens": 353,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 318
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the key extensions and case study demonstration explicitly listed in the abstract.",
+   "usage": {
+    "prompt_tokens": 351,
+    "completion_tokens": 28,
+    "total_tokens": 379,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 351
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the toolkit was introduced to address the scarcity of resources for simulation-based evaluation and presents v2 as a significant upgrade to this solution.",
+   "usage": {
+    "prompt_tokens": 308,
+    "completion_tokens": 42,
+    "total_tokens": 350,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 308
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly lists the introduction of large language model-based simulators and an enhanced agenda-based user simulator as key extensions of the toolkit.",
+   "usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 38,
+    "total_tokens": 345,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 307
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly lists 'integration for a wider range of CRSs and datasets' as a key extension of UserSimCRS v2.",
+   "usage": {
+    "prompt_tokens": 305,
+    "completion_tokens": 39,
+    "total_tokens": 344,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 305
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2512.04588",
+   "label": "supported",
+   "reason": "The abstract explicitly lists 'new LLM-as-a-judge evaluation utilities' as a key extension of the presented work.",
+   "usage": {
+    "prompt_tokens": 304,
+    "completion_tokens": 35,
+    "total_tokens": 339,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 304
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the problem of handling longer, heterogeneous inputs and proposes a solution to enhance language understanding capabilities.",
+   "usage": {
+    "prompt_tokens": 450,
+    "completion_tokens": 33,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 450
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly describes STARCRS as integrating a screen-reading pathway that encodes text as visual tokens and an LLM-based textual pathway for fine-grained reasoning.",
+   "usage": {
+    "prompt_tokens": 470,
+    "completion_tokens": 45,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 470
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework combines contrastive alignment, cross-attention interaction, and adaptive gating.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 33,
+    "total_tokens": 480,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments demonstrate STARCRS consistently improves both recommendation accuracy and generated response quality.",
+   "usage": {
+    "prompt_tokens": 438,
+    "completion_tokens": 31,
+    "total_tokens": 469,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 438
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly lists input length constraints, text style inconsistency, and irrelevant textual noise as practical issues that the proposed STARCRS approach is designed to address.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 42,
+    "total_tokens": 487,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed system integrates two complementary text understanding modes to improve preference modeling and response generation.",
+   "usage": {
+    "prompt_tokens": 437,
+    "completion_tokens": 33,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 437
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2601.13505",
+   "label": "supported",
+   "reason": "The abstract explicitly states that extensive experiments on two widely used benchmarks demonstrate consistent improvements in recommendation accuracy and response quality.",
+   "usage": {
+    "prompt_tokens": 437,
+    "completion_tokens": 33,
+    "total_tokens": 470,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 437
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the lack of modeling hesitation and decision deferral as a key limitation and proposes a framework specifically designed to address this research gap.",
+   "usage": {
+    "prompt_tokens": 401,
+    "completion_tokens": 40,
+    "total_tokens": 441,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 401
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of Hesitator as a theory-grounded framework with a modular Decision Module that separates utility-based item selection from overload-aware commitment decisions.",
+   "usage": {
+    "prompt_tokens": 407,
+    "completion_tokens": 44,
+    "total_tokens": 451,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 407
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments were conducted across multiple user simulation frameworks, domains, sales modes, and LLM backbones.",
+   "usage": {
+    "prompt_tokens": 394,
+    "completion_tokens": 36,
+    "total_tokens": 430,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 394
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments show integrating the Decision Module consistently mitigates unrealistic behaviors under increasing overload conditions.",
+   "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 32,
+    "total_tokens": 419,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 387
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Hesitator reproduces established behavioral patterns from psychological economics.",
+   "usage": {
+    "prompt_tokens": 384,
+    "completion_tokens": 28,
+    "total_tokens": 412,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 384
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states that most existing simulation frameworks do not explicitly model the internal decision process.",
+   "usage": {
+    "prompt_tokens": 385,
+    "completion_tokens": 29,
+    "total_tokens": 414,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 385
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LLM-based simulators often exhibit unrealistically strong information-processing capabilities and rarely exhibit hesitation.",
+   "usage": {
+    "prompt_tokens": 390,
+    "completion_tokens": 34,
+    "total_tokens": 424,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 390
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2605.05250",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed framework reproduces behavioral patterns and demonstrates its ability to model human decision behavior under choice overload.",
+   "usage": {
+    "prompt_tokens": 385,
+    "completion_tokens": 36,
+    "total_tokens": 421,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 385
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a system that unifies recommendation and dialog generation within a single autoregressive framework.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 34,
+    "total_tokens": 446,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal of a fully generative system that represents items as discrete semantic IDs and integrates them directly into the generation process.",
+   "usage": {
+    "prompt_tokens": 419,
+    "completion_tokens": 39,
+    "total_tokens": 458,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 419
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed structured generation paradigm factorizes conversational recommendation into predicting response intent and recommendation target before generating the response.",
+   "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 38,
+    "total_tokens": 453,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 415
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves gains of up to 29% on Recall@1 over strong baselines.",
+   "usage": {
+    "prompt_tokens": 407,
+    "completion_tokens": 36,
+    "total_tokens": 443,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 407
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method improves recommendation performance while maintaining competitive dialog quality.",
+   "usage": {
+    "prompt_tokens": 398,
+    "completion_tokens": 27,
+    "total_tokens": 425,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 398
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed design enables end-to-end optimization and enforces a more coherent dependency structure.",
+   "usage": {
+    "prompt_tokens": 397,
+    "completion_tokens": 33,
+    "total_tokens": 430,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 397
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed design supports faithful item generation via constrained decoding.",
+   "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 27,
+    "total_tokens": 422,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 395
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2605.21987",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a unified autoregressive framework that enables joint prediction of items and responses via next-token modeling.",
+   "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 36,
+    "total_tokens": 439,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 403
+    }
+   }
+  }
+ ]
+}

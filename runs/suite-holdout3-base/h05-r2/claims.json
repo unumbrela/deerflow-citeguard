@@ -1,0 +1,801 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2026) formalize three necessary principles for SSL—observation (semantic invariance), prediction (spatial understanding), and regularization (non-degeneracy)—proving that omitting any one leads to representation collapse.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wei et al. (2024) pioneer Latent Masked Image Modeling (Latent MIM), addressing challenges of representation collapse, high region correlation in latent space, and decoding conditioning to enable high-level semantic learning while retaining MIM benefits.",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Erdogan et al. (2025) introduce LayerLock, which exploits the observation that ViT layers converge in depth order during training, progressively freezing layers to accelerate MAE training and enable latent prediction without collapse.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Munia et al. (2026) conduct comprehensive evaluation across eight SSL methods and diverse domains (natural, medical, crisis response, remote sensing), finding that joint training improves data efficiency and robustness in low-label settings, while pretrain-finetuning remains more reliable in specialized domains.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Kuzucu et al. (2025) introduce LAVIE, which co-adapts Vision Transformers and LLM fusion blocks through joint masked auto-encoding with LoRA adaptation, addressing the modality mismatch between text-pretrained LLMs and vision-centric ViTs.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Sharma et al. (2024) explore the inverse direction, demonstrating that LLMs trained on text can generate code-based image representations sufficient to train vision models capable of semantic assessment on natural images.",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Colton (2025) demonstrates that layer normalization in IJEPA disrupts natural token energy hierarchies where high-energy tokens encode semantically important regions, proposing DynTanh activation as an alternative that preserves token energies and improves ImageNet linear probe accuracy from 38% to 42.7%.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) address the neglect of equivariant features in augmentation-based SSL, integrating image reconstruction as an auxiliary task that facilitates equivariant feature learning without additional parameters.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Maitra et al. (2024) apply decorrelation-based SSL to writer identification, proposing SWIS which standardizes features along each dimension and outperforms both contemporary SSL frameworks and supervised methods on writer identification benchmarks.",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gupta et al. (2026) probe off-manifold behavior of vision encoders using sparse pixel optimization on blank canvases, revealing that both language-aligned (OpenCLIP) and self-supervised (DINOv3) encoders share failure modes where non-semantic inputs can retrieve target semantic basins.",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is broad agreement that representation collapse remains a central challenge across methods (Giakoumoglou et al., 2026; Wei et al., 2024; Erdogan et al., 2025).",
+   "ids": [
+    "2608.08309",
+    "2407.15837",
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Giakoumoglou et al. (2026) argue for universal principles necessary across all SSL methods, Munia et al. (2026) find that optimal training strategies are highly task and domain-dependent, with no universal winner between joint training and pretrain-finetuning.",
+   "ids": [
+    "2608.08309",
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is implicit disagreement about the role of external knowledge: some works advocate pure visual self-supervision (Colton, 2025; Erdogan et al., 2025) while others embrace cross-modal integration with language models (Kuzucu et al., 2025; Sharma et al., 2024).",
+   "ids": [
+    "2508.02829",
+    "2509.10156",
+    "2507.00754",
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, theoretical claims about necessary principles (Giakoumoglou et al., 2026) are scale-dependent and may not generalize beyond studied model sizes and tasks.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, latent-space approaches (Wei et al., 2024; Erdogan et al., 2025) require careful hyperparameter tuning and sequential addressing of multiple challenges, suggesting remaining brittleness.",
+   "ids": [
+    "2407.15837",
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, cross-modal integration methods (Kuzucu et al., 2025; Sharma et al., 2024) have been validated primarily on standard vision tasks, with limited exploration of genuinely multimodal downstream applications.",
+   "ids": [
+    "2507.00754",
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, domain-specific adaptations (Maitra et al., 2024; Munia et al., 2026) raise questions about transferability across domains—methods optimized for writer identification or medical imaging may not generalize.",
+   "ids": [
+    "2410.01441",
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, probing studies (Gupta et al., 2026) reveal off-manifold failure modes but do not yet provide solutions for robustifying encoders against such vulnerabilities.",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does feature normalization (layer normalization) affect the learning dynamics and performance of Image Joint Embedding Predictive Architecture models?",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The author proposes replacing layer normalization with DynTanh activation at the teacher encoder output to preserve natural token energy hierarchy, where high-energy tokens encode semantically important regions.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Layer normalization disrupts the natural energy hierarchy of visual tokens in IJEPA",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High-energy tokens (larger L2 norms) encode semantically important image regions",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Feature layer normalization causes checkerboard-like artifacts in loss maps",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DynTanh activation preserves token energies and eliminates checkerboard artifacts",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The modification improves ImageNet linear probe accuracy from 38% to 42.7% for ViT-Small and reduces RMSE by 0.08 on NYU Depth V2 monocular depth estimation",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The empirical study focuses specifically on IJEPA architecture and may not generalize to other self-supervised learning frameworks; the proposed modification requires validation across broader model scales and tasks.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we accelerate masked autoencoder training and avoid representation collapse in self-supervised visual representation learning?",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors observe that ViT layers converge in order of depth during video MAE training, then exploit this by progressively freezing layers according to an explicit schedule, transitioning from pixel to latent prediction.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Shallower ViT layers converge early while deeper layers converge late during MAE training",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive layer freezing accelerates standard MAE training according to an explicit schedule",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The same freezing schedule enables latent prediction without suffering from representation collapse",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach scales to large models up to 4B parameters",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LayerLock surpasses non-latent masked prediction performance on the 4DS perception suite",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach is specifically designed for video masked-autoencoding models and may not directly generalize to other architectures or self-supervised learning paradigms without adaptation.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What principles are necessary for learning visual representations without labels in self-supervised learning?",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formalize three principles (observation, prediction, regularization) and prove theoretical claims about their necessity through mathematical analysis, paired with controlled experiments including patch-retrieval evaluation.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining observation and prediction without regularization admits the constant encoder as a global minimizer under negative-free alignment",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The observation and prediction objectives are gradient-complementary and structurally non-conflicting at the encoder output",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Momentum encoder converges to the same fixed point as the online encoder and provides no collapse guarantee at convergence",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Contrastive alignment provides only self-limiting collapse resistance with explicit gradient-decay",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Every major self-supervised method is a special case of a single unified energy decomposition",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The theoretical framework and proofs may not generalize to all SSL architectures beyond those studied; scale-dependent claims about the necessity of all three principles may not hold at significantly different scales.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do modern vision encoders behave when inputs are far from the natural-image manifold, and can sparse pixel edits reveal their representation geometry?",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors apply sparse pixel edits to blank canvases using a simple pixel-level hill-climbing procedure to probe whether optimized inputs can retrieve chosen targets in multimodal contrastive and self-supervised visual encoders.",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse edits on blank, visually non-semantic inputs can enter target semantic basins in vision encoders",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On OpenCLIP, inputs optimized toward class prompts achieve strong top-1 and top-5 targeted retrieval performance",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "On DINOv3, inputs optimized toward class prototypes achieve high target alignment and near-top prototype ranks",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both language-aligned and self-supervised visual encoders share a common off-manifold failure mode",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse blank-canvas optimization serves as a simple probe of representation geometry",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The black-box probing approach is limited to the tested encoders (OpenCLIP, DINOv3) and evaluation datasets (ImageNet, Flickr30k), and may not generalize to all vision encoder architectures or reveal all failure modes.",
+   "ids": [
+    "2610.32835"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the modality mismatch between text-pretrained LLMs and vision transformers be bridged for vision-only tasks?",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce LAVIE (Language-Adapted Vision Enhancer), which co-adapts a ViT backbone and LLM fusion block by employing MAE to pre-train the ViT and concurrently training LoRA layers within the LLM block using the same MAE objective.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LAVIE significantly improves performance in various downstream vision tasks",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint optimization guides the ViT to produce LLM-aligned features",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA enables effective LLM adaptation to interpret visual information",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Frozen LLM knowledge can be effectively leveraged through synergistic pre-training",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach offers an effective and efficient way to enhance visual understanding",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires careful tuning of LoRA parameters and MAE objectives; may not generalize to all vision-language fusion scenarios or LLM architectures beyond those tested.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can decorrelation-based self-supervised learning be effectively applied to learn disentangled stroke features for writer identification?",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose SWIS, a modified decorrelation-based framework that standardizes features along each dimension on top of the existing framework, originally proposed for signature verification.",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SWIS outperforms contemporary self-supervised learning frameworks on writer identification benchmarks",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed framework outperforms several supervised methods as well",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This is the first work to apply self-supervised learning for learning representations for writer verification tasks",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Decorrelation-based self-supervised pretraining yields performance at par with supervised and contrastive SSL baselines",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Disentangled stroke features can be effectively learned through the decorrelation-based paradigm",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation is limited to writer identification benchmarks and may not generalize to other document analysis or biometric verification tasks; the standardization approach may require tuning for different writing styles or scripts.",
+   "ids": [
+    "2410.01441"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does jointly optimizing self-supervised and supervised objectives during training provide a better alternative to the standard pretraining-then-finetuning pipeline?",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors systematically compare pretraining-followed-by-finetuning (PFT) versus joint training (JT) across eight representative SSL methods and diverse computer vision tasks on natural, medical, crisis response, and remote sensing data under varying percentages of labeled data.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The relative effectiveness of PFT and JT depends strongly on the task, labeled data availability, and domain complexity",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint training consistently improves data and training efficiency while being robust in low-label settings",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pretrain-finetuning is more reliable in more specialized domains",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JT shows robustness in low-label settings across diverse tasks",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different domains show different optimal training strategies",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Results may not generalize to all SSL methods or domains beyond those tested; the optimal strategy is task-dependent, making universal recommendations difficult.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What visual knowledge do large language models acquire from learning to model relationships between strings?",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors systematically evaluate LLMs' abilities to generate and recognize visual concepts of increasing complexity using code to represent images, and demonstrate training a preliminary visual representation learning system using text-only models.",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-generated images do not resemble natural images but contain learnable visual concept knowledge",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs can generate and recognize an assortment of visual concepts of increasing complexity",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs demonstrate ability to correct their own generated images",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Images generated with text models can train vision models capable of semantic assessments on natural images",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Precise modeling of strings can teach language models about numerous aspects of the visual world",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: LLM-generated images do not look like natural images, and the visual representation learning system trained from text models is preliminary, potentially limiting practical applicability compared to dedicated vision models.",
+   "ids": [
+    "2401.01862"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can augmentation-based self-supervised learning methods learn equivariant features in addition to invariant ones to improve generalizability?",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors integrate an image reconstruction task as an auxiliary component using cross-attention to blend features from two augmented views and reconstruct one of them, without adding additional parameters.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Standard augmentation-based SSL methods excel at invariant features but often neglect equivariant ones",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Image reconstruction as an auxiliary task facilitates equivariant feature learning without additional parameters",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-attention mechanism effectively blends features from augmented views for reconstruction",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method shows significant improvements on both artificial (3DIEBench) and natural (ImageNet) datasets",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach excels particularly in scenarios involving combined augmentations, enhancing both invariant and equivariant feature learning",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Evaluation focused on specific benchmarks and datasets; the method may require tuning for different augmentation strategies and downstream tasks beyond those tested.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can masked reconstruction in latent space combine the locality benefits of MIM with high-level semantic learning?",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Through carefully designed experiments and extensive analysis, the authors identify and sequentially address challenges in Latent MIM including representation collapsing, learning objectives, region correlation in latent space, and decoding conditioning.",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latent MIM can learn high-level representations while retaining the benefits of MIM models",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Representation collapsing occurs with joint online/target optimization",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High region correlation in latent space poses significant training challenges",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Decoding conditioning affects the quality of learned representations",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sequential addressing of identified issues enables successful Latent MIM training",
+   "ids": [
+    "2407.15837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Training Latent MIM remains challenging and requires careful handling of multiple issues; the approach may require more hyperparameter tuning than standard pixel-level MIM.",
+   "ids": [
+    "2407.15837"
+   ]
+  }
+ ]
+}

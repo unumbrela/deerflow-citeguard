@@ -1,0 +1,486 @@
+{
+ "stats": {
+  "ambiguous": 14,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2026) propose a fully generative conversational recommender that represents items as discrete semantic IDs and integrates them directly into autoregressive generation, achieving up to 29% improvement on Recall@1 over baselines.",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zou et al. (2025) introduce MCCRS, a mixture-of-experts architecture that fuses multi-type contextual information including structured knowledge graphs, unstructured conversation history, and item reviews, with each expert specialized in one context type coordinated by a ChairBot.",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yuan et al. (2026) propose STARCRS, which integrates two complementary text understanding modes: a screen-reading pathway encoding auxiliary text as visual tokens (mimicking human skim-reading) and an LLM-based textual pathway for fine-grained reasoning on critical content.",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lin et al. (2025) address this by proposing a federated conversational recommendation framework that de-centralizes both historical interests estimation and interactive preference elicitation stages, enforcing user-level differential privacy with carefully selected privacy budgets.",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bernard and Balog (2025) present UserSimCRS v2, upgrading simulation-based evaluation with enhanced agenda-based simulators, LLM-based simulators, and LLM-as-a-judge utilities for automated evaluation.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang et al. (2025) propose DACRS to mitigate severe data sparsity in both dialogue space (linguistically diverse expressions) and entity space (under-trained entities in knowledge graphs) through dialogue augmentation, knowledge-guided entity modeling with entity substitution and similarity constraints, and dialogue-entity matching.",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all papers agree that traditional CRS architectures with decoupled recommendation and dialog components are insufficient, whether proposing generative unification (Zhang et al., 2026), multi-expert fusion (Zou et al., 2025), or offline policy learning (Zhang et al., 2024).",
+   "ids": [
+    "2605.21987",
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is consensus that evaluation must move beyond static datasets toward dynamic, human-in-the-loop approaches, evidenced by three independent works on evaluation platforms and simulation (Bernard et al., 2024; Bernard & Balog, 2024; Bernard & Balog, 2025).",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Finally, there is convergence on using LLMs not merely as response generators but as annotation tools (Zhang et al., 2024), evaluation judges (Bernard & Balog, 2025), and simulation agents (Bernard & Balog, 2025), suggesting a shift toward LLM-augmented development pipelines.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Generative unified approaches (Zhang et al., 2026) treat recommendation as token generation, while context-enrichment approaches (Zou et al., 2025; Yuan et al., 2026) maintain separation between understanding and generation stages, integrating context through fusion mechanisms rather than unified generation.",
+   "ids": [
+    "2605.21987",
+    "2504.13655",
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also divergence in evaluation philosophy: crowdsourced human feedback (Bernard et al., 2024) prioritizes real user preferences but scales poorly, while LLM-as-a-judge (Bernard & Balog, 2025) scales well but may inherit model biases.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Privacy-focused approaches (Lin et al., 2025) introduce constraints that may conflict with context-enrichment goals, as federated learning limits the types and granularity of context that can be centrally processed.",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, computational efficiency is consistently unaddressed: generative architectures (Zhang et al., 2026), mixture-of-experts (Zou et al., 2025), vision-centric encoding (Yuan et al., 2026), and federated learning (Lin et al., 2025) all introduce substantial overhead without discussion of latency, memory, or cost implications for production systems.",
+   "ids": [
+    "2605.21987",
+    "2504.13655",
+    "2601.13505",
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, several papers acknowledge that their evaluation depends on the quality of LLM-annotated data (Zhang et al., 2024; Bernard & Balog, 2025), introducing potential annotation bias that is neither measured nor mitigated.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can simulation-based evaluation resources for CRS be upgraded to align with state-of-the-art research given the scarcity of such resources?",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Present UserSimCRS v2 with four key extensions: enhanced agenda-based user simulator, LLM-based simulators, integration support for wider range of CRSs and datasets, and new LLM-as-a-judge evaluation utilities, demonstrated through a case study.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enhanced agenda-based user simulator provides more realistic and structured user interaction patterns",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based simulators offer more flexible and natural conversation patterns compared to rule-based approaches",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Expanded integration enables evaluation across a wider range of CRS models and datasets",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-as-a-judge utilities enable automated, scalable evaluation of conversation quality without human annotators",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: This is primarily a toolkit upgrade rather than novel algorithmic research, with validation limited to a case study rather than comprehensive comparative evaluation.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The LLM-as-a-judge approach may inherit biases from the underlying language models used for evaluation.",
+   "ids": [
+    "2512.04588"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can user privacy be protected in conversational recommender systems that collect and store explicitly-communicated fine-grained user preferences?",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes a federated CRS framework that de-centralizes both historical interests estimation and interactive preference elicitation stages, enforcing user-level differential privacy with carefully selected privacy budgets based on defined privacy protection guidelines.",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Framework satisfies the defined user privacy protection guidelines for CRS",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves competitive recommendation performance compared to state-of-the-art non-private approaches",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effectively reduces risk of exposing sensitive user information (financial status, political stands, health information)",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "User-level differential privacy can be enforced without severely degrading recommendation quality",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Privacy budget selection involves trade-offs between privacy protection and recommendation performance; federated learning introduces communication overhead and coordination complexity compared to centralized approaches.",
+   "ids": [
+    "2503.00999"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can CRS models overcome severe data sparsity in both dialogue space (linguistically diverse expressions) and entity space (under-trained entities in knowledge graphs)?",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Propose DACRS with three modules: Dialogue Augmentation (two-stage pipeline for enriching dialogue contexts), Knowledge-Guided Entity Modeling (entity substitution and similarity constraints for sparse/unseen entities), and Dialogue-Entity Matching (dialogue-guided attention aggregation for user representations).",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Two-stage dialogue augmentation significantly improves robustness to linguistic variation in open-ended conversations",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Entity substitution leveraging knowledge graphs enhances representation learning for sparsely supervised entities",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Entity similarity constraints enable effective handling of entirely unseen entities at inference time",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DACRS consistently outperforms state-of-the-art CRS models across two public benchmark datasets",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach relies on large knowledge graphs which may not be available or comprehensive for all domains.",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evaluation is limited to two public benchmark datasets, and the effectiveness may vary for domains with different entity distributions.",
+   "ids": [
+    "2507.00479"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can recommendation and dialog generation be better integrated in conversational recommender systems rather than being decoupled or relying on retrieval-based pipelines?",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes a fully generative CRS that unifies recommendation and dialog generation within a single autoregressive framework, representing items as discrete semantic IDs and introducing a structured generation paradigm that factorizes recommendation into interdependent decisions.",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves up to 29% improvement on Recall@1 over strong baselines",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains competitive dialog quality while improving recommendation performance",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Structured generation enables end-to-end optimization with coherent dependency structure",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Constrained decoding supports faithful item generation",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations; potential concerns include computational complexity of autoregressive generation and generalization to unseen item domains.",
+   "ids": [
+    "2605.21987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can CRS models handle longer and more heterogeneous conversational contexts while addressing practical issues like input length constraints, text style inconsistency, and irrelevant textual noise?",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Propose STARCRS (Screen-Text-AwaRe CRS) with two complementary pathways: screen-reading (encoding auxiliary text as visual tokens mimicking skim reading) and LLM-based textual pathway (fine-grained reasoning on critical content), integrated through knowledge-anchored fusion with contrastive alignment, cross-attention, and adaptive gating.",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Screen-reading pathway effectively encodes auxiliary textual information as visual tokens, mimicking human skim-reading behavior",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM-based textual pathway enables focused fine-grained reasoning on limited critical content",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Knowledge-anchored fusion framework successfully integrates both pathways through contrastive alignment and cross-attention",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "STARCRS consistently improves both recommendation accuracy and generated response quality on two widely used benchmarks",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The vision-centric approach requires additional computational resources for visual token encoding and processing.",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method's effectiveness depends on the quality and relevance of auxiliary textual information.",
+   "ids": [
+    "2601.13505"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can different types of contextual information (structured and unstructured) be effectively combined to improve conversational recommender systems?",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes MCCRS that fuses multi-type contextual information (knowledge graph, conversation history, item reviews) via a mixture-of-experts architecture where each expert specializes in one context type, coordinated by a ChairBot to generate final results.",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significantly higher performance compared to existing baselines",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mixture-of-experts approach breaks the model bottleneck on single contextual information",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully integrates both structured (knowledge graph) and unstructured (conversation history, item reviews) information",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ChairBot coordination effectively combines specialized expert outputs",
+   "ids": [
+    "2504.13655"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; potential concerns include complexity of coordinating multiple experts and scalability with increasing context types.",
+   "ids": [
+    "2504.13655"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,653 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "DistillLens introduces symmetric knowledge distillation through logit lenses, projecting intermediate hidden states into vocabulary space and enforcing structural alignment using symmetric divergence objectives (Dhakal et al., 2026).",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Multi-Aspect Knowledge Distillation (MaKD) captures fine-grained information by mimicking self-attention and feed-forward modules in greater depth, rather than focusing only on layer-level knowledge distribution (Liu et al., 2026).",
+   "ids": [
+    "2604.03110"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Delta Knowledge Distillation addresses the limitation that student and teacher output distributions may not share the same optimal representation space by explicitly preserving the distributional shift introduced during the teacher's supervised finetuning (Cao et al., 2025).",
+   "ids": [
+    "2509.14526"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Do et al. (2025) demonstrate that CoT prompting improves white-box KD effectiveness for transferring reasoning capability, with distilled models achieving better average performance on BIG-Bench-Hard reasoning and understanding tasks.",
+   "ids": [
+    "2511.05184"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Building on this, Paredes La Torre et al. (2026) integrate CoT prompting with Group Relative Policy Optimization for coding tasks, achieving up to 93.5% Rouge-L while retaining 70-95% of teacher capabilities across English, Spanish, and code generation tasks.",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "However, He et al. (2026) reveal that the timing of distillation matters critically: forward KL distillation during mid-training favors reasoning gains but slows factual recall acquisition, leading to their Switch Distillation approach that routes based on teacher predictive entropy to achieve 1.61-1.71x reasoning performance while preserving 96.7-96.8% of factual recall.",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In the biomedical domain, Xiao et al. (2025) propose a knowledge-driven agentic framework where specialized agents guided by the Medical Subject Headings hierarchy autonomously extract and synthesize high-quality textual data to generate domain-specific question-answer pairs, enabling distilled models to outperform both strong life sciences LLM baselines and advanced proprietary models including GPT-4 with MedPrompt.",
+   "ids": [
+    "2504.19565"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "For temporal knowledge graph reasoning, Xing et al. (2026) leverage LLMs as teachers to transfer both structural and temporal reasoning capabilities to compact student models, achieving favorable trade-offs between reasoning accuracy, computational efficiency, and practical deployability.",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "In sustainability research, Takrouri et al. (2025) employ knowledge distillation for household energy modeling across six countries, generating culturally sensitive, behavior-specific data that captures how cultural, climatic, and behavioral factors converge to shape carbon emissions.",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Borkar et al. (2026) examine memorization dynamics across the KD pipeline using three LLM families and three datasets, finding that distilled models memorize significantly less training data than standard fine-tuning, reducing memorization by more than 50%.",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the finding that intermediate representation alignment (Dhakal et al., 2026; Liu et al., 2026) and reasoning-focused techniques (Do et al., 2025; Paredes La Torre et al., 2026) significantly improve student performance.",
+   "ids": [
+    "2602.13567",
+    "2604.03110",
+    "2511.05184",
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that domain-specific adaptation and specialized frameworks yield better results than generic distillation approaches (Xiao et al., 2025; Xing et al., 2026; Takrouri et al., 2025).",
+   "ids": [
+    "2504.19565",
+    "2601.00202",
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While most work assumes distillation during pre-training or fine-tuning, He et al. (2026) demonstrate that mid-training distillation behaves fundamentally differently, slowing factual recall despite reasoning gains—challenging the assumption that distillation uniformly benefits all capabilities.",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is disagreement implicit in the choice between hard and soft distillation: Borkar et al. (2026) show hard distillation inherits 2.7× more teacher-specific examples, suggesting soft distillation may be preferable for privacy, while other work does not explicitly address this trade-off.",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Third, the privacy implications identified by Borkar et al. (2026) raise questions about optimal distillation strategies for sensitive domains that remain underexplored.",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, most work focuses on English or a small set of languages, with only Paredes La Torre et al. (2026) explicitly addressing multilingual distillation—there is a gap in comprehensive cross-lingual KD research.",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does training data memorization behave in knowledge distillation setups compared to standard fine-tuning?",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study examines memorization across the KD pipeline using three LLM families (Pythia, OLMo-2, Qwen-3) and three datasets (FineWeb, Wikitext, Nemotron-CC-v2), analyzing factors like zlib entropy, KL divergence, and perplexity to predict memorization.",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distilled models memorize significantly less training data than standard fine-tuning, reducing memorization by more than 50%",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Some examples are inherently easier to memorize and account for over 95% of memorization during distillation",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Student memorization is predictable prior to distillation using features based on zlib entropy, KL divergence, and perplexity",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Hard distillation inherits 2.7× more teacher-specific examples than soft distillation, posing greater privacy risk despite similar overall memorization rates",
+   "ids": [
+    "2601.15394"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge distillation be improved when student and teacher output distributions do not share the same optimal representation space?",
+   "ids": [
+    "2509.14526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Delta Knowledge Distillation (Delta-KD), an extension of token-level KD that encourages the student to approximate an optimal representation space by explicitly preserving the distributional shift Delta introduced during the teacher's supervised finetuning.",
+   "ids": [
+    "2509.14526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Delta-KD addresses the limitation that prior work assumes student and teacher output distributions share the same optimal representation space",
+   "ids": [
+    "2509.14526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method explicitly preserves the distributional shift Delta from the teacher's supervised finetuning",
+   "ids": [
+    "2509.14526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Empirical results on ROUGE metrics demonstrate Delta-KD substantially improves student performance",
+   "ids": [
+    "2509.14526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Delta-KD preserves more of the teacher's knowledge compared to standard token-level KD",
+   "ids": [
+    "2509.14526"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge distillation be improved by aligning the intermediate thought processes of student and teacher models rather than only optimizing final outputs?",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces DistillLens, a framework that projects intermediate hidden states into vocabulary space via the Logit Lens and enforces structural alignment using a symmetric divergence objective to symmetrically align the evolving thought processes of student and teacher models.",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DistillLens symmetrically aligns the evolving thought processes of student and teacher models",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The symmetric divergence constraint imposes a dual-sided penalty, preventing both overconfidence and underconfidence",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method preserves high-entropy information conduits essential for final deduction",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DistillLens consistently outperforms standard KD and feature-transfer baselines on diverse instruction-following benchmarks across GPT-2 and Llama architectures",
+   "ids": [
+    "2602.13567"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the role and effectiveness of Chain-of-Thought prompting in distilling reasoning capability from larger LLMs to smaller LLMs using white-box knowledge distillation?",
+   "ids": [
+    "2511.05184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper conducts white-box KD experiments using LLMs from the Qwen and Llama2 families, employing CoT data from the CoT-Collection dataset, and evaluates the distilled models on natural language reasoning and understanding tasks from the BIG-Bench-Hard benchmark.",
+   "ids": [
+    "2511.05184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Chain-of-Thought prompting improves white-box KD effectiveness for transferring reasoning capability",
+   "ids": [
+    "2511.05184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distilled models achieve better average performance in natural language reasoning tasks from BIG-Bench-Hard",
+   "ids": [
+    "2511.05184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Distilled models achieve better average performance in natural language understanding tasks from BIG-Bench-Hard",
+   "ids": [
+    "2511.05184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoT data from the CoT-Collection dataset enables effective knowledge transfer from larger to smaller LLMs",
+   "ids": [
+    "2511.05184"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does the effectiveness of logit-based knowledge distillation vary across different training stages, particularly during mid-training versus pre-training?",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Through controlled experiments, the paper investigates forward KL distillation with post-trained teachers during mid-training, traces stage dependence to asymmetry in teacher confidence across data domains, and proposes Switch Distillation that distills on tokens where the teacher is confident using teacher predictive entropy as a routing signal.",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Forward KL distillation behaves fundamentally differently during mid-training compared to pre-training",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "During mid-training, forward KD slows factual recall acquisition despite continued reasoning gains",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Teachers are more confident on procedural than knowledge-intensive data, while students acquire low-entropy factual knowledge earlier in training",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Switch Distillation achieves 1.61-1.71x reasoning performance and 1.13-1.19x knowledge and commonsense performance relative to standard NTP",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Switch Distillation preserves 96.7-96.8% of factual recall and maintains gains after post-training",
+   "ids": [
+    "2609.01532"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge distillation capture fine-grained information that existing layer-focused methods may lose during alignment?",
+   "ids": [
+    "2604.03110"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The Multi-aspect Knowledge Distillation (MaKD) method mimics self-attention and feed-forward modules in greater depth to capture rich language knowledge information at different aspects, rather than focusing only on knowledge distribution among layers.",
+   "ids": [
+    "2604.03110"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MaKD addresses the issue that existing methods focusing only on layer-level knowledge distribution may cause loss of fine-grained information",
+   "ids": [
+    "2604.03110"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method captures rich language knowledge at different aspects by mimicking self-attention and feed-forward modules in greater depth",
+   "ids": [
+    "2604.03110"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MaKD achieves competitive performance compared with various strong baselines with the same storage parameter budget",
+   "ids": [
+    "2604.03110"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method performs well in distilling auto-regressive architecture models",
+   "ids": [
+    "2604.03110"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can knowledge distillation combined with chain-of-thought reinforcement learning produce compact, efficient models suitable for resource-constrained deployment?",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The framework uses Qwen 3B as teacher and Qwen 0.5B as student, applying knowledge distillation across English Dolly-15k, Spanish Dolly-15k, and code datasets (BugNet, PyTorrent), with chain-of-thought prompting and Group Relative Policy Optimization for coding tasks, followed by 4-bit weight quantization.",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The distilled student retains 70% to 91% of teacher capability in English tasks",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance reaches up to 95% in Spanish tasks",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Coding tasks achieve up to 93.5% Rouge-L with chain-of-thought guided reinforcement learning",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integrating chain-of-thought prompting with Group Relative Policy Optimization improves reasoning coherence and solution correctness compared to knowledge distillation alone",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Post-training 4-bit weight quantization reduces memory footprint and inference latency",
+   "ids": [
+    "2603.13765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Large Language Models be integrated into energy modeling to generate realistic, culturally sensitive, and behavior-specific data for household energy usage across diverse geographies?",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The study employs and compares five different LLMs to systematically produce family structures, weather patterns, and daily consumption profiles for households in six distinct countries using a four-stage methodology that synthesizes contextual daily data including culturally nuanced activities, realistic weather ranges, HVAC operations, and distinct energy signatures.",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs can generate realistic, culturally sensitive, and behavior-specific data for household energy usage across diverse geographies",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The four-stage methodology synthesizes contextual daily data including culturally nuanced activities and realistic weather ranges",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "An alternative strategy allows external weather datasets to be directly integrated, bypassing intermediate weather modeling stages",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The resulting dataset provides insights into how cultural, climatic, and behavioral factors converge to shape carbon emissions",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach demonstrates how prompt engineering combined with knowledge distillation can advance sustainable energy research",
+   "ids": [
+    "2502.03034"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can knowledge distillation be adapted for temporal knowledge graph reasoning to enable deployment on resource-constrained platforms while maintaining reasoning accuracy?",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The proposed framework leverages large language models as teacher models to guide distillation, integrating large-scale public knowledge with task-specific temporal information to transfer both structural and temporal reasoning capabilities to lightweight student models.",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing TKG reasoning models rely on large parameter sizes and intensive computation, hindering deployment on resource-constrained platforms",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most existing compression techniques are designed for static knowledge graphs and fail to capture temporal dependencies",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework leverages LLMs as teachers to transfer structural and temporal reasoning capabilities to compact student models",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments on multiple benchmark datasets show the method outperforms strong baselines",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach achieves a favorable trade-off between reasoning accuracy, computational efficiency, and practical deployability",
+   "ids": [
+    "2601.00202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a knowledge-driven, agentic framework address the insufficient quantity and quality of open-source annotated scientific corpora for biomedical LLM training?",
+   "ids": [
+    "2504.19565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes a collaborative multi-agent architecture where specialized agents guided by the Medical Subject Headings (MeSH) hierarchy autonomously extract, synthesize, and self-evaluate high-quality textual data from scientific literature to generate domain-specific question-answer pairs.",
+   "ids": [
+    "2504.19565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Language models trained on the multi-agent distilled datasets achieve notable improvements in biomedical question-answering tasks",
+   "ids": [
+    "2504.19565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The distilled models outperform both strong life sciences LLM baselines and advanced proprietary models",
+   "ids": [
+    "2504.19565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The AI-Ready dataset enables Llama3-70B to surpass GPT-4 with MedPrompt and Med-PaLM-2 despite their larger scale",
+   "ids": [
+    "2504.19565"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ablation studies validate the effectiveness and synergy of each agent within the framework",
+   "ids": [
+    "2504.19565"
+   ]
+  }
+ ]
+}

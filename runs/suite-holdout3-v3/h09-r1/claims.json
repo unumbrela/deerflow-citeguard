@@ -1,0 +1,760 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bai et al. (2024) survey MIA vulnerabilities in federated learning, where privacy risks persist despite only sharing model updates rather than raw training data.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The attack surface has expanded to retrieval-augmented generation systems, with Liu et al. (2024) and Kulkarni et al. (2026) developing mask-based and prefix-based attacks respectively for RAG and in-context learning systems.",
+   "ids": [
+    "2410.20142",
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Video-language models are not immune: Song et al. (2026) demonstrate black-box MIAs against VideoLLMs by exploiting temperature-perturbed generation patterns.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Most recently, Chen et al. (2026) introduce attacks targeting chat agent memory systems, revealing privacy risks in user-agent interactions and retrieved facts.",
+   "ids": [
+    "2605.27825"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Du et al. (2025) propose cascading and proxy membership inference attacks that leverage membership dependencies between instances, substantially outperforming existing attacks in both adaptive and non-adaptive settings.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ward et al. (2025) conduct the largest synthetic data privacy benchmark to date, demonstrating that no single MIA method dominates across diverse model architectures and datasets.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ran et al. (2025) introduce LoRA-Leak, a holistic evaluation framework testing fifteen membership inference attacks against LoRA fine-tuned language models.",
+   "ids": [
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Khalil et al. (2025) empirically analyze non-overfitted models and find they can still leak information about a small subset of training data.",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jebreel et al. (2026) propose an evaluation framework defining conditions under which MIAs represent authentic privacy threats, then review representative MIAs against this framework.",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Convergences: Multiple papers converge on the finding that membership inference attacks remain effective across diverse ML architectures and settings (Bai et al., 2024; Du et al., 2025; Ran et al., 2025).",
+   "ids": [
+    "2412.06157",
+    "2507.21412",
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is broad agreement that exploiting structural properties—whether membership dependencies between instances (Du et al., 2025), ensemble signals (Ward et al., 2025), or pre-trained model access (Ran et al., 2025)—substantially improves attack performance.",
+   "ids": [
+    "2507.21412",
+    "2509.05350",
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature also converges on the finding that vulnerable samples often exhibit distinctive characteristics, such as being outliers or hard-to-classify instances (Khalil et al., 2025).",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While most surveyed papers demonstrate and quantify MIA effectiveness, Jebreel et al. (2026) argue that under realistic conditions, MIAs represent weak privacy threats and may lead to risk overestimation.",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Scalability and computational costs: Multiple papers note that their abstracts do not specify computational overhead or scalability constraints of proposed methods (Du et al., 2025; Ward et al., 2025), leaving practical deployment considerations unclear.",
+   "ids": [
+    "2507.21412",
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Generalization across architectures: Several attacks are evaluated on single models or limited architectures (Song et al., 2026; Kulkarni et al., 2026), raising questions about generalizability to other model families.",
+   "ids": [
+    "2604.27002",
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Defense specificity: While attacks are often thoroughly evaluated, defense discussions remain high-level, with limited empirical validation of proposed countermeasures' effectiveness-utility tradeoffs (Bai et al., 2024; Liu et al., 2024).",
+   "ids": [
+    "2412.06157",
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Realistic threat modeling: The critical review by Jebreel et al. (2026) highlights that many MIA evaluations may not reflect realistic adversary capabilities, suggesting a need for more grounded threat models that account for practical constraints.",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Sample-level defenses: The finding that vulnerable samples are often outliers (Khalil et al., 2025) suggests potential for targeted, sample-level defenses, but this direction remains underexplored in the surveyed literature.",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the membership inference attacks and corresponding defense strategies in federated learning, and how can they be systematically categorized?",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This paper conducts a comprehensive survey by categorizing and summarizing membership inference attacks and defense strategies based on their characteristics in federated learning settings.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The authors introduce a taxonomy of existing attack research and provide a systematic overview of various countermeasures.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Federated learning faces privacy vulnerabilities despite only sharing model updates rather than raw training data.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Membership inference attacks can determine whether specific examples are part of the training set, compromising sensitive information.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey categorizes attacks and defenses based on their characteristics in the federated learning setting.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different approaches have distinct strengths and weaknesses that are analyzed in the paper.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Key future research directions are identified for advancing the field.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: As a survey paper, it synthesizes existing research rather than presenting novel empirical results; specific limitations of surveyed approaches are discussed but not exhaustively enumerated in the abstract.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can membership inference attacks be effectively performed against chat agent memory systems?",
+   "ids": [
+    "2605.27825"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Multi-Recall Memory MIA (MRMMIA), a unified attack utilizing multiple recall probes to extract membership signals across black-box, gray-box, and white-box settings.",
+   "ids": [
+    "2605.27825"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Chat agent memory is vulnerable to membership inference attacks.",
+   "ids": [
+    "2605.27825"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MRMMIA consistently outperforms baseline attacks.",
+   "ids": [
+    "2605.27825"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Agent memory containing sensitive user-agent interactions, retrieved facts, and user preferences poses privacy risks.",
+   "ids": [
+    "2605.27825"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The work provides an initial evaluation framework for membership leakage in chat-agent memory systems.",
+   "ids": [
+    "2605.27825"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can membership inference attacks be improved by exploiting membership dependencies between instances in adaptive and non-adaptive settings?",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose two attacks: Cascading Membership Inference Attack (CMIA) for the adaptive setting, which incorporates membership dependencies via conditional shadow training, and Proxy Membership Inference Attack (PMIA) for the non-adaptive setting, which employs a proxy selection strategy to identify samples with similar behaviors to query instances.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both attacks include theoretical analyses.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CMIA and PMIA substantially outperform existing membership inference attacks in both adaptive and non-adaptive settings.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Exploiting membership dependencies between instances improves attack performance.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attacks are particularly effective in the low false-positive regime, which is crucial for evaluating privacy risks.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework is attack-agnostic, allowing incorporation of membership dependencies regardless of the base attack method.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proxy selection using behavioral similarity enables effective membership inference without access to query instances during shadow model training.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify computational costs or scalability constraints of the proposed methods; practical deployment considerations are not discussed.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Under what conditions do membership inference attacks constitute a genuine privacy threat in machine learning?",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose an evaluation framework defining conditions under which MIAs constitute genuine privacy threats, then review representative MIAs against this framework.",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Under realistic conditions defined in the proposed framework, MIAs represent weak privacy threats.",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Relying on MIAs as a privacy metric can lead to overestimation of risk.",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current MIA-based privacy assessment may cause unnecessary sacrifices in model utility through overly strong defenses.",
+   "ids": [
+    "2603.22987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the root causes of membership inference vulnerabilities in machine learning models beyond traditional overfitting?",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors empirically analyze characteristics of training data samples vulnerable to MIAs in non-overfitted models and propose defensive strategies to protect vulnerable samples.",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Non-overfitted ML models can still leak information about a small subset of their training data.",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Vulnerable samples in non-overfitted models are often outliers within their classes (noisy or hard to classify).",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Targeted defensive strategies can protect vulnerable samples and enhance privacy-preserving capabilities.",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Model overfitting is not the sole factor contributing to membership inference vulnerabilities.",
+   "ids": [
+    "2511.16792"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can remotely hosted applications using retrieval-based in-context learning be vulnerable to membership inference attacks when the service provider and users are separate parties?",
+   "ids": [
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose two black-box membership inference attacks that exploit query text prefixes to distinguish member from non-member inputs.",
+   "ids": [
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The first uses a reference model to estimate loss metrics, while the second uses a novel weighted-averaging scheme without requiring a reference model.",
+   "ids": [
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Remotely hosted applications with retrieval-based in-context learning are vulnerable to membership inference attacks even with separate service providers and users.",
+   "ids": [
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed attacks exhibit resilience to paraphrasing of query text.",
+   "ids": [
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attacks outperform three prior attacks in many cases with small numbers of prefixes.",
+   "ids": [
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "An existing ensemble prompting defense substantially mitigates privacy leakage from the second attack.",
+   "ids": [
+    "2605.04116"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can membership inference attacks be improved for Retrieval-Augmented Generation systems to reliably detect if a specific target document is stored in the RAG knowledge database?",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a Mask-Based Membership Inference Attack (MBA) framework that employs a masking algorithm to mask words in the target document, then prompts the RAG system to predict the masked values.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A threshold-based method analyzes mask prediction accuracy to infer document membership.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The mask-based approach is more document-specific, making RAG system generation less susceptible to distractions from other documents or the LLM's internal knowledge.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "If the target document appears in the knowledge database, masked text retrieves the complete document as context, enabling accurate mask prediction.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach addresses limitations of previous methods that relied solely on RAG system judgment or were easily influenced by other documents.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments demonstrate the effectiveness of the approach compared to existing baseline models.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method provides better explainability than previous membership inference attacks for RAG systems.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not discuss the sensitivity of the approach to the masking algorithm design or threshold selection; performance on documents with varying lengths or domains is not specified.",
+   "ids": [
+    "2410.20142"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Are LoRA fine-tuned language models vulnerable to membership inference attacks despite the small proportion of tuned parameters?",
+   "ids": [
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce LoRA-Leak, a holistic evaluation framework incorporating fifteen membership inference attacks (ten existing and five improved attacks leveraging the pre-trained model as reference), tested on three advanced language models across three NLP tasks.",
+   "ids": [
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LoRA-based fine-tuned language models remain vulnerable to membership inference attacks (e.g., 0.775 AUC under conservative fine-tuning settings).",
+   "ids": [
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Utilizing the pre-trained model induces more information leakage than previously recognized.",
+   "ids": [
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Only dropout and excluding specific LM layers during fine-tuning effectively mitigate MIA risks while maintaining utility.",
+   "ids": [
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The existence of the pre-trained model makes MIA a more severe risk for LoRA-based language models.",
+   "ids": [
+    "2507.18302"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can an external auditor determine whether a particular video was used during training of Video Large Language Models?",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present a black-box membership inference attack targeting VideoLLMs that couples temperature-perturbed generation with video-aware difficulty features.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They query the target model at low and high temperatures and measure semantic drift between resulting texts, interpreting this signal jointly with the intrinsic difficulty of the queried video.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "VideoLLMs are vulnerable to black-box membership inference attacks.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Member samples tend to induce sharper, more brittle generation behavior across decoding temperatures.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attack achieves a member inference AUC of 0.68 and accuracy of 0.63 against LLaVA-Video-7B-Qwen2-Video-Only.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The membership signal is entangled with video-specific factors such as motion complexity and temporal span.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "There is an urgent need for the community to systematically evaluate and mitigate privacy risks in VideoLLMs.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The attack is evaluated on a single model (LLaVA-Video-7B-Qwen2-Video-Only), and the moderate AUC of 0.68 suggests the attack has limited effectiveness; the abstract does not discuss generalization to other VideoLLM architectures.",
+   "ids": [
+    "2604.27002"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can adversaries robustly choose membership inference attack methods when no single method dominates across different model architectures and dataset domains?",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct the largest synthetic data privacy benchmark to date, studying membership inference attacks as a decision-theoretic problem under uncertainty.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They propose ensemble membership inference attacks built on individual attacks and evaluate them across various model architectures and dataset domains.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "No single membership inference attack constitutes a strictly dominant strategy across diverse model architectures and dataset domains.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unsupervised ensembles built on individual attacks offer empirically more robust, regret-minimizing strategies than individual attacks.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different MIA methods exploit different privacy leakage signals, creating uncertainty for adversaries in method selection.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark reveals significant variation in attack performance depending on the target model and data characteristics.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Ensemble approaches mitigate the risk of choosing suboptimal attack methods in realistic threat scenarios.",
+   "ids": [
+    "2509.05350"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not specify the computational overhead of ensemble methods or discuss potential diminishing returns when combining highly correlated attack signals.",
+   "ids": [
+    "2509.05350"
+   ]
+  }
+ ]
+}

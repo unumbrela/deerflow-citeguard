@@ -1,0 +1,819 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2026) present perhaps the most comprehensive theoretical framework, arguing that effective self-supervised visual representation learning requires three non-overlapping objectives: semantic invariance across augmented views (observation), patch-level spatial prediction (prediction), and representational non-degeneracy (regularization).",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Erdogan et al. (2025) introduce LayerLock, which exploits the observation that ViT layers converge in depth order during training.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Kuzucu et al. (2025) address the modality mismatch between language and vision models through LAVIE, a framework that co-adapts ViT backbones with LLM fusion blocks using Masked Auto-Encoding and Low-Rank Adaptation.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Munia et al. (2026) systematically compare pretrain-finetuning (PFT) against joint training (JT) across eight SSL methods and diverse domains including natural, medical, crisis response, and remote sensing imagery.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) propose integrating image reconstruction as an auxiliary task in augmentation-based SSL, implementing cross-attention to blend features from augmented views before reconstructing one view.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Colton (2025) similarly examines how feature normalization affects representation structure in IJEPA, finding that standard layer normalization disrupts natural energy hierarchies of visual tokens.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Chen et al. (2025) demonstrate that images contain inherent constraints that can supervise multi-image reasoning without manually curated question-answer pairs.",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "He et al. (2025) introduce DSeq-JEPA, which incorporates discriminative sequential prediction into JEPA-style learning.",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2025) propose PartCrop, a unified membership inference attack method that works across different SSL training paradigms in black-box settings.",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2026), Wang et al. (2024), and Colton (2025) all emphasize that standard approaches lose critical spatial or energy information, and that recovering this information improves downstream performance.",
+   "ids": [
+    "2608.08309",
+    "2412.03314",
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that joint optimization strategies—whether co-adapting vision and language models (Kuzucu et al., 2025) or jointly training self-supervised and supervised objectives (Munia et al., 2026)—can improve efficiency and representation quality.",
+   "ids": [
+    "2507.00754",
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Giakoumoglou et al. (2026) argue for three necessary principles that all methods must satisfy, other papers demonstrate strong empirical results from more specialized approaches (e.g., LayerLock's progressive freezing or PartCrop's part-aware attacks).",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, Munia et al. (2026) show that the effectiveness of joint training versus pretrain-finetune depends heavily on domain characteristics, suggesting no universal answer to the training paradigm question.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Security implications underexplored: Only Zhu et al. (2025) address membership inference attacks, suggesting that security analysis of self-supervised encoders remains nascent despite their widespread deployment.",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Theoretical-practical gap: While Giakoumoglou et al. (2026) provide comprehensive theoretical analysis, the connection between formal guarantees and practical performance on real-world tasks requires further empirical validation.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Multi-modal integration depth: Current work on vision-language integration (Kuzucu et al., 2025) focuses on leveraging frozen LLM knowledge; deeper bidirectional integration and its effects on both vision and language capabilities remain unexplored.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can self-supervised visual representation learning principles be leveraged to enable Chain-of-Thought reasoning across multiple images without manually curated question-answer pairs?",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors construct image triplets comprising two augmented views of the same image and a third similar but distinct image, then train the model with rule-based reinforcement learning to generate reasoning processes comparing these images and determine if they are same or different.",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Images contain inherent constraints that can serve as supervision for multi-image reasoning, inspired by self-supervised visual representation learning",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method trains without any human-annotated question-answer pairs, using only visual comparison tasks",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The learned reasoning ability generalizes effectively to a wide range of questions beyond visual comparison",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach achieves significant improvements on multi-image reasoning benchmarks",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method shows strong performance on general vision tasks despite being trained solely on visual comparison",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the approach relies on constructing image triplets which may not generalize to all multi-image reasoning scenarios.",
+   "ids": [
+    "2506.22434"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does feature layer normalization affect the learning of visual representations in IJEPA, and can it be replaced to better preserve token energy hierarchies?",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyze the effect of layer normalization on feature representations in IJEPA, proposing that it disrupts natural energy hierarchies of visual tokens.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They replace feature LN with DynTanh activation and evaluate on ImageNet linear probe and NYU Depth V2 monocular depth estimation tasks.",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Feature layer normalization in IJEPA disrupts the natural energy hierarchy of visual tokens by forcing all features to have identical L2 norms",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "IJEPA models trained with feature LN exhibit loss maps with significant checkerboard-like artifacts",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Replacing feature LN with DynTanh activation better preserves token energies and fixes the checkerboard artifacts",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The modification improves ImageNet linear probe accuracy from 38% to 42.7% for ViT-Small",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach reduces RMSE by 0.08 on NYU Depth V2 monocular depth estimation",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the evaluation is limited to specific architectures (ViT-Small) and datasets (ImageNet, NYU Depth V2).",
+   "ids": [
+    "2508.02829"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can progressive layer freezing accelerate masked autoencoding while preventing representation collapse in latent prediction?",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors observe that ViT layers converge in depth order during video MAE training, then exploit this by progressively freezing layers according to an explicit schedule.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LayerLock transitions from pixel to latent prediction through this progressive freezing strategy.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Progressive layer freezing accelerates standard MAE training by exploiting depth-ordered convergence",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The same schedule enables latent prediction without representation collapse",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LayerLock scales to models up to 4B parameters",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Results surpass non-latent masked prediction on the 4DS perception suite",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is simple and scalable without requiring architectural changes",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the effectiveness may depend on specific model architectures and the schedule design requires careful tuning.",
+   "ids": [
+    "2509.10156"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the necessary theoretical principles for self-supervised visual representation learning, and how do they interact to prevent representation collapse?",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formalize three principles—observation (semantic invariance), prediction (patch-level spatial prediction), and regularization (representational non-degeneracy)—and prove theoretical claims about their interactions, pairing every claim with controlled experiments including patch-retrieval evaluation.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Three non-overlapping objectives are necessary: observation, prediction, and regularization",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining observation and prediction without regularization admits constant encoder solutions under negative-free alignment",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The two objectives are gradient-complementary and structurally non-conflicting at encoder output",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Momentum encoders converge to the same fixed point as online encoders, providing no collapse guarantee at convergence",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Every major self-supervised method is a special case of a single unified energy decomposition",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The theoretical analysis applies to the scale studied; whether the principles hold at significantly different scales or with different architectural assumptions requires further investigation.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can incorporating discriminative sequential prediction into JEPA-style learning improve the quality and generalizability of self-supervised visual representations?",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose DSeq-JEPA, which integrates a discriminatively ordered sequential process with JEPA-style learning by identifying primary discriminative regions using attention-derived saliency maps and predicting subsequent regions in discriminative order, inducing a curriculum-like semantic progression.",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DSeq-JEPA bridges latent predictive and autoregressive self-supervised learning by ordering predictions meaningfully",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The architecture uses attention-derived saliency maps as a proxy for visual importance to identify primary discriminative regions",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The sequential prediction process induces a curriculum-like semantic progression from primary to secondary cues",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DSeq-JEPA consistently learns more discriminative and generalizable representations compared to I-JEPA variants",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach shows improvements across diverse tasks: image classification, fine-grained categorization, detection/segmentation, and low-level reasoning",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the approach adds complexity through sequential prediction which may increase computational cost during training.",
+   "ids": [
+    "2511.17354"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can self-supervised audio-visual representations learned from unlabeled videos improve sound effect recommendations for visual scenes?",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The author proposes an attention-based model that learns the relative importance of convolutional features extracted at different resolutions from audio and visual streams, encoding inputs based on their correspondence.",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model is evaluated on audio-visual correlation classification and sound effect recommendation tasks, with additional cross-modal contrastive learning.",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The attention-based approach learns audio-visual representations from unlabeled videos based on correspondence",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model improves correlation accuracy by 18% compared to baseline on VGG-Sound dataset",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The recommendation accuracy improves by 10% on VGG-Sound dataset",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Cross-modal contrastive learning further improves recommendation performance",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach works on both public datasets (VGG-Sound) and challenging gameplay video recordings",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the evaluation is limited to specific datasets and the attention mechanism may not capture all audio-visual relationships.",
+   "ids": [
+    "2412.07406"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the modality gap between text-centric LLM pre-training and vision-centric ViT training be bridged to leverage LLM knowledge for vision-only tasks?",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: LAVIE co-adapts a ViT backbone and an LLM fusion block by employing Masked Auto-Encoding to pre-train the ViT for richer visual representations, and concurrently training Low-Rank Adaptation layers within the LLM block using the same MAE objective.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LAVIE bridges the modality gap through synergistic pre-training of vision and language components",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint optimization guides the ViT to produce LLM-aligned features and the LLM to interpret visual information effectively",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework significantly improves performance in various downstream vision tasks",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach offers an effective and efficient way to enhance visual understanding using frozen LLM knowledge",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Direct fusion without co-adaptation fails to fully exploit LLM potential and suffers from unstable finetuning",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the approach requires careful coordination of MAE objectives across modalities and may not generalize to all LLM architectures.",
+   "ids": [
+    "2507.00754"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does jointly optimizing self-supervised and supervised objectives during training provide a better alternative to the standard pretrain-then-finetune pipeline?",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Across eight representative SSL methods and diverse computer vision tasks on natural, medical, crisis response, and remote sensing data, the authors compare pretrain-finetuning against joint training under varying percentages of labeled data, analyzing representation quality, robustness, and cross-domain generalization.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The relative effectiveness of PFT and JT depends strongly on task, label availability, and domain complexity",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "JT consistently improves data and training efficiency while being robust in low-label settings",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PFT is more reliable in more specialized domains",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The interaction between self-supervised and supervised objectives varies across domains",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The work establishes a comprehensive empirical benchmark for hybrid SSL-based semi-supervised learning",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the comprehensive evaluation across eight methods and multiple domains may not cover all possible SSL approaches or application areas.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can integrating image reconstruction as an auxiliary task in augmentation-based SSL facilitate equivariant feature learning without additional parameters?",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors implement a cross-attention mechanism to blend features learned from two augmented views, subsequently reconstructing one of them.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "This approach is adaptable to various datasets and augmented-pair based learning methods, evaluated on learning equivariant features through multiple linear regression tasks and downstream applications.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Integration of image reconstruction facilitates equivariant feature learning without additional parameters",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method is adaptable to various datasets and augmented-pair based learning methods",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Results demonstrate significant improvements over standard augmentation-based SSL and state-of-the-art approaches",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach particularly excels in scenarios involving combined augmentations",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method enhances learning of both invariant and equivariant features, leading to more robust and generalizable representations",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the cross-attention mechanism adds computational overhead during training though not during inference.",
+   "ids": [
+    "2412.03314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a unified membership inference attack method be developed for visual self-supervised models that works across different training paradigms in a black-box setting?",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose PartCrop, a membership inference method that crops parts of objects in an image to query responses within the image in representation space, motivated by shared part-aware capability among models and stronger part response on training data.",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluate on multiple datasets and propose defenses including shrinking crop scale range.",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PartCrop is effective and generalizes across self-supervised models with different training protocols and structures",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method is motivated by shared part-aware capability among models and stronger part response on training data",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Common defenses like early stopping and differential privacy are effective against PartCrop",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed tailored defense (shrinking crop scale range) is also effective",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PartCrop-v2 with structural improvements enables scalable attacks in realistic scenarios with larger data and models",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations; the attack effectiveness may vary with different model architectures or defense mechanisms not evaluated in the study.",
+   "ids": [
+    "2505.10351"
+   ]
+  }
+ ]
+}

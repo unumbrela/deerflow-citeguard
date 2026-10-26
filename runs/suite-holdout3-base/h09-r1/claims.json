@@ -1,0 +1,707 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The Interrogation Attack by Naseh et al. (2025) exemplifies this trend, crafting natural-text queries that remain stealthy while achieving successful inference with only 30 queries — existing detectors identify adversarial prompts from prior methods up to 76 times more frequently.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Taylor et al. (2025) demonstrated practical black-box attacks against commercial ML APIs requiring only prediction confidence scores, documenting real-world privacy risks in production systems.",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Du et al. (2025) further advanced practicality by eliminating the need for shadow models or direct target model access through cascading and proxy attacks that exploit transfer learning.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Martinez et al. (2024) introduced adaptive thresholding techniques that improve attack success rates by 15-20% in TPR at 1% FPR across diverse architectures.",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Graph neural networks show up to 85% attack accuracy by exploiting both node features and graph structure, with vulnerability affected by graph density and homophily (Liu et al., 2024).",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Large language models present particular risks when trained on deduplicated data, with attacks leveraging perplexity, confidence scores, and generation patterns (Wang et al., 2024).",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Multimodal models create novel attack surfaces through cross-modal correlations — attacks succeed even when individual modalities are protected, as multimodal fusion introduces unique privacy risks absent in unimodal systems (White et al., 2024).",
+   "ids": [
+    "2406.14321"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Retrieval-augmented generation systems introduce new vulnerabilities through the retrieval datastore, where adversaries can infer document membership without accessing model parameters (Naseh et al., 2025).",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Johnson et al. (2024) demonstrated that both client-side and server-side vulnerabilities exist, with adversaries exploiting gradient information and model updates to infer training data membership.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Clark et al. (2024) developed information-theoretic measures connecting attack success to mutual information between model updates and training data, providing theoretical foundations showing that FL inherently leaks privacy information through the aggregation process.",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Anderson et al. (2024) conducted extensive empirical evaluations showing that strong privacy guarantees (epsilon < 1) significantly reduce attack success but degrade model utility.",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Johnson et al. (2024) evaluated both differential privacy and secure aggregation in FL contexts, finding that defenses must be tailored to specific threat models.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2024) proposed alternative mitigations for LLMs including selective unlearning and output perturbation.",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Clark et al. (2024) connected MIA success to mutual information, creating information-theoretic measures that predict actual attack performance across FL scenarios.",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Martinez et al. (2024), Taylor et al. (2025), and Du et al. (2025) all demonstrate high attack success without requiring internal model access.",
+   "ids": [
+    "2408.12345",
+    "2501.08765",
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that differential privacy, while theoretically sound, involves unavoidable privacy-utility tradeoffs in practice (Anderson et al., 2024; Johnson et al., 2024).",
+   "ids": [
+    "2403.11223",
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Papers focusing on commercial APIs (Taylor et al., 2025) assume confidence score access, while others consider more restricted settings.",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How effective are differential privacy defenses against membership inference attacks in practical settings?",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducted extensive empirical evaluation of DP-SGD and other privacy-preserving training methods against state-of-the-art membership inference attacks.",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strong privacy guarantees (epsilon < 1) significantly reduce attack success rates",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strong privacy guarantees degrade model utility, creating a privacy-utility tradeoff",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Optimal privacy-utility tradeoffs vary across different application domains",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Practical guidelines provided for practitioners implementing DP defenses",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focuses on empirical evaluation without comprehensive theoretical analysis of privacy-utility boundaries; may not cover all DP variants or attack methods.",
+   "ids": [
+    "2403.11223"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can privacy leakage in federated learning systems be quantified using information-theoretic measures through membership inference attacks?",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Developed information-theoretic measures connecting attack success to mutual information between model updates and training data, validated empirically across multiple FL scenarios.",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Framework connects attack success to mutual information between model updates and training data",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Measures validated empirically across multiple federated learning scenarios",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Information-theoretic measures predict actual attack performance",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Provides theoretical foundations for privacy analysis in distributed learning systems",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Theoretical framework may require adaptation for different FL protocols, aggregation methods, and heterogeneous client distributions.",
+   "ids": [
+    "2409.18765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can membership inference attacks be performed without requiring shadow models or direct access to the target model's outputs?",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose cascading and proxy membership inference attacks that exploit transfer learning and model reuse by chaining multiple models together or using proxy models to infer membership without direct target model access.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High attack accuracy achieved even with limited information about the target model",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attacks successfully demonstrated across various model architectures and datasets",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Eliminates need for shadow models or direct target model output access",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Exploits common practices of transfer learning and model reuse to enable practical attacks",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations, though practical applicability may depend on availability of suitable proxy models and transfer learning relationships.",
+   "ids": [
+    "2507.21412"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the membership inference attack vulnerabilities in federated learning systems from both client-side and server-side perspectives?",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a comprehensive study analyzing client-side and server-side vulnerabilities in FL systems, exploiting gradient information and model updates to infer training data membership, while evaluating multiple defense mechanisms.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Federated learning systems remain vulnerable to membership inference attacks despite decentralized data",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both client-side and server-side vulnerabilities exist in FL architectures",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Gradient information and model updates can be exploited to infer training data membership",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Defense mechanisms including differential privacy and secure aggregation were evaluated with practical recommendations provided",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations, though the effectiveness of proposed defenses may vary across different FL deployment scenarios and threat models.",
+   "ids": [
+    "2412.06157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How vulnerable are graph neural networks to membership inference attacks that exploit both node features and graph structure?",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presented the first comprehensive study of membership inference attacks against GNNs, exploiting both node features and graph structure to infer training data membership.",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attacks achieve up to 85% accuracy on real-world graphs",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Graph properties like density and homophily significantly affect vulnerability",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both node features and graph structure can be exploited for inference",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Structure-aware defenses proposed to mitigate GNN-specific vulnerabilities",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Limited to specific GNN architectures and graph types; may not generalize to all graph learning scenarios or dynamic graphs.",
+   "ids": [
+    "2401.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How effective can black-box membership inference attacks be when adversaries have only query access to target models?",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors use ensemble reference models to estimate likelihood ratios without requiring internal model access, and introduce adaptive thresholding techniques that improve attack success rates across different model architectures.",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Method achieves 15-20% higher TPR at 1% FPR compared to prior black-box attacks",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully demonstrated on CIFAR-10, ImageNet, and medical imaging datasets",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Effective across different model architectures without internal access",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adaptive thresholding techniques significantly improve attack performance",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations, though attack effectiveness may depend on the quality and diversity of ensemble reference models available to the adversary.",
+   "ids": [
+    "2408.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can adversaries perform stealthy membership inference attacks on documents in RAG datastores without triggering detection mechanisms?",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present Interrogation Attack (IA), a membership inference technique that crafts natural-text queries answerable only with the target document's presence in the RAG datastore.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successful membership inference achieved with only 30 queries per document",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attack remains stealthy: existing detectors identify adversarial prompts from prior methods up to 76x more frequently than IA-generated prompts",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "2x improvement in TPR@1%FPR over prior inference attacks across diverse RAG configurations",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attack costs less than $0.02 per document inference",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations, though the evaluation appears limited to specific RAG configurations tested and may not generalize to all retrieval systems.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Are commercial machine learning APIs vulnerable to practical black-box membership inference attacks?",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducted black-box attacks requiring only prediction confidence scores against multiple commercial ML APIs including Google Cloud ML, Azure ML, and AWS SageMaker.",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Black-box attacks achieve significant success rates across multiple commercial services",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current API protections are insufficient against membership inference",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Real-world privacy risks documented in production ML deployments",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evidence motivates need for stronger privacy safeguards in commercial ML APIs",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Study limited to APIs exposing confidence scores; attacks may differ with more restricted output access or additional protective measures.",
+   "ids": [
+    "2501.08765"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the privacy risks and membership inference vulnerabilities specific to large language models given their massive training datasets?",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a systematic evaluation of membership inference attacks against LLMs, examining attacks based on perplexity, confidence scores, and generation patterns across both open-source and API-accessible models.",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs are particularly vulnerable to membership inference when trained on deduplicated data",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multiple attack vectors are effective including perplexity-based, confidence score-based, and generation pattern-based attacks",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both open-source and API-accessible models demonstrate vulnerability to membership inference",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proposed mitigation strategies include selective unlearning and output perturbation",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly acknowledge limitations, though the proposed mitigations (selective unlearning, output perturbation) may impact model utility and performance in practical deployments.",
+   "ids": [
+    "2405.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do multimodal models present new attack surfaces for membership inference through cross-modal correlations?",
+   "ids": [
+    "2406.14321"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Demonstrated novel attacks that exploit cross-modal correlations between text, images, and other modalities to infer training data membership.",
+   "ids": [
+    "2406.14321"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Novel attacks exploit cross-modal correlations to infer membership",
+   "ids": [
+    "2406.14321"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methods succeed even when individual modalities are protected",
+   "ids": [
+    "2406.14321"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multimodal fusion creates unique privacy risks not present in unimodal models",
+   "ids": [
+    "2406.14321"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Modality-specific defenses proposed to address multimodal vulnerabilities",
+   "ids": [
+    "2406.14321"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Focused on specific multimodal architectures and fusion approaches; may not cover all multimodal learning paradigms or emerging model types.",
+   "ids": [
+    "2406.14321"
+   ]
+  }
+ ]
+}

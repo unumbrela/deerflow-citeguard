@@ -55,7 +55,8 @@ def run_one(job: dict, out_root: Path, model: str) -> str:
     if (out / "meta.json").exists():
         return f"{out.name}: skipped (done)"
     out.mkdir(parents=True, exist_ok=True)
-    prompt = PROMPT.format(topic=job["topic"], category=job["category"])
+    # Topic files may carry their own prompt (the coverage set fixes an explicit date window per survey).
+    prompt = job.get("prompt") or PROMPT.format(topic=job["topic"], category=job["category"])
     t0 = time.time()
     with (out / "run.log").open("w") as log:
         subprocess.run(

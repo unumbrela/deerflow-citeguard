@@ -1,0 +1,702 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2026) address this with DART, which predicts logits for multiple future masked positions in parallel within a single forward pass, eliminating autoregressive rollouts entirely.",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Shi et al. (2025) propose SpecFormer, which integrates unidirectional and bidirectional attention mechanisms to enable parallel generation without relying on large prefix trees.",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2026) identify that state-of-the-art algorithms exhibit substantial speed degradation under large batch sizes, attributing this to high rejection rates and under-utilization of dynamic token budgets.",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2025) tackle the scheduling problem from a different angle, proposing LAPS-SD, a semi-clairvoyant algorithm that maintains multiple priority queues and allows request preemption.",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ge et al. (2025) propose automatic task detection with heterogeneous draft models, routing prompts dynamically to appropriate drafters aligned with task-specific data, improving draft accuracy by 6% to 50%.",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lu et al. (2025) introduce AdaSD, a hyperparameter-free scheme that dynamically adjusts generation length and acceptance criteria using token entropy and Jensen-Shannon distance, achieving up to 1.46x speedup over vanilla speculative decoding with minimal accuracy degradation.",
+   "ids": [
+    "2512.11280"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Timor et al. (2025) remove the shared-vocabulary constraint entirely, presenting three lossless methods that enable any off-the-shelf model to serve as a drafter, broadening applicability substantially.",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Bhendawade et al. (2025) present Mirror-SD, which launches branch-complete rollouts from early-exit signals in parallel with the target model's suffix, explicitly mapping computation across heterogeneous accelerators (GPU and NPU).",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers converge on the finding that drafting latency has become the primary performance limiter as draft accuracy improves (Bhendawade et al., 2025; Liu et al., 2026; Shi et al., 2025).",
+   "ids": [
+    "2510.13161",
+    "2601.19278",
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature also uniformly demonstrates that batch inference introduces unique challenges requiring specialized solutions beyond single-request optimization (Wang et al., 2026; Li et al., 2025; Shi et al., 2025).",
+   "ids": [
+    "2608.24004",
+    "2505.17074",
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Liu et al. (2026) advocate for diffusion-inspired parallel generation eliminating autoregressive rollouts, Bhendawade et al. (2025) argue for maintaining autoregressive drafting but parallelizing execution across heterogeneous hardware.",
+   "ids": [
+    "2601.19278",
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wang et al. (2026) emphasize structure-isolated drafting to reduce rejection rates, whereas Ge et al. (2025) focus on task-specific heterogeneous drafters to improve accuracy.",
+   "ids": [
+    "2608.24004",
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding be made adaptive without requiring additional training, hyperparameter tuning, or prior model analysis?",
+   "ids": [
+    "2512.11280"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes Adaptive Speculative Decoding (AdaSD), a hyperparameter-free decoding scheme that dynamically adjusts generation length and acceptance criteria during inference using two adaptive components updated in real time based on token entropy and Jensen-Shannon distance.",
+   "ids": [
+    "2512.11280"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing speculative decoding approaches often require additional training, extensive hyperparameter tuning, or prior analysis before deployment",
+   "ids": [
+    "2512.11280"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AdaSD eliminates the need for pre-analysis or fine-tuning and is compatible with off-the-shelf models",
+   "ids": [
+    "2512.11280"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves up to 1.46x speedup over vanilla speculative decoding",
+   "ids": [
+    "2512.11280"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Accuracy degradation is limited to under 1.8%, making it a practical solution for efficient LLM inference",
+   "ids": [
+    "2512.11280"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding be improved for LLM agent batch inference to avoid speed degradation under large batch sizes?",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents systematic analysis of speculative decoding for LLM agents, identifying two dominant factors of speedup degradation.",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Proposes AgentSpec with structure-isolated drafting and redundancy-aware budget allocation, evaluating on five workloads and four models from four LLM families in vLLM.",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "State-of-the-art speculative decoding algorithms exhibit substantial speed degradation under large batch sizes",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High rejection rate of speculative tokens and under-utilization of dynamic token budgets are the two dominant factors of speedup degradation",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AgentSpec's structure-isolated drafting constrains speculation to semantically coherent segments, reducing irrelevant semantic path drafts and achieving extremely low rejection rate",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Redundancy-aware budget allocation exploits agent-level information to better utilize dynamically-free token budget during agent inference",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "AgentSpec demonstrates superiority over state-of-the-art methods across five different workloads and four models from four LLM families",
+   "ids": [
+    "2608.24004"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding methods remove the shared-vocabulary constraint between drafter and target models?",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents three new speculative decoding methods that remove the shared-vocabulary constraint, preserving the target distribution (lossless) and working with off-the-shelf models without requiring additional training or modifications.",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Empirically evaluated on summarization, programming, and long-context tasks.",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing SD approaches require drafter and target models to share the same vocabulary, limiting the pool of possible drafters",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The three proposed methods are lossless and work with off-the-shelf models without requiring additional training or modifications",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The algorithms demonstrate significant speedups of up to 2.8x over standard autoregressive decoding",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The work enables any off-the-shelf model to serve as a drafter, substantially broadening SD framework applicability",
+   "ids": [
+    "2502.05202"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding be optimized for diverse downstream tasks while balancing acceptance rate and decoding speed?",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes a speculative decoding algorithm with automatic task partitioning that categorizes downstream tasks into sub-tasks and assigns them to heterogeneous draft models.",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Incorporates an online lightweight prompt classifier to dynamically route prompts to appropriate draft models, with each draft model aligned to the target model using task-specific data.",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing methods face a trade-off between acceptance rate and decoding speed due to limited draft model capacity",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed method improves draft accuracy by 6% to 50% over vanilla speculative decoding",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves a speedup of 1.10x to 2.64x in LLM inference",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Automatic task categorization and heterogeneous draft models enhance consistency of inference results across diverse tasks",
+   "ids": [
+    "2505.08600"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding methods optimize efficient inference in large language models?",
+   "ids": [
+    "2411.13157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Conducts a comprehensive survey of speculative decoding methods, categorizing them into draft-centric and model-centric approaches.",
+   "ids": [
+    "2411.13157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Analyzes key ideas associated with each method and their potential for scaling LLM inference.",
+   "ids": [
+    "2411.13157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Speculative decoding addresses computational inefficiencies in traditional autoregressive decoding through a two-stage framework of drafting and verification",
+   "ids": [
+    "2411.13157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A smaller, efficient model generates a preliminary draft which is then refined by a larger, more sophisticated model",
+   "ids": [
+    "2411.13157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methods can be categorized into draft-centric and model-centric approaches",
+   "ids": [
+    "2411.13157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The survey aims to guide future research in optimizing speculative decoding for real-world LLM applications",
+   "ids": [
+    "2411.13157"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can drafting latency in speculative decoding be reduced by eliminating autoregressive rollouts while preserving high draft accuracy?",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes DART, which leverages parallel generation inspired by diffusion-based LLMs.",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DART predicts logits for multiple future masked positions in parallel within a single forward pass based on hidden states of the target model, eliminating autoregressive rollouts.",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "An efficient tree pruning algorithm constructs high-quality draft token trees with N-gram-enforced semantic continuity.",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing model-based draft designs like EAGLE3 improve accuracy at the cost of multi-step autoregressive inference, resulting in high drafting latency and making the drafting stage a performance bottleneck",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DART predicts logits for multiple future masked positions in parallel within a single forward pass, eliminating autoregressive rollouts in the draft model while preserving a lightweight design",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "An efficient tree pruning algorithm constructs high-quality draft token trees with N-gram-enforced semantic continuity based on parallel logit predictions",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves a 2.03x–3.44x wall-clock time speedup across multiple datasets",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DART surpasses EAGLE3 by 30% on average, offering a practical speculative decoding framework",
+   "ids": [
+    "2601.19278"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding break the latency-acceptance tradeoff that limits gains from increasing draft size?",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents Mirror-SD, an inference algorithm that launches branch-complete rollouts from early-exit signals in parallel with the target model's suffix and explicitly maps computation across heterogeneous accelerators (GPU and NPU).",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach adds speculative streaming so the draft emits multiple tokens per step, combining parallel heterogeneous execution with multi-token speculative streaming.",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prior methods (Medusa, Hydra, EAGLE) partially reduce draft cost but either degrade acceptance or introduce overheads that limit scaling",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Mirror-SD converts speculation into two complementary execution pipelines: the draft speculates forward continuations for the target to verify, while the target simultaneously speculates correction paths for the draft",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Speculative streaming enables the draft to emit multiple tokens per step, cutting draft latency without weakening acceptance semantics",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 2.8x-5.8x wall-time speedups across diverse tasks on SpecBench with server-scale models from 14B to 66B parameters",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Offers a 30% average relative improvement over the strongest baseline, EAGLE3",
+   "ids": [
+    "2510.13161"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding be performed effectively with low verification resources and low scheduling costs in large-batch scenarios?",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes SpecFormer, a novel architecture integrating unidirectional and bidirectional attention mechanisms that combines autoregressive information extraction with parallel generation benefits of non-autoregressive models.",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach eliminates reliance on large prefix trees and is evaluated through lossless speculative decoding experiments across models of various scales.",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current speculative decoding methods assume considerable computing power and generate complex draft trees, but batching has become a superior alternative that compresses idle computing power",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SpecFormer enables parallel generation on draft sequences without relying on large prefix trees",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The architecture achieves consistent acceleration even in large-batch scenarios",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SpecFormer sets a new standard for scaling LLM inference with lower training demands and reduced computational costs",
+   "ids": [
+    "2511.20340"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can inference requests be efficiently scheduled in LLM serving systems to minimize average inference latency when execution time depends on both output length and token acceptance rate?",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes LAPS-SD, a semi-clairvoyant request scheduling algorithm that maintains multiple priority queues and allows request execution preemption across different queues.",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The algorithm adaptively schedules requests according to their features during decoding, accurately estimating execution time once token acceptance rate becomes stable.",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing work estimates execution time based solely on predicted output length, which is inaccurate because execution time depends on both output length and token acceptance rate",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LAPS-SD maintains multiple priority queues and allows request execution preemption when token acceptance rate is dynamic and execution time is difficult to estimate",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Once token acceptance rate becomes stable, LAPS-SD can accurately estimate execution time and schedule requests accordingly",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LAPS-SD reduces inference latency by approximately 39% compared to state-of-the-art scheduling methods",
+   "ids": [
+    "2505.17074"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can speculative decoding accelerate LLM inference while maintaining original distributions?",
+   "ids": [
+    "2503.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: This tutorial presents a comprehensive introduction to speculative decoding techniques, including draft model architectures and verification strategies.",
+   "ids": [
+    "2503.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Explores acceleration potential and future research directions through systematic analysis of the SD paradigm.",
+   "ids": [
+    "2503.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Speculative decoding drafts multiple future tokens and verifies them in parallel, enabling simultaneous decoding of multiple tokens per step",
+   "ids": [
+    "2503.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach achieves 2x-4x speedups in LLM inference while maintaining original distributions",
+   "ids": [
+    "2503.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unlike traditional autoregressive decoding, SD mitigates high inference latency through an innovative decoding paradigm",
+   "ids": [
+    "2503.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The tutorial covers latest techniques including draft model architectures and verification strategies",
+   "ids": [
+    "2503.00491"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Future research directions in speculative decoding are explored for more efficient LLM inference",
+   "ids": [
+    "2503.00491"
+   ]
+  }
+ ]
+}

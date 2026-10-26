@@ -1,0 +1,210 @@
+{
+ "stats": {
+  "ambiguous": 5,
+  "unmatched": 9
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Lassila et al. (2025) develop BASE and G-BASE, tractable approximations of Bayes-optimal membership inference that match or exceed prior state-of-the-art performance at significantly lower computational cost.",
+   "ids": [
+    "2505.24089"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2024) address scalability from a measurement perspective, proposing a discrepancy-based privacy metric that does not require training multiple models and can be applied to large ImageNet classification models in-the-wild.",
+   "ids": [
+    "2405.15140"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Naseh et al. (2025) present the first stealthy membership inference attack targeting RAG datastores, crafting natural-text queries that remain answerable only when the target document is present.",
+   "ids": [
+    "2502.00306"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Emelyanov et al. (2025) extend perturbation-based membership inference to multimodal large language models, addressing the instabilities introduced through multimodal component adaptation and distribution shifts.",
+   "ids": [
+    "2512.02786"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2025) tackle visual self-supervised models in realistic black-box settings where training paradigms and implementation details are unknown, proposing PartCrop which exploits shared part-aware capabilities across different self-supervised learning approaches.",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Lassila et al. (2025) derive the Bayes-optimal membership inference rule for node-level attacks against graph neural networks, showing that BASE and the prior RMIA attack are equivalent under specific hyperparameter settings—providing a principled justification for existing methods.",
+   "ids": [
+    "2505.24089"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Suri et al. (2024) provide theoretical analysis demonstrating that black-box access is insufficient for optimal membership inference when models are trained with stochastic gradient descent, establishing that white-box access to model parameters is necessary for optimal attacks.",
+   "ids": [
+    "2406.11544"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Tao and Shokri (2024) introduce Range Membership Inference Attacks (RaMIAs) that test whether a model was trained on any data within a specified semantic range, rather than exact matches.",
+   "ids": [
+    "2408.05131"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2024) propose a discrepancy-based metric that upper-bounds the advantage of a family of membership inference attacks, providing theoretical guarantees on privacy leakage without requiring multiple model training.",
+   "ids": [
+    "2405.15140"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Galichin et al. (2024) propose GLiRA, exploiting the connection between vulnerability to distillation-based functionality stealing and susceptibility to membership inference.",
+   "ids": [
+    "2405.07562"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Du et al. (2025), Lassila et al. (2025), and Wu et al. (2024) all demonstrate that their methods achieve superior or comparable performance with dramatically reduced computational requirements.",
+   "ids": [
+    "2505.24089",
+    "2405.15140"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also broad agreement that traditional black-box assumptions are insufficient—Suri et al. (2024) prove white-box access is theoretically necessary for optimal inference, while multiple papers develop methods that exploit additional information sources.",
+   "ids": [
+    "2406.11544"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Similarly, white-box methods (Suri et al., 2024) and black-box methods (Galichin et al., 2024) address different adversary capabilities rather than contradicting each other.",
+   "ids": [
+    "2406.11544",
+    "2405.07562"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Defense evaluation is limited: While Zhu et al. (2025) evaluate defenses including early stopping, differential privacy, and shrinking crop scale range, most papers focus on attack development without comprehensive defense analysis.",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Galichin et al. (2024) note their evaluation is limited to image classification and may not generalize to NLP or tabular data.",
+   "ids": [
+    "2405.07562"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Real-world deployment constraints: Several papers acknowledge their methods were tested on toy encoders or small-scale datasets (Zhu et al., 2025), with scaling studies being relatively recent additions.",
+   "ids": [
+    "2505.10351"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Multimodal-specific challenges: Emelyanov et al. (2025) identify distribution shifts in multimodal datasets affecting MIA performance, but the framework's performance on unseen modalities and sensitivity to perturbation strategies remain open questions.",
+   "ids": [
+    "2512.02786"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Parameter access assumptions: Suri et al. (2024) advocate for white-box methods but acknowledge that parameter access may not be available in many practical scenarios.",
+   "ids": [
+    "2406.11544"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can privacy risk measurement be improved beyond exact-match membership inference to capture privacy leakage from similar or partially overlapping memorized data?",
+   "ids": [
+    "2408.05131"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Range Membership Inference Attacks (RaMIAs) that test whether a model was trained on any data within a specified semantic range, formulating a principled statistical test for the composite hypotheses involved.",
+   "ids": [
+    "2408.05131"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RaMIAs capture privacy loss more accurately and comprehensively than standard membership inference attacks",
+   "ids": [
+    "2408.05131"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach works across various data types including tabular, image, and language data",
+   "ids": [
+    "2408.05131"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RaMIAs enable more meaningful privacy auditing of machine learning algorithms",
+   "ids": [
+    "2408.05131"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Similar or partially overlapping memorized data can reveal the same private information as exact matches",
+   "ids": [
+    "2408.05131"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The effectiveness of RaMIAs depends on appropriately defining ranges based on the semantics of privacy for each application domain.",
+   "ids": [
+    "2408.05131"
+   ]
+  }
+ ]
+}

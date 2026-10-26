@@ -1,0 +1,584 @@
+{
+ "stats": {
+  "ambiguous": 4,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "BYOL (Giakoumoglou et al., 2025) challenged this assumption by demonstrating that a student-teacher framework with exponential moving average updates could learn effective representations without any negative pairs.",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Barlow Twins (Zbontar et al., 2025) took a different approach based on redundancy reduction, minimizing deviation of the cross-correlation matrix from identity.",
+   "ids": [
+    "2502.01098"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "VicReg (Bardes et al., 2025) further simplified this line of work by explicitly regularizing variance, invariance, and covariance properties of representations.",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2026) formalized three necessary principles for self-supervised visual representation learning: observation (semantic invariance across augmented views), prediction (patch-level spatial prediction), and regularization (representational non-degeneracy).",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Munia et al. (2026) conducted a comprehensive study revealing that pretrain-finetuning consistently outperforms joint training when labeled data is limited, while joint training becomes competitive with substantial labeled data and constrained computational resources.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "SimCLR (Chen et al., 2025) identified data augmentation, projection head design, and batch size as critical factors for success in contrastive learning.",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "CPC research (van den Oord et al., 2026) demonstrated that with proper tuning of encoder architecture, negative sampling strategies, and data augmentation, Contrastive Predictive Coding remains competitive with modern methods, particularly for dense prediction tasks that benefit from representations capturing both local and global image structure.",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "He et al. (2025) demonstrated that MAE learns powerful representations by masking random patches and reconstructing missing pixels, with performance scaling significantly with model size and dataset scale.",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Giakoumoglou et al. (2026) argue that all three principles (observation, prediction, regularization) are necessary, while other successful methods drop one or more of these components.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The comparison between pretrain-finetune and joint training paradigms reveals context-dependent preferences rather than a clear winner, with Munia et al. (2026) showing that the optimal choice depends on data availability and computational constraints.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can explicit regularization of variance, invariance, and covariance produce effective self-supervised representations?",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Explicitly enforces variance to prevent collapse, invariance to augmented views, and covariance to decorrelate representation dimensions without negative samples or momentum encoders.",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves competitive performance with leading self-supervised methods",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Simpler to implement and tune than alternative approaches",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Works well across different architectures and datasets",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Each regularization term demonstrably contributes to representation quality",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Three-term regularization requires balancing hyperparameters; explicit regularization may constrain representation flexibility in some scenarios.",
+   "ids": [
+    "2501.00987"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we learn effective visual representations through contrastive learning without labels?",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Maximizes agreement between differently augmented views of the same image via a contrastive loss in the latent space, with systematic comparison of design choices.",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Data augmentation is critical for learning strong representations",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Projection head design significantly impacts performance",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Larger batch sizes improve contrastive learning effectiveness",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves competitive performance with previous self-supervised methods on ImageNet",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Learned representations transfer well to downstream tasks",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Requires large batch sizes for optimal performance; computational cost may be high for resource-constrained settings.",
+   "ids": [
+    "2506.05432"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can self-supervised learning achieve state-of-the-art results without relying on negative samples?",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: BYOL uses two neural networks (online and target networks) where the online network is trained to predict the target network's representation of an image under a different augmented view, with the target network's parameters being an exponential moving average of the online network's parameters.",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BYOL achieves state-of-the-art results without relying on negative samples",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach challenges the prevailing notion that contrastive learning requires negative samples to avoid collapse",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BYOL achieves excellent performance on image classification, object detection, and semantic segmentation tasks",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The exponential moving average of target network parameters is crucial for preventing collapse",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive ablation studies and theoretical analysis help explain why BYOL works",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The theoretical understanding of why BYOL avoids collapse without negative samples is not fully resolved; the method may require careful hyperparameter tuning for optimal performance.",
+   "ids": [
+    "2508.09876"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What principles are necessary for learning visual representations without labels?",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors formalize three principles (observation, prediction, regularization) and prove theoretical claims about their necessity through mathematical analysis, paired with controlled experiments including patch-retrieval evaluation.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Combining observation and prediction without regularization admits the constant encoder as a global minimizer under negative-free alignment",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The observation and prediction objectives are gradient-complementary and structurally non-conflicting at the encoder output",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The momentum encoder converges to the same fixed point as the online encoder and provides no collapse guarantee at convergence",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Contrastive alignment provides only self-limiting collapse resistance, formalized via an explicit gradient-decay argument",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Every major self-supervised method is a special case of a single unified energy decomposition",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The theoretical framework may not capture all practical considerations in real-world applications; the scale studied may not generalize to all scenarios.",
+   "ids": [
+    "2608.08309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How scalable and effective are masked autoencoders for self-supervised learning with Vision Transformers?",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors study MAE by masking random patches of input images and reconstructing missing pixels, investigating scalability across different model sizes and dataset scales with detailed ablation studies on masking strategies, decoder design, and training protocols.",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAE benefits significantly from larger models and more data, showing strong scalability",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAE achieves state-of-the-art performance on ImageNet classification and downstream detection tasks",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MAE develops strong semantic understanding despite operating purely at the pixel level",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The simplicity and effectiveness of MAE make it attractive for large-scale self-supervised learning",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Masking strategies, decoder design, and training protocols all significantly impact performance",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: MAE is specifically designed for Vision Transformers and may not transfer directly to other architectures; pixel-level reconstruction may not be optimal for all downstream tasks.",
+   "ids": [
+    "2511.12345"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Which training paradigm works better for self-supervised learning: pretrain-then-finetune or joint training?",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conduct a comprehensive empirical study comparing pretrain-finetuning and joint training approaches across multiple SSL methods and vision tasks, analyzing representation quality, convergence behavior, and transfer learning capabilities.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pretrain-finetuning consistently outperforms joint training in most settings, particularly when labeled data is limited",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Joint training becomes competitive when substantial labeled data is available and computational resources are constrained",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The two approaches exhibit different convergence behaviors and representation quality characteristics",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transfer learning capabilities differ significantly between the two paradigms",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Practical guidelines can be derived for choosing between paradigms based on data availability, computational budget, and task requirements",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The study is limited to specific SSL methods and vision tasks tested; computational constraints may affect the generalizability of findings to resource-rich environments.",
+   "ids": [
+    "2607.13192"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do architectural choices, negative sampling strategies, and data augmentation techniques impact Contrastive Predictive Coding performance for visual representation learning?",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors investigate CPC through extensive experiments across multiple vision benchmarks, systematically varying encoder architecture, negative sampling strategies, and data augmentation techniques while analyzing their impact on representation quality.",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CPC remains competitive with modern self-supervised methods when properly tuned",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Encoder architecture choice significantly influences CPC performance",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The number of negative samples is a critical factor affecting representation quality",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CPC excels at learning representations that capture both local and global image structure",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CPC is particularly suitable for dense prediction tasks due to its structural understanding",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: CPC requires careful tuning to achieve competitive performance; may be less effective than newer methods without proper hyperparameter optimization.",
+   "ids": [
+    "2609.01511"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can redundancy reduction principles enable effective self-supervised learning without contrastive pairs?",
+   "ids": [
+    "2502.01098"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Passes two distorted views through a neural network and minimizes deviation of the cross-correlation matrix between outputs from the identity matrix.",
+   "ids": [
+    "2502.01098"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Does not require large batch sizes",
+   "ids": [
+    "2502.01098"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Not sensitive to weight decay or other regularization techniques",
+   "ids": [
+    "2502.01098"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves competitive performance with state-of-the-art methods on ImageNet",
+   "ids": [
+    "2502.01098"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Theoretical connection to information maximization principles established",
+   "ids": [
+    "2502.01098"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Cross-correlation matrix computation may be computationally intensive for very large representations; theoretical framework may not generalize to all architectures.",
+   "ids": [
+    "2502.01098"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1416 @@
+{
+ "model": "qwen3.5-plus",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JudgeArena unifies the four specified benchmarks under a single interface with swappable judges and comprehensive metadata logging.",
+   "usage": {
+    "prompt_tokens": 501,
+    "completion_tokens": 37,
+    "total_tokens": 538,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 501
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2605.19196",
+   "label": "partial",
+   "reason": "The abstract confirms the critique of coarse human-preference agreement and the need for fine-grained benchmarks, but it does not mention or support the claim regarding a 'reproducibility crisis'.",
+   "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 49,
+    "total_tokens": 601,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 552
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that mechanistic analysis shows judge scores vary systematically with anchor distance and that static references can induce misleading decision boundaries.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 37,
+    "total_tokens": 496,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current LLM judges are unreliable with accuracies below 55% and highlights especially poor performance on evidence verification.",
+   "usage": {
+    "prompt_tokens": 542,
+    "completion_tokens": 39,
+    "total_tokens": 581,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 542
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of dual-path LLM-Judge evaluation for refinement and reports significant gains in user engagement and content consumption verified by a one-week A/B experiment.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 46,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of rigorous LLM judge evaluation with measured inter-rater agreement and reports a strong correlation between offline simulation metrics and online outcomes.",
+   "usage": {
+    "prompt_tokens": 546,
+    "completion_tokens": 48,
+    "total_tokens": 594,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 546
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2506.05062",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of over 600 annotated speeches, the comparison between LLMs and human judges, and the specific finding that larger models approximate individual judgments but differ in overall behavior.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 52,
+    "total_tokens": 475,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2610.32702",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LLM-judge evaluations show improved counseling quality and stressor grounding over strong baselines.",
+   "usage": {
+    "prompt_tokens": 374,
+    "completion_tokens": 34,
+    "total_tokens": 408,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 374
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2605.30333",
+   "label": "supported",
+   "reason": "The abstract explicitly states that COMPOSE achieves the best overall performance under LLM-judge evaluation compared to baselines.",
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 34,
+    "total_tokens": 506,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 472
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2608.02620",
+   "label": "partial",
+   "reason": "The abstract supports the claim about configuration transparency but does not mention reference selection.",
+   "usage": {
+    "prompt_tokens": 486,
+    "completion_tokens": 26,
+    "total_tokens": 512,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 486
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2608.14950",
+   "label": "partial",
+   "reason": "The abstract strongly supports the emphasis on reference selection but does not explicitly mention configuration transparency.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 28,
+    "total_tokens": 487,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly reports a strong correlation between offline simulation metrics and online outcomes, demonstrating that eval-driven development reliably predicts production impact.",
+   "usage": {
+    "prompt_tokens": 542,
+    "completion_tokens": 36,
+    "total_tokens": 578,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 542
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2606.12984",
+   "label": "partial",
+   "reason": "The abstract confirms the paper used online A/B testing to validate improvements but does not explicitly state the broader finding that offline metrics *must* be validated against online outcomes to ensure reliability.",
+   "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 47,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 446
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2607.04008",
+   "label": "partial",
+   "reason": "The abstract highlights the need for multi-metric evaluation based on this specific study's findings, but the sentence overstates this as a 'broad agreement' across the field which the abstract does not claim.",
+   "usage": {
+    "prompt_tokens": 467,
+    "completion_tokens": 52,
+    "total_tokens": 519,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 467
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract confirms SkillChain achieves significant gains in response quality and user engagement via its LLM-Judge evaluation, aligning with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 461,
+    "completion_tokens": 41,
+    "total_tokens": 502,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 461
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2606.08867",
+   "label": "contradicted",
+   "reason": "The abstract claims the LLM judge evaluation is rigorous with consistency optimization and correlates well with online outcomes, contradicting the sentence's claim that judges are unreliable with accuracies below 55%.",
+   "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 52,
+    "total_tokens": 609,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 557
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments show LLM judges are unreliable with overall accuracies below 55% on fine-grained failure modes.",
+   "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 39,
+    "total_tokens": 595,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 556
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2608.02620",
+   "label": "unsupported",
+   "reason": "The abstract describes a framework for evaluating LLM judges but does not mention using them as optimization targets within training loops or discuss circular evaluation.",
+   "usage": {
+    "prompt_tokens": 505,
+    "completion_tokens": 38,
+    "total_tokens": 543,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 505
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2608.14950",
+   "label": "unsupported",
+   "reason": "The abstract discusses calibrating LLM judges for auditing but does not mention using them as optimization targets within training loops or address circular evaluation.",
+   "usage": {
+    "prompt_tokens": 478,
+    "completion_tokens": 39,
+    "total_tokens": 517,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 478
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2606.12984",
+   "label": "unsupported",
+   "reason": "The abstract describes using an LLM-Judge for iterative refinement within SkillChain but does not discuss the broader literature trend of using LLM judges as optimization targets or raise concerns about circular evaluation.",
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 49,
+    "total_tokens": 511,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 462
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2605.19196",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states that the paper offers 'actionable guidance' for building reliable evaluation pipelines, contradicting the sentence's claim of 'limited guidance'.",
+   "usage": {
+    "prompt_tokens": 534,
+    "completion_tokens": 44,
+    "total_tokens": 578,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 534
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JudgeArena's tuned judge configurations were validated on human preference datasets in multilingual settings.",
+   "usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 33,
+    "total_tokens": 515,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 482
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2608.02620",
+   "label": "partial",
+   "reason": "The abstract confirms the claim of offering a low-cost alternative but does not mention that the computational and financial costs receive limited systematic treatment.",
+   "usage": {
+    "prompt_tokens": 491,
+    "completion_tokens": 37,
+    "total_tokens": 528,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 491
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2605.30333",
+   "label": "supported",
+   "reason": "The abstract explicitly defines the goal as generating plausible future theorem-like claims by combining scientific citation context and formal theorem dependency structure.",
+   "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 35,
+    "total_tokens": 493,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 458
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2605.30333",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms COMPOSE is a dual-graph framework conditioning on citation and formal structure, evaluated via retrieval and LLM-judge on a 108K dataset.",
+   "usage": {
+    "prompt_tokens": 480,
+    "completion_tokens": 46,
+    "total_tokens": 526,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 480
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2605.30333",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments show COMPOSE outperforms strong baselines on retrieval to real future papers.",
+   "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 33,
+    "total_tokens": 481,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 448
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2605.30333",
+   "label": "supported",
+   "reason": "The abstract explicitly states that COMPOSE achieves the best overall performance under LLM-judge evaluation.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 30,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2605.30333",
+   "label": "supported",
+   "reason": "The abstract explicitly states that COMPOSE produces 'more grounded and mathematically richer outputs' compared to baselines.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 34,
+    "total_tokens": 481,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2605.30333",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes that 'future mathematical generation benefits from combining scientific context with formal structure'.",
+   "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 30,
+    "total_tokens": 475,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 445
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly presents a unified framework that bridges offline development with online impact for customer support AI agents at a 100M+ user scale using an evaluation-driven approach.",
+   "usage": {
+    "prompt_tokens": 519,
+    "completion_tokens": 46,
+    "total_tokens": 565,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 519
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the unified framework at Nubank, lists all four specified technical components, and mentions validation via large-scale A/B testing.",
+   "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 46,
+    "total_tokens": 596,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 550
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 'evaluation-pipeline quality directly determines iteration velocity' as a central insight of the paper.",
+   "usage": {
+    "prompt_tokens": 508,
+    "completion_tokens": 34,
+    "total_tokens": 542,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 508
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the card-delivery deployment yielded a 37 percentage-point improvement in AI transactional Net Promoter Score and a 29 percentage-point gain in self-service rate.",
+   "usage": {
+    "prompt_tokens": 526,
+    "completion_tokens": 50,
+    "total_tokens": 576,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 526
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly states there is a 'strong correlation between offline simulation metrics and online outcomes' which demonstrates that evaluation-driven development reliably predicts production impact.",
+   "usage": {
+    "prompt_tokens": 510,
+    "completion_tokens": 40,
+    "total_tokens": 550,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 510
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2606.08867",
+   "label": "supported",
+   "reason": "The abstract explicitly states that on most use cases, AI satisfaction reaches within a few percentage points of expert human agents.",
+   "usage": {
+    "prompt_tokens": 512,
+    "completion_tokens": 34,
+    "total_tokens": 546,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 512
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper addresses automating skill evolution for heterogeneous user intents to avoid infeasible manual engineering.",
+   "usage": {
+    "prompt_tokens": 425,
+    "completion_tokens": 34,
+    "total_tokens": 459,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 425
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly details the three stages (Skill Creator, Route Optimizer, Body Refiner), the dual-path LLM-Judge evaluation method, and the deployment on a production-scale e-commerce assistant.",
+   "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 51,
+    "total_tokens": 498,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 447
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SkillChain, when deployed on a production-scale e-commerce image assistant, substantially improves aggregate response quality.",
+   "usage": {
+    "prompt_tokens": 414,
+    "completion_tokens": 36,
+    "total_tokens": 450,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 414
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SkillChain achieves its strongest gains on structural compliance and content quality.",
+   "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 29,
+    "total_tokens": 439,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 410
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a one-week online A/B experiment confirmed significant gains in user engagement, content consumption, and long-term retention.",
+   "usage": {
+    "prompt_tokens": 419,
+    "completion_tokens": 38,
+    "total_tokens": 457,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 419
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2606.12984",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SkillChain closes the production feedback loop on skill evolution through a three-stage automation process.",
+   "usage": {
+    "prompt_tokens": 412,
+    "completion_tokens": 33,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 412
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2610.32702",
+   "label": "supported",
+   "reason": "The abstract explicitly defines 'Stressor Blindness' as the failure to track the seeker's underlying problem and proposes CounselPlex as the solution to this specific issue.",
+   "usage": {
+    "prompt_tokens": 360,
+    "completion_tokens": 45,
+    "total_tokens": 405,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 360
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2610.32702",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the framework's name, mechanisms (stressor state update/injection and RPSA), and evaluation method as described in the abstract.",
+   "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 42,
+    "total_tokens": 437,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 395
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2610.32702",
+   "label": "supported",
+   "reason": "The abstract explicitly defines 'Stressor Blindness' as a failure in existing models and states that the proposed CounselPlex framework is designed to be 'stressor-aware' to address this specific issue.",
+   "usage": {
+    "prompt_tokens": 347,
+    "completion_tokens": 52,
+    "total_tokens": 399,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 347
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2610.32702",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LLM-judge evaluations show improved counseling quality over strong baselines.",
+   "usage": {
+    "prompt_tokens": 346,
+    "completion_tokens": 30,
+    "total_tokens": 376,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 346
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2610.32702",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LLM-judge evaluations show improved stressor grounding over strong baselines.",
+   "usage": {
+    "prompt_tokens": 347,
+    "completion_tokens": 31,
+    "total_tokens": 378,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 347
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2610.32702",
+   "label": "supported",
+   "reason": "The abstract explicitly states that RPSA improves performance at longer turn depths.",
+   "usage": {
+    "prompt_tokens": 342,
+    "completion_tokens": 26,
+    "total_tokens": 368,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 342
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces JudgeArena as a unified framework designed to enable systematic studies on how design choices affect conclusions about model quality.",
+   "usage": {
+    "prompt_tokens": 475,
+    "completion_tokens": 36,
+    "total_tokens": 511,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 475
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JudgeArena unifies the listed benchmarks with swappable judges and metadata logging, and that its configurations were validated on human preference datasets in English and multilingual settings.",
+   "usage": {
+    "prompt_tokens": 501,
+    "completion_tokens": 48,
+    "total_tokens": 549,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 501
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JudgeArena unifies four specific benchmarks under a single interface with swappable judges and metadata logging for reproducibility.",
+   "usage": {
+    "prompt_tokens": 469,
+    "completion_tokens": 38,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 469
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the framework enables systematic studies of judge choices and allows any model accessible via vLLM, llama.cpp, or OpenRouter to serve as both candidate and judge.",
+   "usage": {
+    "prompt_tokens": 471,
+    "completion_tokens": 48,
+    "total_tokens": 519,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 471
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JudgeArena includes tuned judge configurations for open models that match or outperform closed-model judges in both English and multilingual settings.",
+   "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 41,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 464
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2608.02620",
+   "label": "supported",
+   "reason": "The abstract explicitly states that JudgeArena can simulate LMArena Elo scores with high accuracy by combining human annotations with LLM-judge evaluations, offering a low-cost alternative.",
+   "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 45,
+    "total_tokens": 521,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 476
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2506.05062",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents an analysis of how state-of-the-art LLMs compare to human judges on the task of evaluating debate speeches.",
+   "usage": {
+    "prompt_tokens": 385,
+    "completion_tokens": 41,
+    "total_tokens": 426,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 385
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2506.05062",
+   "label": "supported",
+   "reason": "The abstract explicitly mentions the dataset of over 600 annotated speeches, the comparison of model judgment behavior against humans, and the investigation into generating persuasive speeches.",
+   "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 43,
+    "total_tokens": 449,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 406
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2506.05062",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evaluating debate speeches requires deep understanding at multiple levels, listing argument strength, coherence, organization, style, and tone.",
+   "usage": {
+    "prompt_tokens": 386,
+    "completion_tokens": 39,
+    "total_tokens": 425,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 386
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2506.05062",
+   "label": "supported",
+   "reason": "The abstract explicitly states that larger models can approximate individual human judgments in some respects.",
+   "usage": {
+    "prompt_tokens": 376,
+    "completion_tokens": 27,
+    "total_tokens": 403,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 376
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2506.05062",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the findings reveal LLMs 'differ substantially in their overall judgment behavior' compared to human judges.",
+   "usage": {
+    "prompt_tokens": 377,
+    "completion_tokens": 37,
+    "total_tokens": 414,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 377
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2506.05062",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the investigation shows models may perform at a human level on the task of generating persuasive, opinionated speeches.",
+   "usage": {
+    "prompt_tokens": 380,
+    "completion_tokens": 37,
+    "total_tokens": 417,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 380
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's goal is to evaluate the reliability of LLM judges for deep research agents and introduces a taxonomy of failure modes in agentic environments.",
+   "usage": {
+    "prompt_tokens": 523,
+    "completion_tokens": 44,
+    "total_tokens": 567,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 523
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the REFLECT benchmark's methodology, taxonomy, intervention approach, and evaluation scope as described in the abstract.",
+   "usage": {
+    "prompt_tokens": 545,
+    "completion_tokens": 36,
+    "total_tokens": 581,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 545
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current LLM judges are unreliable and that even the best-performing models achieve overall accuracies below 55% across reasoning, tool-use, and report-quality failures.",
+   "usage": {
+    "prompt_tokens": 531,
+    "completion_tokens": 50,
+    "total_tokens": 581,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 531
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current LLM judges have 'especially poor performance on evidence verification'.",
+   "usage": {
+    "prompt_tokens": 506,
+    "completion_tokens": 30,
+    "total_tokens": 536,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 506
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing meta-evaluations fall short due to reliance on coarse, subjective human-preference agreement and a focus on instruction-following or verifiable tasks rather than open-ended agent executions.",
+   "usage": {
+    "prompt_tokens": 529,
+    "completion_tokens": 52,
+    "total_tokens": 581,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 529
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2605.19196",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the taxonomy and findings expose systematic judge limitations and reveal tradeoffs in cost and reliability.",
+   "usage": {
+    "prompt_tokens": 514,
+    "completion_tokens": 33,
+    "total_tokens": 547,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 514
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies 'context-induced miscalibration' from 'irrelevant in-context reference examples' as the problem studied and introduces DA-RAC as the method to address it.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 53,
+    "total_tokens": 495,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The sentence accurately summarizes the method, mechanism, and evaluation details explicitly stated in the abstract.",
+   "usage": {
+    "prompt_tokens": 473,
+    "completion_tokens": 29,
+    "total_tokens": 502,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 473
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DA-RAC improves calibration and reduces false-pass risk relative to zero-shot, chain-of-thought evaluation, and static-anchor baselines.",
+   "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 43,
+    "total_tokens": 485,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 442
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that mechanistic analysis shows judge scores vary systematically with anchor distance.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 28,
+    "total_tokens": 451,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 'static references can induce misleading decision boundaries' in its mechanistic analysis findings.",
+   "usage": {
+    "prompt_tokens": 423,
+    "completion_tokens": 32,
+    "total_tokens": 455,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 423
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2608.14950",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LLM-judgement requires calibrated, auditable reference selection and that judgments should be grounded in relevant, inspectable, and contestable interpretive artifacts.",
+   "usage": {
+    "prompt_tokens": 439,
+    "completion_tokens": 47,
+    "total_tokens": 486,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 439
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents a system for LongEval-RAG where all retrieved evidence and citations must remain within an organizer-provided candidate set.",
+   "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 41,
+    "total_tokens": 518,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 477
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly lists all the system components and evaluation protocols mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 498,
+    "completion_tokens": 33,
+    "total_tokens": 531,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 498
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the rule-minilm variant obtains the highest BERTScore, retrieval precision, nugget coverage, and average grade.",
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 39,
+    "total_tokens": 501,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 462
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the main gain comes from pairing stable rule-based evidence units with sentence-level neural selection before generation.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 35,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the supplementary LLM-judge evaluation emphasizes different systems than the primary gold-answer and nugget-based evaluation.",
+   "usage": {
+    "prompt_tokens": 460,
+    "completion_tokens": 37,
+    "total_tokens": 497,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 460
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2607.04008",
+   "label": "supported",
+   "reason": "The abstract explicitly concludes by highlighting the need for multi-metric RAG evaluation based on the study's findings.",
+   "usage": {
+    "prompt_tokens": 454,
+    "completion_tokens": 33,
+    "total_tokens": 487,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 454
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2609.12872",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DuplexDrama is the first dataset to simultaneously cover the four dimensions listed in the sentence.",
+   "usage": {
+    "prompt_tokens": 457,
+    "completion_tokens": 35,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 457
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2609.12872",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the 4-stage pipeline, all four covered dimensions, and the validation via internal full-duplex model training mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 42,
+    "total_tokens": 519,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 477
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2609.12872",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DuplexDrama is the first synthesized spoken dialogue dataset covering the four specified dimensions.",
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 33,
+    "total_tokens": 492,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 459
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2609.12872",
+   "label": "supported",
+   "reason": "The abstract explicitly states the dataset contains more than 2,000 hours of audio data with a 64-voice timbre pool spanning 13 personas and 5 age buckets.",
+   "usage": {
+    "prompt_tokens": 457,
+    "completion_tokens": 51,
+    "total_tokens": 508,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 457
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2609.12872",
+   "label": "supported",
+   "reason": "The abstract explicitly states that '3.8% of all turns carry at least one full-duplex behavior' in the DuplexDrama dataset.",
+   "usage": {
+    "prompt_tokens": 441,
+    "completion_tokens": 42,
+    "total_tokens": 483,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 441
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2609.12872",
+   "label": "supported",
+   "reason": "The abstract explicitly states the release of a curated subset of 6,400 bilingual dialogues totaling 800 hours to advance full-duplex spoken dialogue model research.",
+   "usage": {
+    "prompt_tokens": 456,
+    "completion_tokens": 48,
+    "total_tokens": 504,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 456
+    }
+   }
+  }
+ ]
+}
