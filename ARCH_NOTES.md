@@ -100,5 +100,5 @@
 ## 10. 工具输出外置机制(影响可靠性,务必了解)
 
 - `config.yaml -> tool_output`:单个工具输出超过 `externalize_min_chars`(默认 12000)时,完整内容存到 `/mnt/user-data/outputs/.tool-results/*.log`,模型只收到**结构摘要 + 首尾片段**。`read_file` 豁免,模型可以主动读回原文。
-- 风险:模型若不去读原文,会基于摘要里没有的内容继续推进,并可能**编造**。baseline-03 中 10 篇论文只露出 1 篇,其余 9 篇被编造(见 BASELINE.md)。
+- 风险:模型若不去读原文,会基于摘要里没有的内容继续推进,并可能**编造**。baseline-03 中 10 篇论文只有首条完整,其余 9 篇被编造;摘要里其实明确写了"用 read_file 读回原文",模型没照做(见 BASELINE.md)。
 - 相关代码:`agents/middlewares/tool_output_budget_middleware.py`、`tool_output_synopsis.py`、`TOOL_OUTPUT_PERSISTENCE.md`。
