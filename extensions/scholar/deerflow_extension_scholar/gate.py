@@ -165,7 +165,10 @@ class CitationGateMiddleware(AgentMiddleware):
         text = host.read_text(encoding="utf-8", errors="replace")
         result = verify_report(text, search["papers"])
         known = {p.get(k, "") for p in search["papers"] for k in ("published", "updated")}
-        result["date_errors"] = wrong_year_dates(text, [search.get("retrieved_on", ""), (search.get("window") or {}).get("start") or ""], known)
+        window = search.get("window") or {}
+        # The window end is an anchor too: a coverage task ended its window on 2025-10-26 while searching on 2026-10-26.
+        anchors = [search.get("retrieved_on", ""), window.get("start") or "", window.get("end") or ""]
+        result["date_errors"] = wrong_year_dates(text, anchors, known)
         # h02-r2 in round two cited 9 of 10 retrieved papers; the user asked for 10, so that is a shortfall the code can see.
         result["expected"] = min(search.get("requested") or 0, len(search["papers"]))
         result["missing"] = result["not_cited"][: max(0, result["expected"] - (result["cited"] - len(result["unknown_ids"])))]

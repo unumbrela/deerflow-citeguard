@@ -117,6 +117,16 @@ def test_wrong_year_in_report_is_rejected(setup):
     assert store.read_log(THREAD)[-1]["date_errors"] == ["2025-10-26 (search used 2026-10-26 / 2024-10-26)"]
 
 
+def test_window_end_sharing_todays_month_day_is_accepted(setup):
+    store, outputs = setup
+    search = store.load_search(THREAD)
+    store.save_search(THREAD, {**search, "retrieved_on": "2026-10-26", "window": {"start": "2023-10-27", "end": "2025-10-26"}})
+    report = "**Date**: 2026-10-26\nPublished between 2023-10-27 and 2025-10-26.\n" + GOOD
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=report), RUNTIME)["messages"]
+    assert "Citation check passed" in msg.content
+    assert store.read_log(THREAD)[-1]["date_errors"] == []
+
+
 def test_report_short_of_the_requested_count_is_rejected(setup):
     store, outputs = setup
     search = store.load_search(THREAD)

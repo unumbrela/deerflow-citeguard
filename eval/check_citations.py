@@ -31,7 +31,7 @@ from pathlib import Path
 
 NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
 ID_RE = re.compile(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})|arXiv:(\d{4}\.\d{4,5})")
-REF_RE = re.compile(r"(.+?)\((\d{4})\)\.\s+(.+?)\s+\*?arXiv", re.S)
+REF_RE = re.compile(r"(.+?)\((\d{4})[a-z]?\)\.\s+(.+?)\s+\*?arXiv", re.S)
 
 
 CACHE = Path(__file__).resolve().parent / ".arxiv_cache.json"  # arXiv id -> metadata; each id is fetched once
