@@ -1,5 +1,7 @@
 # deerflow-citeguard
 
+[![test](https://github.com/unumbrela/deerflow-citeguard/actions/workflows/test.yml/badge.svg)](https://github.com/unumbrela/deerflow-citeguard/actions/workflows/test.yml)
+
 让「文献综述 Agent」不再编造论文。
 
 在字节开源的多 Agent 框架 [DeerFlow](https://github.com/bytedance/deer-flow) 上,我量化了它的文献综述 skill 会不会编造引用,查清了原因,并用确定性的代码把这条失败路径堵死。**不改 DeerFlow 核心**,以 custom skill 的方式覆盖上游同名 skill。
