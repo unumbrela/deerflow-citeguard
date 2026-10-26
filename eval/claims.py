@@ -3,6 +3,7 @@
 Usage:
     python3 -I claims.py extract --suite holdout-v21           # <run>/claims.json, offline
     python3 -I claims.py judge --suite holdout-v21 [--model M] # <run>/claim_judgments.json, calls the model API
+    python3 -I claims.py summary --suites holdout3-v3 holdout3-base
     python3 -I claims.py sample --suites holdout-v21 holdout-base --n 100 --out annotation/claims-100.csv
     python3 -I claims.py agreement --labels annotation/claims-100.csv
 
@@ -26,6 +27,7 @@ import re
 import sys
 import time
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -227,18 +229,51 @@ def cmd_judge(args) -> None:
         out_f = run / "claim_judgments.json"
         if out_f.exists() and not args.force:
             continue
-        judged = []
-        for n, claim in enumerate(payload["claims"]):
-            for pid in claim["ids"]:
-                paper = abstracts.get(pid)
-                if paper is None:  # not a real arXiv paper: the citation check already counts it
-                    judged.append({"claim": n, "id": pid, "label": "no_paper", "reason": "id not on arXiv"})
-                    continue
-                verdict = call_judge(JUDGE_PROMPT.format(title=paper["title"], abstract=paper["abstract"], claim=claim["text"]), args.model, key)
-                judged.append({"claim": n, "id": pid, **verdict})
+        pairs = [(n, pid) for n, claim in enumerate(payload["claims"]) for pid in claim["ids"]]
+
+        def judge_one(pair: tuple[int, str]) -> dict:
+            n, pid = pair
+            paper = abstracts.get(pid)
+            if paper is None:  # not a real arXiv paper: the citation check already counts it
+                return {"claim": n, "id": pid, "label": "no_paper", "reason": "id not on arXiv"}
+            prompt = JUDGE_PROMPT.format(title=paper["title"], abstract=paper["abstract"], claim=payload["claims"][n]["text"])
+            return {"claim": n, "id": pid, **call_judge(prompt, args.model, key)}
+
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            judged = list(pool.map(judge_one, pairs))
         out_f.write_text(json.dumps({"model": args.model, "judgments": judged}, ensure_ascii=False, indent=1))
         counts = {lab: sum(j["label"] == lab for j in judged) for lab in (*LABELS, "no_paper", "error")}
         print(f"{run.name}: {counts}")
+
+
+def cmd_summary(args) -> None:
+    """Support rates per arm: all pairs, and only pairs whose citation is verified (real id, matching title)."""
+    out = {}
+    for suite in args.suites:
+        totals = {"all": dict.fromkeys((*LABELS, "no_paper", "error"), 0), "verified_only": dict.fromkeys((*LABELS, "no_paper", "error"), 0)}
+        per_run = []
+        for run in runs_of(suite):
+            f = run / "claim_judgments.json"
+            if not f.exists():
+                continue
+            cit_f = run / "citations.json"
+            verified = {r["id"] for r in json.loads(cit_f.read_text())["rows"] if r.get("verified")} if cit_f.exists() else set()
+            judged = json.loads(f.read_text())["judgments"]
+            for j in judged:
+                totals["all"][j["label"]] += 1
+                if j["id"] in verified:
+                    totals["verified_only"][j["label"]] += 1
+            ok = [j for j in judged if j["label"] in LABELS]
+            if ok:
+                per_run.append(sum(j["label"] == "supported" for j in ok) / len(ok))
+        summary = {}
+        for scope, counts in totals.items():
+            n = sum(counts[lab] for lab in LABELS)
+            summary[scope] = {"pairs": n, **{f"{lab}_rate": round(counts[lab] / n, 3) if n else None for lab in LABELS}, "errors": counts["error"], "no_paper": counts["no_paper"]}
+        summary["runs"] = len(per_run)
+        summary["supported_rate_per_run_min_median"] = [round(min(per_run), 3), round(sorted(per_run)[len(per_run) // 2], 3)] if per_run else None
+        out[suite] = summary
+    print(json.dumps(out, indent=1))
 
 
 def cmd_sample(args) -> None:
@@ -308,6 +343,9 @@ def main() -> None:
     j.add_argument("--suite", required=True)
     j.add_argument("--model", default="qwen3.5-plus")
     j.add_argument("--force", action="store_true")
+    j.add_argument("--workers", type=int, default=8, help="parallel judge calls")
+    m = sub.add_parser("summary")
+    m.add_argument("--suites", nargs="+", required=True)
     s = sub.add_parser("sample")
     s.add_argument("--suites", nargs="+", required=True)
     s.add_argument("--n", type=int, default=100)
@@ -316,7 +354,7 @@ def main() -> None:
     a = sub.add_parser("agreement")
     a.add_argument("--labels", required=True)
     args = ap.parse_args()
-    {"extract": cmd_extract, "judge": cmd_judge, "sample": cmd_sample, "agreement": cmd_agreement}[args.cmd](args)
+    {"extract": cmd_extract, "judge": cmd_judge, "summary": cmd_summary, "sample": cmd_sample, "agreement": cmd_agreement}[args.cmd](args)
 
 
 if __name__ == "__main__":

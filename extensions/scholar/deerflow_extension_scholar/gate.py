@@ -89,6 +89,10 @@ def _rejection(path: str, result: dict, attempt: int, max_blocks: int, unchanged
         ]
     if result["date_errors"]:
         lines.append(f"These dates contradict the search (wrong year): {', '.join(result['date_errors'])}. Use the dates in `report_dates` from the search result.")
+    if result["missing"]:
+        lines.append(
+            f"The user asked for {result['expected']} papers and the search found them, but the report cites only {result['cited']}. Add these retrieved papers (their data is in the subagent results): {', '.join(result['missing'])}."
+        )
     if result["warnings"]:
         lines.append("Also fix: " + "; ".join(result["warnings"][:MAX_WARNINGS_SHOWN]))
     lines.append("Save the file, then call present_files again.")
@@ -101,6 +105,8 @@ def _released(path: str, result: dict, max_blocks: int) -> str:
         problems.append(f"these arXiv ids could not be traced to the search and may be invented: {', '.join(result['unknown_ids'])}")
     if result["date_errors"]:
         problems.append(f"these dates are wrong: {', '.join(result['date_errors'])}")
+    if result["missing"]:
+        problems.append(f"the report covers {result['cited']} of the {result['expected']} papers requested")
     return f"{MARKER} CITATION CHECK FAILED again after {max_blocks} rejections; {path} is presented as-is. You MUST tell the user plainly that {'; and '.join(problems)}."
 
 
@@ -160,10 +166,13 @@ class CitationGateMiddleware(AgentMiddleware):
         result = verify_report(text, search["papers"])
         known = {p.get(k, "") for p in search["papers"] for k in ("published", "updated")}
         result["date_errors"] = wrong_year_dates(text, [search.get("retrieved_on", ""), (search.get("window") or {}).get("start") or ""], known)
-        result["ok"] = result["ok"] and not result["date_errors"]
+        # h02-r2 in round two cited 9 of 10 retrieved papers; the user asked for 10, so that is a shortfall the code can see.
+        result["expected"] = min(search.get("requested") or 0, len(search["papers"]))
+        result["missing"] = result["not_cited"][: max(0, result["expected"] - (result["cited"] - len(result["unknown_ids"])))]
+        result["ok"] = result["ok"] and not result["date_errors"] and not result["missing"]
         prior = [r for r in self.store.read_log(thread_id) if r.get("search_id") == search["search_id"] and r.get("event") == "rejected"]
         digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
-        record = {"search_id": search["search_id"], "path": virtual, "sha256": digest, "at": time.time(), **{k: result[k] for k in ("cited", "retrieved", "unknown_ids", "date_errors", "warnings")}}
+        record = {"search_id": search["search_id"], "path": virtual, "sha256": digest, "at": time.time(), **{k: result[k] for k in ("cited", "retrieved", "unknown_ids", "date_errors", "missing", "warnings")}}
         if result["ok"]:
             self.store.log(thread_id, {"event": "accepted", **record})
             return False, _accepted(result)

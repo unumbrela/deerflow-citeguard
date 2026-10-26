@@ -115,3 +115,20 @@ def test_wrong_year_in_report_is_rejected(setup):
     assert "NOT verified" in msg.content and "2025-10-26 (search used 2026-10-26 / 2024-10-26)" in msg.content
     assert "may be invented" not in msg.content
     assert store.read_log(THREAD)[-1]["date_errors"] == ["2025-10-26 (search used 2026-10-26 / 2024-10-26)"]
+
+
+def test_report_short_of_the_requested_count_is_rejected(setup):
+    store, outputs = setup
+    search = store.load_search(THREAD)
+    store.save_search(THREAD, {**search, "requested": 2})
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=GOOD), RUNTIME)["messages"]
+    assert "asked for 2 papers" in msg.content and "2501.00002" in msg.content
+    assert store.read_log(THREAD)[-1]["missing"] == ["2501.00002"]
+
+
+def test_fewer_requested_than_retrieved_is_fine(setup):
+    store, outputs = setup
+    search = store.load_search(THREAD)
+    store.save_search(THREAD, {**search, "requested": 1})
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=GOOD), RUNTIME)["messages"]
+    assert "Citation check passed" in msg.content
