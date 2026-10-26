@@ -3,6 +3,7 @@
 Usage:
     python3 -I build_coverage_set.py select   # candidate surveys by a fixed rule -> coverage_candidates.json
     python3 -I build_coverage_set.py gold     # each survey's in-scope arXiv references -> coverage_topics.json
+    python3 -I build_coverage_set.py tasks    # agent prompts, split by a fixed rule -> coverage_{dev,holdout}.json
 
 Selection rule (fixed in advance, no hand-picking): for each category, arXiv's top results by relevance for
 title "survey", submitted in the window below, primary category equal to the category. A survey is kept when
@@ -10,6 +11,11 @@ its LaTeX source is available and at least MIN_GOLD of its arXiv-id references f
 
 Gold set of a survey = references that carry an arXiv id in its .bbl/.bib, whose primary category equals the
 survey's, and that were submitted in the two years before the survey (the window the agent is asked to search).
+The window ends the day before the survey was submitted, so the survey itself cannot be retrieved and cited.
+
+Split rule (fixed before any P2 work): surveys whose runs were already inspected by hand (INSPECTED) go to the
+development set; it is filled up to DEV_SIZE by sha256 of the survey id. The rest are held out: used only for
+milestone comparisons, and their runs are not read while improving the agent.
 References without an arXiv id are invisible to this metric; that biases the key towards preprints, so the
 metric is only used to compare configurations, not as an absolute recall.
 
@@ -20,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import gzip
+import hashlib
 import io
 import json
 import re
@@ -28,7 +35,7 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -37,6 +44,9 @@ CATEGORIES = ["cs.CL", "cs.AI", "cs.LG", "cs.CV", "cs.IR", "cs.SE", "cs.RO", "cs
 SUBMITTED = ("202507010000", "202606302359")
 PER_CATEGORY = 6
 MIN_GOLD = 12
+DEV_SIZE = 8
+INSPECTED = {"2507.06203", "2510.27157", "2602.06966"}  # c02, c13, c17: failures read while designing P2
+PROMPT = "Do a systematic literature review on {topic}. 10 papers, published between {start_date} and {end_date}, category {category}, APA format. Save to default output location."
 UA = {"User-Agent": "deerflow-citeguard-eval/0.1 (+https://github.com/unumbrela/deerflow-citeguard)"}
 NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
 REF_ID_RE = re.compile(r"(?<![\d.])(\d{4}\.\d{4,5})(?:v\d+)?(?!\d)")
@@ -117,6 +127,23 @@ def reference_ids(survey_id: str) -> list[str] | None:
     return [i for i in dict.fromkeys(REF_ID_RE.findall("\n".join(texts))) if i != survey_id]
 
 
+def window(published: str) -> tuple[date, date]:
+    """Two years before the survey, ending the day before it was submitted."""
+    day = date.fromisoformat(published)
+    start = day.replace(year=day.year - 2, day=28) if (day.month, day.day) == (2, 29) else day.replace(year=day.year - 2)
+    return start, day - timedelta(days=1)
+
+
+def split(topics: list[dict], dev_size: int = DEV_SIZE, inspected: set[str] = INSPECTED) -> tuple[list[dict], list[dict]]:
+    ranked = sorted(topics, key=lambda t: (t["survey"] not in inspected, hashlib.sha256(t["survey"].encode()).hexdigest()))
+    dev = {t["id"] for t in ranked[:dev_size]}
+    return [t for t in topics if t["id"] in dev], [t for t in topics if t["id"] not in dev]
+
+
+def task(t: dict) -> dict:
+    return {"id": t["id"], "topic": t["topic"], "category": t["category"], "prompt": PROMPT.format(**t)}
+
+
 def cmd_select(_args) -> None:
     candidates = []
     for cat in CATEGORIES:
@@ -137,8 +164,7 @@ def cmd_gold(_args) -> None:
         if refs is None:
             dropped.append({"id": c["id"], "reason": "no LaTeX bibliography"})
             continue
-        end = date.fromisoformat(c["published"])
-        start = end.replace(year=end.year - 2) if not (end.month == 2 and end.day == 29) else end.replace(year=end.year - 2, day=28)
+        start, end = window(c["published"])
         meta = metadata(refs)
         gold = [i for i, m in meta.items() if m["primary_category"] == c["category"] and start.isoformat() <= m["published"] <= end.isoformat()]
         if len(gold) < MIN_GOLD:
@@ -150,8 +176,15 @@ def cmd_gold(_args) -> None:
     print(f"kept {len(topics)}, dropped {len(dropped)}")
 
 
+def cmd_tasks(_args) -> None:
+    topics = json.loads((HERE / "coverage_topics.json").read_text())["topics"]
+    for name, part in zip(("dev", "holdout"), split(topics)):
+        (HERE / f"coverage_{name}.json").write_text(json.dumps([task(t) for t in part], ensure_ascii=False, indent=1))
+        print(f"{name}: {len(part)} topics {[t['id'] for t in part]}")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["select", "gold"])
+    ap.add_argument("cmd", choices=["select", "gold", "tasks"])
     args = ap.parse_args()
-    {"select": cmd_select, "gold": cmd_gold}[args.cmd](args)
+    {"select": cmd_select, "gold": cmd_gold, "tasks": cmd_tasks}[args.cmd](args)

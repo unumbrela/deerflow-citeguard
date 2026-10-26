@@ -46,6 +46,24 @@ class ReferenceIdsTest(unittest.TestCase):
             self.assertIsNone(b.reference_ids("2507.00002"))
 
 
+class TasksTest(unittest.TestCase):
+    def test_window_ends_the_day_before_the_survey(self):
+        self.assertEqual(b.window("2025-10-14"), (b.date(2023, 10, 14), b.date(2025, 10, 13)))
+        self.assertEqual(b.window("2024-02-29"), (b.date(2022, 2, 28), b.date(2024, 2, 28)))
+
+    def test_split_puts_inspected_surveys_in_dev_and_is_order_independent(self):
+        topics = [{"id": f"c{i:02d}", "survey": f"2601.{i:05d}"} for i in range(1, 11)]
+        dev, held = b.split(topics, dev_size=4, inspected={"2601.00007"})
+        self.assertEqual(len(dev), 4)
+        self.assertIn("c07", [t["id"] for t in dev])
+        self.assertEqual({t["id"] for t in dev} | {t["id"] for t in held}, {t["id"] for t in topics})
+        self.assertEqual(b.split(topics[::-1], dev_size=4, inspected={"2601.00007"})[0][::-1], dev)
+
+    def test_task_prompt_carries_the_window(self):
+        t = {"id": "c01", "topic": "X", "category": "cs.CL", "start_date": "2023-10-14", "end_date": "2025-10-13"}
+        self.assertIn("published between 2023-10-14 and 2025-10-13, category cs.CL", b.task(t)["prompt"])
+
+
 if __name__ == "__main__":
     unittest.main()
 

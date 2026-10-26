@@ -1,5 +1,5 @@
 {
- "rule": "(fixed in advance, no hand-picking): for each category, arXiv's top results by relevance for\ntitle \"survey\", submitted in the window below, primary category equal to the category. A survey is kept when\nits LaTeX source is available and at least MIN_GOLD of its arXiv-id references fall in the task's scope.\n\nGold set of a survey = references that carry an arXiv id in its .bbl/.bib, whose primary category equals the\nsurvey's, and that were submitted in the two years before the survey (the window the agent is asked to search).\nReferences without an arXiv id are invisible to this metric; that biases the key towards preprints, so the\nmetric is only used to compare configurations, not as an absolute recall.",
+ "rule": "(fixed in advance, no hand-picking): for each category, arXiv's top results by relevance for\ntitle \"survey\", submitted in the window below, primary category equal to the category. A survey is kept when\nits LaTeX source is available and at least MIN_GOLD of its arXiv-id references fall in the task's scope.\n\nGold set of a survey = references that carry an arXiv id in its .bbl/.bib, whose primary category equals the\nsurvey's, and that were submitted in the two years before the survey (the window the agent is asked to search).\nThe window ends the day before the survey was submitted, so the survey itself cannot be retrieved and cited.\n\nSplit rule (fixed before any P2 work): surveys whose runs were already inspected by hand (INSPECTED) go to the\ndevelopment set; it is filled up to DEV_SIZE by sha256 of the survey id. The rest are held out: used only for\nmilestone comparisons, and their runs are not read while improving the agent.\nReferences without an arXiv id are invisible to this metric; that biases the key towards preprints, so the\nmetric is only used to compare configurations, not as an absolute recall.",
  "dropped": [
   {
    "id": "2507.06085",
@@ -126,7 +126,7 @@
    "topic": "Parallel Reasoning",
    "category": "cs.CL",
    "start_date": "2023-10-14",
-   "end_date": "2025-10-14",
+   "end_date": "2025-10-13",
    "refs_with_arxiv_id": 63,
    "gold": [
     "2311.08252",
@@ -168,7 +168,7 @@
    "topic": "Latent Reasoning",
    "category": "cs.CL",
    "start_date": "2023-07-08",
-   "end_date": "2025-07-08",
+   "end_date": "2025-07-07",
    "refs_with_arxiv_id": 104,
    "gold": [
     "2307.08621",
@@ -237,7 +237,7 @@
    "topic": "Diffusion Language Models",
    "category": "cs.CL",
    "start_date": "2023-08-14",
-   "end_date": "2025-08-14",
+   "end_date": "2025-08-13",
    "refs_with_arxiv_id": 131,
    "gold": [
     "2308.12219",
@@ -288,7 +288,7 @@
    "topic": "LLM Mid-Training",
    "category": "cs.CL",
    "start_date": "2023-10-27",
-   "end_date": "2025-10-27",
+   "end_date": "2025-10-26",
    "refs_with_arxiv_id": 58,
    "gold": [
     "2402.16819",
@@ -333,7 +333,7 @@
    "topic": "Deep Research",
    "category": "cs.CL",
    "start_date": "2023-11-24",
-   "end_date": "2025-11-24",
+   "end_date": "2025-11-23",
    "refs_with_arxiv_id": 407,
    "gold": [
     "2312.07000",
@@ -523,7 +523,7 @@
    "topic": "AI Scientists",
    "category": "cs.AI",
    "start_date": "2023-10-27",
-   "end_date": "2025-10-27",
+   "end_date": "2025-10-26",
    "refs_with_arxiv_id": 59,
    "gold": [
     "2404.04326",
@@ -560,7 +560,7 @@
    "topic": "LLM/Agent-as-Data-Analyst",
    "category": "cs.AI",
    "start_date": "2023-09-28",
-   "end_date": "2025-09-28",
+   "end_date": "2025-09-27",
    "refs_with_arxiv_id": 557,
    "gold": [
     "2310.05028",
@@ -610,7 +610,7 @@
    "topic": "Advances in GRPO for Generation Models",
    "category": "cs.LG",
    "start_date": "2024-02-21",
-   "end_date": "2026-02-21",
+   "end_date": "2026-02-20",
    "refs_with_arxiv_id": 189,
    "gold": [
     "2501.06848",
@@ -659,7 +659,7 @@
    "topic": "Domain Generalization for Semantic Segmentation",
    "category": "cs.CV",
    "start_date": "2023-10-03",
-   "end_date": "2025-10-03",
+   "end_date": "2025-10-02",
    "refs_with_arxiv_id": 292,
    "gold": [
     "2310.01852",
@@ -687,7 +687,7 @@
    "topic": "Towards Open World Detection",
    "category": "cs.CV",
    "start_date": "2023-08-22",
-   "end_date": "2025-08-22",
+   "end_date": "2025-08-21",
    "refs_with_arxiv_id": 48,
    "gold": [
     "2308.12966",
@@ -718,7 +718,7 @@
    "topic": "3D and 4D World Modeling",
    "category": "cs.CV",
    "start_date": "2023-09-04",
-   "end_date": "2025-09-04",
+   "end_date": "2025-09-03",
    "refs_with_arxiv_id": 400,
    "gold": [
     "2309.09256",
@@ -902,8 +902,7 @@
     "2507.22454",
     "2508.03690",
     "2508.03691",
-    "2508.03692",
-    "2509.03887"
+    "2508.03692"
    ]
   },
   {
@@ -913,7 +912,7 @@
    "topic": "Negative Sampling Techniques in Information Retrieval",
    "category": "cs.IR",
    "start_date": "2024-01-09",
-   "end_date": "2026-01-09",
+   "end_date": "2026-01-08",
    "refs_with_arxiv_id": 58,
    "gold": [
     "2402.11855",
@@ -940,7 +939,7 @@
    "topic": "Generative Recommendation: Data, Model, and Tasks",
    "category": "cs.IR",
    "start_date": "2023-10-31",
-   "end_date": "2025-10-31",
+   "end_date": "2025-10-30",
    "refs_with_arxiv_id": 91,
    "gold": [
     "2310.20487",
@@ -1008,7 +1007,7 @@
    "topic": "A Goal-Driven Survey on Root Cause Analysis",
    "category": "cs.SE",
    "start_date": "2023-10-22",
-   "end_date": "2025-10-22",
+   "end_date": "2025-10-21",
    "refs_with_arxiv_id": 28,
    "gold": [
     "2406.11213",
@@ -1033,7 +1032,7 @@
    "topic": "Code Generation with LLM-based Agents",
    "category": "cs.SE",
    "start_date": "2023-07-31",
-   "end_date": "2025-07-31",
+   "end_date": "2025-07-30",
    "refs_with_arxiv_id": 95,
    "gold": [
     "2310.02003",
@@ -1085,7 +1084,7 @@
    "topic": "World Action Models",
    "category": "cs.RO",
    "start_date": "2024-06-18",
-   "end_date": "2026-06-18",
+   "end_date": "2026-06-17",
    "refs_with_arxiv_id": 216,
    "gold": [
     "2406.14540",
@@ -1213,7 +1212,7 @@
    "topic": "Embodied Intelligence for Flexible Manufacturing",
    "category": "cs.RO",
    "start_date": "2023-12-24",
-   "end_date": "2025-12-24",
+   "end_date": "2025-12-23",
    "refs_with_arxiv_id": 63,
    "gold": [
     "2403.10506",
@@ -1243,7 +1242,7 @@
    "topic": "World Models for Robotic Manipulation",
    "category": "cs.RO",
    "start_date": "2024-05-27",
-   "end_date": "2026-05-27",
+   "end_date": "2026-05-26",
    "refs_with_arxiv_id": 86,
    "gold": [
     "2406.19464",
@@ -1309,7 +1308,7 @@
    "topic": "Secure Retrieval-Augmented Generation",
    "category": "cs.CR",
    "start_date": "2024-04-09",
-   "end_date": "2026-04-09",
+   "end_date": "2026-04-08",
    "refs_with_arxiv_id": 68,
    "gold": [
     "2405.13401",
