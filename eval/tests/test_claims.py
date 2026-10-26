@@ -75,6 +75,33 @@ class KappaTest(unittest.TestCase):
         self.assertAlmostEqual(claims.cohen_kappa(["a", "a", "b", "b"], ["a", "b", "a", "b"]), 0.0)
 
 
+class JudgePromptV2Test(unittest.TestCase):
+    def setUp(self):
+        self.claims, _ = claims.extract_claims(REPORT)
+        self.marks = claims.citation_marks(REPORT)
+
+    def test_marks_come_from_the_reference_list(self):
+        self.assertEqual(self.marks, {"2501.00001": "Smith, 2025", "2601.00002": "Lee, 2026"})
+
+    def test_multi_citation_sentence_names_this_paper(self):
+        claim = next(c for c in self.claims if len(c["ids"]) == 2)
+        context = claims.pair_context(claim, "2601.00002", self.marks)
+        self.assertEqual(context, 'The sentence cites 2 paper(s); this paper is cited by first author and year as "Lee, 2026".')
+        prompt = claims.judge_prompt("v2", {"title": "T", "abstract": "A"}, claim, "2601.00002", self.marks)
+        self.assertIn(claim["text"], prompt)
+        self.assertIn(context, prompt)
+
+    def test_annotation_block_is_all_about_this_paper(self):
+        claim = next(c for c in self.claims if c["kind"] == "annotation")
+        self.assertIn("summary of this paper", claims.pair_context(claim, claim["ids"][0], self.marks))
+
+    def test_v1_prompt_and_cache_keys_are_unchanged(self):
+        claim = self.claims[0]
+        self.assertNotIn("cites", claims.judge_prompt("v1", {"title": "T", "abstract": "A"}, claim, claim["ids"][0], self.marks).split("Sentence from the review:")[1])
+        self.assertNotEqual(claims._cache_key("m", "1", "t"), claims._cache_key("m", "1", "t", "prompt A"))
+        self.assertNotEqual(claims._cache_key("m", "1", "t", "prompt A"), claims._cache_key("m", "1", "t", "prompt B"))
+
+
 if __name__ == "__main__":
     unittest.main()
 
