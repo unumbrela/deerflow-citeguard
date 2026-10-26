@@ -44,7 +44,7 @@ If the user says "50+ papers", politely cap it at 50 and explain that synthesis 
 
 ### Phase 2: Search arXiv
 
-Call the **scholar search tool** (its name starts with `ext_community_scholar_search`). It is provided by the scholar plugin and runs inside DeerFlow, so no shell is needed. Do **not** search arXiv by any other means (no `web_search`, `web_fetch`, or your own HTTP client), and do not re-filter its output.
+Call the **scholar search tool** (its name starts with `ext_community_scholar_search`), then the **scholar screen tool**. It is provided by the scholar plugin and runs inside DeerFlow, so no shell is needed. Do **not** search arXiv by any other means (no `web_search`, `web_fetch`, or your own HTTP client), and do not re-filter its output.
 
 ```json
 {"query": "<2-3 core keywords>", "max_results": <N>, "category": "<cat, optional>", "years": <N, optional>}
@@ -54,8 +54,18 @@ What it does for you, so you do not have to:
 
 - Turns `years: 2` into an exact start date from today's date. Use `years` for "last N years"; never compute dates yourself. (`start_date` / `end_date` in `YYYY-MM-DD` are also accepted.)
 - Keeps only papers whose **primary** category equals `category` (set `include_cross_lists: true` only if the user explicitly accepts cross-listed papers).
-- Stores the full results for this conversation and splits them into **batches** sized to fit in one tool result.
-- Returns a **compact index** (id, short title, first author, date, category) and the list of batch numbers.
+- Builds a **candidate pool**: about 50 arXiv matches, plus the in-scope papers they cite (citation expansion), ranked by how many candidates cite each one. It returns only counts (`pool`, `citation_expansion`, `shortlist`); there is no paper list yet.
+
+Then call the **scholar screen tool** (its name starts with `ext_community_scholar_screen`) with the user's topic in their own words, plus any inclusion criteria they stated beyond topic, date and category:
+
+```json
+{"topic": "<the user's research topic>", "criteria": "<optional>"}
+```
+
+It scores each shortlisted paper for how central it is to the topic, selects `max_results` papers in code, and returns:
+
+- a **compact index** of the selected papers (id, short title, first author, date, category, `cited_by` = how many candidates cite it) and the list of batch numbers;
+- `screening` counts (identified by search, added from references, shortlisted, screened, score histogram, included) for the report's methodology section.
 
 **This index is the only list of papers that exists.** Every arXiv id you ever write must appear in it. Never type, guess, or "recall" a paper, id, title, or author that is not in the index or in a subagent's output derived from a batch. If you catch yourself about to add a paper from memory, stop: report the real count instead.
 
@@ -63,13 +73,13 @@ What it does for you, so you do not have to:
 
 **Never drop or change `category` or `years` to get more papers.** They are the user's constraints. When the exact phrase returns fewer papers than requested, the tool itself widens the query (all words present, any order) and reports `"match":"phrase+all_terms"`; you do not need to retry.
 
-**Run the search once.** If it returns `count: 0`, tell the user and suggest broadening the topic or removing the category. If it returns fewer than requested, that is the real size of the result set under the user's constraints: do not pad, do not relax the filters, and state the shortfall plainly in the report. If it returns `ERROR: ...`, report the error to the user and stop. The tool already retries transient arXiv rate limits itself.
+**Run the search once, then screen once.** If screening returns `count: 0`, tell the user and suggest broadening the topic or removing the category. If it returns fewer than requested, that is the real size of the result set under the user's constraints: do not pad, do not relax the filters, and state the shortfall plainly in the report. If it returns `ERROR: ...`, report the error to the user and stop. The tool already retries transient arXiv rate limits itself.
 
 ### Phase 3: Extract metadata in parallel
 
 **You MUST delegate extraction to subagents via the `task` tool.** Do not extract metadata yourself.
 
-**Pass batch numbers, not paper text.** Re-typing abstracts into a prompt is exactly where invented papers come from. Dispatch one subagent per batch listed in the search result, using this prompt (only the batch number changes):
+**Pass batch numbers, not paper text.** Re-typing abstracts into a prompt is exactly where invented papers come from. Dispatch one subagent per batch listed in the screen result, using this prompt (only the batch number changes):
 
 ```
 Execute this task: extract structured metadata from arXiv papers.
@@ -118,6 +128,8 @@ If the paper set is too small or too heterogeneous to support thematic synthesis
 - [templates/ieee.md](templates/ieee.md) — IEEE numeric citations. Use when the user targets an IEEE conference or journal, or explicitly asks for IEEE.
 - [templates/bibtex.md](templates/bibtex.md) — BibTeX entries. Use when the user mentions BibTeX, LaTeX, or wants machine-readable references. **Important**: arXiv papers are cited as `@misc`, not `@article` — the BibTeX template covers this explicitly.
 
+**Methodology numbers come from the screen result, never from memory.** In the methodology section, report the search query, category and window, then the `screening` counts as a PRISMA-style flow: identified by search, added from references, shortlisted, screened (with the score histogram), included. If the screen result has a `note` that screening was unavailable, say the papers were selected by co-citation only.
+
 **Dates come from the search result, never from memory.** Fill the report's `Date`, "retrieved on" and "published between" fields from `report_dates` in the search result, and use `report_dates.today` in the file name. Your own sense of today's date is often a year off; the citation gate rejects reports whose dates contradict the search.
 
 Each template contains both the citation rules and a full report structure (executive summary, themes, per-paper annotations, references, methodology section). Follow the template's structure verbatim for the report body, then fill in content from your Phase 3 metadata.
@@ -125,7 +137,7 @@ Each template contains both the citation rules and a full report structure (exec
 ### Phase 5: Save and present
 
 1. Write the full report to `/mnt/user-data/outputs/slr-<topic-slug>-<YYYYMMDD>.md` (lowercase, hyphenated topic; today's date).
-2. Call `present_files` with the report path. **A citation gate checks the report when you present it**: every arXiv id in it must come from this conversation's search.
+2. Call `present_files` with the report path. **A citation gate checks the report when you present it**: every arXiv id in it must be one of the papers the screen tool selected in this conversation.
    - If the result says `CITATION CHECK FAILED ... NOT verified`, the report is **not** done: the user can see the file, but it cites ids that are not from the search. Edit the file first (presenting an unchanged file fails again): remove the listed ids or replace them with papers from the index you have not cited yet, fix every sentence and reference that mentioned them, save, and call `present_files` again. If the user explicitly demanded one of those references and you keep it, tell the user plainly that it is not from the search and could not be verified.
    - If it says `Citation check passed` with entries to fix (title not verbatim, first author missing from the reference line), correct them to match the subagent output exactly, save, and present again.
    - If it says the check failed again after the maximum number of rejections, tell the user plainly which ids could not be verified.
@@ -141,7 +153,7 @@ User: "Do a systematic literature review of recent transformer attention variant
 
 Your flow:
 1. Phase 1: confirm topic (transformer attention variants), scope (20 papers, default time window), format (APA). Ask **one** clarification only if something is missing (e.g. "Any particular time window, or should I default to the last 3 years?").
-2. Phase 2: scholar search with `{"query": "transformer attention", "max_results": 20, "years": 3}`.
+2. Phase 2: scholar search with `{"query": "transformer attention", "max_results": 20, "years": 3}`, then scholar screen with `{"topic": "transformer attention variants"}`.
 3. Phase 3: one subagent per batch, at most 3 per round (e.g. 4 batches = a round of 3, then a round of 1). Aggregate.
 4. Phase 4: read `templates/apa.md`, write the report using its structure, fill in themes + per-paper annotations from Phase 3 metadata.
 5. Phase 5: save to `slr-transformer-attention-20260409.md` and call `present_files`; if the citation gate rejects it, fix the listed ids and present again.
@@ -153,7 +165,7 @@ User: "Survey a few papers on diffusion models for me."
 Your flow:
 1. Phase 1: "a few" is ambiguous. Ask one question: "How many papers would you like — 10, 20, or 30? And any citation format preference (APA is the default)?"
 2. User responds "10, BibTeX".
-3. Phase 2: scholar search with `{"query": "diffusion models", "max_results": 10, "category": "cs.CV"}`.
+3. Phase 2: scholar search with `{"query": "diffusion models", "max_results": 10, "category": "cs.CV"}`, then scholar screen with `{"topic": "diffusion models"}`.
 4. Phase 3: one round, one subagent per batch.
 5. Phase 4: read `templates/bibtex.md`, format with `@misc` entries (not `@article`).
 6. Phase 5: save, verify, present.
@@ -167,8 +179,8 @@ This is a single-paper peer review, not a literature survey. Do not use this ski
 ## Notes
 
 - **Prerequisite: `subagent_enabled` must be `true`**. Phase 3 requires the `task` tool for parallel metadata extraction. This tool is only loaded when `subagent_enabled` is set to `true` in the runtime config (`config.configurable.subagent_enabled`). Without it, the `task` tool will not appear in the available tools and Phase 3 cannot execute as designed.
-- **arXiv only, by design**. This skill does not query Semantic Scholar, PubMed, or Google Scholar. arXiv covers the bulk of CS/ML/physics/math preprints, which is what DeerFlow users most often want to survey. Multi-source academic search belongs in a dedicated MCP server, not inside this skill.
-- **Requires the scholar plugin** (`deerflow-extension-scholar`). It provides the search and batch tools and the citation gate; without it, tell the user the skill is not installed correctly instead of searching by other means.
+- **arXiv papers only**. Every paper in the review is an arXiv paper whose metadata comes from arXiv. The plugin also asks Semantic Scholar which arXiv papers the candidates cite (citation expansion), but never takes paper data from it. PubMed and Google Scholar are not queried.
+- **Requires the scholar plugin** (`deerflow-extension-scholar`). It provides the search, screen and batch tools and the citation gate; without it, tell the user the skill is not installed correctly instead of searching by other means.
 - **Hard upper bound of 50 papers**. Surveys larger than 50 papers degrade in synthesis quality and are better done by splitting into sub-topics.
 - **Phase 3 requires subagents to be enabled**. This skill's parallel extraction step hard-requires the `task` tool, which is only available when `subagent_enabled=true` at runtime. If subagents are unavailable, do not claim to execute the Phase 3 parallel plan; instead, tell the user that subagents must be enabled for the full workflow, or offer to narrow/split the request into a smaller manual review.
 - **Subagent results are strings, not objects**. Always strip the `Task Succeeded. Result: ` / `Task failed.` / `Task timed out.` prefixes before parsing the JSON payload.

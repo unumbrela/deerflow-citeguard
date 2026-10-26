@@ -32,7 +32,7 @@ class FakeFetch:
 async def test_primary_category_filter_overfetches():
     fetch = FakeFetch({"phrase": [paper(i, "cs.CL" if i % 2 else "cs.AI") for i in range(20)]})
     papers, match = await core.select_papers(fetch, query="agent", max_results=8, category="cs.CL", include_cross_lists=False)
-    assert fetch.calls == [("phrase", 50)]
+    assert fetch.calls == [("phrase", 16)]
     assert len(papers) == 8 and all(p["primary_category"] == "cs.CL" for p in papers)
     assert match == "phrase"
 
@@ -132,3 +132,43 @@ def test_user_categories_are_found_and_normalised():
     assert core.user_categories(text) == {"cs.CL", "physics.comp-ph", "quant-ph"}
     assert core.user_categories("Save to report.md, see fig.2 and the cs department") == set()
     assert core.normalise_category("STAT.ml") == "stat.ML" and core.normalise_category(None) is None
+
+
+def test_cocitation_counts_each_citing_paper_once_and_ignores_self_citation():
+    pool = [paper(1), paper(2), paper(3)]
+    refs = {"2501.00001": ["2401.00009", "2401.00009", "2501.00001"], "2501.00002": ["2401.00009", "2501.00001"], "2501.00003": None}
+    assert core.cocitation_counts(pool, refs) == {"2401.00009": 2, "2501.00001": 1}
+
+
+def test_id_prefix_rules_out_references_outside_the_window():
+    window = {"start": "2024-10-25", "end": "2026-10-24"}
+    assert core.may_be_in_window("2410.00001", window) and core.may_be_in_window("2610.12345", window)
+    assert not core.may_be_in_window("2409.99999", window) and not core.may_be_in_window("2611.00001", window)
+    assert not core.may_be_in_window("hep-th/9901001", window)
+    assert core.may_be_in_window("1706.03762", {"start": None, "end": None})
+
+
+def test_refs_to_fetch_skips_pool_papers_and_takes_the_most_cited():
+    pool = [paper(1)]
+    counts = {"2501.00001": 9, "2502.00001": 1, "2502.00002": 5, "2001.00001": 7}
+    assert core.refs_to_fetch(pool, counts, {"start": "2024-10-25", "end": None}, limit=1) == ["2502.00002"]
+
+
+def test_rank_candidates_orders_by_cocitation_then_arxiv_order():
+    pool = [paper(1), paper(2), paper(3)]
+    expanded = [paper(4), paper(2)]
+    ranked = core.rank_candidates(pool, expanded, {"2501.00004": 3, "2501.00003": 1, "2501.00002": 1})
+    assert [p["id"][-1] for p in ranked] == ["4", "2", "3", "1"]
+
+
+def test_select_screened_keeps_cocitation_order_and_never_takes_off_topic():
+    shortlist = [paper(i) for i in range(6)]
+    scores = {"2501.00000": 0, "2501.00001": 1, "2501.00002": 3, "2501.00003": 2, "2501.00004": 0}
+    assert [p["id"][-1] for p in core.select_screened(shortlist, scores, 3)] == ["2", "3", "1"]
+    assert len(core.select_screened(shortlist, scores, 10)) == 3
+
+
+def test_in_scope_and_window_for_expanded_papers():
+    cross = {**paper(1, "cs.AI"), "categories": ["cs.AI", "cs.CL"]}
+    assert not core.in_scope(cross, "cs.CL", False) and core.in_scope(cross, "cs.CL", True) and core.in_scope(cross, None, False)
+    assert core.in_window(paper(1), {"start": "2025-01-01", "end": "2025-01-02"}) and not core.in_window(paper(1), {"start": "2025-01-03", "end": None})

@@ -54,6 +54,12 @@ def main() -> None:
             row["gate_final"] = decisions[-1] if decisions else None
             row["gate_search_rejections"] = events.count("search_rejected")
             row["gate_auto_presented"] = "auto_presented" in events
+        search = run / "search.json"  # v4 plugin: candidate pool, citation expansion and screening table
+        if search.exists():
+            record = json.loads(search.read_text())
+            row["expansion"] = (record.get("expansion") or {}).get("status")
+            row["screening"] = (record.get("screening") or {}).get("status", "not_run")
+            row["included_from_references"] = ((record.get("screening") or {}).get("counts") or {}).get("included_from_references")
         report = run / "report.md"
         if not report.exists():
             row["status"] = "no_report"
@@ -97,6 +103,14 @@ def main() -> None:
             # The search dropped the user's category; the report was saved but not presented, so the gate presented it.
             gate_runs_with_search_rejection=sum(r["gate_search_rejections"] > 0 for r in gated),
             gate_runs_auto_presented=sum(r["gate_auto_presented"] for r in gated),
+        )
+    searched = [r for r in rows if "expansion" in r]
+    if searched:
+        # A degraded run (Semantic Scholar throttled, model call failed) measures the fallback, not the method.
+        summary.update(
+            runs_expansion_ok=sum(r["expansion"] == "ok" for r in searched),
+            runs_screening_ok=sum(r["screening"] == "ok" for r in searched),
+            included_from_references=sum(r["included_from_references"] or 0 for r in searched),
         )
     if ok:
         refs = sum(r["refs"] for r in ok)

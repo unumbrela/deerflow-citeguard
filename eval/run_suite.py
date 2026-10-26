@@ -11,6 +11,7 @@ Citation checking is a separate step (aggregate.py), so this script never calls 
 
 import argparse
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -50,6 +51,20 @@ def download_report(meta: dict, dest: Path) -> bool:
     return True
 
 
+def stream_dropped(thread_id: str) -> bool:
+    """The gateway cancels a run when its SSE stream disconnects (on_disconnect=cancel); this script never disconnects early.
+
+    In suite-coverage-dev-v4-plus two concurrent streams dropped in the same second, together with the
+    gateway's outbound model requests, so a dropped stream is a network fault, not an agent result.
+    """
+    log = subprocess.run(["docker", "exec", "deer-flow-gateway", "grep", "-F", thread_id, "/app/logs/gateway.log"], capture_output=True, text=True).stdout
+    runs = re.findall(r"Run created: run_id=(\S+) thread_id=" + re.escape(thread_id), log)
+    if not runs:
+        return False
+    cancels = subprocess.run(["docker", "exec", "deer-flow-gateway", "grep", "-F", "cancelled (action=interrupt)", "/app/logs/gateway.log"], capture_output=True, text=True).stdout
+    return any(f"Run {run} cancelled" in cancels for run in runs)
+
+
 def run_one(job: dict, out_root: Path, model: str) -> str:
     out = out_root / f"{job['id']}-r{job['rep']}"
     if (out / "meta.json").exists():
@@ -67,9 +82,10 @@ def run_one(job: dict, out_root: Path, model: str) -> str:
     if not (out / "meta.json").exists():
         return f"{out.name}: FAILED before meta ({time.time() - t0:.0f}s)"
     meta = json.loads((out / "meta.json").read_text())
-    gate_log = GATE_LOGS / meta["thread_id"] / "gate.jsonl"
-    if gate_log.exists():
-        shutil.copy(gate_log, out / "gate.jsonl")
+    # gate.jsonl: citation-gate decisions; search.json: candidate pool, expansion and screening table (v4).
+    for name in ("gate.jsonl", "search.json"):
+        if (GATE_LOGS / meta["thread_id"] / name).exists():
+            shutil.copy(GATE_LOGS / meta["thread_id"] / name, out / name)
     got = False
     try:
         got = download_report(meta, out / "report.md")
@@ -82,6 +98,8 @@ def run_one(job: dict, out_root: Path, model: str) -> str:
             infra = " INFRA-FAILURE(provider quota): not an agent result, archive and rerun"
     except Exception:  # noqa: BLE001
         pass
+    if not infra and stream_dropped(meta["thread_id"]):
+        infra = " INFRA-FAILURE(stream dropped): the gateway cancelled the run on a client disconnect this script did not make; archive and rerun"
     return f"{out.name}: {meta['wall_seconds']}s, {meta['usage_attributed_total']['total_tokens']} tok, report={got}, error={meta['error']}{infra}"
 
 

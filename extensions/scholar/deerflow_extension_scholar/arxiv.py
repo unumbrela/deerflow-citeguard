@@ -16,7 +16,7 @@ import xml.etree.ElementTree as ET
 import httpx
 
 ARXIV_ENDPOINT = "https://export.arxiv.org/api/query"
-MAX_RESULTS_UPPER_BOUND = 50
+MAX_RESULTS_UPPER_BOUND = 100
 RETRY_STATUS = frozenset({429, 500, 502, 503, 504})
 REQUEST_TIMEOUT = 15.0
 USER_AGENT = "deerflow-extension-scholar/0.1 (+https://github.com/unumbrela/deerflow-citeguard)"
@@ -97,25 +97,8 @@ def _retry_after(resp: httpx.Response, attempt: int) -> float:
         return 3.0 * 2**attempt
 
 
-async def fetch(
-    client: httpx.AsyncClient,
-    *,
-    query: str,
-    max_results: int,
-    category: str | None,
-    start_date: str | None,
-    end_date: str | None,
-    match: str,
-    deadline: float,
-) -> list[dict]:
-    """One arXiv query, retried on rate limits and transient errors until ``deadline`` (``time.monotonic()``)."""
-    params = {
-        "search_query": build_search_query(query, category, start_date, end_date, match),
-        "start": 0,
-        "max_results": min(max(max_results, 1), MAX_RESULTS_UPPER_BOUND),
-        "sortBy": "relevance",
-        "sortOrder": "descending",
-    }
+async def _get(client: httpx.AsyncClient, params: dict, deadline: float) -> list[dict]:
+    """One arXiv API request, retried on rate limits and transient errors until ``deadline`` (``time.monotonic()``)."""
     attempt = 0
     while True:
         remaining = deadline - time.monotonic()
@@ -135,3 +118,32 @@ async def fetch(
             raise ArxivError(f"arXiv unavailable ({reason}); try again in a minute")
         await asyncio.sleep(wait)
         attempt += 1
+
+
+async def fetch(
+    client: httpx.AsyncClient,
+    *,
+    query: str,
+    max_results: int,
+    category: str | None,
+    start_date: str | None,
+    end_date: str | None,
+    match: str,
+    deadline: float,
+) -> list[dict]:
+    """One relevance-ranked arXiv query."""
+    params = {
+        "search_query": build_search_query(query, category, start_date, end_date, match),
+        "start": 0,
+        "max_results": min(max(max_results, 1), MAX_RESULTS_UPPER_BOUND),
+        "sortBy": "relevance",
+        "sortOrder": "descending",
+    }
+    return await _get(client, params, deadline)
+
+
+async def fetch_ids(client: httpx.AsyncClient, ids: list[str], *, deadline: float) -> list[dict]:
+    """Metadata for known arXiv ids (references found by citation expansion)."""
+    if not ids:
+        return []
+    return await _get(client, {"id_list": ",".join(ids), "start": 0, "max_results": len(ids)}, deadline)

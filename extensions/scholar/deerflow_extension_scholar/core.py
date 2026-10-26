@@ -5,6 +5,12 @@ into a subagent prompt, or from subagent output into a report) it can silently
 invent papers. In measured runs, every run where the search output was swapped
 for a synopsis and never read back fabricated most of its citations. So code,
 not the model, filters, moves and checks paper data.
+
+Retrieval (P2): the papers a review cites used to be exactly what one arXiv
+relevance query returned first, so coverage was fixed by the query. On the
+coverage development set, ranking a 50-paper pool plus its in-scope references
+by how many pool papers cite them, then dropping off-topic papers by a model
+score, picked 21 survey-cited papers where arXiv's top 10 picked 10.
 """
 
 from __future__ import annotations
@@ -18,6 +24,10 @@ DATE_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
 ID_RE = re.compile(r"arxiv\.org/(?:abs|pdf|html)/(\d{4}\.\d{4,5})|arXiv:\s*(\d{4}\.\d{4,5})", re.IGNORECASE)
 BATCH_CHAR_BUDGET = 9000  # stays under the host's 12,000-char tool-output externalization threshold
 BATCH_MAX_PAPERS = 5
+POOL_SIZE = 50  # arXiv candidates per search, whatever the requested count
+SHORTLIST_FACTOR = 3  # candidates screened per requested paper
+SHORTLIST_MAX = 100  # ten scoring calls; the host admits at most twice its granted concurrency at once
+REF_LOOKUP_MAX = 150  # referenced papers whose metadata is fetched (one arXiv request)
 MAX_AUTHORS = 20  # APA 7 lists at most 20 authors; huge collaborations would blow the batch budget
 INDEX_TITLE_CHARS = 80
 
@@ -47,9 +57,10 @@ async def select_papers(fetch: Fetch, *, query: str, max_results: int, category:
     """
     primary_only = bool(category) and not include_cross_lists
     # cat: also matches cross-listed papers; over-fetch so primary filtering can still fill the count.
-    fetch_n = 50 if primary_only else max_results
+    fetch_n = min(2 * max_results, 100) if primary_only else max_results
 
     def keep(found: list[dict]) -> list[dict]:
+        # The arXiv query already required a listing in `category`, so only the primary filter is left to apply.
         return [p for p in found if p.get("primary_category") == category] if primary_only else found
 
     papers = keep(await fetch("phrase", fetch_n))
@@ -59,6 +70,63 @@ async def select_papers(fetch: Fetch, *, query: str, max_results: int, category:
         papers += [p for p in keep(await fetch("all_terms", fetch_n)) if p["id"] not in seen]
         match = "phrase+all_terms"
     return papers[:max_results], match
+
+
+def in_scope(paper: dict, category: str | None, include_cross_lists: bool) -> bool:
+    if not category:
+        return True
+    if include_cross_lists:
+        return category in (paper.get("categories") or [paper.get("primary_category")])
+    return paper.get("primary_category") == category
+
+
+def in_window(paper: dict, window: dict) -> bool:
+    published = paper.get("published", "")
+    return bool(published) and (not window.get("start") or published >= window["start"]) and (not window.get("end") or published <= window["end"])
+
+
+def may_be_in_window(pid: str, window: dict) -> bool:
+    """New-style arXiv ids start with the submission year and month, so most references can be ruled out unfetched."""
+    m = re.fullmatch(r"(\d{2})(\d{2})\.\d{4,5}", pid)
+    if not m:
+        return False
+    yymm = f"20{m[1]}-{m[2]}"
+    return (not window.get("start") or yymm >= window["start"][:7]) and (not window.get("end") or yymm <= window["end"][:7])
+
+
+def cocitation_counts(pool: list[dict], references: dict[str, list[str] | None]) -> dict[str, int]:
+    """How many pool papers cite each paper. Only backward references: nothing after the window can enter."""
+    counts: dict[str, int] = {}
+    for paper in pool:
+        for ref in set(references.get(paper["id"]) or []):
+            if ref != paper["id"]:
+                counts[ref] = counts.get(ref, 0) + 1
+    return counts
+
+
+def refs_to_fetch(pool: list[dict], counts: dict[str, int], window: dict, limit: int = REF_LOOKUP_MAX) -> list[str]:
+    """Referenced papers outside the pool worth a metadata lookup, most-cited first."""
+    have = {p["id"] for p in pool}
+    wanted = [pid for pid in counts if pid not in have and may_be_in_window(pid, window)]
+    return sorted(wanted, key=lambda pid: -counts[pid])[:limit]
+
+
+def rank_candidates(pool: list[dict], expanded: list[dict], counts: dict[str, int]) -> list[dict]:
+    """Pool and in-scope references, most co-cited first; ties keep arXiv's order, pool before references."""
+    union = pool + [p for p in expanded if p["id"] not in {q["id"] for q in pool}]
+    order = {p["id"]: i for i, p in enumerate(union)}
+    return sorted(union, key=lambda p: (-counts.get(p["id"], 0), order[p["id"]]))
+
+
+def shortlist_size(requested: int) -> int:
+    return min(SHORTLIST_FACTOR * requested, SHORTLIST_MAX)
+
+
+def select_screened(shortlist: list[dict], scores: dict[str, int], n: int) -> list[dict]:
+    """Keep the shortlist's co-citation order. Central papers (2-3) first, then peripheral (1); off-topic (0) never."""
+    central = [p for p in shortlist if scores.get(p["id"], 0) >= 2]
+    peripheral = [p for p in shortlist if scores.get(p["id"], 0) == 1]
+    return (central + peripheral)[:n]
 
 
 def batch_paper(paper: dict) -> dict:

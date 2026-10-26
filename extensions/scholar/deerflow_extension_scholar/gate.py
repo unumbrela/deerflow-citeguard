@@ -125,7 +125,7 @@ def _rejection(path: str, result: dict, attempt: int, max_blocks: int, unchanged
         lines.append("The file is unchanged since the previous rejection: presenting it again without editing will fail again.")
     if result["unknown_ids"]:
         lines += [
-            f"These arXiv ids are not in this thread's search results, so they may be invented: {', '.join(result['unknown_ids'])}.",
+            f"These arXiv ids are not among the papers selected for this review (screen tool index), so they may be invented: {', '.join(result['unknown_ids'])}.",
             "Remove those papers (or replace them with papers from the search index that you have not cited yet) and fix every sentence and reference that mentions them.",
             "Never add a paper, id, title or author from memory. If the user explicitly asked for one of these references and you keep it, tell the user plainly that it is not from the search and could not be verified.",
         ]

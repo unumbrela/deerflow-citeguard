@@ -3,6 +3,9 @@
 One directory per thread under a deployment-owned root:
 ``search.json`` (the latest search: owner, constraints, papers, batches) and
 ``gate.jsonl`` (one line per citation-gate decision, read by the eval).
+Shared across threads: ``refs/<arXiv id>.json``, a paper's arXiv references
+from Semantic Scholar. A paper's reference list does not depend on who asked,
+and caching it keeps citation expansion working when Semantic Scholar throttles.
 """
 
 from __future__ import annotations
@@ -14,6 +17,7 @@ import tempfile
 from pathlib import Path
 
 _THREAD_ID = re.compile(r"^[A-Za-z0-9_-]{1,128}$")
+_ARXIV_ID = re.compile(r"^\d{4}\.\d{4,5}$")
 
 
 class PaperStore:
@@ -28,17 +32,35 @@ class PaperStore:
             raise ValueError("invalid thread id")
         return self.root / "threads" / thread_id
 
-    def save_search(self, thread_id: str, record: dict) -> None:
-        directory = self._dir(thread_id)
+    @staticmethod
+    def _write(directory: Path, name: str, data: object) -> None:
         directory.mkdir(parents=True, exist_ok=True)
-        fd, tmp = tempfile.mkstemp(dir=directory, prefix=".search-", suffix=".json")
+        fd, tmp = tempfile.mkstemp(dir=directory, prefix=f".{name}-", suffix=".tmp")
         try:
             with os.fdopen(fd, "w", encoding="utf-8") as fh:
-                json.dump(record, fh, ensure_ascii=False)
-            os.replace(tmp, directory / "search.json")
+                json.dump(data, fh, ensure_ascii=False)
+            os.replace(tmp, directory / name)
         except BaseException:
             Path(tmp).unlink(missing_ok=True)
             raise
+
+    def save_search(self, thread_id: str, record: dict) -> None:
+        self._write(self._dir(thread_id), "search.json", record)
+
+    def load_refs(self, ids: list[str]) -> dict[str, list[str] | None]:
+        """Cached references; papers never looked up are absent, papers Semantic Scholar does not know map to None."""
+        out: dict[str, list[str] | None] = {}
+        for pid in ids:
+            path = self.root / "refs" / f"{pid}.json"
+            if _ARXIV_ID.match(pid) and path.is_file():
+                out[pid] = json.loads(path.read_text(encoding="utf-8"))
+        return out
+
+    def save_refs(self, refs: dict[str, list[str] | None]) -> None:
+        for pid, found in refs.items():
+            # Unknown papers are not cached: Semantic Scholar may index a new preprint later.
+            if _ARXIV_ID.match(pid) and found is not None:
+                self._write(self.root / "refs", f"{pid}.json", found)
 
     def load_search(self, thread_id: str) -> dict | None:
         try:
