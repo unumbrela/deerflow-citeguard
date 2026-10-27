@@ -127,7 +127,7 @@ parses your answer as JSON.
 
 **Parsing results**: `task` returns strings prefixed with `Task Succeeded. Result: ` (or `Task failed.` / `Task timed out.`). Strip the prefix before parsing. If a batch fails, note which papers are affected and continue; you may re-dispatch that single batch once.
 
-After all rounds, flatten the arrays into one list, preserving order.
+After all rounds, flatten the arrays into one list, preserving order. Do not set `acceptance_criteria` on these tasks: the subagent's answer is the JSON itself, and asking for a file makes it write one that you then have to read back.
 
 ### Phase 4: Synthesize and format
 
@@ -150,7 +150,7 @@ If the paper set is too small or too heterogeneous to support thematic synthesis
 
 **Evidence markers.** Every sentence that states what a specific paper found, measured or showed (in themes, convergences, disagreements and the per-paper key findings) ends with that paper's citation and the evidence id(s) a subagent returned for it, e.g. `... improves pass@1 by 12 points on SWE-bench (Smith et al., 2025) [E3].` Several ids go in one bracket: `[E3, E7]`. Rules:
 
-- Take a paper's E ids only from that paper's own object in the subagent results (`key_findings[].evidence`). Ids are numbered across the whole review, so E1 may belong to any paper.
+- **Before writing, call the scholar `evidence_index` tool** (its name starts with `ext_community_scholar_evidence_index`). It lists every selected paper with `cite_as` (its APA in-text citation, with a/b suffixes where two papers share author and year) and the E ids recorded for it, each with its finding. Cite every paper with exactly its `cite_as`, in the text and in the reference list (`Wu, J., ... (2025a).`), and take a paper's E ids only from its own entry. Ids are numbered across the whole review, so E1 may belong to any paper.
 - Use only E ids from the subagent results, and only on a sentence that cites the paper the id belongs to (its author and year in that sentence, or under that paper's own heading). Never invent an id. The gate rejects ids next to a theme name or in a sentence citing other papers.
 - Every paper you cite that has evidence ids must carry at least one of them somewhere in the report.
 - Make the sentence say no more than the quote behind it. If you want to say more, it needs its own evidence or no marker and a vaguer wording.
@@ -166,8 +166,9 @@ Each template contains both the citation rules and a full report structure (exec
 
 ### Phase 5: Save and present
 
-1. Write the full report to `/mnt/user-data/outputs/slr-<topic-slug>-<YYYYMMDD>.md` (lowercase, hyphenated topic; today's date).
+1. Write the full report to `/mnt/user-data/outputs/slr-<topic-slug>-<YYYYMMDD>.md` (lowercase, hyphenated topic; today's date) with **one** `write_file` call.
 2. Call `present_files` with the report path. **A citation gate checks the report when you present it**: every arXiv id in it must be one of the papers the screen tool selected in this conversation, and every [E#] must be an evidence id issued in this review for a paper the report cites. On success it appends the Evidence section to the file.
+   - **Fix a rejection in one pass.** Every tool call resends the whole conversation, and a run has a fixed step budget: in test runs, fixing a report with dozens of small `str_replace` and `grep` calls cost over a million tokens and once hit the step limit before the report was fixed. So read the rejection, call `evidence_index` again if it is about evidence markers, `read_file` the report once, then `write_file` the complete corrected report once and present it.
    - If the result says `CITATION CHECK FAILED ... NOT verified`, the report is **not** done: the user can see the file, but it cites ids that are not from the search. Edit the file first (presenting an unchanged file fails again): remove the listed ids or replace them with papers from the index you have not cited yet, fix every sentence and reference that mentioned them, save, and call `present_files` again. If the user explicitly demanded one of those references and you keep it, tell the user plainly that it is not from the search and could not be verified.
    - If it says `Citation check passed` with entries to fix (title not verbatim, first author missing from the reference line), correct them to match the subagent output exactly, save, and present again.
    - If it says the check failed again after the maximum number of rejections, tell the user plainly which ids could not be verified.
