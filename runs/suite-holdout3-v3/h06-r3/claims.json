@@ -5,6 +5,350 @@
  },
  "claims": [
   {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: This study examines on-policy distillation (OPD) through test-time scaling by varying sampling budgets (K) and evaluating performance with pass@K metrics.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "The authors identify two distinct patterns: OPD can improve pass@K at both small and large sampling budgets, or improve small-budget performance while reducing large-budget pass@K.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "They propose the Teacher Advantage Score at K (TAS@K) metric to predict which teacher will yield larger improvements at target sampling budgets, achieving 83.6% agreement across 13 benchmarks.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Introduction of TAS@K for teacher selection; demonstration that OPD improvements are budget-dependent rather than universal.",
+   "ids": [
+    "2608.11829"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: The authors reformulate long-context language modeling as continual learning rather than architecture design.",
+   "ids": [
+    "2512.23675"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Their Test-Time Training End-to-End (TTT-E2E) method uses standard Transformer architecture with sliding-window attention but continues learning at test time via next-token prediction, compressing context into weights.",
+   "ids": [
+    "2512.23675"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Meta-learning improves initialization for test-time learning.",
+   "ids": [
+    "2512.23675"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "The 3B model trained with 164B tokens scales with context length like full attention Transformers while maintaining constant inference latency (2.7× faster than full attention for 128K context).",
+   "ids": [
+    "2512.23675"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Novel TTT-E2E framework combining test-time learning with meta-learning; demonstration of constant-latency long-context modeling.",
+   "ids": [
+    "2512.23675"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: This work proposes test-time self-distillation, a decoding-time method that extracts steering signals from self-distillation frameworks without parameter updates, reward models, or training data.",
+   "ids": [
+    "2609.37041"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Counterfactual contexts (textual templates priming excellent vs. poor reasoning) substitute for demonstrations.",
+   "ids": [
+    "2609.37041"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "The log-odds ratio under counterfactual conditions defines a reward signal, with optimal KL-regularized policy approximated via beam search.",
+   "ids": [
+    "2609.37041"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Experiments on MATH500, HumanEval, and GPQA show improvements over standard sampling, low temperature, beam search, and power sampling baselines.",
+   "ids": [
+    "2609.37041"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Operationalization of self-distillation at inference time; counterfactual context framework for reward-free steering.",
+   "ids": [
+    "2609.37041"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: This study demonstrates that candidate count (N) alone inadequately describes test-time scaling costs.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Fixing N=8, the authors compare four generation schedules (1×8, 2×4, 4×2, 8×1) on A100 GPUs.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Eight serial calls consume 4.64-4.86× more GPU-device energy and have 5.77-6.12× higher P95 latency than one batched call.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Accuracy improvements from increasing N (8.4-18.4 percentage points) must be weighed against systems costs.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Systematic analysis of generation schedule impact on energy and latency; recommendation to report generation schedules alongside accuracy metrics.",
+   "ids": [
+    "2609.19499"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: Addressing the computational demands of existing TTS methods for resource-constrained small Vision-Language Models (VLMs), the authors propose two strategies: (i) Test-Time Augmentation (TTAug) generating multiple augmented inputs with token-level aggregation, and (ii) Test-Time Adaptation (TTAdapt) adapting parameters during inference using consensus-based pseudolabels.",
+   "ids": [
+    "2510.03574"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Experiments across nine benchmarks demonstrate consistent improvements while maintaining computational efficiency suitable for resource-constrained environments.",
+   "ids": [
+    "2510.03574"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: TTAug and TTAdapt methods for efficient VLM scaling; demonstration of cross-model and cross-scale generality.",
+   "ids": [
+    "2510.03574"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: This critical examination finds that longer Chain-of-Thought (CoT) in o1-like models (QwQ, DeepSeek-R1, LIMO) does not consistently enhance accuracy; correct solutions are often shorter than incorrect ones.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "The phenomenon relates to self-revision capabilities—longer CoTs contain more self-revisions leading to performance degradation.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Parallel scaling achieves better coverage than sequential scaling.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "The proposed Shortest Majority Vote method combines parallel scaling with CoT length characteristics, significantly improving test-time scalability over conventional majority voting.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Critical analysis of o1-like model scaling claims; Shortest Majority Vote method; identification of self-revision as scaling limitation.",
+   "ids": [
+    "2502.12215"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: The S³ (Stratified Scaling Search) method addresses limitations of naive best-of-K sampling in Diffusion Language Models (DLMs) by reallocating compute during denoising rather than only at output stage.",
+   "ids": [
+    "2604.06260"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "At each denoising step, S³ expands multiple candidate trajectories, evaluates with a lightweight reference-free verifier, and selectively resamples promising candidates while preserving diversity.",
+   "ids": [
+    "2604.06260"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Experiments with LLaDA-8B-Instruct on MATH-500, GSM8K, ARC-Challenge, and TruthfulQA demonstrate consistent improvements, particularly on mathematical reasoning tasks.",
+   "ids": [
+    "2604.06260"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Classical verifier-guided search for DLMs; reward-tilted sampling approximation without model modification.",
+   "ids": [
+    "2604.06260"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: Adapting recursive pretraining to masked protein language models (pLMs), recAMPLIFY uses a weight-tied Transformer core refining residue-aligned hidden states over adjustable cycles.",
+   "ids": [
+    "2610.26747"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Despite 56% fewer parameters (155M vs. 350M), it improves CASP contact recovery and three of four supervised tasks (22.5% fold accuracy increase).",
+   "ids": [
+    "2610.26747"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Gated Mixture Recurrence (GMR) decodes proteins from probability-weighted mixtures of hidden states visited during recursion, reducing expected layer depth by up to 37% with learned residual gates controlling update acceptance.",
+   "ids": [
+    "2610.26747"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Test-time scaling adaptation for masked encoders; GMR framework unifying halting and gating; biological property tracking via halt depth.",
+   "ids": [
+    "2610.26747"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: This systematic empirical study examines inference-time reasoning methods across open-source and closed-source VLMs.",
+   "ids": [
+    "2512.11109"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Closed-source models consistently benefit from structured reasoning and iterative self-refinement, while open-source VLMs show inconsistent behavior: external verification provides reliable gains, but iterative refinement often degrades performance.",
+   "ids": [
+    "2512.11109"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "TTS effectiveness is dataset-dependent, yielding clear improvements on multi-step reasoning tasks but limited gains on perception-focused benchmarks.",
+   "ids": [
+    "2512.11109"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Systematic comparison of open vs. closed-source VLM scaling behavior; identification of task-dependent TTS effectiveness; motivation for adaptive TTS strategies.",
+   "ids": [
+    "2512.11109"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Summary: This analysis finds that simple test-time scaling behavior is largely attributed to scaling down by enforcing maximum length rather than scaling up.",
+   "ids": [
+    "2507.14419"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Fine-tuning on long CoT data has no significant impact, and scaling up by appending \"Wait\" leads to inconsistencies with oscillation between solutions.",
+   "ids": [
+    "2507.14419"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "A key distinction exists: o1-like models naturally scale up during reinforcement learning, surpassing peak performance, while simple test-time scaling progressively imposes lower upper limits on performance as it scales down.",
+   "ids": [
+    "2507.14419"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography (APA Format)",
+   "kind": "annotation",
+   "text": "Key Contributions: Critical distinction between scaling up vs. scaling down; demonstration that simple TTS reproduces appearance rather than unlocking higher performance.",
+   "ids": [
+    "2507.14419"
+   ]
+  },
+  {
    "section": "Synthesis and Key Themes",
    "kind": "synthesis",
    "text": "Parallel vs. Sequential Scaling: Parallel scaling consistently outperforms sequential approaches (Zeng et al., 2025; Kashaniyan & Jannesari, 2026)",

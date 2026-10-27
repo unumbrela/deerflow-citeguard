@@ -107,40 +107,6 @@
   {
    "claim": 6,
    "id": "2507.13929",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and provides no claim about the paper's method or findings to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 824,
-    "completion_tokens": 34,
-    "total_tokens": 858,
-    "completion_tokens_details": {
-     "text_tokens": 34
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 824
-    }
-   }
-  },
-  {
-   "claim": 7,
-   "id": "2507.13929",
-   "label": "supported",
-   "reason": "The sentence is simply the title of the paper, which directly matches the work described in the abstract.",
-   "usage": {
-    "prompt_tokens": 819,
-    "completion_tokens": 31,
-    "total_tokens": 850,
-    "completion_tokens_details": {
-     "text_tokens": 31
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 819
-    }
-   }
-  },
-  {
-   "claim": 8,
-   "id": "2507.13929",
    "label": "supported",
    "reason": "The abstract explicitly states that TimeNeRF is a generalizable neural rendering approach for rendering novel views at arbitrary viewpoints and times from few input views.",
    "usage": {
@@ -156,7 +122,7 @@
    }
   },
   {
-   "claim": 9,
+   "claim": 7,
    "id": "2507.13929",
    "label": "supported",
    "reason": "The abstract explicitly states that the approach combines multi-view stereo, neural radiance fields, and disentanglement strategies to enable rendering without per-scene optimization.",
@@ -173,7 +139,7 @@
    }
   },
   {
-   "claim": 10,
+   "claim": 8,
    "id": "2507.13929",
    "label": "supported",
    "reason": "The abstract explicitly states that the method excels in creating realistic novel views that transition smoothly across different times and captures natural scene changes from dawn to dusk.",
@@ -190,7 +156,7 @@
    }
   },
   {
-   "claim": 11,
+   "claim": 9,
    "id": "2507.13929",
    "label": "supported",
    "reason": "The abstract explicitly describes TimeNeRF as a generalizable approach for temporal scene modeling that operates in a few-shot setting.",
@@ -207,7 +173,7 @@
    }
   },
   {
-   "claim": 12,
+   "claim": 10,
    "id": "2507.13929",
    "label": "supported",
    "reason": "The abstract explicitly states the method excels in creating novel views that transition smoothly across different times.",
@@ -224,24 +190,7 @@
    }
   },
   {
-   "claim": 13,
-   "id": "2605.09312",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and provides no claim about the paper's work to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 742,
-    "completion_tokens": 32,
-    "total_tokens": 774,
-    "completion_tokens_details": {
-     "text_tokens": 32
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 742
-    }
-   }
-  },
-  {
-   "claim": 14,
+   "claim": 11,
    "id": "2605.09312",
    "label": "supported",
    "reason": "The abstract explicitly states the paper presents a comparative study of DS-NeRF, TensoRF, and HashNeRF targeted at the low-compute, low-data regime.",
@@ -258,7 +207,7 @@
    }
   },
   {
-   "claim": 15,
+   "claim": 12,
    "id": "2605.09312",
    "label": "supported",
    "reason": "The abstract explicitly confirms the exploration of depth-supervision for TensoRF, MLP ablation, and four architectural variants of HashNeRF networks.",
@@ -275,7 +224,7 @@
    }
   },
   {
-   "claim": 16,
+   "claim": 13,
    "id": "2605.09312",
    "label": "supported",
    "reason": "The abstract explicitly states that under iso-time evaluation none of the extensions conclusively outperform baselines, but the experiments characterize which extensions transfer to constrained settings.",
@@ -292,7 +241,7 @@
    }
   },
   {
-   "claim": 17,
+   "claim": 14,
    "id": "2605.09312",
    "label": "supported",
    "reason": "The abstract explicitly states that the paper presents a comparative study of three accelerated NeRF variants.",
@@ -309,7 +258,7 @@
    }
   },
   {
-   "claim": 18,
+   "claim": 15,
    "id": "2605.09312",
    "label": "supported",
    "reason": "The abstract explicitly states the paper adds a depth-supervision loss to TensoRF and evaluates it under reduced view counts.",
@@ -326,7 +275,7 @@
    }
   },
   {
-   "claim": 19,
+   "claim": 16,
    "id": "2605.09312",
    "label": "supported",
    "reason": "The abstract explicitly states that the paper proposes four architectural variants of HashNeRF targeted at the low-compute regime.",
@@ -343,41 +292,7 @@
    }
   },
   {
-   "claim": 20,
-   "id": "2412.08200",
-   "label": "unsupported",
-   "reason": "The sentence consists entirely of author names and contains no claims about the paper's method or findings to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 845,
-    "completion_tokens": 35,
-    "total_tokens": 880,
-    "completion_tokens_details": {
-     "text_tokens": 35
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 845
-    }
-   }
-  },
-  {
-   "claim": 21,
-   "id": "2412.08200",
-   "label": "supported",
-   "reason": "The sentence simply states the paper's title, which is explicitly confirmed by the abstract.",
-   "usage": {
-    "prompt_tokens": 845,
-    "completion_tokens": 28,
-    "total_tokens": 873,
-    "completion_tokens_details": {
-     "text_tokens": 28
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 845
-    }
-   }
-  },
-  {
-   "claim": 22,
+   "claim": 17,
    "id": "2412.08200",
    "label": "supported",
    "reason": "The abstract explicitly states that the work addresses flare removal as a multi-view image problem using a Generalizable Neural Radiance Fields framework.",
@@ -394,7 +309,7 @@
    }
   },
   {
-   "claim": 23,
+   "claim": 18,
    "id": "2412.08200",
    "label": "supported",
    "reason": "The abstract explicitly states that GN-FR incorporates Flare-occupancy Mask Generation, View Sampler, and Point Sampler modules within the Generalizable NeRF Transformer framework.",
@@ -411,7 +326,7 @@
    }
   },
   {
-   "claim": 24,
+   "claim": 19,
    "id": "2412.08200",
    "label": "supported",
    "reason": "The abstract explicitly confirms the introduction of a masking loss function for unsupervised learning and details the new dataset with 17 real flare scenes and 782 images.",
@@ -428,7 +343,7 @@
    }
   },
   {
-   "claim": 25,
+   "claim": 20,
    "id": "2412.08200",
    "label": "supported",
    "reason": "The abstract explicitly states, 'To our knowledge, this is the first work to address flare removal within a Neural Radiance Fields (NeRF) framework,' which directly supports the claim.",
@@ -445,7 +360,7 @@
    }
   },
   {
-   "claim": 26,
+   "claim": 21,
    "id": "2412.08200",
    "label": "supported",
    "reason": "The abstract explicitly states the method uses a masking loss function in an unsupervised setting.",
@@ -462,7 +377,7 @@
    }
   },
   {
-   "claim": 27,
+   "claim": 22,
    "id": "2412.08200",
    "label": "supported",
    "reason": "The abstract explicitly states the presentation of a '3D multi-view flare dataset' as part of the paper's contributions.",
@@ -479,41 +394,7 @@
    }
   },
   {
-   "claim": 28,
-   "id": "2501.13104",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and lacks any descriptive claim about the paper's content to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 695,
-    "completion_tokens": 33,
-    "total_tokens": 728,
-    "completion_tokens_details": {
-     "text_tokens": 33
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 695
-    }
-   }
-  },
-  {
-   "claim": 29,
-   "id": "2501.13104",
-   "label": "supported",
-   "reason": "The sentence simply states the paper's title, which is directly confirmed by the abstract's header and content describing the survey on Neural Radiance Fields.",
-   "usage": {
-    "prompt_tokens": 661,
-    "completion_tokens": 40,
-    "total_tokens": 701,
-    "completion_tokens_details": {
-     "text_tokens": 40
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 661
-    }
-   }
-  },
-  {
-   "claim": 30,
+   "claim": 23,
    "id": "2501.13104",
    "label": "supported",
    "reason": "The abstract explicitly states that the survey compiles key theoretical advancements and alternative scene representations.",
@@ -530,7 +411,7 @@
    }
   },
   {
-   "claim": 31,
+   "claim": 24,
    "id": "2501.13104",
    "label": "supported",
    "reason": "The abstract explicitly states that the survey investigates emerging challenges, explores applications on reconstruction, highlights NeRFs' impact on computer vision and robotics, and reviews essential datasets and toolkits.",
@@ -547,7 +428,7 @@
    }
   },
   {
-   "claim": 32,
+   "claim": 25,
    "id": "2501.13104",
    "label": "supported",
    "reason": "The abstract explicitly states that the survey identifies gaps in the literature, discusses open challenges, and offers directions for future research.",
@@ -564,7 +445,7 @@
    }
   },
   {
-   "claim": 33,
+   "claim": 26,
    "id": "2501.13104",
    "label": "supported",
    "reason": "The abstract explicitly states that the survey compiles key theoretical advancements of NeRFs.",
@@ -581,7 +462,7 @@
    }
   },
   {
-   "claim": 34,
+   "claim": 27,
    "id": "2501.13104",
    "label": "supported",
    "reason": "The abstract explicitly states that the survey investigates emerging challenges and explores applications, which directly supports the sentence's claim about analyzing real-world applications and challenges.",
@@ -598,7 +479,7 @@
    }
   },
   {
-   "claim": 35,
+   "claim": 28,
    "id": "2501.13104",
    "label": "supported",
    "reason": "The abstract explicitly states that the survey identifies gaps in the literature and offers directions for future research.",
@@ -615,41 +496,7 @@
    }
   },
   {
-   "claim": 36,
-   "id": "2502.16992",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and no descriptive claim about the paper's method or findings to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 679,
-    "completion_tokens": 34,
-    "total_tokens": 713,
-    "completion_tokens_details": {
-     "text_tokens": 34
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 679
-    }
-   }
-  },
-  {
-   "claim": 37,
-   "id": "2502.16992",
-   "label": "supported",
-   "reason": "The sentence is simply the title of the paper, which directly matches the work described in the abstract.",
-   "usage": {
-    "prompt_tokens": 670,
-    "completion_tokens": 31,
-    "total_tokens": 701,
-    "completion_tokens_details": {
-     "text_tokens": 31
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 670
-    }
-   }
-  },
-  {
-   "claim": 38,
+   "claim": 29,
    "id": "2502.16992",
    "label": "supported",
    "reason": "The abstract explicitly states the proposal of a satellite-specific NeRF model that obtains a 3D semantic representation from multi-date images with pixel-wise labels.",
@@ -666,7 +513,7 @@
    }
   },
   {
-   "claim": 39,
+   "claim": 30,
    "id": "2502.16992",
    "label": "supported",
    "reason": "The abstract explicitly states the model improves noisy input labels and enhances color prediction using semantic information to address temporal inconsistencies caused by non-stationary categories like vehicles.",
@@ -683,7 +530,7 @@
    }
   },
   {
-   "claim": 40,
+   "claim": 31,
    "id": "2502.16992",
    "label": "partial",
    "reason": "The abstract confirms the paper proposes a semantic NeRF for satellite data, but it does not explicitly claim to be the 'first' such work.",
@@ -700,7 +547,7 @@
    }
   },
   {
-   "claim": 41,
+   "claim": 32,
    "id": "2502.16992",
    "label": "supported",
    "reason": "The abstract explicitly states that the model utilizes semantic information to address temporal image inconsistencies.",
@@ -717,7 +564,7 @@
    }
   },
   {
-   "claim": 42,
+   "claim": 33,
    "id": "2502.16992",
    "label": "supported",
    "reason": "The abstract explicitly states that the authors present a dataset comprising manually generated labels for popular multi-view satellite images.",
@@ -734,41 +581,7 @@
    }
   },
   {
-   "claim": 43,
-   "id": "2505.06894",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and provides no claim about the paper's method or findings to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 762,
-    "completion_tokens": 34,
-    "total_tokens": 796,
-    "completion_tokens_details": {
-     "text_tokens": 34
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 762
-    }
-   }
-  },
-  {
-   "claim": 44,
-   "id": "2505.06894",
-   "label": "supported",
-   "reason": "The sentence is simply the title of the paper, which is directly confirmed by the abstract's content describing the proposed NeuGen method for NeRF domain generalization.",
-   "usage": {
-    "prompt_tokens": 765,
-    "completion_tokens": 43,
-    "total_tokens": 808,
-    "completion_tokens_details": {
-     "text_tokens": 43
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 765
-    }
-   }
-  },
-  {
-   "claim": 45,
+   "claim": 34,
    "id": "2505.06894",
    "label": "supported",
    "reason": "The abstract explicitly confirms the proposal of integrating a brain-inspired normalization technique called Neural Generalization (NeuGen) into MVSNeRF and GeoNeRF architectures.",
@@ -785,7 +598,7 @@
    }
   },
   {
-   "claim": 46,
+   "claim": 35,
    "id": "2505.06894",
    "label": "supported",
    "reason": "The abstract explicitly states that NeuGen extracts domain-invariant features to enhance generalization capabilities across diverse scenes.",
@@ -802,7 +615,7 @@
    }
   },
   {
-   "claim": 47,
+   "claim": 36,
    "id": "2505.06894",
    "label": "supported",
    "reason": "The abstract explicitly states that NeuGen shows improved performance on benchmarks across diverse datasets and state-of-the-art NeRF architectures.",
@@ -819,7 +632,7 @@
    }
   },
   {
-   "claim": 48,
+   "claim": 37,
    "id": "2505.06894",
    "label": "supported",
    "reason": "The abstract explicitly proposes a 'novel brain-inspired normalization technique' called NeuGen for NeRF architectures.",
@@ -836,7 +649,7 @@
    }
   },
   {
-   "claim": 49,
+   "claim": 38,
    "id": "2505.06894",
    "label": "supported",
    "reason": "The abstract explicitly states that the approach markedly improves rendering quality and enables better generalization across varied scenes.",
@@ -853,41 +666,7 @@
    }
   },
   {
-   "claim": 50,
-   "id": "2411.04984",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and provides no claim about the paper's method or findings to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 747,
-    "completion_tokens": 34,
-    "total_tokens": 781,
-    "completion_tokens_details": {
-     "text_tokens": 34
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 747
-    }
-   }
-  },
-  {
-   "claim": 51,
-   "id": "2411.04984",
-   "label": "supported",
-   "reason": "The sentence is simply the title of the paper, which directly matches the work described in the abstract.",
-   "usage": {
-    "prompt_tokens": 733,
-    "completion_tokens": 31,
-    "total_tokens": 764,
-    "completion_tokens_details": {
-     "text_tokens": 31
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 733
-    }
-   }
-  },
-  {
-   "claim": 52,
+   "claim": 39,
    "id": "2411.04984",
    "label": "supported",
    "reason": "The abstract explicitly confirms the paper introduces a reflection-aware NeRF that jointly models planar reflectors and casts reflected rays to address limitations with complex planar reflections.",
@@ -904,7 +683,7 @@
    }
   },
   {
-   "claim": 53,
+   "claim": 40,
    "id": "2411.04984",
    "label": "supported",
    "reason": "The abstract explicitly states that the method proposes sparse edge regularization to utilize true sources of reflections, resulting in accurate scene geometry.",
@@ -921,7 +700,7 @@
    }
   },
   {
-   "claim": 54,
+   "claim": 41,
    "id": "2411.04984",
    "label": "supported",
    "reason": "The abstract explicitly states that the method renders a clean, reflection-free view along the primary ray and reconstructs highly detailed reflections by rendering along the reflected ray.",
@@ -938,7 +717,7 @@
    }
   },
   {
-   "claim": 55,
+   "claim": 42,
    "id": "2411.04984",
    "label": "supported",
    "reason": "The abstract explicitly states the method jointly models planar reflectors and scene geometry to address reflection challenges.",
@@ -955,7 +734,7 @@
    }
   },
   {
-   "claim": 56,
+   "claim": 43,
    "id": "2411.04984",
    "label": "supported",
    "reason": "The abstract explicitly states the proposal of a sparse edge regularization to help utilize true sources of reflections for rendering planar reflections.",
@@ -972,7 +751,7 @@
    }
   },
   {
-   "claim": 57,
+   "claim": 44,
    "id": "2411.04984",
    "label": "supported",
    "reason": "The abstract explicitly states that the method renders both a clean, reflection-free view and highly detailed reflections.",
@@ -989,41 +768,7 @@
    }
   },
   {
-   "claim": 58,
-   "id": "2502.02372",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and provides no claim about the paper's method or findings to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 803,
-    "completion_tokens": 37,
-    "total_tokens": 840,
-    "completion_tokens_details": {
-     "text_tokens": 37
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 803
-    }
-   }
-  },
-  {
-   "claim": 59,
-   "id": "2502.02372",
-   "label": "supported",
-   "reason": "The sentence is simply the title of the paper, which directly matches the work described in the abstract.",
-   "usage": {
-    "prompt_tokens": 794,
-    "completion_tokens": 31,
-    "total_tokens": 825,
-    "completion_tokens_details": {
-     "text_tokens": 31
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 794
-    }
-   }
-  },
-  {
-   "claim": 60,
+   "claim": 45,
    "id": "2502.02372",
    "label": "supported",
    "reason": "The abstract explicitly states that the work addresses the challenge of updating human avatars while maintaining the ability to render past appearances.",
@@ -1040,7 +785,7 @@
    }
   },
   {
-   "claim": 61,
+   "claim": 46,
    "id": "2502.02372",
    "label": "supported",
    "reason": "The abstract explicitly states that the MaintaAvatar model resolves issues like catastrophic forgetting by utilizing a Global-Local Joint Storage Module and a Pose Distillation Module.",
@@ -1057,7 +802,7 @@
    }
   },
   {
-   "claim": 62,
+   "claim": 47,
    "id": "2502.02372",
    "label": "supported",
    "reason": "The abstract explicitly states the model requires limited data for quick fine-tuning and resolves color bleeding and incorrect pose issues.",
@@ -1074,7 +819,7 @@
    }
   },
   {
-   "claim": 63,
+   "claim": 48,
    "id": "2502.02372",
    "label": "supported",
    "reason": "The abstract explicitly proposes a maintainable avatar based on neural radiance fields using continual learning, which directly matches the sentence's description.",
@@ -1091,7 +836,7 @@
    }
   },
   {
-   "claim": 64,
+   "claim": 49,
    "id": "2502.02372",
    "label": "supported",
    "reason": "The abstract explicitly states that the proposed Pose Distillation Module is used to resolve issues like catastrophic forgetting.",
@@ -1108,41 +853,7 @@
    }
   },
   {
-   "claim": 65,
-   "id": "2512.21692",
-   "label": "unsupported",
-   "reason": "The sentence contains only author names and lacks any descriptive claim about the paper's method or contributions to verify against the abstract.",
-   "usage": {
-    "prompt_tokens": 744,
-    "completion_tokens": 35,
-    "total_tokens": 779,
-    "completion_tokens_details": {
-     "text_tokens": 35
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 744
-    }
-   }
-  },
-  {
-   "claim": 66,
-   "id": "2512.21692",
-   "label": "supported",
-   "reason": "The sentence is simply the title of the paper, which directly matches the work described in the abstract.",
-   "usage": {
-    "prompt_tokens": 736,
-    "completion_tokens": 31,
-    "total_tokens": 767,
-    "completion_tokens_details": {
-     "text_tokens": 31
-    },
-    "prompt_tokens_details": {
-     "text_tokens": 736
-    }
-   }
-  },
-  {
-   "claim": 67,
+   "claim": 50,
    "id": "2512.21692",
    "label": "supported",
    "reason": "The abstract explicitly introduces ShinyNeRF as a novel framework for handling both isotropic and anisotropic reflections in the context of 3D digitization.",
@@ -1159,7 +870,7 @@
    }
   },
   {
-   "claim": 68,
+   "claim": 51,
    "id": "2512.21692",
    "label": "supported",
    "reason": "The abstract explicitly states that the method jointly estimates surface normals, tangents, specular concentration, and anisotropy magnitudes of an Anisotropic Spherical Gaussian distribution.",
@@ -1176,7 +887,7 @@
    }
   },
   {
-   "claim": 69,
+   "claim": 52,
    "id": "2512.21692",
    "label": "supported",
    "reason": "The abstract explicitly states that the method achieves state-of-the-art performance on digitizing anisotropic specular reflections and offers plausible physical interpretations.",
@@ -1193,7 +904,7 @@
    }
   },
   {
-   "claim": 70,
+   "claim": 53,
    "id": "2512.21692",
    "label": "supported",
    "reason": "The abstract introduces ShinyNeRF as a novel framework capable of handling anisotropic reflections, which existing methods struggle to model, directly supporting the claim that it is the first such NeRF framework.",
@@ -1210,7 +921,7 @@
    }
   },
   {
-   "claim": 71,
+   "claim": 54,
    "id": "2512.21692",
    "label": "supported",
    "reason": "The abstract explicitly states that the method is capable of jointly estimating surface normals, tangents, specular concentration, and anisotropy magnitudes.",
@@ -1227,7 +938,7 @@
    }
   },
   {
-   "claim": 72,
+   "claim": 55,
    "id": "2512.21692",
    "label": "supported",
    "reason": "The abstract explicitly states that ShinyNeRF achieves state-of-the-art performance on digitizing anisotropic specular reflections.",
