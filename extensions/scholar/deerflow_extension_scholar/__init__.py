@@ -95,6 +95,7 @@ SEARCH_SCHEMA = {
         "years": {"type": "integer", "minimum": 1, "maximum": 40, "description": "Only papers submitted in the last N years (computed from today in code)."},
         "start_date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "description": "YYYY-MM-DD; overrides `years`."},
         "end_date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "description": "YYYY-MM-DD."},
+        "restart": {"type": "boolean", "description": "Lead agent only, and only when the user asked for a different search: replace this conversation's screened search."},
     },
     "required": ["query", "max_results"],
     "additionalProperties": False,
@@ -323,6 +324,15 @@ def build_tools(
     async def search(payload: Mapping[str, Any], context: Any) -> PluginToolResult:
         if not context.thread_id:
             return _error("no conversation context")
+        # Subagents share the thread: in a smoke run an extraction subagent ran its own search, which replaced the
+        # review's paper set and voided every quote already recorded. A screened search is kept unless the lead restarts it.
+        current = await asyncio.to_thread(store.load_search, context.thread_id)
+        if current and current.get("screening") is not None and not current.get("rejected") and payload.get("restart") is not True:
+            return _error(
+                f"this conversation's review is built on a screened search ({current['query']!r}, {len(current['papers'])} papers selected); "
+                "a new search would replace those papers and void the evidence already recorded. If you are extracting a batch, do not search: "
+                "work only on your batch. Only the lead agent, and only when the user asked for a different search, may pass restart: true."
+            )
         window = resolve_window(today(), payload.get("years"), payload.get("start_date"), payload.get("end_date"))
         category = normalise_category(payload.get("category"))  # the primary-category filter compares exactly, so "cs.cl" would keep nothing
         cross = payload.get("include_cross_lists", False)

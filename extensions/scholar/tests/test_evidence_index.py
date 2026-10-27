@@ -4,7 +4,7 @@ import json
 
 from helpers import paper
 from test_evidence_tools import args, selected, store  # noqa: F401 - fixture
-from test_tools import ctx
+from test_tools import THREAD, ctx
 
 from deerflow_extension_scholar import cite_as, evidence_index_payload
 
@@ -45,3 +45,21 @@ async def test_tool_lists_this_searchs_evidence(store):  # noqa: F811
     assert by_id["2501.00001"]["cite_as"] == "Smith1 & Jones0, 2025"
     assert set(result["without_evidence"]) == {"2501.00002", "2501.00003"}
     assert "another user" in (await t["evidence_index"](args(), ctx(user="mallory"))).content
+
+
+async def test_a_screened_search_is_not_replaced_without_restart(store):  # noqa: F811
+    t = await selected(store, [])
+    before = store.load_search(THREAD)
+    result = await t["search"](args(query="something else entirely", max_results=3), ctx())
+    assert result.content.startswith("ERROR: this conversation's review is built on a screened search")
+    assert store.load_search(THREAD)["search_id"] == before["search_id"]
+    restarted = json.loads((await t["search"](args(query="something else entirely", max_results=3, restart=True), ctx())).content)
+    assert restarted["pool"] == 3 and store.load_search(THREAD)["search_id"] != before["search_id"]
+
+
+async def test_a_search_before_screening_or_after_rejection_can_be_redone(store):  # noqa: F811
+    t = await selected(store, [])
+    store.save_search(THREAD, {**store.load_search(THREAD), "rejected": "wrong category"})
+    assert not (await t["search"](args(query="agents", max_results=3), ctx())).content.startswith("ERROR")
+    # Unscreened: the lead may refine its query before screening.
+    assert not (await t["search"](args(query="agents again", max_results=3), ctx())).content.startswith("ERROR")
