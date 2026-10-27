@@ -27,6 +27,10 @@ jobs:
       - name: Lint
         working-directory: extensions/scholar
         run: ruff check . && ruff format --check .
+      - name: Snapshot tooling lint
+        run: |
+          ruff check --isolated --select E,F,I --line-length 88 scripts/capture_snapshot.py eval/tests/test_capture_snapshot.py
+          ruff format --isolated --check scripts/capture_snapshot.py eval/tests/test_capture_snapshot.py
       - name: Unit tests (offline)
         working-directory: extensions/scholar
         run: pytest -q

@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-27",
+  "scope": "U0 evidence contract: isolated container regression on an immutable source snapshot; no live LLM or gateway deployment",
+  "source_sha256": "89a53fa21f065c41dd5856ba6f6edce5220f2ebbe35a8748f2f328917eb47ca4",
+  "plugin_version": "0.3.5",
+  "project": {
+    "commit": "b06e653d77c98acc066e58dd82cc4b896e6add96",
+    "dirty": true
+  },
+  "source_files": {
+    "extensions/scholar/README.md": "7dad991debed4fc80dbb24db19cc8cb2debabc8ed9fd712d53b940384bb2d097",
+    "extensions/scholar/deerflow_extension_scholar/__init__.py": "57b10c58170326c2d1407bdf71d23c85c41b3a660650a0c2f837656e7ef9709a",
+    "extensions/scholar/deerflow_extension_scholar/arxiv.py": "ec6ebb8b4beaa50595b73fd45ff80741392f12b3602d2cb70c5ec5834e95768e",
+    "extensions/scholar/deerflow_extension_scholar/core.py": "f537911eb8a32d1ee9de55de7d998b2e7220f4e4037cdc0f6db664051678cb65",
+    "extensions/scholar/deerflow_extension_scholar/fulltext.py": "98889a3ed1d35bd892c5ba842fcad2cee3ada0ffeedc3c408cae94c5a99979f1",
+    "extensions/scholar/deerflow_extension_scholar/gate.py": "c71672ba23335735aebeb1ad6218dcb049c6abdadd3861478b0d8df2e7e363b4",
+    "extensions/scholar/deerflow_extension_scholar/s2.py": "f9db94437addd351cfc59e726e865255c5766a673ded2bc6f986a95834acbe4d",
+    "extensions/scholar/deerflow_extension_scholar/screening.py": "942f8fdfd2ea5a404ec1bb06a5fc09cb69af3c8b655b6cfa086fb63cda514704",
+    "extensions/scholar/deerflow_extension_scholar/store.py": "8ec22c9535b9dda90fd09f2a9cb6cd134e9cd1a7df1fc940db3a47e4bfe7b295",
+    "extensions/scholar/deploy/subagents.yaml": "ff98a1a954978c4335b7f2568ca52c97f3fe88373e1007dfa1edb58cd7350642",
+    "extensions/scholar/pyproject.toml": "3330ce15cf34cdb668a18219e337efe675d52dc033d8cc8485bd5942aef89c52",
+    "extensions/scholar/tests/conftest.py": "5ef4cee3c7e09240325bbe1fc0ec4308a8c72f7e62d534dc9571c0dae0392d63",
+    "extensions/scholar/tests/helpers.py": "732c6acf2807733f80cbafe5e4c0214c468a4cc535066157e88015cf4709b34c",
+    "extensions/scholar/tests/test_arxiv.py": "9ea0999a3805c03a17cb892a3cbf310b097cd175f7a88c31704c5b03c7ed0e14",
+    "extensions/scholar/tests/test_core.py": "6c61bd0cd41dd79747bf12af97133a50cbd6a14c46146cce6f554be5345c2bbf",
+    "extensions/scholar/tests/test_evidence_index.py": "6df6eed01253dc0636edf11fe2cc64628b0270ba4ffb4ee502eb889bb383905a",
+    "extensions/scholar/tests/test_evidence_pipeline.py": "6160be50fc46a2e09a6f1519ce6a41bd4eda35655351f9dea99245eb6a98a1a8",
+    "extensions/scholar/tests/test_evidence_tools.py": "8ca826f9ad58c84377abfb962e6a760bde821fd54b6902bc2e3f1b27c0be87e6",
+    "extensions/scholar/tests/test_fulltext.py": "4124db9b325271808a598fae3528cefaace4f9a084bd76e05c5a2d6f5348f100",
+    "extensions/scholar/tests/test_gate.py": "128ff36109fa36d2c155d1a6bad10e37e5c745a6699b28e327beeac53c640ac1",
+    "extensions/scholar/tests/test_install.py": "3487fb5230223b068cbca28ccd1e8e482b02db3d0e34f19d77f76787efcf82d6",
+    "extensions/scholar/tests/test_s2_screening.py": "2a5298a19345e7b1288325fcbb62db2729891972b8de71d02ef7b90d4b031615",
+    "extensions/scholar/tests/test_tools.py": "5292018c7fafd2ccd101cf2daf73ef73c6783cc8ca93b49f608bebd5a302d117",
+    "scripts/apply_subagents.py": "b810508d53bfa020f83d1c89349e6b4058c82dcb4451d240f27fed267487c77d",
+    "scripts/capture_snapshot.py": "e1c25cee3f09e73e256c7d99bb55b756ae9d49283b7cbdd47acc5fa9845400a9",
+    "scripts/deploy_retrieval.sh": "3d0af3dbf5dc52efcf31b1cea349d02530da3b3b26438c58f08ea2bab9dab06e",
+    "scripts/install_skill.sh": "5cc479c3ef59900b35cf50b10e97cae733d4f8333fb99f504ad4169cd3d777dd",
+    "scripts/switch_arm.sh": "6a3708276607ecf27d660285b0981b5c77052e803ef5799aec6e51a86c745a0c",
+    "skills/systematic-literature-review/SKILL.md": "62a6274db2892060227ddb67762a2090c0fd7a41be68579386b45e7346241a37",
+    "skills/systematic-literature-review/templates/apa.md": "e81f22923d889708cbd8a9ccf7dae1cfcd3c6cd87700fb3ad8b2796054d8d10b",
+    "skills/systematic-literature-review/templates/bibtex.md": "191bbe7e61e2f068c16a5b72784986ab523f0937a817e9cdecbe1e1b4c686d1e",
+    "skills/systematic-literature-review/templates/ieee.md": "317fa8a3ee750f5e4a3d35b93c9d78ce8f68ae5c9dca369b9fc5069c21abb8bb"
+  },
+  "container_environment": {
+    "python": "3.12.15",
+    "packages": {
+      "deerflow-extension-api": "0.2.9",
+      "langchain": "1.3.14",
+      "langchain-core": "1.4.9",
+      "httpx": "0.28.1",
+      "pytest": "9.0.3",
+      "pytest-asyncio": "1.3.0"
+    }
+  },
+  "container_tests": {
+    "exit_code": 0,
+    "stdout": "........................................................................ [ 56%]\n.......................................................                  [100%]\n127 passed in 0.50s",
+    "stderr": ""
+  },
+  "local_checks": [
+    {
+      "command": ".venv/bin/python -m pytest -q extensions/scholar/tests",
+      "exit_code": 0,
+      "passed": 127
+    },
+    {
+      "command": ".venv/bin/python -I -m unittest discover -s eval/tests -q",
+      "exit_code": 0,
+      "passed": 37
+    },
+    {
+      "command": ".venv/bin/ruff check extensions/scholar",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --check extensions/scholar",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff check --isolated --select E,F,I --line-length 88 scripts/capture_snapshot.py eval/tests/test_capture_snapshot.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --isolated --check scripts/capture_snapshot.py eval/tests/test_capture_snapshot.py",
+      "exit_code": 0
+    }
+  ],
+  "additional_validation_files": {
+    "eval/tests/test_capture_snapshot.py": "5c96a5342e1a2030223067a9de9e323850288224d2d5ea3e3af6829317fc1245",
+    ".github/workflows/test.yml": "0af474579d3b08861e66fb3e42fa2b2c0fff91e787ada0b1860b91f54fbcea0b"
+  }
+}
