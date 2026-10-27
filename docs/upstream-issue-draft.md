@@ -1,10 +1,12 @@
-# 上游 issue 草稿(未提交，等确认后再发)
+# 上游 issue(已发布)
+
+已发布为 [bytedance/deer-flow#7601](https://github.com/bytedance/deer-flow/issues/7601)(2026-10-27)。下面是发出的原文;发布前把标题里的运行数从 57 改成了 50(表里两组外置运行 22 + 28),并注明当前 main 上 skill 和外置阈值都没变。
 
 目标仓库：bytedance/deer-flow。已查过：没有重复（#3416 讲的是外置文件读不到，跟这里不是一回事）。
 
 ---
 
-**Title:** systematic-literature-review fabricates papers when the arXiv search output is externalized and not read back (measured on 57 runs)
+**Title:** systematic-literature-review fabricates papers when the arXiv search output is externalized and not read back (measured on 50 runs)
 
 ### Problem summary
 
@@ -12,7 +14,7 @@ With `allow_host_bash: true`, the public `systematic-literature-review` skill ru
 
 ### Evidence
 
-`qwen3.5-plus`, memory off, upstream commit `3fdd9bd`. Every citation was checked against the arXiv API (the id exists **and** the title matches). The first set was traced by hand; in the held-out set a script counts a run as "read back" when its event stream has a `read_file` call on `.tool-results/`.
+`qwen3.5-plus`, memory off, upstream commit `3fdd9bd`. The skill is unchanged on current `main` (`68c9fce`), and so is the 12,000-char externalization default. Every citation was checked against the arXiv API (the id exists **and** the title matches). The first set was traced by hand; in the held-out set a script counts a run as "read back" when its event stream has a `read_file` call on `.tool-results/`.
 
 | externalized search output … | 30 topics × 1 run: runs | ≥ half fabricated | 10 held-out topics × 3 runs: runs | ≥ half fabricated |
 |---|---|---|---|---|

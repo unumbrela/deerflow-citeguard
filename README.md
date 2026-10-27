@@ -11,7 +11,7 @@
 - **做法**:检索、过滤、分批都由插件代码完成,子 Agent 按批次号直接取论文数据,模型不再转述;报告交付时由关卡核对每个 arXiv 编号是否出自本次检索,不通过就拒收。
 - **结果**:三项约束全满足的运行 **1/30 → 29/30**,耗时 −38%,token 持平;不再需要 `allow_host_bash`。
 
-> 完整过程和每次实验的原始记录:[BASELINE.md](BASELINE.md) · 改进计划:[ROADMAP.md](ROADMAP.md) · 面试讲解稿:[docs/INTERVIEW.md](docs/INTERVIEW.md)
+> 完整过程和每次实验的原始记录:[BASELINE.md](BASELINE.md) · 改进计划:[ROADMAP.md](ROADMAP.md) · 面试讲解稿:[docs/INTERVIEW.md](docs/INTERVIEW.md) · 上游 issue:[bytedance/deer-flow#7601](https://github.com/bytedance/deer-flow/issues/7601)
 
 ## 问题是怎么发生的,又是怎么修的
 
