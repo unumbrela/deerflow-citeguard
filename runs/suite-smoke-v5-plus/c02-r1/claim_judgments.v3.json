@@ -1,0 +1,1570 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v3",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that Coconut uses the last hidden state as a representation of the reasoning state and feeds it back directly as the next input embedding in the continuous space.",
+   "usage": {
+    "prompt_tokens": 1194,
+    "completion_tokens": 48,
+    "total_tokens": 1242,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1194
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract and passages confirm that Coconut using continuous thoughts significantly outperforms the No-CoT baseline on GSM8k math reasoning tasks.",
+   "usage": {
+    "prompt_tokens": 1076,
+    "completion_tokens": 38,
+    "total_tokens": 1114,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1076
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract and passages confirm that Coconut outperforms CoT on logical reasoning tasks (ProntoQA, ProsQA) while generating fewer tokens.",
+   "usage": {
+    "prompt_tokens": 1329,
+    "completion_tokens": 40,
+    "total_tokens": 1369,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1329
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the Coconut method enables a breadth-first search (BFS) over multiple reasoning paths by encoding alternative next steps in continuous latent space.",
+   "usage": {
+    "prompt_tokens": 1263,
+    "completion_tokens": 44,
+    "total_tokens": 1307,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1263
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe the 'Stepwise Internalization' method as starting with a model trained for explicit CoT and gradually removing intermediate steps while finetuning.",
+   "usage": {
+    "prompt_tokens": 1237,
+    "completion_tokens": 45,
+    "total_tokens": 1282,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1237
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the method enables GPT-2 Small to solve 9x9 multiplication with 99% (0.99) accuracy, explicitly stating that No CoT baselines fail on much smaller tasks (4x4).",
+   "usage": {
+    "prompt_tokens": 1346,
+    "completion_tokens": 62,
+    "total_tokens": 1408,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1346
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The passages explicitly state that ICoT-SI achieves a new state-of-the-art accuracy on GSM8K for models not using intermediate steps.",
+   "usage": {
+    "prompt_tokens": 1152,
+    "completion_tokens": 40,
+    "total_tokens": 1192,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1152
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that the ICoT-SI method is 11 times faster than explicit CoT on multiplication tasks while maintaining comparable accuracy.",
+   "usage": {
+    "prompt_tokens": 1185,
+    "completion_tokens": 45,
+    "total_tokens": 1230,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1185
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the paper distills implicit reasoning from a teacher model trained on explicit chain-of-thought, with reasoning occurring vertically among hidden states rather than horizontally through intermediate words.",
+   "usage": {
+    "prompt_tokens": 1272,
+    "completion_tokens": 54,
+    "total_tokens": 1326,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1272
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract and Passage S5.p1 explicitly confirm that the implicit CoT approach enables solving tasks previously unsolvable without explicit CoT, citing the specific example of GPT-2 Medium achieving 96% accuracy on 5x5 multiplication compared to 2% with no CoT.",
+   "usage": {
+    "prompt_tokens": 1222,
+    "completion_tokens": 70,
+    "total_tokens": 1292,
+    "completion_tokens_details": {
+     "text_tokens": 70
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1222
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The passage explicitly states that implicit CoT has higher inference speed, especially for tasks with many intermediate steps.",
+   "usage": {
+    "prompt_tokens": 1386,
+    "completion_tokens": 32,
+    "total_tokens": 1418,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1386
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper trains decoder-only models using learnable pause tokens appended to inputs and delays output extraction until the last pause token is seen.",
+   "usage": {
+    "prompt_tokens": 1417,
+    "completion_tokens": 42,
+    "total_tokens": 1459,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1417
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The passages explicitly confirm that pause-pretraining followed by pause-finetuning outperforms the standard baseline on eight tasks for the 1B model and six tasks for the 130M model.",
+   "usage": {
+    "prompt_tokens": 1392,
+    "completion_tokens": 52,
+    "total_tokens": 1444,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1392
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The paper's abstract and full text passages explicitly state that the 1B model achieved an 18% EM score gain on the SQuAD task, which is described as the most prominent improvement.",
+   "usage": {
+    "prompt_tokens": 1543,
+    "completion_tokens": 52,
+    "total_tokens": 1595,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1543
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that pause-pretraining is crucial for delays to help and attribute the lack of benefits in standard-pretrained models to strong biases preventing the realization of inference-time delays.",
+   "usage": {
+    "prompt_tokens": 1318,
+    "completion_tokens": 48,
+    "total_tokens": 1366,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1318
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper demonstrates reasoning abilities can be incentivized through pure reinforcement learning without human-labeled reasoning trajectories.",
+   "usage": {
+    "prompt_tokens": 1275,
+    "completion_tokens": 39,
+    "total_tokens": 1314,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1275
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper curated the s1K dataset of 1,000 questions with reasoning traces and developed 'budget forcing' to control test-time compute by terminating or extending the thinking process.",
+   "usage": {
+    "prompt_tokens": 1462,
+    "completion_tokens": 57,
+    "total_tokens": 1519,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1462
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper studies whether LLMs latently perform multi-hop reasoning when processing complex two-hop prompts.",
+   "usage": {
+    "prompt_tokens": 1475,
+    "completion_tokens": 38,
+    "total_tokens": 1513,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1475
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper finds a sequential latent reasoning pathway where the first hop is resolved in lower/early layers and the second hop is answered in mid-upper/later layers.",
+   "usage": {
+    "prompt_tokens": 1235,
+    "completion_tokens": 50,
+    "total_tokens": 1285,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1235
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The passage explicitly states that back-patching correctly answers between 32%-66% of incorrect cases while keeping correct cases at 100%, matching the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 1227,
+    "completion_tokens": 48,
+    "total_tokens": 1275,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1227
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The provided text explicitly states that MLP sublayers play a larger role in promoting the predicted token compared to attention sublayers.",
+   "usage": {
+    "prompt_tokens": 1256,
+    "completion_tokens": 35,
+    "total_tokens": 1291,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1256
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract confirms the method of mixing latent and text tokens, and the passages explicitly state a 17.5% performance gain on the ProsQA benchmark compared to the CoT baseline.",
+   "usage": {
+    "prompt_tokens": 1134,
+    "completion_tokens": 49,
+    "total_tokens": 1183,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1134
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that the latent approach achieves an average 17% reduction in token numbers compared to CoT while surpassing it in prediction accuracy.",
+   "usage": {
+    "prompt_tokens": 1153,
+    "completion_tokens": 43,
+    "total_tokens": 1196,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1153
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that accuracy peaks at r=16 (28.1), decreases at r=32 (27.9), and identify this as an optimal balance between compression and information preservation.",
+   "usage": {
+    "prompt_tokens": 1313,
+    "completion_tokens": 58,
+    "total_tokens": 1371,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1313
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The paper's abstract and results confirm that using internal hidden states for implicit reasoning enables solving tasks (like multi-digit multiplication) that were previously unsolvable without explicit chain-of-thought outputs.",
+   "usage": {
+    "prompt_tokens": 1294,
+    "completion_tokens": 48,
+    "total_tokens": 1342,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1294
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The paper explicitly proposes a method to internalize reasoning steps into hidden states, enabling models to solve tasks like multiplication and GSM8K without generating explicit intermediate outputs.",
+   "usage": {
+    "prompt_tokens": 1274,
+    "completion_tokens": 43,
+    "total_tokens": 1317,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1274
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The paper explicitly introduces a method where reasoning occurs in the continuous latent space using hidden states, enabling the model to solve tasks without decoding intermediate steps into words.",
+   "usage": {
+    "prompt_tokens": 1300,
+    "completion_tokens": 45,
+    "total_tokens": 1345,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1300
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The paper's abstract and passages confirm that training with pause tokens (pause-pretraining) combined with inference-time delays improves performance on downstream tasks.",
+   "usage": {
+    "prompt_tokens": 1232,
+    "completion_tokens": 39,
+    "total_tokens": 1271,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1232
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The provided passage explicitly states that implicit CoT lacks transparency compared to explicit CoT, directly supporting the sentence's claim about this paper.",
+   "usage": {
+    "prompt_tokens": 1101,
+    "completion_tokens": 41,
+    "total_tokens": 1142,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1101
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The evidence confirms the paper emphasizes emergent search capabilities (BFS) in continuous latent spaces and contains no discussion of interpretability, supporting the claim that it does not address those concerns.",
+   "usage": {
+    "prompt_tokens": 1160,
+    "completion_tokens": 48,
+    "total_tokens": 1208,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1160
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The passage explicitly states that DeepSeek-R1's structural output capabilities are suboptimal, confirming the sentence's claim about acknowledged limitations.",
+   "usage": {
+    "prompt_tokens": 1109,
+    "completion_tokens": 38,
+    "total_tokens": 1147,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1109
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2405.14838",
+   "label": "unsupported",
+   "reason": "The evidence describes 'Stepwise Internalization' as the method proposed by the paper's authors, whereas the sentence incorrectly attributes this approach to Deng et al. (who are cited in the text as authors of a different method, ICoT-KD).",
+   "usage": {
+    "prompt_tokens": 1108,
+    "completion_tokens": 65,
+    "total_tokens": 1173,
+    "completion_tokens_details": {
+     "text_tokens": 65
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1108
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The sentence's claim that the paper notes the need for further research to refine and scale latent reasoning to pretraining is directly stated in Passage [S6.p1].",
+   "usage": {
+    "prompt_tokens": 1233,
+    "completion_tokens": 44,
+    "total_tokens": 1277,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1233
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The passage explicitly states that the expense of pause-pretraining prevents the authors from studying generalization across more model sizes, encoder-decoder architectures, or other pretraining mixtures and objectives.",
+   "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 51,
+    "total_tokens": 1644,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1593
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm the use of LLaMA-2 models up to 70B parameters and describe the internal entity recall measure as an approximation based on logit lens with shortcomings like representation drift, bias, and brittleness.",
+   "usage": {
+    "prompt_tokens": 1275,
+    "completion_tokens": 60,
+    "total_tokens": 1335,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1275
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm both the high training costs due to finetuning when removing CoT tokens and the instability caused by aggressive removal values.",
+   "usage": {
+    "prompt_tokens": 1084,
+    "completion_tokens": 40,
+    "total_tokens": 1124,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1084
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm both the token efficiency issues due to overthinking and the current inability to leverage external tools.",
+   "usage": {
+    "prompt_tokens": 1065,
+    "completion_tokens": 34,
+    "total_tokens": 1099,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1065
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The provided text explicitly states that budget forcing has two key limitations: it eventually flattens out and is constrained by the context window of the underlying language model.",
+   "usage": {
+    "prompt_tokens": 1498,
+    "completion_tokens": 42,
+    "total_tokens": 1540,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1498
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The paper's title and abstract explicitly state that the work explores the limitations of large language models on multi-hop queries, confirming the research question attributed to it.",
+   "usage": {
+    "prompt_tokens": 1473,
+    "completion_tokens": 42,
+    "total_tokens": 1515,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1473
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper analyzes internal computations, specifically how information flows through layers to resolve multi-hop queries.",
+   "usage": {
+    "prompt_tokens": 1310,
+    "completion_tokens": 34,
+    "total_tokens": 1344,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1310
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The evidence explicitly states that the second hop is answered in mid-upper layers only after the first hop is resolved by lower layers, confirming sequential latent reasoning.",
+   "usage": {
+    "prompt_tokens": 1280,
+    "completion_tokens": 41,
+    "total_tokens": 1321,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1280
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The passage [S6.SS3.p1] explicitly states that back-patching correctly answers between 32%-66% of incorrect cases while keeping correct cases at 100%, matching the sentence exactly.",
+   "usage": {
+    "prompt_tokens": 1206,
+    "completion_tokens": 62,
+    "total_tokens": 1268,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1206
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The passage [S4.SS3.p2] explicitly states that MLP sublayers play a larger role in promoting the predicted token compared to attention sublayers.",
+   "usage": {
+    "prompt_tokens": 1235,
+    "completion_tokens": 43,
+    "total_tokens": 1278,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1235
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the study is limited to two-hop queries, describe the mechanistic back-patching analysis, and explicitly state the method is not practical for inference without efficient layer selection.",
+   "usage": {
+    "prompt_tokens": 1230,
+    "completion_tokens": 52,
+    "total_tokens": 1282,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1230
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper demonstrates reasoning abilities can be incentivized through pure reinforcement learning without human-labeled reasoning trajectories.",
+   "usage": {
+    "prompt_tokens": 1358,
+    "completion_tokens": 36,
+    "total_tokens": 1394,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1358
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that DeepSeek-R1-Zero and DeepSeek-R1 use large-scale RL to incentivize reasoning, with behaviors like self-verification and reflection emerging organically.",
+   "usage": {
+    "prompt_tokens": 1305,
+    "completion_tokens": 49,
+    "total_tokens": 1354,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1305
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The passages explicitly state that reasoning-oriented RL leads to marked performance enhancements on benchmarks requiring advanced reasoning skills like mathematics and coding.",
+   "usage": {
+    "prompt_tokens": 1207,
+    "completion_tokens": 35,
+    "total_tokens": 1242,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1207
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that pure reinforcement learning without human annotations leads to the emergence of reasoning patterns like self-reflection and verification.",
+   "usage": {
+    "prompt_tokens": 1192,
+    "completion_tokens": 38,
+    "total_tokens": 1230,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1192
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "Passage [S6.p3] explicitly states that DeepSeek-R1's structural output capabilities are suboptimal and that it cannot leverage tools.",
+   "usage": {
+    "prompt_tokens": 1027,
+    "completion_tokens": 41,
+    "total_tokens": 1068,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1027
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2501.12948",
+   "label": "partial",
+   "reason": "The evidence supports the claims about suboptimal structured output, lack of tool use, language mixing, and limited software engineering improvements, but it does not mention token efficiency issues with overthinking or sensitivity to few-shot prompting.",
+   "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 58,
+    "total_tokens": 1129,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1071
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper explores implicit reasoning via hidden states distilled from explicit chain-of-thought, achieving task-solving ability comparable to explicit methods with faster inference speeds.",
+   "usage": {
+    "prompt_tokens": 1309,
+    "completion_tokens": 45,
+    "total_tokens": 1354,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1309
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2311.01460",
+   "label": "partial",
+   "reason": "The evidence confirms the methodology of distilling implicit reasoning vertically from a teacher model and evaluation on multi-digit multiplication, but it does not mention the specific 'GSM8K-Aug' dataset, referring only generally to a 'grade school math problem dataset'.",
+   "usage": {
+    "prompt_tokens": 1241,
+    "completion_tokens": 66,
+    "total_tokens": 1307,
+    "completion_tokens_details": {
+     "text_tokens": 66
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1241
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The evidence in Passage S5.p1 explicitly confirms that GPT-2 Medium achieved 96% accuracy on 5x5 multiplication with implicit CoT compared to 2% without it, enabling the solution of previously unsolvable tasks.",
+   "usage": {
+    "prompt_tokens": 1201,
+    "completion_tokens": 66,
+    "total_tokens": 1267,
+    "completion_tokens_details": {
+     "text_tokens": 66
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1201
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The provided text explicitly states that implicit CoT has higher inference speed than explicit CoT, specifically citing GSM8K-Aug and 5x5 multiplication as examples.",
+   "usage": {
+    "prompt_tokens": 1235,
+    "completion_tokens": 44,
+    "total_tokens": 1279,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1235
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The first passage explicitly states that implicit CoT lacks transparency and interpretability because its internal processing within hidden states makes it challenging to understand how the model arrives at conclusions.",
+   "usage": {
+    "prompt_tokens": 1330,
+    "completion_tokens": 44,
+    "total_tokens": 1374,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1330
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state the paper investigates whether models can be taught to internalize CoT steps while maintaining high performance.",
+   "usage": {
+    "prompt_tokens": 1178,
+    "completion_tokens": 39,
+    "total_tokens": 1217,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1178
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly describe the 'Stepwise Internalization' method as starting with an explicit CoT model and gradually removing intermediate steps during finetuning to internalize reasoning.",
+   "usage": {
+    "prompt_tokens": 1236,
+    "completion_tokens": 55,
+    "total_tokens": 1291,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1236
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The passages explicitly state that Stepwise Internalization enables a GPT-2 Small model to solve 9x9 multiplication with 99% (0.99) accuracy, while the No CoT method fails on smaller problems like 4x4.",
+   "usage": {
+    "prompt_tokens": 1316,
+    "completion_tokens": 64,
+    "total_tokens": 1380,
+    "completion_tokens_details": {
+     "text_tokens": 64
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1316
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The passages explicitly state that ICoT-SI achieves a new state-of-the-art accuracy on GSM8K for models not using any intermediate steps.",
+   "usage": {
+    "prompt_tokens": 1132,
+    "completion_tokens": 47,
+    "total_tokens": 1179,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1132
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that the ICoT-SI method is 11 times faster than explicit CoT on multiplication tasks while maintaining comparable accuracy.",
+   "usage": {
+    "prompt_tokens": 1165,
+    "completion_tokens": 48,
+    "total_tokens": 1213,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1165
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2405.14838",
+   "label": "partial",
+   "reason": "The evidence supports the claims about high training cost, instability with aggressive removal, and loss of interpretability, but it contradicts the claim that explicit CoT achieves higher accuracy by stating the method maintains similar accuracies.",
+   "usage": {
+    "prompt_tokens": 1131,
+    "completion_tokens": 57,
+    "total_tokens": 1188,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1131
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state the research questions regarding whether delays help, hurt, or have no effect, and investigate the impact of introducing these delays during pretraining versus finetuning.",
+   "usage": {
+    "prompt_tokens": 1111,
+    "completion_tokens": 48,
+    "total_tokens": 1159,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1111
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the use of 1B and 130M parameter decoder-only models trained with learnable pause tokens appended to inputs, delaying output until the last token.",
+   "usage": {
+    "prompt_tokens": 1415,
+    "completion_tokens": 49,
+    "total_tokens": 1464,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1415
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the evaluation of four training approaches (standard, pause-pretraining only, pause-finetuning only, and both) across nine downstream tasks.",
+   "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 47,
+    "total_tokens": 1118,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1071
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The passages explicitly state that pause-pretraining followed by pause-finetuning outperforms the standard baseline on eight tasks for the 1B model and six tasks for the 130M model.",
+   "usage": {
+    "prompt_tokens": 1445,
+    "completion_tokens": 52,
+    "total_tokens": 1497,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1445
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the 1B model achieved an 18% EM score gain on the SQuAD task, which is described as the most prominent improvement.",
+   "usage": {
+    "prompt_tokens": 1522,
+    "completion_tokens": 50,
+    "total_tokens": 1572,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1522
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The evidence explicitly states that pause-pretraining is crucial for delays to help and attributes this to standard-pretrained models having biases against utilizing inference-time delays.",
+   "usage": {
+    "prompt_tokens": 1297,
+    "completion_tokens": 41,
+    "total_tokens": 1338,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1297
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2310.02226",
+   "label": "supported",
+   "reason": "The passage explicitly states that the expense of pause-pretraining prevents the authors from studying generalization across more model sizes, encoder-decoder architectures, or other pretraining mixtures and objectives.",
+   "usage": {
+    "prompt_tokens": 1437,
+    "completion_tokens": 51,
+    "total_tokens": 1488,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1437
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper introduces a paradigm for reasoning in continuous latent space because the language space may not be optimal, directly supporting the research question described.",
+   "usage": {
+    "prompt_tokens": 1280,
+    "completion_tokens": 45,
+    "total_tokens": 1325,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1280
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm that Coconut uses the last hidden state as a continuous thought fed back as input to enable breadth-first search.",
+   "usage": {
+    "prompt_tokens": 1190,
+    "completion_tokens": 38,
+    "total_tokens": 1228,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1190
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The evidence explicitly states that Coconut achieves 34.1% accuracy on GSM8k, significantly outperforming the No-CoT baseline at 16.1%.",
+   "usage": {
+    "prompt_tokens": 1166,
+    "completion_tokens": 47,
+    "total_tokens": 1213,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1166
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The evidence explicitly states that Coconut generates fewer tokens (more token-efficient) while achieving higher accuracy on logical reasoning tasks like ProntoQA and ProsQA compared to traditional CoT.",
+   "usage": {
+    "prompt_tokens": 1308,
+    "completion_tokens": 45,
+    "total_tokens": 1353,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1308
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that continuous latent reasoning enables the model to perform a breadth-first search (BFS) by encoding multiple alternative next steps, directly supporting the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 1243,
+    "completion_tokens": 48,
+    "total_tokens": 1291,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1243
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The sentence is a direct quote from the paper's conclusion passage [S6.p1], which explicitly states the need for further research to refine and scale latent reasoning to pretraining.",
+   "usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 47,
+    "total_tokens": 1222,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1175
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper's goal is to seek 'the simplest approach to achieve test-time scaling and strong reasoning performance,' which directly matches the sentence.",
+   "usage": {
+    "prompt_tokens": 1658,
+    "completion_tokens": 42,
+    "total_tokens": 1700,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1658
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the curation of the s1K dataset with 1,000 questions and the development of budget forcing to control test-time compute by terminating or extending the thinking process.",
+   "usage": {
+    "prompt_tokens": 1491,
+    "completion_tokens": 58,
+    "total_tokens": 1549,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1491
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the model was supervised finetuned on s1K and evaluated using budget forcing on reasoning benchmarks like MATH and AIME24.",
+   "usage": {
+    "prompt_tokens": 1357,
+    "completion_tokens": 44,
+    "total_tokens": 1401,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1357
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the s1-32B model exceeds o1-preview on competition math questions by up to 27% on MATH and AIME24 benchmarks.",
+   "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 52,
+    "total_tokens": 1610,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1558
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that scaling s1-32B with budget forcing improves AIME24 performance from 50% to 57%.",
+   "usage": {
+    "prompt_tokens": 1243,
+    "completion_tokens": 48,
+    "total_tokens": 1291,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1243
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The paper explicitly states that supervised finetuning on only 1,000 examples suffices to build a competitive reasoning model matching o1-preview.",
+   "usage": {
+    "prompt_tokens": 1536,
+    "completion_tokens": 42,
+    "total_tokens": 1578,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1536
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The first passage explicitly states that budget forcing has two key limitations: it eventually flattens out and is constrained by the context window.",
+   "usage": {
+    "prompt_tokens": 1517,
+    "completion_tokens": 37,
+    "total_tokens": 1554,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1517
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper proposes mixing latent and text tokens to improve reasoning performance and efficiency.",
+   "usage": {
+    "prompt_tokens": 1491,
+    "completion_tokens": 34,
+    "total_tokens": 1525,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1491
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2502.03275",
+   "label": "partial",
+   "reason": "The evidence confirms the method and the use of the ProsQA benchmark, but it specifies a single compression rate (r=16) rather than supporting the claim that the evaluation used 'various' compression rates.",
+   "usage": {
+    "prompt_tokens": 1094,
+    "completion_tokens": 57,
+    "total_tokens": 1151,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1094
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The passage explicitly states that for the difficult ProsQA benchmark, the latent approach achieves a 17.5% performance gain over the CoT baseline.",
+   "usage": {
+    "prompt_tokens": 1127,
+    "completion_tokens": 42,
+    "total_tokens": 1169,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1127
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that the latent approach achieves an average 17% reduction in token numbers compared to CoT while surpassing it in prediction accuracy.",
+   "usage": {
+    "prompt_tokens": 1134,
+    "completion_tokens": 43,
+    "total_tokens": 1177,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1134
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that accuracy peaks at 28.1 when r=16 and decreases to 27.9 at r=32, identifying this as an optimal balance.",
+   "usage": {
+    "prompt_tokens": 1294,
+    "completion_tokens": 54,
+    "total_tokens": 1348,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1294
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract and introduction explicitly state the paper's research question is whether LLMs latently perform multi-hop reasoning when processing complex two-hop prompts.",
+   "usage": {
+    "prompt_tokens": 1481,
+    "completion_tokens": 40,
+    "total_tokens": 1521,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1481
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the use of the TwoHopFact dataset, LLaMA-2 models of varying sizes, and the measurement of internal entity recall (EntRec) for the first hop and consistency for the second hop.",
+   "usage": {
+    "prompt_tokens": 1412,
+    "completion_tokens": 63,
+    "total_tokens": 1475,
+    "completion_tokens_details": {
+     "text_tokens": 63
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1412
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that there is a clear scaling trend with increasing model size for the first hop of reasoning.",
+   "usage": {
+    "prompt_tokens": 1264,
+    "completion_tokens": 35,
+    "total_tokens": 1299,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1264
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that strong evidence of latent multi-hop reasoning exists for certain prompt types, with the pathway utilized in more than 80% of cases.",
+   "usage": {
+    "prompt_tokens": 1169,
+    "completion_tokens": 45,
+    "total_tokens": 1214,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1169
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that evidence for the second hop and full multi-hop traversal is moderate, while evidence for the first hop is substantial.",
+   "usage": {
+    "prompt_tokens": 1315,
+    "completion_tokens": 40,
+    "total_tokens": 1355,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1315
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm the use of LLaMA-2 models up to 70B, the reliance on logit lens with its specific shortcomings (representation drift, bias, brittleness), and the focus on a specific internal entity recall pathway.",
+   "usage": {
+    "prompt_tokens": 1273,
+    "completion_tokens": 63,
+    "total_tokens": 1336,
+    "completion_tokens_details": {
+     "text_tokens": 63
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1273
+    }
+   }
+  }
+ ]
+}

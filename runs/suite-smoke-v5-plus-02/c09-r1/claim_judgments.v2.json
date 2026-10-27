@@ -1,0 +1,1281 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2312.04265",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces Rein as a robust, parameter-efficient fine-tuning approach for harnessing Vision Foundation Models in domain generalized semantic segmentation.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 38,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2312.04265",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Rein is built upon trainable tokens linked to distinct instances to refine and forward feature maps, producing diverse refinements for different categories.",
+   "usage": {
+    "prompt_tokens": 794,
+    "completion_tokens": 41,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 794
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2312.04265",
+   "label": "supported",
+   "reason": "The abstract confirms Rein addresses DGSS and explicitly states it achieves high performance without accessing target datasets.",
+   "usage": {
+    "prompt_tokens": 783,
+    "completion_tokens": 33,
+    "total_tokens": 816,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 783
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2312.04265",
+   "label": "partial",
+   "reason": "The abstract confirms the use of learnable tokens linked to instances for feature refinement but does not mention the specific mechanism of using dot-product operations to generate attention-like similarity maps.",
+   "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 48,
+    "total_tokens": 843,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 795
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2312.04265",
+   "label": "partial",
+   "reason": "The abstract confirms the method name, performance metrics, and data constraints, but describes the technique as using 'trainable tokens' rather than the 'low-rank matrix decomposition' stated in the sentence.",
+   "usage": {
+    "prompt_tokens": 806,
+    "completion_tokens": 54,
+    "total_tokens": 860,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 806
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2312.04265",
+   "label": "partial",
+   "reason": "The abstract confirms Rein performs instance-level feature refinement using trainable tokens but does not mention the specific use of dot-product operations or attention-like similarity maps.",
+   "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 40,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 771
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2312.04265",
+   "label": "unsupported",
+   "reason": "The abstract describes a method based on trainable tokens, whereas the sentence incorrectly attributes low-rank matrix decomposition to this paper.",
+   "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 35,
+    "total_tokens": 808,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 773
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2311.17922",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper introduces a simple framework for generalizing semantic segmentation networks by employing language as the source of randomization.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 38,
+    "total_tokens": 778,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2311.17922",
+   "label": "supported",
+   "reason": "The sentence directly quotes the three key ingredients of the framework described in the abstract.",
+   "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 27,
+    "total_tokens": 793,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 766
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2311.17922",
+   "label": "partial",
+   "reason": "The abstract confirms the use of CLIP pretraining for domain generalization but does not mention or address the claim that traditional DGSS networks are pretrained on ImageNet.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 44,
+    "total_tokens": 802,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2311.17922",
+   "label": "partial",
+   "reason": "The abstract supports the need for minimal fine-tuning to preserve robustness but does not state the specific finding that direct CLIP fine-tuning performs worse than ImageNet on OOD data.",
+   "usage": {
+    "prompt_tokens": 767,
+    "completion_tokens": 52,
+    "total_tokens": 819,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 767
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2311.17922",
+   "label": "partial",
+   "reason": "The abstract confirms language-driven style augmentation and mixing but does not mention 'class-wise' prompts, 'class names', or 'class-specific style banks'.",
+   "usage": {
+    "prompt_tokens": 767,
+    "completion_tokens": 45,
+    "total_tokens": 812,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 767
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2311.17922",
+   "label": "partial",
+   "reason": "The abstract confirms language-driven augmentation and style mixing but does not mention using prompts with class names or mining styles from class-specific style banks.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 41,
+    "total_tokens": 791,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2312.01850",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper presents DIDEX, a diffusion-based domain extension method that uses a diffusion model to generate a pseudo-target domain with diverse text prompts.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 43,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2312.01850",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method allows control over the style and content of generated images and introduces high diversity.",
+   "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 33,
+    "total_tokens": 805,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 772
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2312.01850",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method trains a generalizing model by adapting towards the generated pseudo-target domain.",
+   "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 32,
+    "total_tokens": 804,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 772
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2312.01850",
+   "label": "partial",
+   "reason": "The abstract confirms DIDEX uses diffusion for high diversity without real data, but it does not explicitly state that traditional DGSS methods specifically suffer from requiring auxiliary real data or producing limited diversity.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 51,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2312.01850",
+   "label": "supported",
+   "reason": "The abstract confirms the use of diffusion models to generate pseudo-target domains with diverse text prompts controlling style and content, aligning with the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 802,
+    "completion_tokens": 41,
+    "total_tokens": 843,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 802
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2312.01850",
+   "label": "partial",
+   "reason": "The abstract confirms the performance metrics and pseudo-target domain approach but does not state that DIDEX adapts UDA (Unsupervised Domain Adaptation) techniques, which is an inference by the reviewer since the paper focuses on Domain Generalization without target data.",
+   "usage": {
+    "prompt_tokens": 818,
+    "completion_tokens": 65,
+    "total_tokens": 883,
+    "completion_tokens_details": {
+     "text_tokens": 65
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 818
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2312.01850",
+   "label": "supported",
+   "reason": "The abstract confirms DIDEX uses diffusion models to generate pseudo-target domains and trains by adapting to them without real target data.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 38,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2312.09788",
+   "label": "supported",
+   "reason": "The sentence accurately describes the CLOUDS framework and its three integrated components (CLIP, generative models, SAM) exactly as stated in the paper's abstract.",
+   "usage": {
+    "prompt_tokens": 825,
+    "completion_tokens": 44,
+    "total_tokens": 869,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 825
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2312.09788",
+   "label": "supported",
+   "reason": "The abstract explicitly states that existing DGSS methods using Domain Randomization are limited to style diversification and cannot account for content, which directly supports the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 778,
+    "completion_tokens": 44,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 778
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2312.09788",
+   "label": "partial",
+   "reason": "The abstract confirms the use of CLIP, generative models, and SAM, but does not mention using LLMs to generate text prompts for the diffusion model.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 47,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2312.09788",
+   "label": "partial",
+   "reason": "The abstract confirms the use of SAM for refinement and the focus on content diversification, but it does not mention 'self-training' or 'point-based prompting' as described in the sentence.",
+   "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 52,
+    "total_tokens": 838,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 786
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2312.09788",
+   "label": "partial",
+   "reason": "The abstract confirms the use of SAM for refinement and generative models for content diversification, but does not mention point-based prompting, diffusion models specifically, or LLM-generated text prompts.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 48,
+    "total_tokens": 840,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2407.18568",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper presents a novel Spectral-dEcomposed Token (SET) learning framework.",
+   "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 33,
+    "total_tokens": 787,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 754
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2407.18568",
+   "label": "supported",
+   "reason": "The abstract explicitly states that frozen VFM features are decomposed into phase and amplitude components in frequency space, which contain content and style information respectively, and are then separately processed by learnable tokens.",
+   "usage": {
+    "prompt_tokens": 777,
+    "completion_tokens": 50,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 777
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2407.18568",
+   "label": "partial",
+   "reason": "The abstract confirms the method and goal but does not list the specific style variation examples (weather, lighting, urban landscape) mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 46,
+    "total_tokens": 838,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2407.18568",
+   "label": "partial",
+   "reason": "The abstract confirms the use of FFT to decompose features into phase (content) and amplitude (style) with a frozen backbone, but it does not specify that amplitude corresponds to high-frequency or phase to low-frequency components.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 55,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2407.18568",
+   "label": "supported",
+   "reason": "The abstract confirms the use of spectral decomposition into phase and amplitude branches, token-based feature enhancement for task-specific information, and attention optimization to address style variation.",
+   "usage": {
+    "prompt_tokens": 785,
+    "completion_tokens": 42,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 785
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2407.18568",
+   "label": "supported",
+   "reason": "The abstract confirms the use of separate amplitude and phase branches for token-based feature enhancement and an attention optimization method to address style variation.",
+   "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 37,
+    "total_tokens": 799,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 762
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2403.06122",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study proposes BlindNet, a novel DGSS approach that blinds style without external modules or datasets.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 36,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2403.06122",
+   "label": "supported",
+   "reason": "The abstract explicitly states that BlindNet comprises covariance alignment and semantic consistency contrastive learning with the exact functions described in the sentence.",
+   "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 36,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 811
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2403.06122",
+   "label": "partial",
+   "reason": "The abstract confirms BlindNet's method and lack of target data but does not mention the specific datasets (GTAV, Cityscapes) or the specific limitations of Domain Randomization and Feature Normalization cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 58,
+    "total_tokens": 892,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2403.06122",
+   "label": "partial",
+   "reason": "The abstract confirms the use of covariance alignment for the encoder to mitigate style effects and preserve content, but it does not mention the specific loss names 'Covariance Matching Loss (CML)' or 'Cross-Covariance Loss (CCL)'.",
+   "usage": {
+    "prompt_tokens": 821,
+    "completion_tokens": 61,
+    "total_tokens": 882,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 821
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2403.06122",
+   "label": "unsupported",
+   "reason": "The abstract describes covariance alignment as a method to uniformly recognize styles and preserve content, whereas the sentence incorrectly attributes the specific mechanism of converging only the diagonal component of the covariance matrix to this paper.",
+   "usage": {
+    "prompt_tokens": 825,
+    "completion_tokens": 53,
+    "total_tokens": 878,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 825
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2403.06122",
+   "label": "supported",
+   "reason": "The abstract explicitly states that BlindNet uses covariance alignment in the encoder to preserve content and semantic consistency contrastive learning in the decoder to construct discriminative class embeddings.",
+   "usage": {
+    "prompt_tokens": 804,
+    "completion_tokens": 43,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 804
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2407.09033",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper introduces a method named tqdm which utilizes domain-invariant semantic knowledge from text embeddings of vision-language models.",
+   "usage": {
+    "prompt_tokens": 778,
+    "completion_tokens": 38,
+    "total_tokens": 816,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 778
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2407.09033",
+   "label": "supported",
+   "reason": "The abstract explicitly states that text embeddings are employed as object queries within a transformer-based framework and regarded as a domain-invariant basis for pixel grouping in DGSS.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 43,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2407.09033",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces a method utilizing text embeddings from vision-language models as object queries for domain generalized segmentation, aligning with the sentence's claim about exploring direct language-driven approaches.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 51,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2407.09033",
+   "label": "partial",
+   "reason": "The abstract confirms the use of text embeddings as object queries but does not mention keeping the text encoder frozen.",
+   "usage": {
+    "prompt_tokens": 807,
+    "completion_tokens": 32,
+    "total_tokens": 839,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 807
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2407.09033",
+   "label": "partial",
+   "reason": "The abstract confirms the use of three regularization losses but does not mention 'learnable prompts' or specify the loss names as 'language, vision-language, and vision regularization'.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 46,
+    "total_tokens": 842,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2407.09033",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of textual object queries, the goal of enhancing semantic clarity, and the application of regularization losses for alignment.",
+   "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 41,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 786
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2312.03048",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors propose an efficient data generation pipeline termed DGInStyle.",
+   "usage": {
+    "prompt_tokens": 782,
+    "completion_tokens": 29,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 782
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2312.03048",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper examines specializing a pretrained LDM to semantically-controlled generation within a narrow domain.",
+   "usage": {
+    "prompt_tokens": 788,
+    "completion_tokens": 34,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 788
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2312.03048",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper proposes a Style Swap technique to endow the rich generative prior with learned semantic control.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 36,
+    "total_tokens": 826,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2312.03048",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper designs a Multi-resolution Latent Fusion technique to overcome the bias of LDMs towards dominant objects.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 38,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2312.03048",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a data generation pipeline using pretrained latent diffusion models to improve semantic segmentation without mentioning architectural or training modifications.",
+   "usage": {
+    "prompt_tokens": 820,
+    "completion_tokens": 40,
+    "total_tokens": 860,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 820
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2312.03048",
+   "label": "partial",
+   "reason": "The abstract mentions the Style Swap technique but does not provide the specific implementation details regarding DreamBooth, ControlNet training order, or switching back to the original LDM during inference.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 47,
+    "total_tokens": 877,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2312.03048",
+   "label": "partial",
+   "reason": "The abstract confirms semantic control and multi-resolution latent fusion but does not mention using text prompting for style diversity.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 35,
+    "total_tokens": 849,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2312.03048",
+   "label": "partial",
+   "reason": "The abstract confirms the use of Style Swap and Multi-resolution Latent Fusion but does not mention the specific text prompting mechanism involving concatenating class names with task-specific qualifiers.",
+   "usage": {
+    "prompt_tokens": 801,
+    "completion_tokens": 47,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 801
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper proposes MFuser, a Mamba-based fusion framework combining VFMs and VLMs with linear scalability.",
+   "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 39,
+    "total_tokens": 902,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 863
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract explicitly defines MFuser as consisting of MVFuser (a co-adapter for joint fine-tuning) and MTEnhancer (a hybrid attention-Mamba module that refines text embeddings with image priors), matching the sentence exactly.",
+   "usage": {
+    "prompt_tokens": 873,
+    "completion_tokens": 60,
+    "total_tokens": 933,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 873
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract confirms MFuser addresses Domain Generalized Semantic Segmentation (DGSS) and highlights its strong generalization capabilities across domains.",
+   "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 37,
+    "total_tokens": 900,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 863
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2504.03193",
+   "label": "partial",
+   "reason": "The abstract confirms MFuser is a novel fusion framework for DGSS combining VFMs and VLMs, but it specifies the integration of particular models (DINOv2, CLIP) rather than supporting the claim that it collaborates 'arbitrary pairs' of such models.",
+   "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 67,
+    "total_tokens": 941,
+    "completion_tokens_details": {
+     "text_tokens": 67
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 874
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract explicitly describes MVFuser as a co-adapter that jointly fine-tunes VFM and VLM models using Mamba (State-Space Models) to handle sequential dynamics efficiently.",
+   "usage": {
+    "prompt_tokens": 879,
+    "completion_tokens": 49,
+    "total_tokens": 928,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 879
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact mIoU scores (68.20 and 71.87) and the claim of outperforming state-of-the-art methods mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 882,
+    "completion_tokens": 52,
+    "total_tokens": 934,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 882
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract confirms MFuser is a Mamba-based (State-Space Model) framework and reports the exact mIoU scores mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 872,
+    "completion_tokens": 41,
+    "total_tokens": 913,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 872
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2412.12050",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the paper introduces SCSD with the three specified components: Semantic Query Booster, Text-Driven Style Transform, and Style Synergy Optimization, matching the sentence's description.",
+   "usage": {
+    "prompt_tokens": 908,
+    "completion_tokens": 48,
+    "total_tokens": 956,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 908
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2412.12050",
+   "label": "supported",
+   "reason": "The abstract explicitly defines DGSS as utilizing source domain data exclusively to enhance generalization across unknown target domains, which directly matches the sentence's description.",
+   "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 43,
+    "total_tokens": 933,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 890
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2412.12050",
+   "label": "partial",
+   "reason": "The abstract confirms the framework name and components but does not mention using Vision-Language Models or leveraging semantic consistency between image and text modalities.",
+   "usage": {
+    "prompt_tokens": 898,
+    "completion_tokens": 42,
+    "total_tokens": 940,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 898
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2412.12050",
+   "label": "partial",
+   "reason": "The abstract confirms the use of text embeddings to guide controllable style transformation but does not mention the specific mechanism of 'Fourier transform'.",
+   "usage": {
+    "prompt_tokens": 894,
+    "completion_tokens": 42,
+    "total_tokens": 936,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 894
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2412.12050",
+   "label": "partial",
+   "reason": "The abstract confirms SCSD outperforms SOTA methods but reports a different average improvement (+4.08 mIoU) and does not specify the per-domain gains for Mapillary or ACDC mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 899,
+    "completion_tokens": 59,
+    "total_tokens": 958,
+    "completion_tokens_details": {
+     "text_tokens": 59
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 899
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2412.12050",
+   "label": "partial",
+   "reason": "The abstract confirms the three components and loss weighting but does not mention that the Text-Driven Style Transform uses a Fourier transform.",
+   "usage": {
+    "prompt_tokens": 883,
+    "completion_tokens": 36,
+    "total_tokens": 919,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 883
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2312.04265",
+   "label": "supported",
+   "reason": "The abstract confirms the method is named Rein, uses trainable tokens for refinement, and achieves results with just an extra 1% of trainable parameters.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 40,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2311.17922",
+   "label": "supported",
+   "reason": "The abstract explicitly lists 'preservation of the intrinsic CLIP robustness through minimal fine-tuning' as a key ingredient of the proposed framework.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 40,
+    "total_tokens": 790,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2407.18568",
+   "label": "supported",
+   "reason": "The abstract explicitly describes decomposing features into phase and amplitude components in the frequency space (implying FFT) and processing them with learnable tokens.",
+   "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 41,
+    "total_tokens": 809,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 768
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2403.06122",
+   "label": "supported",
+   "reason": "The abstract confirms that BlindNet uses covariance alignment to preserve content information while alleviating style effects, which aligns with the sentence's claim of style-content disentanglement.",
+   "usage": {
+    "prompt_tokens": 802,
+    "completion_tokens": 45,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 802
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2311.17922",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the method as 'language-driven local style augmentation' within a framework for segmentation, which aligns with the sentence's description.",
+   "usage": {
+    "prompt_tokens": 749,
+    "completion_tokens": 40,
+    "total_tokens": 789,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 749
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2407.09033",
+   "label": "supported",
+   "reason": "The abstract explicitly describes using text embeddings as object queries within a transformer-based segmentation framework named tqdm.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 30,
+    "total_tokens": 814,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2312.01850",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the DIDEX method as using a diffusion model to generate a pseudo-target domain controlled by diverse text prompts.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 42,
+    "total_tokens": 832,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2312.03048",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes a 'Style Swap technique' to enable semantically-controlled generation within the DGInStyle pipeline.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 34,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2312.09788",
+   "label": "supported",
+   "reason": "The abstract explicitly describes CLOUDS as a framework integrating CLIP, generative models (diffusion), and SAM.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 35,
+    "total_tokens": 826,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes MFuser as a Mamba-based framework that fuses Vision Foundation Models (VFMs) and Vision-Language Models (VLMs).",
+   "usage": {
+    "prompt_tokens": 861,
+    "completion_tokens": 42,
+    "total_tokens": 903,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 861
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2412.12050",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces SCSD to address semantic consistency and style diversity using text-driven (VLM-related) mechanisms.",
+   "usage": {
+    "prompt_tokens": 880,
+    "completion_tokens": 36,
+    "total_tokens": 916,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 880
+    }
+   }
+  }
+ ]
+}

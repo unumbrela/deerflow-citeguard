@@ -1,0 +1,652 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v3",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that the decay stage branches into three variants (Long, Short, Hybrid) and that a cosine decay strategy is adopted for the learning rate scheduler.",
+   "usage": {
+    "prompt_tokens": 1379,
+    "completion_tokens": 48,
+    "total_tokens": 1427,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1379
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The evidence confirms the dataset mixtures for Stage 1 and Stage 2 but provides no information regarding the specific mixing ratios for Stage 3 or Stage 4 mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 1496,
+    "completion_tokens": 51,
+    "total_tokens": 1547,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1496
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract and provided passages explicitly confirm the three-stage training process, including the specific token counts, sequence lengths, data types (STEM/coding), and technical details like RoPE frequency and learning rate decay mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 62,
+    "total_tokens": 1625,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1563
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2404.14219",
+   "label": "supported",
+   "reason": "The abstract confirms the 3.3T token count, and Passage S2 explicitly details the two disjoint sequential phases with the exact descriptions of web sources for general knowledge in Phase-1 and filtered webdata plus synthetic data for reasoning in Phase-2.",
+   "usage": {
+    "prompt_tokens": 1725,
+    "completion_tokens": 62,
+    "total_tokens": 1787,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1725
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The evidence confirms the two-stage process and quality comparison, but states the dataset has 70B+ tokens rather than explicitly confirming the '5.5x more' multiplier relative to MegaMath-Web-Pro.",
+   "usage": {
+    "prompt_tokens": 1776,
+    "completion_tokens": 57,
+    "total_tokens": 1833,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1776
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the token scale increase (7T to 18T), the use of Qwen2-Instruct for filtering, the integration of specialized math/code data, and the use of synthetic data with reward model filtering.",
+   "usage": {
+    "prompt_tokens": 1439,
+    "completion_tokens": 62,
+    "total_tokens": 1501,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1439
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The passage explicitly states that the method optimizes data mixture at the instance-level through ablation experiments on small proxy models, contrasting with prior studies that optimize at the source or domain level.",
+   "usage": {
+    "prompt_tokens": 1455,
+    "completion_tokens": 48,
+    "total_tokens": 1503,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1455
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the use of an iterative pipeline with fastText classifiers trained on OpenWebMath, expanding over 4 iterations to reach 120B tokens from Common Crawl.",
+   "usage": {
+    "prompt_tokens": 1489,
+    "completion_tokens": 56,
+    "total_tokens": 1545,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1489
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2402.17733",
+   "label": "partial",
+   "reason": "The evidence confirms the token count, language count, and data mixing ratios, but does not mention the application of quality thresholds.",
+   "usage": {
+    "prompt_tokens": 1202,
+    "completion_tokens": 42,
+    "total_tokens": 1244,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1202
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2404.14219",
+   "label": "supported",
+   "reason": "The abstract and passages confirm that Phi-3 deviates from standard scaling laws by using heavily filtered web data based on 'educational level' to target a 'data optimal regime' for small models.",
+   "usage": {
+    "prompt_tokens": 1706,
+    "completion_tokens": 57,
+    "total_tokens": 1763,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1706
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and passages confirm that MATES uses data influence models to capture evolving data preferences and select high-influence data for efficient pretraining.",
+   "usage": {
+    "prompt_tokens": 1486,
+    "completion_tokens": 42,
+    "total_tokens": 1528,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1486
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that DeepSeekMath-Base outperforms Minerva 540B by over 10% on the MATH dataset and leads all open-source base models across eight benchmarks.",
+   "usage": {
+    "prompt_tokens": 1584,
+    "completion_tokens": 57,
+    "total_tokens": 1641,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1584
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2312.02120",
+   "label": "partial",
+   "reason": "The evidence confirms Magicoder-CL-7B outperforms WizardCoder-SC-15B, but it attributes the comparison to DeepSeek-Coder-Instruct-33B to the DeepSeek-based variant (Magicoder S-DS), not the CodeLlama-based variant (Magicoder-CL) specified in the sentence.",
+   "usage": {
+    "prompt_tokens": 1472,
+    "completion_tokens": 83,
+    "total_tokens": 1555,
+    "completion_tokens_details": {
+     "text_tokens": 83
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1472
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract and passages confirm LLaMAX uses vocabulary expansion, continual pre-training on 102 languages with over 64 billion tokens, and instruction tuning.",
+   "usage": {
+    "prompt_tokens": 1413,
+    "completion_tokens": 44,
+    "total_tokens": 1457,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1413
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The passages explicitly confirm that the paper mixed parallel sentences (one-third) with monolingual data (two-thirds) and found this approach to achieve the highest quality.",
+   "usage": {
+    "prompt_tokens": 1169,
+    "completion_tokens": 44,
+    "total_tokens": 1213,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1169
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The passages confirm the use of a cosine scheduler without warmup (peak 3e-5, min one-tenth) for the default stage and the adoption of cosine decay for the branching decay stage.",
+   "usage": {
+    "prompt_tokens": 1265,
+    "completion_tokens": 52,
+    "total_tokens": 1317,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1265
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and provided passages explicitly confirm the use of a Warmup Stable Decay (WSD) schedule with a 2,000-step warmup, a peak learning rate of 5.0×10⁻⁴, and a decay phase covering 10% of total training steps.",
+   "usage": {
+    "prompt_tokens": 1297,
+    "completion_tokens": 74,
+    "total_tokens": 1371,
+    "completion_tokens_details": {
+     "text_tokens": 74
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1297
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2402.03300",
+   "label": "partial",
+   "reason": "The evidence confirms the learning rate schedule details but specifies a maximum learning rate of 4.2e-4 for the main DeepSeekMath 7B model, whereas the sentence claims 5.3e-4 (which applies to a different 1.3B experiment in the text).",
+   "usage": {
+    "prompt_tokens": 1424,
+    "completion_tokens": 74,
+    "total_tokens": 1498,
+    "completion_tokens_details": {
+     "text_tokens": 74
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1424
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The provided passages confirm that during the Reasoning Stage, Qwen3 was trained on 5T tokens with increased STEM/coding/synthetic data and accelerated learning rate decay.",
+   "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 50,
+    "total_tokens": 1468,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1418
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2404.14219",
+   "label": "unsupported",
+   "reason": "The provided text does not mention reserving the final 10% of training for learning rate decay or using an annealing phase for upsampled math and code data.",
+   "usage": {
+    "prompt_tokens": 1686,
+    "completion_tokens": 49,
+    "total_tokens": 1735,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1686
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The evidence confirms SmolLM2 used a 10% decay phase for learning rate and upsampled high-quality math and code data during this annealing phase to maximize impact.",
+   "usage": {
+    "prompt_tokens": 1544,
+    "completion_tokens": 48,
+    "total_tokens": 1592,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1544
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The provided text explicitly states that OctoThinker-Long-3B reaches performance on par with Qwen2.5-3B and confirms that the mid-training strategy effectively narrows the performance gap between the Llama and Qwen model families.",
+   "usage": {
+    "prompt_tokens": 1377,
+    "completion_tokens": 62,
+    "total_tokens": 1439,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1377
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The passage explicitly states that gains plateau beyond a 30% QA mix and identifies 30% as the optimal ratio due to diminishing returns.",
+   "usage": {
+    "prompt_tokens": 1542,
+    "completion_tokens": 44,
+    "total_tokens": 1586,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1542
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2502.02737",
+   "label": "contradicted",
+   "reason": "The evidence states that math data was excluded in stage 1 and code data was limited to 10%, which directly contradicts the sentence's claims of 10-14% math data across all stages and 20-24% code data in later stages.",
+   "usage": {
+    "prompt_tokens": 1588,
+    "completion_tokens": 73,
+    "total_tokens": 1661,
+    "completion_tokens_details": {
+     "text_tokens": 73
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1588
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The paper explicitly states in Passage S2.SS1.p1 that the training data mixture consists of one-third parallel sentences and two-thirds monolingual data.",
+   "usage": {
+    "prompt_tokens": 1123,
+    "completion_tokens": 43,
+    "total_tokens": 1166,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1123
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The passage [S2.SS3.p1] explicitly confirms the data distribution percentages (56% DeepSeekMath Corpus, 20% code, 10% arXiv, 10% natural language, and 4% AlgebraicStack) attributed to the model in the sentence.",
+   "usage": {
+    "prompt_tokens": 1317,
+    "completion_tokens": 78,
+    "total_tokens": 1395,
+    "completion_tokens_details": {
+     "text_tokens": 78
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1317
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that SmolLM2 extended context from 2k to 8k tokens using an intermediate checkpoint, trained on a mixture containing 40% long-context documents, and used a RoPE value of 130k.",
+   "usage": {
+    "prompt_tokens": 1323,
+    "completion_tokens": 66,
+    "total_tokens": 1389,
+    "completion_tokens_details": {
+     "text_tokens": 66
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1323
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2412.15115",
+   "label": "partial",
+   "reason": "The evidence confirms the two-phase training, token lengths, and RoPE base frequency increase via ABF, but it does not mention the use of YARN or Dual Chunk Attention cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 1516,
+    "completion_tokens": 54,
+    "total_tokens": 1570,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1516
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The provided passages confirm all specific details in the sentence, including the third training stage focused on long context, the use of hundreds of billions of tokens at 32k sequence length, the RoPE base frequency increase to 1M via ABF, and the integration of YARN and DCA.",
+   "usage": {
+    "prompt_tokens": 1532,
+    "completion_tokens": 75,
+    "total_tokens": 1607,
+    "completion_tokens_details": {
+     "text_tokens": 75
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1532
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The passages confirm SmolLM2 used a multi-stage training approach with four key principles to address capability bottlenecks and explicitly refer to this strategy as an 'online' approach.",
+   "usage": {
+    "prompt_tokens": 1392,
+    "completion_tokens": 50,
+    "total_tokens": 1442,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1392
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The passages confirm the 30 trillion token count, the multilingual annotation system, and the specific claim of optimizing at the instance-level rather than the source/domain level.",
+   "usage": {
+    "prompt_tokens": 1285,
+    "completion_tokens": 49,
+    "total_tokens": 1334,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1285
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The passage explicitly states that incorporating short-CoT data shows no improvements compared to web data alone, possibly due to a data distribution gap.",
+   "usage": {
+    "prompt_tokens": 1527,
+    "completion_tokens": 38,
+    "total_tokens": 1565,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1527
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The evidence confirms the strategy of upsampling high-quality data during the annealing phase but does not state that this phase corresponds to the final 10% of training.",
+   "usage": {
+    "prompt_tokens": 1273,
+    "completion_tokens": 48,
+    "total_tokens": 1321,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1273
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2404.14219",
+   "label": "unsupported",
+   "reason": "The provided evidence describes model architectures, datasets, and context expansion methods but contains no information about multi-stage training approaches, learning rate decay schedules, or data upsampling during an annealing phase.",
+   "usage": {
+    "prompt_tokens": 1614,
+    "completion_tokens": 49,
+    "total_tokens": 1663,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1614
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The provided passages confirm that OctoThinker-Long-3B reaches performance on par with Qwen2.5-3B despite starting from the Llama-3.2 base, directly supporting the sentence's claims about parity and the effectiveness of the mid-training strategy.",
+   "usage": {
+    "prompt_tokens": 1374,
+    "completion_tokens": 70,
+    "total_tokens": 1444,
+    "completion_tokens_details": {
+     "text_tokens": 70
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1374
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The paper explicitly states the training cost was around $250,000 USD and that this high cost motivated their specific approach rather than exploring multiple different data mixing schedules.",
+   "usage": {
+    "prompt_tokens": 1597,
+    "completion_tokens": 53,
+    "total_tokens": 1650,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1597
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2312.02120",
+   "label": "partial",
+   "reason": "The evidence confirms that DeepSeek-Coder's data and instruction tuning details were not publicly available, but it does not mention the 'MATES' work or any access issues related to it.",
+   "usage": {
+    "prompt_tokens": 1468,
+    "completion_tokens": 52,
+    "total_tokens": 1520,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1468
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The paper's abstract and passages explicitly state that while certain methods stabilize training, performance still deteriorates later, indicating a need for further exploration.",
+   "usage": {
+    "prompt_tokens": 1169,
+    "completion_tokens": 39,
+    "total_tokens": 1208,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1169
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,652 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The abstract confirms the three CoT-focused branches and learning rate decay but does not specify 'cosine' decay or name the variants as 'Long/Short/Hybrid reasoning'.",
+   "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 50,
+    "total_tokens": 989,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 939
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The abstract confirms the multi-stage training and dataset types but lacks the specific token counts, percentage mixes, and stage definitions detailed in the sentence.",
+   "usage": {
+    "prompt_tokens": 931,
+    "completion_tokens": 39,
+    "total_tokens": 970,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 931
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2505.09388",
+   "label": "partial",
+   "reason": "The abstract confirms the paper is about Qwen3 and its capabilities but does not contain the specific training stage details, token counts, sequence lengths, or hyperparameters mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 962,
+    "completion_tokens": 48,
+    "total_tokens": 1010,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 962
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2404.14219",
+   "label": "partial",
+   "reason": "The abstract confirms the 3.3T token count and the use of filtered web and synthetic data, but it does not mention the specific two-phase sequential training structure or the distinct purposes assigned to each phase.",
+   "usage": {
+    "prompt_tokens": 1013,
+    "completion_tokens": 56,
+    "total_tokens": 1069,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1013
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2506.20512",
+   "label": "unsupported",
+   "reason": "The abstract mentions the release of the MegaMath-Web-Pro-Max corpus but does not describe the specific two-stage curation process (fastText classifier and Llama-3.1 refinement) or the 5.5x token increase attributed to it in the sentence.",
+   "usage": {
+    "prompt_tokens": 978,
+    "completion_tokens": 66,
+    "total_tokens": 1044,
+    "completion_tokens_details": {
+     "text_tokens": 66
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 978
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2412.15115",
+   "label": "partial",
+   "reason": "The abstract confirms the token scale increase from 7T to 18T but does not mention the specific methods cited, such as using Qwen2-Instruct as filters, integrating specialized data from Qwen2.5-Math/Coder, or employing synthetic data with reward model filtering.",
+   "usage": {
+    "prompt_tokens": 1018,
+    "completion_tokens": 73,
+    "total_tokens": 1091,
+    "completion_tokens_details": {
+     "text_tokens": 73
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1018
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2505.09388",
+   "label": "unsupported",
+   "reason": "The abstract describes Qwen3's architecture and capabilities but does not mention instance-level mixture optimization, proxy model ablations, or comparisons to source-level optimization methods.",
+   "usage": {
+    "prompt_tokens": 916,
+    "completion_tokens": 43,
+    "total_tokens": 959,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 916
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2402.03300",
+   "label": "partial",
+   "reason": "The abstract confirms the use of 120B tokens from Common Crawl and a data selection pipeline, but does not mention the specific methods (fastText classifiers, OpenWebMath seed corpora) or the number of iterations (4) described in the sentence.",
+   "usage": {
+    "prompt_tokens": 808,
+    "completion_tokens": 65,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+     "text_tokens": 65
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 808
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2402.17733",
+   "label": "partial",
+   "reason": "The abstract confirms the method of mixing monolingual and parallel data for continued pretraining but does not specify the exact token count (20 billion), number of languages (10), or data ratios mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 56,
+    "total_tokens": 809,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 753
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2404.14219",
+   "label": "partial",
+   "reason": "The abstract confirms the use of heavily filtered web data but does not mention filtering for 'educational level' or calibrating to a 'data optimal regime'.",
+   "usage": {
+    "prompt_tokens": 1002,
+    "completion_tokens": 44,
+    "total_tokens": 1046,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1002
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract confirms MATES uses data influence models to select high-influence data for efficient pretraining by adapting to evolving model preferences.",
+   "usage": {
+    "prompt_tokens": 854,
+    "completion_tokens": 37,
+    "total_tokens": 891,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 854
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2402.03300",
+   "label": "partial",
+   "reason": "The abstract confirms the MATH score and open-source status but does not contain data comparing the model to Minerva 540B or mentioning performance across 8 math benchmarks.",
+   "usage": {
+    "prompt_tokens": 810,
+    "completion_tokens": 47,
+    "total_tokens": 857,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 810
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2312.02120",
+   "label": "partial",
+   "reason": "The abstract confirms the model outperforms others with fewer parameters but does not mention the specific competitors (WizardCoder, DeepSeek-Coder) or the exact 5x parameter ratio cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 55,
+    "total_tokens": 887,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 832
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2407.05975",
+   "label": "partial",
+   "reason": "The abstract confirms vocabulary expansion and continual pre-training but does not mention instruction tuning or the specific statistics of 102 languages and 64 billion tokens.",
+   "usage": {
+    "prompt_tokens": 821,
+    "completion_tokens": 43,
+    "total_tokens": 864,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 821
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2402.17733",
+   "label": "partial",
+   "reason": "The abstract confirms the use of a multilingual mixture of monolingual and parallel data but does not specify the one-third to two-thirds ratio or state that this specific ratio was found to be optimal.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 54,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The abstract confirms the two-stage 'Stable-then-Decay' strategy and token counts but does not specify the cosine learning rate schedule, warmup settings, or exact peak/min values mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 959,
+    "completion_tokens": 53,
+    "total_tokens": 1012,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 959
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The abstract confirms the paper is about SmolLM2 and its data-centric training but does not mention the specific Warmup Stable Decay schedule or the numerical hyperparameters cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 876,
+    "completion_tokens": 48,
+    "total_tokens": 924,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 876
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2402.03300",
+   "label": "partial",
+   "reason": "The abstract confirms the paper introduces DeepSeekMath and its training data but does not contain the specific multi-step learning rate schedule or numerical values mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 827,
+    "completion_tokens": 43,
+    "total_tokens": 870,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 827
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2505.09388",
+   "label": "unsupported",
+   "reason": "The abstract describes model architecture, modes, and benchmarks but contains no information about training schedules, learning rate decay, or specific token counts for a reasoning stage.",
+   "usage": {
+    "prompt_tokens": 919,
+    "completion_tokens": 42,
+    "total_tokens": 961,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 919
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2404.14219",
+   "label": "partial",
+   "reason": "The abstract confirms the use of synthetic data for math and code but does not mention the specific training schedule detail of reserving the final 10% for learning rate decay.",
+   "usage": {
+    "prompt_tokens": 1033,
+    "completion_tokens": 52,
+    "total_tokens": 1085,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1033
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The abstract confirms the use of high-quality math and code data but does not mention the specific training schedule detail of reserving the final 10% for learning rate decay.",
+   "usage": {
+    "prompt_tokens": 882,
+    "completion_tokens": 49,
+    "total_tokens": 931,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 882
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The abstract confirms the model family closes the performance gap with Qwen via mid-training, but does not mention the specific 'OctoThinker-Long-3B-Base' variant or claim it reached exact 'parity' with Qwen2.5-3B-Base.",
+   "usage": {
+    "prompt_tokens": 974,
+    "completion_tokens": 68,
+    "total_tokens": 1042,
+    "completion_tokens_details": {
+     "text_tokens": 68
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 974
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2506.20512",
+   "label": "unsupported",
+   "reason": "The abstract discusses the benefits of adding QA-style data but does not mention a specific 30% ratio or diminishing returns beyond that point.",
+   "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 39,
+    "total_tokens": 978,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 939
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The abstract confirms the use of specialized math and code data in a multi-stage process but does not provide the specific percentage ranges (10-14% and 20-24%) cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 55,
+    "total_tokens": 899,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 844
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2402.17733",
+   "label": "partial",
+   "reason": "The abstract confirms the use of a multilingual mixture of monolingual and parallel data but does not specify the one-third to two-thirds ratio mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 730,
+    "completion_tokens": 44,
+    "total_tokens": 774,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 730
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2402.03300",
+   "label": "partial",
+   "reason": "The abstract confirms the use of math, code, and natural language data but does not provide the specific percentage breakdowns cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 807,
+    "completion_tokens": 39,
+    "total_tokens": 846,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 807
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2502.02737",
+   "label": "unsupported",
+   "reason": "The abstract describes data-centric training and dataset creation but contains no information about extending context length, intermediate checkpoints, or RoPE frequency adjustments.",
+   "usage": {
+    "prompt_tokens": 860,
+    "completion_tokens": 38,
+    "total_tokens": 898,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 860
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2412.15115",
+   "label": "partial",
+   "reason": "The abstract confirms Qwen2.5 improves long text generation but does not mention the specific training phases, token counts, or techniques (YARN, Dual Chunk Attention, ABF) described in the sentence.",
+   "usage": {
+    "prompt_tokens": 1030,
+    "completion_tokens": 53,
+    "total_tokens": 1083,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1030
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2505.09388",
+   "label": "unsupported",
+   "reason": "The abstract describes Qwen3's architecture, thinking modes, and multilingual capabilities but contains no mention of a specific third training stage, long-context training details, or the cited techniques (RoPE, ABF, YARN, DCA).",
+   "usage": {
+    "prompt_tokens": 935,
+    "completion_tokens": 60,
+    "total_tokens": 995,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 935
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The abstract confirms a multi-stage process with updated mixing rates but does not mention an 'online' approach or specify exactly four stages.",
+   "usage": {
+    "prompt_tokens": 839,
+    "completion_tokens": 40,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 839
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2505.09388",
+   "label": "unsupported",
+   "reason": "The abstract mentions expanding multilingual support to 119 languages but contains no information about a '30T tokens' annotation system or optimization at the 'granular instance level'.",
+   "usage": {
+    "prompt_tokens": 923,
+    "completion_tokens": 52,
+    "total_tokens": 975,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 923
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2506.20512",
+   "label": "contradicted",
+   "reason": "The abstract states that long chain-of-thought (CoT) data enhances RL outcomes, whereas the sentence claims the paper found that short-CoT provided no benefits, misrepresenting the specific finding regarding CoT length and its effects.",
+   "usage": {
+    "prompt_tokens": 943,
+    "completion_tokens": 60,
+    "total_tokens": 1003,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 943
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2502.02737",
+   "label": "unsupported",
+   "reason": "The abstract describes a multi-stage training process with dataset mixing but does not mention reserving the final 10% of training for decay or strategically upsampling high-quality data during an annealing phase.",
+   "usage": {
+    "prompt_tokens": 868,
+    "completion_tokens": 51,
+    "total_tokens": 919,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 868
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2404.14219",
+   "label": "unsupported",
+   "reason": "The abstract describes model architectures, datasets, and benchmark performance but contains no information about multi-stage training approaches, learning rate decay schedules, or data upsampling strategies.",
+   "usage": {
+    "prompt_tokens": 1019,
+    "completion_tokens": 43,
+    "total_tokens": 1062,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1019
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The abstract confirms the model family and strategy but does not contain the specific claim about achieving parity with Qwen2.5-3B-Base or the explicit comparison to Llama-3.2-3B-Base.",
+   "usage": {
+    "prompt_tokens": 971,
+    "completion_tokens": 60,
+    "total_tokens": 1031,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 971
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The abstract confirms the paper discusses training SmolLM2 and dataset mixing schedules, but it does not mention the specific training cost of $250,000 or state that this cost limited exploration.",
+   "usage": {
+    "prompt_tokens": 839,
+    "completion_tokens": 53,
+    "total_tokens": 892,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 839
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2312.02120",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states that Magicoder is fully open-source including data and weights, which directly contradicts the sentence's claim that it lacked publicly available data and instruction tuning details.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 48,
+    "total_tokens": 878,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The abstract identifies instability as a challenge and proposes a specific solution, but does not explicitly state that stabilization methods generally require further investigation.",
+   "usage": {
+    "prompt_tokens": 925,
+    "completion_tokens": 37,
+    "total_tokens": 962,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 925
+    }
+   }
+  }
+ ]
+}

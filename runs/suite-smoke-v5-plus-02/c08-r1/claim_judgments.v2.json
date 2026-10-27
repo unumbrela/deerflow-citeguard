@@ -1,0 +1,1553 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2511.20347",
+   "label": "unsupported",
+   "reason": "The abstract describes a method called Soft Adaptive Policy Optimization (SAPO), whereas the sentence attributes the proposal of Group Policy Gradient (GPG) to this paper.",
+   "usage": {
+    "prompt_tokens": 888,
+    "completion_tokens": 43,
+    "total_tokens": 931,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 888
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2504.11343",
+   "label": "unsupported",
+   "reason": "The abstract describes a method called 'Reinforce-Rej' and does not mention 'RAFT++', importance sampling, clipping, or the specific accuracy numbers cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 51,
+    "total_tokens": 881,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of vanilla PPO with GAE (λ=1, γ=1), rule-based rewards without KL regularization, superior benchmark performance, and the efficiency gain of requiring only 1/10 of the training steps compared to DeepSeek-R1-Zero.",
+   "usage": {
+    "prompt_tokens": 864,
+    "completion_tokens": 69,
+    "total_tokens": 933,
+    "completion_tokens_details": {
+     "text_tokens": 69
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 864
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of 2-GRPO and matches all specific performance metrics (97.6% performance, 12.5% rollouts, 21% training time) cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 808,
+    "completion_tokens": 58,
+    "total_tokens": 866,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 808
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2504.13818",
+   "label": "supported",
+   "reason": "The abstract confirms the proposal of PODS using max-variance down-sampling to achieve at least 1.7x faster performance compared to vanilla GRPO.",
+   "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 43,
+    "total_tokens": 804,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 761
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2509.25849",
+   "label": "supported",
+   "reason": "The abstract confirms the paper addresses exploration budget allocation via a knapsack formulation, dynamically assigns resources, and reports a 20-40% increase in effective gradient ratio.",
+   "usage": {
+    "prompt_tokens": 870,
+    "completion_tokens": 47,
+    "total_tokens": 917,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 870
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO replaces hard clipping with a smooth, temperature-controlled gate to adaptively attenuate off-policy updates.",
+   "usage": {
+    "prompt_tokens": 885,
+    "completion_tokens": 37,
+    "total_tokens": 922,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 885
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO defines importance ratios based on sequence likelihood and performs sequence-level clipping and optimization, matching the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 676,
+    "completion_tokens": 39,
+    "total_tokens": 715,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 676
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the MGRPO method as operating in two layers where the first generates an initial response and the second is trained to identify and correct errors, matching the sentence's claims.",
+   "usage": {
+    "prompt_tokens": 805,
+    "completion_tokens": 52,
+    "total_tokens": 857,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 805
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract confirms the method name (DAPO), the achievement of 50 points on AIME 2024, the open-sourcing of code and dataset, and the motivation regarding concealed technical details in other systems.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 60,
+    "total_tokens": 890,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces an open-source implementation (Open-Reasoner-Zero) and explicitly states the release of code and data to foster reproducibility.",
+   "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 43,
+    "total_tokens": 875,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 832
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper provides a rigorous theoretical analysis of the proposed method (2-GRPO), which aligns with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 45,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2504.11343",
+   "label": "unsupported",
+   "reason": "The abstract discusses RAFT and a new method called Reinforce-Rej, but makes no mention of 'RAFT++' or the specific analysis attributed to this paper in the sentence.",
+   "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 50,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 811
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2504.11343",
+   "label": "contradicted",
+   "reason": "The abstract explicitly advocates against relying on negative samples indiscriminately and suggests focusing on principled designs for them, which contradicts the sentence's claim that the paper supports the crucial role of negative samples in preventing distributional collapse.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 58,
+    "total_tokens": 871,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2510.00977",
+   "label": "unsupported",
+   "reason": "The abstract discusses GRPO, DPO, and group sizes for variance reduction, but does not mention negative samples, exploration, or preventing distributional collapse.",
+   "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 46,
+    "total_tokens": 832,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 786
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2503.14476",
+   "label": "partial",
+   "reason": "The abstract confirms RL elicits complex reasoning but does not explicitly list the specific emergent capabilities of reflection, backtracking, and self-correction mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 44,
+    "total_tokens": 858,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2506.04746",
+   "label": "partial",
+   "reason": "The abstract confirms the paper enhances self-correction via RL, but does not explicitly state that these capabilities are emergent or absent in base models.",
+   "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 43,
+    "total_tokens": 836,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 793
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2504.02546",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a method that eliminates surrogate loss functions and achieves superior performance, aligning with the sentence's claim about achieving best results without them.",
+   "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 43,
+    "total_tokens": 798,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 755
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper's method uses sequence-level clipping and notably stabilizes Mixture-of-Experts (MoE) RL training, which directly supports the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 681,
+    "completion_tokens": 54,
+    "total_tokens": 735,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 681
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2504.11343",
+   "label": "unsupported",
+   "reason": "The abstract discusses RAFT and a new method called Reinforce-Rej, but makes no mention of 'RAFT++' or the specific training stage dynamics described in the sentence.",
+   "usage": {
+    "prompt_tokens": 821,
+    "completion_tokens": 49,
+    "total_tokens": 870,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 821
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2510.00977",
+   "label": "unsupported",
+   "reason": "The abstract claims 2-GRPO is effective and retains high performance, whereas the sentence attributes a finding of poor performance and lack of generalization to this paper.",
+   "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 47,
+    "total_tokens": 842,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 795
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2509.25849",
+   "label": "unsupported",
+   "reason": "The abstract discusses a new budget allocation method to improve exploration efficiency but contains no data or claims about 20% of prompts remaining in an 'extremely-hard' category after 1,000 training iterations.",
+   "usage": {
+    "prompt_tokens": 867,
+    "completion_tokens": 59,
+    "total_tokens": 926,
+    "completion_tokens_details": {
+     "text_tokens": 59
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 867
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2504.13818",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on RLVR with verifiable rewards but does not mention the limitation regarding unexplored open-ended dialogue domains.",
+   "usage": {
+    "prompt_tokens": 752,
+    "completion_tokens": 44,
+    "total_tokens": 796,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 752
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2503.14476",
+   "label": "unsupported",
+   "reason": "The abstract describes a specific RL algorithm and open-source system, not a systematic analysis of complex dynamics or interdependent subsystems as attributed in the sentence.",
+   "usage": {
+    "prompt_tokens": 812,
+    "completion_tokens": 41,
+    "total_tokens": 853,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 812
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract supports the claim that negative samples are nuanced by finding their indiscriminate use ineffective and suggesting more principled designs, while implicitly acknowledging that optimal strategies remain an open area for future work.",
+   "usage": {
+    "prompt_tokens": 803,
+    "completion_tokens": 49,
+    "total_tokens": 852,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 803
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2504.02546",
+   "label": "unsupported",
+   "reason": "The abstract describes a new reinforcement learning method (GPG) and its performance, but contains no information about hyperparameter sensitivity or the lack of ablation studies attributed to it in the sentence.",
+   "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 52,
+    "total_tokens": 806,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 754
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2504.02546",
+   "label": "supported",
+   "reason": "The abstract explicitly describes GPG as a minimalist RL approach based on direct Policy Gradient optimization that outperforms GRPO for enhancing LLM reasoning.",
+   "usage": {
+    "prompt_tokens": 733,
+    "completion_tokens": 40,
+    "total_tokens": 773,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 733
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2504.02546",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that GPG directly optimizes the original RL objective without surrogate loss functions, critic models, reference models, or KL divergence constraints.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 41,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2504.02546",
+   "label": "partial",
+   "reason": "The abstract confirms experiments on unimodal and multimodal tasks but does not mention the specific model sizes (1.5B and 7B) or the detailed task subcategories listed in the sentence.",
+   "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 52,
+    "total_tokens": 797,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 745
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2504.02546",
+   "label": "partial",
+   "reason": "The abstract confirms GPG outperforms GRPO but specifies 'various' tasks rather than the sentence's claim of 'all' tasks.",
+   "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 40,
+    "total_tokens": 772,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 732
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2504.02546",
+   "label": "partial",
+   "reason": "The abstract confirms the method and superior performance but does not contain the specific accuracy numbers or benchmark names cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 35,
+    "total_tokens": 800,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 765
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2504.02546",
+   "label": "partial",
+   "reason": "The abstract confirms GPG outperforms baselines but does not contain the specific numerical scores, model size (7B), dataset name (AMC23), or the exact percentage improvement cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 54,
+    "total_tokens": 809,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 755
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2504.02546",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GPG simplifies the training process, reduces computational costs, and achieves superior performance.",
+   "usage": {
+    "prompt_tokens": 728,
+    "completion_tokens": 33,
+    "total_tokens": 761,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 728
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2504.02546",
+   "label": "unsupported",
+   "reason": "The abstract claims superior performance and simplicity without mentioning any limitations regarding suboptimal hyperparameters or adherence to GRPO settings.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 35,
+    "total_tokens": 776,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies inefficient exploration dynamics and reward vanishing as key challenges in GRPO that the proposed MGRPO method addresses.",
+   "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 37,
+    "total_tokens": 798,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 761
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly describes MGRPO as a two-layer process where the first layer uses standard GRPO for initial response generation and the second layer is trained to identify and correct errors, matching the sentence exactly.",
+   "usage": {
+    "prompt_tokens": 782,
+    "completion_tokens": 52,
+    "total_tokens": 834,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 782
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2506.04746",
+   "label": "partial",
+   "reason": "The abstract confirms MGRPO outperforms standard GRPO but does not mention comparisons to one-round PPO.",
+   "usage": {
+    "prompt_tokens": 749,
+    "completion_tokens": 37,
+    "total_tokens": 786,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 749
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the second-layer GRPO is trained to identify and correct errors, thereby fostering self-correction abilities.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 36,
+    "total_tokens": 786,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2506.04746",
+   "label": "partial",
+   "reason": "The abstract confirms the paper trains a model to self-correct via RL, but does not explicitly state that such training is 'necessary' or address the specific aspect of learning 'when' to self-correct.",
+   "usage": {
+    "prompt_tokens": 750,
+    "completion_tokens": 53,
+    "total_tokens": 803,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 750
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes Soft Adaptive Policy Optimization (SAPO) which replaces hard clipping with a smooth, temperature-controlled gate to address instability in RL training of LLMs.",
+   "usage": {
+    "prompt_tokens": 862,
+    "completion_tokens": 45,
+    "total_tokens": 907,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 862
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO replaces hard clipping with a smooth, temperature-controlled gate to adaptively attenuate off-policy updates.",
+   "usage": {
+    "prompt_tokens": 872,
+    "completion_tokens": 37,
+    "total_tokens": 909,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 872
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2511.20347",
+   "label": "partial",
+   "reason": "The abstract confirms training on the Qwen3-VL series but does not mention experiments on the specific 'Qwen3-30B-A3B-Base' model or explicitly list 'mathematical reasoning' as the task for that specific model configuration.",
+   "usage": {
+    "prompt_tokens": 871,
+    "completion_tokens": 64,
+    "total_tokens": 935,
+    "completion_tokens_details": {
+     "text_tokens": 64
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 871
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2511.20347",
+   "label": "partial",
+   "reason": "The abstract supports improved stability and performance on mathematical reasoning benchmarks but does not claim consistent improvement across 'all' benchmarks.",
+   "usage": {
+    "prompt_tokens": 865,
+    "completion_tokens": 34,
+    "total_tokens": 899,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 865
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2511.20347",
+   "label": "partial",
+   "reason": "The abstract confirms SAPO improves training stability but does not state that GSPO or GRPO-R2 exhibit early-stage training collapse.",
+   "usage": {
+    "prompt_tokens": 857,
+    "completion_tokens": 37,
+    "total_tokens": 894,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 857
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO yields consistent performance gains across diverse tasks and model sizes with improved stability under comparable training budgets.",
+   "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 36,
+    "total_tokens": 899,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 863
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces the work as an approach to scaling up reasoning-oriented RL on base models with a focus on simplicity and accessibility.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 37,
+    "total_tokens": 851,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2503.24290",
+   "label": "partial",
+   "reason": "The abstract confirms the methodology and the 32B model but does not mention experiments on various sizes ranging from 0.5B to 32B.",
+   "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 47,
+    "total_tokens": 897,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 850
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that vanilla PPO with GAE (λ=1, γ=1) and rule-based rewards without KL regularization is sufficient to scale up benchmark performance.",
+   "usage": {
+    "prompt_tokens": 821,
+    "completion_tokens": 46,
+    "total_tokens": 867,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 821
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2503.24290",
+   "label": "partial",
+   "reason": "The abstract confirms the use of GAE with λ=1 but does not provide a comparison to λ=0.95 or state that it yields superior stability and performance relative to that specific value.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 51,
+    "total_tokens": 864,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2503.24290",
+   "label": "partial",
+   "reason": "The abstract confirms the critic devalues repetitive patterns but does not mention GRPO or claim superior penalization compared to it.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 35,
+    "total_tokens": 849,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the implementation achieves superior performance across benchmarks while requiring only 1/10 of the training steps compared to the DeepSeek-R1-Zero pipeline.",
+   "usage": {
+    "prompt_tokens": 816,
+    "completion_tokens": 46,
+    "total_tokens": 862,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 816
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2509.25849",
+   "label": "supported",
+   "reason": "The abstract explicitly frames the paper's contribution as addressing optimal exploration budget allocation for LLM reinforcement learning by formulating it as a knapsack problem.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 41,
+    "total_tokens": 875,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2509.25849",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method formulates exploration budget allocation as a knapsack problem where tasks are items with distinct values and costs to enable adaptive resource distribution.",
+   "usage": {
+    "prompt_tokens": 847,
+    "completion_tokens": 43,
+    "total_tokens": 890,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 847
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2509.25849",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method increases the effective ratio of non-zero policy gradients by 20-40% during training.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 38,
+    "total_tokens": 868,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2509.25849",
+   "label": "supported",
+   "reason": "The abstract states the method yields meaningful gains and peak improvements of up to 9 points on benchmarks compared to uniform allocation, directly supporting the claim of consistent outperformance.",
+   "usage": {
+    "prompt_tokens": 825,
+    "completion_tokens": 44,
+    "total_tokens": 869,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 825
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2509.25849",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method enables significantly larger budgets, citing 93 rollouts for especially challenging problems.",
+   "usage": {
+    "prompt_tokens": 831,
+    "completion_tokens": 34,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 831
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2509.25849",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on rollout counts but does not mention the specific statistic about 20% of prompts remaining in an extremely-hard category after 1,000 iterations.",
+   "usage": {
+    "prompt_tokens": 852,
+    "completion_tokens": 51,
+    "total_tokens": 903,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 852
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a new view on GRPO's fundamental mechanism (implicit contrastive objective) and validates a minimal group-size variant (2-GRPO).",
+   "usage": {
+    "prompt_tokens": 759,
+    "completion_tokens": 46,
+    "total_tokens": 805,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 759
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2510.00977",
+   "label": "partial",
+   "reason": "The abstract confirms the contrastive learning proposal, 2-GRPO variant, and theoretical validation, but does not explicitly mention evaluation on 'mathematical reasoning benchmarks'.",
+   "usage": {
+    "prompt_tokens": 779,
+    "completion_tokens": 49,
+    "total_tokens": 828,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 779
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 2-GRPO retains 97.6% of the performance of 16-GRPO while requiring only 12.5% of the rollouts and 21% of the training time.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 61,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2510.00977",
+   "label": "partial",
+   "reason": "The abstract confirms 2-GRPO is effective and efficient but does not state that these results apply to diverse tasks beyond math reasoning.",
+   "usage": {
+    "prompt_tokens": 751,
+    "completion_tokens": 38,
+    "total_tokens": 789,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 751
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GRPO's efficacy stems from an implicit contrastive objective rather than the prevailing view of estimating value baselines.",
+   "usage": {
+    "prompt_tokens": 752,
+    "completion_tokens": 38,
+    "total_tokens": 790,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 752
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2510.00977",
+   "label": "unsupported",
+   "reason": "The abstract does not mention AIME 2025, MATH datasets, distribution shifts, or any performance degradation under these conditions.",
+   "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 39,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 771
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2504.13818",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the compute and memory asymmetry between rollout generation and policy updates as a fundamental problem and introduces PODS as the method to address it.",
+   "usage": {
+    "prompt_tokens": 728,
+    "completion_tokens": 42,
+    "total_tokens": 770,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 728
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2504.13818",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the introduction of PODS, its decoupling of rollout generation from policy updates via subset selection, and the use of max-variance down-sampling.",
+   "usage": {
+    "prompt_tokens": 748,
+    "completion_tokens": 46,
+    "total_tokens": 794,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 748
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2504.13818",
+   "label": "partial",
+   "reason": "The abstract supports the 1.7x speed claim but does not state that PODS often achieves higher final performance than the baseline.",
+   "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 38,
+    "total_tokens": 769,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 731
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2504.13818",
+   "label": "partial",
+   "reason": "The abstract confirms the proposal of max-variance down-sampling but does not state that it consistently outperforms specific alternative rules like max-reward, random, or percentile throughout training.",
+   "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 48,
+    "total_tokens": 779,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 731
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2504.13818",
+   "label": "unsupported",
+   "reason": "The abstract discusses down-sampling rollouts to reduce costs but does not mention rollout size n, diminishing returns, or an optimal point around n=64.",
+   "usage": {
+    "prompt_tokens": 721,
+    "completion_tokens": 43,
+    "total_tokens": 764,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 721
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2504.13818",
+   "label": "unsupported",
+   "reason": "The abstract discusses down-sampling rollouts and subset selection criteria but contains no information regarding training batch size or its performance across different values.",
+   "usage": {
+    "prompt_tokens": 728,
+    "completion_tokens": 38,
+    "total_tokens": 766,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 728
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2504.13818",
+   "label": "partial",
+   "reason": "The abstract confirms the focus on RLVR but does not explicitly state the limitation regarding open-ended dialogue or distinct dynamics in other domains.",
+   "usage": {
+    "prompt_tokens": 733,
+    "completion_tokens": 37,
+    "total_tokens": 770,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 733
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2504.13818",
+   "label": "partial",
+   "reason": "The abstract describes a method that trains on a subset of rollouts (implying off-policy behavior) but does not explicitly state this characteristic or discuss its unsuitability for strict on-policy guarantees.",
+   "usage": {
+    "prompt_tokens": 723,
+    "completion_tokens": 51,
+    "total_tokens": 774,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 723
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly states the goal of understanding GRPO's effectiveness and confirms that a simple rejection sampling baseline (RAFT) yields competitive performance.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 41,
+    "total_tokens": 832,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2504.11343",
+   "label": "partial",
+   "reason": "The abstract confirms the analysis of GRPO and RAFT and the proposal of Reinforce-Rej, but it does not mention a method named 'RAFT++' or attributes involving importance sampling and clipping.",
+   "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 51,
+    "total_tokens": 868,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 817
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2504.11343",
+   "label": "partial",
+   "reason": "The abstract confirms RAFT's competitive performance against GRPO and PPO, but does not mention 'iterative DPO' or explicitly categorize the compared methods as 'deep RL-based approaches'.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 51,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2504.11343",
+   "label": "unsupported",
+   "reason": "The abstract discusses a method called 'Reinforce-Rej' and compares it to RAFT, but never mentions 'RAFT++' or the specific accuracy figures cited.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 45,
+    "total_tokens": 836,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GRPO's main advantage arises from discarding prompts with entirely incorrect responses rather than from its reward normalization.",
+   "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 37,
+    "total_tokens": 821,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 784
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2504.11343",
+   "label": "contradicted",
+   "reason": "The abstract explicitly advocates against relying on negative samples indiscriminately and suggests future work should focus on principled designs for them, contradicting the sentence's claim that they play a crucial role in this paper's approach.",
+   "usage": {
+    "prompt_tokens": 779,
+    "completion_tokens": 56,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 779
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2504.11343",
+   "label": "unsupported",
+   "reason": "The abstract discusses RAFT and a proposed method called Reinforce-Rej, but never mentions 'RAFT++' or the specific limitation regarding it being surpassed by GRPO due to low-entropy policies.",
+   "usage": {
+    "prompt_tokens": 807,
+    "completion_tokens": 51,
+    "total_tokens": 858,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 807
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies the problem of concealed technical details hindering reproducibility and lists the four key techniques proposed to make large-scale LLM RL successful.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 44,
+    "total_tokens": 836,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the proposal of DAPO with four key techniques and states the system is built on the verl framework.",
+   "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 35,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 789
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract confirms the use of Qwen2.5-32B, the achievement of 50 points on AIME 2024, and the open-sourcing of code and dataset.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 53,
+    "total_tokens": 850,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2503.14476",
+   "label": "partial",
+   "reason": "The abstract confirms DAPO trains Qwen2.5-32B to 50 points on AIME 2024, but it does not contain a direct comparison claiming superiority over DeepSeek's specific experiments using the R1 approach.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 62,
+    "total_tokens": 854,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2503.14476",
+   "label": "partial",
+   "reason": "The abstract confirms the 50-point AIME 2024 score but does not mention the comparison to DeepSeek-R1-Zero-Qwen-32B or the claim about requiring only 50% of training steps.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 60,
+    "total_tokens": 856,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2503.14476",
+   "label": "partial",
+   "reason": "The abstract mentions four key techniques but does not state that each individually contributes several accuracy points.",
+   "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 29,
+    "total_tokens": 799,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 770
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2503.14476",
+   "label": "partial",
+   "reason": "The abstract confirms the paper achieves complex reasoning via RL but does not explicitly mention the emergence of reflective behavior or backtracking.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 35,
+    "total_tokens": 809,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2503.14476",
+   "label": "unsupported",
+   "reason": "The abstract focuses on proposing a new algorithm and open-sourcing code to improve reproducibility, but it does not contain the specific discussion about RL training complexity, interdependent subsystems, or the sensitivity to initial conditions described in the sentence.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 62,
+    "total_tokens": 862,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces GSPO as a stable and efficient RL algorithm for LLMs that notably stabilizes Mixture-of-Experts training.",
+   "usage": {
+    "prompt_tokens": 657,
+    "completion_tokens": 39,
+    "total_tokens": 696,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 657
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO defines importance ratios based on sequence likelihood and performs sequence-level clipping, rewarding, and optimization.",
+   "usage": {
+    "prompt_tokens": 658,
+    "completion_tokens": 36,
+    "total_tokens": 694,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 658
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO achieves superior training efficiency compared to the GRPO algorithm.",
+   "usage": {
+    "prompt_tokens": 638,
+    "completion_tokens": 29,
+    "total_tokens": 667,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 638
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO performs sequence-level clipping unlike previous algorithms that use token-level importance ratios.",
+   "usage": {
+    "prompt_tokens": 640,
+    "completion_tokens": 32,
+    "total_tokens": 672,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 640
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2507.18071",
+   "label": "partial",
+   "reason": "The abstract states GSPO stabilizes MoE training but does not explicitly claim it eliminates the need for Routing Replay.",
+   "usage": {
+    "prompt_tokens": 641,
+    "completion_tokens": 34,
+    "total_tokens": 675,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 641
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,2114 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v3",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2504.12516",
+   "label": "unsupported",
+   "reason": "The provided evidence describes the benchmark's purpose and difficulty but contains no information about the paper's authors to verify the list in the sentence.",
+   "usage": {
+    "prompt_tokens": 804,
+    "completion_tokens": 38,
+    "total_tokens": 842,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 804
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2504.12516",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that existing benchmarks focus on easily found information and have become saturated, while this paper introduces a benchmark with challenging problems requiring persistent browsing.",
+   "usage": {
+    "prompt_tokens": 1131,
+    "completion_tokens": 49,
+    "total_tokens": 1180,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1131
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2504.12516",
+   "label": "supported",
+   "reason": "The passages explicitly describe the methodology of creating 'inverted questions' by starting with a fact (answer) to make them hard to find but easy to verify.",
+   "usage": {
+    "prompt_tokens": 1054,
+    "completion_tokens": 43,
+    "total_tokens": 1097,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1054
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2504.12516",
+   "label": "supported",
+   "reason": "The abstract and full text explicitly state that BrowseComp comprises 1,266 challenging problems requiring persistent web browsing.",
+   "usage": {
+    "prompt_tokens": 1218,
+    "completion_tokens": 35,
+    "total_tokens": 1253,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1218
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2504.12516",
+   "label": "supported",
+   "reason": "The abstract introduces the benchmark and the passages explicitly describe the 'inverted question' methodology used to create it.",
+   "usage": {
+    "prompt_tokens": 1123,
+    "completion_tokens": 33,
+    "total_tokens": 1156,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1123
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2504.12516",
+   "label": "supported",
+   "reason": "The abstract and full text explicitly state that BrowseComp comprises 1,266 questions designed to measure the ability of agents to browse the web.",
+   "usage": {
+    "prompt_tokens": 1162,
+    "completion_tokens": 41,
+    "total_tokens": 1203,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1162
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2504.12516",
+   "label": "partial",
+   "reason": "The evidence confirms the paper measures browsing capability but explicitly states it assesses a 'limited subset' rather than 'multiple dimensions' and sidesteps aspects like long responses or ambiguity resolution.",
+   "usage": {
+    "prompt_tokens": 1067,
+    "completion_tokens": 48,
+    "total_tokens": 1115,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1067
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2504.12516",
+   "label": "partial",
+   "reason": "The evidence confirms the accuracy figures for GPT-4o but does not contain the specific 50% accuracy result for Deep Research mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 1154,
+    "completion_tokens": 43,
+    "total_tokens": 1197,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1154
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2504.12516",
+   "label": "partial",
+   "reason": "The evidence confirms that performance scales with test-time compute and that best-of-N voting improves performance, but it does not contain the specific 15-25% improvement figure cited in the sentence.",
+   "usage": {
+    "prompt_tokens": 995,
+    "completion_tokens": 51,
+    "total_tokens": 1046,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 995
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2504.12516",
+   "label": "supported",
+   "reason": "The passage explicitly states that models with browsing capabilities exhibit higher calibration error, suggesting they are overconfident in incorrect answers.",
+   "usage": {
+    "prompt_tokens": 1062,
+    "completion_tokens": 35,
+    "total_tokens": 1097,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1062
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2504.12516",
+   "label": "supported",
+   "reason": "The passage explicitly states that Deep Research failed entirely on 14% of the tasks, which corresponds to a 0% pass rate.",
+   "usage": {
+    "prompt_tokens": 979,
+    "completion_tokens": 39,
+    "total_tokens": 1018,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 979
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2504.19314",
+   "label": "unsupported",
+   "reason": "The sentence only lists author names and contains no claims about the paper's work, methods, or findings to verify against the evidence.",
+   "usage": {
+    "prompt_tokens": 1232,
+    "completion_tokens": 41,
+    "total_tokens": 1273,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1232
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that existing benchmarks focus on English and overlook the Chinese information ecosystem, which is the gap this paper addresses.",
+   "usage": {
+    "prompt_tokens": 1539,
+    "completion_tokens": 38,
+    "total_tokens": 1577,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1539
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the use of a reverse-engineered (reverse-design) methodology and a two-stage quality control protocol.",
+   "usage": {
+    "prompt_tokens": 1158,
+    "completion_tokens": 39,
+    "total_tokens": 1197,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1158
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the BrowseComp-ZH dataset consists of 289 questions spanning 11 diverse domains.",
+   "usage": {
+    "prompt_tokens": 1360,
+    "completion_tokens": 40,
+    "total_tokens": 1400,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1360
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper introduces BrowseComp-ZH, the first benchmark specifically designed to evaluate web browsing capabilities in the Chinese information environment.",
+   "usage": {
+    "prompt_tokens": 1420,
+    "completion_tokens": 42,
+    "total_tokens": 1462,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1420
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the paper implements a rigorous two-stage quality control protocol to ensure question difficulty and answer uniqueness.",
+   "usage": {
+    "prompt_tokens": 1152,
+    "completion_tokens": 38,
+    "total_tokens": 1190,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1152
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the authors benchmarked over 20 state-of-the-art language models and AI search products.",
+   "usage": {
+    "prompt_tokens": 1204,
+    "completion_tokens": 39,
+    "total_tokens": 1243,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1204
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The abstract and passages confirm that naive LLMs performed poorly, specifically citing GPT-4o at 6.2% and Qwen2.5-72B-Instruct at 6.6% accuracy.",
+   "usage": {
+    "prompt_tokens": 1358,
+    "completion_tokens": 57,
+    "total_tokens": 1415,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1358
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that O1 achieved 29.1% accuracy and Gemini-2.5-Pro achieved 27.3% accuracy, confirming the specific numbers and the context of improved performance for reasoning-enhanced models mentioned in the sentence.",
+   "usage": {
+    "prompt_tokens": 1567,
+    "completion_tokens": 63,
+    "total_tokens": 1630,
+    "completion_tokens_details": {
+     "text_tokens": 63
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1567
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that multi-turn retrieval systems like DeepResearch (42.9%) and Doubao (26.0%) achieved the highest accuracy scores in the benchmark.",
+   "usage": {
+    "prompt_tokens": 1432,
+    "completion_tokens": 51,
+    "total_tokens": 1483,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1432
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The paper's limitations section explicitly states that the dataset is relatively small (289 questions) and that increasing the sample size would improve its representativeness.",
+   "usage": {
+    "prompt_tokens": 1313,
+    "completion_tokens": 43,
+    "total_tokens": 1356,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1313
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2504.19314",
+   "label": "supported",
+   "reason": "The passage explicitly states that although rigorous validation is applied, answer uniqueness cannot be fully guaranteed.",
+   "usage": {
+    "prompt_tokens": 1218,
+    "completion_tokens": 29,
+    "total_tokens": 1247,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1218
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The sentence lists the authors of the paper, and the provided title and abstract confirm the existence and content of the specific paper being cited.",
+   "usage": {
+    "prompt_tokens": 775,
+    "completion_tokens": 38,
+    "total_tokens": 813,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 775
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper introduces a benchmark (WebWalkerQA) to address the limitation of shallow content retrieval by evaluating LLMs' ability to perform deep, vertical web traversal.",
+   "usage": {
+    "prompt_tokens": 973,
+    "completion_tokens": 54,
+    "total_tokens": 1027,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 973
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The passages explicitly confirm the dataset contains 680 question-answer pairs, spans four specific domains, and has a language distribution of 60.5% Chinese and 39.5% English.",
+   "usage": {
+    "prompt_tokens": 1033,
+    "completion_tokens": 53,
+    "total_tokens": 1086,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1033
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The evidence explicitly defines question difficulty levels based on traversal depths ranging from 2 to 8 sources (levels).",
+   "usage": {
+    "prompt_tokens": 1270,
+    "completion_tokens": 33,
+    "total_tokens": 1303,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1270
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that WebWalkerQA is a benchmark designed to evaluate LLMs' web traversal abilities.",
+   "usage": {
+    "prompt_tokens": 1404,
+    "completion_tokens": 35,
+    "total_tokens": 1439,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1404
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm that WebWalker is a multi-agent framework consisting of an explorer agent and a critic agent.",
+   "usage": {
+    "prompt_tokens": 1142,
+    "completion_tokens": 37,
+    "total_tokens": 1179,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1142
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that combining RAG with WebWalker improves performance in web navigation tasks.",
+   "usage": {
+    "prompt_tokens": 1087,
+    "completion_tokens": 31,
+    "total_tokens": 1118,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1087
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The passage explicitly states that closed-source models outperform open-source models in both performance and efficiency.",
+   "usage": {
+    "prompt_tokens": 1002,
+    "completion_tokens": 30,
+    "total_tokens": 1032,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1002
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The evidence explicitly states that the proposed WebWalker framework outperforms Reflexion, which in turn outperforms ReAct.",
+   "usage": {
+    "prompt_tokens": 1092,
+    "completion_tokens": 36,
+    "total_tokens": 1128,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1092
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The passage explicitly states that even the best-performing WebWalker using GPT-4o does not surpass 40% accuracy.",
+   "usage": {
+    "prompt_tokens": 1181,
+    "completion_tokens": 38,
+    "total_tokens": 1219,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1181
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The evidence explicitly states that the explorer agent is limited to 15 actions, which directly supports the sentence's claim about this limitation restricting exploration depth.",
+   "usage": {
+    "prompt_tokens": 920,
+    "completion_tokens": 41,
+    "total_tokens": 961,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 920
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2501.07572",
+   "label": "supported",
+   "reason": "The evidence states that traditional search engines retrieve shallow content limiting LLMs on complex tasks and that increasing model size or reflection enables long-distance task-solving, directly supporting the claim that context limitations affect performance on long-horizon tasks.",
+   "usage": {
+    "prompt_tokens": 1028,
+    "completion_tokens": 57,
+    "total_tokens": 1085,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1028
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The sentence lists the authors of the paper, and the provided title and abstract confirm the existence and content of the work attributed to these authors.",
+   "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 39,
+    "total_tokens": 854,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 815
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that no comprehensive benchmark exists for Deep Research Agents and introduce this paper's benchmark to address that gap using tasks reflecting authentic user needs.",
+   "usage": {
+    "prompt_tokens": 1032,
+    "completion_tokens": 43,
+    "total_tokens": 1075,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1032
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the pipeline of filtering ~96,000 queries to 44,019 tasks and curating 100 expert-crafted tasks across 22 domains.",
+   "usage": {
+    "prompt_tokens": 1116,
+    "completion_tokens": 60,
+    "total_tokens": 1176,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1116
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper introduces two frameworks, RACE for report quality and FACT for citation trustworthiness.",
+   "usage": {
+    "prompt_tokens": 1056,
+    "completion_tokens": 37,
+    "total_tokens": 1093,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1056
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state the paper introduces the first comprehensive benchmark with 100 tasks across 22 domains.",
+   "usage": {
+    "prompt_tokens": 1043,
+    "completion_tokens": 36,
+    "total_tokens": 1079,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1043
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper uses over 96,000 real-world user queries to ground its benchmark design.",
+   "usage": {
+    "prompt_tokens": 1129,
+    "completion_tokens": 37,
+    "total_tokens": 1166,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1129
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The evidence explicitly defines RACE as the framework for assessing report quality and FACT as the framework for evaluating citation trustworthiness.",
+   "usage": {
+    "prompt_tokens": 1086,
+    "completion_tokens": 36,
+    "total_tokens": 1122,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1086
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The first passage explicitly states that Gemini-2.5-Pro Deep Research demonstrates leading overall performance on the RACE framework.",
+   "usage": {
+    "prompt_tokens": 1406,
+    "completion_tokens": 35,
+    "total_tokens": 1441,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1406
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The evidence explicitly states that OpenAI Deep Research surpasses other models in the Instruction-Following dimension.",
+   "usage": {
+    "prompt_tokens": 1390,
+    "completion_tokens": 32,
+    "total_tokens": 1422,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1390
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The passage explicitly states that Gemini-2.5-Pro Deep Research achieves an average of 111.21 effective citations.",
+   "usage": {
+    "prompt_tokens": 1192,
+    "completion_tokens": 38,
+    "total_tokens": 1230,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1192
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The evidence explicitly states that evaluating deep research agents requires 'significant resources' and mentions setting computational limits to handle complex queries, confirming the resource-intensive nature described.",
+   "usage": {
+    "prompt_tokens": 992,
+    "completion_tokens": 42,
+    "total_tokens": 1034,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 992
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2506.11763",
+   "label": "supported",
+   "reason": "The passage explicitly states that the evaluation of commercial products is limited by a 'lack of transparency regarding the iteration cycles'.",
+   "usage": {
+    "prompt_tokens": 1121,
+    "completion_tokens": 35,
+    "total_tokens": 1156,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1121
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2504.21776",
+   "label": "unsupported",
+   "reason": "The sentence only lists author names and contains no claim about the paper's work, method, or findings that can be verified against the provided evidence.",
+   "usage": {
+    "prompt_tokens": 960,
+    "completion_tokens": 40,
+    "total_tokens": 1000,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 960
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that existing Large Reasoning Models rely on static internal knowledge, which limits their performance on complex tasks and hinders deep research, directly supporting the claim that they lack autonomous deep research capabilities.",
+   "usage": {
+    "prompt_tokens": 1151,
+    "completion_tokens": 54,
+    "total_tokens": 1205,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1151
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The abstract and provided passages explicitly confirm the two-mode framework (Problem-Solving and Report Generation), the use of the Deep Web Explorer, and the Think-Search-and-Draft strategy described in the sentence.",
+   "usage": {
+    "prompt_tokens": 1087,
+    "completion_tokens": 58,
+    "total_tokens": 1145,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1087
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the paper introduces an RL-based training strategy using iterative online Direct Preference Optimization (DPO).",
+   "usage": {
+    "prompt_tokens": 1095,
+    "completion_tokens": 38,
+    "total_tokens": 1133,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1095
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe WebThinker as a framework designed to empower Large Reasoning Models (LRMs) with deep research capabilities, and Passage S4 specifically mentions the 'training-free WebThinker-32B-Base' variant.",
+   "usage": {
+    "prompt_tokens": 1178,
+    "completion_tokens": 61,
+    "total_tokens": 1239,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1178
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper proposes a 'Deep Web Explorer' module enabling LRMs to autonomously search and navigate the web.",
+   "usage": {
+    "prompt_tokens": 975,
+    "completion_tokens": 40,
+    "total_tokens": 1015,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 975
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that the paper introduces an 'Autonomous Think-Search-and-Draft strategy' for report generation.",
+   "usage": {
+    "prompt_tokens": 1096,
+    "completion_tokens": 36,
+    "total_tokens": 1132,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1096
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The passage explicitly states that WebThinker surpasses Search-o1 by 21.9% on GAIA and 36.2% on HLE, matching the sentence exactly.",
+   "usage": {
+    "prompt_tokens": 1178,
+    "completion_tokens": 50,
+    "total_tokens": 1228,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1178
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The passage [S4.I1.i4.p1] explicitly states that WebThinker-32B-RL improves over its Base version by +8.5% on GAIA and +21.5% on HLE, matching the sentence exactly.",
+   "usage": {
+    "prompt_tokens": 1129,
+    "completion_tokens": 65,
+    "total_tokens": 1194,
+    "completion_tokens_details": {
+     "text_tokens": 65
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1129
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2504.21776",
+   "label": "supported",
+   "reason": "The passage explicitly states that the RL-trained WebThinker model surpasses o3-mini (High) on the HLE benchmark.",
+   "usage": {
+    "prompt_tokens": 1095,
+    "completion_tokens": 37,
+    "total_tokens": 1132,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1095
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2504.21776",
+   "label": "contradicted",
+   "reason": "The evidence describes a 'Deep Web Explorer' capable of autonomous navigation and report drafting, which contradicts the claim that the tool set is limited to only search and basic navigation.",
+   "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 48,
+    "total_tokens": 1119,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1071
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2504.21776",
+   "label": "partial",
+   "reason": "The evidence mentions bias caused by the model's context window during evaluation, but does not explicitly state that context window constraints are a limitation for long trajectories in the method itself.",
+   "usage": {
+    "prompt_tokens": 1075,
+    "completion_tokens": 45,
+    "total_tokens": 1120,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1075
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2507.02592",
+   "label": "unsupported",
+   "reason": "The input sentence contains only a list of author names and lacks any descriptive claim about the paper's method or findings to verify against the provided evidence.",
+   "usage": {
+    "prompt_tokens": 1052,
+    "completion_tokens": 43,
+    "total_tokens": 1095,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1052
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that proprietary systems achieve superhuman performance on BrowseComp while existing open-source agents exhibit near-zero accuracy on the same benchmark.",
+   "usage": {
+    "prompt_tokens": 1463,
+    "completion_tokens": 44,
+    "total_tokens": 1507,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1463
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the paper uses random walks across interconnected knowledge structures to generate training data characterized by high uncertainty.",
+   "usage": {
+    "prompt_tokens": 1246,
+    "completion_tokens": 35,
+    "total_tokens": 1281,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1246
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The provided passages explicitly describe a three-level classification of information seeking tasks (Level 1, 2, and 3) as part of the paper's analysis.",
+   "usage": {
+    "prompt_tokens": 1075,
+    "completion_tokens": 44,
+    "total_tokens": 1119,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1075
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe the paper's methodology as an RFT cold start followed by the DUPO algorithm for RL training.",
+   "usage": {
+    "prompt_tokens": 1070,
+    "completion_tokens": 40,
+    "total_tokens": 1110,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1070
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The evidence explicitly identifies 'SailorFog-QA' as the synthetic data generated by the paper's approach to handle high-uncertainty tasks.",
+   "usage": {
+    "prompt_tokens": 1045,
+    "completion_tokens": 42,
+    "total_tokens": 1087,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1045
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The passages explicitly state that the proposed DUPO algorithm achieves approximately 2–3 times speedup compared to DAPO's dynamic sampling.",
+   "usage": {
+    "prompt_tokens": 1188,
+    "completion_tokens": 44,
+    "total_tokens": 1232,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1188
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The passage explicitly states that WebSailor-7B achieves an accuracy of 6.7 on BrowseComp-en and decisively outperforms agents built on 32B models.",
+   "usage": {
+    "prompt_tokens": 1383,
+    "completion_tokens": 53,
+    "total_tokens": 1436,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1383
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The passage explicitly states that WebSailor-72B achieves performance on par with the proprietary agent Doubao.",
+   "usage": {
+    "prompt_tokens": 1137,
+    "completion_tokens": 35,
+    "total_tokens": 1172,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1137
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The passage explicitly states that the WebSailor models outperform all open-source models and agentic methods on the specified benchmarks.",
+   "usage": {
+    "prompt_tokens": 1129,
+    "completion_tokens": 40,
+    "total_tokens": 1169,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1129
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The evidence explicitly states that filtering training trajectories to under 32k tokens may cap the model's ability to tackle more complex problems.",
+   "usage": {
+    "prompt_tokens": 1204,
+    "completion_tokens": 38,
+    "total_tokens": 1242,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1204
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The evidence explicitly states that WebSailor exhibits a tendency for 'over-thinking' by applying multi-step tool calls even to seemingly simple questions.",
+   "usage": {
+    "prompt_tokens": 1251,
+    "completion_tokens": 40,
+    "total_tokens": 1291,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1251
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2507.02592",
+   "label": "supported",
+   "reason": "The passage explicitly states that the RL process is limited to 50 steps primarily due to the inefficiency of the synchronous RL framework.",
+   "usage": {
+    "prompt_tokens": 1181,
+    "completion_tokens": 38,
+    "total_tokens": 1219,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1181
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2505.22648",
+   "label": "unsupported",
+   "reason": "The sentence contains only a list of author names and provides no claim about the paper's method, findings, or content to verify against the evidence.",
+   "usage": {
+    "prompt_tokens": 1612,
+    "completion_tokens": 44,
+    "total_tokens": 1656,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1612
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe the paper's approach as requiring browsing data construction, trajectory sampling for multi-step reasoning, and a scalable two-stage training pipeline (SFT and RL).",
+   "usage": {
+    "prompt_tokens": 1268,
+    "completion_tokens": 50,
+    "total_tokens": 1318,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1268
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The abstract explicitly lists the four stages (browsing data construction, trajectories sampling, SFT for cold start, and RL) and the passages confirm the specific dataset names (crawlQA, e2hQA) and the use of the DAPO algorithm for RL.",
+   "usage": {
+    "prompt_tokens": 1245,
+    "completion_tokens": 64,
+    "total_tokens": 1309,
+    "completion_tokens_details": {
+     "text_tokens": 64
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1245
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The evidence confirms the agent is based on ReAct and explicitly restricts the action space to two tools: search and click.",
+   "usage": {
+    "prompt_tokens": 1434,
+    "completion_tokens": 36,
+    "total_tokens": 1470,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1434
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The passages explicitly confirm that the paper proposes scalable QA data synthesis methods resulting in the creation of the crawlQA and e2hQA datasets.",
+   "usage": {
+    "prompt_tokens": 1312,
+    "completion_tokens": 42,
+    "total_tokens": 1354,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1312
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the paper's approach uses a two-stage training pipeline combining supervised fine-tuning (SFT) and on-policy reinforcement learning (RL).",
+   "usage": {
+    "prompt_tokens": 1329,
+    "completion_tokens": 47,
+    "total_tokens": 1376,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1329
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that WebDancer achieves strong performance on benchmarks like GAIA and WebWalkerQA.",
+   "usage": {
+    "prompt_tokens": 1096,
+    "completion_tokens": 34,
+    "total_tokens": 1130,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1096
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2505.22648",
+   "label": "partial",
+   "reason": "The evidence confirms strong performance on GAIA and WebWalkerQA but does not explicitly state that the model surpassed GPT-4o.",
+   "usage": {
+    "prompt_tokens": 1042,
+    "completion_tokens": 41,
+    "total_tokens": 1083,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1042
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The passage explicitly states that agentic approaches built on reasoning-specialized models like QwQ-32B consistently outperform their non-agentic counterparts.",
+   "usage": {
+    "prompt_tokens": 1281,
+    "completion_tokens": 42,
+    "total_tokens": 1323,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1281
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The evidence explicitly states that the action space is restricted to two tools (search and click/visit) and mentions plans to incorporate more sophisticated tools in the future, confirming the current limitation.",
+   "usage": {
+    "prompt_tokens": 1436,
+    "completion_tokens": 51,
+    "total_tokens": 1487,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1436
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "The evidence explicitly states that the current experiments focus on two short-answer information-seeking tasks.",
+   "usage": {
+    "prompt_tokens": 1023,
+    "completion_tokens": 28,
+    "total_tokens": 1051,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1023
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2505.22648",
+   "label": "supported",
+   "reason": "Passage A1.SS0.SSS0.Px3.p1 explicitly states that only a small subset (e.g., 5,000 pairs) can be utilized in the RL stage due to computational constraints.",
+   "usage": {
+    "prompt_tokens": 1126,
+    "completion_tokens": 57,
+    "total_tokens": 1183,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1126
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2509.13309",
+   "label": "unsupported",
+   "reason": "The sentence only lists author names, which are citation markers explicitly excluded from evaluation, and the provided evidence contains no information about the paper's authors.",
+   "usage": {
+    "prompt_tokens": 894,
+    "completion_tokens": 40,
+    "total_tokens": 934,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 894
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that current mono-contextual deep-research systems are constrained by 'Cognitive Workspace Suffocation' and 'Irreversible Noise Contamination' due to linearly accumulating all information into a single context.",
+   "usage": {
+    "prompt_tokens": 1503,
+    "completion_tokens": 56,
+    "total_tokens": 1559,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1503
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the IterResearch paradigm reformulates deep research as a Markov Decision Process with periodic consolidation.",
+   "usage": {
+    "prompt_tokens": 1382,
+    "completion_tokens": 38,
+    "total_tokens": 1420,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1382
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The passages explicitly define the agent's state as consisting of the research question, the evolving report from the previous round, and the most recent action and tool response.",
+   "usage": {
+    "prompt_tokens": 1357,
+    "completion_tokens": 46,
+    "total_tokens": 1403,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1357
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe WebFrontier as a scalable data synthesis engine that employs a three-stage iterative workflow.",
+   "usage": {
+    "prompt_tokens": 1198,
+    "completion_tokens": 34,
+    "total_tokens": 1232,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1198
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the IterResearch paradigm overcomes context suffocation and noise contamination found in mono-contextual approaches.",
+   "usage": {
+    "prompt_tokens": 1337,
+    "completion_tokens": 37,
+    "total_tokens": 1374,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1337
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly define WebFrontier as a scalable data synthesis engine that utilizes tool-augmented complexity escalation.",
+   "usage": {
+    "prompt_tokens": 1295,
+    "completion_tokens": 37,
+    "total_tokens": 1332,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1295
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The passages explicitly state that the Research-Synthesis Framework enables test-time scaling through parallel multi-agent exploration.",
+   "usage": {
+    "prompt_tokens": 1184,
+    "completion_tokens": 31,
+    "total_tokens": 1215,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1184
+    }
+   }
+  },
+  {
+   "claim": 92,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The provided passages explicitly confirm that WebResearcher achieved 36.7% accuracy on the HLE benchmark, surpassing DeepSeek-V3.1 (29.8%) and OpenAI Deep Research (26.6%).",
+   "usage": {
+    "prompt_tokens": 1341,
+    "completion_tokens": 63,
+    "total_tokens": 1404,
+    "completion_tokens_details": {
+     "text_tokens": 63
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1341
+    }
+   }
+  },
+  {
+   "claim": 93,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The passage explicitly states that WebResearcher achieves 72.8% accuracy on GAIA, surpassing all evaluated systems.",
+   "usage": {
+    "prompt_tokens": 1228,
+    "completion_tokens": 37,
+    "total_tokens": 1265,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1228
+    }
+   }
+  },
+  {
+   "claim": 94,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The passages explicitly state that WebResearcher achieves 51.7% accuracy on BrowseComp-en, matching OpenAI's Deep Research at 51.5%.",
+   "usage": {
+    "prompt_tokens": 1265,
+    "completion_tokens": 46,
+    "total_tokens": 1311,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1265
+    }
+   }
+  },
+  {
+   "claim": 95,
+   "id": "2509.13309",
+   "label": "supported",
+   "reason": "The evidence explicitly states that performance improvements are accompanied by a linear increase in computational cost as each parallel trajectory is processed independently.",
+   "usage": {
+    "prompt_tokens": 1028,
+    "completion_tokens": 35,
+    "total_tokens": 1063,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1028
+    }
+   }
+  },
+  {
+   "claim": 96,
+   "id": "2509.13309",
+   "label": "partial",
+   "reason": "The evidence confirms the paper proposes an iterative architecture to overcome mono-contextual limitations, but the sentence's specific claim about 'architectural complexity' is an inference not explicitly stated in the text, which focuses on performance benefits and data synthesis rather than compa",
+   "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 64,
+    "total_tokens": 1657,
+    "completion_tokens_details": {
+     "text_tokens": 64
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1593
+    }
+   }
+  },
+  {
+   "claim": 97,
+   "id": "2509.13309",
+   "label": "unsupported",
+   "reason": "The provided evidence describes the tools used by the agent but does not mention rate limits or dependencies on them as a limitation or characteristic.",
+   "usage": {
+    "prompt_tokens": 1262,
+    "completion_tokens": 37,
+    "total_tokens": 1299,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1262
+    }
+   }
+  },
+  {
+   "claim": 98,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The sentence lists the authors of the paper, which is a factual attribute of the work described in the title and abstract.",
+   "usage": {
+    "prompt_tokens": 1081,
+    "completion_tokens": 35,
+    "total_tokens": 1116,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1081
+    }
+   }
+  },
+  {
+   "claim": 99,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper addresses the challenge of training LLMs to autonomously generate search queries during step-by-step reasoning and highlights the suboptimality of existing methods where LLMs lack the capability to interact effectively with search engines.",
+   "usage": {
+    "prompt_tokens": 1769,
+    "completion_tokens": 62,
+    "total_tokens": 1831,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1769
+    }
+   }
+  },
+  {
+   "claim": 100,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The passages explicitly describe Search-R1 as an RL framework that uses the specific tokens <search>, <information>, <think>, and <answer> for structuring interactions.",
+   "usage": {
+    "prompt_tokens": 1306,
+    "completion_tokens": 45,
+    "total_tokens": 1351,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1306
+    }
+   }
+  },
+  {
+   "claim": 101,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The passages explicitly state that loss masking ensures the optimization objective is computed only over LLM-generated tokens, excluding retrieved content.",
+   "usage": {
+    "prompt_tokens": 1201,
+    "completion_tokens": 35,
+    "total_tokens": 1236,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1201
+    }
+   }
+  },
+  {
+   "claim": 102,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The passages explicitly state that Search-R1 uses a simple outcome-based reward function and is compatible with both PPO and GRPO algorithms.",
+   "usage": {
+    "prompt_tokens": 1638,
+    "completion_tokens": 44,
+    "total_tokens": 1682,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1638
+    }
+   }
+  },
+  {
+   "claim": 103,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe Search-R1 as a novel RL framework that enables LLMs to interleave reasoning with search engine interactions.",
+   "usage": {
+    "prompt_tokens": 1320,
+    "completion_tokens": 42,
+    "total_tokens": 1362,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1320
+    }
+   }
+  },
+  {
+   "claim": 104,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The evidence explicitly states that the retrieved token masking technique leads to more stable optimization and improved model performance in Search-R1.",
+   "usage": {
+    "prompt_tokens": 1092,
+    "completion_tokens": 35,
+    "total_tokens": 1127,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1092
+    }
+   }
+  },
+  {
+   "claim": 105,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Search-R1 leverages a 'simple outcome-based reward function'.",
+   "usage": {
+    "prompt_tokens": 1388,
+    "completion_tokens": 30,
+    "total_tokens": 1418,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1388
+    }
+   }
+  },
+  {
+   "claim": 106,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that Search-R1 achieves 41% and 20% average relative improvements for Qwen2.5-7B and Qwen2.5-3B respectively over baselines.",
+   "usage": {
+    "prompt_tokens": 1365,
+    "completion_tokens": 59,
+    "total_tokens": 1424,
+    "completion_tokens_details": {
+     "text_tokens": 59
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1365
+    }
+   }
+  },
+  {
+   "claim": 107,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The evidence explicitly states that Search-R1's performance gains hold across both in-distribution and out-of-distribution evaluations.",
+   "usage": {
+    "prompt_tokens": 1217,
+    "completion_tokens": 35,
+    "total_tokens": 1252,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1217
+    }
+   }
+  },
+  {
+   "claim": 108,
+   "id": "2503.09516",
+   "label": "partial",
+   "reason": "The evidence confirms Search-R1 outperforms RAG, IRCoT, and Search-o1, but states the improvement is 'under the same setting' rather than explicitly 'across all datasets' as claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 1532,
+    "completion_tokens": 58,
+    "total_tokens": 1590,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1532
+    }
+   }
+  },
+  {
+   "claim": 109,
+   "id": "2503.09516",
+   "label": "partial",
+   "reason": "The abstract confirms evaluation on seven QA datasets but does not explicitly state that the method was not tested on open-ended research tasks.",
+   "usage": {
+    "prompt_tokens": 1278,
+    "completion_tokens": 39,
+    "total_tokens": 1317,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1278
+    }
+   }
+  },
+  {
+   "claim": 110,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that the experiments set the number of retrieved passages to 3 across all retrieval-based methods.",
+   "usage": {
+    "prompt_tokens": 1191,
+    "completion_tokens": 34,
+    "total_tokens": 1225,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1191
+    }
+   }
+  },
+  {
+   "claim": 111,
+   "id": "2503.09516",
+   "label": "supported",
+   "reason": "The evidence explicitly states that the experiments use the 2018 Wikipedia dump as the knowledge source.",
+   "usage": {
+    "prompt_tokens": 1140,
+    "completion_tokens": 32,
+    "total_tokens": 1172,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1140
+    }
+   }
+  },
+  {
+   "claim": 112,
+   "id": "2503.09516",
+   "label": "unsupported",
+   "reason": "The provided evidence highlights the success and capabilities of the Search-R1 framework but does not state or imply that RL training for such interactions is slow.",
+   "usage": {
+    "prompt_tokens": 1123,
+    "completion_tokens": 40,
+    "total_tokens": 1163,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1123
+    }
+   }
+  },
+  {
+   "claim": 113,
+   "id": "2507.15061",
+   "label": "unsupported",
+   "reason": "The sentence only lists author names and contains no claims about the paper's method, results, or contributions that can be verified against the provided evidence.",
+   "usage": {
+    "prompt_tokens": 981,
+    "completion_tokens": 40,
+    "total_tokens": 1021,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 981
+    }
+   }
+  },
+  {
+   "claim": 114,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that existing information-driven approaches suffer from structural inconsistencies, limited controllability, poor diversity, and reasoning shortcuts, which the proposed WebShaper framework aims to address.",
+   "usage": {
+    "prompt_tokens": 1137,
+    "completion_tokens": 49,
+    "total_tokens": 1186,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1137
+    }
+   }
+  },
+  {
+   "claim": 115,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the use of set theory-based formalization and Knowledge Projections (KP) to achieve precise control over reasoning structures.",
+   "usage": {
+    "prompt_tokens": 1113,
+    "completion_tokens": 40,
+    "total_tokens": 1153,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1113
+    }
+   }
+  },
+  {
+   "claim": 116,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The provided passages explicitly state that the paper introduces an 'Agentic Expansion' with a 'Layer-wise Expansion Strategy' executed by an agent called the 'Expander'.",
+   "usage": {
+    "prompt_tokens": 1137,
+    "completion_tokens": 45,
+    "total_tokens": 1182,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1137
+    }
+   }
+  },
+  {
+   "claim": 117,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The evidence explicitly confirms the generation of 18k seed questions and the final acquisition of 5,000 trajectories for training.",
+   "usage": {
+    "prompt_tokens": 1026,
+    "completion_tokens": 43,
+    "total_tokens": 1069,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1026
+    }
+   }
+  },
+  {
+   "claim": 118,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe WebShaper as a 'formalization-driven' framework that represents a 'paradigm shift' from information-driven to formalization-driven data synthesis.",
+   "usage": {
+    "prompt_tokens": 1076,
+    "completion_tokens": 50,
+    "total_tokens": 1126,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1076
+    }
+   }
+  },
+  {
+   "claim": 119,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that Knowledge Projections enable precise control over reasoning structures and complexity levels.",
+   "usage": {
+    "prompt_tokens": 1099,
+    "completion_tokens": 31,
+    "total_tokens": 1130,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1099
+    }
+   }
+  },
+  {
+   "claim": 120,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The passages explicitly describe an 'agentic Expander' that uses a 'layer-wise expansion' strategy to mitigate 'redundancy and reasoning shortcuts'.",
+   "usage": {
+    "prompt_tokens": 1095,
+    "completion_tokens": 43,
+    "total_tokens": 1138,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1095
+    }
+   }
+  },
+  {
+   "claim": 121,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that WebShaper achieves state-of-the-art performance among open-sourced methods on both GAIA and WebWalkerQA benchmarks.",
+   "usage": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 45,
+    "total_tokens": 1049,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1004
+    }
+   }
+  },
+  {
+   "claim": 122,
+   "id": "2507.15061",
+   "label": "supported",
+   "reason": "The passages explicitly state that the paper's formalization enables 'precise specification' and a 'controlled' expansion paradigm, directly supporting the claim of superior controllability.",
+   "usage": {
+    "prompt_tokens": 985,
+    "completion_tokens": 47,
+    "total_tokens": 1032,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 985
+    }
+   }
+  },
+  {
+   "claim": 123,
+   "id": "2507.15061",
+   "label": "unsupported",
+   "reason": "The sentence is a generic instruction or section header rather than a specific claim about the paper's content, and the provided evidence does not mention future directions.",
+   "usage": {
+    "prompt_tokens": 1132,
+    "completion_tokens": 41,
+    "total_tokens": 1173,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1132
+    }
+   }
+  }
+ ]
+}

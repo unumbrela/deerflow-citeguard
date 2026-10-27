@@ -1,0 +1,313 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "The Decay stage branches into three variants (Long/Short/Hybrid reasoning) with cosine learning rate decay [citation:OctoThinker](https://arxiv.org/abs/2506.20512).",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Stage 1 (0-6T) used 60% FineWeb-Edu/40% DCLM with 10% code; Stage 2 (6-8T) added 5% math and increased code to 20%; Stage 3 (8-10T) incorporated 10% math and adjusted web ratios; Stage 4 (10-11T) featured 14% math, 24% code, and 58% English web during the final 10% learning rate decay [citation:SmolLM2](https://arxiv.org/abs/2502.02737).",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Qwen3 employed three distinct stages: General Stage (30T+ tokens, 4k sequence length), Reasoning Stage (5T higher-quality STEM/coding/synthetic data with accelerated learning rate decay), and Long Context Stage (hundreds of billions of tokens, 32k sequence length with RoPE base frequency 1M) [citation:Qwen3](https://arxiv.org/abs/2505.09388).",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Phi-3 trained on 3.3T tokens in two disjoint sequential phases: Phase-1 comprised web sources for general knowledge and language understanding, while Phase-2 merged heavily filtered webdata with synthetic data for logical reasoning and niche skills[citation:Phi-3](https://arxiv.org/abs/2404.14219).",
+   "ids": [
+    "2404.14219"
+   ],
+   "evidence": [
+    "E5"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "OctoThinker developed MegaMath-Web-Pro-Max using a two-stage curation process: fastText classifier recall followed by Llama-3.1-70B-instruct refinement, resulting in 5.5× more tokens than MegaMath-Web-Pro while maintaining comparable quality [citation:OctoThinker](https://arxiv.org/abs/2506.20512).",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Qwen2.5 expanded from 7T to 18T tokens using Qwen2-Instruct models as multi-dimensional quality filters, specialized math/code data integration from Qwen2.5-Math and Qwen2.5-Coder, and synthetic data with reward model filtering [citation:Qwen2.5](https://arxiv.org/abs/2412.15115).",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "This approach optimizes mixtures at the instance level via proxy model ablations, contrasting with prior source-level or domain-level optimization [citation:Qwen3](https://arxiv.org/abs/2505.09388).",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "DeepSeekMath employed an iterative corpus collection pipeline using fastText classifiers trained on seed corpora (OpenWebMath), expanding through 4 iterations to 120B tokens from Common Crawl [citation:DeepSeekMath](https://arxiv.org/abs/2402.03300).",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Tower extended LLaMA-2's training on 20 billion tokens for 10 languages, mixing parallel sentences (one-third) with monolingual data (two-thirds) and applying quality thresholds [citation:Tower](https://arxiv.org/abs/2402.17733).",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Phi-3 deviated from standard scaling laws by filtering publicly available web data for \"educational level\" and calibrating training data to the \"data optimal regime\" for small models [citation:Phi-3](https://arxiv.org/abs/2404.14219).",
+   "ids": [
+    "2404.14219"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "MATES introduced model-aware data selection using data influence models to estimate each training example's contribution to model performance, enabling efficient pretraining by selecting high-influence data points[citation:MATES](https://arxiv.org/abs/2406.06046).",
+   "ids": [
+    "2406.06046"
+   ],
+   "evidence": [
+    "E3"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "The model outperformed Minerva 540B (77× larger) on MATH dataset by 10%+ absolute and led all open-source base models across 8 math benchmarks [citation:DeepSeekMath](https://arxiv.org/abs/2402.03300).",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Magicoder-CL-7B outperformed WizardCoder-SC-15B and closely matched DeepSeek-Coder-Instruct-33B despite having 5× fewer parameters[citation:Magicoder](https://arxiv.org/abs/2312.02120).",
+   "ids": [
+    "2312.02120"
+   ],
+   "evidence": [
+    "E4"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "LLaMAX adapted pre-trained LLMs to new languages through vocabulary expansion, continual pre-training on multilingual corpora covering 102 languages with over 64 billion tokens, and instruction tuning[citation:LLaMAX](https://arxiv.org/abs/2407.05975).",
+   "ids": [
+    "2407.05975"
+   ],
+   "evidence": [
+    "E1"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Tower achieved multilingual extension by mixing parallel sentences (one-third) with monolingual data (two-thirds), finding this ratio optimal for translation tasks[citation:Tower](https://arxiv.org/abs/2402.17733).",
+   "ids": [
+    "2402.17733"
+   ],
+   "evidence": [
+    "E2"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "OctoThinker employed cosine learning rate without warmup (peak 3e-5, minimum one-tenth of peak) during the Stable stage, then applied cosine decay during the branching Decay stage [citation:OctoThinker](https://arxiv.org/abs/2506.20512).",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "SmolLM2 used Warmup Stable Decay (WSD) schedule with 2,000-step warmup, peak learning rate 5.0×10⁻⁴ during stable phase, transitioning to decay phase reducing learning rate to zero over 10% of total training steps [citation:SmolLM2](https://arxiv.org/abs/2502.02737).",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "DeepSeekMath applied multi-step learning rate: peak after 2,000 warmup steps, 31.6% after 80% of training, 10% after 90% of training, with maximum learning rate 5.3e-4 [citation:DeepSeekMath](https://arxiv.org/abs/2402.03300).",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Qwen3 accelerated learning rate decay during the Reasoning Stage (5T tokens) to prioritize higher-quality STEM/coding/synthetic data [citation:Qwen3](https://arxiv.org/abs/2505.09388).",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Phi-3 and SmolLM2 both reserved the final 10% of training for learning rate decay, using this annealing phase to maximize impact of upsampled high-quality math and code data [citation:Phi-3](https://arxiv.org/abs/2404.14219) [citation:SmolLM2](https://arxiv.org/abs/2502.02737).",
+   "ids": [
+    "2404.14219",
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "OctoThinker-Long-3B-Base reached performance parity with Qwen2.5-3B-Base during RL, despite starting from Llama-3.2-3B-Base, demonstrating mid-training's ability to close performance gaps between model families [citation:OctoThinker](https://arxiv.org/abs/2506.20512)",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "OctoThinker: 30% QA data ratio optimal, with diminishing returns beyond this point [citation:OctoThinker](https://arxiv.org/abs/2506.20512)",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "SmolLM2: 10-14% math data across stages, 20-24% code data in later stages [citation:SmolLM2](https://arxiv.org/abs/2502.02737)",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Tower: One-third parallel sentences, two-thirds monolingual data for optimal multilingual performance [citation:Tower](https://arxiv.org/abs/2402.17733)",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "DeepSeekMath: 56% domain corpus, 20% code, 10% arXiv, 10% natural language, 4% algebraic code [citation:DeepSeekMath](https://arxiv.org/abs/2402.03300)",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "SmolLM2 extended context from 2k to 8k tokens using an intermediate checkpoint, training on 40% long-context documents (8k+ tokens) with RoPE base frequency 130k [citation:SmolLM2](https://arxiv.org/abs/2502.02737).",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Qwen2.5 employed two-phase context training: 4,096 tokens initially, extended to 32,768 (or 262,144 for Turbo) using YARN and Dual Chunk Attention with RoPE base frequency increased to 1,000,000 using ABF technique [citation:Qwen2.5](https://arxiv.org/abs/2412.15115).",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "3. Results",
+   "kind": "synthesis",
+   "text": "Qwen3 dedicated an entire third stage to long-context training with hundreds of billions of tokens at 32k sequence length, using RoPE base frequency 1M with ABF, YARN, and DCA [citation:Qwen3](https://arxiv.org/abs/2505.09388).",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "SmolLM2's \"online\" approach exemplifies this, adjusting ratios across four stages to address capability bottlenecks [citation:SmolLM2](https://arxiv.org/abs/2502.02737).",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "Qwen3's multilingual annotation system across 30T tokens represents the state-of-the-art, optimizing at granular instance level rather than coarse source level [citation:Qwen3](https://arxiv.org/abs/2505.09388).",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "OctoThinker's finding that short-CoT mid-training provided no RL benefits due to distribution gaps highlights this critical consideration [citation:OctoThinker](https://arxiv.org/abs/2506.20512).",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "All multi-stage approaches reserve the final 10% of training for decay, strategically upsampling high-quality data during this annealing phase [citation:SmolLM2](https://arxiv.org/abs/2502.02737) [citation:Phi-3](https://arxiv.org/abs/2404.14219).",
+   "ids": [
+    "2502.02737",
+    "2404.14219"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "OctoThinker-Long-3B-Base achieved parity with Qwen2.5-3B-Base during RL despite starting from the weaker Llama-3.2-3B-Base, demonstrating mid-training's potential to overcome architectural limitations [citation:OctoThinker](https://arxiv.org/abs/2506.20512).",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "SmolLM2's training cost approximately $250,000 USD, limiting exploration of alternative mixing schedules [citation:SmolLM2](https://arxiv.org/abs/2502.02737).",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "MATES was only available as abstract due to access issues, and Magicoder's concurrent work (DeepSeek-Coder) lacked publicly available data and instruction tuning details at time of writing [citation:Magicoder](https://arxiv.org/abs/2312.02120).",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "4. Discussion",
+   "kind": "synthesis",
+   "text": "Stabilization methods require further investigation [citation:OctoThinker](https://arxiv.org/abs/2506.20512).",
+   "ids": [
+    "2506.20512"
+   ]
+  }
+ ]
+}

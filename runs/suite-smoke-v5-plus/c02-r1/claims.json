@@ -1,0 +1,860 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 5
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hao et al. (2024) introduced Coconut (Chain of Continuous Thought), which uses the last hidden state of the LLM as a representation of the reasoning state and feeds it back as the next input embedding directly in the continuous space.",
+   "ids": [
+    "2412.06769"
+   ],
+   "evidence": [
+    "E8"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hao et al. (2024) report that Coconut with continuous thoughts significantly outperforms No-CoT baseline on GSM8k math reasoning.",
+   "ids": [
+    "2412.06769"
+   ],
+   "evidence": [
+    "E8"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hao et al. (2024) further demonstrate that Coconut is more token-efficient than traditional CoT while achieving higher accuracy on logical reasoning tasks.",
+   "ids": [
+    "2412.06769"
+   ],
+   "evidence": [
+    "E9"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hao et al. (2024) show that continuous latent reasoning enables emergent BFS-like search over multiple reasoning paths.",
+   "ids": [
+    "2412.06769"
+   ],
+   "evidence": [
+    "E10"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2024) proposed Stepwise Internalization, which starts with a model trained for explicit CoT reasoning and gradually removes intermediate steps while finetuning.",
+   "ids": [
+    "2405.14838"
+   ],
+   "evidence": [
+    "E17"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2024) report that this approach enables GPT-2 Small to solve 9×9 multiplication with 99% accuracy, far exceeding No CoT baselines.",
+   "ids": [
+    "2405.14838"
+   ],
+   "evidence": [
+    "E17"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2024) demonstrate that ICoT-SI achieves state-of-the-art accuracy on GSM8K among models that don't output intermediate reasoning steps.",
+   "ids": [
+    "2405.14838"
+   ],
+   "evidence": [
+    "E18"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2024) show that ICoT-SI offers 11x speedup over Explicit CoT while maintaining comparable accuracy on multiplication tasks.",
+   "ids": [
+    "2405.14838"
+   ],
+   "evidence": [
+    "E19"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2023) similarly distilled implicit reasoning steps from a teacher model trained on explicit chain-of-thought, with reasoning happening vertically among hidden states in different layers rather than horizontally through intermediate words.",
+   "ids": [
+    "2311.01460"
+   ],
+   "evidence": [
+    "E25"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2023) report that their implicit CoT enables solving tasks previously not solvable without explicit CoT, such as GPT-2 Medium achieving 96% accuracy on 5×5 multiplication compared to 2% with no CoT.",
+   "ids": [
+    "2311.01460"
+   ],
+   "evidence": [
+    "E25"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2023) further demonstrate that implicit CoT offers higher inference speed especially for tasks with many intermediate steps.",
+   "ids": [
+    "2311.01460"
+   ],
+   "evidence": [
+    "E26"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Goyal et al. (2023) trained decoder-only models with learnable pause tokens appended to input sequences, delaying output generation until the last pause token.",
+   "ids": [
+    "2310.02226"
+   ],
+   "evidence": [
+    "E20"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Goyal et al. (2023) report that pause-pretraining followed by pause-finetuning improves performance on eight tasks for the 1B model and six tasks for the 130M model compared to standard training.",
+   "ids": [
+    "2310.02226"
+   ],
+   "evidence": [
+    "E20"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Goyal et al. (2023) show that the most prominent improvement is an 18% EM score gain on the SQuAD question-answering task for the 1B model.",
+   "ids": [
+    "2310.02226"
+   ],
+   "evidence": [
+    "E21"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Goyal et al. (2023) reveal that pause-pretraining is crucial for delays to help in downstream inference-time, as standard-pretrained models have biases that prevent realizing benefits of inference-time delays.",
+   "ids": [
+    "2310.02226"
+   ],
+   "evidence": [
+    "E22"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "DeepSeek-AI et al. (2025) demonstrate that reasoning capabilities can be incentivized through pure reinforcement learning without human-annotated reasoning trajectories.",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Muennighoff et al. (2025) explored simple test-time scaling approaches, curating s1K—a dataset of 1,000 questions with reasoning traces—and developing budget forcing to control test-time compute by terminating or extending the model's thinking process.",
+   "ids": [
+    "2501.19393"
+   ],
+   "evidence": [
+    "E27"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang et al. (2024) analyzed whether large language models latently perform multi-hop reasoning when processing complex prompts requiring multiple reasoning steps.",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Biran et al. (2024) explored limitations of LLMs on multi-hop queries, finding that the second hop is answered in the mid-upper layers only after the first hop is answered by the lower layers, indicating sequential latent reasoning.",
+   "ids": [
+    "2406.12775"
+   ],
+   "evidence": [
+    "E4"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Biran et al. (2024) demonstrate that back-patching correctly answers between 32%-66% of previously incorrect cases while maintaining 100% accuracy on correct cases.",
+   "ids": [
+    "2406.12775"
+   ],
+   "evidence": [
+    "E3"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Biran et al. (2024) reveal that MLP sublayers play a larger role in promoting the predicted token compared to attention sublayers.",
+   "ids": [
+    "2406.12775"
+   ],
+   "evidence": [
+    "E2"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Su et al. (2025) proposed mixing latent tokens with text tokens for improved reasoning, achieving 17.5% performance gain over CoT baseline on the difficult ProsQA benchmark.",
+   "ids": [
+    "2502.03275"
+   ],
+   "evidence": [
+    "E5"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Su et al. (2025) show that the latent approach shows an average 17% reduction in token numbers compared with CoT while surpassing it in prediction accuracy.",
+   "ids": [
+    "2502.03275"
+   ],
+   "evidence": [
+    "E6"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Su et al. (2025) find that accuracy peaks at compression rate r=16 (28.1) and decreases at r=32 (27.9), indicating an optimal balance between compression and information preservation.",
+   "ids": [
+    "2502.03275"
+   ],
+   "evidence": [
+    "E7"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Multiple papers demonstrate that internalizing reasoning steps in hidden states enables solving complex tasks without explicit intermediate outputs (Deng et al., 2023; Deng et al., 2024; Hao et al., 2024).",
+   "ids": [
+    "2311.01460",
+    "2405.14838",
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is consensus that training-time compute allocation through pause tokens or continuous representations improves downstream task performance (Goyal et al., 2023; Cheng & Van Durme, 2024).",
+   "ids": [
+    "2310.02226"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Deng et al. (2023) note that implicit CoT lacks transparency compared to explicit CoT, while Hao et al. (2024) emphasize the emergent search capabilities of continuous latent spaces without addressing interpretability concerns.",
+   "ids": [
+    "2311.01460",
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "DeepSeek-AI et al. (2025) acknowledge limitations in structured output generation, contrasting with the efficiency gains reported by Deng et al. (2024) in their Stepwise Internalization approach.",
+   "ids": [
+    "2501.12948",
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Hao et al. (2024) note that further research is needed to refine and scale latent reasoning to pretraining, which could improve generalization across a broader range of reasoning challenges.",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Goyal et al. (2023) highlight that the expense of pause-pretraining prevents studying generalization across more model sizes beyond 1B and 130M, encoder-decoder architectures, or other pretraining mixtures and objectives.",
+   "ids": [
+    "2310.02226"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Yang et al. (2024) acknowledge their analysis is based on LLaMA-2 family up to 70B parameters and uses approximations for internal entity recall based on logit lens which has shortcomings like representation drift, bias, and brittleness.",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Deng et al. (2024) identify high training costs due to finetuning required when removing each set of CoT tokens, with unstable training from aggressive removal values.",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "DeepSeek-AI et al. (2025) face limitations including token efficiency issues with overthinking and inability to leverage external tools.",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Muennighoff et al. (2025) note that budget forcing eventually flattens out in performance gains and is constrained by context window limitations.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the limitations of large language models on multi-hop reasoning queries?",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors explore LLM limitations on multi-hop queries through analysis of reasoning pathways and layer-wise information flow.",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The second hop is answered in the mid-upper layers only after the first hop is answered by the lower layers, indicating sequential latent reasoning",
+   "ids": [
+    "2406.12775"
+   ],
+   "evidence": [
+    "E4"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Back-patching correctly answers between 32%-66% of previously incorrect cases while maintaining 100% accuracy on correct cases",
+   "ids": [
+    "2406.12775"
+   ],
+   "evidence": [
+    "E3"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MLP sublayers play a larger role in promoting the predicted token compared to attention sublayers",
+   "ids": [
+    "2406.12775"
+   ],
+   "evidence": [
+    "E2"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The mechanistic methods used are approximations, the study examines only two-hop queries, and the back-patching method is not practical for inference without efficient source-target layer selection.",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can the reasoning abilities of large language models be incentivized through pure reinforcement learning without human-annotated reasoning trajectories?",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors develop DeepSeek-R1-Zero and DeepSeek-R1 using large-scale reinforcement learning to incentivize reasoning behaviors, with sophisticated patterns like self-verification and reflection emerging organically during training.",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DeepSeek-R1 shows substantial improvements on reasoning-intensive benchmarks through RL training",
+   "ids": [
+    "2501.12948"
+   ],
+   "evidence": [
+    "E11"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Advanced reasoning patterns like self-reflection and verification emerge from pure RL without human annotations",
+   "ids": [
+    "2501.12948"
+   ],
+   "evidence": [
+    "E12"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DeepSeek-R1 has limitations in structured output generation and tool use capabilities",
+   "ids": [
+    "2501.12948"
+   ],
+   "evidence": [
+    "E13"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: DeepSeek-R1 faces limitations including suboptimal structured output capabilities, inability to leverage tools like search engines and calculators, token efficiency issues with overthinking, language mixing for non-Chinese/English queries, sensitivity to few-shot prompting, and limited improvement on software engineering benchmarks.",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can language models perform implicit reasoning using internal hidden states distilled from explicit chain-of-thought reasoning, achieving comparable task-solving ability with faster inference?",
+   "ids": [
+    "2311.01460"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors distill implicit reasoning steps from a teacher model trained on explicit chain-of-thought, with reasoning happening vertically among hidden states in different layers rather than horizontally through intermediate words, evaluated on multi-digit multiplication and GSM8K-Aug datasets.",
+   "ids": [
+    "2311.01460"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Implicit CoT enables solving tasks previously not solvable without explicit CoT, such as GPT-2 Medium achieving 96% accuracy on 5×5 multiplication compared to 2% with no CoT",
+   "ids": [
+    "2311.01460"
+   ],
+   "evidence": [
+    "E25"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Implicit CoT has higher inference speed compared to explicit CoT, especially for tasks with many intermediate steps like GSM8K-Aug and 5×5 multiplication",
+   "ids": [
+    "2311.01460"
+   ],
+   "evidence": [
+    "E26"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Implicit CoT lacks transparency and interpretability compared to explicit CoT, as the internal processing within hidden states makes it challenging to understand how the model arrives at conclusions.",
+   "ids": [
+    "2311.01460"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can language models be taught to internalize explicit chain-of-thought reasoning steps while maintaining high performance?",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Stepwise Internalization, which starts with a model trained for explicit CoT reasoning and gradually removes intermediate steps while finetuning, allowing the model to internalize reasoning steps incrementally.",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Stepwise Internalization enables GPT-2 Small to solve 9×9 multiplication with 99% accuracy, far exceeding No CoT",
+   "ids": [
+    "2405.14838"
+   ],
+   "evidence": [
+    "E17"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ICoT-SI achieves state-of-the-art accuracy on GSM8K among models that don't output intermediate reasoning steps",
+   "ids": [
+    "2405.14838"
+   ],
+   "evidence": [
+    "E18"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ICoT-SI offers 11x speedup over Explicit CoT while maintaining comparable accuracy on multiplication tasks",
+   "ids": [
+    "2405.14838"
+   ],
+   "evidence": [
+    "E19"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The approach has high training cost due to finetuning required when removing each set of CoT tokens; training can be unstable with aggressive removal values; models lose interpretable intermediate steps; and explicit CoT still achieves higher accuracies compared to implicit CoT.",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Does delaying model computation via pause tokens help, hurt, or have no effect on language model performance, and does it matter whether delays are introduced during pretraining, finetuning, or both?",
+   "ids": [
+    "2310.02226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors trained decoder-only models (1B and 130M parameters) with learnable pause tokens appended to input sequences, delaying output generation until the last pause token.",
+   "ids": [
+    "2310.02226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluated four approaches: standard pretraining/finetuning, pause-pretraining only, pause-finetuning only, and both, across nine downstream tasks.",
+   "ids": [
+    "2310.02226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pause-pretraining followed by pause-finetuning improves performance on eight tasks for the 1B model and six tasks for the 130M model compared to standard training",
+   "ids": [
+    "2310.02226"
+   ],
+   "evidence": [
+    "E20"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The most prominent improvement is an 18% EM score gain on the SQuAD question-answering task for the 1B model",
+   "ids": [
+    "2310.02226"
+   ],
+   "evidence": [
+    "E21"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pause-pretraining is crucial for delays to help in downstream inference-time, as standard-pretrained models have biases that prevent realizing benefits of inference-time delays",
+   "ids": [
+    "2310.02226"
+   ],
+   "evidence": [
+    "E22"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The expense of pause-pretraining prevents studying generalization across more model sizes beyond 1B and 130M, encoder-decoder architectures, or other pretraining mixtures and objectives.",
+   "ids": [
+    "2310.02226"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can large language models reason more effectively in a continuous latent space rather than being constrained to the language space?",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Coconut (Chain of Continuous Thought), which uses the last hidden state of the LLM as a representation of the reasoning state and feeds it back as the next input embedding directly in the continuous space, enabling breadth-first search over reasoning paths.",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Coconut with continuous thoughts significantly outperforms No-CoT baseline on GSM8k math reasoning",
+   "ids": [
+    "2412.06769"
+   ],
+   "evidence": [
+    "E8"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Coconut is more token-efficient than traditional CoT while achieving higher accuracy on logical reasoning tasks",
+   "ids": [
+    "2412.06769"
+   ],
+   "evidence": [
+    "E9"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Continuous latent reasoning enables emergent BFS-like search over multiple reasoning paths",
+   "ids": [
+    "2412.06769"
+   ],
+   "evidence": [
+    "E10"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Further research is needed to refine and scale latent reasoning to pretraining, which could improve generalization across a broader range of reasoning challenges.",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the simplest approach to achieve test-time scaling and strong reasoning performance in language models?",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors curated s1K, a dataset of 1,000 questions with reasoning traces, and developed budget forcing to control test-time compute by terminating or extending the model's thinking process.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They supervised finetuned Qwen2.5-32B-Instruct on s1K and evaluated with budget forcing on reasoning benchmarks.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The s1-32B model exceeds o1-preview on competition math questions by up to 27% on MATH and AIME24 benchmarks",
+   "ids": [
+    "2501.19393"
+   ],
+   "evidence": [
+    "E27"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling s1-32B with budget forcing allows extrapolating beyond its performance without test-time intervention, improving AIME24 accuracy from 50% to 57%",
+   "ids": [
+    "2501.19393"
+   ],
+   "evidence": [
+    "E28"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Supervised finetuning on only 1,000 examples suffices to build a competitive reasoning model matching o1-preview performance",
+   "ids": [
+    "2501.19393"
+   ],
+   "evidence": [
+    "E29"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Budget forcing has two key limitations when scaling further: it eventually flattens out in performance gains, and the context window of the underlying language model constrains it.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can mixing latent tokens with text tokens improve language model reasoning performance and efficiency?",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Token Assorted, which mixes latent tokens with text tokens for improved reasoning, evaluated on ProsQA benchmark with various compression rates.",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The latent approach achieves 17.5% performance gain over CoT baseline on the difficult ProsQA benchmark",
+   "ids": [
+    "2502.03275"
+   ],
+   "evidence": [
+    "E5"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The latent approach shows an average 17% reduction in token numbers compared with CoT while surpassing it in prediction accuracy",
+   "ids": [
+    "2502.03275"
+   ],
+   "evidence": [
+    "E6"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Accuracy peaks at compression rate r=16 (28.1) and decreases at r=32 (27.9), indicating an optimal balance between compression and information preservation",
+   "ids": [
+    "2502.03275"
+   ],
+   "evidence": [
+    "E7"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do large language models latently perform multi-hop reasoning when processing complex prompts that require multiple reasoning steps?",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyze latent reasoning pathways using the TwoHopFact dataset, measuring internal entity recall (EntRec) for the first hop and consistency scores (CnstScore) for the second hop across LLaMA-2 models of different sizes.",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "First-hop reasoning shows clear scaling trends with larger model sizes",
+   "ids": [
+    "2402.16837"
+   ],
+   "evidence": [
+    "E14"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strong latent multi-hop reasoning evidence exists for certain prompt types, used in over 80% of cases",
+   "ids": [
+    "2402.16837"
+   ],
+   "evidence": [
+    "E15"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Second-hop and full multi-hop reasoning evidence is moderate overall, with strongest evidence for first hop only",
+   "ids": [
+    "2402.16837"
+   ],
+   "evidence": [
+    "E16"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The analysis is based on LLaMA-2 family up to 70B parameters; the study measures only one pathway for latent multi-hop reasoning and uses approximations for internal entity recall based on logit lens which has shortcomings like representation drift, bias, and brittleness.",
+   "ids": [
+    "2402.16837"
+   ]
+  }
+ ]
+}

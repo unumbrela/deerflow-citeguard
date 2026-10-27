@@ -1,0 +1,704 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper introduces Rein, a robust fine-tuning approach that parameter-efficiently harnesses Vision Foundation Models (VFMs) for domain generalized semantic segmentation.",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Built upon trainable tokens linked to distinct instances, Rein precisely refines and forwards feature maps from each layer to the next layer within the backbone, producing diverse refinements for different categories within a single image.",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Rein addresses DGSS which focuses on improving prediction accuracy across multiple unseen domains without accessing target data (Wei et al., 2023).",
+   "ids": [
+    "2312.04265"
+   ],
+   "evidence": [
+    "E20"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Rein introduces parameter-efficient fine-tuning using learnable tokens linked to instances, using dot-product operations to generate attention-like similarity maps for instance-level feature refinement (Wei et al., 2023).",
+   "ids": [
+    "2312.04265"
+   ],
+   "evidence": [
+    "E21"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Rein employs low-rank matrix decomposition to reduce trainable parameters, achieving 78.4% mIoU on Cityscapes with only 1% trainable parameters, without accessing real urban-scene datasets (Wei et al., 2023).",
+   "ids": [
+    "2312.04265"
+   ],
+   "evidence": [
+    "E32"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Rein uses dot-product operations to generate attention-like similarity maps for instance-level feature refinement.",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The approach employs low-rank matrix decomposition to reduce trainable parameters while maintaining superior generalization capabilities.",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper introduces a simple framework for generalizing semantic segmentation networks by employing language as the source of randomization.",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The recipe comprises three key ingredients: (i) preservation of intrinsic CLIP robustness through minimal fine-tuning, (ii) language-driven local style augmentation, and (iii) randomization by locally mixing source and augmented styles during training.",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "FAMix addresses that DGSS networks are traditionally pretrained on ImageNet; this work investigates whether CLIP pretraining can enhance domain generalization (Fahes et al., 2023).",
+   "ids": [
+    "2311.17922"
+   ],
+   "evidence": [
+    "E22"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "FAMix finds that direct CLIP fine-tuning performs worse than ImageNet on OOD data due to overfitting source distribution, requiring careful handling to preserve distributional robustness (Fahes et al., 2023).",
+   "ids": [
+    "2311.17922"
+   ],
+   "evidence": [
+    "E23"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "FAMix framework employs language-driven class-wise local style augmentation using prompts combining random styles with class names, followed by patch-wise style mixing between source and mined styles from class-specific style banks (Fahes et al., 2023).",
+   "ids": [
+    "2311.17922"
+   ],
+   "evidence": [
+    "E24"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "FAMix uses prompts combining random styles with class names for language-driven augmentation, followed by patch-wise style mixing between source and mined styles from class-specific style banks.",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper presents DIDEX, a diffusion-based domain extension method that employs a diffusion model to generate a pseudo-target domain with diverse text prompts.",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This allows control over the style and content of generated images, introducing high diversity.",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The method then trains a generalizing model by adapting towards this pseudo-target domain.",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DIDEX addresses that traditional DGSS uses style randomization/augmentation but faces issues: requires auxiliary real data and produces limited diversity (Niemeijer et al., 2023).",
+   "ids": [
+    "2312.01850"
+   ],
+   "evidence": [
+    "E25"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DIDEX uses diffusion models to generate realistic pseudo-target domains from synthetic images with text prompt-based control enabling alteration of location, time, weather conditions, and semantic content (Niemeijer et al., 2023).",
+   "ids": [
+    "2312.01850"
+   ],
+   "evidence": [
+    "E26"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DIDEX adapts UDA techniques to train on pseudo-target domains instead of real target data, improving state-of-the-art mIoU by 3.8% on GTA5 and 11.8% on SYNTHIA benchmarks (Niemeijer et al., 2023).",
+   "ids": [
+    "2312.01850"
+   ],
+   "evidence": [
+    "E27"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DIDEX uses diffusion models to generate realistic pseudo-target domains from synthetic images, adapting UDA techniques to train on pseudo-target domains instead of real target data.",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "CLOUDS is a framework that integrates foundation models of various kinds: (i) CLIP backbone for robust feature representation, (ii) generative models to diversify content, covering various modes of the possible target distribution, and (iii) Segment Anything Model (SAM) for iteratively refining predictions of the segmentation model.",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Traditional DGSS relies on Domain Randomization (style diversification) which cannot bring content augmentation",
+   "ids": [
+    "2312.09788"
+   ],
+   "evidence": [
+    "E28"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "CLOUDS amalgamates multiple foundation models: CLIP backbone, diffusion models for content generation, SAM for pseudo-label refinement, using LLMs to generate diverse text prompts for diffusion model image generation",
+   "ids": [
+    "2312.09788"
+   ],
+   "evidence": [
+    "E29"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Self-training with SAM-based pseudo-label refinement using point-based prompting, demonstrating that content diversification is more effective than traditional style diversification",
+   "ids": [
+    "2312.09788"
+   ],
+   "evidence": [
+    "E30"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "CLOUDS employs self-training with SAM-based pseudo-label refinement using point-based prompting, and diffusion models for content diversification guided by LLM-generated text prompts.",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper presents SET, a novel Spectral-dEcomposed Token learning framework.",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Frozen VFM features are first decomposed into phase and amplitude components in frequency space, which mainly contain content and style information respectively, then separately processed by learnable tokens for task-specific information extraction.",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SET addresses the domain gap caused by style variations (weather, lighting, urban landscape) between source and unseen target domains, with the key challenge being how to learn style-invariant representation by fine-tuning VFMs (Yi et al., 2024).",
+   "ids": [
+    "2407.18568"
+   ],
+   "evidence": [
+    "E9"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SET uses Fast Fourier Transform to decompose features into amplitude (style-sensitive, high-frequency) and phase (style-stable, low-frequency) components, introducing spectral tokens that refine spectral components while keeping VFM backbone frozen (Yi et al., 2024).",
+   "ids": [
+    "2407.18568"
+   ],
+   "evidence": [
+    "E10"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SET designs a token-based feature enhancement pipeline which extracts task-specific information and adjusts the spectral-decomposed features in amplitude and phase branches separately, with attention optimization to handle style variation instability (Yi et al., 2024).",
+   "ids": [
+    "2407.18568"
+   ],
+   "evidence": [
+    "E31"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SET implements a token-based feature enhancement pipeline with separate amplitude and phase branches, applying attention optimization to handle style variation instability.",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This study proposes BlindNet, a novel DGSS approach that blinds the style without external modules or datasets.",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "BlindNet comprises two key components: covariance alignment trains the encoder to uniformly recognize various styles and preserve content information, while semantic consistency contrastive learning enables the decoder to construct discriminative class embedding space.",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "BlindNet addresses domain shift between synthetic (GTAV) and real-world (Cityscapes) data without requiring target domain samples during training, with limitations in existing approaches where Domain Randomization requires auxiliary domains and Feature Normalization removes both style AND content information (Ahn et al., 2024).",
+   "ids": [
+    "2403.06122"
+   ],
+   "evidence": [
+    "E11"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "BlindNet proposes covariance alignment for the encoder with Covariance Matching Loss (CML) to mitigate effects of style variations and Cross-Covariance Loss (CCL) to preserve content information (Ahn et al., 2024).",
+   "ids": [
+    "2403.06122"
+   ],
+   "evidence": [
+    "E12"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "BlindNet's proposed CCL converges only the diagonal component of the covariance matrix to one to prevent the drawbacks of existing FN methods from removing content information, combined with semantic consistency contrastive learning in the decoder (Ahn et al., 2024).",
+   "ids": [
+    "2403.06122"
+   ],
+   "evidence": [
+    "E13"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "BlindNet applies covariance alignment in the encoder to mitigate style effects while preserving content, and semantic consistency contrastive learning in the decoder to build discriminative class embeddings.",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper introduces tqdm, a method that utilizes domain-invariant semantic knowledge from text embeddings of vision-language models.",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Text embeddings are employed as object queries within a transformer-based segmentation framework, regarded as a domain-invariant basis for pixel grouping in DGSS.",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "tqdm addresses that existing methods in DGSS have not yet explored direct language-driven approaches to utilize textual representations from VLMs for domain-generalized recognition (Pak et al., 2024).",
+   "ids": [
+    "2407.09033"
+   ],
+   "evidence": [
+    "E14"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "tqdm's key idea is to utilize text embeddings of classes of interest from VLMs as object queries, referred to as textual object queries, maintaining the text encoder frozen to preserve its original language representations (Pak et al., 2024).",
+   "ids": [
+    "2407.09033"
+   ],
+   "evidence": [
+    "E15"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "tqdm employs learnable prompts to adapt textual features from the frozen text encoder, with three regularization losses: language, vision-language, and vision regularization (Pak et al., 2024).",
+   "ids": [
+    "2407.09033"
+   ],
+   "evidence": [
+    "E16"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "tqdm employs textual object queries with text-to-pixel attention to enhance semantic clarity of pixel features, maintaining alignment between visual and textual features through regularization losses.",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper proposes DGInStyle, an efficient data generation pipeline.",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "First, it examines specializing a pretrained LDM to semantically-controlled generation within a narrow domain.",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Second, it proposes a Style Swap technique to endow the rich generative prior with learned semantic control.",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Third, it designs a Multi-resolution Latent Fusion technique to overcome bias toward dominant objects.",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DGInStyle presents a novel approach focusing on synthesizing data instead of modifying model architectures or training techniques, leveraging prior knowledge from foundational text-to-image Latent Diffusion Models trained on internet-scale datasets (Jia et al., 2023).",
+   "ids": [
+    "2312.03048"
+   ],
+   "evidence": [
+    "E17"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DGInStyle proposes Style Swap technique: fine-tune base LDM with DreamBooth on source domain, train ControlNet on top of source-domain-finetuned LDM, switch back to original LDM during inference while keeping trained ControlNet (Jia et al., 2023).",
+   "ids": [
+    "2312.03048"
+   ],
+   "evidence": [
+    "E18"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DGInStyle enables applying semantic control learned from the source domain to the original LDM, with multi-resolution latent fusion to handle small instances and text prompting for style diversity (Jia et al., 2023).",
+   "ids": [
+    "2312.03048"
+   ],
+   "evidence": [
+    "E19"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DGInStyle uses a three-step Style Swap process and multi-resolution latent fusion, with text prompting for style diversity by concatenating class names with task-specific qualifiers.",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper proposes MFuser, a novel Mamba-based fusion framework that efficiently combines the strengths of VFMs and VLMs while maintaining linear scalability in sequence length.",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "MFuser consists of MVFuser, a Mamba-based co-adapter for joint fine-tuning, and MTEnhancer, a hybrid attention-Mamba module that refines text embeddings by incorporating image priors.",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "MFuser addresses DGSS which aims for strong performance across unseen domains without relying on target domain data during training (Zhang & Tan, 2025).",
+   "ids": [
+    "2504.03193"
+   ],
+   "evidence": [
+    "E1"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "MFuser is a novel fusion framework that collaborates arbitrary pairs of Vision Foundation Models (VFMs) and Vision Language Models (VLMs) for DGSS (Zhang & Tan, 2025).",
+   "ids": [
+    "2504.03193"
+   ],
+   "evidence": [
+    "E2"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "MFuser's MVFuser is a Mamba-based co-adapter that jointly fine-tunes VFM and VLM encoders using State-Space Models for efficient long-range sequence modeling (Zhang & Tan, 2025).",
+   "ids": [
+    "2504.03193"
+   ],
+   "evidence": [
+    "E3"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "MFuser achieves 68.20 mIoU on synthetic-to-real benchmarks and 71.87 mIoU on real-to-real benchmarks, outperforming existing SOTA methods (Zhang & Tan, 2025).",
+   "ids": [
+    "2504.03193"
+   ],
+   "evidence": [
+    "E4"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "MFuser leverages State-Space Models for efficient fusion, achieving 68.20 mIoU on synthetic-to-real and 71.87 mIoU on real-to-real benchmarks.",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper introduces SCSD, a framework comprising three pivotal components: a Semantic Query Booster to enhance semantic awareness in the mask decoder, a Text-Driven Style Transform module using domain difference text embeddings for controllable style transformation, and a Style Synergy Optimization mechanism fortifying inter-domain feature separation.",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SCSD addresses DGSS which focuses on learning only from source domain data to enhance generalization to unknown target domains, addressing real-world application challenges (Niu et al., 2024).",
+   "ids": [
+    "2412.12050"
+   ],
+   "evidence": [
+    "E8"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SCSD is a framework exploring Semantic Consistency and Style Diversity using Vision-Language Models, with Semantic Query Booster leveraging semantic consistency between image and text modalities to establish cross-modal semantic associations (Niu et al., 2024).",
+   "ids": [
+    "2412.12050"
+   ],
+   "evidence": [
+    "E5"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SCSD's Text-Driven Style Transformation mines text modality style diversity and uses domain text prompt differences to guide controllable style transformation of image features via Fourier transform (Niu et al., 2024).",
+   "ids": [
+    "2412.12050"
+   ],
+   "evidence": [
+    "E6"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SCSD outperforms SOTA methods by up to +4.87 mIoU on unseen Mapillary domains and +2.92 mIoU on ACDC domains (Niu et al., 2024).",
+   "ids": [
+    "2412.12050"
+   ],
+   "evidence": [
+    "E7"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SCSD implements Semantic Query Booster, Text-Driven Style Transformation via Fourier transform, and Style Synergy Optimization with synergistic loss weighting for contrastive and aggregation losses.",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "Rein (Wei et al., 2023): Low-rank token-based refinement with 1% trainable parameters",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "FAMix (Fahes et al., 2023): Minimal fine-tuning with frozen CLIP backbone",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "SET (Yi et al., 2024): FFT-based amplitude/phase decomposition with learnable tokens",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "BlindNet (Ahn et al., 2024): Covariance alignment for style-content disentanglement",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "FAMix (Fahes et al., 2023): Language-driven style augmentation with class-specific prompts",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "tqdm (Pak et al., 2024): Text embeddings as object queries for mask prediction",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "DIDEX (Niemeijer et al., 2023): Pseudo-target domain generation with text prompt control",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "DGInStyle (Jia et al., 2023): Style Swap for semantic-controlled generation",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "CLOUDS (Benigmim et al., 2023): CLIP + diffusion + SAM collaboration",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "MFuser (Zhang & Tan, 2025): VFM + VLM fusion via Mamba architecture",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Cross-Paper Analysis",
+   "kind": "synthesis",
+   "text": "SCSD (Niu et al., 2024): VLM-guided semantic consistency and style diversity",
+   "ids": [
+    "2412.12050"
+   ]
+  }
+ ]
+}

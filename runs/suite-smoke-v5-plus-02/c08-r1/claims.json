@@ -1,0 +1,813 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gao et al. (2025) propose Group Policy Gradient (GPG), which directly optimizes the original RL objective without any of these components, achieving superior performance over GRPO across all benchmarks.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Xiong et al. (2025) show that RAFT++, a minimalist approach using rejection sampling with importance sampling and clipping, achieves 56.1% average accuracy compared to GRPO's 56.3%, suggesting that GRPO's complexity may be unnecessary.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hu et al. (2025) take this further with Open-Reasoner-Zero, implementing vanilla PPO with GAE (λ=1, γ=1) and rule-based rewards without KL regularization, achieving superior benchmark performance with only 1/10 the training steps of DeepSeek-R1-Zero.",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) introduce 2-GRPO, demonstrating that only two rollouts per prompt are sufficient to achieve 97.6% of 16-GRPO's performance while using just 12.5% of rollouts and 21% of training time.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Xu et al. (2025) propose PODS (Policy Optimization with Down-Sampling), which strategically selects a subset of rollouts for training using max-variance selection, achieving 1.7× faster convergence than baseline GRPO.",
+   "ids": [
+    "2504.13818"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2025) address exploration budget allocation through Knapsack-GRPO, which formulates the problem as knapsack optimization and dynamically assigns computational resources across tasks, improving effective gradient ratio by 20-40%.",
+   "ids": [
+    "2509.25849"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Gao et al. (2025) introduce Soft Adaptive Policy Optimization (SAPO), which replaces hard clipping with a smooth, temperature-controlled gate that adaptively attenuates off-policy updates.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zheng et al. (2025) propose Group Sequence Policy Optimization (GSPO), which defines importance ratios based on sequence likelihood rather than token-level ratios, performing sequence-level clipping and optimization.",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ding et al. (2025) propose Multi-Layer GRPO (MGRPO), which operates in two layers: the first layer employs standard GRPO to generate an initial response, while the second layer is trained to identify and correct errors in the initial response, creating a self-correction loop.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yu et al. (2025) present DAPO (Decoupled Clip and Dynamic sAmpling Policy Optimization), achieving 50% accuracy on AIME 2024 with fully open-sourced code and dataset, addressing the challenge that \"key technical details are concealed\" in state-of-the-art systems.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hu et al. (2025) similarly open-source Open-Reasoner-Zero, enabling the research community to reproduce state-of-the-art reasoning LLM results.",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) provide theoretical analysis supporting this claim, while Xiong et al. (2025) independently arrive at similar conclusions through their analysis of RAFT++.",
+   "ids": [
+    "2510.00977",
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is strong agreement that negative samples play a crucial role in maintaining exploration and preventing distributional collapse during training (Xiong et al., 2025; Wu et al., 2025).",
+   "ids": [
+    "2504.11343",
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "All surveyed papers agree that RL training leads to emergent capabilities—reflection, backtracking, and self-correction—that are not present in the base models (Yu et al., 2025; Ding et al., 2025).",
+   "ids": [
+    "2503.14476",
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Chu et al. (2025) achieve best results with complete elimination of clipping and surrogate losses, while Zheng et al. (2025) find that sequence-level clipping remains beneficial for MoE training.",
+   "ids": [
+    "2504.02546",
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Xiong et al. (2025) note that RAFT++ exhibits faster early-stage learning but is eventually surpassed by GRPO in later training stages, suggesting that GRPO's complexity provides benefits in extended training regimes that minimalist approaches cannot match.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) report that 2-GRPO performs worse on AIME 2025 when post-trained on MATH due to larger distribution shift, indicating that minimal rollout counts may not generalize across all task distributions.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Approximately 20% of prompts remain in the extremely-hard category even after 1,000 training iterations across multiple studies (Li et al., 2025), suggesting fundamental limitations in current exploration strategies that warrant further investigation.",
+   "ids": [
+    "2509.25849"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "The evaluation focuses primarily on RLVR tasks where response correctness is verifiable; other domains like open-ended dialogue may exhibit distinct dynamics that remain unexplored (Xu et al., 2025).",
+   "ids": [
+    "2504.13818"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Multiple papers note that RL training is intrinsically complex with interdependent subsystems, where even minor changes in initial conditions can amplify through iterative processes (Yu et al., 2025), yet systematic analysis of these dynamics remains limited.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "The utility of negative samples is more nuanced than previously assumed (Xiong et al., 2025), but optimal strategies for leveraging negative feedback remain unclear.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, while several papers mention hyperparameter sensitivity, none provide comprehensive ablation studies across the full hyperparameter space, leaving open questions about the robustness of proposed methods (Chu et al., 2025).",
+   "ids": [
+    "2504.02546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a minimalist reinforcement learning approach based on direct Policy Gradient optimization outperform complex methods like GRPO for enhancing LLM reasoning capabilities?",
+   "ids": [
+    "2504.02546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Group Policy Gradient (GPG), which directly optimizes the original RL objective without surrogate loss functions, critic models, reference models, or KL divergence constraints.",
+   "ids": [
+    "2504.02546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments were conducted on both unimodal (mathematical reasoning) and multimodal (visual reasoning, geometry, classification, grounding) tasks using 1.5B and 7B models.",
+   "ids": [
+    "2504.02546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GPG consistently outperforms GRPO across all tasks with superior performance and clear margins (Chu et al., 2025)",
+   "ids": [
+    "2504.02546"
+   ],
+   "evidence": [
+    "E21"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GPG-RS1 achieves average accuracy of 55.7% on 1.5B model benchmarks, with strong results on AMC23 (77.5%) and MATH-500 (87.6%) (Chu et al., 2025)",
+   "ids": [
+    "2504.02546"
+   ],
+   "evidence": [
+    "E22"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GPG-7B achieves 57.7% average score and outperforms other baselines including SimpleRL-Zero-7B by 22.3% on AMC23 (Chu et al., 2025)",
+   "ids": [
+    "2504.02546"
+   ],
+   "evidence": [
+    "E23"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GPG simplifies training and reduces computational overhead without sacrificing reasoning quality (Chu et al., 2025)",
+   "ids": [
+    "2504.02546"
+   ],
+   "evidence": [
+    "E24"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The authors note they closely adhered to GRPO hyperparameters despite their suboptimality for GPG, suggesting GPG performance could be further improved with tuned hyperparameters.",
+   "ids": [
+    "2504.02546"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How to address inefficient exploration dynamics and reward vanishing in GRPO when training LLMs for complex reasoning tasks?",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: MGRPO operates in two layers where the first layer employs standard GRPO to generate an initial response, and the second layer is trained to identify and correct errors in the initial response, creating a self-correction loop.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MGRPO consistently outperforms one-round PPO and GRPO",
+   "ids": [
+    "2506.04746"
+   ],
+   "evidence": [
+    "E6"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MGRPO's Layer 2 GRPO effectively improves self-correction skill",
+   "ids": [
+    "2506.04746"
+   ],
+   "evidence": [
+    "E7"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL training is necessary to teach the model how and when to self-correct",
+   "ids": [
+    "2506.04746"
+   ],
+   "evidence": [
+    "E8"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can soft adaptive gating replace hard clipping in policy optimization to address instability in RL training of large language models?",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Soft Adaptive Policy Optimization (SAPO), which replaces hard clipping with a smooth, temperature-controlled gate that adaptively attenuates off-policy updates.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments were conducted on Qwen3-30B-A3B-Base for mathematical reasoning and Qwen3-VL model series for multimodal tasks.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAPO consistently improves model performance across all benchmarks, achieving both higher stability and stronger final performance compared with GSPO and GRPO-R2",
+   "ids": [
+    "2511.20347"
+   ],
+   "evidence": [
+    "E29"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAPO maintains stable training dynamics while GSPO and GRPO-R2 exhibit early-stage training collapse",
+   "ids": [
+    "2511.20347"
+   ],
+   "evidence": [
+    "E30"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAPO achieves steady performance gains throughout training and outperforms both baselines under equal compute budgets across diverse tasks and model sizes",
+   "ids": [
+    "2511.20347"
+   ],
+   "evidence": [
+    "E31"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large-scale reasoning-oriented RL training on base models be effectively scaled up with simplicity and accessibility?",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Open-Reasoner-Zero, implementing vanilla PPO with GAE (λ=1, γ=1) and rule-based rewards without KL regularization on Qwen2.5 base models of various sizes (0.5B to 32B parameters).",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Vanilla PPO with GAE (λ=1, γ=1) and simple rule-based rewards without KL regularization effectively scales reasoning capabilities in language models",
+   "ids": [
+    "2503.24290"
+   ],
+   "evidence": [
+    "E13"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GAE λ=1.0 yields superior training stability and final performance compared to λ=0.95",
+   "ids": [
+    "2503.24290"
+   ],
+   "evidence": [
+    "E14"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PPO's learned critic assigns more negative advantages to repetitive tokens than GRPO, demonstrating superior penalization of undesirable patterns",
+   "ids": [
+    "2503.24290"
+   ],
+   "evidence": [
+    "E15"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "ORZ achieves superior benchmark performance while requiring only 1/10 of training steps compared to DeepSeek-R1-Zero",
+   "ids": [
+    "2503.24290"
+   ],
+   "evidence": [
+    "E16"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How to optimally allocate computational exploration budgets across tasks during reinforcement learning training of LLMs?",
+   "ids": [
+    "2509.25849"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Formulates exploration budget allocation as a knapsack optimization problem, treating each task-budget pair as an item with associated cost and value to adaptively distribute resources.",
+   "ids": [
+    "2509.25849"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Knapsack-GRPO improves effective gradient ratio by 20-40%",
+   "ids": [
+    "2509.25849"
+   ],
+   "evidence": [
+    "E3"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Knapsack-GRPO consistently outperforms standard GRPO",
+   "ids": [
+    "2509.25849"
+   ],
+   "evidence": [
+    "E4"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Knapsack-GRPO can dynamically assign up to 93 exploration budgets to certain tasks",
+   "ids": [
+    "2509.25849"
+   ],
+   "evidence": [
+    "E5"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: Approximately 20% of prompts remain in the extremely-hard category even after 1,000 training iterations; the work focuses on rollout counts and could incorporate other computational factors.",
+   "ids": [
+    "2509.25849"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the fundamental mechanism behind GRPO's efficacy and can it be achieved with minimal group sizes?",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes that GRPO functions as contrastive learning and introduces 2-GRPO, a variant with only two rollouts per prompt, validated through theoretical analysis and empirical evaluation on mathematical reasoning benchmarks.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "2-GRPO achieves 97.6% of 16-GRPO's performance with only 12.5% rollouts and 21% training time",
+   "ids": [
+    "2510.00977"
+   ],
+   "evidence": [
+    "E9"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "2-GRPO is effective and efficient across diverse tasks beyond math reasoning",
+   "ids": [
+    "2510.00977"
+   ],
+   "evidence": [
+    "E10"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRPO's group mechanism primarily constructs contrastive signals rather than estimating value baselines",
+   "ids": [
+    "2510.00977"
+   ],
+   "evidence": [
+    "E11"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: 2-GRPO performs worse on AIME 2025 when post-trained on MATH due to larger distribution shift between training and evaluation datasets.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the compute and memory asymmetry between rollout generation and policy updates in RLVR be addressed?",
+   "ids": [
+    "2504.13818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce PODS (Policy Optimization with Down-Sampling), which decouples rollout generation from policy updates by training only on a strategically selected subset of rollouts using max-variance down-sampling.",
+   "ids": [
+    "2504.13818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "PODS achieves at least 1.7× faster convergence to peak accuracy compared to baseline GRPO while often achieving higher final performance",
+   "ids": [
+    "2504.13818"
+   ],
+   "evidence": [
+    "E17"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Max-variance down-sampling consistently outperforms other down-sampling rules (max-reward, random, percentile) throughout training",
+   "ids": [
+    "2504.13818"
+   ],
+   "evidence": [
+    "E18"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Increasing rollout size n exhibits diminishing returns with an optimal point around n=64",
+   "ids": [
+    "2504.13818"
+   ],
+   "evidence": [
+    "E19"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training batch size m shows robust performance across a wide range with minimal degradation until very small values (m≤4)",
+   "ids": [
+    "2504.13818"
+   ],
+   "evidence": [
+    "E20"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The evaluation focuses on RLVR tasks where response correctness is verifiable; other domains like open-ended dialogue may exhibit distinct dynamics.",
+   "ids": [
+    "2504.13818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method behaves off-policy and may be unsuitable when strict on-policy guarantees are required.",
+   "ids": [
+    "2504.13818"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the sources of GRPO's effectiveness in LLM reasoning, and can simpler rejection sampling baselines achieve competitive performance?",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors revisit GRPO from a reinforce-like algorithm perspective, analyzing RAFT (rejection sampling training on positive samples only) and proposing RAFT++ with importance sampling and clipping, plus Reinforce-Rej that filters both entirely incorrect and entirely correct samples.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RAFT achieves competitive performance compared to more complex RL methods such as iterative DPO and deep RL-based approaches",
+   "ids": [
+    "2504.11343"
+   ],
+   "evidence": [
+    "E25"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RAFT++ achieves 56.1% average accuracy, remarkably close to GRPO's 56.3% best model performance",
+   "ids": [
+    "2504.11343"
+   ],
+   "evidence": [
+    "E26"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRPO's main advantage comes from discarding entirely correct/incorrect prompts rather than from its reward normalization mechanism",
+   "ids": [
+    "2504.11343"
+   ],
+   "evidence": [
+    "E27"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Negative samples play a crucial role in maintaining exploration and preventing distributional collapse during training",
+   "ids": [
+    "2504.11343"
+   ],
+   "evidence": [
+    "E28"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: RAFT++ exhibits faster early-stage learning but is eventually surpassed by GRPO in later training stages due to reduced exploration from low-entropy policies; the utility of negative samples is more nuanced than previously assumed.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the research community reproduce state-of-the-art reasoning LLM results when key technical details are concealed, and what techniques make large-scale LLM RL successful?",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Decoupled Clip and Dynamic sAmpling Policy Optimization (DAPO) with four key techniques, built on the verl framework.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They trained Qwen2.5-32B base model on mathematical tasks and achieved 50 points on AIME 2024, fully open-sourcing the code and dataset.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DAPO successfully trains Qwen-32B Base model achieving performance superior to DeepSeek's experiments on Qwen2.5-32B using the R1 approach",
+   "ids": [
+    "2503.14476"
+   ],
+   "evidence": [
+    "E32"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DAPO achieves 50% accuracy on AIME 2024 with only 50% of training steps required by DeepSeek-R1-Zero-Qwen-32B",
+   "ids": [
+    "2503.14476"
+   ],
+   "evidence": [
+    "E33"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Each DAPO training technique contributes several accuracy points to overall performance improvement",
+   "ids": [
+    "2503.14476"
+   ],
+   "evidence": [
+    "E34"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL training leads to emergence of reflective behavior and backtracking in the model as training progresses",
+   "ids": [
+    "2503.14476"
+   ],
+   "evidence": [
+    "E35"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The authors note that RL training is intrinsically complex with interdependent subsystems, where even minor changes in initial conditions can amplify through iterative processes yielding substantial deviations; monitoring key intermediate results is essential.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How to develop a stable and efficient reinforcement learning algorithm for training large language models, particularly for Mixture-of-Experts models?",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: GSPO defines importance ratios based on sequence likelihood rather than token-level ratios, and performs sequence-level clipping, rewarding, and optimization.",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GSPO achieves superior training efficiency over GRPO",
+   "ids": [
+    "2507.18071"
+   ],
+   "evidence": [
+    "E1"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GSPO uses sequence-level clipping rather than token-level clipping",
+   "ids": [
+    "2507.18071"
+   ],
+   "evidence": [
+    "E2"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GSPO eliminates the need for Routing Replay in MoE training",
+   "ids": [
+    "2507.18071"
+   ],
+   "evidence": [
+    "E12"
+   ]
+  }
+ ]
+}
