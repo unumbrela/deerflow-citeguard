@@ -79,7 +79,7 @@ It scores each shortlisted paper for how central it is to the topic, selects `ma
 
 **You MUST delegate extraction to subagents via the `task` tool.** Do not extract metadata yourself, and do not call `read_paper` yourself: it is for the subagents, and the citation gate replaces its result with a reminder to delegate.
 
-**Pass batch numbers, not paper text.** Re-typing abstracts into a prompt is exactly where invented papers come from. Dispatch one subagent per batch listed in the screen result, using this prompt (only the batch number changes):
+**Pass batch numbers, not paper text.** Re-typing abstracts into a prompt is exactly where invented papers come from. Dispatch one subagent per batch listed in the screen result, with `subagent_type: "paper-reader"` and this prompt (only the batch number changes). `paper-reader` can only fetch its batch, read those papers and record quotes; it cannot search or write files. If `task` says that subagent type does not exist, tell the user the deployment is missing its extraction subagent and stop: do not fall back to `general-purpose`.
 
 ```
 Execute this task: read arXiv papers and extract findings with checked quotes.
@@ -126,6 +126,8 @@ parses your answer as JSON.
 **Concurrency limit: at most 3 subagents per turn.** The runtime silently drops extra dispatches. Dispatch batches 1-3, wait for them to finish, then dispatch the next up to 3, and so on until every batch is covered.
 
 **Parsing results**: `task` returns strings prefixed with `Task Succeeded. Result: ` (or `Task failed.` / `Task timed out.`). Strip the prefix before parsing. If a batch fails, note which papers are affected and continue; you may re-dispatch that single batch once.
+
+**Capped results are incomplete.** `Task Succeeded (capped: token budget)` (or turn budget, repeated tool-call loop) means the subagent was stopped before it finished. Treat every paper of that batch that has no `key_findings` with evidence ids as **not extracted**: do not re-dispatch it, do not fill it in yourself, and list those papers in the report's methodology section as "full-text extraction incomplete (subagent stopped by its budget)". Describe them only from their title and abstract, without evidence markers.
 
 After all rounds, flatten the arrays into one list, preserving order. Do not set `acceptance_criteria` on these tasks: the subagent's answer is the JSON itself, and asking for a file makes it write one that you then have to read back.
 

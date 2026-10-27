@@ -63,6 +63,15 @@ def usage_over_stream(seen: dict[str, dict]) -> dict[str, int]:
     return sum_usage(list(seen.values()))
 
 
+def subagents_config_digest() -> str | None:
+    """sha256 of the tracked subagent definition merged into config.yaml (scripts/apply_subagents.py), or None."""
+    config = Path(__file__).resolve().parent.parent / "deer-flow" / "config.yaml"
+    for line in config.read_text(encoding="utf-8").splitlines() if config.exists() else []:
+        if line.startswith("# BEGIN citeguard subagents sha256="):
+            return line.split("sha256=", 1)[1].split()[0]
+    return None
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--prompt", required=True)
@@ -138,6 +147,7 @@ def main() -> None:
         "usage_attributed_total": sum_usage(messages),  # final state only: undercounts once the context is summarized
         "usage_events_total": usage_over_stream(seen_ai),  # every AI message in the stream, subagents included
         "artifacts": (last_values or {}).get("artifacts"),
+        "subagents_config_sha256": subagents_config_digest(),
         "error": error,
     }
     (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1))
