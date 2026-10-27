@@ -1,0 +1,1213 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO defines the importance ratio based on sequence likelihood unlike previous token-level approaches.",
+   "usage": {
+    "prompt_tokens": 658,
+    "completion_tokens": 32,
+    "total_tokens": 690,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 658
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO performs sequence-level clipping, rewarding, and optimization, and achieves superior training efficiency and performance compared to GRPO.",
+   "usage": {
+    "prompt_tokens": 652,
+    "completion_tokens": 40,
+    "total_tokens": 692,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 652
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO stabilizes Mixture-of-Experts (MoE) RL training and contributed to improvements in the latest Qwen3 models.",
+   "usage": {
+    "prompt_tokens": 657,
+    "completion_tokens": 43,
+    "total_tokens": 700,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 657
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO notably stabilizes Mixture-of-Experts (MoE) RL training.",
+   "usage": {
+    "prompt_tokens": 636,
+    "completion_tokens": 33,
+    "total_tokens": 669,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 636
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GSPO achieves superior performance compared to the GRPO algorithm.",
+   "usage": {
+    "prompt_tokens": 636,
+    "completion_tokens": 28,
+    "total_tokens": 664,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 636
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2507.18071",
+   "label": "supported",
+   "reason": "The abstract confirms GSPO replaces token-level importance ratios with sequence-level optimization and explicitly states it achieves superior performance compared to GRPO.",
+   "usage": {
+    "prompt_tokens": 652,
+    "completion_tokens": 37,
+    "total_tokens": 689,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 652
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper proposes a different view challenging the prevailing assumption that large group sizes are necessary for GRPO's efficacy.",
+   "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 37,
+    "total_tokens": 794,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 757
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper proposes GRPO's efficacy stems from its implicit contrastive objective, making it structurally related to DPO.",
+   "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 40,
+    "total_tokens": 805,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 765
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states that 2-GRPO uses two rollouts and retains 97.6% of 16-GRPO's performance while requiring 12.5% of rollouts and 21% of training time.",
+   "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 62,
+    "total_tokens": 853,
+    "completion_tokens_details": {
+     "text_tokens": 62
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 791
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper provides a rigorous theoretical analysis showing GRPO's efficacy stems from an implicit contrastive objective.",
+   "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 35,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 746
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces '2-GRPO' as a 'minimal group-size variant' of the GRPO algorithm.",
+   "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 35,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 746
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method retains 97.6% of performance while requiring only 12.5% of rollouts and 21% of training time, directly supporting the claim of significant efficiency improvements with maintained performance.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 61,
+    "total_tokens": 803,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract confirms the paper provides theoretical analysis of GRPO's mechanisms and demonstrates that a minimal group size (two rollouts) is effective, rendering large groups unnecessary.",
+   "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 44,
+    "total_tokens": 798,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 754
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work revisits GRPO from a reinforce-like perspective and finds that the RAFT rejection sampling baseline yields competitive performance.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 40,
+    "total_tokens": 832,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GRPO's main advantage arises from discarding prompts with entirely incorrect responses rather than from its reward normalization.",
+   "usage": {
+    "prompt_tokens": 783,
+    "completion_tokens": 37,
+    "total_tokens": 820,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 783
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors propose Reinforce-Rej, which filters both entirely incorrect and entirely correct samples to improve KL efficiency and stability.",
+   "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 40,
+    "total_tokens": 826,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 786
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work analyzes GRPO to understand the sources of its effectiveness.",
+   "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 29,
+    "total_tokens": 800,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 771
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly advocates RAFT as a robust and interpretable baseline.",
+   "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 25,
+    "total_tokens": 794,
+    "completion_tokens_details": {
+     "text_tokens": 25
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 769
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly describes Reinforce-Rej as a 'lightweight yet effective alternative' to complex RL algorithms.",
+   "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 33,
+    "total_tokens": 804,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 771
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract explicitly questions GRPO's complexity by showing a simpler baseline is competitive and advocates for RAFT as a robust, interpretable approach.",
+   "usage": {
+    "prompt_tokens": 781,
+    "completion_tokens": 39,
+    "total_tokens": 820,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 781
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MGRPO addresses inefficient exploration dynamics in GRPO by operating in two layers.",
+   "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 32,
+    "total_tokens": 785,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 753
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the two-layer mechanism where the first layer generates an initial response and the second layer identifies and corrects errors to create a self-correction loop.",
+   "usage": {
+    "prompt_tokens": 759,
+    "completion_tokens": 44,
+    "total_tokens": 803,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 759
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method provides implicit process-level supervision without requiring densely-annotated reward models and significantly outperforms standard GRPO on mathematical reasoning benchmarks.",
+   "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 44,
+    "total_tokens": 806,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 762
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly states that MGRPO achieves superior performance on mathematical reasoning benchmarks compared to standard GRPO.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 32,
+    "total_tokens": 772,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed MGRPO method extends GRPO to create a self-correction loop that addresses the issue where a single error invalidates the entire solution.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 46,
+    "total_tokens": 804,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2509.16117",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DiffusionNFT is a new online RL paradigm that optimizes diffusion models directly on the forward process via flow matching, addressing limitations of prior GRPO-style approaches.",
+   "usage": {
+    "prompt_tokens": 810,
+    "completion_tokens": 49,
+    "total_tokens": 859,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 810
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2509.16117",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DiffusionNFT contrasts positive and negative generations to incorporate reinforcement signals into the supervised learning objective.",
+   "usage": {
+    "prompt_tokens": 801,
+    "completion_tokens": 35,
+    "total_tokens": 836,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 801
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2509.16117",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms all three claims: 25x efficiency over FlowGRPO, elimination of likelihood estimation needs, and compatibility with arbitrary black-box solvers.",
+   "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 44,
+    "total_tokens": 857,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 813
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2509.16117",
+   "label": "supported",
+   "reason": "The abstract explicitly discusses extending GRPO-style training principles to diffusion models and introduces a new method that addresses the drawbacks of such extensions.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 37,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2509.16117",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DiffusionNFT optimizes diffusion models directly on the forward process via flow matching.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 33,
+    "total_tokens": 823,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2509.16117",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DiffusionNFT is up to 25x more efficient than FlowGRPO.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 34,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2509.16117",
+   "label": "contradicted",
+   "reason": "The abstract explicitly states that DiffusionNFT eliminates the need for GRPO-style training and its drawbacks, whereas the sentence claims the paper demonstrates GRPO's applicability.",
+   "usage": {
+    "prompt_tokens": 806,
+    "completion_tokens": 47,
+    "total_tokens": 853,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 806
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO replaces hard clipping with a smooth, temperature-controlled gate to adaptively attenuate off-policy updates while preserving useful learning signals.",
+   "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 42,
+    "total_tokens": 905,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 863
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that while GSPO suppresses all gradients for sequences with off-policy tokens, SAPO selectively down-weights only the offending tokens.",
+   "usage": {
+    "prompt_tokens": 866,
+    "completion_tokens": 41,
+    "total_tokens": 907,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 866
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO replaces hard token-level clipping with smooth, temperature-controlled scaling to enable more informative and stable updates compared to GRPO.",
+   "usage": {
+    "prompt_tokens": 861,
+    "completion_tokens": 41,
+    "total_tokens": 902,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 861
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO replaces hard clipping with a smooth, temperature-controlled gate (soft gating).",
+   "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 32,
+    "total_tokens": 876,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 844
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO is both sequence-coherent and token-adaptive.",
+   "usage": {
+    "prompt_tokens": 845,
+    "completion_tokens": 28,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 845
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO exhibits improved training stability and higher Pass@1 performance on mathematical reasoning benchmarks.",
+   "usage": {
+    "prompt_tokens": 846,
+    "completion_tokens": 33,
+    "total_tokens": 879,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 846
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract explicitly states that SAPO replaces hard clipping with smooth, temperature-controlled scaling to enable more stable updates compared to GRPO.",
+   "usage": {
+    "prompt_tokens": 855,
+    "completion_tokens": 37,
+    "total_tokens": 892,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 855
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the algorithm name (Decoupled Clip and Dynamic Sampling Policy Optimization), the performance metric (50 points on AIME 2024), and the base model used (Qwen2.5-32B).",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 61,
+    "total_tokens": 857,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the open-sourcing of a state-of-the-art RL system with four key techniques, training code built on the verl framework, and curated datasets to address reproducibility.",
+   "usage": {
+    "prompt_tokens": 799,
+    "completion_tokens": 48,
+    "total_tokens": 847,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 799
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces the 'Decoupled Clip and Dynamic Sampling Policy Optimization (DAPO)' algorithm, confirming the paper utilizes these techniques.",
+   "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 39,
+    "total_tokens": 804,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 765
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the open-sourced system components enhance reproducibility and reports a specific score on a reasoning benchmark (AIME 2024).",
+   "usage": {
+    "prompt_tokens": 764,
+    "completion_tokens": 43,
+    "total_tokens": 807,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 764
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract confirms the paper provides an open-source RL system and introduces four key techniques, which aligns with the sentence's claim of providing infrastructure and techniques.",
+   "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 42,
+    "total_tokens": 816,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 774
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2504.14945",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LUFFY addresses the on-policy limitation of existing RLVR approaches by augmenting them with off-policy reasoning traces.",
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 39,
+    "total_tokens": 881,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 842
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2504.14945",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LUFFY combines the Mixed-Policy GRPO framework with a theoretically guaranteed convergence rate and policy shaping via regularized importance sampling.",
+   "usage": {
+    "prompt_tokens": 840,
+    "completion_tokens": 42,
+    "total_tokens": 882,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 840
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2504.14945",
+   "label": "supported",
+   "reason": "The abstract explicitly states both the +6.4 average gain across six math benchmarks and the successful training of weak models in scenarios where on-policy RLVR fails.",
+   "usage": {
+    "prompt_tokens": 846,
+    "completion_tokens": 43,
+    "total_tokens": 889,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 846
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2504.14945",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed LUFFY framework combines off-policy demonstrations with the Mixed-Policy GRPO framework.",
+   "usage": {
+    "prompt_tokens": 826,
+    "completion_tokens": 35,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 826
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2504.14945",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves an average gain of over +6.4 across six math benchmarks.",
+   "usage": {
+    "prompt_tokens": 824,
+    "completion_tokens": 33,
+    "total_tokens": 857,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 824
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2504.14945",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the LUFFY framework augments RLVR (using Mixed-Policy GRPO) with off-policy demonstrations to transcend the fundamental limitations of on-policy approaches.",
+   "usage": {
+    "prompt_tokens": 836,
+    "completion_tokens": 47,
+    "total_tokens": 883,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 836
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that vanilla PPO with GAE (λ=1, γ=1) and rule-based rewards without KL regularization is sufficient to scale up performance and replicate the DeepSeek-R1-Zero scaling phenomenon.",
+   "usage": {
+    "prompt_tokens": 838,
+    "completion_tokens": 56,
+    "total_tokens": 894,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 838
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract explicitly states the approach achieves superior performance on AIME2024, MATH500, and GPQA Diamond while requiring only 1/10 of the training steps compared to DeepSeek-R1-Zero.",
+   "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 59,
+    "total_tokens": 891,
+    "completion_tokens_details": {
+     "text_tokens": 59
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 832
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract confirms that a minimalist RL approach (vanilla PPO with rule-based rewards) achieves superior performance comparable to or better than the state-of-the-art DeepSeek-R1-Zero.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 49,
+    "total_tokens": 849,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method requires only 1/10 of the training steps compared to DeepSeek-R1-Zero, which directly supports the claim of a 10x efficiency improvement.",
+   "usage": {
+    "prompt_tokens": 804,
+    "completion_tokens": 51,
+    "total_tokens": 855,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 804
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract confirms the paper demonstrates that a minimalist approach (vanilla PPO) is sufficient to achieve superior performance, supporting the claim that simpler approaches can yield comparable or better results than complex methods.",
+   "usage": {
+    "prompt_tokens": 810,
+    "completion_tokens": 53,
+    "total_tokens": 863,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 810
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2503.14286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that TOPR uses an asymmetric, tapered variant of importance sampling to maintain stable learning dynamics without KL regularization.",
+   "usage": {
+    "prompt_tokens": 798,
+    "completion_tokens": 36,
+    "total_tokens": 834,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 798
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2503.14286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that TOPR handles positive and negative examples in a unified framework and benefits from the implementational simplicity typical of Monte Carlo algorithms.",
+   "usage": {
+    "prompt_tokens": 799,
+    "completion_tokens": 40,
+    "total_tokens": 839,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 799
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2503.14286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that leveraging positive and negative examples in the off-policy regime enables matching 70B-parameter model performance with 8B models.",
+   "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 41,
+    "total_tokens": 856,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 815
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2503.14286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed algorithm uses an asymmetric, tapered variant of importance sampling to maintain stable learning dynamics.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 34,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2503.14286",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method enables matching 70B-parameter model performance with 8B language models.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 34,
+    "total_tokens": 824,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2503.14286",
+   "label": "partial",
+   "reason": "The abstract confirms the use of off-policy REINFORCE with tapered sampling but does not mention GRPO or claim to be an alternative approach to it.",
+   "usage": {
+    "prompt_tokens": 804,
+    "completion_tokens": 44,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 804
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper challenges the necessity of large group sizes and attributes GRPO's efficacy to its implicit contrastive objective rather than statistical accuracy.",
+   "usage": {
+    "prompt_tokens": 781,
+    "completion_tokens": 48,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 781
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2504.11343",
+   "label": "supported",
+   "reason": "The abstract confirms that a simple rejection sampling baseline (RAFT) yields competitive performance compared to GRPO and PPO, aligning with the sentence's claim about simpler approaches achieving competitive results.",
+   "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 51,
+    "total_tokens": 868,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 817
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract confirms the paper demonstrates that a minimalist approach using vanilla PPO achieves superior performance, supporting the claim about simpler methods yielding competitive or superior results.",
+   "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 41,
+    "total_tokens": 885,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 844
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2511.20347",
+   "label": "supported",
+   "reason": "The abstract confirms SAPO replaces hard clipping with a smooth, temperature-controlled gate (adaptive scaling) to enable more stable updates.",
+   "usage": {
+    "prompt_tokens": 879,
+    "completion_tokens": 36,
+    "total_tokens": 915,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 879
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2510.00977",
+   "label": "supported",
+   "reason": "The abstract confirms that a minimal group size (specifically two rollouts) is sufficient for GRPO to retain high performance, directly supporting the claim attributed to this paper.",
+   "usage": {
+    "prompt_tokens": 788,
+    "completion_tokens": 45,
+    "total_tokens": 833,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 788
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2506.04746",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a multi-layer architecture with self-correction that addresses inefficient exploration, thereby supporting the claim of improved sample efficiency.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 39,
+    "total_tokens": 826,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2504.14945",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces an off-policy framework (LUFFY) extending GRPO to address fundamental limitations of on-policy training.",
+   "usage": {
+    "prompt_tokens": 873,
+    "completion_tokens": 38,
+    "total_tokens": 911,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 873
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2503.14286",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes an off-policy REINFORCE algorithm that handles positive and negative examples to address limitations like wasted inference, aligning with the sentence's claim of extending approaches to incorporate off-policy data.",
+   "usage": {
+    "prompt_tokens": 837,
+    "completion_tokens": 56,
+    "total_tokens": 893,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 837
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2503.14476",
+   "label": "supported",
+   "reason": "The abstract confirms the paper provides an open-source large-scale RL system and dataset specifically to address reproducibility challenges.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 37,
+    "total_tokens": 837,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2503.24290",
+   "label": "supported",
+   "reason": "The abstract confirms the paper is an open-source implementation designed to foster reproducibility in large-scale RL training.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 32,
+    "total_tokens": 866,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  }
+ ]
+}

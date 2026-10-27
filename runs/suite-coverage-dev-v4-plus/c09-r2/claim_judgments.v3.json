@@ -1,0 +1,244 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v3",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2312.04265",
+   "label": "supported",
+   "reason": "The abstract and full text explicitly state that the proposed method (Rein) surpasses full parameter fine-tuning with merely an extra 1% of trainable parameters.",
+   "usage": {
+    "prompt_tokens": 1389,
+    "completion_tokens": 47,
+    "total_tokens": 1436,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1389
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2407.18568",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper proposes decomposing VFM features into phase and amplitude in frequency space to separate content and style information.",
+   "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 44,
+    "total_tokens": 1282,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1238
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper proposes a Mamba-based framework (MFuser) to fuse VFMs and VLMs with linear scalability.",
+   "usage": {
+    "prompt_tokens": 1554,
+    "completion_tokens": 40,
+    "total_tokens": 1594,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1554
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2311.17922",
+   "label": "supported",
+   "reason": "The paper explicitly proposes a framework using language-driven prompts to perform style randomization and augmentation during training.",
+   "usage": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 31,
+    "total_tokens": 1035,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1004
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2407.09033",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper employs text embeddings as textual object queries to serve as a domain-invariant basis for segmentation.",
+   "usage": {
+    "prompt_tokens": 1263,
+    "completion_tokens": 38,
+    "total_tokens": 1301,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1263
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2504.03193",
+   "label": "supported",
+   "reason": "The paper explicitly proposes MFuser, a framework designed to fuse Vision Foundation Models (VFMs) and Vision-Language Models (VLMs).",
+   "usage": {
+    "prompt_tokens": 1332,
+    "completion_tokens": 39,
+    "total_tokens": 1371,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1332
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2412.12050",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper uses domain difference text embeddings to controllably guide style transformation.",
+   "usage": {
+    "prompt_tokens": 1451,
+    "completion_tokens": 32,
+    "total_tokens": 1483,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1451
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2312.01850",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper employs a diffusion model to generate a pseudo-target domain with diverse text prompts, allowing control over style and content.",
+   "usage": {
+    "prompt_tokens": 1751,
+    "completion_tokens": 40,
+    "total_tokens": 1791,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1751
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2312.03048",
+   "label": "supported",
+   "reason": "The paper explicitly proposes DGInStyle, a pipeline using latent diffusion models (LDMs) with semantic control to generate a diverse dataset of street scenes for training.",
+   "usage": {
+    "prompt_tokens": 1464,
+    "completion_tokens": 44,
+    "total_tokens": 1508,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1464
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2407.18568",
+   "label": "supported",
+   "reason": "The paper's abstract and passages explicitly describe using spectral decomposition via Fast Fourier Transform to separate features into frequency components (phase and amplitude).",
+   "usage": {
+    "prompt_tokens": 1056,
+    "completion_tokens": 37,
+    "total_tokens": 1093,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1056
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2403.06122",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper proposes and employs a method called 'covariance alignment'.",
+   "usage": {
+    "prompt_tokens": 1057,
+    "completion_tokens": 32,
+    "total_tokens": 1089,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1057
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2412.12050",
+   "label": "supported",
+   "reason": "The paper explicitly describes a 'Text-Driven Style Transform' module and a framework designed for 'Semantic Consistency', confirming the sentence's attribution.",
+   "usage": {
+    "prompt_tokens": 1370,
+    "completion_tokens": 40,
+    "total_tokens": 1410,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1370
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2312.09788",
+   "label": "partial",
+   "reason": "The evidence confirms the paper combines CLIP, generative models, and SAM for superior performance, but it does not mention DINOv2 as part of the proposed method.",
+   "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 49,
+    "total_tokens": 1611,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1562
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2504.03193",
+   "label": "partial",
+   "reason": "The evidence supports the claim that combining VFMs and VLMs is effective, but it does not mention combining generative models or explicitly state that this multi-model approach yields superior performance compared to single-model approaches.",
+   "usage": {
+    "prompt_tokens": 1473,
+    "completion_tokens": 53,
+    "total_tokens": 1526,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1473
+    }
+   }
+  }
+ ]
+}

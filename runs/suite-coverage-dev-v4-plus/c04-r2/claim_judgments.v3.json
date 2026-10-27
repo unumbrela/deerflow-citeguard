@@ -1,0 +1,1740 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v3",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The evidence confirms the paper investigates mid-training for RL scaling, but the claim comparing it to other papers using implicit strategies is a reviewer synthesis not found in the provided text.",
+   "usage": {
+    "prompt_tokens": 1515,
+    "completion_tokens": 49,
+    "total_tokens": 1564,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1515
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and passages confirm MATES adapts to evolving data preferences and explicitly state it doubles the gains of state-of-the-art methods.",
+   "usage": {
+    "prompt_tokens": 1150,
+    "completion_tokens": 38,
+    "total_tokens": 1188,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1150
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The evidence confirms the model size, token count, dataset names, and performance against other small models, but it does not support the claim that SmolLM2 outperforms larger models.",
+   "usage": {
+    "prompt_tokens": 1475,
+    "completion_tokens": 49,
+    "total_tokens": 1524,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1475
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the use of 96 Common Crawl snapshots, the application of deduplication and filtering strategies, the creation of FineWeb-Edu with 1.3 trillion tokens, and the resulting performance improvements on MMLU and ARC benchmarks.",
+   "usage": {
+    "prompt_tokens": 1429,
+    "completion_tokens": 71,
+    "total_tokens": 1500,
+    "completion_tokens_details": {
+     "text_tokens": 71
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1429
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the 51.7% MATH score, the use of 120B math tokens for continued pre-training, and the claim that performance approaches Gemini-Ultra and GPT-4.",
+   "usage": {
+    "prompt_tokens": 1441,
+    "completion_tokens": 57,
+    "total_tokens": 1498,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1441
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that high-quality mathematical corpora like MegaMath-Web-Pro significantly improve both base model and RL performance, confirming the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 1618,
+    "completion_tokens": 44,
+    "total_tokens": 1662,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1618
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2412.15115",
+   "label": "partial",
+   "reason": "The evidence confirms the token scaling, reinforcement learning, and competitiveness with Llama-3-405B, but explicitly states the model is 'around 5 times larger' (implying Qwen is 1/5th the size) or 'six times smaller', whereas the sentence claims it is 'five times smaller', which is a numerical di",
+   "usage": {
+    "prompt_tokens": 1472,
+    "completion_tokens": 85,
+    "total_tokens": 1557,
+    "completion_tokens_details": {
+     "text_tokens": 85
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1472
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract and passages confirm LLaMAX uses multilingual continual pre-training with vocabulary expansion and data augmentation to support over 100 languages and achieves performance on-par with M2M-100-12B.",
+   "usage": {
+    "prompt_tokens": 1448,
+    "completion_tokens": 63,
+    "total_tokens": 1511,
+    "completion_tokens_details": {
+     "text_tokens": 63
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1448
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper uses continued pretraining on multilingual monolingual and parallel data, followed by instruction fine-tuning, to create models that surpass open alternatives on translation tasks.",
+   "usage": {
+    "prompt_tokens": 1070,
+    "completion_tokens": 53,
+    "total_tokens": 1123,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1070
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2312.02120",
+   "label": "partial",
+   "reason": "The evidence supports the method, data volume, and goal, but the sentence incorrectly attributes the paper to 'Wei et al., 2023' instead of the actual authors.",
+   "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 51,
+    "total_tokens": 1614,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1563
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the two-stage 'Stable-then-Decay' strategy, the training of 200B tokens with a constant learning rate in the first stage, and the subsequent 20B tokens across three CoT-focused branches with learning rate decay.",
+   "usage": {
+    "prompt_tokens": 1725,
+    "completion_tokens": 74,
+    "total_tokens": 1799,
+    "completion_tokens_details": {
+     "text_tokens": 74
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1725
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm that Qwen2.5 uses supervised fine-tuning with over 1 million samples and implements multistage (two-stage) reinforcement learning.",
+   "usage": {
+    "prompt_tokens": 1440,
+    "completion_tokens": 51,
+    "total_tokens": 1491,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1440
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm that the authors performed small-scale ablations and used a manual refinement process to update dataset mixing rates at each training stage.",
+   "usage": {
+    "prompt_tokens": 1249,
+    "completion_tokens": 46,
+    "total_tokens": 1295,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1249
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm Qwen3 integrates thinking and non-thinking modes into a unified framework with a thinking budget mechanism for adaptive resource allocation.",
+   "usage": {
+    "prompt_tokens": 1351,
+    "completion_tokens": 40,
+    "total_tokens": 1391,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1351
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2406.06046",
+   "label": "partial",
+   "reason": "The evidence supports that the method doubles gains compared to other data selection approaches, but it does not support the claim that these gains are achieved by 'larger models' as stated in the sentence.",
+   "usage": {
+    "prompt_tokens": 1428,
+    "completion_tokens": 53,
+    "total_tokens": 1481,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1428
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2402.03300",
+   "label": "partial",
+   "reason": "The evidence supports that targeted math training improves reasoning, but it does not support the claim that this responsiveness is 'universal' across all contexts or languages.",
+   "usage": {
+    "prompt_tokens": 1083,
+    "completion_tokens": 44,
+    "total_tokens": 1127,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1083
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The evidence supports that high-quality mathematical corpora improve RL performance, but it explicitly notes instability issues with long-CoT data rather than describing the response as universally positive.",
+   "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 47,
+    "total_tokens": 1642,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1595
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2412.15115",
+   "label": "partial",
+   "reason": "The evidence confirms the use of high-quality mathematical data during pre-training to improve reasoning, but it does not support the specific claim that this occurred via a 'targeted mid-training' stage.",
+   "usage": {
+    "prompt_tokens": 1306,
+    "completion_tokens": 55,
+    "total_tokens": 1361,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1306
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2506.20512",
+   "label": "unsupported",
+   "reason": "The paper describes a specific two-stage 'Stable-then-Decay' strategy with fixed datasets and learning rate schedules, not the general concept of 'iterative dataset refinement' attributed to it in the sentence.",
+   "usage": {
+    "prompt_tokens": 1521,
+    "completion_tokens": 56,
+    "total_tokens": 1577,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1521
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2502.02737",
+   "label": "contradicted",
+   "reason": "The evidence states that the smaller models in this work benefited from a single-stage training approach, whereas the sentence claims the paper demonstrates that multi-stage training consistently outperforms single-stage approaches.",
+   "usage": {
+    "prompt_tokens": 1350,
+    "completion_tokens": 53,
+    "total_tokens": 1403,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1350
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2502.02737",
+   "label": "partial",
+   "reason": "The evidence supports that specialized data and multi-stage training enable small models to outperform other small models, but it does not state or imply they can compete with 'much larger counterparts' as claimed.",
+   "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 53,
+    "total_tokens": 1612,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1559
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2312.02120",
+   "label": "unsupported",
+   "reason": "The paper attributes the performance of smaller models to a novel data generation method (OSS-Instruct) and instruction tuning, not to 'specialized mid-training' as claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 51,
+    "total_tokens": 1427,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1376
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly describe MATES as a 'model-aware data selection' method that uses a data influence model to automatically adapt to evolving preferences, contrasting with the 'manual intuitions' or 'hand-crafted rules' of earlier approaches mentioned in the text.",
+   "usage": {
+    "prompt_tokens": 1476,
+    "completion_tokens": 70,
+    "total_tokens": 1546,
+    "completion_tokens_details": {
+     "text_tokens": 70
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1476
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and full text explicitly state that the authors used a manual refinement process to update dataset mixing rates at each stage.",
+   "usage": {
+    "prompt_tokens": 1339,
+    "completion_tokens": 35,
+    "total_tokens": 1374,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1339
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that long chain-of-thought (CoT) data can induce verbosity and instability in RL training, which directly supports the sentence's attribution to this paper.",
+   "usage": {
+    "prompt_tokens": 1428,
+    "completion_tokens": 51,
+    "total_tokens": 1479,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1428
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.20512",
+   "label": "partial",
+   "reason": "The evidence confirms the paper investigates what makes base models suitable for RL, but the claim that generalization across downstream tasks remains underexplored is the reviewer's inference rather than a statement found in the provided text.",
+   "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 56,
+    "total_tokens": 1500,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1444
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The paper explicitly proposes a recipe for tailoring LLMs to multiple translation-related tasks rather than specializing on a single task.",
+   "usage": {
+    "prompt_tokens": 1236,
+    "completion_tokens": 42,
+    "total_tokens": 1278,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1236
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the two-step methodology of continued pretraining on multilingual monolingual and parallel data to create TowerBase, followed by instruction finetuning to create TowerInstruct.",
+   "usage": {
+    "prompt_tokens": 1256,
+    "completion_tokens": 56,
+    "total_tokens": 1312,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1256
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the final model surpasses open alternatives on several tasks relevant to translation workflows.",
+   "usage": {
+    "prompt_tokens": 1076,
+    "completion_tokens": 31,
+    "total_tokens": 1107,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1076
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the final model (Tower) is competitive with general-purpose closed LLMs.",
+   "usage": {
+    "prompt_tokens": 1220,
+    "completion_tokens": 32,
+    "total_tokens": 1252,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1220
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2402.17733",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the release of the Tower models, the specialization dataset (TowerBlocks), the evaluation framework (TowerEval), and a collection of model generations.",
+   "usage": {
+    "prompt_tokens": 1203,
+    "completion_tokens": 45,
+    "total_tokens": 1248,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1203
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2402.17733",
+   "label": "contradicted",
+   "reason": "The paper's abstract and text state that open LLM approaches are currently competitive only when specializing on a single task, whereas the sentence claims they are competitive when specialized for multiple tasks.",
+   "usage": {
+    "prompt_tokens": 1226,
+    "completion_tokens": 52,
+    "total_tokens": 1278,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1226
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and passages confirm SmolLM2 is a 1.7B parameter model that achieves state-of-the-art performance through data-centric training involving specialized datasets and multi-stage processes.",
+   "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 48,
+    "total_tokens": 1407,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1359
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm that SmolLM2 was overtrained on ~11 trillion tokens using a multi-stage process mixing web text with specialized math, code, and instruction-following data.",
+   "usage": {
+    "prompt_tokens": 1570,
+    "completion_tokens": 53,
+    "total_tokens": 1623,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1570
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the creation of FineMath, Stack-Edu, and SmolTalk, as well as the use of small-scale ablations and manual refinement of dataset mixing rates.",
+   "usage": {
+    "prompt_tokens": 1572,
+    "completion_tokens": 58,
+    "total_tokens": 1630,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1572
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that SmolLM2 outperforms Qwen2.5-1.5B and Llama3.2-1B on various benchmarks.",
+   "usage": {
+    "prompt_tokens": 1454,
+    "completion_tokens": 50,
+    "total_tokens": 1504,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1454
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that SmolLM2 achieves strong performance through a multi-stage training process incorporating specialized datasets.",
+   "usage": {
+    "prompt_tokens": 1345,
+    "completion_tokens": 35,
+    "total_tokens": 1380,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1345
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and full text explicitly state that the authors used a manual refinement process to update dataset mixing rates based on performance at previous stages to inform design decisions.",
+   "usage": {
+    "prompt_tokens": 1194,
+    "completion_tokens": 42,
+    "total_tokens": 1236,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1194
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2502.02737",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the authors release both the SmolLM2 model and all prepared datasets to facilitate future research.",
+   "usage": {
+    "prompt_tokens": 1201,
+    "completion_tokens": 37,
+    "total_tokens": 1238,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1201
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper develops LLaMAX to enhance translation capabilities across more than 100 languages, specifically addressing low-resource language limitations.",
+   "usage": {
+    "prompt_tokens": 1140,
+    "completion_tokens": 42,
+    "total_tokens": 1182,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1140
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the use of multilingual continual pre-training on LLaMA models with vocabulary expansion and data augmentation to support over 100 languages.",
+   "usage": {
+    "prompt_tokens": 1102,
+    "completion_tokens": 45,
+    "total_tokens": 1147,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1102
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that LLaMAX achieves significantly higher translation performance than existing open-source LLMs by more than 10 spBLEU points.",
+   "usage": {
+    "prompt_tokens": 1393,
+    "completion_tokens": 46,
+    "total_tokens": 1439,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1393
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that LLaMAX performs on-par with the specialized translation model M2M-100-12B on the Flores-101 benchmark.",
+   "usage": {
+    "prompt_tokens": 1278,
+    "completion_tokens": 51,
+    "total_tokens": 1329,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1278
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract explicitly states that LLaMAX achieves significantly higher translation performance without sacrificing its generalization ability.",
+   "usage": {
+    "prompt_tokens": 1232,
+    "completion_tokens": 37,
+    "total_tokens": 1269,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1232
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that LLaMAX can serve as a robust multilingual foundation model.",
+   "usage": {
+    "prompt_tokens": 1326,
+    "completion_tokens": 31,
+    "total_tokens": 1357,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1326
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2407.05975",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the code and models are publicly available.",
+   "usage": {
+    "prompt_tokens": 1012,
+    "completion_tokens": 24,
+    "total_tokens": 1036,
+    "completion_tokens_details": {
+     "text_tokens": 24
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1012
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The paper's abstract and introduction explicitly state that the work focuses on curating high-quality pretraining datasets from web data to improve LLM performance, directly matching the sentence's description.",
+   "usage": {
+    "prompt_tokens": 1500,
+    "completion_tokens": 53,
+    "total_tokens": 1553,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1500
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the introduction of FineWeb as a 15-trillion token dataset from 96 Common Crawl snapshots and state that the authors document design choices including deduplication and filtering strategies.",
+   "usage": {
+    "prompt_tokens": 1387,
+    "completion_tokens": 55,
+    "total_tokens": 1442,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1387
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the introduction of FineWeb-Edu (1.3-trillion tokens), the filtering from FineWeb, and the public release of the curation codebase and trained models.",
+   "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 57,
+    "total_tokens": 1482,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1425
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The abstract explicitly states that FineWeb produces better-performing LLMs than other open pretraining datasets.",
+   "usage": {
+    "prompt_tokens": 1347,
+    "completion_tokens": 32,
+    "total_tokens": 1379,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1347
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that models pretrained on FineWeb-Edu exhibit dramatically better performance on MMLU and ARC benchmarks.",
+   "usage": {
+    "prompt_tokens": 1381,
+    "completion_tokens": 39,
+    "total_tokens": 1420,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1381
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the work advances understanding through careful documentation and ablation of design choices like filtering and deduplication.",
+   "usage": {
+    "prompt_tokens": 1212,
+    "completion_tokens": 38,
+    "total_tokens": 1250,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1212
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The paper explicitly states it performed an in-depth exploration of how deduplication strategies and filtering heuristics impact model performance, confirming their significant effect on dataset quality.",
+   "usage": {
+    "prompt_tokens": 1458,
+    "completion_tokens": 44,
+    "total_tokens": 1502,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1458
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2406.17557",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the datasets, curation codebase, and trained models are publicly released.",
+   "usage": {
+    "prompt_tokens": 1364,
+    "completion_tokens": 35,
+    "total_tokens": 1399,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1364
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that Qwen2.5 was improved via enhanced pre-training (18T tokens) and post-training techniques to meet diverse needs.",
+   "usage": {
+    "prompt_tokens": 1761,
+    "completion_tokens": 44,
+    "total_tokens": 1805,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1761
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the scaling of pre-training data from 7 to 18 trillion tokens, the use of over 1 million samples for supervised fine-tuning, and the implementation of multistage reinforcement learning.",
+   "usage": {
+    "prompt_tokens": 1440,
+    "completion_tokens": 59,
+    "total_tokens": 1499,
+    "completion_tokens_details": {
+     "text_tokens": 59
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1440
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that Qwen2.5 is a comprehensive series available in various sizes, including base, instruction-tuned, and mixture-of-experts (MoE) variants.",
+   "usage": {
+    "prompt_tokens": 1364,
+    "completion_tokens": 53,
+    "total_tokens": 1417,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1364
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The passages explicitly state that Qwen2.5-72B-Instruct surpasses larger open-weight models and outperforms proprietary models like GPT-4o on several benchmarks.",
+   "usage": {
+    "prompt_tokens": 1600,
+    "completion_tokens": 55,
+    "total_tokens": 1655,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1600
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that Qwen2.5-72B-Instruct demonstrates competitive performance against Llama-3-405B-Instruct while being around 5 times smaller.",
+   "usage": {
+    "prompt_tokens": 1491,
+    "completion_tokens": 55,
+    "total_tokens": 1546,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1491
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that Qwen2.5-Turbo and Qwen2.5-Plus perform competitively against GPT-4o-mini and GPT-4o respectively.",
+   "usage": {
+    "prompt_tokens": 1632,
+    "completion_tokens": 57,
+    "total_tokens": 1689,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1632
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that post-training techniques enhance human preference alignment, long text generation, and instruction following.",
+   "usage": {
+    "prompt_tokens": 1493,
+    "completion_tokens": 36,
+    "total_tokens": 1529,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1493
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2412.15115",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Qwen2.5 models have been instrumental in training specialized models such as Qwen2.5-Math, Qwen2.5-Coder, and QwQ.",
+   "usage": {
+    "prompt_tokens": 1656,
+    "completion_tokens": 52,
+    "total_tokens": 1708,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1656
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The paper explicitly addresses improving mathematical reasoning by introducing a new model trained on math data and a novel optimization method (GRPO).",
+   "usage": {
+    "prompt_tokens": 1381,
+    "completion_tokens": 36,
+    "total_tokens": 1417,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1381
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm that DeepSeekMath 7B is initialized from DeepSeek-Coder-Base-v1.5 7B and trained with 120B math-related tokens from Common Crawl alongside natural language and code data.",
+   "usage": {
+    "prompt_tokens": 1453,
+    "completion_tokens": 64,
+    "total_tokens": 1517,
+    "completion_tokens_details": {
+     "text_tokens": 64
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1453
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the use of a data selection pipeline for web data and the introduction of Group Relative Policy Optimization (GRPO) as a variant of PPO.",
+   "usage": {
+    "prompt_tokens": 1145,
+    "completion_tokens": 49,
+    "total_tokens": 1194,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1145
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DeepSeekMath 7B achieved a score of 51.7% on the MATH benchmark without relying on external toolkits and voting techniques.",
+   "usage": {
+    "prompt_tokens": 1130,
+    "completion_tokens": 47,
+    "total_tokens": 1177,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1130
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DeepSeekMath 7B approaches the performance level of Gemini-Ultra and GPT-4 on the MATH benchmark.",
+   "usage": {
+    "prompt_tokens": 1280,
+    "completion_tokens": 41,
+    "total_tokens": 1321,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1280
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract explicitly states that self-consistency over 64 samples from DeepSeekMath 7B achieves 60.9% on the MATH benchmark.",
+   "usage": {
+    "prompt_tokens": 1264,
+    "completion_tokens": 44,
+    "total_tokens": 1308,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1264
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that GRPO enhances mathematical reasoning abilities while optimizing or reducing memory usage compared to PPO.",
+   "usage": {
+    "prompt_tokens": 1087,
+    "completion_tokens": 35,
+    "total_tokens": 1122,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1087
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2402.03300",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper harnesses publicly available web data through a meticulously engineered data selection pipeline to achieve strong mathematical reasoning performance.",
+   "usage": {
+    "prompt_tokens": 1230,
+    "completion_tokens": 40,
+    "total_tokens": 1270,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1230
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates what makes a base model suitable for RL and how mid-training strategies shape RL dynamics.",
+   "usage": {
+    "prompt_tokens": 1594,
+    "completion_tokens": 38,
+    "total_tokens": 1632,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1594
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper investigates mid-training strategies on Qwen and Llama models, specifically analyzing the impact of mathematical corpora, QA-style data, and long chain-of-thought examples.",
+   "usage": {
+    "prompt_tokens": 1390,
+    "completion_tokens": 57,
+    "total_tokens": 1447,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1390
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the two-stage Stable-then-Decay strategy, the 200B token constant learning rate phase, and the subsequent 20B token decay phase across three CoT branches.",
+   "usage": {
+    "prompt_tokens": 1699,
+    "completion_tokens": 57,
+    "total_tokens": 1756,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1699
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that high-quality mathematical corpora like MegaMath-Web-Pro significantly improve both base model and RL performance.",
+   "usage": {
+    "prompt_tokens": 1575,
+    "completion_tokens": 41,
+    "total_tokens": 1616,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1575
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that adding QA-style data, particularly long chain-of-thought examples, enhances RL outcomes.",
+   "usage": {
+    "prompt_tokens": 1608,
+    "completion_tokens": 38,
+    "total_tokens": 1646,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1608
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract explicitly states that adding QA-style data enhances RL outcomes and that instruction data further unlocks this effect, which is directly corroborated by the passage noting that incorporating instruction-following data unlocks the potential of CoT data.",
+   "usage": {
+    "prompt_tokens": 1217,
+    "completion_tokens": 55,
+    "total_tokens": 1272,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1217
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that long-CoT data can induce verbosity (sharp increases in response length) and instability in RL training, underscoring the importance of data formatting.",
+   "usage": {
+    "prompt_tokens": 1331,
+    "completion_tokens": 49,
+    "total_tokens": 1380,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1331
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and the provided passage [S3.SS5.p1] explicitly state that scaling mid-training consistently leads to stronger downstream RL performance.",
+   "usage": {
+    "prompt_tokens": 1457,
+    "completion_tokens": 40,
+    "total_tokens": 1497,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1457
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2506.20512",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the OctoThinker models close the performance gap with RL-friendly model families like Qwen.",
+   "usage": {
+    "prompt_tokens": 1646,
+    "completion_tokens": 43,
+    "total_tokens": 1689,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1646
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2312.02120",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper proposes OSS-Instruct to mitigate LLM bias and generate diverse, realistic, and controllable synthetic instruction data for code.",
+   "usage": {
+    "prompt_tokens": 1273,
+    "completion_tokens": 47,
+    "total_tokens": 1320,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1273
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2312.02120",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the introduction of OSS-Instruct, the generation of 75K synthetic instruction data using open-source code snippets, and the goal of mitigating inherent bias in LLM-generated data.",
+   "usage": {
+    "prompt_tokens": 1290,
+    "completion_tokens": 56,
+    "total_tokens": 1346,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1290
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2312.02120",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that Magicoder models have no more than 7B parameters and significantly close the gap with or outperform top code models.",
+   "usage": {
+    "prompt_tokens": 1321,
+    "completion_tokens": 42,
+    "total_tokens": 1363,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1321
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2312.02120",
+   "label": "supported",
+   "reason": "The provided abstract and passages explicitly state that MagicoderS-CL-7B surpasses ChatGPT on HumanEval+ with pass@1 scores of 66.5 vs. 65.9.",
+   "usage": {
+    "prompt_tokens": 1438,
+    "completion_tokens": 55,
+    "total_tokens": 1493,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1438
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2312.02120",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that OSS-Instruct mitigates bias to produce 'more realistic and controllable' instruction data compared to inherent biases in LLM-generated synthetic data.",
+   "usage": {
+    "prompt_tokens": 1261,
+    "completion_tokens": 52,
+    "total_tokens": 1313,
+    "completion_tokens_details": {
+     "text_tokens": 52
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1261
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2312.02120",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the orthogonality of OSS-Instruct and Evol-Instruct enables the creation of enhanced MagicoderS models.",
+   "usage": {
+    "prompt_tokens": 1257,
+    "completion_tokens": 42,
+    "total_tokens": 1299,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1257
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2312.02120",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that both Magicoder and MagicoderS substantially outperform state-of-the-art models with similar or larger sizes on various benchmarks.",
+   "usage": {
+    "prompt_tokens": 1328,
+    "completion_tokens": 42,
+    "total_tokens": 1370,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1328
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The evidence confirms Qwen3 integrates thinking and non-thinking modes into a unified framework across various model sizes to balance complex reasoning and rapid responses.",
+   "usage": {
+    "prompt_tokens": 1389,
+    "completion_tokens": 43,
+    "total_tokens": 1432,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1389
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the parameter range (0.6 to 235 billion), the inclusion of both dense and MoE architectures, and the integration of thinking/non-thinking modes with a thinking budget mechanism.",
+   "usage": {
+    "prompt_tokens": 1329,
+    "completion_tokens": 55,
+    "total_tokens": 1384,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1329
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that Qwen3 achieves state-of-the-art results on benchmarks including code generation, mathematical reasoning, and agent tasks.",
+   "usage": {
+    "prompt_tokens": 1365,
+    "completion_tokens": 40,
+    "total_tokens": 1405,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1365
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Qwen3's unified framework eliminates the need to switch between chat-optimized and dedicated reasoning models.",
+   "usage": {
+    "prompt_tokens": 1297,
+    "completion_tokens": 36,
+    "total_tokens": 1333,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1297
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract and passage [S1.p3] explicitly state that the thinking budget mechanism allows users to balance latency and performance based on task complexity.",
+   "usage": {
+    "prompt_tokens": 1241,
+    "completion_tokens": 40,
+    "total_tokens": 1281,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1241
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that Qwen3 expanded multilingual support from 29 to 119 languages compared to Qwen2.5.",
+   "usage": {
+    "prompt_tokens": 1554,
+    "completion_tokens": 45,
+    "total_tokens": 1599,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1554
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The abstract and the passage on Strong-to-Weak Distillation explicitly state that smaller-scale models leverage knowledge from flagship models to achieve competitive performance.",
+   "usage": {
+    "prompt_tokens": 1168,
+    "completion_tokens": 39,
+    "total_tokens": 1207,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1168
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2505.09388",
+   "label": "supported",
+   "reason": "The provided abstract and passages describe capabilities and innovations but do not explicitly list limitations, confirming the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 1230,
+    "completion_tokens": 33,
+    "total_tokens": 1263,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1230
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The paper explicitly states its core research question is how to precisely track data influence and select data based on the model's evolving preferences during pretraining.",
+   "usage": {
+    "prompt_tokens": 1382,
+    "completion_tokens": 40,
+    "total_tokens": 1422,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1382
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that MATES uses a data influence model that continuously adapts to the evolving data preferences of the pretraining model.",
+   "usage": {
+    "prompt_tokens": 1298,
+    "completion_tokens": 40,
+    "total_tokens": 1338,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1298
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm that the paper collects oracle data influence via local probing, fine-tunes a small model to approximate it, and uses this model to select influential data for subsequent pretraining stages.",
+   "usage": {
+    "prompt_tokens": 1283,
+    "completion_tokens": 54,
+    "total_tokens": 1337,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1283
+    }
+   }
+  },
+  {
+   "claim": 92,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that MATES significantly outperforms random data selection on extensive downstream tasks, citing specific accuracy gains across multiple benchmarks.",
+   "usage": {
+    "prompt_tokens": 1510,
+    "completion_tokens": 43,
+    "total_tokens": 1553,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1510
+    }
+   }
+  },
+  {
+   "claim": 93,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that MATES doubles the gains achieved by state-of-the-art data selection methods that rely on larger reference models.",
+   "usage": {
+    "prompt_tokens": 1421,
+    "completion_tokens": 44,
+    "total_tokens": 1465,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1421
+    }
+   }
+  },
+  {
+   "claim": 94,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that MATES reduces the total FLOPs required to reach certain performances by half or more than half.",
+   "usage": {
+    "prompt_tokens": 1398,
+    "completion_tokens": 38,
+    "total_tokens": 1436,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1398
+    }
+   }
+  },
+  {
+   "claim": 95,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that further analyses validate the effectiveness of the locally probed oracle data influence in capturing the model's evolving preferences.",
+   "usage": {
+    "prompt_tokens": 1297,
+    "completion_tokens": 39,
+    "total_tokens": 1336,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1297
+    }
+   }
+  },
+  {
+   "claim": 96,
+   "id": "2406.06046",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the code for MATES is open-sourced at a specific GitHub URL.",
+   "usage": {
+    "prompt_tokens": 1105,
+    "completion_tokens": 31,
+    "total_tokens": 1136,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1105
+    }
+   }
+  }
+ ]
+}

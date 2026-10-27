@@ -1,0 +1,460 @@
+{
+ "stats": {
+  "ambiguous": 5,
+  "unmatched": 3
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zheng et al. (2023) introduced LC-Rec with learning-based vector quantization for semantic-aware item indexing, enabling LLMs to generate items directly from the entire item set without candidate pre-selection.",
+   "ids": [
+    "2311.09049"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qu et al. (2024) developed TokenRec with a Masked Vector-Quantized Tokenizer that quantizes masked user/item representations learned from collaborative filtering into discrete tokens, achieving generalizable tokenization for unseen users and items.",
+   "ids": [
+    "2406.10450"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Liu et al. (2024) proposed MMGRec, which uses Graph RQ-VAE to assign Rec-ID tokens from both multimodal and collaborative filtering information, then employs relation-aware self-attention to handle non-sequential interaction sequences.",
+   "ids": [
+    "2404.16555"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2025) presented OneRec as the first end-to-end generative model to significantly surpass complex well-designed recommender systems in real-world scenarios.",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Tan et al. (2024) proposed IDGenRec with textual ID learning that enables seamless integration of personalized recommendations into natural language generation, demonstrating zero-shot performance comparable to supervised models on unseen datasets, suggesting potential for foundational generative recommendation models decoupled from original training datasets.",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhu et al. (2024) developed CoST with contrastive quantization-based semantic tokenization that captures item neighborhood relationships vital for effective item modeling, achieving up to 43% improvement in Recall@5 and 44% improvement in NDCG@5 on the MIND dataset over previous baselines.",
+   "ids": [
+    "2404.14774"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hou et al. (2024) introduced BLaIR, a comprehensive benchmark for evaluating LLMs as semantic encoders in recommendation scenarios, including a new large-scale Amazon Reviews 2023 dataset with over 570 million reviews and 48 million items.",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While some papers advocate for two-stream architectures that separately process behavioral and semantic information (Wang et al., 2024; Liu et al., 2024), others propose unified single-stream approaches (Zheng et al., 2023; Deng et al., 2025).",
+   "ids": [
+    "2404.16555",
+    "2311.09049",
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is variation in how papers handle the item indexing problem—some use learned semantic tokens (Zhu et al., 2024; Qu et al., 2024), while others propose textual IDs using human language tokens (Tan et al., 2024).",
+   "ids": [
+    "2404.14774",
+    "2406.10450",
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "The BLaIR benchmark (Hou et al., 2024) highlights a critical gap in evaluation methodology, showing that general-purpose embedding benchmarks poorly predict recommendation performance.",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can a unified end-to-end generative model replace the cascaded retrieve-and-rank framework in real-world recommender systems while achieving superior performance?",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: OneRec uses an encoder-decoder structure with sparse Mixture-of-Experts for scaling, implements session-wise generation for coherent results, and introduces Iterative Preference Alignment with customized Direct Preference Optimization using a reward model to simulate user interactions.",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OneRec is the first end-to-end generative model to significantly surpass complex well-designed recommender systems in real-world scenarios",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Sparse MoE architecture scales model capacity without proportionally increasing computational costs",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Session-wise generation produces more elegant and contextually coherent results than point-by-point prediction",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Iterative Preference Alignment with customized DPO sampling significantly improves generated result quality",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Deployment in Kuaishou achieved a 1.6% increase in watch-time, demonstrating substantial real-world improvement",
+   "ids": [
+    "2502.18965"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do large language models perform as semantic encoders for recommendation tasks compared to general-purpose embedding benchmarks?",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper introduces BLaIR, a comprehensive benchmark for evaluating LLMs as semantic encoders in recommendation scenarios, including a new large-scale Amazon Reviews 2023 dataset and experiments with 11 leading LLMs across sequential recommendation, collaborative filtering, and product search tasks.",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Feature engineering has long been central to recommender systems, but effectively leveraging textual item features remains challenging",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Prior studies rely on general-purpose embedding benchmarks (e.g., MTEB) when selecting LLMs, overlooking unique characteristics of recommendation tasks",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The BLaIR benchmark includes a new Amazon Reviews 2023 dataset with over 570 million reviews and 48 million items",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLM rankings on BLaIR show little correlation with MTEB rankings, highlighting unique challenges of semantic encoding in recommendation",
+   "ids": [
+    "2403.03952"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we address the inference cost, interaction modeling, and false-negative issues in multimodal recommendation systems that use the traditional embed-and-retrieve paradigm?",
+   "ids": [
+    "2404.16555"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose MMGRec, a generative paradigm for multimodal recommendation that uses Graph RQ-VAE to assign Rec-ID tokens to items from multimodal and collaborative filtering information, then trains a Transformer-based recommender with relation-aware self-attention to autoregressively generate Rec-IDs of user-preferred items based on historical interaction sequences.",
+   "ids": [
+    "2404.16555"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The generative paradigm systematically predicts token tuples identifying recommended items in an autoregressive manner",
+   "ids": [
+    "2404.16555"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Graph RQ-VAE creates semantically meaningful Rec-ID tokens from multimodal and collaborative filtering information",
+   "ids": [
+    "2404.16555"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Relation-aware self-attention handles non-sequential interaction sequences by exploring element pairwise relations instead of absolute positional encoding",
+   "ids": [
+    "2404.16555"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments demonstrate MMGRec's effectiveness compared with state-of-the-art methods",
+   "ids": [
+    "2404.16555"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we efficiently capture high-order collaborative knowledge into discrete tokens compatible with LLMs while generalizing to new/unseen users or items in recommendation systems?",
+   "ids": [
+    "2406.10450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose TokenRec, a framework featuring a Masked Vector-Quantized (MQ) Tokenizer that quantizes masked user/item representations learned from collaborative filtering into discrete tokens, combined with a generative retrieval paradigm that recommends top-K items without auto-regressive decoding or beam search.",
+   "ids": [
+    "2406.10450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "TokenRec achieves smooth incorporation of high-order collaborative knowledge into LLM-based recommendation systems",
+   "ids": [
+    "2406.10450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The MQ Tokenizer enables generalizable tokenization of users and items, including those not seen during training",
+   "ids": [
+    "2406.10450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The generative retrieval paradigm significantly reduces inference time by eliminating time-consuming auto-regressive decoding and beam search",
+   "ids": [
+    "2406.10450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Comprehensive experiments show TokenRec outperforms both traditional recommender systems and emerging LLM-based recommender systems",
+   "ids": [
+    "2406.10450"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can recommendation items be effectively encoded within the text-to-text framework using concise yet meaningful ID representations?",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes IDGen, representing each item as a unique, concise, semantically rich textual ID using human language tokens, trained alongside an LLM-based recommender.",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach is evaluated on sequential recommendation tasks and tested as a foundation model on 6 unseen datasets in a zero-shot setting.",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Current generative recommendation research struggles to encode items using concise yet meaningful ID representations within the text-to-text framework",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "IDGen enables seamless integration of personalized recommendations into natural language generation",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The framework consistently surpasses existing models in sequential recommendation under standard experimental settings",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The zero-shot performance of the pre-trained foundation model is comparable to or better than some traditional recommendation models based on supervised training",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach suggests potential for a foundational generative recommendation model decoupled from original datasets",
+   "ids": [
+    "2403.19021"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large language models be adapted to better integrate collaborative semantics from recommender systems to overcome the semantic gap between language and item ID-based recommendation?",
+   "ids": [
+    "2311.09049"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose LC-Rec, an LLM-based recommendation model with two main components: a learning-based vector quantization method for semantic-aware item indexing, and specially designed fine-tuning tasks to align collaborative semantics with language semantics in LLMs.",
+   "ids": [
+    "2311.09049"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LC-Rec successfully generates items directly from the entire item set without requiring candidate item pre-selection",
+   "ids": [
+    "2311.09049"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The vector quantization method assigns meaningful and non-conflicting item indices that capture collaborative semantics",
+   "ids": [
+    "2311.09049"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Fine-tuning tasks enable deep integration of language and collaborative semantics in LLMs",
+   "ids": [
+    "2311.09049"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LC-Rec outperforms both traditional recommenders and existing LLM-based recommenders in extensive experiments",
+   "ids": [
+    "2311.09049"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can semantic tokenization for generative recommendation better capture item neighborhood relationships vital for effective item modeling?",
+   "ids": [
+    "2404.14774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The paper proposes CoST, a contrastive quantization-based semantic tokenization approach that harnesses both item relationships and semantic information to learn semantic tokens.",
+   "ids": [
+    "2404.14774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method is evaluated on the MIND dataset comparing against previous baselines.",
+   "ids": [
+    "2404.14774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Existing vector quantization methods with reconstruction loss (e.g., RQ-VAE) fail to capture essential neighborhood relationships for effective item modeling",
+   "ids": [
+    "2404.14774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoST achieves up to 43% improvement in Recall@5 on the MIND dataset over previous baselines",
+   "ids": [
+    "2404.14774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CoST achieves up to 44% improvement in NDCG@5 on the MIND dataset over previous baselines",
+   "ids": [
+    "2404.14774"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Semantic tokenization has a significant impact on generative recommendation performance",
+   "ids": [
+    "2404.14774"
+   ]
+  }
+ ]
+}

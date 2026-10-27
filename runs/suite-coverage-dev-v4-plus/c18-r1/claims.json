@@ -1,0 +1,1255 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Zhu, C., Yu, R., Feng, S., Burchfiel, B., Shah, P., & Gupta, A.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: April 3, 2025",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Imitation learning has emerged as a promising approach towards building generalist robots.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "However, scaling imitation learning for large robot foundation models remains challenging due to its reliance on high-quality expert demonstrations.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Meanwhile, large amounts of video data depicting a wide range of environments and diverse behaviors are readily available.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "This data provides a rich source of information about real-world dynamics and agent-environment interactions.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Leveraging this data directly for imitation learning, however, has proven difficult due to the lack of action annotation.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "In this work, we present Unified World Models (UWM), a framework that allows for leveraging both video and action data for policy learning.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Specifically, a UWM integrates an action diffusion process and a video diffusion process within a unified transformer architecture, where independent diffusion timesteps govern each modality.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "By controlling each diffusion timestep, UWM can flexibly represent a policy, a forward dynamics, an inverse dynamics, and a video generator.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Through simulated and real-world experiments, we show that: (1) UWM enables effective pretraining on large-scale multitask robot datasets with both dynamics and action predictions, resulting in more generalizable and robust policies than imitation learning, (2) UWM naturally facilitates learning from action-free video data through independent control of modality-specific diffusion timesteps, further improving the performance of finetuned policies.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Our results suggest that UWM offers a promising step toward harnessing large, heterogeneous datasets for scalable robot learning, and provides a simple unification between the often disparate paradigms of imitation learning and world modeling.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Unified transformer architecture integrating action and video diffusion processes",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Independent control of modality-specific diffusion timesteps for flexible representation",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Effective pretraining on large-scale datasets with both video and action data",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Learning from action-free video data to improve policy performance",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Cen, J., Yu, C., Yuan, H., Jiang, Y., Huang, S., Guo, J., Li, X., Song, Y., Luo, H., Wang, F., Zhao, D., & Chen, H.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: June 26, 2025",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "We present WorldVLA, an autoregressive action world model that unifies action and image understanding and generation.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Our WorldVLA integrates Vision-Language-Action (VLA) model and world model in one single framework.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "The world model predicts future images by leveraging both action and image understanding, with the purpose of learning the underlying physics of the environment to improve action generation.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Meanwhile, the action model generates the subsequent actions based on image observations, aiding in visual understanding and in turn helps visual generation of the world model.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "We demonstrate that WorldVLA outperforms standalone action and world models, highlighting the mutual enhancement between the world model and the action model.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "In addition, we find that the performance of the action model deteriorates when generating sequences of actions in an autoregressive manner.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "This phenomenon can be attributed to the model's limited generalization capability for action prediction, leading to the propagation of errors from earlier actions to subsequent ones.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "To address this issue, we propose an attention mask strategy that selectively masks prior actions during the generation of the current action, which shows significant performance improvement in the action chunk generation task.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Integration of Vision-Language-Action (VLA) model with world model in unified framework",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Mutual enhancement between world model (future image prediction) and action model",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Attention mask strategy to address error propagation in autoregressive action generation",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Improved performance over standalone action and world models",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Li, S., Gao, Y., Sadigh, D., & Song, S.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: February 28, 2025",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "A unified video and action model holds significant promise for robotics, where videos provide rich scene information for action prediction, and actions provide dynamics information for video prediction.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "However, effectively combining video generation and action prediction remains challenging, and current video generation-based methods struggle to match the performance of direct policy learning in action accuracy and inference speed.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "To bridge this gap, we introduce the Unified Video Action model (UVA), which jointly optimizes video and action predictions to achieve both high accuracy and efficient action inference.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "The key lies in learning a joint video-action latent representation and decoupling video-action decoding.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "The joint latent representation bridges the visual and action domains, effectively modeling the relationship between video and action sequences.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Meanwhile, the decoupled decoding, powered by two lightweight diffusion heads, enables high-speed action inference by bypassing video generation during inference.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Such a unified framework further enables versatile functionality through masked input training.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "By selectively masking actions or videos, a single model can tackle diverse tasks beyond policy learning, such as forward and inverse dynamics modeling and video generation.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Via an extensive set of experiments, we demonstrate that UVA can serve as a general-purpose solution for a wide range of robotics tasks, such as policy learning, forward/inverse dynamics and video observation prediction, without compromising performance compared to methods tailored for specific applications.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Joint video-action latent representation bridging visual and action domains",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Decoupled decoding with lightweight diffusion heads for high-speed inference",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Masked input training enabling versatile functionality across multiple tasks",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "General-purpose solution for policy learning, dynamics modeling, and video prediction",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Jang, J., Ye, S., Lin, Z., Xiang, J., Bjorck, J., Fang, Y., Hu, F., Huang, S., Kundalia, K., Lin, Y.-C., Magne, L., Mandlekar, A., Narayan, A., Tan, Y.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "L., Wang, G., Wang, J., Wang, Q., Xu, Y., Zeng, X., & Zheng, K.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: May 19, 2025",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "We introduce DreamGen, a simple yet highly effective 4-stage pipeline for training robot policies that generalize across behaviors and environments through neural trajectories - synthetic robot data generated from video world models.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "DreamGen leverages state-of-the-art image-to-video generative models, adapting them to the target robot embodiment to produce photorealistic synthetic videos of familiar or novel tasks in diverse environments.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Since these models generate only videos, we recover pseudo-action sequences using either a latent action model or an inverse-dynamics model (IDM).",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Despite its simplicity, DreamGen unlocks strong behavior and environment generalization: a humanoid robot can perform 22 new behaviors in both seen and unseen environments, while requiring teleoperation data from only a single pick-and-place task in one environment.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "To evaluate the pipeline systematically, we introduce DreamGen Bench, a video generation benchmark that shows a strong correlation between benchmark performance and downstream policy success.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Our work establishes a promising new axis for scaling robot learning well beyond manual data collection.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "4-stage pipeline for training policies using synthetic video data from world models",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Adaptation of image-to-video generative models for robot embodiment",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Recovery of pseudo-action sequences using latent action or inverse-dynamics models",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Strong generalization with minimal teleoperation data (single task, single environment)",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "DreamGen Bench for systematic evaluation of video generation and policy success",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Huang, S., Chen, L., Zhou, P., Chen, S., Jiang, Z., Hu, Y., Liao, Y., Gao, P., Li, H., Yao, M., & Ren, G.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: January 3, 2025",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "We introduce EnerVerse, a generative robotics foundation model that constructs and interprets embodied spaces.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "EnerVerse employs a chunk-wise autoregressive video diffusion framework to predict future embodied spaces from instructions, enhanced by a sparse context memory for long-term reasoning.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "To model the 3D robotics world, we adopt a multi-view video representation, providing rich perspectives to address challenges like motion ambiguity and 3D grounding.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Additionally, EnerVerse-D, a data engine pipeline combining generative modeling with 4D Gaussian Splatting, forms a self-reinforcing data loop to reduce the sim-to-real gap.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Leveraging these innovations, EnerVerse translates 4D world representations into physical actions via a policy head (EnerVerse-A), achieving state-of-the-art performance in both simulation and real-world tasks.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "For efficiency, EnerVerse-A reuses features from the first denoising step and predicts action chunks, achieving about 280 ms per 8-step action chunk on a single RTX 4090.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Chunk-wise autoregressive video diffusion with sparse context memory",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Multi-view video representation for 3D robotics world modeling",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "EnerVerse-D data engine combining generative modeling with 4D Gaussian Splatting",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Self-reinforcing data loop to reduce sim-to-real gap",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Efficient policy head achieving 280 ms per 8-step action chunk",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Tian, Y., Yang, S., Zeng, J., Wang, P., Lin, D., Dong, H., & Pang, J.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: December 19, 2024",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Current efforts to learn scalable policies in robotic manipulation primarily fall into two categories: one focuses on \"action,\" which involves behavior cloning from extensive collections of robotic data, while the other emphasizes \"vision,\" enhancing model generalization by pre-training representations or generative models, also referred to as world models, using large-scale visual datasets.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "This paper presents an end-to-end paradigm that predicts actions using inverse dynamics models conditioned on the robot's forecasted visual states, named Predictive Inverse Dynamics Models (PIDM).",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "By closing the loop between vision and action, the end-to-end PIDM can be a better scalable action learner.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "In practice, we use Transformers to process both visual states and actions, naming the model Seer.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "It is initially pre-trained on large-scale robotic datasets, such as DROID, and can be adapted to real-world scenarios with a little fine-tuning data.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Thanks to large-scale, end-to-end training and the synergy between vision and action, Seer significantly outperforms previous methods across both simulation and real-world experiments.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "It achieves improvements of 13% on the LIBERO-LONG benchmark, 21% on CALVIN ABC-D, and 43% in real-world tasks.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Notably, Seer sets a new state-of-the-art on CALVIN ABC-D benchmark, achieving an average length of 4.28, and exhibits superior generalization for novel objects, lighting conditions, and environments under high-intensity disturbances on real-world scenarios.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "End-to-end Predictive Inverse Dynamics Models (PIDM) paradigm",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Transformer-based model (Seer) processing both visual states and actions",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Pre-training on large-scale robotic datasets (e.g., DROID)",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Significant improvements: 13% on LIBERO-LONG, 21% on CALVIN ABC-D, 43% in real-world tasks",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "New state-of-the-art on CALVIN ABC-D (average length 4.28)",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Bharadhwaj, H., Dwibedi, D., Gupta, A., Tulsiani, S., Doersch, C., Xiao, T., Shah, D., Xia, F., Sadigh, D., & Kirmani, S.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: September 24, 2024",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "How can robot manipulation policies generalize to novel tasks involving unseen object types and new motions?",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "In this paper, we provide a solution in terms of predicting motion information from web data through human video generation and conditioning a robot policy on the generated video.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Instead of attempting to scale robot data collection which is expensive, we show how we can leverage video generation models trained on easily available web data, for enabling generalization.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Our approach Gen2Act casts language-conditioned manipulation as zero-shot human video generation followed by execution with a single policy conditioned on the generated video.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "To train the policy, we use an order of magnitude less robot interaction data compared to what the video prediction model was trained on.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Gen2Act doesn't require fine-tuning the video model at all and we directly use a pre-trained model for generating human videos.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Our results on diverse real-world scenarios show how Gen2Act enables manipulating unseen object types and performing novel motions for tasks not present in the robot data.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Zero-shot human video generation for novel scenarios",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Conditioning robot policy on generated human videos",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Leveraging web data instead of scaling expensive robot data collection",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Order of magnitude less robot interaction data required",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "No fine-tuning of video model needed",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Generalization to unseen object types and novel motions",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Lu, G., Jia, B., Li, P., Chen, Y., Wang, Z., Tang, Y., & Huang, S.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: August 25, 2025",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Training robot policies within a learned world model is trending due to the inefficiency of real-world interactions.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "The established image-based world models and policies have shown prior success, but lack robust geometric information that requires consistent spatial and physical understanding of the three-dimensional world, even pre-trained on internet-scale video sources.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "To this end, we propose a novel branch of world model named Gaussian World Model (GWM) for robotic manipulation, which reconstructs the future state by inferring the propagation of Gaussian primitives under the effect of robot actions.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "At its core is a latent Diffusion Transformer (DiT) combined with a 3D variational autoencoder, enabling fine-grained scene-level future state reconstruction with Gaussian Splatting.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "GWM can not only enhance the visual representation for imitation learning agent by self-supervised future prediction training, but can serve as a neural simulator that supports model-based reinforcement learning.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Both simulated and real-world experiments depict that GWM can precisely predict future scenes conditioned on diverse robot actions, and can be further utilized to train policies that outperform the state-of-the-art by impressive margins, showcasing the initial data scaling potential of 3D world model.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Novel Gaussian World Model (GWM) using Gaussian primitives for 3D representation",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Latent Diffusion Transformer (DiT) combined with 3D variational autoencoder",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Fine-grained scene-level future state reconstruction with Gaussian Splatting",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Dual functionality: visual representation enhancement and neural simulator",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Policies trained in GWM outperform state-of-the-art by significant margins",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Liao, Y., Zhou, P., Huang, S., Yang, D., Chen, S., Jiang, Y., Hu, Y., Cai, J., Liu, S., Luo, J., Chen, L., Yan, S., Yao, M., & Ren, G.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: August 7, 2025",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "We introduce Genie Envisioner (GE), a unified world foundation platform for robotic manipulation that integrates policy learning, evaluation, and simulation within a single video-generative framework.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "At its core, GE-Base is a large-scale, instruction-conditioned video diffusion model that captures the spatial, temporal, and semantic dynamics of real-world robotic interactions in a structured latent space.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Built upon this foundation, GE-Act maps latent representations to executable action trajectories through a lightweight, flow-matching decoder, enabling precise and generalizable policy inference across diverse embodiments with minimal supervision.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "To support scalable evaluation and training, GE-Sim serves as an action-conditioned neural simulator, producing high-fidelity rollouts for closed-loop policy development.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "The platform is further equipped with EWMBench, a standardized benchmark suite measuring visual fidelity, physical consistency, and instruction-action alignment.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Together, these components establish Genie Envisioner as a scalable and practical foundation for instruction-driven, general-purpose embodied intelligence.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Unified platform integrating policy learning, evaluation, and simulation",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "GE-Base: instruction-conditioned video diffusion model in structured latent space",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "GE-Act: lightweight flow-matching decoder for action trajectory mapping",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "GE-Sim: action-conditioned neural simulator for closed-loop policy development",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "EWMBench: standardized benchmark suite for comprehensive evaluation",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Authors: Jiang, Y., Chen, S., Huang, S., Chen, L., Zhou, P., Liao, Y., He, X., Liu, C., Li, H., Yao, M., & Ren, G.",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Publication Date: May 14, 2025",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Robotic imitation learning has advanced from solving static tasks to addressing dynamic interaction scenarios, but testing and evaluation remain costly and challenging due to the need for real-time interaction with dynamic environments.",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "We propose EnerVerse-AC (EVAC), an action-conditional world model that generates future visual observations based on an agent's predicted actions, enabling realistic and controllable robotic inference.",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Building on prior architectures, EVAC introduces a multi-level action-conditioning mechanism and ray map encoding for dynamic multi-view image generation while expanding training data with diverse failure trajectories to improve generalization.",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "As both a data engine and evaluator, EVAC augments human-collected trajectories into diverse datasets and generates realistic, action-conditioned video observations for policy testing, eliminating the need for physical robots or complex simulations.",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "This approach significantly reduces costs while maintaining high fidelity in robotic manipulation evaluation.",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Action-conditional world model for generating future visual observations",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Multi-level action-conditioning mechanism and ray map encoding",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Training data augmentation with diverse failure trajectories",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Dual functionality as data engine and evaluator",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Reviewed Papers",
+   "kind": "annotation",
+   "text": "Cost reduction by eliminating need for physical robots or complex simulations",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Four papers (Zhu et al., 2025; Li et al., 2025; Cen et al., 2025; Liao et al., 2025) propose unified frameworks that integrate video generation and action prediction.",
+   "ids": [
+    "2504.02792",
+    "2503.00200",
+    "2506.21539",
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Modality-independent control: UWM (Zhu et al., 2025) uses independent diffusion timesteps for video and action modalities, enabling flexible representation as policy, forward/inverse dynamics, or video generator.",
+   "ids": [
+    "2504.02792"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Joint latent representations: UVA (Li et al., 2025) learns joint video-action latent spaces with decoupled decoding for efficient inference.",
+   "ids": [
+    "2503.00200"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Mutual enhancement: WorldVLA (Cen et al., 2025) demonstrates bidirectional benefits between world model and action model components.",
+   "ids": [
+    "2506.21539"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Structured latent spaces: Genie Envisioner (Liao et al., 2025) captures spatial, temporal, and semantic dynamics in unified latent representations.",
+   "ids": [
+    "2508.05635"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Three papers (Jang et al., 2025; Bharadhwaj et al., 2024; Jiang et al., 2025) leverage generative models to synthesize training data, addressing the bottleneck of expensive robot data collection:",
+   "ids": [
+    "2505.12705",
+    "2409.16283",
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Neural trajectories: DreamGen (Jang et al., 2025) generates synthetic videos adapted to robot embodiments, recovering pseudo-actions via latent action or inverse dynamics models.",
+   "ids": [
+    "2505.12705"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Zero-shot human video generation: Gen2Act (Bharadhwaj et al., 2024) uses pre-trained video generation models on web data, requiring an order of magnitude less robot data.",
+   "ids": [
+    "2409.16283"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Action-conditional data augmentation: EnerVerse-AC (Jiang et al., 2025) augments human trajectories with diverse failure cases and generates realistic video observations for policy testing.",
+   "ids": [
+    "2505.09723"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Two papers (Huang et al., 2025; Lu et al., 2025) introduce novel 3D representations for more robust geometric understanding:",
+   "ids": [
+    "2501.01895",
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "4D Gaussian Splatting: EnerVerse (Huang et al., 2025) employs multi-view video representation with 4D Gaussian Splatting in a self-reinforcing data loop.",
+   "ids": [
+    "2501.01895"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Gaussian primitives: GWM (Lu et al., 2025) reconstructs future states by inferring propagation of Gaussian primitives, enabling fine-grained scene-level prediction with geometric consistency.",
+   "ids": [
+    "2508.17600"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "One paper (Tian et al., 2024) presents an end-to-end paradigm closing the vision-action loop:",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Thematic Analysis",
+   "kind": "synthesis",
+   "text": "Predictive Inverse Dynamics: Seer (Tian et al., 2024) predicts actions using inverse dynamics models conditioned on forecasted visual states, achieving state-of-the-art performance on multiple benchmarks.",
+   "ids": [
+    "2412.15109"
+   ]
+  },
+  {
+   "section": "Research Gaps and Future Directions",
+   "kind": "synthesis",
+   "text": "Only GWM (Lu et al., 2025) and Genie Envisioner (Liao et al., 2025) explicitly address physical plausibility.",
+   "ids": [
+    "2508.17600",
+    "2508.05635"
+   ]
+  }
+ ]
+}

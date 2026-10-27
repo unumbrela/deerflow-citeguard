@@ -1,0 +1,789 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Executive Summary",
+   "kind": "synthesis",
+   "text": "The OctoThinker study (Wang et al., 2025) directly investigates mid-training's role in incentivizing reinforcement learning scaling, while other papers employ mid-training strategies implicitly through continued pre-training approaches.",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The MATES approach (Yu et al., 2024) introduces model-aware data selection that continuously adapts to evolving data preferences during training, achieving double the gains of state-of-the-art selection methods.",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, SmolLM2 (Ben Allal et al., 2025) demonstrates that overtraining a small 1.7B parameter model on 11 trillion tokens with carefully curated specialized datasets (FineMath for mathematics, Stack-Edu for code, SmolTalk for instruction-following) can outperform larger models.",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The FineWeb datasets (Penedo et al., 2024) further establish that systematic deduplication and filtering strategies applied to 96 Common Crawl snapshots produce superior pretraining data, with FineWeb-Edu's 1.3 trillion tokens of educational text yielding dramatic improvements on MMLU and ARC benchmarks.",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "DeepSeekMath (Shao et al., 2024) achieves 51.7% on the MATH benchmark by continuing pre-training with 120 billion math-related tokens, approaching Gemini-Ultra and GPT-4 performance levels.",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The OctoThinker investigation (Wang et al., 2025) reveals that high-quality mathematical corpora like MegaMath-Web-Pro significantly improve both base model and reinforcement learning performance, establishing a direct link between mid-training data quality and RL scaling outcomes.",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qwen2.5's technical report (Qwen et al., 2024) notes that their scaled pre-training from 7 to 18 trillion tokens, combined with multistage reinforcement learning, produces models competitive with Llama-3-405B-Instruct despite being five times smaller.",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "LLaMAX (Lu et al., 2024) uses extensive multilingual continual pre-training with vocabulary expansion and data augmentation to support translation across more than 100 languages, achieving performance on-par with specialized translation model M2M-100-12B.",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Tower (Alves et al., 2024) performs continued pre-training on multilingual monolingual and parallel data mixtures, followed by instruction fine-tuning, creating models that surpass open alternatives on translation workflow tasks.",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The Magicoder paper (Wei et al., 2023) introduces a novel mid-training data synthesis approach using open-source code snippets to generate 75K synthetic instruction data, mitigating LLM bias in traditional synthetic data generation.",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "The OctoThinker study (Wang et al., 2025) introduces a two-stage Stable-then-Decay mid-training strategy with 200 billion tokens at constant learning rate followed by 20 billion tokens across three chain-of-thought-focused branches with learning rate decay.",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qwen2.5 (Qwen et al., 2024) similarly employs intricate supervised fine-tuning with over 1 million samples plus multistage reinforcement learning.",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "SmolLM2 (Ben Allal et al., 2025) performs small-scale ablations with manual refinement of dataset mixing rates at each training stage.",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Qwen3 (Yang et al., 2025) represents an evolution toward unified frameworks that integrate both complex reasoning and rapid response capabilities, featuring thinking and non-thinking modes with a thinking budget mechanism for adaptive resource allocation.",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all works agree that data quality and curation during mid-training phases matter more than raw scale alone — strategic data selection can double gains achieved by larger models (Yu et al., 2024).",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, mathematical reasoning emerges as universally responsive to targeted mid-training with high-quality mathematical corpora (Shao et al., 2024; Wang et al., 2025; Qwen et al., 2024).",
+   "ids": [
+    "2402.03300",
+    "2506.20512",
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, multi-stage training with learning rate scheduling and iterative dataset refinement consistently outperforms single-stage approaches (Wang et al., 2025; Ben Allal et al., 2025).",
+   "ids": [
+    "2506.20512",
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Fourth, specialized mid-training can enable smaller models to compete with much larger counterparts, challenging the assumption that scale is the primary driver of capability (Ben Allal et al., 2025; Wei et al., 2023).",
+   "ids": [
+    "2502.02737",
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "MATES (Yu et al., 2024) emphasizes automated model-aware data selection, while SmolLM2 (Ben Allal et al., 2025) relies on manual refinement of dataset mixing rates at each stage.",
+   "ids": [
+    "2406.06046",
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, while OctoThinker (Wang et al., 2025) warns that long chain-of-thought data can induce verbosity and instability in RL training, other papers do not address potential negative effects of their mid-training strategies, suggesting incomplete understanding of failure modes.",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while OctoThinker (Wang et al., 2025) investigates what makes base models suitable for reinforcement learning, the broader question of which mid-training strategies generalize across downstream tasks remains underexplored.",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can open large language models be tailored to excel at multiple tasks within translation workflows rather than specializing on a single task?",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors performed continued pretraining on a multilingual mixture of monolingual and parallel data to create TowerBase, followed by finetuning on instructions relevant for translation processes to create TowerInstruct.",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tower surpasses open alternatives on several tasks relevant to translation workflows",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Tower is competitive with general-purpose closed LLMs",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach releases Tower models, specialization dataset, evaluation framework, and model generations",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Open LLM approaches can be competitive when specialized for multiple translation tasks rather than single tasks",
+   "ids": [
+    "2402.17733"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a small language model (1.7B parameters) achieve state-of-the-art performance through data-centric training approaches?",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors overtrained SmolLM2 on approximately 11 trillion tokens using a multi-stage training process that combines web text with specialized math, code, and instruction-following data.",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They introduced new specialized datasets (FineMath, Stack-Edu, and SmolTalk) and performed small-scale ablations with manual refinement of dataset mixing rates at each training stage.",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SmolLM2 outperforms other recent small language models including Qwen2.5-1.5B and Llama3.2-1B",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-stage training with specialized datasets improves small model performance",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Manual refinement of dataset mixing rates based on previous stage performance informs better design decisions",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model and all prepared datasets are released to facilitate future research",
+   "ids": [
+    "2502.02737"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large language models be enhanced to support translation across more than 100 languages, particularly for low-resource languages?",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors conducted extensive multilingual continual pre-training on LLaMA series models with training strategies including vocabulary expansion and data augmentation to develop LLaMAX, supporting translation across more than 100 languages.",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLaMAX achieves significantly higher translation performance than existing open-source LLMs (by more than 10 spBLEU points)",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLaMAX performs on-par with specialized translation model M2M-100-12B on the Flores-101 benchmark",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The model maintains generalization ability while improving multilingual translation",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLaMAX can serve as a robust multilingual foundation model",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Code and models are publicly available",
+   "ids": [
+    "2407.05975"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can high-quality pretraining datasets be curated from web data to improve large language model performance?",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce FineWeb, a 15-trillion token dataset derived from 96 Common Crawl snapshots, and document all design choices including deduplication and filtering strategies.",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They also introduce FineWeb-Edu, a 1.3-trillion token educational text collection filtered from FineWeb, and release their curation codebase and trained models.",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "FineWeb produces better-performing LLMs than other open pretraining datasets",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LLMs pretrained on FineWeb-Edu show dramatically better performance on MMLU and ARC benchmarks",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The work advances understanding of optimal data curation strategies through careful ablation studies",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Deduplication and filtering strategies significantly impact dataset quality",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The datasets and curation codebase are publicly released for the research community",
+   "ids": [
+    "2406.17557"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can large language models be improved through enhanced pre-training and post-training techniques to meet diverse user needs?",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors scaled pre-training datasets from 7 trillion to 18 trillion tokens and implemented intricate supervised fine-tuning with over 1 million samples, plus multistage reinforcement learning.",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They present Qwen2.5 as a comprehensive series of LLMs in various sizes including base, instruction-tuned, and mixture-of-experts variants.",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qwen2.5-72B-Instruct outperforms many open and proprietary models on benchmarks",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance is competitive with Llama-3-405B-Instruct despite being 5 times smaller",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qwen2.5-Turbo and Qwen2.5-Plus offer competitive performance against GPT-4o-mini and GPT-4o respectively",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Post-training techniques enhance human preference alignment, long text generation, and instruction following",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qwen2.5 models serve as foundations for specialized models like Qwen2.5-Math, Qwen2.5-Coder, and QwQ",
+   "ids": [
+    "2412.15115"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can language models be improved to achieve better mathematical reasoning capabilities?",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce DeepSeekMath 7B by continuing pre-training DeepSeek-Coder-Base-v1.5 7B with 120B math-related tokens from Common Crawl, combined with natural language and code data.",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They employ a data selection pipeline and introduce Group Relative Policy Optimization (GRPO), a variant of PPO.",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DeepSeekMath 7B achieves 51.7% on the MATH benchmark without external toolkits or voting techniques",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performance approaches that of Gemini-Ultra and GPT-4 on mathematical reasoning tasks",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Self-consistency over 64 samples achieves 60.9% on MATH",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRPO enhances mathematical reasoning while optimizing PPO memory usage",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Publicly available web data can be effectively harnessed through engineered data selection pipelines",
+   "ids": [
+    "2402.03300"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What makes a base language model suitable for reinforcement learning, and how do mid-training strategies shape RL dynamics?",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors investigated mid-training strategies across Qwen and Llama model families, examining the effects of mathematical corpora, QA-style data, and long chain-of-thought reasoning examples.",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They introduced a two-stage Stable-then-Decay mid-training strategy with 200B tokens at constant learning rate followed by 20B tokens across three CoT-focused branches with learning rate decay.",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "High-quality mathematical corpora like MegaMath-Web-Pro significantly improve both base model and RL performance",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Adding QA-style data, particularly long CoT reasoning examples, enhances RL outcomes",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Instruction data unlocks the effect of QA-style data on RL performance",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Long-CoT can induce verbosity and instability in RL training, highlighting the importance of data formatting",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling mid-training consistently leads to stronger downstream RL performance",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OctoThinker closes the performance gap with more RL-friendly model families like Qwen",
+   "ids": [
+    "2506.20512"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can synthetic instruction data for code generation be improved to reduce LLM bias and produce more realistic, controllable training data?",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce OSS-Instruct, a novel approach that uses open-source code snippets to generate 75K synthetic instruction data, mitigating inherent bias in LLM-generated synthetic data through abundant open-source references.",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Magicoder models significantly close the gap with top code models while having no more than 7B parameters",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MagicoderS-CL-7B surpasses ChatGPT on HumanEval+ (66.5 vs. 65.9 in pass@1)",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "OSS-Instruct produces more realistic and controllable data compared to traditional synthetic data generation",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The orthogonality of OSS-Instruct and other methods like Evol-Instruct enables enhanced MagicoderS models",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Both Magicoder and MagicoderS substantially outperform state-of-the-art code models with similar or larger sizes",
+   "ids": [
+    "2312.02120"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can a unified language model framework integrate both complex reasoning and rapid response capabilities while scaling efficiently across different model sizes?",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors developed Qwen3, a series of LLMs with both dense and Mixture-of-Expert architectures ranging from 0.6 to 235 billion parameters, featuring integrated thinking and non-thinking modes with a thinking budget mechanism for adaptive resource allocation.",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Qwen3 achieves state-of-the-art results across diverse benchmarks including code generation, mathematical reasoning, and agent tasks",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The unified framework eliminates the need to switch between chat-optimized and dedicated reasoning models",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The thinking budget mechanism allows users to balance latency and performance based on task complexity",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multilingual support expanded from 29 to 119 languages and dialects compared to Qwen2.5",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Smaller-scale models achieve competitive performance by leveraging knowledge from flagship models",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: The abstract does not explicitly state limitations of the approach or model.",
+   "ids": [
+    "2505.09388"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can pretraining data selection be improved to capture evolving data preferences during model training?",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce MATES, where a data influence model continuously adapts to the evolving data preferences of the pretraining model.",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They collect oracle data influence by locally probing the pretraining model and fine-tune a small data influence model to approximate it, then use it to select the most influential data for subsequent pretraining stages.",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MATES significantly outperforms random data selection on extensive downstream tasks",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach doubles gains achieved by state-of-the-art data selection methods using larger reference models",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MATES reduces total FLOPs required to reach certain performance levels by half",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Locally probed oracle data influence effectively captures model preferences",
+   "ids": [
+    "2406.06046"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The code is open-sourced for community use",
+   "ids": [
+    "2406.06046"
+   ]
+  }
+ ]
+}

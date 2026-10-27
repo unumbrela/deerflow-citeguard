@@ -1,0 +1,1434 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the Coconut method as utilizing the last hidden state as a reasoning representation fed back directly as input embeddings in continuous space.",
+   "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 38,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 787
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach enables solving tasks previously not solvable without explicit chain-of-thought at a speed comparable to no chain-of-thought.",
+   "usage": {
+    "prompt_tokens": 763,
+    "completion_tokens": 42,
+    "total_tokens": 805,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 763
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms strong evidence of latent multi-hop reasoning for certain relation types, usage in over 80% of prompts, and highly contextual utilization.",
+   "usage": {
+    "prompt_tokens": 854,
+    "completion_tokens": 48,
+    "total_tokens": 902,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 854
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the method of gradual removal and finetuning to internalize CoT, and matches the specific results for GPT-2 Small on 9-by-9 multiplication (99%) versus standard training (4-by-4).",
+   "usage": {
+    "prompt_tokens": 779,
+    "completion_tokens": 64,
+    "total_tokens": 843,
+    "completion_tokens_details": {
+     "text_tokens": 64
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 779
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that pure reinforcement learning incentivizes self-reflection, verification, and dynamic strategy adaptation without human-labeled trajectories, leading to superior performance in mathematics and coding.",
+   "usage": {
+    "prompt_tokens": 779,
+    "completion_tokens": 46,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 779
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the development of budget forcing to control test-time compute and states that the s1-32B model exceeds o1-preview by up to 27% on MATH and AIME24.",
+   "usage": {
+    "prompt_tokens": 864,
+    "completion_tokens": 56,
+    "total_tokens": 920,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 864
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of VQ-VAE generated latent tokens to abstract initial reasoning steps, reduce trace length, and consistently outperform baselines.",
+   "usage": {
+    "prompt_tokens": 777,
+    "completion_tokens": 43,
+    "total_tokens": 820,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 777
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that bridge entity resolution occurs in early layers, second-hop resolution starts in later layers which may lack necessary knowledge, and back-patching corrects up to 66% of previously incorrect cases.",
+   "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 54,
+    "total_tokens": 928,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 874
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly states that compositional reasoning failures stem from improperly generated or leveraged implicit reasoning results and identifies multi-head self-attention modules in middle layers as the linchpins for accurate generation.",
+   "usage": {
+    "prompt_tokens": 779,
+    "completion_tokens": 50,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 779
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly states that most tokens in traditional chain-of-thought ensure textual coherence rather than reasoning and that the proposed latent reasoning method achieves a better trade-off between accuracy and efficiency.",
+   "usage": {
+    "prompt_tokens": 901,
+    "completion_tokens": 47,
+    "total_tokens": 948,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 901
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly states that traditional chain-of-thought contains words supporting textual coherence rather than core reasoning and that the proposed latent token approach significantly reduces length while outperforming baselines.",
+   "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 50,
+    "total_tokens": 940,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 890
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract confirms that the paper explores implicit (latent) reasoning via hidden states to solve tasks at speeds comparable to no chain-of-thought, supporting the claim of efficiency gains while maintaining solvability.",
+   "usage": {
+    "prompt_tokens": 876,
+    "completion_tokens": 51,
+    "total_tokens": 927,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 876
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract confirms the paper's method internalizes reasoning steps to simplify the process (latent reasoning) while maintaining high performance, aligning with the sentence's claim about efficiency gains and accuracy.",
+   "usage": {
+    "prompt_tokens": 873,
+    "completion_tokens": 51,
+    "total_tokens": 924,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 873
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the utilization of latent multi-hop reasoning is 'highly contextual, varying across different types of prompts,' which directly supports the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 966,
+    "completion_tokens": 44,
+    "total_tokens": 1010,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 966
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2406.12775",
+   "label": "partial",
+   "reason": "The abstract supports that multi-hop reasoning is contextual and varies by layer, but the specific claim about variation across 'prompt types' is an inference not explicitly stated in the text.",
+   "usage": {
+    "prompt_tokens": 978,
+    "completion_tokens": 46,
+    "total_tokens": 1024,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 978
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evidence for the first hop is substantial while evidence for the second hop and full multi-hop traversal is moderate on average, matching the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 868,
+    "completion_tokens": 51,
+    "total_tokens": 919,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 868
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2412.06769",
+   "label": "partial",
+   "reason": "The abstract confirms the method encodes multiple alternative steps for breadth-first search, but does not mention 'continuous thoughts' explicitly or provide the specific comparative results attributed to it.",
+   "usage": {
+    "prompt_tokens": 803,
+    "completion_tokens": 45,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 803
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the utilization of latent reasoning is 'highly contextual' and varies across prompt types, which directly supports the sentence's claim about the contextual nature of this utilization.",
+   "usage": {
+    "prompt_tokens": 860,
+    "completion_tokens": 51,
+    "total_tokens": 911,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 860
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2406.12775",
+   "label": "partial",
+   "reason": "The abstract supports the finding that latent reasoning is contextually limited to specific layers, but the sentence's broader claim about challenges in developing general-purpose systems across diverse domains is an inference not explicitly stated in the text.",
+   "usage": {
+    "prompt_tokens": 872,
+    "completion_tokens": 53,
+    "total_tokens": 925,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 872
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2501.12948",
+   "label": "partial",
+   "reason": "The abstract confirms the paper uses reinforcement learning but does not state that its training costs remain unclear.",
+   "usage": {
+    "prompt_tokens": 778,
+    "completion_tokens": 33,
+    "total_tokens": 811,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 778
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2405.14838",
+   "label": "partial",
+   "reason": "The abstract confirms the paper uses gradual internalization but does not state or imply that its training costs remain unclear.",
+   "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 36,
+    "total_tokens": 804,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 768
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states that later layers sometimes lack the necessary knowledge or functionality to correctly predict answers for multi-hop queries.",
+   "usage": {
+    "prompt_tokens": 870,
+    "completion_tokens": 34,
+    "total_tokens": 904,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 870
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2402.14328",
+   "label": "partial",
+   "reason": "The abstract confirms that middle layers are critical for implicit reasoning, but it does not state that later layers lack functionality for multi-hop resolution as the sentence claims.",
+   "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 42,
+    "total_tokens": 822,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 780
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper studies how LLMs internally compute multi-hop queries and identifies that failures occur because later layers may lack necessary knowledge.",
+   "usage": {
+    "prompt_tokens": 840,
+    "completion_tokens": 40,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 840
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the study analyzed internal computations and found bridge entities are resolved in early layers while the second hop is solved in later layers.",
+   "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 40,
+    "total_tokens": 890,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 850
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors propose a novel 'back-patching' analysis method where a hidden representation from a later layer is patched back to an earlier layer.",
+   "usage": {
+    "prompt_tokens": 834,
+    "completion_tokens": 43,
+    "total_tokens": 877,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 834
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the bridge entity is resolved in the early layers of the model.",
+   "usage": {
+    "prompt_tokens": 825,
+    "completion_tokens": 29,
+    "total_tokens": 854,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 825
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the second hop commences in later layers and that these layers may lack the necessary knowledge to correctly predict the answer.",
+   "usage": {
+    "prompt_tokens": 829,
+    "completion_tokens": 39,
+    "total_tokens": 868,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 829
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states that in up to 66% of previously incorrect cases, a back-patch exists that results in the correct generation of the answer.",
+   "usage": {
+    "prompt_tokens": 838,
+    "completion_tokens": 43,
+    "total_tokens": 881,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 838
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2406.12775",
+   "label": "supported",
+   "reason": "The abstract explicitly states that later layers sometimes lack the necessary knowledge or functionality to correctly predict answers for multi-hop queries.",
+   "usage": {
+    "prompt_tokens": 827,
+    "completion_tokens": 34,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 827
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper demonstrates reasoning abilities can be incentivized through pure reinforcement learning without human-labeled trajectories.",
+   "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 35,
+    "total_tokens": 780,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 745
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed RL framework facilitates the emergent development of advanced reasoning patterns such as self-reflection, verification, and dynamic strategy adaptation.",
+   "usage": {
+    "prompt_tokens": 747,
+    "completion_tokens": 42,
+    "total_tokens": 789,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 747
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that emergent reasoning patterns can be harnessed to guide and enhance the reasoning capabilities of smaller models.",
+   "usage": {
+    "prompt_tokens": 735,
+    "completion_tokens": 36,
+    "total_tokens": 771,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 735
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that reasoning abilities can be incentivized through pure reinforcement learning, obviating the need for human-labeled reasoning trajectories.",
+   "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 39,
+    "total_tokens": 771,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 732
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed RL framework facilitates the emergent development of self-reflection, verification, and dynamic strategy adaptation.",
+   "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 37,
+    "total_tokens": 773,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 736
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the trained model achieves superior performance on mathematics, coding competitions, and STEM fields compared to counterparts trained via conventional supervised learning.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 40,
+    "total_tokens": 780,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2501.12948",
+   "label": "supported",
+   "reason": "The abstract explicitly states that emergent reasoning patterns from large-scale models can be systematically harnessed to guide and enhance the reasoning capabilities of smaller models.",
+   "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 41,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 736
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper explores whether language models can reason more effectively using internal hidden states instead of explicit natural language chain-of-thought steps.",
+   "usage": {
+    "prompt_tokens": 738,
+    "completion_tokens": 40,
+    "total_tokens": 778,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 738
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of knowledge distillation from a teacher model to enable implicit reasoning vertically among hidden states rather than horizontally through words.",
+   "usage": {
+    "prompt_tokens": 756,
+    "completion_tokens": 39,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 756
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments were conducted on a multi-digit multiplication task and a grade school math problem dataset.",
+   "usage": {
+    "prompt_tokens": 726,
+    "completion_tokens": 33,
+    "total_tokens": 759,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 726
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach enables solving tasks previously not solvable without explicit chain-of-thought.",
+   "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 32,
+    "total_tokens": 763,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 731
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach achieves a speed comparable to no chain-of-thought.",
+   "usage": {
+    "prompt_tokens": 725,
+    "completion_tokens": 29,
+    "total_tokens": 754,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 725
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2311.01460",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method performs reasoning 'vertically' among hidden states in different layers rather than 'horizontally' by producing intermediate words.",
+   "usage": {
+    "prompt_tokens": 729,
+    "completion_tokens": 42,
+    "total_tokens": 771,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 729
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates if models can be taught to internalize CoT steps while maintaining high performance.",
+   "usage": {
+    "prompt_tokens": 733,
+    "completion_tokens": 34,
+    "total_tokens": 767,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 733
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the proposed method of starting with an explicit CoT model, gradually removing intermediate steps, and finetuning to internalize reasoning.",
+   "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 44,
+    "total_tokens": 797,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 753
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract explicitly states the exact accuracy figures and comparison between the internalization method and standard training for GPT-2 Small on multiplication tasks.",
+   "usage": {
+    "prompt_tokens": 751,
+    "completion_tokens": 42,
+    "total_tokens": 793,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 751
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method achieves over 50% accuracy on GSM8K with Mistral 7B without producing intermediate steps.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 40,
+    "total_tokens": 780,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method allows models to internalize CoT steps while maintaining high performance.",
+   "usage": {
+    "prompt_tokens": 724,
+    "completion_tokens": 32,
+    "total_tokens": 756,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 724
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2405.14838",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method of gradually removing intermediate steps and finetuning allows the model to internalize reasoning, thus simplifying the reasoning process.",
+   "usage": {
+    "prompt_tokens": 722,
+    "completion_tokens": 43,
+    "total_tokens": 765,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 722
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces a paradigm for reasoning in a continuous latent space to address the limitations of reasoning constrained to the language space.",
+   "usage": {
+    "prompt_tokens": 764,
+    "completion_tokens": 36,
+    "total_tokens": 800,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 764
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the Coconut method, its use of the last hidden state as continuous thought fed back as input, and its ability to enable breadth-first search reasoning patterns.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 45,
+    "total_tokens": 841,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly states that continuous thoughts can encode multiple alternative next steps, enabling breadth-first search instead of a single deterministic path.",
+   "usage": {
+    "prompt_tokens": 759,
+    "completion_tokens": 36,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 759
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Coconut outperforms CoT on logical reasoning tasks requiring substantial search during planning.",
+   "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 32,
+    "total_tokens": 789,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 757
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed latent reasoning paradigm (Coconut) achieves a better trade-off between accuracy and efficiency compared to CoT.",
+   "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 39,
+    "total_tokens": 794,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 755
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2412.06769",
+   "label": "supported",
+   "reason": "The abstract explicitly states that most word tokens primarily ensure textual coherence and are not essential for reasoning.",
+   "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 30,
+    "total_tokens": 784,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 754
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly states the paper investigates the root causes of compositional reasoning failures and proposes a method (CREME) to patch them.",
+   "usage": {
+    "prompt_tokens": 748,
+    "completion_tokens": 38,
+    "total_tokens": 786,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 748
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of Logit Lens and intervention experiments to locate MHSA modules in middle layers critical for implicit reasoning.",
+   "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 37,
+    "total_tokens": 808,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 771
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly states the development of CREME as a lightweight method to patch errors by editing located MHSA modules.",
+   "usage": {
+    "prompt_tokens": 744,
+    "completion_tokens": 34,
+    "total_tokens": 778,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 744
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the research uncovers that most compositional reasoning failures stem from improperly generated or leveraged implicit reasoning results.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 37,
+    "total_tokens": 778,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly states that implicit reasoning results surface within middle layers and play a causative role in shaping final explicit reasoning results.",
+   "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 36,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 745
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly states that multi-head self-attention (MHSA) modules within middle layers emerge as the linchpins in accurate generation and leveraging of implicit reasoning results.",
+   "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 45,
+    "total_tokens": 791,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 746
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2402.14328",
+   "label": "supported",
+   "reason": "The abstract explicitly states that CREME is a method developed to patch errors in compositional reasoning by editing the located MHSA modules.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 37,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states the authors' goal is to seek the simplest approach to achieve test-time scaling and strong reasoning performance.",
+   "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 35,
+    "total_tokens": 846,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 811
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the curation of the s1K dataset based on difficulty, diversity, and quality, and details the development of budget forcing to control test-time compute by terminating or lengthening the thinking process.",
+   "usage": {
+    "prompt_tokens": 843,
+    "completion_tokens": 54,
+    "total_tokens": 897,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 843
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors supervised finetuned Qwen2.5-32B-Instruct on s1K and equipped it with budget forcing.",
+   "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 44,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 817
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that s1-32B exceeds o1-preview on competition math questions by up to 27% on MATH and AIME24.",
+   "usage": {
+    "prompt_tokens": 819,
+    "completion_tokens": 46,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 819
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that scaling s1-32B with budget forcing allows extrapolating performance from 50% to 57% on AIME24.",
+   "usage": {
+    "prompt_tokens": 819,
+    "completion_tokens": 46,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 819
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that budget forcing can lead the model to double-check its answer and fix incorrect reasoning steps.",
+   "usage": {
+    "prompt_tokens": 805,
+    "completion_tokens": 33,
+    "total_tokens": 838,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 805
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2501.19393",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model, data, and code are open-source.",
+   "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 27,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 27
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 800
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes a hybrid representation mixing latent and text tokens to reduce computation (efficiency) while stating the approach outperforms baselines (maintaining/improving performance).",
+   "usage": {
+    "prompt_tokens": 748,
+    "completion_tokens": 47,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 748
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly states the proposal to partially abstract initial reasoning steps using latent discrete tokens generated by VQ-VAE to reduce reasoning trace length.",
+   "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 40,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 755
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the two scenarios (training from scratch for Keys-Finding Maze and fine-tuning with extended vocabulary) and the specific training procedure involving random mixing of latent and text tokens.",
+   "usage": {
+    "prompt_tokens": 776,
+    "completion_tokens": 49,
+    "total_tokens": 825,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 776
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed hybrid representation 'significantly reducing the length of reasoning traces'.",
+   "usage": {
+    "prompt_tokens": 737,
+    "completion_tokens": 31,
+    "total_tokens": 768,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 737
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed approach consistently outperforms baseline methods in various benchmarks.",
+   "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 29,
+    "total_tokens": 768,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 739
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the introduced training procedure randomly mixes latent and text tokens to enable fast adaptation to new latent tokens.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 35,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2502.03275",
+   "label": "supported",
+   "reason": "The abstract explicitly states that chain-of-thought data results in lengthy inputs where many words support textual coherence rather than core reasoning information.",
+   "usage": {
+    "prompt_tokens": 744,
+    "completion_tokens": 37,
+    "total_tokens": 781,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 744
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states the study investigates whether LLMs latently perform multi-hop reasoning by identifying bridge entities and using knowledge about them.",
+   "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 38,
+    "total_tokens": 870,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 832
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the methodology of analyzing two hops individually by testing if indirect mentions increase internal recall (first hop) and if increased recall improves knowledge utilization (second hop).",
+   "usage": {
+    "prompt_tokens": 860,
+    "completion_tokens": 45,
+    "total_tokens": 905,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 860
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the authors consider the co-occurrence of the two reasoning hops as indicative of latent multi-hop reasoning.",
+   "usage": {
+    "prompt_tokens": 820,
+    "completion_tokens": 37,
+    "total_tokens": 857,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 820
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states there is strong evidence of latent multi-hop reasoning for certain relation types with the pathway used in more than 80% of prompts.",
+   "usage": {
+    "prompt_tokens": 833,
+    "completion_tokens": 42,
+    "total_tokens": 875,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 833
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the utilization of latent reasoning is highly contextual and varies across different types of prompts.",
+   "usage": {
+    "prompt_tokens": 819,
+    "completion_tokens": 32,
+    "total_tokens": 851,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 819
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that evidence for the second hop and full multi-hop traversal is moderate on average, while evidence for the first hop is substantial.",
+   "usage": {
+    "prompt_tokens": 827,
+    "completion_tokens": 40,
+    "total_tokens": 867,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 827
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states there is a clear scaling trend with increasing model size for the first hop but not for the second hop.",
+   "usage": {
+    "prompt_tokens": 822,
+    "completion_tokens": 36,
+    "total_tokens": 858,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 822
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2402.16837",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the utilization of latent reasoning is highly contextual and varies across different types of prompts.",
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 32,
+    "total_tokens": 862,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 830
+    }
+   }
+  }
+ ]
+}

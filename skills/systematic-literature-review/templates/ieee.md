@@ -58,7 +58,7 @@ Follow this structure verbatim. Note that IEEE reports use **numeric citations t
 
 ## Methodology
 
-This review surveyed <N> arXiv papers retrieved on <YYYY-MM-DD> using the query `<query>`<, filtered to category <cat>><, published between <start_date> and <end_date>>. Papers were sorted by <relevance | submission date> and the top <N> were included. Metadata extraction was performed by language-model agents, with cross-paper synthesis performed by the lead agent.
+This review surveyed <N> arXiv papers retrieved on <YYYY-MM-DD> using the query `<query>`<, filtered to category <cat>><, published between <start_date> and <end_date>>. Papers were sorted by <relevance | submission date> and the top <N> were included. Metadata extraction was performed by language-model agents from each paper's full text (arXiv HTML; <k> papers had only an abstract), with every key finding tied to a quote that code checked against the paper, with cross-paper synthesis performed by the lead agent.
 
 **Limitations of this review**: arXiv preprints are not peer-reviewed; coverage is limited to arXiv.
 
@@ -93,9 +93,9 @@ This review surveyed <N> arXiv papers retrieved on <YYYY-MM-DD> using the query 
 **Research question**: <1 sentence>
 **Methodology**: <1-2 sentences>
 **Key findings**:
-- <bullet>
-- <bullet>
-- <bullet>
+- <finding, saying no more than its quote> [E<n>]
+- <finding> [E<n>]
+- <finding> [E<n>]
 **Limitations**: <1-2 sentences>
 
 ### [2] <Next paper>

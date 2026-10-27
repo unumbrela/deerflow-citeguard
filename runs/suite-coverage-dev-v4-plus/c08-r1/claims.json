@@ -1,0 +1,548 @@
+{
+ "stats": {
+  "ambiguous": 2,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper introduces Group Sequence Policy Optimization (GSPO), a reinforcement learning algorithm that defines importance ratios based on sequence likelihood rather than token-level metrics.",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "GSPO performs sequence-level clipping, rewarding, and optimization, achieving superior training efficiency and performance compared to GRPO.",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The algorithm notably stabilizes Mixture-of-Experts (MoE) RL training and has been instrumental in improvements to Qwen3 models.",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Improved stability for MoE RL training",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Demonstrated superior performance over GRPO",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "GSPO represents a direct evolution from GRPO, addressing limitations in token-level optimization by operating at the sequence level.",
+   "ids": [
+    "2507.18071"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper challenges the prevailing view that GRPO's efficacy stems from large group sizes for accurate statistical estimates.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Instead, the authors propose that GRPO's effectiveness arises from its implicit contrastive objective, structurally related to preference learning methods like DPO.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This insight motivates 2-GRPO, a variant using only two rollouts that retains 97.6% of 16-GRPO's performance while requiring only 12.5% of rollouts and 21% of training time.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Theoretical analysis revealing GRPO's contrastive nature",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "2-GRPO variant with minimal group size",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Significant efficiency improvements with maintained performance",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Provides fundamental theoretical insights into GRPO's mechanisms and demonstrates that large group sizes are unnecessary.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This work revisits GRPO from a REINFORCE-like algorithm perspective, finding that a simple rejection sampling baseline (RAFT) yields competitive performance.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The main advantage of GRPO arises from discarding prompts with entirely incorrect responses rather than reward normalization.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The authors propose Reinforce-Rej, filtering both entirely incorrect and entirely correct samples, improving KL efficiency and stability.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Critical analysis of GRPO's effectiveness sources",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "RAFT as a robust baseline",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Reinforce-Rej as a lightweight alternative",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Questions the necessity of GRPO's complexity and advocates for simpler, more interpretable approaches.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "MGRPO addresses inefficient exploration dynamics in standard GRPO by introducing a two-layer architecture.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The first layer generates initial responses, while the second layer identifies and corrects errors, creating a self-correction loop.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This provides implicit process-level supervision without requiring densely-annotated reward models, significantly outperforming standard GRPO on mathematical reasoning benchmarks.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Superior performance on reasoning tasks",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Extends GRPO to enable self-correction capabilities, addressing the single-error invalidation problem in complex reasoning chains.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper extends GRPO-style training to diffusion models through DiffusionNFT, optimizing directly on the forward process via flow matching.",
+   "ids": [
+    "2509.16117"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DiffusionNFT contrasts positive and negative generations, incorporating reinforcement signals into supervised learning.",
+   "ids": [
+    "2509.16117"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "It achieves up to 25× efficiency improvement over FlowGRPO, eliminates likelihood estimation needs, and works with arbitrary black-box solvers.",
+   "ids": [
+    "2509.16117"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Extension of GRPO principles to diffusion models",
+   "ids": [
+    "2509.16117"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Forward process optimization via flow matching",
+   "ids": [
+    "2509.16117"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Dramatic efficiency improvements (25× over FlowGRPO)",
+   "ids": [
+    "2509.16117"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Demonstrates GRPO's applicability beyond language models to diffusion-based generation, addressing intractable likelihood challenges.",
+   "ids": [
+    "2509.16117"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "SAPO replaces hard clipping with smooth, temperature-controlled gating that adaptively attenuates off-policy updates while preserving useful learning signals.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Unlike GSPO's hard clipping that suppresses all gradients for sequences with off-policy tokens, SAPO selectively down-weights only offending tokens.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Compared to GRPO, SAPO replaces hard token-level clipping with smooth scaling, enabling more informative and stable updates.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Soft gating mechanism replacing hard clipping",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Token-adaptive while maintaining sequence coherence",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Improved training stability and Pass@1 performance",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Addresses GRPO's hard clipping limitations through adaptive, smooth scaling for more stable optimization.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "DAPO introduces Decoupled Clip and Dynamic Sampling Policy Optimization, achieving 50 points on AIME 2024 using Qwen2.5-32B base model.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The paper open-sources a complete state-of-the-art RL system with four key techniques, training code built on the verl framework, and curated datasets, addressing the reproducibility challenges in large-scale LLM RL.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Decoupled clip and dynamic sampling techniques",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Reproducible results on reasoning benchmarks",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Provides open-source infrastructure and techniques that complement GRPO-based approaches for large-scale training.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "LUFFY addresses the on-policy limitation of existing RLVR approaches by augmenting training with off-policy reasoning traces.",
+   "ids": [
+    "2504.14945"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The framework combines Mixed-Policy GRPO with theoretically guaranteed convergence and policy shaping via regularized importance sampling.",
+   "ids": [
+    "2504.14945"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "LUFFY achieves +6.4 average gain across six math benchmarks and enables training in scenarios where on-policy RLVR fails completely.",
+   "ids": [
+    "2504.14945"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Off-policy guidance integration with GRPO",
+   "ids": [
+    "2504.14945"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Significant improvements on math benchmarks",
+   "ids": [
+    "2504.14945"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Extends GRPO to incorporate off-policy demonstrations, transcending inherent on-policy limitations.",
+   "ids": [
+    "2504.14945"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "This paper demonstrates that vanilla PPO with GAE (λ=1, γ=1) and rule-based rewards, without KL regularization, is sufficient to scale up reasoning performance, replicating DeepSeek-R1-Zero scaling phenomena.",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The approach achieves superior performance across AIME2024, MATH500, and GPQA Diamond with only 1/10 of DeepSeek-R1-Zero's training steps.",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Minimalist RL approach matching state-of-the-art",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "10× efficiency improvement over DeepSeek-R1-Zero",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Questions the necessity of complex algorithms like GRPO, showing that simpler approaches can achieve comparable results.",
+   "ids": [
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "TOPR uses asymmetric, tapered importance sampling for stable learning without KL regularization.",
+   "ids": [
+    "2503.14286"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "The algorithm handles positive and negative examples in a unified framework with Monte Carlo simplicity.",
+   "ids": [
+    "2503.14286"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Experiments show TOPR matches 70B-parameter model performance with 8B models by properly leveraging both positive and negative examples in the off-policy regime.",
+   "ids": [
+    "2503.14286"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Tapered importance sampling for stability",
+   "ids": [
+    "2503.14286"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Matching larger model performance with smaller models",
+   "ids": [
+    "2503.14286"
+   ]
+  },
+  {
+   "section": "Annotated Bibliography",
+   "kind": "annotation",
+   "text": "Provides an alternative approach to GRPO that achieves similar goals through off-policy REINFORCE with tapered sampling.",
+   "ids": [
+    "2503.14286"
+   ]
+  },
+  {
+   "section": "Synthesis and Analysis",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) fundamentally challenge the assumption that large group sizes are necessary, demonstrating that GRPO's efficacy stems from implicit contrastive learning rather than statistical accuracy.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Synthesis and Analysis",
+   "kind": "synthesis",
+   "text": "Xiong et al. (2025) and Hu et al. (2025) further question GRPO's complexity, showing that simpler approaches like rejection sampling and vanilla PPO can achieve competitive or superior results.",
+   "ids": [
+    "2504.11343",
+    "2503.24290"
+   ]
+  },
+  {
+   "section": "Synthesis and Analysis",
+   "kind": "synthesis",
+   "text": "Stability Enhancements: Gao et al. (2025) introduce SAPO's soft gating mechanism, replacing hard clipping with adaptive scaling for more stable updates.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Synthesis and Analysis",
+   "kind": "synthesis",
+   "text": "Efficiency Improvements: Wu et al. (2025) demonstrate that minimal group sizes suffice, while Ding et al. (2025) show that multi-layer architectures with self-correction improve sample efficiency.",
+   "ids": [
+    "2510.00977",
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Synthesis and Analysis",
+   "kind": "synthesis",
+   "text": "Off-Policy Extensions: Yan et al. (2025) and Le Roux et al. (2025) extend GRPO-related approaches to incorporate off-policy data, addressing fundamental limitations of on-policy training.",
+   "ids": [
+    "2504.14945",
+    "2503.14286"
+   ]
+  },
+  {
+   "section": "Synthesis and Analysis",
+   "kind": "synthesis",
+   "text": "Yu et al. (2025) and Hu et al. (2025) provide crucial open-source implementations, addressing reproducibility challenges in large-scale RL training.",
+   "ids": [
+    "2503.14476",
+    "2503.24290"
+   ]
+  }
+ ]
+}

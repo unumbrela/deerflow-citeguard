@@ -57,7 +57,7 @@ Follow this structure verbatim when writing the SLR report body. Fill in content
 
 ## Methodology
 
-This review surveyed <N> arXiv papers retrieved on <YYYY-MM-DD> using the query `<query>`<, filtered to category <cat>><, published between <start_date> and <end_date>>. Papers were sorted by <relevance | submission date> and the top <N> were included. Metadata extraction (research question, methodology, key findings, limitations) was performed by language-model agents, with cross-paper synthesis performed by the lead agent.
+This review surveyed <N> arXiv papers retrieved on <YYYY-MM-DD> using the query `<query>`<, filtered to category <cat>><, published between <start_date> and <end_date>>. Papers were sorted by <relevance | submission date> and the top <N> were included. Metadata extraction (research question, methodology, key findings, limitations) was performed by language-model agents from each paper's full text (arXiv HTML; <k> papers had only an abstract), with every key finding tied to a quote that code checked against the paper, with cross-paper synthesis performed by the lead agent.
 
 **Limitations of this review**: arXiv preprints are not peer-reviewed; some included papers may not reflect their final published form. Coverage is limited to arXiv — papers published directly in venues without arXiv preprints are not represented.
 
@@ -92,9 +92,9 @@ This review surveyed <N> arXiv papers retrieved on <YYYY-MM-DD> using the query 
 **Research question**: <1 sentence from Phase 3 metadata>
 **Methodology**: <1-2 sentences>
 **Key findings**:
-- <bullet>
-- <bullet>
-- <bullet>
+- <finding, saying no more than its quote> [E<n>]
+- <finding> [E<n>]
+- <finding> [E<n>]
 **Limitations**: <1-2 sentences>
 
 ### <Next paper>

@@ -17,12 +17,27 @@ to the user even when rejected. The gate can withhold the "delivered" signal
 from the model, not withdraw the file; the messages say so instead of
 pretending otherwise.
 
+With full text on (P2.4), report sentences carry evidence ids ``[E3]`` issued by
+``cite_evidence`` for quotes code found in the paper. The gate rejects ids that
+were never issued, or that quote a paper the report does not cite, and on
+acceptance writes the evidence appendix (quote, paper, link to the paragraph)
+into the report itself, so no quote is re-typed by the model.
+
 Two more checks close ways around the gate:
 - A report saved but never presented was never checked (2 of 16 flash runs).
   ``after_model`` sees the model about to finish and adds the ``present_files``
   call itself, so the check above runs. Extension hooks cannot ``jump_to``
   (the host's wrapper does not carry the declaration), but the agent loop
   routes on the last message's tool calls, so adding one is enough.
+- The lead agent reading papers itself (full text): in a plus smoke run it
+  skipped the subagents, made 27 reads in its own context, took 15 minutes
+  and recorded 5 quotes where a delegated run recorded 30. The gate is
+  lead-only, so a ``read_paper`` result it sees came from the lead; it is
+  replaced by an instruction to dispatch the batches.
+- A model that stops while its report is rejected (it wrote "Let me fix this"
+  and ended in a plus smoke run) leaves the user an unverified file and a
+  promise. ``after_model`` presents the rejected file again, so the model
+  either fixes it or, after ``max_blocks`` rejections, must tell the user.
 - A search without the category the user named searched the wrong field (9 of
   16 flash runs). The search result is replaced by an error and the stored
   search is marked rejected, so ``get_batch`` refuses it and a report built on
@@ -42,14 +57,16 @@ from typing import Any
 from langchain.agents.middleware import AgentMiddleware
 from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
 
-from .core import ID_RE, normalise_category, user_categories, verify_report, wrong_year_dates
+from .core import ID_RE, check_evidence, normalise_category, render_appendix, strip_appendix, user_categories, verify_report, wrong_year_dates
 from .store import PaperStore
 
 MARKER = "[citation-gate]"
 OUTPUTS_PREFIX = "/mnt/user-data/outputs/"
 PRESENT_TOOL = "present_files"
 AUTO_PRESENT_ID = "citation-gate-present-"
+REPRESENT_ID = "citation-gate-represent-"
 DECISIONS = {"accepted", "rejected", "released_unverified"}
+EVIDENCE_PROBLEMS = ("unknown_evidence", "uncited_evidence", "misattached_evidence", "unused_evidence", "no_evidence")
 MAX_WARNINGS_SHOWN = 8
 
 
@@ -62,6 +79,13 @@ def _thread_id(runtime: Any) -> str | None:
 def _is_search(name: str | None) -> bool:
     # The host exposes plugin tools as ext_<namespace>_<tool>_<hash>, e.g. ext_community_scholar_search_1607103162c3.
     return name == "search" or bool(name and name.startswith("ext_") and "_scholar_search" in name)
+
+
+def _is_read_paper(name: str | None) -> bool:
+    return name == "read_paper" or bool(name and name.startswith("ext_") and "_scholar_read_paper" in name)
+
+
+LEAD_READ = f"{MARKER} read_paper is for the extraction subagents, not for you: reading every paper here fills your context and leaves the findings without checked quotes. Dispatch one `task` subagent per batch with the Phase 3 prompt, at most 3 per turn."
 
 
 def _user_request(messages: list[Any]) -> str:
@@ -135,6 +159,16 @@ def _rejection(path: str, result: dict, attempt: int, max_blocks: int, unchanged
         lines.append(
             f"The user asked for {result['expected']} papers and the search found them, but the report cites only {result['cited']}. Add these retrieved papers (their data is in the subagent results): {', '.join(result['missing'])}."
         )
+    if result.get("unknown_evidence"):
+        lines.append(f"These evidence ids were never issued by cite_evidence in this review: {', '.join(result['unknown_evidence'])}. Use only ids from the subagent results, or drop the marker.")
+    if result.get("uncited_evidence"):
+        lines.append(f"These evidence ids quote papers the report does not cite: {', '.join(result['uncited_evidence'])}. Attach each [E#] to a sentence citing its paper.")
+    if result.get("misattached_evidence"):
+        lines.append(f"These evidence ids sit in sentences that do not cite their paper: {', '.join(result['misattached_evidence'])}. Put each [E#] at the end of a sentence that cites that paper and states what its quote says.")
+    if result.get("unused_evidence"):
+        lines.append(f"These cited papers have checked quotes that the report never uses: {'; '.join(result['unused_evidence'])}. Attach at least one to a sentence about that paper.")
+    if result.get("no_evidence"):
+        lines.append(f"The subagents recorded {result['evidence_available']} checked quotes, but the report uses none. Add the [E#] ids from the subagent results to the sentences they support.")
     if result["warnings"]:
         lines.append("Also fix: " + "; ".join(result["warnings"][:MAX_WARNINGS_SHOWN]))
     lines.append("Save the file, then call present_files again.")
@@ -149,11 +183,15 @@ def _released(path: str, result: dict, max_blocks: int) -> str:
         problems.append(f"these dates are wrong: {', '.join(result['date_errors'])}")
     if result["missing"]:
         problems.append(f"the report covers {result['cited']} of the {result['expected']} papers requested")
+    if any(result.get(k) for k in EVIDENCE_PROBLEMS):
+        problems.append("its evidence markers could not be checked")
     return f"{MARKER} CITATION CHECK FAILED again after {max_blocks} rejections; {path} is presented as-is. You MUST tell the user plainly that {'; and '.join(problems)}."
 
 
 def _accepted(result: dict) -> str:
     note = f"{MARKER} Citation check passed: {result['cited']} arXiv ids cited, all from this thread's search ({result['retrieved']} retrieved)."
+    if result.get("evidence_used") is not None:
+        note += f" {result['evidence_used']} evidence ids checked; the gate appended the Evidence section (quotes and links) to the file. Do not edit that section."
     if result["warnings"]:
         note += " Fix these entries to match the search data exactly: " + "; ".join(result["warnings"][:MAX_WARNINGS_SHOWN])
     return note
@@ -186,12 +224,16 @@ class CitationGateMiddleware(AgentMiddleware):
         fresh = [m for m in results if MARKER not in _text(m.content)]
         searched = [m for m in fresh if _is_search(m.name)]
         presented = [m for m in fresh if m.name == PRESENT_TOOL]
-        if turn is None or not (searched or presented):
+        reads = [m for m in fresh if _is_read_paper(m.name)]
+        if turn is None or not (searched or presented or reads):
             return None
         search = self.store.load_search(thread_id)
         if search is None:
             return None  # not a literature-review thread
         updates = self._check_category(thread_id, search, searched, _user_request(messages)) if searched else []
+        if reads:
+            self.store.log(thread_id, {"event": "lead_read_blocked", "search_id": search["search_id"], "count": len(reads), "at": time.time()})
+            updates += [m.model_copy(update={"content": LEAD_READ}) for m in reads]
         outputs_path = (state.get("thread_data") or {}).get("outputs_path")
         if presented and not outputs_path:
             self.store.log(thread_id, {"event": "skipped", "reason": "no outputs_path", "search_id": search["search_id"], "at": time.time()})
@@ -205,6 +247,8 @@ class CitationGateMiddleware(AgentMiddleware):
             notes = "\n\n".join(note for _, note in checks)
             if message.tool_call_id.startswith(AUTO_PRESENT_ID):
                 notes = f"{MARKER} You saved this report but did not call present_files, so the gate presented it to check it.\n\n{notes}"
+            elif message.tool_call_id.startswith(REPRESENT_ID):
+                notes = f"{MARKER} You stopped while this report was still rejected, so the gate presented it again. Fix it now with tool calls; do not end your turn with a plan.\n\n{notes}"
             # A rejection replaces the success text, so the model cannot read the delivery as done.
             content = notes if any(rejected for rejected, _ in checks) else f"{_text(message.content)}\n\n{notes}"
             updates.append(message.model_copy(update={"content": content}))
@@ -241,9 +285,17 @@ class CitationGateMiddleware(AgentMiddleware):
         outputs_path = (state.get("thread_data") or {}).get("outputs_path")
         if search is None or not outputs_path:
             return None
-        handled = DECISIONS | {"auto_presented"}
-        if any(r.get("search_id") == search["search_id"] and r.get("event") in handled for r in self.store.read_log(thread_id)):
-            return None  # a report for this search was already checked, or already presented by the gate once
+        log = [r for r in self.store.read_log(thread_id) if r.get("search_id") == search["search_id"]]
+        decisions = [r for r in log if r.get("event") in DECISIONS]
+        if decisions:
+            if decisions[-1]["event"] != "rejected":
+                return None  # accepted, or released with an instruction to tell the user
+            # Rejections are capped at max_blocks, after which the check releases the file, so this cannot loop.
+            self.store.log(thread_id, {"event": "re_presented", "search_id": search["search_id"], "path": decisions[-1]["path"], "at": time.time()})
+            call = {"id": f"{REPRESENT_ID}{uuid.uuid4().hex[:12]}", "name": PRESENT_TOOL, "args": {"filepaths": [decisions[-1]["path"]]}, "type": "tool_call"}
+            return {"messages": [last.model_copy(update={"tool_calls": [call]})]}
+        if any(r.get("event") == "auto_presented" for r in log):
+            return None  # already presented by the gate once
         root = Path(outputs_path)
         since = search.get("searched_at", 0) - 5  # small slack for file-system clock granularity
         reports = sorted(p for p in root.glob("**/*.md") if p.is_file() and p.stat().st_mtime >= since and ID_RE.search(p.read_text(encoding="utf-8", errors="replace")))
@@ -260,7 +312,8 @@ class CitationGateMiddleware(AgentMiddleware):
         host = _host_path(virtual, outputs_path)
         if host is None or not host.is_file():
             return None
-        text = host.read_text(encoding="utf-8", errors="replace")
+        # The appendix is the gate's own output and links every evidence paper, so it is not part of what is checked.
+        text = strip_appendix(host.read_text(encoding="utf-8", errors="replace"))
         # A rejected search's papers never reached the model, so nothing can be traced to it.
         result = verify_report(text, [] if search.get("rejected") else search["papers"])
         result["search_rejected"] = bool(search.get("rejected"))
@@ -272,11 +325,27 @@ class CitationGateMiddleware(AgentMiddleware):
         # h02-r2 in round two cited 9 of 10 retrieved papers; the user asked for 10, so that is a shortfall the code can see.
         result["expected"] = min(search.get("requested") or 0, len(search["papers"]))
         result["missing"] = result["not_cited"][: max(0, result["expected"] - (result["cited"] - len(result["unknown_ids"])))]
-        result["ok"] = result["ok"] and not result["date_errors"] and not result["missing"] and not result["search_rejected"]
+        evidence = [e for e in self.store.read_evidence(thread_id) if e.get("search_id") == search["search_id"]] if search.get("full_text") else []
+        if search.get("full_text"):
+            cited = [pid for pid in (p["id"] for p in search["papers"]) if pid not in result["not_cited"]]
+            result.update(check_evidence(text, evidence, search["papers"], cited))
+            result["evidence_available"] = len(evidence)
+            result["no_evidence"] = bool(evidence) and not result["used"] and not result["unknown_evidence"]
+        evidence_ok = not any(result.get(k) for k in EVIDENCE_PROBLEMS)
+        result["ok"] = result["ok"] and not result["date_errors"] and not result["missing"] and not result["search_rejected"] and evidence_ok
         prior = [r for r in self.store.read_log(thread_id) if r.get("search_id") == search["search_id"] and r.get("event") == "rejected"]
         digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
         record = {"search_id": search["search_id"], "path": virtual, "sha256": digest, "at": time.time(), **{k: result[k] for k in ("cited", "retrieved", "unknown_ids", "date_errors", "missing", "warnings", "search_rejected")}}
+        if search.get("full_text"):
+            record.update({k: result[k] for k in ("used", "unknown_evidence", "uncited_evidence", "misattached_evidence", "unused_evidence", "papers_without_evidence", "evidence_available")})
         if result["ok"]:
+            if result.get("used"):
+                result["evidence_used"] = len(result["used"])
+                try:
+                    host.write_text(f"{text.rstrip()}\n\n{render_appendix(result['used'], evidence, search.get('retrieved_on', ''))}\n", encoding="utf-8")
+                except OSError as exc:
+                    record["appendix_error"] = str(exc)
+                    result["evidence_used"] = None
             self.store.log(thread_id, {"event": "accepted", **record})
             return False, _accepted(result)
         if len(prior) < self.max_blocks:

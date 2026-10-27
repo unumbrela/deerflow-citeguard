@@ -1,0 +1,1026 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v3",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper proposes LC-Rec using learning-based vector quantization for item indexing to enable direct generation from the entire item set without candidate pre-selection.",
+   "usage": {
+    "prompt_tokens": 1691,
+    "completion_tokens": 48,
+    "total_tokens": 1739,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1691
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm that TokenRec uses a Masked Vector-Quantized (MQ) Tokenizer to quantize masked collaborative representations into discrete tokens for generalizable tokenization of users and items.",
+   "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 55,
+    "total_tokens": 1481,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1426
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The abstract and passages confirm MMGRec uses Graph RQ-VAE to assign Rec-IDs from multimodal and CF information and employs relation-aware self-attention for non-sequential sequences.",
+   "usage": {
+    "prompt_tokens": 1205,
+    "completion_tokens": 50,
+    "total_tokens": 1255,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1205
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract explicitly states that OneRec is the first end-to-end generative model that significantly surpasses current complex and well-designed recommender systems in real-world scenarios.",
+   "usage": {
+    "prompt_tokens": 1459,
+    "completion_tokens": 47,
+    "total_tokens": 1506,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1459
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the proposal of textual ID learning for seamless integration, zero-shot performance comparable to supervised models, and the potential for foundational models decoupled from original datasets.",
+   "usage": {
+    "prompt_tokens": 1460,
+    "completion_tokens": 47,
+    "total_tokens": 1507,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1460
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the method name (CoST), its use of contrastive quantization to capture neighborhood relationships, and the exact performance metrics (43% Recall@5 and 44% NDCG@5) on the MIND dataset.",
+   "usage": {
+    "prompt_tokens": 1382,
+    "completion_tokens": 70,
+    "total_tokens": 1452,
+    "completion_tokens_details": {
+     "text_tokens": 70
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1382
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the introduction of the BLaIR benchmark, its purpose for evaluating LLMs as semantic encoders, and the specific statistics of the new Amazon Reviews 2023 dataset (570 million reviews and 48 million items).",
+   "usage": {
+    "prompt_tokens": 1470,
+    "completion_tokens": 71,
+    "total_tokens": 1541,
+    "completion_tokens_details": {
+     "text_tokens": 71
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1470
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2404.16555",
+   "label": "unsupported",
+   "reason": "The provided evidence describes a unified single-stream approach (Graph RQ-VAE) that fuses behavioral and multimodal information, which contradicts the sentence's attribution of a 'two-stream architecture that separately processes' these inputs to this paper.",
+   "usage": {
+    "prompt_tokens": 1366,
+    "completion_tokens": 63,
+    "total_tokens": 1429,
+    "completion_tokens_details": {
+     "text_tokens": 63
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1366
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The evidence confirms the paper proposes a unified approach integrating language and collaborative semantics, aligning with the sentence's description of it as a 'unified single-stream' method.",
+   "usage": {
+    "prompt_tokens": 1348,
+    "completion_tokens": 45,
+    "total_tokens": 1393,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1348
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2502.18965",
+   "label": "unsupported",
+   "reason": "The provided evidence describes a unified generative model using an encoder-decoder structure and session-wise generation, but it does not mention or support the specific claim that the paper proposes a 'unified single-stream approach' in contrast to 'two-stream architectures' processing behavioral ",
+   "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 71,
+    "total_tokens": 1498,
+    "completion_tokens_details": {
+     "text_tokens": 71
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1427
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2404.14774",
+   "label": "unsupported",
+   "reason": "The provided evidence describes a method using vector quantization to create discrete semantic tokens, with no mention of the specific approach or authors (Zhu et al.) attributed in the sentence.",
+   "usage": {
+    "prompt_tokens": 1755,
+    "completion_tokens": 50,
+    "total_tokens": 1805,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1755
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The evidence confirms that this paper (TokenRec/Qu et al., 2024) utilizes a method involving learned semantic tokens via vector quantization of collaborative embeddings, matching the sentence's description.",
+   "usage": {
+    "prompt_tokens": 1378,
+    "completion_tokens": 55,
+    "total_tokens": 1433,
+    "completion_tokens_details": {
+     "text_tokens": 55
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1378
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The paper explicitly states it proposes representing items as unique textual IDs using human language tokens, which directly matches the sentence's description.",
+   "usage": {
+    "prompt_tokens": 1515,
+    "completion_tokens": 36,
+    "total_tokens": 1551,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1515
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The paper's abstract and results explicitly state that LLM rankings on the BLaIR benchmark show little correlation with general-purpose embedding benchmarks like MTEB, confirming the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 1354,
+    "completion_tokens": 48,
+    "total_tokens": 1402,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1354
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that OneRec is a unified end-to-end generative model designed to replace the cascaded retrieve-and-rank framework and that it significantly surpasses current systems in real-world scenarios.",
+   "usage": {
+    "prompt_tokens": 1206,
+    "completion_tokens": 53,
+    "total_tokens": 1259,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1206
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the encoder-decoder with sparse MoE, session-wise generation, and Iterative Preference Alignment using DPO with a reward model.",
+   "usage": {
+    "prompt_tokens": 1327,
+    "completion_tokens": 43,
+    "total_tokens": 1370,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1327
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract explicitly states that OneRec is the first end-to-end generative model that significantly surpasses current complex and well-designed recommender systems in real-world scenarios.",
+   "usage": {
+    "prompt_tokens": 1440,
+    "completion_tokens": 44,
+    "total_tokens": 1484,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1440
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the paper adopts a sparse MoE architecture to scale model capacity without proportionally increasing computational costs (FLOPs).",
+   "usage": {
+    "prompt_tokens": 1570,
+    "completion_tokens": 43,
+    "total_tokens": 1613,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1570
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the proposed session-wise generation approach is more elegant and contextually coherent than point-by-point prediction.",
+   "usage": {
+    "prompt_tokens": 1315,
+    "completion_tokens": 39,
+    "total_tokens": 1354,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1315
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the use of Iterative Preference Alignment with customized DPO sampling to significantly improve generated result quality.",
+   "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 41,
+    "total_tokens": 1400,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1359
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and full text passages confirm the deployment in Kuaishou resulted in a 1.6% (specifically 1.68%) increase in watch-time.",
+   "usage": {
+    "prompt_tokens": 1244,
+    "completion_tokens": 47,
+    "total_tokens": 1291,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1244
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The paper explicitly introduces a benchmark to evaluate LLMs as semantic encoders for recommendation and finds their performance rankings differ significantly from general-purpose embedding benchmarks like MTEB.",
+   "usage": {
+    "prompt_tokens": 1423,
+    "completion_tokens": 51,
+    "total_tokens": 1474,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1423
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly confirm the introduction of the BLaIR benchmark, the new Amazon Reviews 2023 dataset, experiments with 11 LLMs, and the specific tasks of sequential recommendation, collaborative filtering, and product search.",
+   "usage": {
+    "prompt_tokens": 1465,
+    "completion_tokens": 69,
+    "total_tokens": 1534,
+    "completion_tokens_details": {
+     "text_tokens": 69
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1465
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that feature engineering is central to recommender systems but that effectively leveraging textual item features remains challenging.",
+   "usage": {
+    "prompt_tokens": 1339,
+    "completion_tokens": 36,
+    "total_tokens": 1375,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1339
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that prior studies rely on general-purpose benchmarks like MTEB for model selection, which overlooks the unique characteristics and requirements of recommendation tasks.",
+   "usage": {
+    "prompt_tokens": 1412,
+    "completion_tokens": 45,
+    "total_tokens": 1457,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1412
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the BLaIR benchmark includes a new Amazon Reviews 2023 dataset with over 570 million reviews and 48 million items.",
+   "usage": {
+    "prompt_tokens": 1291,
+    "completion_tokens": 51,
+    "total_tokens": 1342,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1291
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that LLM rankings on BLaIR show little correlation with MTEB, highlighting the unique challenges of semantic encoding in recommendation.",
+   "usage": {
+    "prompt_tokens": 1369,
+    "completion_tokens": 45,
+    "total_tokens": 1414,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1369
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The paper's abstract and passages explicitly state that it proposes a generative model to address the inference cost, interaction modeling, and false-negative issues inherent in the traditional embed-and-retrieve paradigm.",
+   "usage": {
+    "prompt_tokens": 1226,
+    "completion_tokens": 49,
+    "total_tokens": 1275,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1226
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the use of Graph RQ-VAE for Rec-ID assignment from multimodal and CF data, and a Transformer with relation-aware self-attention to autoregressively generate these IDs.",
+   "usage": {
+    "prompt_tokens": 1430,
+    "completion_tokens": 54,
+    "total_tokens": 1484,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1430
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the model predicts token tuples (Rec-IDs) identifying items in an autoregressive manner.",
+   "usage": {
+    "prompt_tokens": 1202,
+    "completion_tokens": 41,
+    "total_tokens": 1243,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1202
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that Graph RQ-VAE is designed to fuse multimodal and collaborative filtering information to quantize representations into a sequence of semantic tokens (Rec-ID).",
+   "usage": {
+    "prompt_tokens": 1304,
+    "completion_tokens": 48,
+    "total_tokens": 1352,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1304
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the model uses a relation-aware self-attention mechanism to handle non-sequential interaction sequences by modeling pairwise relations instead of using absolute positional encoding.",
+   "usage": {
+    "prompt_tokens": 1066,
+    "completion_tokens": 48,
+    "total_tokens": 1114,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1066
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that extensive experiments were conducted to evaluate MMGRec's effectiveness against state-of-the-art methods.",
+   "usage": {
+    "prompt_tokens": 964,
+    "completion_tokens": 36,
+    "total_tokens": 1000,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 964
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper proposes a tokenization strategy to capture high-order collaborative knowledge into discrete tokens while addressing the challenge of generalizing to new or unseen users.",
+   "usage": {
+    "prompt_tokens": 1594,
+    "completion_tokens": 50,
+    "total_tokens": 1644,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1594
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly describe the TokenRec framework, its Masked Vector-Quantized (MQ) Tokenizer for quantizing collaborative filtering representations, and its generative retrieval paradigm that bypasses auto-regressive decoding and beam search.",
+   "usage": {
+    "prompt_tokens": 1485,
+    "completion_tokens": 64,
+    "total_tokens": 1549,
+    "completion_tokens_details": {
+     "text_tokens": 64
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1485
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that TokenRec's tokenization strategy incorporates high-order collaborative knowledge to achieve smooth integration with LLMs.",
+   "usage": {
+    "prompt_tokens": 1306,
+    "completion_tokens": 41,
+    "total_tokens": 1347,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1306
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the MQ-Tokenizer achieves generalizable tokenization for users and items, including those not seen during training.",
+   "usage": {
+    "prompt_tokens": 1413,
+    "completion_tokens": 42,
+    "total_tokens": 1455,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1413
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The passages explicitly state that TokenRec's generative retrieval paradigm eliminates time-consuming auto-regressive decoding and beam search, thereby significantly reducing inference time.",
+   "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 40,
+    "total_tokens": 1604,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1564
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The abstract explicitly states that experiments demonstrate TokenRec outperforms competitive benchmarks, including both traditional and emerging LLM-based recommender systems.",
+   "usage": {
+    "prompt_tokens": 1409,
+    "completion_tokens": 44,
+    "total_tokens": 1453,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1409
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper addresses the struggle to encode items with concise, meaningful IDs and proposes a method to learn such textual ID representations.",
+   "usage": {
+    "prompt_tokens": 1456,
+    "completion_tokens": 45,
+    "total_tokens": 1501,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1456
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper proposes IDGen to represent items as unique, concise, semantically rich textual IDs using human language tokens, trained alongside an LLM-based recommender.",
+   "usage": {
+    "prompt_tokens": 1439,
+    "completion_tokens": 50,
+    "total_tokens": 1489,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1439
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the model was evaluated on sequential recommendation tasks and tested as a foundation model on 6 unseen datasets in a zero-shot setting.",
+   "usage": {
+    "prompt_tokens": 1336,
+    "completion_tokens": 42,
+    "total_tokens": 1378,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1336
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract explicitly states that current research in generative recommendations struggles to effectively encode items using concise yet meaningful ID representations, which directly matches the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 1529,
+    "completion_tokens": 45,
+    "total_tokens": 1574,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1529
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed IDGen approach enables 'seamless integration of personalized recommendations into natural language generation'.",
+   "usage": {
+    "prompt_tokens": 1396,
+    "completion_tokens": 36,
+    "total_tokens": 1432,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1396
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the framework consistently surpasses existing models in sequential recommendation under standard experimental settings, which directly matches the sentence.",
+   "usage": {
+    "prompt_tokens": 1320,
+    "completion_tokens": 37,
+    "total_tokens": 1357,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1320
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and full text passages explicitly state that the zero-shot performance of the pre-trained foundation model is comparable to or surpasses traditional recommendation models based on supervised training.",
+   "usage": {
+    "prompt_tokens": 1326,
+    "completion_tokens": 44,
+    "total_tokens": 1370,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1326
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the approach suggests potential for a foundational generative recommendation model because user history is expressed in natural language and decoupled from the original dataset.",
+   "usage": {
+    "prompt_tokens": 1268,
+    "completion_tokens": 49,
+    "total_tokens": 1317,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1268
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state the paper's goal is to address the semantic gap between LLMs and recommender systems by integrating collaborative semantics through a new model called LC-Rec.",
+   "usage": {
+    "prompt_tokens": 1353,
+    "completion_tokens": 51,
+    "total_tokens": 1404,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1353
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm the proposal of LC-Rec with two main components: a learning-based vector quantization method for item indexing and specially designed tuning tasks to align collaborative and language semantics.",
+   "usage": {
+    "prompt_tokens": 1279,
+    "completion_tokens": 50,
+    "total_tokens": 1329,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1279
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that LC-Rec generates items directly from the entire item set without relying on candidate items or sets.",
+   "usage": {
+    "prompt_tokens": 1146,
+    "completion_tokens": 37,
+    "total_tokens": 1183,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1146
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2311.09049",
+   "label": "partial",
+   "reason": "The evidence confirms the method assigns meaningful and non-conflicting indices based on textual semantics, but it does not state that these indices capture collaborative semantics; rather, the paper describes a separate alignment tuning step to integrate collaborative semantics.",
+   "usage": {
+    "prompt_tokens": 1498,
+    "completion_tokens": 58,
+    "total_tokens": 1556,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1498
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the proposed fine-tuning tasks are designed to enforce or enhance the deep integration of language and collaborative semantics in LLMs.",
+   "usage": {
+    "prompt_tokens": 1203,
+    "completion_tokens": 43,
+    "total_tokens": 1246,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1203
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that LC-Rec outperforms competitive baselines including traditional and existing LLM-based recommenders in extensive experiments.",
+   "usage": {
+    "prompt_tokens": 1211,
+    "completion_tokens": 40,
+    "total_tokens": 1251,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1211
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The paper explicitly states its goal is to capture neighborhood relationships among items during quantization, which directly addresses the research question posed in the sentence.",
+   "usage": {
+    "prompt_tokens": 1454,
+    "completion_tokens": 42,
+    "total_tokens": 1496,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1454
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that CoST is a contrastive quantization-based approach designed to harness both item relationships (neighborhood) and semantic information for learning tokens.",
+   "usage": {
+    "prompt_tokens": 1348,
+    "completion_tokens": 45,
+    "total_tokens": 1393,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1348
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the method (CoST) was evaluated on the MIND dataset against baselines like random hashing and reconstruction loss.",
+   "usage": {
+    "prompt_tokens": 1115,
+    "completion_tokens": 39,
+    "total_tokens": 1154,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1115
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that existing methods like RQ-VAE rely on reconstruction loss and fail to capture essential neighborhood relationships, which is the exact claim made in the sentence.",
+   "usage": {
+    "prompt_tokens": 1647,
+    "completion_tokens": 48,
+    "total_tokens": 1695,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1647
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and Passage S1.p5 explicitly state that CoST achieves up to a 43% improvement in Recall@5 on the MIND dataset compared to baselines.",
+   "usage": {
+    "prompt_tokens": 1450,
+    "completion_tokens": 47,
+    "total_tokens": 1497,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1450
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and Passage S1.p5 explicitly state that CoST achieves a 44% improvement in NDCG@5 on the MIND dataset compared to baselines.",
+   "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 53,
+    "total_tokens": 1505,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1452
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper's experiments highlight the significant impact of semantic tokenization on generative recommendation performance.",
+   "usage": {
+    "prompt_tokens": 1576,
+    "completion_tokens": 42,
+    "total_tokens": 1618,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1576
+    }
+   }
+  }
+ ]
+}

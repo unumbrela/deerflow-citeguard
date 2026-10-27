@@ -1,0 +1,2012 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v2",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UWM integrates an action diffusion process and a video diffusion process within a unified transformer architecture.",
+   "usage": {
+    "prompt_tokens": 872,
+    "completion_tokens": 34,
+    "total_tokens": 906,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 872
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that independent control of modality-specific diffusion timesteps allows the model to flexibly represent a policy, forward dynamics, inverse dynamics, and a video generator.",
+   "usage": {
+    "prompt_tokens": 882,
+    "completion_tokens": 46,
+    "total_tokens": 928,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 882
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UWM enables effective pretraining on large-scale multitask robot datasets and facilitates learning from action-free video data.",
+   "usage": {
+    "prompt_tokens": 867,
+    "completion_tokens": 38,
+    "total_tokens": 905,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 867
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the UWM framework integrates action and video diffusion processes within a unified transformer architecture where independent diffusion timesteps govern each modality.",
+   "usage": {
+    "prompt_tokens": 859,
+    "completion_tokens": 41,
+    "total_tokens": 900,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 859
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UWM enables effective pretraining on large-scale multitask robot datasets, which aligns with the sentence's claim about heterogeneous datasets.",
+   "usage": {
+    "prompt_tokens": 856,
+    "completion_tokens": 42,
+    "total_tokens": 898,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 856
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UWM results in more generalizable and robust policies than imitation learning.",
+   "usage": {
+    "prompt_tokens": 858,
+    "completion_tokens": 30,
+    "total_tokens": 888,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 858
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2504.02792",
+   "label": "partial",
+   "reason": "The abstract confirms learning from action-free video via independent timestep control, but does not mention the specific mechanism of 'masked training'.",
+   "usage": {
+    "prompt_tokens": 855,
+    "completion_tokens": 37,
+    "total_tokens": 892,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 855
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the work provides a 'simple unification' of paradigms and offers a step toward 'scalable robot learning'.",
+   "usage": {
+    "prompt_tokens": 860,
+    "completion_tokens": 44,
+    "total_tokens": 904,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 860
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UVA jointly optimizes video and action predictions using a joint video-action latent representation and decoupled decoding.",
+   "usage": {
+    "prompt_tokens": 812,
+    "completion_tokens": 38,
+    "total_tokens": 850,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 812
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model uses two lightweight diffusion heads to enable high-speed action inference by bypassing video generation.",
+   "usage": {
+    "prompt_tokens": 802,
+    "completion_tokens": 35,
+    "total_tokens": 837,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 802
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UVA achieves high accuracy and efficient inference while serving as a general-purpose solution for policy learning, forward/inverse dynamics, and video observation prediction.",
+   "usage": {
+    "prompt_tokens": 810,
+    "completion_tokens": 45,
+    "total_tokens": 855,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 810
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model's key lies in learning a joint video-action latent representation that bridges the visual and action domains.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 37,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 12,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states that decoupled decoding enables high-speed action inference by bypassing video generation during inference.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 33,
+    "total_tokens": 823,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 13,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the framework enables versatile functionality through masked input training.",
+   "usage": {
+    "prompt_tokens": 788,
+    "completion_tokens": 26,
+    "total_tokens": 814,
+    "completion_tokens_details": {
+     "text_tokens": 26
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 788
+    }
+   }
+  },
+  {
+   "claim": 14,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states the model serves as a general-purpose solution for diverse robotics tasks without compromising performance compared to task-specific methods.",
+   "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 36,
+    "total_tokens": 831,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 795
+    }
+   }
+  },
+  {
+   "claim": 15,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract explicitly states that UVA serves as a general-purpose solution for robotics tasks through unified video-action modeling.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 33,
+    "total_tokens": 829,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 16,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly states that WorldVLA integrates Vision-Language-Action (VLA) models and world models in a single autoregressive framework.",
+   "usage": {
+    "prompt_tokens": 760,
+    "completion_tokens": 39,
+    "total_tokens": 799,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 760
+    }
+   }
+  },
+  {
+   "claim": 17,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the world model predicts future images using action and image understanding to learn environmental physics, and that the action model generates actions based on image observations.",
+   "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 44,
+    "total_tokens": 806,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 762
+    }
+   }
+  },
+  {
+   "claim": 18,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies error propagation in autoregressive action generation and proposes an attention mask strategy that selectively masks prior actions.",
+   "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 34,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 761
+    }
+   }
+  },
+  {
+   "claim": 19,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly states that WorldVLA unifies VLA and world models in a single framework and highlights the mutual enhancement between them.",
+   "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 38,
+    "total_tokens": 783,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 745
+    }
+   }
+  },
+  {
+   "claim": 20,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly describes an autoregressive action model and proposes an attention mask strategy to address performance deterioration in action generation.",
+   "usage": {
+    "prompt_tokens": 743,
+    "completion_tokens": 34,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 743
+    }
+   }
+  },
+  {
+   "claim": 21,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly identifies error propagation in autoregressive action generation as a problem and describes a proposed strategy to address it.",
+   "usage": {
+    "prompt_tokens": 743,
+    "completion_tokens": 34,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 743
+    }
+   }
+  },
+  {
+   "claim": 22,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly states that WorldVLA outperforms standalone action and world models.",
+   "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 28,
+    "total_tokens": 773,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 745
+    }
+   }
+  },
+  {
+   "claim": 23,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract explicitly describes WorldVLA as an autoregressive action world model that integrates Vision-Language-Action (VLA) components.",
+   "usage": {
+    "prompt_tokens": 749,
+    "completion_tokens": 37,
+    "total_tokens": 786,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 749
+    }
+   }
+  },
+  {
+   "claim": 24,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EnerVerse is a generative robotics foundation model using a chunk-wise autoregressive video diffusion framework to predict future embodied spaces from instructions.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 42,
+    "total_tokens": 800,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 25,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EnerVerse uses sparse context memory for long-term reasoning and adopts a multi-view video representation to address 3D grounding.",
+   "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 40,
+    "total_tokens": 793,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 753
+    }
+   }
+  },
+  {
+   "claim": 26,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms that EnerVerse-D combines generative modeling with 4D Gaussian Splatting for self-reinforcing data loops and that EnerVerse-A achieves approximately 280 ms inference time per 8-step action chunk.",
+   "usage": {
+    "prompt_tokens": 783,
+    "completion_tokens": 65,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 65
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 783
+    }
+   }
+  },
+  {
+   "claim": 27,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EnerVerse employs a chunk-wise autoregressive video diffusion framework to predict future embodied spaces.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 33,
+    "total_tokens": 775,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 28,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the paper adopts a multi-view video representation to address challenges like motion ambiguity and 3D grounding.",
+   "usage": {
+    "prompt_tokens": 743,
+    "completion_tokens": 36,
+    "total_tokens": 779,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 743
+    }
+   }
+  },
+  {
+   "claim": 29,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EnerVerse-D combines generative modeling with 4D Gaussian Splatting to form a data loop that reduces the sim-to-real gap.",
+   "usage": {
+    "prompt_tokens": 747,
+    "completion_tokens": 44,
+    "total_tokens": 791,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 747
+    }
+   }
+  },
+  {
+   "claim": 30,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EnerVerse-A achieves about 280 ms per 8-step action chunk, directly supporting the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 744,
+    "completion_tokens": 40,
+    "total_tokens": 784,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 744
+    }
+   }
+  },
+  {
+   "claim": 31,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EnerVerse uses a 'chunk-wise autoregressive video diffusion framework' to 'predict future embodied spaces', directly matching the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 747,
+    "completion_tokens": 43,
+    "total_tokens": 790,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 747
+    }
+   }
+  },
+  {
+   "claim": 32,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EVAC is an action-conditional world model that generates future visual observations based on an agent's predicted actions.",
+   "usage": {
+    "prompt_tokens": 751,
+    "completion_tokens": 38,
+    "total_tokens": 789,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 751
+    }
+   }
+  },
+  {
+   "claim": 33,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model introduces a multi-level action-conditioning mechanism and ray map encoding for dynamic multi-view image generation.",
+   "usage": {
+    "prompt_tokens": 741,
+    "completion_tokens": 37,
+    "total_tokens": 778,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 741
+    }
+   }
+  },
+  {
+   "claim": 34,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EVAC serves as both a data engine and evaluator, augments human-collected trajectories, and generates realistic action-conditioned video observations without needing physical robots.",
+   "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 47,
+    "total_tokens": 800,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 753
+    }
+   }
+  },
+  {
+   "claim": 35,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly describes EVAC as an action-conditional world model that enables controllable robotic inference.",
+   "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 31,
+    "total_tokens": 762,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 731
+    }
+   }
+  },
+  {
+   "claim": 36,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EVAC introduces a multi-level action-conditioning mechanism and ray map encoding.",
+   "usage": {
+    "prompt_tokens": 730,
+    "completion_tokens": 31,
+    "total_tokens": 761,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 730
+    }
+   }
+  },
+  {
+   "claim": 37,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly states that EVAC acts as a data engine that augments trajectories by expanding training data with diverse failure trajectories.",
+   "usage": {
+    "prompt_tokens": 730,
+    "completion_tokens": 36,
+    "total_tokens": 766,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 730
+    }
+   }
+  },
+  {
+   "claim": 38,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method generates observations for policy testing, thereby eliminating the need for physical robots.",
+   "usage": {
+    "prompt_tokens": 728,
+    "completion_tokens": 32,
+    "total_tokens": 760,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 728
+    }
+   }
+  },
+  {
+   "claim": 39,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly describes EVAC as an action-conditional world model used for generating observations to evaluate robotic policies.",
+   "usage": {
+    "prompt_tokens": 737,
+    "completion_tokens": 33,
+    "total_tokens": 770,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 737
+    }
+   }
+  },
+  {
+   "claim": 40,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces DreamGen as a 4-stage pipeline for training robot policies using neural trajectories generated from video world models.",
+   "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 36,
+    "total_tokens": 793,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 757
+    }
+   }
+  },
+  {
+   "claim": 41,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method leverages image-to-video models adapted to robot embodiments and recovers pseudo-action sequences using latent action or inverse-dynamics models.",
+   "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 43,
+    "total_tokens": 801,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 758
+    }
+   }
+  },
+  {
+   "claim": 42,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that a humanoid robot performed 22 new behaviors in seen and unseen environments using teleoperation data from only a single pick-and-place task.",
+   "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 43,
+    "total_tokens": 800,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 757
+    }
+   }
+  },
+  {
+   "claim": 43,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly describes DreamGen as a '4-stage pipeline' that trains robot policies using 'neural trajectories' generated from video world models.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 40,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 44,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DreamGen adapts image-to-video generative models to the target robot embodiment.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 32,
+    "total_tokens": 772,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 45,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method recovers pseudo-action sequences using either a latent action model or an inverse-dynamics model.",
+   "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 36,
+    "total_tokens": 775,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 739
+    }
+   }
+  },
+  {
+   "claim": 46,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DreamGen unlocks strong behavior and environment generalization while requiring teleoperation data from only a single task.",
+   "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 36,
+    "total_tokens": 776,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 740
+    }
+   }
+  },
+  {
+   "claim": 47,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DreamGen uses video world models to unlock generalization beyond manual data collection.",
+   "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 31,
+    "total_tokens": 777,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 746
+    }
+   }
+  },
+  {
+   "claim": 48,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Gen2Act generalizes to novel tasks by predicting motion from web data via human video generation and conditioning robot policies on the generated videos.",
+   "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 43,
+    "total_tokens": 798,
+    "completion_tokens_details": {
+     "text_tokens": 43
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 755
+    }
+   }
+  },
+  {
+   "claim": 49,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states the approach uses pre-trained video generation models on web data without fine-tuning and requires an order of magnitude less robot interaction data.",
+   "usage": {
+    "prompt_tokens": 752,
+    "completion_tokens": 41,
+    "total_tokens": 793,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 752
+    }
+   }
+  },
+  {
+   "claim": 50,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the results show Gen2Act enables manipulating unseen object types and performing novel motions for tasks not present in the robot data.",
+   "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 40,
+    "total_tokens": 782,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 742
+    }
+   }
+  },
+  {
+   "claim": 51,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach casts manipulation as zero-shot human video generation to enable generalization to novel scenarios.",
+   "usage": {
+    "prompt_tokens": 735,
+    "completion_tokens": 34,
+    "total_tokens": 769,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 735
+    }
+   }
+  },
+  {
+   "claim": 52,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the approach conditions a robot policy on the generated video using a single policy.",
+   "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 31,
+    "total_tokens": 762,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 731
+    }
+   }
+  },
+  {
+   "claim": 53,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method leverages web data and uses a pre-trained model without fine-tuning.",
+   "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 32,
+    "total_tokens": 768,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 736
+    }
+   }
+  },
+  {
+   "claim": 54,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method enables manipulating unseen object types and performing novel motions.",
+   "usage": {
+    "prompt_tokens": 733,
+    "completion_tokens": 28,
+    "total_tokens": 761,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 733
+    }
+   }
+  },
+  {
+   "claim": 55,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method uses pre-trained video generation models on web data to enable zero-shot generalization to novel tasks.",
+   "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 36,
+    "total_tokens": 775,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 739
+    }
+   }
+  },
+  {
+   "claim": 56,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the paper's presentation of Predictive Inverse Dynamics Models (PIDM) as an end-to-end paradigm that predicts actions using inverse dynamics models conditioned on forecasted visual states.",
+   "usage": {
+    "prompt_tokens": 867,
+    "completion_tokens": 50,
+    "total_tokens": 917,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 867
+    }
+   }
+  },
+  {
+   "claim": 57,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model Seer uses Transformers to process both visual states and actions and is pre-trained on large-scale robotic datasets like DROID.",
+   "usage": {
+    "prompt_tokens": 858,
+    "completion_tokens": 42,
+    "total_tokens": 900,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 858
+    }
+   }
+  },
+  {
+   "claim": 58,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly states the same performance improvements (13% on LIBERO-LONG, 21% on CALVIN ABC-D, and 43% in real-world tasks) and confirms the model sets a new state-of-the-art.",
+   "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 61,
+    "total_tokens": 935,
+    "completion_tokens_details": {
+     "text_tokens": 61
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 874
+    }
+   }
+  },
+  {
+   "claim": 59,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the paper's method as an end-to-end paradigm using predictive inverse dynamics models that close the loop between vision and action.",
+   "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 39,
+    "total_tokens": 883,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 844
+    }
+   }
+  },
+  {
+   "claim": 60,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model uses Transformers to process both visual states and actions.",
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 28,
+    "total_tokens": 870,
+    "completion_tokens_details": {
+     "text_tokens": 28
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 842
+    }
+   }
+  },
+  {
+   "claim": 61,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly states the model achieves state-of-the-art results and specific improvements on both the LIBERO-LONG and CALVIN ABC-D benchmarks.",
+   "usage": {
+    "prompt_tokens": 853,
+    "completion_tokens": 40,
+    "total_tokens": 893,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 853
+    }
+   }
+  },
+  {
+   "claim": 62,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model exhibits superior generalization for novel objects, lighting conditions, and environments.",
+   "usage": {
+    "prompt_tokens": 845,
+    "completion_tokens": 32,
+    "total_tokens": 877,
+    "completion_tokens_details": {
+     "text_tokens": 32
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 845
+    }
+   }
+  },
+  {
+   "claim": 63,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly presents Predictive Inverse Dynamics Models (PIDM) as an end-to-end paradigm that serves as a scalable action learner.",
+   "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 39,
+    "total_tokens": 889,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 850
+    }
+   }
+  },
+  {
+   "claim": 64,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GWM reconstructs the future state by inferring the propagation of Gaussian primitives under the effect of robot actions.",
+   "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 38,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 772
+    }
+   }
+  },
+  {
+   "claim": 65,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method's core is a latent Diffusion Transformer (DiT) combined with a 3D variational autoencoder to enable fine-grained scene-level future state reconstruction with Gaussian Splatting.",
+   "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 56,
+    "total_tokens": 836,
+    "completion_tokens_details": {
+     "text_tokens": 56
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 780
+    }
+   }
+  },
+  {
+   "claim": 66,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GWM enhances visual representation via self-supervised future prediction and serves as a neural simulator for model-based reinforcement learning.",
+   "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 39,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 771
+    }
+   }
+  },
+  {
+   "claim": 67,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes a novel Gaussian World Model (GWM) for robotic manipulation that uses Gaussian Splatting, aligning with the claim of it being a Gaussian Splatting-based world model for this task.",
+   "usage": {
+    "prompt_tokens": 759,
+    "completion_tokens": 54,
+    "total_tokens": 813,
+    "completion_tokens_details": {
+     "text_tokens": 54
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 759
+    }
+   }
+  },
+  {
+   "claim": 68,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly states the method uses a latent Diffusion Transformer (DiT) combined with a 3D variational autoencoder for fine-grained scene-level future state reconstruction.",
+   "usage": {
+    "prompt_tokens": 763,
+    "completion_tokens": 47,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 763
+    }
+   }
+  },
+  {
+   "claim": 69,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GWM enhances visual representation through self-supervised future prediction training.",
+   "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 29,
+    "total_tokens": 784,
+    "completion_tokens_details": {
+     "text_tokens": 29
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 755
+    }
+   }
+  },
+  {
+   "claim": 70,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GWM can serve as a neural simulator that supports model-based reinforcement learning.",
+   "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 31,
+    "total_tokens": 786,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 755
+    }
+   }
+  },
+  {
+   "claim": 71,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly proposes a 'Gaussian World Model' for robotic manipulation that addresses the lack of 'robust geometric information' and enables '3D world model' capabilities.",
+   "usage": {
+    "prompt_tokens": 764,
+    "completion_tokens": 46,
+    "total_tokens": 810,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 764
+    }
+   }
+  },
+  {
+   "claim": 72,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly states that Genie Envisioner integrates policy learning, evaluation, and simulation within a single video-generative framework.",
+   "usage": {
+    "prompt_tokens": 749,
+    "completion_tokens": 37,
+    "total_tokens": 786,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 749
+    }
+   }
+  },
+  {
+   "claim": 73,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly describes GE-Base as a large-scale, instruction-conditioned video diffusion model that captures spatial, temporal, and semantic dynamics.",
+   "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 39,
+    "total_tokens": 784,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 745
+    }
+   }
+  },
+  {
+   "claim": 74,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GE-Act maps latent representations via a flow-matching decoder and that GE-Sim is an action-conditioned neural simulator.",
+   "usage": {
+    "prompt_tokens": 751,
+    "completion_tokens": 41,
+    "total_tokens": 792,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 751
+    }
+   }
+  },
+  {
+   "claim": 75,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the platform is equipped with EWMBench, a standardized benchmark suite.",
+   "usage": {
+    "prompt_tokens": 734,
+    "completion_tokens": 30,
+    "total_tokens": 764,
+    "completion_tokens_details": {
+     "text_tokens": 30
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 734
+    }
+   }
+  },
+  {
+   "claim": 76,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly describes Genie Envisioner as a unified platform that integrates policy learning, evaluation, and simulation.",
+   "usage": {
+    "prompt_tokens": 733,
+    "completion_tokens": 34,
+    "total_tokens": 767,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 733
+    }
+   }
+  },
+  {
+   "claim": 77,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly describes the paper's core component as a 'large-scale, instruction-conditioned video diffusion model'.",
+   "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 34,
+    "total_tokens": 765,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 731
+    }
+   }
+  },
+  {
+   "claim": 78,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GE-Act uses a flow-matching decoder to enable precise policy inference.",
+   "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 31,
+    "total_tokens": 762,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 731
+    }
+   }
+  },
+  {
+   "claim": 79,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the platform is equipped with EWMBench, a standardized benchmark suite for measuring visual fidelity, physical consistency, and instruction-action alignment.",
+   "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 42,
+    "total_tokens": 778,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 736
+    }
+   }
+  },
+  {
+   "claim": 80,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly introduces Genie Envisioner as a 'unified world foundation platform' designed to establish a foundation for 'general-purpose embodied intelligence,' directly matching the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 48,
+    "total_tokens": 784,
+    "completion_tokens_details": {
+     "text_tokens": 48
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 736
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract confirms the paper presents a unified framework integrating video diffusion, action diffusion, and dynamics modeling (forward and inverse).",
+   "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 35,
+    "total_tokens": 974,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 939
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2503.00200",
+   "label": "supported",
+   "reason": "The abstract confirms the paper introduces a unified model that jointly optimizes video generation, action prediction, and dynamics modeling.",
+   "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 34,
+    "total_tokens": 908,
+    "completion_tokens_details": {
+     "text_tokens": 34
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 874
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2506.21539",
+   "label": "supported",
+   "reason": "The abstract confirms the paper presents a unified framework integrating action prediction, image (video) generation, and dynamics modeling (world model).",
+   "usage": {
+    "prompt_tokens": 829,
+    "completion_tokens": 37,
+    "total_tokens": 866,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 829
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract confirms the paper presents a unified framework integrating video generation (GE-Base), action prediction (GE-Act), and dynamics modeling.",
+   "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 39,
+    "total_tokens": 856,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 817
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract confirms the paper presents a unified framework integrating video generation (diffusion), action prediction (policy head), and dynamics modeling (embodied space construction).",
+   "usage": {
+    "prompt_tokens": 826,
+    "completion_tokens": 42,
+    "total_tokens": 868,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 826
+    }
+   }
+  },
+  {
+   "claim": 81,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a world model that integrates action conditioning (action prediction), generates future visual observations (video generation), and handles dynamic interaction scenarios (dynamics modeling).",
+   "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 50,
+    "total_tokens": 865,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 815
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the use of chunk-wise autoregressive video diffusion, sparse context memory for long-term reasoning, and multi-view representations for embodied space prediction.",
+   "usage": {
+    "prompt_tokens": 807,
+    "completion_tokens": 45,
+    "total_tokens": 852,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 807
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2505.09723",
+   "label": "unsupported",
+   "reason": "The abstract describes an action-conditional world model using ray map encoding, not the chunk-wise autoregressive video diffusion method attributed to it in the sentence.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 44,
+    "total_tokens": 840,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 82,
+   "id": "2508.05635",
+   "label": "unsupported",
+   "reason": "The abstract describes a video diffusion model with a flow-matching decoder, not the chunk-wise autoregressive video diffusion method attributed to it in the sentence.",
+   "usage": {
+    "prompt_tokens": 798,
+    "completion_tokens": 41,
+    "total_tokens": 839,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 798
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract confirms the paper proposes a Gaussian World Model using Gaussian Splatting to address the lack of consistent spatial and physical understanding in image-based world models.",
+   "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 45,
+    "total_tokens": 856,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 811
+    }
+   }
+  },
+  {
+   "claim": 83,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract confirms the paper uses 4D Gaussian Splatting to model the 3D robotics world, aligning with the sentence's claim about incorporating Gaussian Splatting for 3D scene reconstruction.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 53,
+    "total_tokens": 849,
+    "completion_tokens_details": {
+     "text_tokens": 53
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2504.02792",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed method facilitates learning from action-free video data through independent control of modality-specific diffusion timesteps.",
+   "usage": {
+    "prompt_tokens": 929,
+    "completion_tokens": 37,
+    "total_tokens": 966,
+    "completion_tokens_details": {
+     "text_tokens": 37
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 929
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract confirms the paper uses video-only data to recover actions via latent action models or inverse dynamics models for robot learning.",
+   "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 38,
+    "total_tokens": 852,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 814
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2409.16283",
+   "label": "unsupported",
+   "reason": "The paper describes learning from generated human videos to condition a robot policy, not learning directly from action-free video data via inverse dynamics, latent actions, or masked diffusion as claimed.",
+   "usage": {
+    "prompt_tokens": 812,
+    "completion_tokens": 49,
+    "total_tokens": 861,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 812
+    }
+   }
+  },
+  {
+   "claim": 84,
+   "id": "2412.15109",
+   "label": "unsupported",
+   "reason": "The abstract describes a method using inverse dynamics models conditioned on forecasted visual states requiring action data for training, which contradicts the sentence's claim that the paper demonstrates learning from action-free video data.",
+   "usage": {
+    "prompt_tokens": 918,
+    "completion_tokens": 50,
+    "total_tokens": 968,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 918
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract confirms the paper uses video world models to generate synthetic training data (neural trajectories) for policy learning while requiring minimal real robot interaction data.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 44,
+    "total_tokens": 836,
+    "completion_tokens_details": {
+     "text_tokens": 44
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 85,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract confirms the paper uses video generation to enable policy learning with an order of magnitude less robot interaction data.",
+   "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 33,
+    "total_tokens": 823,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 790
+    }
+   }
+  },
+  {
+   "claim": 86,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method enables a humanoid robot to perform 22 new behaviors using teleoperation data from only a single pick-and-place task.",
+   "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 42,
+    "total_tokens": 804,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 762
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract confirms the paper leverages web data for video generation to enable robot manipulation without fine-tuning the video model, aligning with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 802,
+    "completion_tokens": 46,
+    "total_tokens": 848,
+    "completion_tokens_details": {
+     "text_tokens": 46
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 802
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2412.15109",
+   "label": "unsupported",
+   "reason": "The abstract describes pretraining on large-scale robotic datasets (e.g., DROID), whereas the sentence claims the paper leverages web-scale or internet-scale video data.",
+   "usage": {
+    "prompt_tokens": 908,
+    "completion_tokens": 47,
+    "total_tokens": 955,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 908
+    }
+   }
+  },
+  {
+   "claim": 87,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract describes a large-scale video diffusion model for robotic manipulation that enables policy inference with minimal supervision, aligning with the sentence's claim about leveraging large-scale video data and transferring to robotics with minimal fine-tuning.",
+   "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 57,
+    "total_tokens": 854,
+    "completion_tokens_details": {
+     "text_tokens": 57
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 797
+    }
+   }
+  },
+  {
+   "claim": 88,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that DreamGen Bench shows a strong correlation between video generation benchmark performance and downstream policy success.",
+   "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 33,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 33
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 762
+    }
+   }
+  },
+  {
+   "claim": 89,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the platform includes EWMBench, a benchmark suite measuring visual fidelity, physical consistency, and instruction-action alignment.",
+   "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 38,
+    "total_tokens": 795,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 757
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2508.17600",
+   "label": "supported",
+   "reason": "The abstract explicitly states that GWM can serve as a neural simulator to support model-based reinforcement learning, aligning with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 818,
+    "completion_tokens": 39,
+    "total_tokens": 857,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 818
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2505.09723",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the proposed world model eliminates the need for physical robots or complex simulations for policy testing and training.",
+   "usage": {
+    "prompt_tokens": 792,
+    "completion_tokens": 35,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 792
+    }
+   }
+  },
+  {
+   "claim": 90,
+   "id": "2508.05635",
+   "label": "supported",
+   "reason": "The abstract explicitly describes GE-Sim as an action-conditioned neural simulator used for scalable evaluation and training, which aligns with the sentence's claim.",
+   "usage": {
+    "prompt_tokens": 794,
+    "completion_tokens": 41,
+    "total_tokens": 835,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 794
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2504.02792",
+   "label": "partial",
+   "reason": "The abstract confirms real-world experiments but does not mention the specific inference time of 280ms attributed to this paper.",
+   "usage": {
+    "prompt_tokens": 967,
+    "completion_tokens": 40,
+    "total_tokens": 1007,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 967
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2501.01895",
+   "label": "supported",
+   "reason": "The abstract explicitly states the model achieves about 280 ms per action chunk, matching the inference time attributed to this paper in the sentence.",
+   "usage": {
+    "prompt_tokens": 854,
+    "completion_tokens": 40,
+    "total_tokens": 894,
+    "completion_tokens_details": {
+     "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 854
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2412.15109",
+   "label": "partial",
+   "reason": "The abstract confirms real-world experimental validation but does not mention the specific inference time attributed to this paper.",
+   "usage": {
+    "prompt_tokens": 956,
+    "completion_tokens": 31,
+    "total_tokens": 987,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 956
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2409.16283",
+   "label": "partial",
+   "reason": "The abstract confirms real-world experimental validation but does not mention the specific inference time or real-time performance claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 38,
+    "total_tokens": 888,
+    "completion_tokens_details": {
+     "text_tokens": 38
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 850
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2508.17600",
+   "label": "partial",
+   "reason": "The abstract confirms real-world experiments but does not mention the specific inference time or 'real-time performance' claimed in the sentence.",
+   "usage": {
+    "prompt_tokens": 869,
+    "completion_tokens": 36,
+    "total_tokens": 905,
+    "completion_tokens_details": {
+     "text_tokens": 36
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 869
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2505.09723",
+   "label": "unsupported",
+   "reason": "The abstract describes a simulation-based world model that eliminates the need for physical robots, contradicting the sentence's claim of real-world experimental validation.",
+   "usage": {
+    "prompt_tokens": 843,
+    "completion_tokens": 39,
+    "total_tokens": 882,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 843
+    }
+   }
+  },
+  {
+   "claim": 91,
+   "id": "2508.05635",
+   "label": "unsupported",
+   "reason": "The abstract describes a video-generative foundation platform for simulation and policy learning but contains no mention of real-world experimental validation or specific inference times.",
+   "usage": {
+    "prompt_tokens": 845,
+    "completion_tokens": 42,
+    "total_tokens": 887,
+    "completion_tokens_details": {
+     "text_tokens": 42
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 845
+    }
+   }
+  },
+  {
+   "claim": 92,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly confirms the 13% improvement on LIBERO-LONG, 21% on CALVIN ABC-D with an average length of 4.28, and 43% improvement in real-world tasks.",
+   "usage": {
+    "prompt_tokens": 904,
+    "completion_tokens": 58,
+    "total_tokens": 962,
+    "completion_tokens_details": {
+     "text_tokens": 58
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 904
+    }
+   }
+  },
+  {
+   "claim": 93,
+   "id": "2505.12705",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method unlocks strong generalization across behaviors and environments, including unseen ones.",
+   "usage": {
+    "prompt_tokens": 796,
+    "completion_tokens": 31,
+    "total_tokens": 827,
+    "completion_tokens_details": {
+     "text_tokens": 31
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 796
+    }
+   }
+  },
+  {
+   "claim": 93,
+   "id": "2409.16283",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the method enables manipulating unseen object types and performing novel motions not present in the training data, which aligns with the sentence's claim of generalization to novel objects and behaviors.",
+   "usage": {
+    "prompt_tokens": 794,
+    "completion_tokens": 51,
+    "total_tokens": 845,
+    "completion_tokens_details": {
+     "text_tokens": 51
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 794
+    }
+   }
+  },
+  {
+   "claim": 93,
+   "id": "2412.15109",
+   "label": "supported",
+   "reason": "The abstract explicitly states that the model exhibits superior generalization for novel objects, lighting conditions, and environments.",
+   "usage": {
+    "prompt_tokens": 900,
+    "completion_tokens": 35,
+    "total_tokens": 935,
+    "completion_tokens_details": {
+     "text_tokens": 35
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 900
+    }
+   }
+  }
+ ]
+}

@@ -244,3 +244,140 @@ async def test_async_after_model_matches_sync(setup):
     store, outputs = setup
     update = await CitationGateMiddleware(store).aafter_model(finishing(outputs), RUNTIME)
     assert update["messages"][0].tool_calls[0]["name"] == "present_files"
+
+
+# Full text (P2.4): evidence ids in the report must have been issued by cite_evidence in this search.
+
+TWO = "Agents fail on long tasks (Smith1, 2025) [E1], and planning helps (Smith2, 2025) [E2].\n\n## References\nSmith1, A. (2025). Benchmarking Agents Part 1. arXiv:2501.00001\nSmith2, A. (2025). Benchmarking Agents Part 2. arXiv:2501.00002\n"
+
+
+@pytest.fixture
+def evidence_setup(setup):
+    store, outputs = setup
+    store.save_search(THREAD, {**store.load_search(THREAD), "full_text": True, "retrieved_on": "2026-10-27"})
+    store.add_evidence(
+        THREAD,
+        "s1",
+        [
+            {"paper": "2501.00001", "para": "S2.p3", "section": "2 Experiments", "quote": "Agents fail on | long tasks in every setting", "claim": "c", "source": "html"},
+            {"paper": "2501.00002", "para": "abstract", "section": "Abstract", "quote": "planning helps most on long tasks", "claim": "c", "source": "abstract_only"},
+        ],
+    )
+    return store, outputs
+
+
+def test_report_with_checked_evidence_gets_the_appendix_written_by_code(evidence_setup):
+    store, outputs = evidence_setup
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=TWO), RUNTIME)["messages"]
+    assert "2 evidence ids checked" in msg.content
+    text = (outputs / "slr-agents.md").read_text(encoding="utf-8")
+    assert text.startswith(TWO.rstrip())
+    assert "| E1 | arXiv:2501.00001 | [2 Experiments](https://arxiv.org/html/2501.00001#S2.p3) | “Agents fail on \\| long tasks in every setting” |" in text
+    assert "or its abstract where no HTML exists" in text and "checked on 2026-10-27" in text
+    assert store.read_log(THREAD)[0]["used"] == ["E1", "E2"]
+
+
+def test_presenting_again_replaces_the_appendix_instead_of_stacking_it(evidence_setup):
+    store, outputs = evidence_setup
+    gate = CitationGateMiddleware(store)
+    gate.before_model(state_after_present(outputs, report=TWO), RUNTIME)
+    first = (outputs / "slr-agents.md").read_text(encoding="utf-8")
+    gate.before_model(state_after_present(outputs, report=first, call_id="c2"), RUNTIME)
+    assert (outputs / "slr-agents.md").read_text(encoding="utf-8") == first
+
+
+@pytest.mark.parametrize(
+    ("report", "expected"),
+    [
+        (TWO.replace("[E2]", "[E2, E7]"), "never issued by cite_evidence in this review: E7"),
+        (TWO.replace("and planning helps (Smith2, 2025) [E2]", "and planning helps [E2]").replace("Smith2, A. (2025). Benchmarking Agents Part 2. arXiv:2501.00002\n", ""), "quote papers the report does not cite: E2 (2501.00002)"),
+        (TWO.replace(" [E1]", "").replace(" [E2]", ""), "recorded 2 checked quotes, but the report uses none"),
+    ],
+)
+def test_invented_misattached_or_missing_evidence_is_rejected(evidence_setup, report, expected):
+    store, outputs = evidence_setup
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=report), RUNTIME)["messages"]
+    assert "NOT verified" in msg.content and expected in msg.content
+    assert "## Evidence" not in (outputs / "slr-agents.md").read_text(encoding="utf-8")
+
+
+def test_evidence_from_an_earlier_search_does_not_count(evidence_setup):
+    store, outputs = evidence_setup
+    store.save_search(THREAD, {**store.load_search(THREAD), "search_id": "s2"})
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=TWO), RUNTIME)["messages"]
+    assert "never issued by cite_evidence in this review: E1, E2" in msg.content
+
+
+def test_searches_without_full_text_ignore_evidence_markers(setup):
+    store, outputs = setup
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=GOOD.replace("Part 1.", "Part 1 [E9].")), RUNTIME)["messages"]
+    assert "Citation check passed" in msg.content and "evidence" not in msg.content
+
+
+def test_markers_next_to_theme_names_are_rejected(evidence_setup):
+    # The smoke-run pattern: every id in one summary sentence that cites no paper.
+    report = "Approaches cluster into hybrid methods [E1] and planning [E2].\n\n" + TWO
+    [msg] = CitationGateMiddleware(store := evidence_setup[0]).before_model(state_after_present(evidence_setup[1], report=report), RUNTIME)["messages"]
+    assert "do not cite their paper: E1 (belongs to Benchmarking Agents Part 1 (Smith1, 2025)), E2 (belongs to Benchmarking Agents Part 2 (Smith2, 2025))" in msg.content
+    assert store.read_log(THREAD)[0]["misattached_evidence"] == ["E1 (belongs to Benchmarking Agents Part 1 (Smith1, 2025))", "E2 (belongs to Benchmarking Agents Part 2 (Smith2, 2025))"]
+
+
+def test_markers_under_a_per_paper_heading_or_lead_sentence_are_attached(evidence_setup):
+    store, outputs = evidence_setup
+    report = TWO.replace("## References", "### Smith1 et al. (2025)\n\n- Agents fail on long tasks [E1].\n\n**Smith2 et al. (2025)** study planning. Planning helps most [E2].\n\n## References")
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=report), RUNTIME)["messages"]
+    assert "Citation check passed" in msg.content
+
+
+def test_checked_quotes_left_unused_for_a_cited_paper_are_rejected(evidence_setup):
+    store, outputs = evidence_setup
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=TWO.replace(" [E2]", "")), RUNTIME)["messages"]
+    assert "checked quotes that the report never uses: Benchmarking Agents Part 2 (Smith2, 2025) [E2]" in msg.content
+
+
+def test_a_sentence_continuing_about_the_previous_citation_is_attached(evidence_setup):
+    store, outputs = evidence_setup
+    report = TWO.replace("and planning helps (Smith2, 2025) [E2].", "and planning helps (Smith2, 2025). Its planner works best on long tasks [E2].")
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=report), RUNTIME)["messages"]
+    assert "Citation check passed" in msg.content
+
+
+def test_read_paper_by_the_lead_agent_is_replaced_by_an_instruction_to_delegate(setup):
+    store, _ = setup
+    state = {
+        "messages": [
+            HumanMessage("review", id="h1"),
+            AIMessage("", id="a1", tool_calls=[{"id": "r1", "name": "ext_community_scholar_read_paper_88058358e6ca", "args": {"paper": "2501.00001", "section": "S2"}}]),
+            ToolMessage("2501.00001 (arXiv HTML), section S2 ...", id="t1", name="ext_community_scholar_read_paper_88058358e6ca", tool_call_id="r1"),
+        ]
+    }
+    [msg] = CitationGateMiddleware(store).before_model(state, RUNTIME)["messages"]
+    assert msg.id == "t1" and "Dispatch one `task` subagent per batch" in msg.content
+    assert store.read_log(THREAD)[0]["event"] == "lead_read_blocked"
+
+
+def test_findings_in_a_per_paper_block_opened_by_its_citation_are_attached(evidence_setup):
+    store, outputs = evidence_setup
+    block = "### 2. Planning agents\n\n**Citation:** Smith2, A. (2025). Benchmarking Agents Part 2. arXiv:2501.00002\n\n**Key findings:**\n- Planning helps most on long tasks [E2]\n\n"
+    report = TWO.replace(" [E2]", "").replace("## References", block + "## References")
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=report), RUNTIME)["messages"]
+    assert "Citation check passed" in msg.content
+
+
+def test_stopping_after_a_rejection_presents_the_file_again_until_released(setup):
+    store, outputs = setup
+    gate = CitationGateMiddleware(store, max_blocks=1)
+    gate.before_model(state_after_present(outputs, report=BAD), RUNTIME)
+    ending = {"messages": [HumanMessage("review", id="h1"), AIMessage("Let me fix this by rewriting the sentences.", id="a9")], "thread_data": {"outputs_path": str(outputs)}}
+    [msg] = gate.after_model(ending, RUNTIME)["messages"]
+    assert msg.id == "a9" and msg.tool_calls[0]["args"] == {"filepaths": ["/mnt/user-data/outputs/slr-agents.md"]}
+    call_id = msg.tool_calls[0]["id"]
+    presented = {
+        "messages": [*ending["messages"][:1], msg, ToolMessage("Successfully presented files", id="t9", name="present_files", tool_call_id=call_id)],
+        "thread_data": {"outputs_path": str(outputs)},
+    }
+    [result] = gate.before_model(presented, RUNTIME)["messages"]
+    assert "stopped while this report was still rejected" in result.content and "MUST tell the user" in result.content
+    # Released: the next ending is left alone.
+    assert gate.after_model(ending, RUNTIME) is None
+    assert [r["event"] for r in store.read_log(THREAD)] == ["rejected", "re_presented", "released_unverified"]

@@ -1,0 +1,472 @@
+{
+ "stats": {
+  "ambiguous": 19,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "BrowseComp (Wei et al., 2025) introduced 1,266 questions requiring persistent internet navigation to find hard-to-find, entangled information, establishing a simple yet challenging evaluation framework.",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "BrowseComp-ZH (Zhou et al., 2025) extended this to the Chinese web ecosystem with 289 multi-hop questions across 11 domains, revealing that most models struggle with accuracy rates below 10%.",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "DeepResearch Bench (Du et al., 2025) represents the most ambitious benchmarking effort, containing 100 PhD-level research tasks across 22 fields crafted by domain experts, with novel evaluation methodologies for assessing research report quality.",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "WebResearcher (Qiao et al., 2025) reformulates deep research as a Markov Decision Process where agents periodically consolidate findings into evolving reports while maintaining focused workspaces, overcoming context suffocation and noise contamination.",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Search-R1 (Jin et al., 2025) extends reinforcement learning for reasoning frameworks where the LLM learns to autonomously generate multiple search queries during step-by-step reasoning with real-time retrieval, using retrieved token masking for stable RL training and a simple outcome-based reward function.",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "WebShaper (Tao et al., 2025) proposes a formalization-driven information-seeking data synthesis framework using set theory and Knowledge Projections (KP) to control reasoning structure through KP operation compositions, with a multi-step expansion process using an agentic Expander.",
+   "ids": [
+    "2507.15061"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "WebResearcher (Qiao et al., 2025) introduces WebFrontier, a scalable data synthesis engine using tool-augmented complexity escalation to generate high-quality training data that bridges passive knowledge recall and active knowledge construction.",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Search-R1 (Jin et al., 2025) trains LLMs to autonomously generate search queries during step-by-step reasoning with real-time retrieval, optimizing reasoning trajectories with multi-turn search interactions.",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "WebResearcher (Qiao et al., 2025) overcomes context suffocation by periodically consolidating findings into evolving reports while maintaining focused workspaces, naturally scaling through parallel thinking with concurrent multi-agent exploration.",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all papers recognize that effective deep research requires interleaving reasoning with information retrieval rather than treating search as a separate preprocessing step (Li et al., 2025; Jin et al., 2025; Qiao et al., 2025).",
+   "ids": [
+    "2503.09516",
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is consensus that reinforcement learning is essential for training robust information-seeking behaviors, with multiple independent approaches converging on outcome-based RL training (Jin et al., 2025; Li et al., 2025; Wu et al., 2025b).",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, the literature agrees that benchmarking must focus on hard-to-find, entangled information requiring persistent navigation rather than simple factoid retrieval (Wei et al., 2025; Zhou et al., 2025; Wu et al., 2025a; Du et al., 2025).",
+   "ids": [
+    "2504.12516",
+    "2504.19314",
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Fourth, all agent architecture papers emphasize the importance of maintaining context and avoiding noise contamination in long-horizon tasks (Qiao et al., 2025; Li et al., 2025).",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "BrowseComp (Wei et al., 2025) and BrowseComp-ZH (Zhou et al., 2025) focus on short, easily verifiable answers to enable rapid evaluation, while DeepResearch Bench (Du et al., 2025) emphasizes PhD-level research tasks requiring comprehensive report generation with adaptive quality assessment.",
+   "ids": [
+    "2504.12516",
+    "2504.19314",
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Another area of variation is the emphasis on data synthesis versus direct RL training: WebShaper (Tao et al., 2025) and WebResearcher (Qiao et al., 2025) prioritize high-quality synthetic data generation, while Search-R1 (Jin et al., 2025) and WebSailor (Li et al., 2025) focus more heavily on direct RL optimization.",
+   "ids": [
+    "2507.15061",
+    "2509.13309",
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "First, none of the papers explicitly address the challenge of evaluating the quality of synthesized information beyond answer verification or citation accuracy — the deeper question of whether agents produce accurate, well-reasoned conclusions remains underexplored except in DeepResearch Bench (Du et al., 2025).",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, while multiple papers mention the importance of handling ambiguity and resolving conflicting information (Wei et al., 2025; Qiao et al., 2025), none provide detailed methodologies for conflict resolution in multi-source information synthesis.",
+   "ids": [
+    "2504.12516",
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, while BrowseComp-ZH (Zhou et al., 2025) addresses Chinese web browsing, the literature remains heavily English-centric, with limited attention to multilingual or cross-lingual research capabilities.",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, several papers note limitations in addressing the full distribution of user queries, particularly those requiring long answers or ambiguity resolution (Wei et al., 2025), indicating a gap between benchmark performance and real-world utility.",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we systematically evaluate the capabilities of Deep Research Agents that autonomously orchestrate multistep web exploration and synthesis?",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present DeepResearch Bench, a benchmark consisting of 100 PhD-level research tasks crafted by domain experts across 22 fields, with two novel evaluation methodologies: a reference-based method with adaptive criteria for assessing research report quality, and a framework evaluating information retrieval capabilities through effective citation count and citation accuracy.",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DeepResearch Bench contains 100 PhD-level research tasks across 22 distinct fields, meticulously crafted by domain experts",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A reference-based method with adaptive criteria achieves strong alignment with human judgment for assessing research report quality",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A framework evaluating information retrieval capabilities through effective citation count and overall citation accuracy is proposed",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark and key components have been open-sourced to accelerate development of practical LLM-based agents",
+   "ids": [
+    "2506.11763"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we train LLMs to autonomously generate search queries during step-by-step reasoning with real-time retrieval for effective reasoning and text generation?",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Search-R1, an extension of reinforcement learning for reasoning frameworks where the LLM learns to autonomously generate multiple search queries during step-by-step reasoning with real-time retrieval, using retrieved token masking for stable RL training and a simple outcome-based reward function.",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Experiments on seven question-answering datasets show performance improvements of 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1",
+   "ids": [
+    "2503.09516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can AI agents autonomously discover and synthesize knowledge from external sources while overcoming context suffocation and noise contamination in long-horizon tasks?",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce WebResearcher, an iterative deep-research paradigm reformulating deep research as a Markov Decision Process where agents periodically consolidate findings into evolving reports while maintaining focused workspaces, plus WebFrontier, a scalable data synthesis engine using tool-augmented complexity escalation to generate high-quality training data.",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "WebResearcher reformulates deep research as a Markov Decision Process, overcoming context suffocation and noise contamination plaguing mono-contextual approaches",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "WebFrontier generates high-quality training data through tool-augmented complexity escalation, bridging passive knowledge recall and active knowledge construction",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Training data from the paradigm significantly enhances tool-use capabilities even for traditional mono-contextual methods",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The paradigm naturally scales through parallel thinking, enabling concurrent multi-agent exploration for more comprehensive conclusions",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive experiments across 6 challenging benchmarks show WebResearcher achieves state-of-the-art performance, surpassing frontier proprietary systems",
+   "ids": [
+    "2509.13309"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can information-seeking data synthesis be improved to ensure consistency between information structure, reasoning structure, and question-answer pairs?",
+   "ids": [
+    "2507.15061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose WebShaper, a formalization-driven information-seeking data synthesis framework using set theory and Knowledge Projections (KP) to control reasoning structure through KP operation compositions, with a multi-step expansion process using an agentic Expander that expands formal questions with retrieval and validation tools.",
+   "ids": [
+    "2507.15061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "WebShaper systematically formalizes information-seeking tasks through set theory with Knowledge Projections enabling precise control over reasoning structure",
+   "ids": [
+    "2507.15061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The multi-step expansion process with agentic Expander allows iterative complexity increase with retrieval and validation",
+   "ids": [
+    "2507.15061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models trained on the WebShaper-synthesized dataset achieve state-of-the-art performance among open-sourced information-seeking agents on GAIA and WebWalkerQA benchmarks",
+   "ids": [
+    "2507.15061"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we effectively benchmark the ability of agents to browse the web and find hard-to-find, entangled information?",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors present BrowseComp, a benchmark comprising 1,266 questions that require persistently navigating the internet to search for hard-to-find information, using short, easily verifiable predicted answers against reference answers.",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BrowseComp comprises 1,266 questions requiring persistent internet navigation to find hard-to-find, entangled information",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark is simple and easy-to-use with short, easily verifiable predicted answers",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BrowseComp measures the important core capability of exercising persistence and creativity in finding information",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The benchmark can be found at https://github.com/openai/simple-evals",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Limitations: BrowseComp sidesteps challenges of a true user query distribution, like generating long answers or resolving ambiguity, and is analogous to programming competitions as an incomplete but useful benchmark for coding agents",
+   "ids": [
+    "2504.12516"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can we comprehensively evaluate LLM agents on the Chinese web, addressing the linguistic, infrastructural, and censorship-related complexities overlooked by English-focused benchmarks?",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce BrowseComp-ZH, a high-difficulty benchmark consisting of 289 multi-hop questions spanning 11 diverse domains, with each question reverse-engineered from a short, objective, and easily verifiable answer, applying a two-stage quality control protocol to ensure high question difficulty and answer uniqueness.",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BrowseComp-ZH consists of 289 multi-hop questions spanning 11 diverse domains in the Chinese web ecosystem",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most models struggle severely with accuracy rates below 10%, and only a handful exceed 20%",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The best-performing system, OpenAI's DeepResearch, reaches just 42.9% accuracy",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Success on BrowseComp-ZH demands effective retrieval strategies, sophisticated reasoning, and information reconciliation",
+   "ids": [
+    "2504.19314"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The dataset, construction guidelines, and benchmark results have been publicly released at https://github.com/PALIN2018/BrowseComp-ZH",
+   "ids": [
+    "2504.19314"
+   ]
+  }
+ ]
+}

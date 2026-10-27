@@ -1,0 +1,210 @@
+{
+ "model": "qwen3.5-plus",
+ "prompt": "v3",
+ "judgments": [
+  {
+   "claim": 0,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the proposed CoST method addresses the failure of existing reconstruction-based vector quantization (like RQ-VAE) to capture essential neighborhood relationships.",
+   "usage": {
+    "prompt_tokens": 1364,
+    "completion_tokens": 47,
+    "total_tokens": 1411,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1364
+    }
+   }
+  },
+  {
+   "claim": 1,
+   "id": "2406.10450",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that TokenRec uses a Masked Vector-Quantized (MQ) Tokenizer to quantize masked user/item representations from collaborative filtering into discrete tokens.",
+   "usage": {
+    "prompt_tokens": 1479,
+    "completion_tokens": 47,
+    "total_tokens": 1526,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1479
+    }
+   }
+  },
+  {
+   "claim": 2,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper proposes LC-Rec to address the semantic gap between LLMs and recommender systems through two major contributions: item indexing and alignment tuning.",
+   "usage": {
+    "prompt_tokens": 1442,
+    "completion_tokens": 49,
+    "total_tokens": 1491,
+    "completion_tokens_details": {
+     "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1442
+    }
+   }
+  },
+  {
+   "claim": 3,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that the paper proposes IDGen to represent items as unique, concise, semantically rich textual IDs using human language tokens.",
+   "usage": {
+    "prompt_tokens": 1439,
+    "completion_tokens": 41,
+    "total_tokens": 1480,
+    "completion_tokens_details": {
+     "text_tokens": 41
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1439
+    }
+   }
+  },
+  {
+   "claim": 4,
+   "id": "2404.16555",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly confirm that MMGRec extends generative recommendation to multimodal settings to address the specific limitations of the embed-and-retrieve paradigm (inference cost, interaction modeling, and false-negative issues).",
+   "usage": {
+    "prompt_tokens": 1212,
+    "completion_tokens": 60,
+    "total_tokens": 1272,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1212
+    }
+   }
+  },
+  {
+   "claim": 5,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and passages explicitly state that OneRec is the first end-to-end generative model that replaces cascaded learning frameworks with a unified retrieve-and-rank approach.",
+   "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 50,
+    "total_tokens": 1444,
+    "completion_tokens_details": {
+     "text_tokens": 50
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1394
+    }
+   }
+  },
+  {
+   "claim": 6,
+   "id": "2311.09049",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper proposes specially designed tuning tasks to enforce LLMs to integrate language and collaborative semantics via learned item indices.",
+   "usage": {
+    "prompt_tokens": 1339,
+    "completion_tokens": 39,
+    "total_tokens": 1378,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1339
+    }
+   }
+  },
+  {
+   "claim": 7,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper designs a reward model to simulate user generation and a customized sampling strategy to address the single-opportunity constraint in DPO.",
+   "usage": {
+    "prompt_tokens": 1314,
+    "completion_tokens": 45,
+    "total_tokens": 1359,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1314
+    }
+   }
+  },
+  {
+   "claim": 8,
+   "id": "2403.19021",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper proposes textual ID learning to align LLMs with recommendation, explicitly mentions decoupling user history from datasets to express it in natural language, and states this suggests potential for a foundational model.",
+   "usage": {
+    "prompt_tokens": 1450,
+    "completion_tokens": 60,
+    "total_tokens": 1510,
+    "completion_tokens_details": {
+     "text_tokens": 60
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1450
+    }
+   }
+  },
+  {
+   "claim": 9,
+   "id": "2403.03952",
+   "label": "supported",
+   "reason": "The abstract and passages confirm the paper introduces BLaIR to address the gap between general-purpose benchmarks like MTEB and recommendation-specific needs.",
+   "usage": {
+    "prompt_tokens": 1471,
+    "completion_tokens": 39,
+    "total_tokens": 1510,
+    "completion_tokens_details": {
+     "text_tokens": 39
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1471
+    }
+   }
+  },
+  {
+   "claim": 10,
+   "id": "2404.14774",
+   "label": "supported",
+   "reason": "The abstract and passages confirm that CoST uses contrastive quantization to capture item relationships and explicitly state it outperforms reconstruction-based methods like RQ-VAE.",
+   "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 45,
+    "total_tokens": 1472,
+    "completion_tokens_details": {
+     "text_tokens": 45
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1427
+    }
+   }
+  },
+  {
+   "claim": 11,
+   "id": "2502.18965",
+   "label": "supported",
+   "reason": "The abstract and full text confirm OneRec was deployed at Kuaishou with a 1.6% (specifically 1.68%) improvement in watch time.",
+   "usage": {
+    "prompt_tokens": 1167,
+    "completion_tokens": 47,
+    "total_tokens": 1214,
+    "completion_tokens_details": {
+     "text_tokens": 47
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 1167
+    }
+   }
+  }
+ ]
+}

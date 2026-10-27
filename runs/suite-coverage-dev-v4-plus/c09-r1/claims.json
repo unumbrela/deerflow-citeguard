@@ -1,0 +1,653 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wei et al. (2023) introduced Rein, a parameter-efficient fine-tuning approach that achieves 78.4% mIoU on Cityscapes with only 1% extra trainable parameters within a frozen VFM backbone.",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Benigmim et al. (2023) proposed CLOUDS, integrating CLIP as the backbone for robust feature representation, outperforming prior methods by 5.6% on synthetic-to-real benchmarks.",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Fahes et al. (2023) employed language as a source of randomization, using language-driven local style augmentation to preserve CLIP's intrinsic robustness.",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pak et al. (2024) advanced this direction with textual object queries (tqdm), using text embeddings from vision-language models as object queries within a transformer-based segmentation framework, achieving 68.9 mIoU on GTA5→Cityscapes.",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang and Tan (2025) further integrated VLMs with VFMs through MFuser, a Mamba-based fusion framework that combines fine-grained visual features with text alignment capabilities, achieving 68.20 mIoU on synthetic-to-real benchmarks.",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Niemeijer et al. (2023) presented DIDEX, which employs diffusion models with diverse text prompts to generate pseudo-target domains with controllable style and content, improving state-of-the-art mIoU by 3.8% on GTA5 generalization without using any real target data.",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Jia et al. (2023) proposed DGInStyle, specializing pretrained latent diffusion models for semantically-controlled generation with a Style Swap technique, consistently increasing performance across multiple autonomous driving datasets.",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yi et al. (2024) introduced SET, decomposing frozen VFM features into phase (content) and amplitude (style) components in frequency space, processing them separately with learnable tokens.",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ahn et al. (2024) proposed BlindNet, using covariance alignment to train encoders to uniformly recognize various styles while preserving content information.",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Niu et al. (2024) developed SCSD with a Text-Driven Style Transform module for controllable style transformation using domain difference text embeddings.",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wei et al. (2023) demonstrated that Rein surpasses full parameter fine-tuning with fewer trainable parameters.",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Fahes et al. (2023) preserved CLIP's robustness through minimal fine-tuning.",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zhang and Tan (2025) achieved linear scalability in sequence length without significant computational overhead through Mamba-based fusion.",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Some works (Wei et al., 2023; Yi et al., 2024) focus on learnable tokens within frozen backbones, while others (Fahes et al., 2023; Pak et al., 2024) emphasize language-guided augmentation.",
+   "ids": [
+    "2312.04265",
+    "2407.18568",
+    "2311.17922",
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The diffusion-based approaches (Niemeijer et al., 2023; Jia et al., 2023) generate synthetic training data, whereas style-blind methods (Ahn et al., 2024) learn to ignore style variations.",
+   "ids": [
+    "2312.01850",
+    "2312.03048",
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Vision Foundation Models be harnessed for Domain Generalized Semantic Segmentation with fewer trainable parameters while achieving superior generalizability?",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces Rein, a parameter-efficient fine-tuning approach built on trainable tokens linked to distinct instances that precisely refines and forwards feature maps from each layer to the next within the frozen backbone, producing diverse refinements for different categories within a single image.",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Rein produces diverse refinements for different categories within a single image",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "With fewer trainable parameters, Rein efficiently fine-tunes VFMs for DGSS tasks, surpassing full parameter fine-tuning",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Rein significantly outperforms state-of-the-art methods across various settings",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "With just 1% extra trainable parameters within the frozen backbone, achieves 78.4% mIoU on Cityscapes without accessing real urban-scene datasets",
+   "ids": [
+    "2312.04265"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can language be employed as a source of randomization to generalize semantic segmentation networks to unseen domains?",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Introduces a framework leveraging vision-language models like CLIP with three key components: (i) minimal fine-tuning to preserve intrinsic CLIP robustness, (ii) language-driven local style augmentation, and (iii) randomization by locally mixing source and augmented styles during training.",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Preserves intrinsic CLIP robustness through minimal fine-tuning",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Language-driven local style augmentation enables domain generalization",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Randomization by mixing source and augmented styles during training improves generalization",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves state-of-the-art results on various generalization benchmarks",
+   "ids": [
+    "2311.17922"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can diffusion models be used to generate diverse pseudo-target domains for domain-generalized semantic segmentation without requiring any target domain data?",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents DIDEX, a diffusion-based domain extension method that employs a diffusion model with diverse text prompts to generate a pseudo-target domain with controllable style and content, then trains a generalizing model by adapting towards this pseudo-target domain.",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DIDEX allows control of style and content of generated images with high diversity",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms previous approaches by a large margin across various datasets and architectures without using any real target data",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves state-of-the-art mIoU performance by 3.8% absolute on average for GTA5 generalization",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Improves SYNTHIA benchmark by 11.8% absolute mIoU",
+   "ids": [
+    "2312.01850"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can an assembly of collaborative foundation models improve domain generalized semantic segmentation beyond traditional domain randomization approaches?",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes CLOUDS framework integrating multiple foundation models: (i) CLIP backbone for robust feature representation, (ii) generative models to diversify content covering various modes of the target distribution, and (iii) Segment Anything Model (SAM) for iteratively refining segmentation predictions.",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CLOUDS takes an orthogonal approach to DGSS by using collaborative foundation models rather than domain randomization alone",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Excels in adapting from synthetic to real DGSS benchmarks",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Performs well under varying weather conditions",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms prior methods by 5.6% on averaged mIoU for synthetic-to-real benchmarks",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms prior methods by 6.7% on averaged mIoU under varying weather conditions",
+   "ids": [
+    "2312.09788"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can style-invariant features be learned from learnable tokens for domain generalized semantic segmentation by leveraging spectral decomposition in the frequency space?",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Presents SET framework that decomposes frozen VFM features into phase and amplitude components in frequency space (containing content and style information respectively), processes them separately with learnable tokens for task-specific extraction, and develops an attention optimization method to bridge the gap between style-affected representation and static tokens during inference.",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SET advances beyond existing fine-tuning token and frozen backbone paradigm by focusing on style-invariant feature learning",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Frozen VFM features are decomposed into phase (content) and amplitude (style) components in frequency space",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Style variation primarily impacts token-based feature enhancement within the amplitude branch",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Attention optimization method bridges gap between style-affected representation and static tokens during inference",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Extensive cross-domain experiments demonstrate state-of-the-art performance",
+   "ids": [
+    "2407.18568"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can semantic segmentation models address performance degradation when deployed to unseen target domains due to style variations from different data sources?",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes BlindNet, a domain generalized semantic segmentation approach that blinds style without external modules or datasets.",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method comprises covariance alignment to train the encoder to uniformly recognize various styles while preserving content information, and semantic consistency contrastive learning to enable the decoder to construct a discriminative class embedding space.",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "BlindNet outperforms existing domain generalized semantic segmentation methods",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach exhibits robustness and superior performance on unseen target domains",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Covariance alignment alleviates style effects in the encoder while preserving content information",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Semantic consistency contrastive learning disentangles features vulnerable to misclassification",
+   "ids": [
+    "2403.06122"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can domain-invariant semantic knowledge from text embeddings of vision-language models be leveraged to improve domain generalized semantic segmentation?",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Employs text embeddings as object queries (textual object queries) within a transformer-based segmentation framework, introducing the textual query-driven mask transformer (tqdm) with three regularization losses to align visual and textual features for enhanced semantic clarity.",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 68.9 mIoU on GTA5→Cityscapes benchmark",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Outperforms the prior state-of-the-art method by 2.5 mIoU",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Enables model generalization to extreme domains such as sketch style",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Textual object queries serve as domain-invariant basis for pixel grouping",
+   "ids": [
+    "2407.09033"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can large pretrained latent diffusion models be effectively used as data generators to improve domain generalization in semantic segmentation tasks?",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes DGInStyle, an efficient data generation pipeline that specializes pretrained latent diffusion models to semantically-controlled generation within narrow domains, incorporating a Style Swap technique for semantic control and Multi-resolution Latent Fusion to overcome LDM bias toward dominant objects.",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Pretrained latent diffusion models are effective as data generators for semantic segmentation",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach consistently increases performance compared to previous state-of-the-art methods across multiple autonomous driving datasets",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Style Swap technique successfully endows generative prior with learned semantic control",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-resolution Latent Fusion overcomes LDM bias toward dominant objects",
+   "ids": [
+    "2312.03048"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can Vision Foundation Models and Vision-Language Models be effectively integrated to leverage their complementary strengths for domain-generalized semantic segmentation?",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes MFuser, a Mamba-based fusion framework consisting of MVFuser (a co-adapter for joint fine-tuning that captures sequential and spatial dynamics) and MTEnhancer (a hybrid attention-Mamba module that refines text embeddings by incorporating image priors) to efficiently combine VFMs and VLMs with linear scalability.",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 68.20 mIoU on synthetic-to-real benchmarks",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Achieves 71.87 mIoU on real-to-real benchmarks",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Significantly outperforms state-of-the-art domain generalized semantic segmentation methods",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Maintains linear scalability in sequence length without significant computational overhead",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Successfully integrates complementary strengths of VFMs (fine-grained features) and VLMs (text alignment)",
+   "ids": [
+    "2504.03193"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can domain generalized semantic segmentation be improved by addressing the limitations of feature normalization and domain randomization approaches?",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce SCSD (Semantic Consistency prediction and Style Diversity generalization), a novel framework with three components: a Semantic Query Booster for cross-domain semantic consistency prediction, a Text-Driven Style Transform module for controllable style transformation using domain difference text embeddings, and a Style Synergy Optimization mechanism that weights style contrastive and aggregation losses to prevent feature space collapse.",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SCSD significantly outperforms existing state-of-the-art domain generalized semantic segmentation methods",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SCSD trained on GTAV achieved an average of 49.11 mIoU on four unseen domain datasets",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The proposed method surpassed the previous state-of-the-art by +4.08 mIoU",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Semantic Query Booster enhances semantic awareness and discrimination capabilities of object queries in the mask decoder",
+   "ids": [
+    "2412.12050"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The Text-Driven Style Transform module enables controllable style transformation that increases inter-domain style diversity while avoiding domain-irrelevant noise",
+   "ids": [
+    "2412.12050"
+   ]
+  }
+ ]
+}

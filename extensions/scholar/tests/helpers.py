@@ -40,3 +40,20 @@ def atom_feed(papers: list[dict]) -> str:
 </entry>"""
         )
     return '<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">' + "".join(entries) + "</feed>"
+
+
+def latexml_page(title: str, sections: dict[str, list[str]], abstract: str = "We study agents.", extra: str = "") -> str:
+    """A minimal arXiv HTML page in LaTeXML's markup: numbered sections and paragraphs, a citation, a footnote, a bibliography."""
+    body = []
+    for n, (heading, paragraphs) in enumerate(sections.items(), 1):
+        paras = "".join(f'<div id="S{n}.p{i}" class="ltx_para"><p id="S{n}.p{i}.1" class="ltx_p">{text}</p></div>' for i, text in enumerate(paragraphs, 1))
+        body.append(f'<section id="S{n}" class="ltx_section"><h2 class="ltx_title ltx_title_section"><span class="ltx_tag ltx_tag_section">{n} </span>{heading}</h2>{paras}</section>')
+    return f"""<html><head><title>{title}</title><script>var x = "ignore me";</script></head><body>
+<div class="ltx_page_main"><article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">{title}</h1>
+<div class="ltx_authors"><span class="ltx_personname">Alice Smith</span></div>
+<div id="abstract1" class="ltx_abstract"><h6 class="ltx_title ltx_title_abstract">Abstract</h6><p id="abstract1.1" class="ltx_p">{abstract}</p></div>
+{"".join(body)}{extra}
+<section id="bib" class="ltx_bibliography"><h2 class="ltx_title ltx_title_bibliography">References</h2>
+<ul class="ltx_biblist"><li id="bib.bib1" class="ltx_bibitem">Someone. A cited paper title that is not this paper. 2021.</li></ul></section>
+</article></div></body></html>"""

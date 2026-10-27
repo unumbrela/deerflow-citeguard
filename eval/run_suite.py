@@ -82,8 +82,9 @@ def run_one(job: dict, out_root: Path, model: str) -> str:
     if not (out / "meta.json").exists():
         return f"{out.name}: FAILED before meta ({time.time() - t0:.0f}s)"
     meta = json.loads((out / "meta.json").read_text())
-    # gate.jsonl: citation-gate decisions; search.json: candidate pool, expansion and screening table (v4).
-    for name in ("gate.jsonl", "search.json"):
+    # gate.jsonl: citation-gate decisions; search.json: candidate pool, expansion and screening table (v4);
+    # evidence.jsonl: quotes checked against the paper's full text (v5).
+    for name in ("gate.jsonl", "search.json", "evidence.jsonl"):
         if (GATE_LOGS / meta["thread_id"] / name).exists():
             shutil.copy(GATE_LOGS / meta["thread_id"] / name, out / name)
     got = False

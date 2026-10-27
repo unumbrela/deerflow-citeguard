@@ -1,0 +1,532 @@
+{
+ "stats": {
+  "ambiguous": 4,
+  "unmatched": 0
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) demonstrate that GRPO's efficacy derives from its implicit contrastive objective rather than large group sizes, introducing 2-GRPO which uses only two rollouts while retaining 97.6% of 16-GRPO's performance with just 12.5% of rollouts and 21% of training time.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Similarly, Xiong et al. (2025) show that a simple rejection sampling baseline (RAFT) yields competitive performance compared to GRPO and PPO, with the main advantage arising from discarding prompts with entirely incorrect responses rather than sophisticated reward normalization.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Wang et al. (2025) extend this minimalist philosophy to its extreme, demonstrating that reinforcement learning with verifiable reward using only one training example can elevate Qwen2.5-Math-1.5B performance on MATH500 from 36.0% to 73.6%.",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Building on this direction, Gao et al. (2025) propose Soft Adaptive Policy Optimization (SAPO), which replaces hard clipping with a smooth, temperature-controlled gate that adaptively attenuates off-policy updates.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Ding et al. (2025) propose Multi-Layer GRPO (MGRPO) with two layers: the first layer uses standard GRPO for initial response generation, while the second layer is trained to identify and correct errors in the initial response.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2025) introduce Learning Impact Measurement (LIM), an automated method to evaluate and prioritize training samples based on their alignment with model learning trajectories.",
+   "ids": [
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Zeng et al. (2025) investigate zero RL training across 10 diverse base models spanning different families and sizes, finding that different base models exhibit distinct patterns during training, with increased response length not always correlating with the emergence of cognitive behaviors like verification.",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yu et al. (2025) contribute DAPO, an open-source large-scale RL system with four key techniques that achieves 50 points on AIME 2024 using Qwen2.5-32B base model, emphasizing reproducibility and community access to state-of-the-art training infrastructure.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "First, all papers converge on the finding that algorithmic efficiency improvements can maintain or improve performance while dramatically reducing computational costs—whether through minimal group sizes (Wu et al., 2025), rejection sampling (Xiong et al., 2025), or strategic data selection (Li et al., 2025).",
+   "ids": [
+    "2510.00977",
+    "2504.11343",
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Second, there is consensus that sequence-level optimization provides superior stability compared to token-level approaches, particularly for large-scale models (Zheng et al., 2025; Gao et al., 2025).",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Third, multiple papers agree that self-correction mechanisms are essential for complex reasoning tasks, as single-pass generation suffers from error propagation (Ding et al., 2025).",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Wu et al. (2025) attribute it to the implicit contrastive objective, while Xiong et al. (2025) argue the main advantage arises from discarding prompts with entirely incorrect responses rather than the contrastive mechanism itself.",
+   "ids": [
+    "2510.00977",
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Additionally, there is tension around the relationship between response length and reasoning capability: Zeng et al. (2025) observe that increased response length does not always correlate with cognitive behaviors like verification, while other papers implicitly assume longer responses indicate deeper reasoning.",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The literature also shows disagreement on optimal data scaling, with Li et al. (2025) advocating strategic subset selection while Yu et al. (2025) demonstrate success with large-scale training systems.",
+   "ids": [
+    "2502.11886",
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Second, Zeng et al. (2025) note that most recent efforts reproducing zero RL training focused primarily on Qwen2.5 models, which may not be representative as they already exhibit strong instruction-following and self-reflection abilities—indicating a gap in cross-model family generalization studies.",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, the relationship between response length and genuine cognitive behaviors remains poorly understood, with Zeng et al. (2025) observing distinct patterns across model families but no unified theoretical framework.",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can GRPO be improved to address inefficient exploration dynamics and error propagation in complex reasoning chains?",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes MGRPO (Multi-layer GRPO) with two layers: first layer uses standard GRPO for initial response, second layer is trained to identify and correct errors in the initial response, creating a self-correction loop with implicit process-level supervision.",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MGRPO significantly outperforms standard GRPO on mathematical reasoning benchmarks",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The two-layer approach fosters both reasoning and self-correction abilities",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "MGRPO provides implicit process-level supervision without requiring explicit, densely-annotated reward models",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The self-correction mechanism addresses reward vanishing from single errors in reasoning chains",
+   "ids": [
+    "2506.04746"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can reinforcement learning policy optimization for large language models achieve stable and effective updates while addressing high variance in token-level importance ratios?",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose Soft Adaptive Policy Optimization (SAPO), which replaces hard clipping with a smooth, temperature-controlled gate that adaptively attenuates off-policy updates.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAPO is evaluated on mathematical reasoning benchmarks and used to train the Qwen3-VL model series across diverse tasks and model sizes.",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAPO replaces hard clipping with soft gating, forming a continuous trust region that avoids brittle hard clipping bands",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Unlike GSPO which suppresses all gradients for sequences with highly off-policy tokens, SAPO selectively down-weights only offending tokens while preserving learning signals from near-on-policy tokens",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAPO demonstrates improved training stability and higher Pass@1 performance under comparable training budgets on mathematical reasoning benchmarks",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "SAPO yields consistent performance gains across diverse tasks and different model sizes when training the Qwen3-VL model series",
+   "ids": [
+    "2511.20347"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What truly determines the effectiveness of RL training data for enhancing language models' reasoning capabilities, and does scaling up RL training data inherently improve performance?",
+   "ids": [
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Learning Impact Measurement (LIM), an automated method to evaluate and prioritize training samples based on their alignment with model learning trajectories, and demonstrate results using a strategically selected subset of 1,389 samples compared to the full 8,523-sample dataset, starting directly from base models without distillation.",
+   "ids": [
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A strategically selected subset of 1,389 samples can outperform the full 8,523-sample dataset",
+   "ids": [
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LIMR achieves 16.7% higher accuracy on AIME24 compared to data-efficient approaches LIMO and s1 at 7B-scale",
+   "ids": [
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "LIMR outperforms LIMO and s1 by 13.0% and 22.2% on MATH500, respectively",
+   "ids": [
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Precise sample selection, rather than data scale, may be the key to unlocking enhanced reasoning capabilities in LLMs",
+   "ids": [
+    "2502.11886"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can reinforcement learning with verifiable reward using only one training example effectively incentivize math reasoning capabilities in large language models?",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors apply 1-shot RLVR to base model Qwen2.5-Math-1.5B and test across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples, analyzing phenomena including cross-category generalization and post-saturation generalization.",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A single training example elevates Qwen2.5-Math-1.5B performance on MATH500 from 36.0% to 73.6% (8.6% improvement beyond format correction)",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Average performance across six mathematical reasoning benchmarks improves from 17.6% to 35.7% (7.0% non-format gain) with just one example",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RLVR with two examples slightly exceeds these results (MATH500: 74.8%, average: 36.6%)",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the grokking phenomenon",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Promoting exploration through entropy loss with an appropriate coefficient plays a critical role in 1-shot RLVR training",
+   "ids": [
+    "2504.20571"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the true source of GRPO's effectiveness in reinforcement learning for LLMs?",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Proposes that GRPO's efficacy stems from its implicit contrastive objective rather than large group sizes, and introduces 2-GRPO, a minimal group-size variant using only two rollouts to construct contrastive signals.",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRPO's effectiveness comes from its implicit contrastive objective that reduces variance via control variate method",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "2-GRPO retains 97.6% of the performance of 16-GRPO",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "2-GRPO requires only 12.5% of the rollouts and 21% of the training time compared to 16-GRPO",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRPO is structurally related to preference learning methods such as DPO",
+   "ids": [
+    "2510.00977"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the actual sources of GRPO's effectiveness in reinforcement learning for LLM reasoning tasks?",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: Revisits GRPO from a REINFORCE-like algorithm perspective, analyzes its core components, and proposes Reinforce-Rej, a minimal extension of policy gradient that filters both entirely incorrect and entirely correct samples.",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A simple rejection sampling baseline (RAFT) yields competitive performance compared to GRPO and PPO",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "GRPO's main advantage arises from discarding prompts with entirely incorrect responses, not from reward normalization",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Reinforce-Rej improves KL efficiency and stability as a lightweight alternative to complex RL algorithms",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RAFT serves as a robust and interpretable baseline for reward-based LLM post-training",
+   "ids": [
+    "2504.11343"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How can the reinforcement learning training results of state-of-the-art reasoning LLMs be reproduced and made accessible to the research community?",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose the Decoupled Clip and Dynamic sAmpling Policy Optimization (DAPO) algorithm with four key techniques and open-source a large-scale RL system built on the verl framework, along with a curated dataset, trained on Qwen2.5-32B base model.",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "DAPO achieves 50 points on AIME 2024 using Qwen2.5-32B base model",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The system introduces four key techniques that make large-scale LLM RL successful",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The open-source training code and curated dataset enhance reproducibility and support future research in large-scale LLM RL",
+   "ids": [
+    "2503.14476"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How does zero reinforcement learning training perform across diverse base model families and sizes, and what patterns emerge during training?",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors investigated zero RL training across 10 diverse base models spanning different families and sizes (LLama3-8B, Mistral-7B/24B, DeepSeek-Math-7B, Qwen2.5-math-7B, and Qwen2.5 models from 0.5B to 32B), using key design strategies such as adjusting format reward and controlling query difficulty while monitoring training dynamics.",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Substantial improvements in both reasoning accuracy and response length were achieved across most model settings using zero RL training",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Different base models exhibit distinct patterns during training, with increased response length not always correlating with the emergence of cognitive behaviors like verification",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The 'aha moment' (verification behavior) was observed for the first time in small models not from the Qwen family",
+   "ids": [
+    "2503.18892"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most recent efforts reproducing zero RL training focused primarily on Qwen2.5 models, which may not be representative as they already exhibit strong instruction-following and self-reflection abilities",
+   "ids": [
+    "2503.18892"
+   ]
+  }
+ ]
+}

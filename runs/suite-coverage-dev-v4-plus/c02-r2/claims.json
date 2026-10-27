@@ -1,0 +1,590 @@
+{
+ "stats": {
+  "ambiguous": 0,
+  "unmatched": 5
+ },
+ "claims": [
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Hao et al. (2024) introduced Coconut (Chain of Continuous Thought), which uses the last hidden state of an LLM as a reasoning state representation and feeds it back directly in continuous space rather than decoding into words.",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Su et al. (2025) extended this line of work with a hybrid approach mixing latent discrete tokens with text tokens, using VQ-VAE to abstract initial reasoning steps.",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Deng et al. (2024) demonstrated that models can be taught to internalize explicit chain-of-thought steps while maintaining high reasoning performance.",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Pfau et al. (2024) provided theoretical grounding for this phenomenon, showing that transformers can use meaningless filler tokens (e.g., dots) to solve hard algorithmic tasks they could not solve without intermediate tokens.",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Yang et al. (2024) analyzed whether LLMs latently perform multi-hop reasoning when processing complex prompts requiring bridge entity identification.",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Biran et al. (2024) extended this analysis using a novel \"back-patching\" method, discovering that bridge entities are resolved in early layers while second-hop computation commences only in later layers.",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Li et al. (2024) used Logit Lens and intervention experiments to identify that compositional reasoning failures stem from improperly generated or leveraged implicit reasoning results surfacing in middle layers.",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "DeepSeek-AI et al. (2025) proposed an RL framework that facilitates emergent development of advanced reasoning patterns including self-reflection, verification, and dynamic strategy adaptation.",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Themes",
+   "kind": "synthesis",
+   "text": "Muennighoff et al. (2025) introduced s1, a simple test-time scaling approach using a curated dataset of 1,000 questions with reasoning traces and \"budget forcing\" to control test-time compute.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "Hao et al. (2024), Cheng and Van Durme (2024), and Su et al. (2025) all demonstrate that compressed or continuous reasoning representations achieve better accuracy-efficiency tradeoffs.",
+   "ids": [
+    "2412.06769",
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also strong agreement that multi-hop reasoning occurs primarily in middle to later layers of transformers (Yang et al., 2024; Biran et al., 2024; Li et al., 2024), with bridge entity resolution happening early and subsequent computation in later layers.",
+   "ids": [
+    "2402.16837",
+    "2406.12775",
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "The surveyed papers collectively validate that additional computation tokens—whether meaningful chain-of-thought or meaningless filler—provide computational benefits independent of semantic content (Pfau et al., 2024; Deng et al., 2024).",
+   "ids": [
+    "2404.15758",
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "While Pfau et al. (2024) raise concerns about \"unauditable, hidden computations,\" other papers celebrate the efficiency gains from internalizing reasoning steps (Deng et al., 2024; Cheng & Van Durme, 2024).",
+   "ids": [
+    "2404.15758",
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Convergences and Disagreements",
+   "kind": "synthesis",
+   "text": "There is also methodological variation in how latent reasoning is implemented: some approaches use continuous hidden states (Hao et al., 2024), others use discrete latent tokens (Su et al., 2025), and still others compress explicit reasoning into dense representations (Cheng & Van Durme, 2024).",
+   "ids": [
+    "2412.06769",
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Fourth, the safety and interpretability implications of latent reasoning remain underexplored: Pfau et al. (2024) raise concerns about hidden computation, but systematic analysis of when latent reasoning becomes opaque or unalignable is absent.",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Gaps and Open Questions",
+   "kind": "synthesis",
+   "text": "Finally, the interaction between latent reasoning and model scaling is not well understood: Yang et al. (2024) note scaling trends for first-hop reasoning but not second-hop, suggesting complex relationships between model size and latent reasoning capabilities that warrant further investigation.",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: How do LLMs internally compute and resolve multi-hop queries that require sequential information extraction steps?",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyzed internal computations of transformer-based LLMs on multi-hop queries and proposed a novel 'back-patching' analysis method where hidden representations from later layers are patched back to earlier layers to test whether later layers lack necessary functionality.",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Bridge entities in multi-hop queries are resolved in the early layers of the model",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The second hop computation commences only in later layers after bridge entity resolution",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "In up to 66% of previously incorrect cases, there exists a back-patch that results in correct answer generation",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Later layers sometimes lack the needed functionality for correctly predicting multi-hop query answers",
+   "ids": [
+    "2406.12775"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can the reasoning abilities of large language models be incentivized through pure reinforcement learning without requiring human-annotated reasoning trajectories?",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a reinforcement learning (RL) framework that facilitates the emergent development of advanced reasoning patterns such as self-reflection, verification, and dynamic strategy adaptation, without relying on human-labeled reasoning trajectories.",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "RL can incentivize reasoning abilities in LLMs without the need for human-annotated demonstrations",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The trained model achieves superior performance on verifiable tasks including mathematics, coding competitions, and STEM fields compared to counterparts trained via conventional supervised learning",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The emergent reasoning patterns can be systematically harnessed to guide and enhance the reasoning capabilities of smaller models",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Advanced reasoning patterns such as self-reflection, verification, and dynamic strategy adaptation emerge through the RL framework",
+   "ids": [
+    "2501.12948"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can language models be taught to internalize explicit chain-of-thought steps while maintaining high reasoning performance?",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a method starting with a model trained for explicit CoT reasoning, then gradually removing intermediate steps and finetuning the model to internalize the reasoning process.",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach enables a GPT-2 Small model to solve 9-by-9 multiplication with up to 99% accuracy, whereas standard training cannot solve beyond 4-by-4 multiplication",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The method proves effective on larger language models such as Mistral 7B, achieving over 50% accuracy on GSM8K without producing any intermediate steps",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Models can internalize intermediate reasoning steps while simplifying the reasoning process and maintaining high performance",
+   "ids": [
+    "2405.14838"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can large language models reason more effectively by operating in a continuous latent space rather than being constrained to the language space?",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors introduce Coconut (Chain of Continuous Thought), a new paradigm that uses the last hidden state of the LLM as a representation of the reasoning state, termed 'continuous thought,' and feeds it back to the model as the next input embedding directly in the continuous space rather than decoding into words.",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Coconut enables breadth-first search (BFS) reasoning patterns by allowing continuous thoughts to encode multiple alternative next steps, unlike CoT which commits to a single deterministic path",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Coconut outperforms CoT on logical reasoning tasks that require substantial search during planning",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The latent reasoning paradigm achieves a better trade-off between accuracy and efficiency compared to traditional chain-of-thought approaches",
+   "ids": [
+    "2412.06769"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What are the root causes of compositional reasoning failures in LLMs and how can they be patched?",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors used Logit Lens and intervention experiments to dissect inner hidden states of LLMs, identifying that implicit reasoning results surface in middle layers and multi-head self-attention (MHSA) modules are critical for accurate generation.",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Based on these findings, they developed CREME, a lightweight method to patch compositional reasoning errors by editing located MHSA modules.",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Most compositional reasoning failures stem from improperly generated or leveraged implicit reasoning results",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Implicit reasoning results surface within middle layers and play a causative role in shaping final explicit reasoning results",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Multi-head self-attention (MHSA) modules in middle layers are linchpins for accurate generation and leveraging of implicit reasoning results",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "CREME effectively patches errors in compositional reasoning via editing located MHSA modules",
+   "ids": [
+    "2402.14328"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: What is the simplest approach to achieve test-time scaling and strong reasoning performance in language models?",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors curated a small dataset s1K of 1,000 questions with reasoning traces based on difficulty, diversity, and quality criteria, and developed budget forcing to control test-time compute by forcibly terminating or extending the model's thinking process.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They supervised finetuned Qwen2.5-32B-Instruct on s1K and equipped it with budget forcing.",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "s1-32B exceeds o1-preview on competition math questions by up to 27% on MATH and AIME24 benchmarks",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Scaling s1-32B with budget forcing allows performance extrapolation from 50% to 57% on AIME24",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Budget forcing can lead the model to double-check its answer, often fixing incorrect reasoning steps",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The approach validates three criteria through ablations: difficulty, diversity, and quality of reasoning traces",
+   "ids": [
+    "2501.19393"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: To what extent do chain-of-thought performance gains come from human-like task decomposition versus additional computation from extra tokens?",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors tested whether transformers can use meaningless filler tokens (e.g., dots) instead of meaningful chain-of-thought tokens to solve hard algorithmic tasks, and provided theoretical characterization of problems where filler tokens are useful in terms of quantifier depth of first-order formulas.",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Transformers can use meaningless filler tokens to solve two hard algorithmic tasks they could not solve without intermediate tokens",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Learning to use filler tokens is difficult and requires specific, dense supervision to converge",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Additional tokens provide computational benefits independent of token choice",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Chain-of-thought tokens need not provide information about intermediate computational steps for certain problem classes",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Results raise concerns about LLMs engaging in unauditable, hidden computations detached from observed chain-of-thought tokens",
+   "ids": [
+    "2404.15758"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Can hybrid representations mixing latent discrete tokens with text tokens reduce reasoning trace length while maintaining or improving reasoning performance?",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors propose a hybrid representation where initial reasoning steps are abstracted using latent discrete tokens generated by VQ-VAE, and introduce a training procedure that randomly mixes latent and text tokens to enable fast adaptation.",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "They evaluated this approach on the Keys-Finding Maze problem and fine-tuned LLMs on logical and mathematical reasoning problems.",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Latent trace abstractions significantly reduce the length of reasoning traces compared to pure text token approaches",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The hybrid approach consistently outperforms baseline methods across various benchmarks",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Random mixing of latent and text tokens enables fast adaptation to new latent tokens",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Many words in chain-of-thought data support textual coherence rather than core reasoning information",
+   "ids": [
+    "2502.03275"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Research question: Do large language models latently perform multi-hop reasoning when processing complex prompts that require identifying bridge entities and using knowledge about them?",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Methodology: The authors analyze two hops of reasoning individually: (1) testing if changing prompts to indirectly mention bridge entities increases the LLM's internal recall of those entities, and (2) testing if increasing recall causes the LLM to better utilize knowledge about the bridge entity, considering their co-occurrence as indicative of latent multi-hop reasoning.",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Strong evidence of latent multi-hop reasoning exists for prompts of certain relation types, with the reasoning pathway used in more than 80% of prompts",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "Evidence for the second hop and full multi-hop traversal is moderate on average, with substantial evidence only for the first hop",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "A clear scaling trend exists with increasing model size for the first hop of reasoning but not for the second hop",
+   "ids": [
+    "2402.16837"
+   ]
+  },
+  {
+   "section": "Per-Paper Annotations",
+   "kind": "annotation",
+   "text": "The utilization of reasoning pathways is highly contextual and varies across different types of prompts",
+   "ids": [
+    "2402.16837"
+   ]
+  }
+ ]
+}
