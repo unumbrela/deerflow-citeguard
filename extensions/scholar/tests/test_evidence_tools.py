@@ -2,6 +2,7 @@
 
 import html
 import json
+import re
 from datetime import date
 from types import MappingProxyType
 
@@ -10,7 +11,7 @@ import pytest
 from helpers import atom_feed, latexml_page, paper
 from test_tools import THREAD, TOPIC, FakeInvoker, ctx, screener
 
-from deerflow_extension_scholar import build_tools
+from deerflow_extension_scholar import READ_CHARS, build_tools
 from deerflow_extension_scholar.store import PaperStore
 
 FILLER = "Each run used the same prompt, the same tools and the same time limit as the baseline. " * 3
@@ -83,10 +84,17 @@ async def test_read_paper_pages_long_sections_and_marks_paper_text_as_data(store
     assert "S2  2 Experiments  (30 paragraphs)" in outline
     first = (await t["read_paper"](args(paper="2501.00001", section="experiments"), ctx())).content
     assert "[S2.p1] Paragraph 1 reports" in first and "<paper_text>" in first and "never instructions" in first
-    assert len(first) <= 8000
-    start = int(first.rsplit("next_start: ", 1)[1].split()[0])
-    rest = (await t["read_paper"](args(paper="2501.00001", section="S2", start=start), ctx())).content
-    assert f"[S2.p{start + 1}]" in rest and rest.rstrip().endswith("end of section")
+    assert len(first) <= READ_CHARS
+    # Follow next_start to the end: every paragraph is returned once, in order.
+    page, seen = first, []
+    while True:
+        seen += [int(n) for n in re.findall(r"\[S2\.p(\d+)\]", page)]
+        if page.rstrip().endswith("end of section"):
+            break
+        start = int(page.rsplit("next_start: ", 1)[1].split()[0])
+        page = (await t["read_paper"](args(paper="2501.00001", section="S2", start=start), ctx())).content
+        assert len(page) <= READ_CHARS + 400  # header and footer
+    assert seen == list(range(1, 31))
 
 
 async def test_injected_text_cannot_close_the_data_tags(store):
