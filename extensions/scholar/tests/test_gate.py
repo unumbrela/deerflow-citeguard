@@ -320,6 +320,47 @@ def test_markers_next_to_theme_names_are_rejected(evidence_setup):
     [msg] = CitationGateMiddleware(store := evidence_setup[0]).before_model(state_after_present(evidence_setup[1], report=report), RUNTIME)["messages"]
     assert "do not cite their paper: E1 (belongs to Benchmarking Agents Part 1 (Smith1, 2025)), E2 (belongs to Benchmarking Agents Part 2 (Smith2, 2025))" in msg.content
     assert store.read_log(THREAD)[0]["misattached_evidence"] == ["E1 (belongs to Benchmarking Agents Part 1 (Smith1, 2025))", "E2 (belongs to Benchmarking Agents Part 2 (Smith2, 2025))"]
+    # Removing these markers would leave the ungrounded sentence in place. Validation must not do that.
+    assert (evidence_setup[1] / "slr-agents.md").read_text(encoding="utf-8") == report
+
+
+def test_full_text_review_with_no_recorded_evidence_is_rejected(setup):
+    store, outputs = setup
+    store.save_search(THREAD, {**store.load_search(THREAD), "full_text": True})
+    report = TWO.replace(" [E1]", "").replace(" [E2]", "")
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=report), RUNTIME)["messages"]
+    assert "NOT verified" in msg.content and "No checked quotes were recorded" in msg.content
+    decision = store.read_log(THREAD)[0]
+    assert decision["event"] == "rejected" and decision["no_evidence"]
+    assert decision["evidence_schema_version"] == 1
+    assert decision["papers_without_evidence"] == ["2501.00001", "2501.00002"]
+    assert (outputs / "slr-agents.md").read_text(encoding="utf-8") == report
+
+
+def test_partial_evidence_does_not_verify_the_whole_review(evidence_setup):
+    store, outputs = evidence_setup
+    # Start a new search with evidence for only one of its two cited papers.
+    store.save_search(THREAD, {**store.load_search(THREAD), "search_id": "s2"})
+    [entry] = store.add_evidence(THREAD, "s2", [{"paper": "2501.00001", "quote": "Agents fail on long tasks", "para": "S1.p1"}])
+    report = TWO.replace("E1", entry["e"]).replace(" [E2]", "")
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=report), RUNTIME)["messages"]
+    assert "NOT verified" in msg.content and "no evidence marker in the report: 2501.00002" in msg.content
+    decision = store.read_log(THREAD)[0]
+    assert decision["used"] == [entry["e"]] and not decision["no_evidence"]
+    assert decision["papers_without_evidence"] == ["2501.00002"]
+
+
+def test_rejected_evidence_can_be_corrected_and_presented_again(evidence_setup):
+    store, outputs = evidence_setup
+    gate = CitationGateMiddleware(store)
+    bad = "An ungrounded summary [E1].\n\n" + TWO
+    gate.before_model(state_after_present(outputs, report=bad), RUNTIME)
+    [msg] = gate.before_model(state_after_present(outputs, report=TWO, call_id="fixed"), RUNTIME)["messages"]
+    assert "2 evidence ids checked" in msg.content and "not semantic support" in msg.content
+    log = store.read_log(THREAD)
+    assert [row["event"] for row in log] == ["rejected", "accepted"]
+    assert log[0]["sha256"] != log[1]["sha256"]
+    assert log[1]["evidence_schema_version"] == 1 and not log[1]["misattached_evidence"]
 
 
 def test_markers_under_a_per_paper_heading_or_lead_sentence_are_attached(evidence_setup):
@@ -381,3 +422,17 @@ def test_stopping_after_a_rejection_presents_the_file_again_until_released(setup
     # Released: the next ending is left alone.
     assert gate.after_model(ending, RUNTIME) is None
     assert [r["event"] for r in store.read_log(THREAD)] == ["rejected", "re_presented", "released_unverified"]
+
+
+def test_misspelt_surname_is_named_in_the_rejection(evidence_setup):
+    # Smoke c09: "Benigmimim" for Benigmim was rejected three times; the model never saw the typo.
+    store, outputs = evidence_setup
+    [msg] = CitationGateMiddleware(store).before_model(state_after_present(outputs, report=TWO.replace("(Smith1, 2025) [E1]", "(Smiith1, 2025) [E1]")), RUNTIME)["messages"]
+    assert 'E1 (belongs to Benchmarking Agents Part 1 (Smith1, 2025); the report writes "Smiith1", the first author is "Smith1")' in msg.content
+    assert "read_file the report once, then write_file the whole corrected report" in msg.content
+
+
+def test_another_cited_surname_is_not_called_a_typo(evidence_setup):
+    report = TWO.replace("(Smith1, 2025) [E1]", "(Smith2, 2025) [E1]")
+    [msg] = CitationGateMiddleware(evidence_setup[0]).before_model(state_after_present(evidence_setup[1], report=report), RUNTIME)["messages"]
+    assert "E1 (belongs to Benchmarking Agents Part 1 (Smith1, 2025))" in msg.content and "report writes" not in msg.content

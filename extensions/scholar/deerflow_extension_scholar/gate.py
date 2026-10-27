@@ -57,7 +57,7 @@ from typing import Any
 from langchain.agents.middleware import AgentMiddleware
 from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
 
-from .core import ID_RE, check_evidence, normalise_category, render_appendix, strip_appendix, user_categories, verify_report, wrong_year_dates
+from .core import ID_RE, EvidenceCheck, check_evidence, normalise_category, render_appendix, strip_appendix, user_categories, verify_report, wrong_year_dates
 from .store import PaperStore
 
 MARKER = "[citation-gate]"
@@ -66,7 +66,6 @@ PRESENT_TOOL = "present_files"
 AUTO_PRESENT_ID = "citation-gate-present-"
 REPRESENT_ID = "citation-gate-represent-"
 DECISIONS = {"accepted", "rejected", "released_unverified"}
-EVIDENCE_PROBLEMS = ("unknown_evidence", "uncited_evidence", "misattached_evidence", "unused_evidence", "no_evidence")
 MAX_WARNINGS_SHOWN = 8
 
 
@@ -160,7 +159,9 @@ def _rejection(path: str, result: dict, attempt: int, max_blocks: int, unchanged
             f"The user asked for {result['expected']} papers and the search found them, but the report cites only {result['cited']}. Add these retrieved papers (their data is in the subagent results): {', '.join(result['missing'])}."
         )
     if result.get("unknown_evidence"):
-        lines.append(f"These evidence ids were never issued by cite_evidence in this review: {', '.join(result['unknown_evidence'])}. Use only ids from the subagent results, or drop the marker.")
+        lines.append(
+            f"These evidence ids were never issued by cite_evidence in this review: {', '.join(result['unknown_evidence'])}. Replace them with evidence supporting the claim, or remove/rewrite the unsupported claim; deleting its marker alone is not a repair."
+        )
     if result.get("uncited_evidence"):
         lines.append(f"These evidence ids quote papers the report does not cite: {', '.join(result['uncited_evidence'])}. Attach each [E#] to a sentence citing its paper.")
     if result.get("misattached_evidence"):
@@ -168,10 +169,18 @@ def _rejection(path: str, result: dict, attempt: int, max_blocks: int, unchanged
     if result.get("unused_evidence"):
         lines.append(f"These cited papers have checked quotes that the report never uses: {'; '.join(result['unused_evidence'])}. Attach at least one to a sentence about that paper.")
     if result.get("no_evidence"):
-        lines.append(f"The subagents recorded {result['evidence_available']} checked quotes, but the report uses none. Add the [E#] ids from the subagent results to the sentences they support.")
+        if result["evidence_available"]:
+            lines.append(f"The subagents recorded {result['evidence_available']} checked quotes, but the report uses none. Add the [E#] ids from the subagent results to the sentences they support.")
+        else:
+            lines.append("No checked quotes were recorded for this review. Have the subagents record evidence with cite_evidence before claiming the report is verified.")
+    if result.get("papers_without_evidence"):
+        lines.append(f"These cited papers have no evidence marker in the report: {', '.join(result['papers_without_evidence'])}. Record and attach supporting quotes, or explicitly report that this review could not be verified.")
     if result["warnings"]:
         lines.append("Also fix: " + "; ".join(result["warnings"][:MAX_WARNINGS_SHOWN]))
-    lines.append("Save the file, then call present_files again.")
+    lines.append(
+        "Fix every listed problem in ONE rewrite: read_file the report once, then write_file the whole corrected report and call present_files again. "
+        "Do not patch it with str_replace: each edit needs a fresh read and the run has a fixed step budget."
+    )
     return "\n".join(lines)
 
 
@@ -183,7 +192,7 @@ def _released(path: str, result: dict, max_blocks: int) -> str:
         problems.append(f"these dates are wrong: {', '.join(result['date_errors'])}")
     if result["missing"]:
         problems.append(f"the report covers {result['cited']} of the {result['expected']} papers requested")
-    if any(result.get(k) for k in EVIDENCE_PROBLEMS):
+    if any(result.get(k) for k in EvidenceCheck.PROBLEMS):
         problems.append("its evidence markers could not be checked")
     return f"{MARKER} CITATION CHECK FAILED again after {max_blocks} rejections; {path} is presented as-is. You MUST tell the user plainly that {'; and '.join(problems)}."
 
@@ -191,7 +200,7 @@ def _released(path: str, result: dict, max_blocks: int) -> str:
 def _accepted(result: dict) -> str:
     note = f"{MARKER} Citation check passed: {result['cited']} arXiv ids cited, all from this thread's search ({result['retrieved']} retrieved)."
     if result.get("evidence_used") is not None:
-        note += f" {result['evidence_used']} evidence ids checked; the gate appended the Evidence section (quotes and links) to the file. Do not edit that section."
+        note += f" {result['evidence_used']} evidence ids checked; the gate appended the Evidence section (quotes and links) to the file. This checks quote provenance and citation attachment, not semantic support for every claim. Do not edit that section."
     if result["warnings"]:
         note += " Fix these entries to match the search data exactly: " + "; ".join(result["warnings"][:MAX_WARNINGS_SHOWN])
     return note
@@ -326,18 +335,18 @@ class CitationGateMiddleware(AgentMiddleware):
         result["expected"] = min(search.get("requested") or 0, len(search["papers"]))
         result["missing"] = result["not_cited"][: max(0, result["expected"] - (result["cited"] - len(result["unknown_ids"])))]
         evidence = [e for e in self.store.read_evidence(thread_id) if e.get("search_id") == search["search_id"]] if search.get("full_text") else []
+        evidence_check = None
         if search.get("full_text"):
             cited = [pid for pid in (p["id"] for p in search["papers"]) if pid not in result["not_cited"]]
-            result.update(check_evidence(text, evidence, search["papers"], cited))
-            result["evidence_available"] = len(evidence)
-            result["no_evidence"] = bool(evidence) and not result["used"] and not result["unknown_evidence"]
-        evidence_ok = not any(result.get(k) for k in EVIDENCE_PROBLEMS)
+            evidence_check = check_evidence(text, evidence, search["papers"], cited)
+            result.update(evidence_check.to_dict())
+        evidence_ok = evidence_check is None or evidence_check.ok
         result["ok"] = result["ok"] and not result["date_errors"] and not result["missing"] and not result["search_rejected"] and evidence_ok
         prior = [r for r in self.store.read_log(thread_id) if r.get("search_id") == search["search_id"] and r.get("event") == "rejected"]
         digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
         record = {"search_id": search["search_id"], "path": virtual, "sha256": digest, "at": time.time(), **{k: result[k] for k in ("cited", "retrieved", "unknown_ids", "date_errors", "missing", "warnings", "search_rejected")}}
-        if search.get("full_text"):
-            record.update({k: result[k] for k in ("used", "unknown_evidence", "uncited_evidence", "misattached_evidence", "unused_evidence", "papers_without_evidence", "evidence_available")})
+        if evidence_check is not None:
+            record.update(evidence_check.to_dict())
         if result["ok"]:
             if result.get("used"):
                 result["evidence_used"] = len(result["used"])

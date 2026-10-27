@@ -18,7 +18,9 @@ from __future__ import annotations
 import json
 import re
 from collections.abc import Awaitable, Callable
+from dataclasses import asdict, dataclass
 from datetime import date
+from typing import ClassVar
 
 DATE_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
 ID_RE = re.compile(r"arxiv\.org/(?:abs|pdf|html)/(\d{4}\.\d{4,5})|arXiv:\s*(\d{4}\.\d{4,5})", re.IGNORECASE)
@@ -328,14 +330,20 @@ def _mentions(text: str, paper: dict) -> bool:
 
 
 def misattached_evidence(report_text: str, by_e: dict[str, dict], papers: dict[str, dict]) -> list[str]:
-    """Evidence ids placed where their paper is not cited: not in the same sentence, the one before it, the paragraph's lead sentence, the heading above, or the first line under that heading.
+    """Find misplaced evidence without changing the report or hiding unsupported claims.
 
-    In a smoke run the model put six ids next to theme names in one summary sentence citing no paper. The
-    sentence before counts because "Hao et al. (2024) introduced Coconut [E8]. Coconut also ... [E9]" is
-    still about one paper. The first line under a heading counts because per-paper blocks open with the
-    paper's citation ("### 4. CLOUDS" then "**Citation:** Benigmim, Y., ... (2023)") and list findings below.
+    An id is in place when its paper is cited in the same sentence, the one before it, the paragraph's lead
+    sentence, the heading above, or the first line under that heading. In a smoke run the model put six ids
+    next to theme names in one summary sentence citing no paper. The sentence before counts because "Hao et
+    al. (2024) introduced Coconut [E8]. Coconut also ... [E9]" is still about one paper; the first line under a
+    heading counts because per-paper blocks open with the citation ("### 4. CLOUDS" then "**Citation:**
+    Benigmim, Y., ... (2023)").
+
+    A known id in an ungrounded sentence remains an error even if the same id is used correctly elsewhere.
+    Unknown ids and ids belonging to uncited papers are reported separately by check_evidence.
     """
     problems: list[str] = []
+    known = {surname(p["authors"][0]).lower() for p in papers.values() if p.get("authors")}
     heading = block_lead = ""
     for line in report_text.splitlines():
         if line.lstrip().startswith("#"):
@@ -348,16 +356,37 @@ def misattached_evidence(report_text: str, by_e: dict[str, dict], papers: dict[s
         sentences = _sentences(line)
         for n, sentence in enumerate(sentences):
             context = (sentence, sentences[n - 1] if n else "", sentences[0], heading, block_lead)
-            for group in EVIDENCE_RE.findall(sentence):
-                for eid in re.split(r"\s*[,;]\s*", group):
-                    paper = papers.get(by_e.get(eid, {}).get("paper", ""))
-                    if paper is None:
-                        continue  # unknown ids are reported separately
-                    if not any(_mentions(t, paper) for t in context if t):
-                        problem = f"{eid} (belongs to {paper_label(paper)})"
-                        if problem not in problems:
-                            problems.append(problem)
+            for eid in evidence_ids(sentence):
+                paper = papers.get(by_e.get(eid, {}).get("paper", ""))
+                if paper is not None and not any(_mentions(t, paper) for t in context if t):
+                    label = f"{eid} (belongs to {paper_label(paper)}{_misspelt_hint(context, paper, known)})"
+                    if label not in problems:
+                        problems.append(label)
     return problems
+
+
+def _edit_distance(a: str, b: str) -> int:
+    row = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        prev, row[0] = row[0], i
+        for j, cb in enumerate(b, 1):
+            prev, row[j] = row[j], min(row[j] + 1, row[j - 1] + 1, prev + (ca != cb))
+    return row[-1]
+
+
+def _misspelt_hint(context: tuple[str, ...], paper: dict, known: set[str]) -> str:
+    """Name a near-miss surname so the model can see its typo; the match stays strict.
+
+    In smoke c09 the report wrote "Benigmimim et al. (2023)" for Benigmim and was rejected three times
+    without the model spotting the difference. Another cited paper's surname is never a typo (Zhang vs Zhao).
+    """
+    sn = surname(paper["authors"][0]) if paper.get("authors") else ""
+    if len(sn) < 4:
+        return ""
+    for word in re.findall(r"[^\W\d_][\w'-]+", " ".join(t for t in context if t)):
+        if word.lower() not in known and 0 < _edit_distance(word.lower(), sn.lower()) <= 2 and word[0].isupper():
+            return f'; the report writes "{word}", the first author is "{sn}"'
+    return ""
 
 
 def paper_label(paper: dict) -> str:
@@ -367,23 +396,53 @@ def paper_label(paper: dict) -> str:
     return f"{short} ({sn}, {(paper.get('published') or '')[:4]})"
 
 
-def check_evidence(report_text: str, evidence: list[dict], papers: list[dict], cited: list[str]) -> dict:
-    """Evidence ids must have been issued in this search and sit in a sentence citing their paper; checked quotes for a cited paper must be used."""
+@dataclass(frozen=True)
+class EvidenceCheck:
+    """Versioned contract shared by validation, gate decisions and audit logs.
+
+    This checks provenance and citation attachment, not whether a quote entails a claim.
+    No report text is rewritten by validation.
+    """
+
+    SCHEMA_VERSION: ClassVar[int] = 1
+    PROBLEMS: ClassVar[tuple[str, ...]] = ("unknown_evidence", "uncited_evidence", "misattached_evidence", "unused_evidence", "papers_without_evidence", "no_evidence")
+    used: list[str]
+    unknown_evidence: list[str]
+    uncited_evidence: list[str]
+    misattached_evidence: list[str]
+    unused_evidence: list[str]
+    papers_without_evidence: list[str]
+    evidence_available: int
+    no_evidence: bool
+
+    @property
+    def ok(self) -> bool:
+        return not any(getattr(self, name) for name in self.PROBLEMS)
+
+    def to_dict(self) -> dict:
+        return {"evidence_schema_version": self.SCHEMA_VERSION, **asdict(self)}
+
+
+def check_evidence(report_text: str, evidence: list[dict], papers: list[dict], cited: list[str]) -> EvidenceCheck:
+    """Reject unknown/misplaced markers and cited papers without evidence; preserve the report."""
     by_e = {e["e"]: e for e in evidence}
     by_id = {p["id"]: p for p in papers}
-    used = evidence_ids(report_text)
-    unknown = [e for e in used if e not in by_e]
-    uncited = [f"{e} ({by_e[e]['paper']})" for e in used if e in by_e and by_e[e]["paper"] not in cited]
-    with_evidence = {by_e[e]["paper"] for e in used if e in by_e}
+    markers = evidence_ids(report_text)
+    used = [e for e in markers if e in by_e]
+    unknown = [e for e in markers if e not in by_e]
+    uncited = [f"{e} ({by_e[e]['paper']})" for e in used if by_e[e]["paper"] not in cited]
+    with_evidence = {by_e[e]["paper"] for e in used}
     has_quotes = {e["paper"] for e in evidence}
-    return {
-        "used": [e for e in used if e in by_e],
-        "unknown_evidence": unknown,
-        "uncited_evidence": uncited,
-        "misattached_evidence": misattached_evidence(report_text, by_e, by_id) if not uncited else [],
-        "unused_evidence": [paper_label(by_id[pid]) + f" [{', '.join(e['e'] for e in evidence if e['paper'] == pid)}]" for pid in cited if pid in has_quotes and pid not in with_evidence and pid in by_id],
-        "papers_without_evidence": [pid for pid in cited if pid not in with_evidence],
-    }
+    return EvidenceCheck(
+        used=used,
+        unknown_evidence=unknown,
+        uncited_evidence=uncited,
+        misattached_evidence=misattached_evidence(report_text, by_e, {pid: by_id[pid] for pid in cited if pid in by_id}),
+        unused_evidence=[paper_label(by_id[pid]) + f" [{', '.join(e['e'] for e in evidence if e['paper'] == pid)}]" for pid in cited if pid in has_quotes and pid not in with_evidence and pid in by_id],
+        papers_without_evidence=[pid for pid in cited if pid not in with_evidence],
+        evidence_available=len(evidence),
+        no_evidence=not used,
+    )
 
 
 def _cell(text: str) -> str:
