@@ -12,6 +12,8 @@
 - ``read_paper`` / ``cite_evidence`` (full text, P2.4): a subagent reads a
   selected paper's arXiv HTML section by section, and records quotes that code
   checks word for word against the paper before issuing an evidence id.
+- ``evidence_index`` (full text): the lead's map from each paper to how to cite
+  it and its evidence ids, so it does not reassemble that from subagent output.
 - ``CitationGateMiddleware``: reject a presented report whose arXiv ids did not
   come from this thread's search.
 """
@@ -20,6 +22,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 import time
 import uuid
 from collections.abc import Mapping, Sequence
@@ -58,6 +61,7 @@ from .core import (
     select_papers,
     select_screened,
     shortlist_size,
+    surname,
 )
 from .gate import CitationGateMiddleware
 from .screening import Screener
@@ -172,6 +176,52 @@ EVIDENCE_SCHEMA = {
     "required": ["evidence"],
     "additionalProperties": False,
 }
+
+
+INDEX_DESCRIPTION = (
+    "Before writing the report: list each selected paper with how to cite it in text (`cite_as`, APA author-year, "
+    "with a/b suffixes where two papers share author and year) and the evidence ids the subagents recorded for it, "
+    "with the finding each supports. Put a paper's ids only on sentences that cite it with its `cite_as`."
+)
+INDEX_CLAIM_CHARS = 150
+INDEX_CHARS = 8500  # under the 9,000-char batch budget, so the host never externalizes it
+
+
+def cite_as(papers: list[dict]) -> dict[str, str]:
+    """APA 7 in-text form per paper id; same author-year pairs get a/b in title order, as APA's reference list does."""
+    base = {}
+    for p in papers:
+        names = [surname(a) for a in p.get("authors") or []] or [p["id"]]
+        who = names[0] if len(names) == 1 else f"{names[0]} & {names[1]}" if len(names) == 2 else f"{names[0]} et al."
+        base[p["id"]] = (who, (p.get("published") or "")[:4])
+    out = {}
+    for pid, (who, year) in base.items():
+        same = sorted((q for q in papers if base[q["id"]] == (who, year)), key=lambda q: q.get("title", "").lower())
+        suffix = "abcdefghijklmnopqrstuvwxyz"[[q["id"] for q in same].index(pid)] if len(same) > 1 else ""
+        out[pid] = f"{who}, {year}{suffix}"
+    return out
+
+
+def evidence_index_payload(papers: list[dict], evidence: list[dict]) -> dict:
+    """Papers in review order with their cite_as and evidence; claims are shortened until the whole fits the budget."""
+    cites = cite_as(papers)
+    by_paper: dict[str, list[dict]] = {}
+    for e in evidence:
+        by_paper.setdefault(e["paper"], []).append(e)
+    for limit in (INDEX_CLAIM_CHARS, 90, 50, 0):
+        rows = [
+            {
+                "id": p["id"],
+                "short_title": re.split(r"[:—–]| - ", p.get("title", ""), maxsplit=1)[0].strip()[:60],
+                "cite_as": cites[p["id"]],
+                "evidence": [{"e": e["e"], "finding": " ".join(e.get("claim", "").split())[:limit]} if limit else e["e"] for e in by_paper.get(p["id"], [])],
+            }
+            for p in papers
+        ]
+        payload = {"papers": rows, "without_evidence": [p["id"] for p in papers if p["id"] not in by_paper]}
+        if len(json.dumps(payload, ensure_ascii=False)) <= INDEX_CHARS:
+            return payload
+    return payload
 
 
 def _error(message: str) -> PluginToolResult:
@@ -547,6 +597,17 @@ def build_tools(
             result["note"] = " ".join(notes)
         return PluginToolResult(content=json.dumps(result, ensure_ascii=False), artifact=None)
 
+    async def evidence_index(payload: Mapping[str, Any], context: Any) -> PluginToolResult:
+        found, problem = await asyncio.to_thread(_owned_search, store, context)
+        if problem:
+            return _error(problem)
+        if found.get("rejected") or found.get("screening") is None:
+            return _error("there are no selected papers in this conversation")
+        evidence = [e for e in await asyncio.to_thread(store.read_evidence, context.thread_id) if e.get("search_id") == found["search_id"]]
+        result = evidence_index_payload(found["papers"], evidence)
+        result["note"] = "Ids are numbered across the whole review. Cite each paper with its cite_as (and the same form in the reference list), and attach only that paper's ids."
+        return PluginToolResult(content=json.dumps(result, ensure_ascii=False, separators=(",", ":")), artifact=None)
+
     tools = [
         ModelTool("search", SEARCH_DESCRIPTION, SEARCH_SCHEMA, search, response_format="content_and_artifact"),
         ModelTool("screen", SCREEN_DESCRIPTION, SCREEN_SCHEMA, screen, response_format="content_and_artifact"),
@@ -556,6 +617,7 @@ def build_tools(
         tools += [
             ModelTool("read_paper", READ_DESCRIPTION, READ_SCHEMA, read_paper, response_format="content_and_artifact"),
             ModelTool("cite_evidence", EVIDENCE_DESCRIPTION, EVIDENCE_SCHEMA, cite_evidence, response_format="content_and_artifact"),
+            ModelTool("evidence_index", INDEX_DESCRIPTION, {"type": "object", "properties": {}, "additionalProperties": False}, evidence_index, response_format="content_and_artifact"),
         ]
     return tuple(tools)
 
@@ -604,4 +666,4 @@ def install(registry: ExtensionRegistry, config: Mapping[str, Any]) -> None:
     registry.middlewares(_GateContributor(store, max_blocks))
 
 
-__all__ = ["CitationGateMiddleware", "PaperStore", "Screener", "build_tools", "install"]
+__all__ = ["CitationGateMiddleware", "PaperStore", "Screener", "build_tools", "cite_as", "evidence_index_payload", "install"]
