@@ -22,17 +22,19 @@ def test_cite_as_follows_apa_and_disambiguates_shared_author_years():
     }
 
 
-def test_payload_groups_evidence_by_paper_and_fits_the_budget():
+def test_payload_gives_ready_made_bullets_and_pages_instead_of_cutting():
     papers = [paper(i) for i in range(1, 11)]
-    evidence = [{"e": f"E{n}", "paper": papers[n % 9]["id"], "claim": "x" * 400} for n in range(1, 61)]
+    evidence = [{"e": f"E{n}", "paper": papers[n % 9]["id"], "claim": f"Finding number {n} " + "x" * 300} for n in range(1, 61)]
     payload = evidence_index_payload(papers, evidence)
     assert len(json.dumps(payload)) <= 8500
-    assert payload["without_evidence"] == ["2501.00010"]
-    second = payload["papers"][1]
-    assert second["cite_as"] == "Smith2 & Jones0, 2025"
-    # Over budget, findings were shortened before anything else was dropped: every id is still listed.
-    assert sum(len(p["evidence"]) for p in payload["papers"]) == 60
-    assert all(len(e["finding"]) < 400 for p in payload["papers"] for e in p["evidence"] if isinstance(e, dict))
+    listed = [p["id"] for p in payload["papers"]] + payload["more"]
+    assert sorted(listed) == [p["id"] for p in papers]  # every paper exactly once, here or in `more`
+    assert payload["more"] and payload["without_evidence"] == ["2501.00010"]
+    first = payload["papers"][0]
+    assert first["findings_md"].splitlines()[0] == f"- Finding number 9 {'x' * 300} (Smith1 & Jones0, 2025) [E9]."
+    # Paged: one paper at a time, whole bullets.
+    one = evidence_index_payload(papers, evidence, only=payload["more"][0])
+    assert [p["id"] for p in one["papers"]] == [payload["more"][0]] and "more" not in one
 
 
 async def test_tool_lists_this_searchs_evidence(store):  # noqa: F811
@@ -41,7 +43,7 @@ async def test_tool_lists_this_searchs_evidence(store):  # noqa: F811
     await t["cite_evidence"](args(evidence=[item]), ctx())
     result = json.loads((await t["evidence_index"](args(), ctx())).content)
     by_id = {p["id"]: p for p in result["papers"]}
-    assert by_id["2501.00001"]["evidence"] == [{"e": "E1", "finding": "Solves 3 of 20 tasks."}]
+    assert by_id["2501.00001"]["findings_md"] == "- Solves 3 of 20 tasks (Smith1 & Jones0, 2025) [E1]."
     assert by_id["2501.00001"]["cite_as"] == "Smith1 & Jones0, 2025"
     assert set(result["without_evidence"]) == {"2501.00002", "2501.00003"}
     assert "another user" in (await t["evidence_index"](args(), ctx(user="mallory"))).content
@@ -63,3 +65,13 @@ async def test_a_search_before_screening_or_after_rejection_can_be_redone(store)
     assert not (await t["search"](args(query="agents", max_results=3), ctx())).content.startswith("ERROR")
     # Unscreened: the lead may refine its query before screening.
     assert not (await t["search"](args(query="agents again", max_results=3), ctx())).content.startswith("ERROR")
+
+
+def test_a_pasted_bullet_passes_the_gates_attachment_check():
+    from deerflow_extension_scholar.core import misattached_evidence
+
+    papers = [paper(1), paper(2)]
+    evidence = [{"e": "E1", "paper": "2501.00001", "claim": "Agents fail on long tasks"}, {"e": "E2", "paper": "2501.00002", "claim": "Planning helps"}]
+    bullets = "\n".join(p["findings_md"] for p in evidence_index_payload(papers, evidence)["papers"])
+    report = f"# Review\n\n## Themes\n\nSome synthesis.\n\n### Key findings\n\n{bullets}\n"
+    assert misattached_evidence(report, {e["e"]: e for e in evidence}, {p["id"]: p for p in papers}) == []

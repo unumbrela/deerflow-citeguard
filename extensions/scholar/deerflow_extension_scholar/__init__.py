@@ -180,11 +180,16 @@ EVIDENCE_SCHEMA = {
 
 
 INDEX_DESCRIPTION = (
-    "Before writing the report: list each selected paper with how to cite it in text (`cite_as`, APA author-year, "
-    "with a/b suffixes where two papers share author and year) and the evidence ids the subagents recorded for it, "
-    "with the finding each supports. Put a paper's ids only on sentences that cite it with its `cite_as`."
+    "Before writing the report: for each selected paper, how to cite it in text (`cite_as`, APA author-year, with a/b "
+    "suffixes where two papers share author and year) and `findings_md`, its checked findings as Markdown bullets that "
+    "already carry the citation and evidence id. Paste each paper's `findings_md` verbatim as its key findings. "
+    "If `more` lists papers, call again with `paper` set to each of them."
 )
-INDEX_CLAIM_CHARS = 150
+INDEX_SCHEMA = {
+    "type": "object",
+    "properties": {"paper": {"type": "string", "pattern": "^\\d{4}\\.\\d{4,5}$", "description": "Only this paper (for the ones listed in `more`)."}},
+    "additionalProperties": False,
+}
 INDEX_CHARS = 8500  # under the 9,000-char batch budget, so the host never externalizes it
 
 
@@ -203,25 +208,37 @@ def cite_as(papers: list[dict]) -> dict[str, str]:
     return out
 
 
-def evidence_index_payload(papers: list[dict], evidence: list[dict]) -> dict:
-    """Papers in review order with their cite_as and evidence; claims are shortened until the whole fits the budget."""
+def findings_md(paper_cite: str, evidence: list[dict]) -> str:
+    """One bullet per checked quote: the finding, the paper's citation and the evidence id, so a pasted bullet passes the gate's attachment check."""
+    lines = []
+    for e in evidence:
+        finding = " ".join(e.get("claim", "").split()).rstrip(" .")
+        lines.append(f"- {finding} ({paper_cite}) [{e['e']}].")
+    return "\n".join(lines)
+
+
+def evidence_index_payload(papers: list[dict], evidence: list[dict], only: str | None = None) -> dict:
+    """Papers in review order with cite_as and ready-made finding bullets. Findings are never cut mid-sentence:
+    papers that do not fit the budget are listed in ``more`` and fetched one at a time."""
     cites = cite_as(papers)
     by_paper: dict[str, list[dict]] = {}
     for e in evidence:
         by_paper.setdefault(e["paper"], []).append(e)
-    for limit in (INDEX_CLAIM_CHARS, 90, 50, 0):
-        rows = [
-            {
-                "id": p["id"],
-                "short_title": re.split(r"[:—–]| - ", p.get("title", ""), maxsplit=1)[0].strip()[:60],
-                "cite_as": cites[p["id"]],
-                "evidence": [{"e": e["e"], "finding": " ".join(e.get("claim", "").split())[:limit]} if limit else e["e"] for e in by_paper.get(p["id"], [])],
-            }
-            for p in papers
-        ]
-        payload = {"papers": rows, "without_evidence": [p["id"] for p in papers if p["id"] not in by_paper]}
-        if len(json.dumps(payload, ensure_ascii=False)) <= INDEX_CHARS:
-            return payload
+    wanted = [p for p in papers if only is None or p["id"] == only]
+    payload: dict = {"papers": [], "without_evidence": [p["id"] for p in wanted if p["id"] not in by_paper], "more": []}
+    for p in wanted:
+        row = {
+            "id": p["id"],
+            "short_title": re.split(r"[:—–]| - ", p.get("title", ""), maxsplit=1)[0].strip()[:60],
+            "cite_as": cites[p["id"]],
+            "findings_md": findings_md(cites[p["id"]], by_paper.get(p["id"], [])),
+        }
+        if payload["papers"] and len(json.dumps({**payload, "papers": [*payload["papers"], row]}, ensure_ascii=False)) > INDEX_CHARS:
+            payload["more"].append(p["id"])
+        else:
+            payload["papers"].append(row)
+    if not payload["more"]:
+        del payload["more"]
     return payload
 
 
@@ -614,8 +631,15 @@ def build_tools(
         if found.get("rejected") or found.get("screening") is None:
             return _error("there are no selected papers in this conversation")
         evidence = [e for e in await asyncio.to_thread(store.read_evidence, context.thread_id) if e.get("search_id") == found["search_id"]]
-        result = evidence_index_payload(found["papers"], evidence)
-        result["note"] = "Ids are numbered across the whole review. Cite each paper with its cite_as (and the same form in the reference list), and attach only that paper's ids."
+        only = payload.get("paper")
+        if only and only not in {p["id"] for p in found["papers"]}:
+            return _error(f"{only} is not one of the papers selected for this review")
+        result = evidence_index_payload(found["papers"], evidence, only)
+        result["note"] = (
+            "Paste each paper's findings_md verbatim under its key findings; every bullet already cites the paper and carries its evidence id. "
+            "Cite papers with their cite_as everywhere, including the reference list (e.g. 2025a). In your own synthesis sentences, "
+            "an [E#] may follow only a sentence that cites that paper. Papers in without_evidence get no markers."
+        )
         return PluginToolResult(content=json.dumps(result, ensure_ascii=False, separators=(",", ":")), artifact=None)
 
     tools = [
@@ -627,7 +651,7 @@ def build_tools(
         tools += [
             ModelTool("read_paper", READ_DESCRIPTION, READ_SCHEMA, read_paper, response_format="content_and_artifact"),
             ModelTool("cite_evidence", EVIDENCE_DESCRIPTION, EVIDENCE_SCHEMA, cite_evidence, response_format="content_and_artifact"),
-            ModelTool("evidence_index", INDEX_DESCRIPTION, {"type": "object", "properties": {}, "additionalProperties": False}, evidence_index, response_format="content_and_artifact"),
+            ModelTool("evidence_index", INDEX_DESCRIPTION, INDEX_SCHEMA, evidence_index, response_format="content_and_artifact"),
         ]
     return tuple(tools)
 
@@ -676,4 +700,4 @@ def install(registry: ExtensionRegistry, config: Mapping[str, Any]) -> None:
     registry.middlewares(_GateContributor(store, max_blocks))
 
 
-__all__ = ["CitationGateMiddleware", "PaperStore", "Screener", "build_tools", "cite_as", "evidence_index_payload", "install"]
+__all__ = ["CitationGateMiddleware", "PaperStore", "Screener", "build_tools", "cite_as", "evidence_index_payload", "findings_md", "install"]
