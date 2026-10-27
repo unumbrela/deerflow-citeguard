@@ -63,6 +63,25 @@ def usage_over_stream(seen: dict[str, dict]) -> dict[str, int]:
     return sum_usage(list(seen.values()))
 
 
+RECORD_FIELDS = ("total_tokens", "total_input_tokens", "total_output_tokens", "lead_agent_tokens", "subagent_tokens", "middleware_tokens", "llm_call_count")
+
+
+def usage_from_run_record(thread_id: str, cookies: dict[str, str]) -> dict[str, int] | None:
+    """Token totals DeerFlow's run journal recorded for the thread's runs, or None if they cannot be read.
+
+    This is the most complete count: the journal is a callback on every model call, so it also sees calls that
+    never appear as messages (the summarizer, title generation and the plugin's screening model). On published
+    suites it was 0-5% above the event-stream count.
+    """
+    try:
+        with request("GET", f"/api/threads/{thread_id}/runs", None, cookies) as r:
+            data = json.load(r)
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError):
+        return None
+    runs = data if isinstance(data, list) else data.get("runs", [])
+    return {k: sum(int(run.get(k) or 0) for run in runs) for k in RECORD_FIELDS} if runs else None
+
+
 def subagents_config_digest() -> str | None:
     """sha256 of the tracked subagent definition merged into config.yaml (scripts/apply_subagents.py), or None."""
     config = Path(__file__).resolve().parent.parent / "deer-flow" / "config.yaml"
@@ -146,6 +165,7 @@ def main() -> None:
         "message_count": len(messages),
         "usage_attributed_total": sum_usage(messages),  # final state only: undercounts once the context is summarized
         "usage_events_total": usage_over_stream(seen_ai),  # every AI message in the stream, subagents included
+        "usage_run_record": usage_from_run_record(thread_id, cookies),  # DeerFlow's run journal: also summarizer and screening calls
         "artifacts": (last_values or {}).get("artifacts"),
         "subagents_config_sha256": subagents_config_digest(),
         "error": error,
