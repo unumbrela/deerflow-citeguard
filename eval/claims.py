@@ -146,7 +146,7 @@ def extract_claims(text: str) -> tuple[list[dict], dict]:
             annotated, in_block = [], level >= 3
             if in_block:
                 annotated = _resolve(cited_keys(title), index, stats)
-                bare = _norm_title(re.sub(r"^\d+[.)]\s*", "", re.sub(r"\*\*?", "", title)))
+                bare = _norm_title(re.sub(r"^\d+(?:\.\d+)*[.)]?\s+", "", re.sub(r"\*\*?", "", title)))  # "3.1.1 Title" too
                 if not annotated and bare in titles:
                     annotated = [titles[bare]]
             continue
@@ -404,11 +404,13 @@ def cmd_summary(args) -> None:
     out = {}
     for suite in args.suites:
         totals = {"all": dict.fromkeys((*LABELS, "no_paper", "error"), 0), "verified_only": dict.fromkeys((*LABELS, "no_paper", "error"), 0)}
-        per_run = []
+        per_run, empty = [], []
         for run in runs_of(suite):
             f = run / judgments_file(args.prompt)
             if not f.exists():
                 continue
+            if not json.loads(f.read_text())["judgments"]:
+                empty.append(run.name)  # a delivered report with no extracted claim drops out of every rate
             cit_f = run / "citations.json"
             verified = {r["id"] for r in json.loads(cit_f.read_text())["rows"] if r.get("verified")} if cit_f.exists() else set()
             judged = json.loads(f.read_text())["judgments"]
@@ -424,6 +426,7 @@ def cmd_summary(args) -> None:
             n = sum(counts[lab] for lab in LABELS)
             summary[scope] = {"pairs": n, **{f"{lab}_rate": round(counts[lab] / n, 3) if n else None for lab in LABELS}, "errors": counts["error"], "no_paper": counts["no_paper"]}
         summary["runs"] = len(per_run)
+        summary["reports_without_claims"] = empty
         summary["supported_rate_per_run_min_median"] = [round(min(per_run), 3), round(sorted(per_run)[len(per_run) // 2], 3)] if per_run else None
         out[suite] = summary
     print(json.dumps(out, indent=1))
@@ -458,7 +461,7 @@ def cmd_sample(args) -> None:
     rows = []
     for suite in args.suites:
         for run in runs_of(suite):
-            f = run / "claim_judgments.json"
+            f = run / judgments_file(args.prompt)
             if not f.exists():
                 continue
             claims = json.loads((run / "claims.json").read_text())["claims"]
@@ -471,10 +474,17 @@ def cmd_sample(args) -> None:
         with (HERE / args.exclude).open(encoding="utf-8") as fh:
             taken = {row["key"] for row in csv.DictReader(fh)}
         rows = [r for r in rows if f"{r['suite']}/{r['run']}/{r['claim']}/{r['id']}" not in taken]
-    picked, per_label = [], max(1, args.n // len(LABELS))
-    for lab in LABELS:
-        picked += [r for r in rows if r["judge"] == lab][:per_label]
-    picked += [r for r in rows if r not in picked][: args.n - len(picked)]
+    # --arms: groups of suites (e.g. v4 and v5 reports) that each get an equal share, stratified within.
+    groups = [g.split(",") for g in args.arms] if args.arms else [args.suites]
+    picked = []
+    for g, group in enumerate(groups):
+        pool = [r for r in rows if r["suite"] in group]
+        quota = args.n // len(groups) + (1 if g < args.n % len(groups) else 0)
+        mine, per_label = [], max(1, quota // len(LABELS))
+        for lab in LABELS:
+            mine += [r for r in pool if r["judge"] == lab][:per_label]
+        mine += [r for r in pool if r not in mine][: quota - len(mine)]
+        picked += mine
     abstracts = load_abstracts({r["id"] for r in picked})
     out = HERE / args.out
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -590,6 +600,8 @@ def main() -> None:
     s.add_argument("--n", type=int, default=100)
     s.add_argument("--seed", type=int, default=20261026)
     s.add_argument("--exclude", help="annotation CSV inside eval/ whose pairs are left out")
+    s.add_argument("--prompt", choices=sorted(PROMPTS), default="v1", help="judge version whose labels stratify the sample")
+    s.add_argument("--arms", nargs="+", help="comma-separated suite groups sampled in equal shares")
     s.add_argument("--out", required=True)
     a = sub.add_parser("agreement")
     a.add_argument("--labels", required=True)

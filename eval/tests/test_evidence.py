@@ -97,3 +97,10 @@ class AnnotatedBibliographyTest(unittest.TestCase):
         self.assertEqual([(c["ids"], c["kind"]) for c in found], [(["2504.12516"], "annotation"), (["2504.19314"], "annotation")])
         found, _ = claims.extract_claims(ANNOTATED_BIB.replace("## Annotated", "### Annotated"))
         self.assertEqual([c["ids"] for c in found], [["2504.12516"], ["2504.19314"]])
+
+
+class NumberedHeadingTest(unittest.TestCase):
+    def test_multi_level_numbered_heading_with_the_title_owns_its_block(self):
+        report = "# R\n\n## Review\n\n#### 3.1.1 Planning web agents\n\n**Results:** The planner doubles the pass rate on long tasks [E1].\n\n## References\n\nSmith, A. (2025). Planning web agents. arXiv. https://arxiv.org/abs/2501.00001\n"
+        found, _ = claims.extract_claims(report)
+        self.assertEqual([(c["ids"], c["kind"]) for c in found], [(["2501.00001"], "annotation")])
