@@ -32,7 +32,9 @@ def run_tokens(run: Path) -> dict | None:
     ai = [m for m in msgs.values() if m.get("type") == "ai"]
     total = sum(int((m.get("usage_metadata") or {}).get("total_tokens") or 0) for m in ai)
     sub = sum(int(((m.get("additional_kwargs") or {}).get("subagent_token_usage") or {}).get("total_tokens") or 0) for m in msgs.values() if m.get("type") == "tool" and m.get("name") == "task")
-    final = json.loads((run / "meta.json").read_text())["usage_attributed_total"]["total_tokens"] if (run / "meta.json").exists() else None
+    meta = json.loads((run / "meta.json").read_text()) if (run / "meta.json").exists() else {}
+    # The first baseline runs recorded usage_lead_agent_only, before subagent usage was counted.
+    final = (meta.get("usage_attributed_total") or meta.get("usage_lead_agent_only") or {}).get("total_tokens")
     return {"run": run.name, "total": total, "subagents": sub, "lead": total - sub, "lead_turns": len(ai), "final_state_total": final}
 
 
