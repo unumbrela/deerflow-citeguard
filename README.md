@@ -9,9 +9,11 @@
 - **问题**:上游 skill 在 10 个未见主题 × 3 次里,三分之一的报告有一半以上引用是编的(编号、标题、作者都是假的);时间窗口、类别约束也常不满足。
 - **根因**:检索输出太长,被 DeerFlow 换成摘要。Agent 没把原文读回来,就把凭空补全的"论文"抄给了子 Agent。
 - **做法**:检索、过滤、分批都由插件代码完成,子 Agent 按批次号直接取论文数据,模型不再转述;报告交付时由关卡核对每个 arXiv 编号是否出自本次检索,不通过就拒收。
-- **结果**:三项约束全满足的运行 **1/30 → 29/30**,耗时 −38%,token 持平;不再需要 `allow_host_bash`。
+- **结果**:三项约束全满足的运行 **1/30 → 29/30**,耗时 −38%,token −16%;不再需要 `allow_host_bash`。
 
-> 完整过程和每次实验的原始记录:[BASELINE.md](BASELINE.md) · 改进计划:[ROADMAP.md](ROADMAP.md) · 面试讲解稿:[docs/INTERVIEW.md](docs/INTERVIEW.md) · 上游 issue:[bytedance/deer-flow#7601](https://github.com/bytedance/deer-flow/issues/7601)
+> 完整过程和每次实验的原始记录:[BASELINE.md](BASELINE.md) · 升级与执行计划:[ROADMAP.md](ROADMAP.md) · 面试讲解稿:[docs/INTERVIEW.md](docs/INTERVIEW.md) · 上游 issue:[bytedance/deer-flow#7601](https://github.com/bytedance/deer-flow/issues/7601)
+
+> **版本说明**：下方主结果来自历史 v3 实验；当前全文证据能力仍在开发，不能直接套用这些成绩。当前状态、实施顺序与验收标准统一维护在 [ROADMAP.md](ROADMAP.md)。
 
 ## 问题是怎么发生的,又是怎么修的
 
@@ -49,11 +51,12 @@ flowchart LR
 | 一半以上引用编造的运行 | 9 / 28 | **0 / 30**(p = 0.0006) |
 | 交付报告 | 28 / 30 | 30 / 30 |
 | 平均耗时 | 310 秒 | 191 秒 |
-| 平均 token | 208,090 | 207,323 |
+| 平均 token | 264,709 | 222,812 |
 
 **要如实说的**:
 - 同一主题的 3 次不独立;按主题算,3 次都达标的主题是 0/10 对 9/10。
 - 编造率是次要指标,预先指定的主指标是第一行。
+- token 取 DeerFlow 运行记录(每次模型调用的回调统计,含子 Agent、摘要器与筛选模型;逐运行数字见 `runs/token-run-record-20261027.json`)。旧口径只算最终状态里的消息,上下文被摘要后会漏计,且对上游臂漏计更多,所以旧数字显示两臂持平(208,090 对 207,323)。−16% 是均值之比,未做检验。
 - v3 唯一不达标的运行检索到 10 篇、只引了 9 篇。v3.1 已在关卡里加了篇数检查,还没做正式评测。
 
 ## 评测怎么做
@@ -88,6 +91,8 @@ docs/                面试讲解稿、结果图(make_chart.py 从 summary.json 
 `deer-flow/`(上游代码)不在本仓库内,基线固定在上游 commit `3fdd9bd`。
 
 ## 复现
+
+离线检查与源码快照见 [docs/REPRODUCE.md](docs/REPRODUCE.md)。以下是在线评测入口，历史结果必须配套当时的源码与配置；`switch_arm.sh v3` 只切换当前配置，不会自动恢复历史 v3 版本。
 
 前置:本机 Docker 里跑着 DeerFlow(`make docker-start`),`config.yaml` 配好模型(评测用 `qwen3.5-plus`、`memory.enabled: false`)。
 
