@@ -52,6 +52,17 @@ def sum_usage(messages: list[dict]) -> dict[str, int]:
     return total
 
 
+def usage_over_stream(seen: dict[str, dict]) -> dict[str, int]:
+    """Usage of every AI message the stream ever showed, deduplicated by id.
+
+    The final state alone undercounts: once the context is summarized, earlier messages leave it. In v5 smoke
+    runs the final state held 0.18-0.69M tokens where the stream showed 0.75-2.94M. Subagent usage is
+    backfilled onto the lead message that dispatched them, so it is included once. The summarizer's own
+    model calls do not appear as messages and are still missing.
+    """
+    return sum_usage(list(seen.values()))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--prompt", required=True)
@@ -86,6 +97,7 @@ def main() -> None:
     t0 = time.time()
     counts: dict[str, int] = {}
     last_values: dict | None = None
+    seen_ai: dict[str, dict] = {}
     error = None
     try:
         with request("POST", f"/api/langgraph/threads/{thread_id}/runs/stream", body, cookies, timeout=args.timeout) as r, (out / "events.jsonl").open("w") as ev_f:
@@ -104,6 +116,9 @@ def main() -> None:
                     ev_f.write(json.dumps({"t": round(time.time() - t0, 2), "event": event, "data": data}, ensure_ascii=False) + "\n")
                     if event == "values" and isinstance(data, dict):
                         last_values = data
+                        for m in data.get("messages", []):
+                            if m.get("type") == "ai" and m.get("id"):
+                                seen_ai[m["id"]] = m  # the latest copy: the gate may rewrite a message under the same id
                         n = len(data.get("messages", []))
                         print(f"[{time.time() - t0:6.1f}s] values: {n} messages", flush=True)
     except (urllib.error.URLError, TimeoutError) as e:
@@ -120,7 +135,8 @@ def main() -> None:
         "wall_seconds": round(wall, 1),
         "event_counts": counts,
         "message_count": len(messages),
-        "usage_attributed_total": sum_usage(messages),  # includes subagent usage backfilled onto lead messages
+        "usage_attributed_total": sum_usage(messages),  # final state only: undercounts once the context is summarized
+        "usage_events_total": usage_over_stream(seen_ai),  # every AI message in the stream, subagents included
         "artifacts": (last_values or {}).get("artifacts"),
         "error": error,
     }
