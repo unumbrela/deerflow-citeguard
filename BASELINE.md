@@ -629,3 +629,11 @@ Claude 没看评判器(`qwen3.5-plus`)的结果，按 `eval/annotation/README.md
 **固定证据**：[runs/u0-validation-20261027/validation.json](runs/u0-validation-20261027/validation.json)。本地快照位于 `.local/releases/u0-evidence-contract-20261027/`，源码指纹 `89a53fa21f065c41dd5856ba6f6edce5220f2ebbe35a8748f2f328917eb47ca4`，包含未提交改动。快照工具拒绝覆盖、排除运行凭据，并检测文件变化与捕获期间的并发编辑。
 
 **边界**：容器测试在临时目录加载源码，未升级正在运行的插件、未重启网关、未调用模型。U0.2 在线冒烟和 U0.3 配置/依赖/部署冻结尚未完成；不改动历史实验指标。
+
+## v5 冒烟：引用核查补跑（2026-10-27）
+
+v5 冒烟运行此前只看关卡与证据，没有做引用核查。用 `eval/aggregate.py --topics coverage_dev.json` 对 7 个冒烟套件补跑（只调用 arXiv 官方 API，未调用模型），新增各运行的 `citations.json` 与套件 `summary.json`，没有覆盖已有文件；`eval/.arxiv_cache.json` 追加 13 篇论文的元数据，原有条目不变。
+
+- 交付 18/19（`smoke-v5-flash-01` 的 c04 没有报告）；18 份报告的 180 条引用全部已验证，且全部在时间窗口和类别内，均为 10 篇。
+- 引用全对不代表关卡通过：v5 关卡还核对证据标记，其中 4 次以「拒收」结束、2 次以「未核实发布」结束（见 ROADMAP 第 7 节冒烟记录）。
+- 每题 1 次，只说明 v5 没有在引用真实性上退化，不能当作正式评测。
